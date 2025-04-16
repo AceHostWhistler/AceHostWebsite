@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { ArrowRight, Instagram, Youtube } from "lucide-react";
+import { FaBed, FaBath, FaUser } from "react-icons/fa";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Testimonials from "@/components/Testimonials";
+import TestimonialsSimple from "../components/TestimonialsSimple";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
-import { FaUser, FaBed, FaBath } from "react-icons/fa";
 import { Users, Bed, Bath } from "lucide-react";
 
 const Home = () => {
@@ -65,7 +67,7 @@ const Home = () => {
   const renderPropertyCard = (property: any, index: number) => (
     <div
       key={property.id}
-      className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
+      className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
     >
       <div className="relative h-64">
         <Link href={property.link}>
@@ -90,14 +92,14 @@ const Home = () => {
               href={property.airbnbLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
+              className="bg-white text-gray-900 px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-100 transition-colors"
             >
               Book Now
             </a>
           ) : (
             <Link
               href={property.link}
-              className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
+              className="bg-white text-gray-900 px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-100 transition-colors"
             >
               Book Now
             </Link>
@@ -105,69 +107,47 @@ const Home = () => {
         </div>
       </div>
       <div className="p-6">
-        {/* Property details */}
-        <div className="flex flex-wrap gap-2 mb-4">
-          {property.guests && (
-            <span className="bg-gray-900 text-white px-3 py-1 text-sm font-medium rounded-md">
-              {property.guests}{" "}
-              {typeof property.guests === "number" && property.guests === 1
-                ? "Guest"
-                : "Guests"}
-            </span>
-          )}
-          {property.bedrooms && (
-            <span className="bg-gray-200 text-gray-900 px-3 py-1 text-sm font-medium rounded-md">
-              {property.bedrooms}{" "}
-              {typeof property.bedrooms === "number" && property.bedrooms === 1
-                ? "Bedroom"
-                : "Bedrooms"}
-            </span>
-          )}
-          {property.beds && (
-            <span className="bg-gray-200 text-gray-900 px-3 py-1 text-sm font-medium rounded-md">
-              {property.beds}{" "}
-              {typeof property.beds === "number" && property.beds === 1
-                ? "Bed"
-                : "Beds"}
-            </span>
-          )}
-          {property.bathrooms && (
-            <span className="bg-gray-200 text-gray-900 px-3 py-1 text-sm font-medium rounded-md">
-              {property.bathrooms}{" "}
-              {typeof property.bathrooms === "number" &&
-              property.bathrooms === 1
-                ? "Bathroom"
-                : "Bathrooms"}
-            </span>
-          )}
-        </div>
-
         {/* Property name */}
-        <h3 className="text-xl font-medium mb-4 text-gray-900">
+        <h3 className="text-xl font-semibold mb-4 text-gray-900 line-clamp-2">
           {property.name}
         </h3>
 
-        {/* Pricing information */}
-        <div className="space-y-2 mb-6">
-          {property.priceRange && (
-            <p className="text-gray-600">{property.priceRange}</p>
+        {/* Property details */}
+        <div className="flex flex-wrap items-center text-gray-700 mb-4 gap-x-4 gap-y-2">
+          {property.guests && (
+            <div className="flex items-center">
+              <FaUser className="mr-2 text-gray-500" />
+              <span>{property.guests} {property.guests === 1 ? "guest" : "guests"}</span>
+            </div>
           )}
-          {property.winterPrice && (
-            <p className="text-gray-600">{property.winterPrice}</p>
+          {property.bedrooms && (
+            <div className="flex items-center">
+              <FaBed className="mr-2 text-gray-500" />
+              <span>
+                {property.bedrooms} {typeof property.bedrooms === "number" && property.bedrooms === 1 ? "bed" : "beds"}
+              </span>
+            </div>
           )}
-          {property.holidayPrice && (
-            <p className="text-gray-600">{property.holidayPrice}</p>
+          {property.bathrooms && (
+            <div className="flex items-center">
+              <FaBath className="mr-2 text-gray-500" />
+              <span>
+                {property.bathrooms} {typeof property.bathrooms === "number" && property.bathrooms === 1 ? "bath" : "baths"}
+              </span>
+            </div>
           )}
         </div>
 
-        {/* View property link */}
-        <Link
-          href={property.link}
-          className="inline-flex items-center text-gray-900 font-medium hover:text-gray-600 transition-colors"
-        >
-          <span>View Property</span>
-          <ArrowRight size={18} className="ml-2" />
-        </Link>
+        {/* Pricing information */}
+        {property.priceRange && (
+          <p className="text-gray-900 font-medium">{property.priceRange}</p>
+        )}
+        {property.winterPrice && (
+          <p className="text-gray-600 text-sm">{property.winterPrice}</p>
+        )}
+        {property.holidayPrice && (
+          <p className="text-gray-600 text-sm">{property.holidayPrice}</p>
+        )}
       </div>
     </div>
   );
