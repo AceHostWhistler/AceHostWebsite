@@ -174,9 +174,87 @@ const reasonsSections = [
 
 const ListProperty = () => {
   const [activeAccordion, setActiveAccordion] = useState<number | null>(null);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+    inquiryType: "Property Management",
+    propertyAddress: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
+  const [statusMessage, setStatusMessage] = useState("");
 
   const toggleAccordion = (index: number) => {
     setActiveAccordion(activeAccordion === index ? null : index);
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitSuccess(false);
+    setSubmitError(false);
+    setStatusMessage("");
+
+    try {
+      console.log("Submitting form data:", formData);
+      
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      console.log("Response status:", response.status);
+      
+      // Get the response data
+      let data;
+      try {
+        data = await response.json();
+        console.log("Response data:", data);
+      } catch (e) {
+        console.error("Failed to parse response:", e);
+      }
+
+      if (!response.ok) {
+        const errorMessage = data?.error || "Network response was not ok";
+        console.error("Form submission error:", errorMessage, data?.details);
+        setSubmitError(true);
+        setStatusMessage(data?.error || "There was an error sending your message.");
+        return;
+      }
+
+      // Success! Show message from API if available
+      setSubmitSuccess(true);
+      setStatusMessage(data?.message || "Thank you for your message! We'll get back to you soon.");
+      
+      // Clear form data on success
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+        inquiryType: "Property Management",
+        propertyAddress: "",
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setSubmitError(true);
+      setStatusMessage("There was an error connecting to our server.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -475,7 +553,7 @@ const ListProperty = () => {
 
             <div className="lg:col-span-3 bg-gray-50 p-12 rounded-2xl shadow-sm">
               <h3 className="text-3xl font-bold mb-10">Send Us a Message</h3>
-              <form className="space-y-8">
+              <form className="space-y-8" onSubmit={handleSubmit}>
                 <div>
                   <label
                     htmlFor="name"
@@ -487,6 +565,8 @@ const ListProperty = () => {
                     type="text"
                     id="name"
                     name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     required
                     className="w-full px-6 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent text-lg"
                   />
@@ -503,6 +583,8 @@ const ListProperty = () => {
                     type="email"
                     id="email"
                     name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     required
                     className="w-full px-6 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent text-lg"
                   />
@@ -519,21 +601,25 @@ const ListProperty = () => {
                     type="tel"
                     id="phone"
                     name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
                     className="w-full px-6 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent text-lg"
                   />
                 </div>
 
                 <div>
                   <label
-                    htmlFor="property-address"
+                    htmlFor="propertyAddress"
                     className="block text-lg font-medium text-gray-700 mb-2"
                   >
                     Property Address
                   </label>
                   <input
                     type="text"
-                    id="property-address"
-                    name="property-address"
+                    id="propertyAddress"
+                    name="propertyAddress"
+                    value={formData.propertyAddress}
+                    onChange={handleChange}
                     className="w-full px-6 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent text-lg"
                   />
                 </div>
@@ -549,6 +635,8 @@ const ListProperty = () => {
                     id="message"
                     name="message"
                     rows={6}
+                    value={formData.message}
+                    onChange={handleChange}
                     required
                     className="w-full px-6 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent text-lg"
                     placeholder="Tell us about your property..."
@@ -557,11 +645,31 @@ const ListProperty = () => {
 
                 <button
                   type="submit"
+                  disabled={isSubmitting}
                   className="w-full bg-black text-white px-8 py-5 rounded-xl text-lg font-medium hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
                 >
-                  <span>Submit</span>
-                  <ArrowRight className="ml-3 h-5 w-5" />
+                  {isSubmitting ? (
+                    "Sending..."
+                  ) : (
+                    <>
+                      <span>Submit</span>
+                      <ArrowRight className="ml-3 h-5 w-5" />
+                    </>
+                  )}
                 </button>
+
+                {submitSuccess && (
+                  <div className="p-4 bg-green-50 text-green-700 rounded-md mt-4">
+                    <p className="font-medium">{statusMessage}</p>
+                  </div>
+                )}
+
+                {submitError && (
+                  <div className="p-4 bg-red-50 text-red-700 rounded-md mt-4">
+                    <p className="font-medium">{statusMessage || "There was an error sending your message."}</p>
+                    <p>Please try again later or contact us directly at ben@acehost.ca or +1 604 764 8919.</p>
+                  </div>
+                )}
               </form>
             </div>
           </div>

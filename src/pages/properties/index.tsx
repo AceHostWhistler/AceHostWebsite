@@ -359,38 +359,7 @@ export default function Properties() {
             ],
             priceRange: "$1,300-$3,500",
           },
-          {
-            id: "the-nest-ski-in-ski-out",
-            name: "The Nest | Ski in Ski out",
-            images: [
-              "/photos/properties/Wolverine Crescent/06-2627 Wolverine-06.jpg",
-              "/photos/properties/Wolverine Crescent/01-2627 Wolverine-01.jpg",
-              "/photos/properties/Wolverine Crescent/01-2627 Wolverine-01.jpg",
-            ],
-            guests: 8,
-            bedrooms: 3,
-            bathrooms: 3.5,
-            location: "Blackcomb Benchlands, Whistler",
-            description:
-              "Nestled in the Blackcomb Benchlands, this luxury townhome offers true ski-in/ski-out access with stunning views. Recently renovated with designer finishes, a private hot tub, and a spacious layout perfect for families or groups.",
-            features: [
-              "Ski-in/Ski-out Access",
-              "Private Hot Tub",
-              "Mountain Views",
-              "Designer Furnishings",
-              "Gourmet Kitchen",
-              "Multiple Decks",
-              "Gas Fireplace",
-              "Heated Floors",
-            ],
-            highlights: [
-              "True Ski-in/Ski-out",
-              "Designer Renovation",
-              "Private Hot Tub",
-              "Blackcomb Base Location",
-            ],
-            priceRange: "$1,800-$4,000+",
-          },
+        
           {
             id: "snow-pine",
             name: "Snowpine | Creekside",

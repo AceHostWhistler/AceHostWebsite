@@ -49,16 +49,18 @@ const Contact = () => {
     email: "",
     phone: "",
     message: "",
-    inquiryType: "",
+    inquiryType: "Property Rental",
     dates: "",
     propertyInterest: "",
     guests: "",
+    propertyAddress: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState(false);
   const [statusMessage, setStatusMessage] = useState("");
+  const [formType, setFormType] = useState<"traveler" | "propertyManagement">("traveler");
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -67,6 +69,15 @@ const Contact = () => {
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleFormTypeChange = (type: "traveler" | "propertyManagement") => {
+    setFormType(type);
+    // Update inquiry type based on form selection
+    setFormData(prev => ({
+      ...prev,
+      inquiryType: type === "traveler" ? "Property Rental" : "Property Management"
+    }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -116,10 +127,11 @@ const Contact = () => {
         email: "",
         phone: "",
         message: "",
-        inquiryType: "",
+        inquiryType: formType === "traveler" ? "Property Rental" : "Property Management",
         dates: "",
         propertyInterest: "",
         guests: "",
+        propertyAddress: "",
       });
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -296,6 +308,31 @@ const Contact = () => {
 
             <div className="bg-gray-50 p-8 rounded-lg">
               <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
+              
+              {/* Form Type Selection */}
+              <div className="flex mb-8 border border-gray-300 rounded-md overflow-hidden">
+                <button
+                  onClick={() => handleFormTypeChange("traveler")}
+                  className={`flex-1 py-3 px-4 text-center font-medium ${
+                    formType === "traveler"
+                      ? "bg-black text-white"
+                      : "bg-white text-gray-700 hover:bg-gray-100"
+                  }`}
+                >
+                  For Travelers
+                </button>
+                <button
+                  onClick={() => handleFormTypeChange("propertyManagement")}
+                  className={`flex-1 py-3 px-4 text-center font-medium ${
+                    formType === "propertyManagement"
+                      ? "bg-black text-white"
+                      : "bg-white text-gray-700 hover:bg-gray-100"
+                  }`}
+                >
+                  Property Management Services
+                </button>
+              </div>
+              
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label
@@ -351,87 +388,84 @@ const Contact = () => {
                   />
                 </div>
 
-                <div>
-                  <label
-                    htmlFor="inquiryType"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    What are you inquiring about? *
-                  </label>
-                  <select
-                    id="inquiryType"
-                    name="inquiryType"
-                    value={formData.inquiryType}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
-                  >
-                    <option value="">Please select</option>
-                    <option value="Property Rental">Property Rental</option>
-                    <option value="Property Management">
-                      Property Management
-                    </option>
-                    <option value="VIP Concierge Services">
-                      VIP Concierge Services
-                    </option>
-                    <option value="Corporate Retreat">Corporate Retreat</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
+                {formType === "traveler" && (
+                  <>
+                    <div>
+                      <label
+                        htmlFor="dates"
+                        className="block text-sm font-medium text-gray-700 mb-1"
+                      >
+                        What dates are you interested in?
+                      </label>
+                      <input
+                        type="text"
+                        id="dates"
+                        name="dates"
+                        value={formData.dates}
+                        onChange={handleChange}
+                        placeholder="e.g., Dec 20, 2024 - Jan 3, 2025"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
+                      />
+                    </div>
 
-                <div>
-                  <label
-                    htmlFor="dates"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    What dates are you interested in?
-                  </label>
-                  <input
-                    type="text"
-                    id="dates"
-                    name="dates"
-                    value={formData.dates}
-                    onChange={handleChange}
-                    placeholder="e.g., Dec 20, 2024 - Jan 3, 2025"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
-                  />
-                </div>
+                    <div>
+                      <label
+                        htmlFor="guests"
+                        className="block text-sm font-medium text-gray-700 mb-1"
+                      >
+                        Number of Guests
+                      </label>
+                      <input
+                        type="text"
+                        id="guests"
+                        name="guests"
+                        value={formData.guests}
+                        onChange={handleChange}
+                        placeholder="e.g., 4 adults, 2 children"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
+                      />
+                    </div>
 
-                <div>
-                  <label
-                    htmlFor="guests"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Number of Guests
-                  </label>
-                  <input
-                    type="text"
-                    id="guests"
-                    name="guests"
-                    value={formData.guests}
-                    onChange={handleChange}
-                    placeholder="e.g., 4 adults, 2 children"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
-                  />
-                </div>
+                    <div>
+                      <label
+                        htmlFor="propertyInterest"
+                        className="block text-sm font-medium text-gray-700 mb-1"
+                      >
+                        Which property are you interested in?
+                      </label>
+                      <input
+                        type="text"
+                        id="propertyInterest"
+                        name="propertyInterest"
+                        value={formData.propertyInterest}
+                        onChange={handleChange}
+                        placeholder="e.g., Altitude Retreat, or any 4-bedroom property"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
+                      />
+                    </div>
+                  </>
+                )}
 
-                <div>
-                  <label
-                    htmlFor="propertyInterest"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Which property are you interested in?
-                  </label>
-                  <input
-                    type="text"
-                    id="propertyInterest"
-                    name="propertyInterest"
-                    value={formData.propertyInterest}
-                    onChange={handleChange}
-                    placeholder="e.g., Altitude Retreat, or any 4-bedroom property"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
-                  />
-                </div>
+                {formType === "propertyManagement" && (
+                  <div>
+                    <label
+                      htmlFor="propertyAddress"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      Address of Property to Manage *
+                    </label>
+                    <input
+                      type="text"
+                      id="propertyAddress"
+                      name="propertyAddress"
+                      value={formData.propertyAddress}
+                      onChange={handleChange}
+                      required
+                      placeholder="e.g., 123 Whistler Way, Whistler, BC"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
+                    />
+                  </div>
+                )}
 
                 <div>
                   <label
@@ -448,7 +482,10 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
-                    placeholder="Please provide any additional details about your inquiry. For property management inquiries, please include your property address and details."
+                    placeholder={formType === "propertyManagement" 
+                      ? "Please provide details about your property (bedrooms, bathrooms, amenities, etc.)" 
+                      : "Please provide any additional details about your stay."
+                    }
                   ></textarea>
                 </div>
 
