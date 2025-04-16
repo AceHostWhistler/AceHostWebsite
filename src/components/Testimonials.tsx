@@ -13,6 +13,20 @@ const Testimonials = () => {
       hasImage: false,
     },
     {
+      name: "Tyler Bacon",
+      role: "Guest",
+      text: "Great hosts! And the house was spectacular!",
+      date: "9 weeks ago",
+      hasImage: false,
+    },
+    {
+      name: "Mike Sill",
+      role: "Guest",
+      text: "Wow, absolutely stunned by the service and property itself. Ben and his team are masterminds at making you feel ultra VIP when you book through him. We arrived at the modern yet traditional feeling compound and were immediately greeted by their team who helped us unload everything and get settled. Every room was sparkling clean and there was nothing we lacked. Ben and his team were constantly a text away if we needed anything. From the hot tub, to the steam room, to the ski boot warming machine… no detail was left out. Couldn't recommend booking here more. 10/10 stars. ⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️ Sidenote: special shoutout to Hannah, she's a real one.",
+      date: "9 weeks ago",
+      hasImage: false,
+    },
+    {
       name: "Zain Rasul",
       role: "Guest",
       text: "Had a great stay here, we were able to have a private chef and bartender assist at the home with dinners and drinks, will definitely be back in the future!",
