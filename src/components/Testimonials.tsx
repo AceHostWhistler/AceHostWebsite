@@ -1,47 +1,64 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { Star, ChevronLeft, ChevronRight, Mountain } from "lucide-react";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Card from "./Card";
 
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "Whistler Guest",
-      text: "Our stay at AceHost's Kadenwood property was absolutely phenomenal. The views were breathtaking, and the concierge service went above and beyond. It truly felt like a luxury retreat with all the comforts of home.",
-      image: "/photos/reviews/guest1.jpg",
+      name: "Marissa Charles",
+      role: "Guest",
+      text: "We had an incredible experience staying at the home! Everything was coordinated perfectly. They got us extra gondola badges and stocked all our groceries and responded very quickly to our requests. I could not recommend the company and the house more highly!",
+      date: "20 Mar 2024",
       hasImage: false,
     },
     {
-      name: "Michael Chen",
+      name: "Zain Rasul",
+      role: "Guest",
+      text: "Had a great stay here, we were able to have a private chef and bartender assist at the home with dinners and drinks, will definitely be back in the future!",
+      date: "48 weeks ago",
+      hasImage: false,
+    },
+    {
+      name: "Karen Thompson",
+      role: "Guest",
+      text: "We enjoyed our stay at this beautiful home in Whistler! Our family was well taken care of by Ben and his AceHost team. Ben's professionalism and attention to detail ensured our family could focus on spending time together and not worrying about the many details of a family holiday. Ben made recommendations and reservations to wonderful restaurants, the spa and other interesting places to go. We strongly recommend AceHost to anyone who wants to enjoy a fun holiday with an attentive concierge that can plan an exceptional experience for you.",
+      date: "50 weeks ago",
+      hasImage: false,
+    },
+    {
+      name: "Isabel Salgar",
+      role: "Guest",
+      text: "I would not think twice about using this fantastic group. The concierge service is amazing! They literally take care of everything!!! The group is very professional and super diligent. Always available. They helped us with, car rentals, restaurant reservations, meals at the house, literally anything can think of! They even sat a table for us at Apres skiing while we got there! Never experienced such a professional group before and we rent worldwide. Don't miss out on this amazing group at Whistler.",
+      date: "52 weeks ago",
+      hasImage: false,
+    },
+    {
+      name: "Andres Posada",
+      role: "Guest",
+      text: "The team is awesome. Went above and beyond to make our stay incredible.",
+      date: "10 Apr 2024",
+      hasImage: false,
+    },
+    {
+      name: "Brad Schwartzberg",
+      role: "Guest",
+      text: "We just returned from a wonderful family vacation in Whistler. We stayed at Chalet La Forja in Kadenwood. The property was magnificent, but as nice as the property was (and it was fantastic), the "around-the-clock" service provided by AceHost was even better. The house was meticulously maintained and the AceHost team (Ben, Sally, Max and Hannah) were extraordinary hosts. There was literally not one single thing that we asked for that they did not provide.",
+      date: "35 weeks ago",
+      hasImage: false,
+    },
+    {
+      name: "Saul Kahn",
       role: "Property Owner",
-      text: "As a property owner in Whistler, I've been incredibly impressed with AceHost's management services. They've maximized my rental income while keeping my property in pristine condition. Their communication is excellent and I always feel my investment is in good hands.",
-      image: "/photos/reviews/guest2.jpg",
+      text: "AceHost has done a great job managing my Whistler rentals for the past two years. I would recommend them to anyone needing rental management in the Whistler area.",
+      date: "38 weeks ago",
       hasImage: false,
     },
     {
-      name: "Emily Rodriguez",
-      role: "Family Vacation",
-      text: "We booked a luxury chalet through AceHost for our family ski vacation and it exceeded all expectations. The ski-in/ski-out access was perfect, and their local recommendations made our trip unforgettable. We'll definitely be returning next season!",
-      image: "/photos/reviews/guest3.jpg",
-      hasImage: false,
-    },
-    {
-      name: "James Wilson",
-      role: "Corporate Retreat",
-      text: "AceHost arranged everything for our executive team retreat in Whistler. From private chef services to exclusive activities, every detail was perfectly executed. The property itself was stunning and provided the ideal setting for both work and relaxation.",
-      hasImage: false,
-    },
-    {
-      name: "Alexandra Meyer",
-      role: "Luxury Traveler",
-      text: "I've stayed in luxury accommodations worldwide, and AceHost's properties in Whistler rank among the very best. The attention to detail, premium amenities, and personalized service create an unmatched experience. Their concierge team is exceptional.",
-      hasImage: false,
-    },
-    {
-      name: "David Thompson",
-      role: "Verified Guest",
-      text: "Ben and his team at AceHost provided exceptional service throughout our stay. From helping arrange transportation to recommending the best restaurants and activities, they truly made our Whistler vacation special. The property was immaculate and exactly as advertised.",
+      name: "Courtney Holliday",
+      role: "Guest",
+      text: "My husband and I recently booked a home in Kadenwood for our friends and family to enjoy a vacation getaway and WOW!!!! The home was absolutely stunning! So cozy and beautiful, with unbelievable views. But, AceHost was the star of the show! We all had such an amazing experience and truly felt like we were in the best of hands. Everyone was so incredibly helpful then entire time.",
+      date: "7 weeks ago",
       hasImage: false,
     },
   ];
@@ -52,7 +69,7 @@ const Testimonials = () => {
   const reviewsToShow = {
     mobile: 1,
     tablet: 2,
-    desktop: 3,
+    desktop: 3
   };
 
   const handleNext = useCallback(() => {
@@ -84,47 +101,30 @@ const Testimonials = () => {
   }, [currentIndex, isAutoPlaying, handleNext]);
 
   return (
-    <section className="py-16 px-5 bg-gradient-to-b from-gray-50 to-gray-100 relative overflow-hidden">
-      {/* Background mountain pattern */}
-      <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
-        <div className="absolute inset-0 bg-[url('/texture/noise.png')] opacity-8" />
-        <div className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/4">
-          <Mountain className="w-96 h-96 text-gray-800 opacity-10" />
-        </div>
-      </div>
+    <section className="py-20 bg-gray-50 relative overflow-hidden">
+      {/* Subtle background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-gray-50 to-gray-100"></div>
 
-      <div className="max-w-7xl mx-auto relative">
-        {/* Header */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        {/* Header - Apple-inspired minimalist design */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Guest Experiences
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-gray-900 mb-6">
+            What People Say
           </h2>
-          <div className="flex justify-center items-center gap-4 mb-8">
-            <div className="h-px w-16 bg-yellow-500" />
-            <p className="text-lg text-gray-600">What Our Guests Say</p>
-            <div className="h-px w-16 bg-yellow-500" />
-          </div>
-          <div className="flex justify-center items-center gap-2 mb-8">
-            {[...Array(5)].map((_, i) => (
-              <Star
-                key={i}
-                className="w-6 h-6 fill-yellow-500 text-yellow-500"
-              />
-            ))}
-            <span className="ml-2 text-xl font-semibold">5.0</span>
-          </div>
+          <p className="text-gray-500 text-lg max-w-2xl mx-auto font-light">
+            Hear from our guests and property owners
+          </p>
         </div>
 
         {/* Reviews Carousel */}
         <div className="relative">
           <div className="overflow-hidden">
             <div
-              className="flex transition-transform duration-500 ease-in-out"
+              className="flex transition-all duration-700 ease-out"
               style={{
                 transform: `translateX(-${
                   currentIndex * (100 / reviewsToShow.desktop)
                 }%)`,
-                transition: "transform 2s ease-in-out",
               }}
             >
               {testimonials.map((review, index) => (
@@ -132,47 +132,42 @@ const Testimonials = () => {
                   key={`${review.name}-${index}`}
                   className="w-full min-w-full md:w-1/2 md:min-w-[50%] lg:w-1/3 lg:min-w-[33.333%] px-4"
                 >
-                  <Card className="bg-white p-8 h-full shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg border border-gray-100">
+                  <Card className="bg-white p-8 h-full shadow-sm hover:shadow-md transition-shadow duration-500 rounded-2xl border border-gray-100">
                     <div className="flex flex-col h-full">
-                      {/* Star Rating */}
-                      <div className="mb-4">
+                      {/* Star Rating - Apple-style clean rating */}
+                      <div className="mb-6">
                         {[...Array(5)].map((_, i) => (
                           <Star
                             key={i}
-                            className="w-4 h-4 fill-yellow-500 text-yellow-500 inline-block mr-1"
+                            size={16}
+                            className="inline-block mr-1 fill-yellow-500 text-yellow-500"
+                            strokeWidth={1.5}
                           />
                         ))}
+                        <span className="text-xs text-gray-400 ml-2">
+                          {review.date}
+                        </span>
                       </div>
 
-                      {/* Review Text */}
+                      {/* Review Text - Clean typography */}
                       <blockquote className="flex-grow mb-6">
-                        <p className="text-gray-600 leading-relaxed">
-                          &ldquo;{review.text}&rdquo;
+                        <p className="text-gray-600 leading-relaxed text-base font-light">
+                          "{review.text}"
                         </p>
                       </blockquote>
 
-                      {/* Reviewer Info */}
-                      <div className="flex items-center">
-                        {review.hasImage && review.image ? (
-                          <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                            <Image
-                              src={review.image}
-                              alt={review.name}
-                              width={48}
-                              height={48}
-                              className="object-cover"
-                            />
-                          </div>
-                        ) : (
-                          <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center mr-4">
-                            <span className="text-xl font-semibold text-gray-500">
-                              {review.name[0]}
-                            </span>
-                          </div>
-                        )}
+                      {/* Reviewer Info - Minimal, elegant design */}
+                      <div className="flex items-center mt-auto pt-4 border-t border-gray-100">
+                        <div className="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center mr-3">
+                          <span className="text-base font-medium text-gray-600">
+                            {review.name[0]}
+                          </span>
+                        </div>
                         <div>
-                          <p className="font-semibold">{review.name}</p>
-                          <p className="text-sm text-gray-500">{review.role}</p>
+                          <p className="font-medium text-sm text-gray-900">
+                            {review.name}
+                          </p>
+                          <p className="text-xs text-gray-500">{review.role}</p>
                         </div>
                       </div>
                     </div>
@@ -182,34 +177,34 @@ const Testimonials = () => {
             </div>
           </div>
 
-          {/* Navigation Buttons */}
+          {/* Navigation Buttons - Minimalist Apple-style */}
           <button
             onClick={handlePrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:translate-x-0 bg-white p-2 rounded-full shadow-lg hover:bg-gray-50 transition-colors"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-3 md:translate-x-0 bg-white w-10 h-10 rounded-full shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-gray-200"
             aria-label="Previous review"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-5 h-5 text-gray-700" />
           </button>
           <button
             onClick={handleNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-0 bg-white p-2 rounded-full shadow-lg hover:bg-gray-50 transition-colors"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-3 md:translate-x-0 bg-white w-10 h-10 rounded-full shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-gray-200"
             aria-label="Next review"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-5 h-5 text-gray-700" />
           </button>
         </div>
 
-        {/* Google Review Link */}
-        <div className="text-center mt-12">
+        {/* Google Review Link - Apple-style button */}
+        <div className="text-center mt-14">
           <a
             href="https://g.co/kgs/EjNxVSa"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-black hover:text-gray-600 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white text-sm font-medium rounded-full hover:bg-black transition-colors duration-300"
           >
-            See all reviews on Google
+            Read more reviews on Google
             <svg
-              className="w-5 h-5"
+              className="w-4 h-4"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
