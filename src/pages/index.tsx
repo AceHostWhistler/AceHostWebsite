@@ -4,15 +4,12 @@ import { FaBed, FaBath, FaUser } from "react-icons/fa";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import dynamic from "next/dynamic";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Testimonials from "@/components/Testimonials";
-import TestimonialsSimple from "../components/TestimonialsSimple";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
-import { Users, Bed, Bath } from "lucide-react";
 
 const Home = () => {
   const { t } = useTranslation("common");
