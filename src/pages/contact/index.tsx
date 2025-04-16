@@ -58,6 +58,7 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState(false);
+  const [statusMessage, setStatusMessage] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -73,8 +74,11 @@ const Contact = () => {
     setIsSubmitting(true);
     setSubmitSuccess(false);
     setSubmitError(false);
+    setStatusMessage("");
 
     try {
+      console.log("Submitting form data:", formData);
+      
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -83,11 +87,30 @@ const Contact = () => {
         body: JSON.stringify(formData),
       });
 
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
+      console.log("Response status:", response.status);
+      
+      // Get the response data
+      let data;
+      try {
+        data = await response.json();
+        console.log("Response data:", data);
+      } catch (e) {
+        console.error("Failed to parse response:", e);
       }
 
+      if (!response.ok) {
+        const errorMessage = data?.error || "Network response was not ok";
+        console.error("Form submission error:", errorMessage, data?.details);
+        setSubmitError(true);
+        setStatusMessage(data?.error || "There was an error sending your message.");
+        return;
+      }
+
+      // Success! Show message from API if available
       setSubmitSuccess(true);
+      setStatusMessage(data?.message || "Thank you for your message! We'll get back to you soon.");
+      
+      // Clear form data on success
       setFormData({
         name: "",
         email: "",
@@ -101,6 +124,7 @@ const Contact = () => {
     } catch (error) {
       console.error("Error submitting form:", error);
       setSubmitError(true);
+      setStatusMessage("There was an error connecting to our server.");
     } finally {
       setIsSubmitting(false);
     }
@@ -445,14 +469,14 @@ const Contact = () => {
 
                 {submitSuccess && (
                   <div className="p-4 bg-green-50 text-green-700 rounded-md">
-                    Thank you for your message! We&apos;ll get back to you soon.
+                    <p className="font-medium">{statusMessage}</p>
                   </div>
                 )}
 
                 {submitError && (
                   <div className="p-4 bg-red-50 text-red-700 rounded-md">
-                    There was an error sending your message. Please try again
-                    later.
+                    <p className="font-medium">{statusMessage || "There was an error sending your message."}</p>
+                    <p>Please try again later or contact us directly at ben@acehost.ca or +1 604 764 8919.</p>
                   </div>
                 )}
               </form>
