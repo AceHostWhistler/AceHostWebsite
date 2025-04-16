@@ -633,7 +633,7 @@ export default function Properties() {
             id: "scandinavian-mountainside-retreat-pemberton-meadows-50-acres",
             name: "Pemberton Escape | 50 Acres | Wellness & Heli Retreat",
             images: [
-              "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/DJI_0202-Edit.jpg",
+              "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KJ14319-Edit-2.jpg",
               "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/DJI_0195-Edit.jpg",
               "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/DJI_0096-Edit.jpg",
               "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_R001526-Edit.jpg",
