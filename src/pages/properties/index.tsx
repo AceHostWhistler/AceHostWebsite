@@ -1001,6 +1001,10 @@ export default function Properties() {
         "https://www.airbnb.ca/rooms/50025973?preview_for_ml=true&source_impression_id=p3_1699290307_SHcNx7EoXySmn6j5",
       "marquise-2-bed-ski-in-ski-out":
         "https://www.airbnb.ca/rooms/1370367404602078616?guests=1&adults=1&s=67&unique_share_id=eb381b39-e67d-44ea-9d7c-2de2e1b5fa20",
+      "luxe-cozy-3-bed-whistler-village":
+        "https://www.airbnb.ca/rooms/50025973?guests=1&adults=1&s=67&unique_share_id=04ceb090-1b8e-4e32-972f-d616b380a0a8",
+      "ski-in-ski-out-walk-to-lifts-2-bed":
+        "https://www.airbnb.com",
     };
 
     const airbnbLink = airbnbLinks[property.id];
@@ -1041,19 +1045,27 @@ export default function Properties() {
             />
           </Link>
 
-          {/* Book Now Button in top-right corner */}
-          <div className="absolute top-4 right-4 z-10">
+          {/* Book Now Button in bottom-right corner */}
+          <div className="absolute bottom-4 right-4 z-10">
             {airbnbLink ? (
               <a
                 href={airbnbLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
-                className="bg-white text-black px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-100 transition-colors"
+                className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
               >
                 Book Now
               </a>
-            ) : null}
+            ) : (
+              <Link
+                href={propertyUrl}
+                className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
+                onClick={(e) => e.stopPropagation()}
+              >
+                Book Now
+              </Link>
+            )}
           </div>
         </div>
 
