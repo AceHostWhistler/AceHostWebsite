@@ -1006,45 +1006,42 @@ export default function Properties() {
     const airbnbLink = airbnbLinks[property.id];
 
     return (
-      <Link
-        href={propertyUrl}
-        className="relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow cursor-pointer group block h-full"
-      >
-        <div className="relative h-64 sm:h-72 overflow-hidden">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={property.images[0]}
-            alt={property.name}
-            className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
-            onError={(e) => {
-              // Get property folder name from the ID
-              const propertyId = property.id;
+      <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+        <div className="relative h-64 sm:h-72">
+          <Link href={propertyUrl}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={property.images[0]}
+              alt={property.name}
+              className="object-cover w-full h-full"
+              onError={(e) => {
+                // Get property folder name from the ID
+                const propertyId = property.id;
 
-              // Try folder variants - check if image exists at typical locations
-              let paths = [
-                // Using a directory name matching property name patterns
-                `/photos/properties/${propertyId}/1.jpg`,
-                // Try capitalized first letter
-                `/photos/properties/${
-                  propertyId.charAt(0).toUpperCase() + propertyId.slice(1)
-                }/1.jpg`,
-                // Specific override for common properties
-                `/photos/properties/Altitude New Photos Best/altitude retreat-12.jpg`,
-                `/photos/properties/Chalet La Forja/hero00002.jpg`,
-                `/photos/properties/3445-Heron-Place/01-3445 Heron Place 01.jpg`,
-                `/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00635.jpg`,
-                // Fallback to a default image
-                `/photos/homepage/WhistlerVacationRental.jpg`,
-              ];
+                // Try folder variants - check if image exists at typical locations
+                let paths = [
+                  // Using a directory name matching property name patterns
+                  `/photos/properties/${propertyId}/1.jpg`,
+                  // Try capitalized first letter
+                  `/photos/properties/${
+                    propertyId.charAt(0).toUpperCase() + propertyId.slice(1)
+                  }/1.jpg`,
+                  // Specific override for common properties
+                  `/photos/properties/Altitude New Photos Best/altitude retreat-12.jpg`,
+                  `/photos/properties/Chalet La Forja/hero00002.jpg`,
+                  `/photos/properties/3445-Heron-Place/01-3445 Heron Place 01.jpg`,
+                  `/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00635.jpg`,
+                  // Fallback to a default image
+                  `/photos/homepage/WhistlerVacationRental.jpg`,
+                ];
 
-              // Try the first image path
-              e.currentTarget.src = paths[paths.length - 1]; // Default to the last (fallback) option
-            }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-
-          {/* Book Now Button - Use empty div when no link to maintain DOM structure */}
-          <div className="absolute top-4 right-4 z-10">
+                // Try the first image path
+                e.currentTarget.src = paths[paths.length - 1]; // Default to the last (fallback) option
+              }}
+            />
+          </Link>
+          
+          <div className="absolute bottom-4 right-4">
             {airbnbLink ? (
               <a
                 href={airbnbLink}
@@ -1059,34 +1056,44 @@ export default function Properties() {
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-          <h3 className="text-lg sm:text-xl font-bold mb-1 line-clamp-2">
+        <div className="p-6">
+          {/* Property details */}
+          <div className="flex flex-wrap gap-2 mb-4">
+            <div className="flex items-center text-xs bg-gray-900 text-white px-3 py-1 rounded-md">
+              <Users className="w-3 h-3 mr-1" /> {property.guests} {typeof property.guests === 'number' && property.guests === 1 ? "Guest" : "Guests"}
+            </div>
+            <div className="flex items-center text-xs bg-gray-200 text-gray-900 px-3 py-1 rounded-md">
+              <Bed className="w-3 h-3 mr-1" /> {property.bedrooms} {property.bedrooms === 1 ? "Bedroom" : "Bedrooms"}
+            </div>
+            <div className="flex items-center text-xs bg-gray-200 text-gray-900 px-3 py-1 rounded-md">
+              <Bath className="w-3 h-3 mr-1" /> {property.bathrooms} {property.bathrooms === 1 ? "Bathroom" : "Bathrooms"}
+            </div>
+          </div>
+
+          {/* Property name and location */}
+          <h3 className="text-xl font-medium mb-2 text-gray-900 line-clamp-2">
             {property.name}
           </h3>
-          <p className="flex items-center text-sm mb-2">
+          <p className="flex items-center text-sm text-gray-600 mb-4">
             <MapPin className="w-4 h-4 mr-1 flex-shrink-0" />
             <span className="line-clamp-1">{property.location}</span>
           </p>
-          <div className="flex items-center justify-between">
-            <div className="flex gap-1 sm:gap-2 flex-wrap">
-              <div className="flex items-center text-xs bg-white/20 px-2 py-1 rounded">
-                <Bed className="w-3 h-3 mr-1" /> {property.bedrooms}
-              </div>
-              <div className="flex items-center text-xs bg-white/20 px-2 py-1 rounded">
-                <Bath className="w-3 h-3 mr-1" /> {property.bathrooms}
-              </div>
-              <div className="flex items-center text-xs bg-white/20 px-2 py-1 rounded">
-                <Users className="w-3 h-3 mr-1" /> {property.guests}
-              </div>
-            </div>
-            {property.priceRange && (
-              <span className="text-xs sm:text-sm font-medium whitespace-nowrap">
-                {property.priceRange}
-              </span>
-            )}
-          </div>
+
+          {/* Price range */}
+          {property.priceRange && (
+            <p className="text-gray-600 mb-4">{property.priceRange}</p>
+          )}
+          
+          {/* View Property Link */}
+          <Link
+            href={propertyUrl}
+            className="inline-flex items-center text-gray-900 font-medium hover:text-gray-600 transition-colors"
+          >
+            <span>View Property</span>
+            <ArrowRight size={18} className="ml-2" />
+          </Link>
         </div>
-      </Link>
+      </div>
     );
   };
 
@@ -1184,8 +1191,7 @@ export default function Properties() {
                       </p>
                     )}
                   </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     {category.properties.map((property) => (
                       <PropertyCard key={property.id} property={property} />
                     ))}
@@ -1195,76 +1201,9 @@ export default function Properties() {
             </div>
           </div>
         </section>
-
-        {/* CTA Section */}
-        <section className="bg-gray-900 text-white py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl font-bold mb-6">
-                  Looking for Something Special?
-                </h2>
-                <p className="text-gray-300 mb-6">
-                  Our concierge team is here to help you find the perfect
-                  property for your needs. Let us know what you&apos;re looking
-                  for, and we&apos;ll create a personalized recommendation.
-                </p>
-                <Link
-                  href="/contact"
-                  className="inline-block bg-white text-gray-900 px-8 py-4 rounded-md hover:bg-gray-100 transition-colors font-medium"
-                >
-                  Contact Our Team
-                </Link>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gray-800 rounded-lg p-6">
-                  <Coffee className="h-8 w-8 text-white mb-4" />
-                  <h3 className="text-xl font-medium mb-2">
-                    Concierge Services
-                  </h3>
-                  <p className="text-gray-300">
-                    Private chefs, butler services, and personalized
-                    experiences.
-                  </p>
-                </div>
-                <div className="bg-gray-800 rounded-lg p-6">
-                  <Wifi className="h-8 w-8 text-white mb-4" />
-                  <h3 className="text-xl font-medium mb-2">Smart Homes</h3>
-                  <p className="text-gray-300">
-                    Modern amenities and tech-enabled luxury experiences.
-                  </p>
-                </div>
-                <div className="bg-gray-800 rounded-lg p-6">
-                  <Car className="h-8 w-8 text-white mb-4" />
-                  <h3 className="text-xl font-medium mb-2">Transportation</h3>
-                  <p className="text-gray-300">
-                    Airport transfers and luxury vehicle rentals.
-                  </p>
-                </div>
-                <div className="bg-gray-800 rounded-lg p-6">
-                  <MapPin className="h-8 w-8 text-white mb-4" />
-                  <h3 className="text-xl font-medium mb-2">Local Expertise</h3>
-                  <p className="text-gray-300">
-                    Insider knowledge of the best experiences.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <Footer />
       </div>
+
+      <Footer />
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale || "en", ["common"])),
-    },
-    // Revalidate the page every 1 hour
-    revalidate: 3600,
-  };
-};
