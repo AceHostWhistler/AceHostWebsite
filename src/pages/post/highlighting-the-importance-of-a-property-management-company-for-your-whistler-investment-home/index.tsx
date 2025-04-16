@@ -38,13 +38,31 @@ const PropertyManagementBlog = () => {
     <>
       <Head>
         <title>
-          Highlighting the Importance of a Property Management Company For Your
-          Whistler Investment Home | AceHost
+          The Importance of Property Management for Your Whistler Investment Home | AceHost
         </title>
         <meta
           name="description"
-          content="Discover why having a qualified property management company is essential for your Whistler investment home. Learn how AceHost Whistler can help manage your rental property, maximize income, and provide peace of mind."
+          content="Discover why hiring a professional property management company is essential for your Whistler investment property. Learn how AceHost maximizes rental income, ensures seamless guest experiences, and provides peace of mind."
         />
+        <meta
+          name="keywords"
+          content="Whistler property management, vacation rental management, investment property, Whistler real estate, luxury rental management, AceHost Whistler"
+        />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:title"
+          content="The Importance of Property Management for Your Whistler Investment Home"
+        />
+        <meta
+          property="og:description"
+          content="Discover why hiring a professional property management company is essential for your Whistler investment property. Learn how AceHost maximizes rental income, ensures seamless guest experiences, and provides peace of mind."
+        />
+        <meta
+          property="og:image"
+          content="https://acehost.ca/photos/post/highlighting-the-importance-of-a-property-management-company-for-your-whistler-investment-home/Hero.jpg"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href="https://acehost.ca/post/highlighting-the-importance-of-a-property-management-company-for-your-whistler-investment-home" />
       </Head>
 
       <div className="min-h-screen bg-white">
@@ -87,7 +105,7 @@ const PropertyManagementBlog = () => {
           <div className="max-w-6xl mx-auto mb-16 px-4 sm:px-6">
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden shadow-xl">
               <Image
-                src="/photos/post/highlighting-the-importance-of-a-property-management-company-for-your-whistler-investment-home/hero.jpg"
+                src="/photos/post/highlighting-the-importance-of-a-property-management-company-for-your-whistler-investment-home/Hero.jpg"
                 alt="Whistler luxury property management"
                 fill
                 className="object-cover"
@@ -154,7 +172,16 @@ const PropertyManagementBlog = () => {
                   maximize visibility and revenue.
                 </p>
 
-                <h3 className="text-xl md:text-2xl font-bold mb-6">
+                <div className="relative aspect-video rounded-lg overflow-hidden">
+                  <Image
+                    src="/photos/post/highlighting-the-importance-of-a-property-management-company-for-your-whistler-investment-home/3.jpg"
+                    alt="Revenue optimization for Whistler luxury rentals"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+
+                <h3 className="text-xl md:text-2xl font-bold mt-8 mb-6">
                   3. Handling High Guest Turnover
                 </h3>
                 <p className="mb-6">
@@ -188,7 +215,16 @@ const PropertyManagementBlog = () => {
                   operational efficiency.
                 </p>
 
-                <h3 className="text-xl md:text-2xl font-bold mb-6">
+                <div className="relative aspect-video rounded-lg overflow-hidden">
+                  <Image
+                    src="/photos/post/highlighting-the-importance-of-a-property-management-company-for-your-whistler-investment-home/4.jpg"
+                    alt="Technology solutions for property management"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+
+                <h3 className="text-xl md:text-2xl font-bold mt-8 mb-6">
                   5. Managing Cleaning and Maintenance
                 </h3>
                 <p className="mb-6">
@@ -201,8 +237,8 @@ const PropertyManagementBlog = () => {
 
                 <div className="relative aspect-video rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/post/highlighting-the-importance-of-a-property-management-company-for-your-whistler-investment-home/3.jpg"
-                    alt="Professional cleaning and maintenance services"
+                    src="/photos/post/highlighting-the-importance-of-a-property-management-company-for-your-whistler-investment-home/1.jpg"
+                    alt="Professional cleaning and maintenance services for luxury Whistler properties"
                     fill
                     className="object-cover"
                   />
@@ -220,7 +256,16 @@ const PropertyManagementBlog = () => {
                   new guests while keeping past guests coming back.
                 </p>
 
-                <h3 className="text-xl md:text-2xl font-bold mb-6">
+                <div className="relative aspect-video rounded-lg overflow-hidden">
+                  <Image
+                    src="/photos/post/highlighting-the-importance-of-a-property-management-company-for-your-whistler-investment-home/3.jpg"
+                    alt="Marketing strategies for Whistler vacation properties"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+
+                <h3 className="text-xl md:text-2xl font-bold mt-8 mb-6">
                   7. Customized and Comprehensive Service
                 </h3>
                 <p className="mb-6">
@@ -233,7 +278,7 @@ const PropertyManagementBlog = () => {
                   property&apos;s appeal.
                 </p>
 
-                <h3 className="text-xl md:text-2xl font-bold mb-6">
+                <h3 className="text-xl md:text-2xl font-bold mt-8 mb-6">
                   8. Streamlined Operations and Reduced Stress
                 </h3>
                 <p className="mb-6">
@@ -248,7 +293,7 @@ const PropertyManagementBlog = () => {
 
                 <div className="relative aspect-video rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/post/highlighting-the-importance-of-a-property-management-company-for-your-whistler-investment-home/4.jpg"
+                    src="/photos/post/highlighting-the-importance-of-a-property-management-company-for-your-whistler-investment-home/2.jpg"
                     alt="Luxury Whistler property management services"
                     fill
                     className="object-cover"
@@ -286,7 +331,16 @@ const PropertyManagementBlog = () => {
                   local regulations for short-term rentals.
                 </p>
 
-                <h3 className="text-xl md:text-2xl font-bold mb-6">
+                <div className="relative aspect-video rounded-lg overflow-hidden">
+                  <Image
+                    src="/photos/post/highlighting-the-importance-of-a-property-management-company-for-your-whistler-investment-home/4.jpg"
+                    alt="Whistler real estate market insights"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+
+                <h3 className="text-xl md:text-2xl font-bold mt-8 mb-6">
                   2. Access to Off-Market Listings
                 </h3>
                 <p className="mb-6">
@@ -296,7 +350,7 @@ const PropertyManagementBlog = () => {
                   investment opportunities before they hit the open market.
                 </p>
 
-                <h3 className="text-xl md:text-2xl font-bold mb-6">
+                <h3 className="text-xl md:text-2xl font-bold mt-8 mb-6">
                   3. Guidance on Investment Viability
                 </h3>
                 <p className="mb-6">
@@ -306,6 +360,15 @@ const PropertyManagementBlog = () => {
                   trends, occupancy rates, and seasonal demand, ensuring you
                   make an informed decision.
                 </p>
+                
+                <div className="relative aspect-video rounded-lg overflow-hidden">
+                  <Image
+                    src="/photos/post/highlighting-the-importance-of-a-property-management-company-for-your-whistler-investment-home/Hero.jpg"
+                    alt="Whistler luxury investment properties"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
               </div>
 
               <div className="bg-gray-50 border border-gray-200 rounded-xl shadow-sm p-8 mb-16">
