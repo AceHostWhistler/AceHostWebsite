@@ -709,9 +709,9 @@ const Home = () => {
         <Navigation transparent={false} />
 
         {/* Hero Section */}
-        <section className="relative bg-white pt-6 pb-0 md:py-10">
-          <div className="flex flex-col md:flex-row w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="md:w-2/5 lg:w-2/5 pr-4 md:pr-8 md:py-6">
+        <section className="relative bg-white pt-6 pb-0 md:py-6">
+          <div className="flex flex-col md:flex-row w-full max-w-full mx-auto">
+            <div className="md:w-[37%] lg:w-[37%] px-4 sm:px-6 lg:px-8 md:py-6">
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                 Luxury Vacation
                 <br />
@@ -741,20 +741,17 @@ const Home = () => {
                 View Luxury Rental Properties
               </Link>
             </div>
-            <div className="mt-8 md:mt-0 md:w-3/5 lg:w-3/5 md:flex md:items-center">
-              <div className="relative w-full overflow-hidden rounded-lg shadow-xl bg-white">
-                <div className="aspect-video">
-                  <iframe
-                    src="https://player.vimeo.com/video/1053582724?title=0&byline=0&portrait=0&autoplay=0&loop=1&background=0"
-                    className="w-full h-full absolute inset-0 object-cover"
-                    frameBorder="0"
-                    allow="autoplay; fullscreen; picture-in-picture"
-                    allowFullScreen
-                    title="AceHost Whistler Concierge Experience"
-                    loading="lazy"
-                  ></iframe>
-                </div>
-              </div>
+            <div className="mt-8 md:mt-0 md:w-[63%] lg:w-[63%]">
+              <iframe
+                src="https://player.vimeo.com/video/1053582724?title=0&byline=0&portrait=0&autoplay=0&loop=1&background=0"
+                className="w-full h-full aspect-video"
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+                title="AceHost Whistler Concierge Experience"
+                loading="lazy"
+                style={{ display: 'block' }}
+              ></iframe>
             </div>
           </div>
         </section>
