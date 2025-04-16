@@ -856,72 +856,13 @@ const Home = () => {
                   if (activeFilter === "pets") return listing.isPetFriendly;
                   return listing.location === activeFilter;
                 })
-                .slice(0, 6)
                 .map((property, i) => renderPropertyCard(property, i))}
-            </div>
-
-            <div className="mt-12 text-center">
-              <Link
-                href="/properties"
-                className="inline-block bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-colors text-base font-medium"
-              >
-                View All Properties
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* About Section */}
-        <section className="py-24 bg-white">
-          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <h2 className="text-4xl font-light mb-6 text-gray-900">
-                  Your Premier Whistler Vacation Rental Experience
-                </h2>
-                <p className="text-base md:text-lg text-gray-600 mb-6">
-                  At AceHost, we provide an unparalleled vacation rental
-                  experience in Whistler, British Columbia. Our handpicked
-                  collection of luxury properties is designed to meet the
-                  highest standards of comfort, style, and convenience.
-                </p>
-                <p className="text-base md:text-lg text-gray-600 mb-6">
-                  With our intimate knowledge of Whistler and commitment to
-                  exceptional service, we ensure that your stay is not just
-                  satisfactory, but truly extraordinary. From ski-in/ski-out
-                  chalets to spacious mountain view condos, our diverse
-                  portfolio caters to various preferences and group sizes.
-                </p>
-                <div className="flex flex-wrap gap-4 mt-8">
-                  <Link
-                    href="/about-acehost"
-                    className="inline-block bg-gray-100 text-gray-900 px-8 py-4 rounded-md hover:bg-gray-200 transition-colors text-base font-medium"
-                  >
-                    About AceHost
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="inline-block bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-colors text-base font-medium"
-                  >
-                    Contact Us
-                  </Link>
-                </div>
-              </div>
-              <div className="relative h-[500px]">
-                <Image
-                  src="/photos/homepage/pm/cedars full res.jpg"
-                  alt="Luxury Whistler Vacation Rental"
-                  fill
-                  className="object-cover rounded-xl shadow-xl"
-                  quality={90}
-                />
-              </div>
             </div>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section className="py-24 bg-gray-50">
+        <section className="py-24 bg-white">
           <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-16 text-center">
               <h2 className="text-4xl font-light mb-6 text-gray-900">
