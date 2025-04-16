@@ -710,9 +710,9 @@ const Home = () => {
 
         {/* Hero Section */}
         <section className="relative py-16 bg-white">
-          <div className="flex flex-col md:flex-row w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="md:w-1/3 lg:w-1/3 pr-4">
-              <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+          <div className="flex flex-col md:flex-row w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="md:w-2/5 lg:w-2/5 pr-4 md:pr-8">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                 Luxury Vacation
                 <br />
                 Rental Properties in
@@ -724,7 +724,7 @@ const Home = () => {
                 <br />
                 Concierge Services
               </h1>
-              <p className="text-sm text-gray-700 mb-6 max-w-xl">
+              <p className="text-base md:text-lg text-gray-700 mb-8 max-w-2xl">
                 AceHost is a leading Whistler luxury property management
                 company. We proudly offer an array of magnificent vacation
                 rental homes in Whistler, British Columbia. Offering a seamless
@@ -736,13 +736,13 @@ const Home = () => {
               </p>
               <Link
                 href="/properties"
-                className="inline-block bg-black text-white px-6 py-3 rounded-md hover:bg-gray-800 transition-colors text-sm font-medium"
+                className="inline-block bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-colors text-base font-medium"
               >
                 View Luxury Rental Properties
               </Link>
             </div>
-            <div className="mt-8 md:mt-0 md:w-2/3 lg:w-2/3">
-              <div className="relative aspect-video w-full h-full overflow-hidden rounded-lg">
+            <div className="mt-8 md:mt-0 md:w-3/5 lg:w-3/5">
+              <div className="relative aspect-video w-full h-full overflow-hidden rounded-lg shadow-xl">
                 <iframe
                   src="https://player.vimeo.com/video/1053582724?title=0&byline=0&portrait=0&autoplay=0&loop=1&background=0"
                   className="w-full h-full"
@@ -759,7 +759,7 @@ const Home = () => {
 
         {/* Services Section */}
         <section className="py-20 bg-white">
-          <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 sm:px-6 lg:px-8">
             {sections.map((section, index) => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="mb-6 h-48 relative overflow-hidden rounded-lg">
@@ -788,7 +788,7 @@ const Home = () => {
 
         {/* Featured Properties */}
         <section className="py-24 bg-gray-50">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-16 text-center">
               <h2 className="text-4xl font-light mb-6 text-gray-900">
                 View Our Full Collection Of Luxury Vacation Rental Properties
@@ -847,59 +847,154 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-              {displayedListings.map((property, index) =>
-                renderPropertyCard(property, index)
-              )}
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
+              {allListings
+                .filter((listing) => {
+                  if (activeFilter === "all") return true;
+                  if (activeFilter === "pets") return listing.isPetFriendly;
+                  return listing.location === activeFilter;
+                })
+                .slice(0, 6)
+                .map((property, i) => renderPropertyCard(property, i))}
+            </div>
+
+            <div className="mt-12 text-center">
+              <Link
+                href="/properties"
+                className="inline-block bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-colors text-base font-medium"
+              >
+                View All Properties
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section className="py-24 bg-white">
+          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <h2 className="text-4xl font-light mb-6 text-gray-900">
+                  Your Premier Whistler Vacation Rental Experience
+                </h2>
+                <p className="text-base md:text-lg text-gray-600 mb-6">
+                  At AceHost, we provide an unparalleled vacation rental
+                  experience in Whistler, British Columbia. Our handpicked
+                  collection of luxury properties is designed to meet the
+                  highest standards of comfort, style, and convenience.
+                </p>
+                <p className="text-base md:text-lg text-gray-600 mb-6">
+                  With our intimate knowledge of Whistler and commitment to
+                  exceptional service, we ensure that your stay is not just
+                  satisfactory, but truly extraordinary. From ski-in/ski-out
+                  chalets to spacious mountain view condos, our diverse
+                  portfolio caters to various preferences and group sizes.
+                </p>
+                <div className="flex flex-wrap gap-4 mt-8">
+                  <Link
+                    href="/about-acehost"
+                    className="inline-block bg-gray-100 text-gray-900 px-8 py-4 rounded-md hover:bg-gray-200 transition-colors text-base font-medium"
+                  >
+                    About AceHost
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="inline-block bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-colors text-base font-medium"
+                  >
+                    Contact Us
+                  </Link>
+                </div>
+              </div>
+              <div className="relative h-[500px]">
+                <Image
+                  src="/photos/homepage/pm/cedars full res.jpg"
+                  alt="Luxury Whistler Vacation Rental"
+                  fill
+                  className="object-cover rounded-xl shadow-xl"
+                  quality={90}
+                />
+              </div>
             </div>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section className="py-12 bg-white">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl font-medium mb-8 text-center text-gray-900">
+        <section className="py-24 bg-gray-50">
+          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-16 text-center">
+              <h2 className="text-4xl font-light mb-6 text-gray-900">
                 Frequently Asked Questions
               </h2>
+              <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
+                Find answers to common questions about our luxury vacation
+                rentals in Whistler, British Columbia.
+              </p>
+            </div>
 
-              <div className="space-y-4">
-                {faqItems.map((item, index) => (
-                  <div
-                    key={index}
-                    className="border border-gray-100 rounded-lg overflow-hidden"
-                  >
-                    <button
-                      onClick={() =>
-                        setExpandedFaq(expandedFaq === index ? null : index)
-                      }
-                      className="w-full px-6 py-4 flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
-                    >
-                      <h3 className="text-base font-medium text-gray-900 text-left">
-                        {item.question}
-                      </h3>
-                      <span className="text-2xl text-gray-400">
-                        {expandedFaq === index ? "−" : "+"}
-                      </span>
-                    </button>
-                    {expandedFaq === index && (
-                      <div className="px-6 py-4 bg-white">
-                        <p className="text-sm text-gray-600">{item.answer}</p>
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-
-              <div className="text-center mt-8">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center text-black font-medium hover:text-gray-700 transition-colors"
+            <div className="space-y-4">
+              {faqItems.map((item, index) => (
+                <div
+                  key={index}
+                  className="border border-gray-100 rounded-lg overflow-hidden"
                 >
-                  <span>Have more questions? Contact us</span>
-                  <ArrowRight size={18} className="ml-2" />
-                </Link>
-              </div>
+                  <button
+                    onClick={() =>
+                      setExpandedFaq(expandedFaq === index ? null : index)
+                    }
+                    className="w-full px-6 py-4 flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                  >
+                    <h3 className="text-base font-medium text-gray-900 text-left">
+                      {item.question}
+                    </h3>
+                    <span className="text-2xl text-gray-400">
+                      {expandedFaq === index ? "−" : "+"}
+                    </span>
+                  </button>
+                  {expandedFaq === index && (
+                    <div className="px-6 py-4 bg-white">
+                      <p className="text-sm text-gray-600">{item.answer}</p>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center mt-8">
+              <Link
+                href="/contact"
+                className="inline-flex items-center text-black font-medium hover:text-gray-700 transition-colors"
+              >
+                <span>Have more questions? Contact us</span>
+                <ArrowRight size={18} className="ml-2" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Call to Action Section */}
+        <section className="py-24 bg-black text-white">
+          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl font-light mb-6">
+              Ready to Experience Whistler in Luxury?
+            </h2>
+            <p className="text-base md:text-lg max-w-3xl mx-auto mb-8">
+              Discover our collection of premium vacation rentals and elevate
+              your Whistler experience. Our team is ready to assist you in
+              finding the perfect accommodation for your next mountain getaway.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                href="/properties"
+                className="inline-block bg-white text-black px-8 py-4 rounded-md hover:bg-gray-100 transition-colors text-base font-medium"
+              >
+                Browse Properties
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-block bg-transparent border border-white text-white px-8 py-4 rounded-md hover:bg-white/10 transition-colors text-base font-medium"
+              >
+                Contact Us
+              </Link>
             </div>
           </div>
         </section>
@@ -910,13 +1005,13 @@ const Home = () => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
+export const getStaticProps: GetStaticProps = async ({
+  locale,
+}) => {
   return {
     props: {
       ...(await serverSideTranslations(locale || "en", ["common"])),
     },
-    // Add revalidation for ISR
-    revalidate: 3600, // Revalidate every hour
   };
 };
 
