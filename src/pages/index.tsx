@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { ArrowRight, Instagram, Youtube } from "lucide-react";
-import { FaBed, FaBath, FaUser } from "react-icons/fa";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,6 +9,8 @@ import Testimonials from "@/components/Testimonials";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
+import { FaUser, FaBed, FaBath } from "react-icons/fa";
+import { Users, Bed, Bath } from "lucide-react";
 
 const Home = () => {
   const { t } = useTranslation("common");
@@ -64,7 +65,7 @@ const Home = () => {
   const renderPropertyCard = (property: any, index: number) => (
     <div
       key={property.id}
-      className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+      className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
     >
       <div className="relative h-64">
         <Link href={property.link}>
@@ -84,19 +85,26 @@ const Home = () => {
           </div>
         )}
         <div className="absolute bottom-4 right-4">
-          {property.airbnbLink ? (
+          {property.contactLink ? (
+            <Link
+              href={property.contactLink}
+              className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
+            >
+              Contact Us
+            </Link>
+          ) : property.airbnbLink ? (
             <a
               href={property.airbnbLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-gray-900 px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-100 transition-colors"
+              className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
             >
               Book Now
             </a>
           ) : (
             <Link
               href={property.link}
-              className="bg-white text-gray-900 px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-100 transition-colors"
+              className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
             >
               Book Now
             </Link>
@@ -104,47 +112,69 @@ const Home = () => {
         </div>
       </div>
       <div className="p-6">
-        {/* Property name */}
-        <h3 className="text-xl font-semibold mb-4 text-gray-900 line-clamp-2">
-          {property.name}
-        </h3>
-
         {/* Property details */}
-        <div className="flex flex-wrap items-center text-gray-700 mb-4 gap-x-4 gap-y-2">
+        <div className="flex flex-wrap gap-2 mb-4">
           {property.guests && (
-            <div className="flex items-center">
-              <FaUser className="mr-2 text-gray-500" />
-              <span>{property.guests} {property.guests === 1 ? "guest" : "guests"}</span>
-            </div>
+            <span className="bg-gray-900 text-white px-3 py-1 text-sm font-medium rounded-md">
+              {property.guests}{" "}
+              {typeof property.guests === "number" && property.guests === 1
+                ? "Guest"
+                : "Guests"}
+            </span>
           )}
           {property.bedrooms && (
-            <div className="flex items-center">
-              <FaBed className="mr-2 text-gray-500" />
-              <span>
-                {property.bedrooms} {typeof property.bedrooms === "number" && property.bedrooms === 1 ? "bed" : "beds"}
-              </span>
-            </div>
+            <span className="bg-gray-200 text-gray-900 px-3 py-1 text-sm font-medium rounded-md">
+              {property.bedrooms}{" "}
+              {typeof property.bedrooms === "number" && property.bedrooms === 1
+                ? "Bedroom"
+                : "Bedrooms"}
+            </span>
+          )}
+          {property.beds && (
+            <span className="bg-gray-200 text-gray-900 px-3 py-1 text-sm font-medium rounded-md">
+              {property.beds}{" "}
+              {typeof property.beds === "number" && property.beds === 1
+                ? "Bed"
+                : "Beds"}
+            </span>
           )}
           {property.bathrooms && (
-            <div className="flex items-center">
-              <FaBath className="mr-2 text-gray-500" />
-              <span>
-                {property.bathrooms} {typeof property.bathrooms === "number" && property.bathrooms === 1 ? "bath" : "baths"}
-              </span>
-            </div>
+            <span className="bg-gray-200 text-gray-900 px-3 py-1 text-sm font-medium rounded-md">
+              {property.bathrooms}{" "}
+              {typeof property.bathrooms === "number" &&
+              property.bathrooms === 1
+                ? "Bathroom"
+                : "Bathrooms"}
+            </span>
           )}
         </div>
 
+        {/* Property name */}
+        <h3 className="text-xl font-medium mb-4 text-gray-900">
+          {property.name}
+        </h3>
+
         {/* Pricing information */}
-        {property.priceRange && (
-          <p className="text-gray-900 font-medium">{property.priceRange}</p>
-        )}
-        {property.winterPrice && (
-          <p className="text-gray-600 text-sm">{property.winterPrice}</p>
-        )}
-        {property.holidayPrice && (
-          <p className="text-gray-600 text-sm">{property.holidayPrice}</p>
-        )}
+        <div className="space-y-2 mb-6">
+          {property.priceRange && (
+            <p className="text-gray-600">{property.priceRange}</p>
+          )}
+          {property.winterPrice && (
+            <p className="text-gray-600">{property.winterPrice}</p>
+          )}
+          {property.holidayPrice && (
+            <p className="text-gray-600">{property.holidayPrice}</p>
+          )}
+        </div>
+
+        {/* View property link */}
+        <Link
+          href={property.link}
+          className="inline-flex items-center text-gray-900 font-medium hover:text-gray-600 transition-colors"
+        >
+          <span>View Property</span>
+          <ArrowRight size={18} className="ml-2" />
+        </Link>
       </div>
     </div>
   );
@@ -263,8 +293,8 @@ const Home = () => {
       holidayPrice: "",
       location: "whistler",
       link: "/listings/scandinavian-mountainside-retreat-pemberton-meadows-50-acres",
+      contactLink: "/contact"
     },
-
     {
       id: "ravens-nest",
       name: "Raven's Nest | Ski in Ski out | Views",
@@ -312,7 +342,7 @@ const Home = () => {
       location: "whistler",
       link: "/listings/the-nest-ski-in-ski-out",
       airbnbLink:
-        "https://www.airbnb.ca/rooms/763259660349118016?guests=1&adults=1&s=67&unique_share_id=d18218f6-da74-4763-a199-d5a1dc8c85ff",
+        "https://www.airbnb.ca/rooms/763259660349118016?guests=1&adults=1&s=67&unique_share_id=d18218f6-da74-4763-a199-d5a1dc8c85ff&source_impression_id=p3_1744822209_P3U3_5CgXenHmYC6",
       isPetFriendly: true,
     },
     {
@@ -361,7 +391,7 @@ const Home = () => {
       location: "whistler",
       link: "/listings/luxe-cozy-3-bed-whistler-village",
       airbnbLink:
-        "https://www.airbnb.ca/rooms/50025973?guests=1&adults=1&s=67&unique_share_id=04ceb090-1b8e-4e32-972f-d616b380a0a8",
+        "https://www.airbnb.ca/rooms/1249285355870765792?guests=1&adults=1&s=67&unique_share_id=5fc53f3d-300c-4b8b-aee5-d9f5b263ae3c",
     },
     {
       id: "dream-log-chalet",
@@ -424,7 +454,7 @@ const Home = () => {
       holidayPrice: "",
       location: "whistler",
       link: "/listings/ski-in-ski-out-walk-to-lifts-2-bed",
-      airbnbLink: "https://www.airbnb.com",
+      airbnbLink: "https://www.airbnb.ca/rooms/1015303987589924725?guests=1&adults=1&s=67&unique_share_id=5e912eb5-5445-4797-81ec-df21817dd143",
     },
     {
       id: "whistler-village-views-luxury-2-5-bedroom",

@@ -990,7 +990,7 @@ export default function Properties() {
       "falcon-blueberry-drive":
         "https://www.airbnb.ca/rooms/18060329?guests=1&adults=1&s=67&unique_share_id=0759b67e-0517-4127-9de1-842265c53ff7",
       "the-nest-ski-in-ski-out":
-        "https://www.airbnb.ca/rooms/763259660349118016?guests=1&adults=1&s=67&unique_share_id=d18218f6-da74-4763-a199-d5a1dc8c85ff",
+        "https://www.airbnb.ca/rooms/763259660349118016?guests=1&adults=1&s=67&unique_share_id=d18218f6-da74-4763-a199-d5a1dc8c85ff&source_impression_id=p3_1744822209_P3U3_5CgXenHmYC6",
       "snow-pine":
         "https://www.airbnb.ca/rooms/744832560480313027?guests=1&adults=1&s=67&unique_share_id=50412c76-d839-4753-bf56-19310f38a4ef",
       "whispering-pines-ski-in-ski-out":
@@ -1002,12 +1002,15 @@ export default function Properties() {
       "marquise-2-bed-ski-in-ski-out":
         "https://www.airbnb.ca/rooms/1370367404602078616?guests=1&adults=1&s=67&unique_share_id=eb381b39-e67d-44ea-9d7c-2de2e1b5fa20",
       "luxe-cozy-3-bed-whistler-village":
-        "https://www.airbnb.ca/rooms/50025973?guests=1&adults=1&s=67&unique_share_id=04ceb090-1b8e-4e32-972f-d616b380a0a8",
+        "https://www.airbnb.ca/rooms/1249285355870765792?guests=1&adults=1&s=67&unique_share_id=5fc53f3d-300c-4b8b-aee5-d9f5b263ae3c",
       "ski-in-ski-out-walk-to-lifts-2-bed":
-        "https://www.airbnb.com",
+        "https://www.airbnb.ca/rooms/1015303987589924725?guests=1&adults=1&s=67&unique_share_id=5e912eb5-5445-4797-81ec-df21817dd143",
     };
 
     const airbnbLink = airbnbLinks[property.id];
+
+    // Special handling for properties that should link to contact page
+    const shouldLinkToContact = property.id === "scandinavian-mountainside-retreat-pemberton-meadows-50-acres";
 
     return (
       <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow h-full">
@@ -1047,7 +1050,7 @@ export default function Properties() {
 
           {/* Book Now Button in bottom-right corner */}
           <div className="absolute bottom-4 right-4 z-10">
-            {airbnbLink ? (
+            {airbnbLink && !shouldLinkToContact ? (
               <a
                 href={airbnbLink}
                 target="_blank"
@@ -1057,6 +1060,14 @@ export default function Properties() {
               >
                 Book Now
               </a>
+            ) : shouldLinkToContact ? (
+              <Link
+                href="/contact"
+                className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
+                onClick={(e) => e.stopPropagation()}
+              >
+                Contact Us
+              </Link>
             ) : (
               <Link
                 href={propertyUrl}
