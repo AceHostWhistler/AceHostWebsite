@@ -34,6 +34,13 @@ const Testimonials = () => {
       hasImage: false,
     },
     {
+      name: "Aran Seaman",
+      role: "Guest",
+      text: "Such a great team to work with. A real dedication to guest satisfaction & wellbeing. Amazing attention to detail. Highly recommend!",
+      date: "38 weeks ago",
+      hasImage: false,
+    },
+    {
       name: "Karen Thompson",
       role: "Guest",
       text: "We enjoyed our stay at this beautiful home in Whistler! Our family was well taken care of by Ben and his AceHost team. Ben's professionalism and attention to detail ensured our family could focus on spending time together and not worrying about the many details of a family holiday. Ben made recommendations and reservations to wonderful restaurants, the spa and other interesting places to go. We strongly recommend AceHost to anyone who wants to enjoy a fun holiday with an attentive concierge that can plan an exceptional experience for you.",
