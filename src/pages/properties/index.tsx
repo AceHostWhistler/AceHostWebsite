@@ -627,6 +627,72 @@ export default function Properties() {
             priceRange: "$350-$1,050 Nightly",
             link: "/listings/ski-in-ski-out-walk-to-lifts-2-bed",
           },
+          {
+            id: "whistler-village-views-luxury-2-5-bedroom",
+            name: "Whistler Village Views | Luxury 2.5 Bedroom",
+            images: [
+              "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge.jpg",
+              "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-2.jpg",
+              "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-3.jpg",
+              "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-4.jpg",
+            ],
+            guests: 6,
+            bedrooms: 2.5,
+            bathrooms: 2,
+            location: "Village North, Whistler",
+            description:
+              "This property is conveniently located for skiing, just a short walk from your front door! Perfect for families visiting Whistler, with spacious layout and views of Olympic Plaza and Blackcomb Mountain. Recently renovated with all the comforts of home.",
+            features: [
+              "Village Central Location",
+              "Mountain Views",
+              "Walk to Lifts",
+              "Fully Equipped Kitchen",
+              "Washer/Dryer In-Unit",
+              "Shared Pool & Hot Tub",
+              "Reserved Parking",
+              "Gas Fireplace"
+            ],
+            highlights: [
+              "Heart of Whistler Village",
+              "Walk to Lifts and Restaurants",
+              "Mountain Views",
+              "Recently Renovated"
+            ],
+            priceRange: "$400-$1,150+ Nightly",
+          },
+          {
+            id: "scandinavian-mountainside-retreat-pemberton-meadows-50-acres",
+            name: "Pemberton Escape | 50 Acres | Wellness & Heli Retreat",
+            images: [
+              "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/DJI_0202-Edit.jpg",
+              "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/DJI_0195-Edit.jpg",
+              "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/DJI_0096-Edit.jpg",
+              "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_R001526-Edit.jpg",
+            ],
+            guests: 10,
+            bedrooms: 5,
+            bathrooms: 5,
+            location: "Pemberton Meadows, Pemberton",
+            description:
+              "This 5-bed, 5-bath award-winning property was designed with the eye of a leading Japanese architect. Set on 50 acres of private land with breathtaking panoramic views of the Pemberton Valley Mountain Range. Includes private chef and butler service.",
+            features: [
+              "50 Acres Private Estate",
+              "Private Chef & Butler",
+              "Mountain Views",
+              "Hot Tub",
+              "On-site Gym",
+              "Log Fireplace",
+              "Floor-to-Ceiling Windows",
+              "Hiking Trails Access"
+            ],
+            highlights: [
+              "Award-Winning Architecture",
+              "Perfect for Wellness Retreats",
+              "Heli-Skiing Access",
+              "Private Chef Included"
+            ],
+            priceRange: "On Request",
+          },
         ],
       },
       {
@@ -962,6 +1028,8 @@ export default function Properties() {
         "https://www.airbnb.com/rooms/1072474554447345991?guests=1&adults=1&s=67&unique_share_id=e556b35c-05b5-40b6-91e1-5304ffafc23b",
       "whistler-village-views":
         "https://www.airbnb.ca/rooms/50025973?guests=1&adults=1&s=67&unique_share_id=04ceb090-1b8e-4e32-972f-d616b380a0a8",
+      "whistler-village-views-luxury-2-5-bedroom":
+        "https://www.airbnb.ca/rooms/50025973?preview_for_ml=true&source_impression_id=p3_1699290307_SHcNx7EoXySmn6j5",
       "marquise-2-bed-ski-in-ski-out":
         "https://www.airbnb.ca/rooms/1370367404602078616?guests=1&adults=1&s=67&unique_share_id=eb381b39-e67d-44ea-9d7c-2de2e1b5fa20",
     };

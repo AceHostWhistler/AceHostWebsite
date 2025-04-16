@@ -204,6 +204,7 @@ const Home = () => {
       link: "/listings/two-cedars-kadenwood",
       airbnbLink:
         "https://www.airbnb.ca/rooms/666613336620375768?guests=1&adults=1&s=67&unique_share_id=0d8a1725-cb02-487a-a033-7cc2940692e4",
+      isPetFriendly: true,
     },
     {
       id: "chalet-la-forja",
@@ -237,6 +238,7 @@ const Home = () => {
       link: "/listings/slopeside-villa-kadenwood",
       airbnbLink:
         "https://www.airbnb.ca/rooms/826226399590812184?guests=1&adults=1&s=67&unique_share_id=aab7fbd3-669a-461d-b913-c15cf257b4c0",
+      isPetFriendly: true,
     },
     {
       id: "panoramic-estate",
@@ -270,6 +272,21 @@ const Home = () => {
       airbnbLink:
         "https://www.airbnb.ca/rooms/1168163637007998550?guests=1&adults=1&s=67&unique_share_id=8227e964-920d-4bc0-8073-13043963151f",
     },
+    {
+      id: "scandinavian-mountainside-retreat-pemberton-meadows-50-acres",
+      name: "Pemberton Escape | 50 Acres | Wellness & Heli Retreat",
+      image: "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KJ14319-Edit-2.jpg",
+      guests: 10,
+      bedrooms: 5,
+      beds: 8,
+      bathrooms: 5,
+      priceRange: "On Request - Private Chef & Butler Included",
+      winterPrice: "Availability for Heli & Wellness Retreats",
+      holidayPrice: "",
+      location: "whistler",
+      link: "/listings/scandinavian-mountainside-retreat-pemberton-meadows-50-acres",
+    },
+
     {
       id: "ravens-nest",
       name: "Raven's Nest | Ski in Ski out | Views",
@@ -308,9 +325,9 @@ const Home = () => {
       name: "The Nest | Ski in Ski out",
       image: "/photos/properties/Wolverine Crescent/06-2627 Wolverine-06.jpg",
       guests: 8,
-      bedrooms: 3,
-      beds: 4,
-      bathrooms: 3,
+      bedrooms: 5,
+      beds: 6,
+      bathrooms: 5,
       priceRange: "$1,800-$4,000+",
       winterPrice: "$1,800-$2,800+ Nightly | Winter",
       holidayPrice: "$3,000-$4,000+ Nightly | Christmas & NY",
@@ -318,6 +335,7 @@ const Home = () => {
       link: "/listings/the-nest-ski-in-ski-out",
       airbnbLink:
         "https://www.airbnb.ca/rooms/763259660349118016?guests=1&adults=1&s=67&unique_share_id=d18218f6-da74-4763-a199-d5a1dc8c85ff",
+      isPetFriendly: true,
     },
     {
       id: "snow-pine",
@@ -415,57 +433,6 @@ const Home = () => {
         "https://www.airbnb.ca/rooms/1370367404602078616?guests=1&adults=1&s=67&unique_share_id=eb381b39-e67d-44ea-9d7c-2de2e1b5fa20",
     },
     {
-      id: "two-cedars-pets",
-      name: "Two Cedars | Kadenwood | Private Butler",
-      image: "/photos/properties/Two Cedars New/OSA_AncientCW1248.jpg",
-      guests: 16,
-      bedrooms: 7,
-      beds: 12,
-      bathrooms: 8.5,
-      priceRange: "Nightly Price Range: $6,500-$9,500+",
-      winterPrice: "$8,500-$10,000+ Nightly | Winter",
-      holidayPrice: "$17,500-$21,000+ Nightly | Christmas & NY",
-      location: "whistler",
-      link: "/listings/two-cedars-kadenwood",
-      airbnbLink:
-        "https://www.airbnb.ca/rooms/666613336620375768?guests=1&adults=1&s=67&unique_share_id=0d8a1725-cb02-487a-a033-7cc2940692e4",
-    },
-    {
-      id: "slope-slide-pets",
-      name: "Slope Slide Chalet | Kadenwood",
-      image:
-        "/photos/properties/Slopeside Kadenwood/01-2945 Kadenwood Dr 01.jpg",
-      guests: 10,
-      bedrooms: 5,
-      beds: 6,
-      bathrooms: 6,
-      priceRange: "Nightly Price Range: $2,600-$6,000",
-      winterPrice: "$4,500-$6,500+ Nightly | Winter",
-      holidayPrice: "$10,000+ Nightly | Christmas & NY",
-      location: "whistler",
-      link: "/listings/slopeside-villa-kadenwood",
-      airbnbLink:
-        "https://www.airbnb.ca/rooms/826226399590812184?guests=1&adults=1&s=67&unique_share_id=aab7fbd3-669a-461d-b913-c15cf257b4c0",
-      isPetFriendly: true,
-    },
-    {
-      id: "the-nest-pets",
-      name: "The Nest | Ski in-Ski out",
-      image: "/photos/properties/Wolverine Crescent/06-2627 Wolverine-06.jpg",
-      guests: 10,
-      bedrooms: 5,
-      beds: 6,
-      bathrooms: 6,
-      priceRange: "Monthly Price Range: $18,000-$29,000",
-      winterPrice: "$29,000 Monthly | Winter (Booked until June 15, 2025)",
-      holidayPrice: "90+ day minimum",
-      location: "whistler",
-      link: "/listings/the-nest-ski-in-ski-out",
-      airbnbLink:
-        "https://www.airbnb.ca/rooms/763259660349118016?guests=1&adults=1&s=67&unique_share_id=d18218f6-da74-4763-a199-d5a1dc8c85ff",
-      isPetFriendly: true,
-    },
-    {
       id: "ski-in-ski-out-walk-to-lifts-2-bed",
       name: "Le Chamois 2 Bed | Walk to Lifts",
       image:
@@ -481,6 +448,23 @@ const Home = () => {
       link: "/listings/ski-in-ski-out-walk-to-lifts-2-bed",
       airbnbLink: "https://www.airbnb.com",
     },
+    {
+      id: "whistler-village-views-luxury-2-5-bedroom",
+      name: "Whistler Village Views | Luxury 2.5 Bedroom",
+      image: "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge.jpg",
+      guests: 6,
+      bedrooms: 2.5,
+      beds: 4,
+      bathrooms: 2,
+      priceRange: "Nightly Price Range: $400-$1,150+",
+      winterPrice: "$600-$900+ Nightly | Winter",
+      holidayPrice: "$900-$1,150+ Nightly | Christmas & NY",
+      location: "whistler",
+      link: "/listings/whistler-village-views-luxury-2-5-bedroom",
+      airbnbLink: "https://www.airbnb.ca/rooms/50025973?preview_for_ml=true&source_impression_id=p3_1699290307_SHcNx7EoXySmn6j5",
+    },
+   
+  
     // Worldwide Properties
     {
       id: "yacht-thailand",
@@ -519,12 +503,27 @@ const Home = () => {
       bedrooms: 8,
       beds: 10,
       bathrooms: 8,
-      priceRange: "On Request",
+      priceRange: "Nightly Price Range: $3,500-$5,000 USD",
       winterPrice: "",
       holidayPrice: "",
       location: "worldwide",
       link: "/worldwide-listings/punta-mita---casa-juntos",
     },
+    {
+      id: "hood-river-luxury-home",
+      name: "Hood River Luxury Home",
+      image: "/photos/properties/hood-river-luxury-home/Exterior 1.jpg",
+      guests: 10,
+      bedrooms: 4,
+      beds: 7,
+      bathrooms: 2.5,
+      priceRange: "Nightly Price Range: $800-$1,200 USD",
+      winterPrice: "",
+      holidayPrice: "",
+      location: "worldwide",
+      link: "/worldwide-listings/hood-river-luxury-home",
+    },
+    
     // Vancouver Properties
     {
       id: "vancouver-house",

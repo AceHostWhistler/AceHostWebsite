@@ -296,7 +296,7 @@ const ConciergeService = () => {
                         </div>
                         <FaRegBookmark className="text-2xl" />
                       </div>
-                      <p className="font-medium mb-2">195 likes</p>
+                      <p className="font-medium mb-2">278 likes</p>
                     </div>
                   </div>
                 </div>
