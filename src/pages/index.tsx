@@ -90,14 +90,14 @@ const Home = () => {
               href={property.airbnbLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-black text-white px-4 py-2.5 rounded-md text-sm font-bold hover:bg-gray-800 transition-colors"
+              className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
             >
               Book Now
             </a>
           ) : (
             <Link
               href={property.link}
-              className="bg-black text-white px-4 py-2.5 rounded-md text-sm font-bold hover:bg-gray-800 transition-colors"
+              className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
             >
               Book Now
             </Link>

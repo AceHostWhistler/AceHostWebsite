@@ -37,7 +37,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
         <div className="absolute bottom-4 right-4">
           <Link
             href={property.link}
-            className="bg-white text-gray-900 px-4 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors"
+            className="bg-white text-gray-900 px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-100 transition-colors"
           >
             Book Now
           </Link>
