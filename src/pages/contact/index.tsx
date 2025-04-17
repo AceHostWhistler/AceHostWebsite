@@ -251,7 +251,7 @@ const Contact = () => {
                 <h3 className="text-xl font-bold mb-4">Follow Us</h3>
                 <div className="flex space-x-4">
                   <a
-                    href="https://instagram.com/acehost"
+                    href="https://www.instagram.com/acehost_whistler/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-gray-800 text-white rounded-full hover:bg-black transition-colors"
@@ -281,7 +281,7 @@ const Contact = () => {
                     </svg>
                   </a>
                   <a
-                    href="https://youtube.com/channel/acehost"
+                    href="https://www.youtube.com/@acehost_Whistler/videos"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-gray-800 text-white rounded-full hover:bg-black transition-colors"
