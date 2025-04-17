@@ -439,6 +439,7 @@ const Home = () => {
       link: "/listings/marquise-2-bed-ski-in-ski-out",
       airbnbLink:
         "https://www.airbnb.ca/rooms/1370367404602078616?guests=1&adults=1&s=67&unique_share_id=eb381b39-e67d-44ea-9d7c-2de2e1b5fa20",
+      isPetFriendly: true,
     },
     {
       id: "ski-in-ski-out-walk-to-lifts-2-bed",

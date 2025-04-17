@@ -557,6 +557,7 @@ export default function Properties() {
               "Cozy Mountain Retreat",
             ],
             priceRange: "Nightly Price Range: $160-450",
+            isPetFriendly: true,
           },
           {
             id: "the-nest-pets",
