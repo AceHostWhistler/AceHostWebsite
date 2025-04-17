@@ -39,6 +39,7 @@ interface PropertyFeature {
   sqm?: number;
   highlights?: string[];
   priceRange?: string;
+  isPetFriendly?: boolean;
 }
 
 interface PropertyCategory {
@@ -166,6 +167,7 @@ export default function Properties() {
               "Ski-in/Ski-out Access",
             ],
             priceRange: "$6,500-$9,500+",
+            isPetFriendly: true,
           },
           {
             id: "chalet-la-forja-kadenwood",
@@ -230,6 +232,7 @@ export default function Properties() {
               "Panoramic Mountain Views",
             ],
             priceRange: "$2,600-$6,000",
+            isPetFriendly: true,
           },
           {
             id: "panoramic-estate-kadenwood",
@@ -391,6 +394,7 @@ export default function Properties() {
               "Quiet Neighborhood",
             ],
             priceRange: "Monthly Pricing: $10,000-$12,000",
+            isPetFriendly: true,
           },
           {
             id: "wedge-mountain-lodge-spa",
@@ -573,6 +577,7 @@ export default function Properties() {
             highlights: [],
             priceRange: "$29,000 Monthly | Winter (Booked until June 15, 2025)",
             link: "/listings/the-nest-ski-in-ski-out",
+            isPetFriendly: true,
           },
           {
             id: "ski-in-ski-out-walk-to-lifts-2-bed",
@@ -1015,6 +1020,13 @@ export default function Properties() {
     return (
       <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow h-full">
         <div className="relative h-64 sm:h-72 overflow-hidden">
+          {/* Pet Friendly Badge */}
+          {property.isPetFriendly && (
+            <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 text-xs font-medium rounded-md z-10">
+              Pet Friendly
+            </div>
+          )}
+          
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <Link href={propertyUrl}>
             <img
