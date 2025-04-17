@@ -410,8 +410,8 @@ const Home = () => {
     },
     {
       id: "whispering-pines",
-      name: "The Aspens | Luxe 2-Bed Ski in/Out | On Slopes",
-      image: "/photos/properties/The Aspens/4800-Spearhead-Drive-31.JPG",
+      name: "The Aspens | 1 Bed | Ski-in/Ski-out",
+      image: "/photos/properties/The Aspens/4800-Spearhead-Drive-3.JPG",
       guests: 4,
       bedrooms: 2,
       beds: 2,
@@ -427,7 +427,7 @@ const Home = () => {
     {
       id: "marquise-2-bed",
       name: "Marquise 2-Bed-Ski in Ski out",
-      image: "/photos/properties/Marquise 2-bed/Marquise-1.jpg",
+      image: "/photos/properties/Marquise 2-bed/Marquise-15.jpg",
       guests: 4,
       bedrooms: 1,
       beds: 1,
@@ -442,9 +442,8 @@ const Home = () => {
     },
     {
       id: "ski-in-ski-out-walk-to-lifts-2-bed",
-      name: "Le Chamois 2 Bed | Walk to Lifts",
-      image:
-        "/photos/properties/ski-in-ski-out-walk-to-lifts-2-bed/Le chamois.jpg",
+      name: "Le Chamois | 2 Bed | Walk to Lifts",
+      image: "/photos/properties/ski-in-ski-out-walk-to-lifts-2-bed/Le chamois-4.jpg",
       guests: 4,
       bedrooms: 2,
       beds: 2,
@@ -459,7 +458,7 @@ const Home = () => {
     {
       id: "whistler-village-views-luxury-2-5-bedroom",
       name: "Whistler Village Views | Luxury 2.5 Bedroom",
-      image: "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge.jpg",
+      image: "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-14.jpg",
       guests: 6,
       bedrooms: 2.5,
       beds: 4,
@@ -477,7 +476,7 @@ const Home = () => {
     {
       id: "yacht-thailand",
       name: "Yacht Thailand Sea D",
-      image: "/photos/properties/Yacht Thailand Sea D/Bow WEB-1.jpg",
+      image: "/photos/properties/Yacht Thailand Sea D/Sun Deck WEB-12.jpg",
       guests: 12,
       bedrooms: 6,
       beds: 6,
@@ -492,7 +491,7 @@ const Home = () => {
       id: "villa-aegean-greece",
       name: "Villa Aegean Mykonos Greece",
       image:
-        "/photos/properties/Villa Aegean Mykonos Greece/Header2-TRG_5590.jpg",
+        "/photos/properties/Villa Aegean Mykonos Greece/Header5-TRG_5803.jpg",
       guests: 14,
       bedrooms: 7,
       beds: 10,
@@ -506,7 +505,7 @@ const Home = () => {
     {
       id: "punta-mita",
       name: "Punta Mita Luxury Villa",
-      image: "/photos/properties/Punta Mita/242608_2031 copy.jpg",
+      image: "/photos/properties/Punta Mita/242608_2093 copy 2.jpg",
       guests: 16,
       bedrooms: 8,
       beds: 10,
@@ -520,7 +519,7 @@ const Home = () => {
     {
       id: "hood-river-luxury-home",
       name: "Hood River Luxury Home",
-      image: "/photos/properties/hood-river-luxury-home/Exterior 1.jpg",
+      image: "/photos/properties/hood-river-luxury-home/Interior 3.jpg",
       guests: 10,
       bedrooms: 4,
       beds: 7,
@@ -537,7 +536,7 @@ const Home = () => {
       id: "vancouver-house",
       name: "The Vancouver House, Corner Unit | 30th Floor",
       image:
-        "/photos/properties/vancouver-house/645adc4aca79d22167763483_Vancouver_House-03.jpg",
+        "/photos/properties/vancouver-house/645adc4a44759e465d596517_Vancouver_House-23.jpg",
       guests: 4,
       bedrooms: 2,
       beds: 2,

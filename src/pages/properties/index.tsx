@@ -499,12 +499,10 @@ export default function Properties() {
             holidayPrice: "6-months Winter: $17,000 monthly | 12+ months: $14,000 monthly",
           },
           {
-            id: "whispering-pines-ski-in-ski-out",
-            name: "The Aspens | Luxe 2-Bed Ski in/Out | On Slopes",
+            id: "whispering-pines",
+            name: "The Aspens | 1 Bed | Ski-in/Ski-out",
             images: [
-              "/photos/properties/The Aspens/4800-Spearhead-Drive-31.JPG",
-              "/photos/properties/The Aspens/4800-Spearhead-Drive-31.JPG",
-              "/photos/properties/The Aspens/4800-Spearhead-Drive-31.JPG",
+              "/photos/properties/The Aspens/4800-Spearhead-Drive-3.JPG",
             ],
             guests: 4,
             bedrooms: 2,
@@ -531,12 +529,10 @@ export default function Properties() {
             priceRange: "Nightly Price Range: $350-$1,300",
           },
           {
-            id: "marquise-2-bed-ski-in-ski-out",
-            name: "Marquise | 2 Bed | Ski-in/Ski-out",
+            id: "marquise-2-bed",
+            name: "Marquise 2-Bed-Ski in Ski out",
             images: [
-              "/photos/properties/Marquise 2-bed/Marquise-1.jpg",
-              "/photos/properties/Marquise 2-bed/Marquise-1.jpg",
-              "/photos/properties/Marquise 2-bed/Marquise-1.jpg",
+              "/photos/properties/Marquise 2-bed/Marquise-15.jpg",
             ],
             guests: 4,
             bedrooms: 1,
@@ -589,9 +585,9 @@ export default function Properties() {
           },
           {
             id: "ski-in-ski-out-walk-to-lifts-2-bed",
-            name: "Le Chamois 2 Bed | Walk to Lifts",
+            name: "Le Chamois | 2 Bed | Walk to Lifts",
             images: [
-              "/photos/properties/ski-in-ski-out-walk-to-lifts-2-bed/Le chamois.jpg",
+              "/photos/properties/ski-in-ski-out-walk-to-lifts-2-bed/Le chamois-4.jpg",
             ],
             guests: 4,
             bedrooms: 2,
@@ -613,10 +609,7 @@ export default function Properties() {
             id: "whistler-village-views-luxury-2-5-bedroom",
             name: "Whistler Village Views | Luxury 2.5 Bedroom",
             images: [
-              "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge.jpg",
-              "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-2.jpg",
-              "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-3.jpg",
-              "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-4.jpg",
+              "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-14.jpg",
             ],
             guests: 6,
             bedrooms: 2.5,
@@ -689,7 +682,7 @@ export default function Properties() {
             id: "vancouver-house-corner-unit-30th-floor",
             name: "The Vancouver House, Corner Unit | 30th Floor",
             images: [
-              "/photos/properties/vancouver-house/645adc4aca79d22167763483_Vancouver_House-03.jpg",
+              "/photos/properties/vancouver-house/645adc4a44759e465d596517_Vancouver_House-23.jpg",
               "/photos/properties/vancouver-house/645adc4803425681d3e2cab2_Vancouver_House-15.jpg",
               "/photos/properties/vancouver-house/645adc4a8fd51115efee7fd0_Vancouver_House-20.jpg",
             ],
@@ -731,7 +724,7 @@ export default function Properties() {
             id: "mykonos-crystal-villa",
             name: "Mykonos Crystal Villa | Infinity Pool | Sea Views",
             images: [
-              "/photos/properties/Villa Aegean Mykonos Greece/Header2-TRG_5590.jpg",
+              "/photos/properties/Villa Aegean Mykonos Greece/Header5-TRG_5803.jpg",
               "/photos/properties/Villa Aegean Mykonos Greece/Header2-TRG_5590.jpg",
               "/photos/properties/Villa Aegean Mykonos Greece/Header2-TRG_5590.jpg",
             ],
@@ -763,7 +756,7 @@ export default function Properties() {
             id: "super-yacht-thailand",
             name: "Super Yacht Thailand | Luxury Charter | Full Crew",
             images: [
-              "/photos/properties/Yacht Thailand Sea D/Bow WEB-1.jpg",
+              "/photos/properties/Yacht Thailand Sea D/Sun Deck WEB-12.jpg",
               "/photos/properties/Yacht Thailand Sea D/Bow WEB-1.jpg",
               "/photos/properties/Yacht Thailand Sea D/Bow WEB-1.jpg",
             ],
@@ -795,7 +788,7 @@ export default function Properties() {
             id: "punta-mita---casa-juntos",
             name: "Punta Mita - Casa Juntos | Beachfront | Full Staff",
             images: [
-              "/photos/properties/Punta Mita/242608_2031 copy.jpg",
+              "/photos/properties/Punta Mita/242608_2093 copy 2.jpg",
               "/photos/properties/Punta Mita/242608_2031 copy.jpg",
               "/photos/properties/Punta Mita/242608_2031 copy.jpg",
             ],
@@ -822,6 +815,34 @@ export default function Properties() {
               "Spectacular Ocean Views",
             ],
             priceRange: "$3,000-$7,000",
+          },
+          {
+            id: "hood-river-luxury-home",
+            name: "Hood River Luxury Home",
+            images: [
+              "/photos/properties/hood-river-luxury-home/Interior 3.jpg",
+              "/photos/properties/hood-river-luxury-home/Exterior 1.jpg",
+              "/photos/properties/hood-river-luxury-home/Exterior 1.jpg",
+            ],
+            guests: 4,
+            bedrooms: 2,
+            bathrooms: 2,
+            location: "Hood River, Oregon",
+            description:
+              "This luxury home in Hood River, Oregon, offers breathtaking views of the Columbia River Gorge. Features include a private hot tub, sauna, and modern amenities.",
+            features: [
+              "Private Hot Tub",
+              "Sauna",
+              "Mountain Views",
+              "Modern Amenities",
+            ],
+            highlights: [
+              "Exclusive Location",
+              "Luxury Design",
+              "Private Hot Tub",
+              "Sauna",
+            ],
+            priceRange: "$1,500-$3,000/night",
           },
         ],
       },
@@ -978,8 +999,8 @@ export default function Properties() {
         "wedge-mountain-lodge-spa",
         "luxe-cozy-3-bed-whistler-village",
         "dream-log-chalet-5-bedroom-4-bath-creekside",
-        "whispering-pines-ski-in-ski-out",
-        "marquise-2-bed-ski-in-ski-out",
+        "whispering-pines",
+        "marquise-2-bed",
       ].includes(property.id)
         ? `/listings/${property.id}`
         : property.id.startsWith("vancouver-")
@@ -1008,13 +1029,13 @@ export default function Properties() {
         "https://www.airbnb.ca/rooms/763259660349118016?guests=1&adults=1&s=67&unique_share_id=d18218f6-da74-4763-a199-d5a1dc8c85ff&source_impression_id=p3_1744822209_P3U3_5CgXenHmYC6",
       "snow-pine":
         "https://www.airbnb.ca/rooms/744832560480313027?guests=1&adults=1&s=67&unique_share_id=50412c76-d839-4753-bf56-19310f38a4ef",
-      "whispering-pines-ski-in-ski-out":
+      "whispering-pines":
         "https://www.airbnb.com/rooms/1072474554447345991?guests=1&adults=1&s=67&unique_share_id=e556b35c-05b5-40b6-91e1-5304ffafc23b",
       "whistler-village-views":
         "https://www.airbnb.ca/rooms/50025973?guests=1&adults=1&s=67&unique_share_id=04ceb090-1b8e-4e32-972f-d616b380a0a8",
       "whistler-village-views-luxury-2-5-bedroom":
         "https://www.airbnb.ca/rooms/50025973?preview_for_ml=true&source_impression_id=p3_1699290307_SHcNx7EoXySmn6j5",
-      "marquise-2-bed-ski-in-ski-out":
+      "marquise-2-bed":
         "https://www.airbnb.ca/rooms/1370367404602078616?guests=1&adults=1&s=67&unique_share_id=eb381b39-e67d-44ea-9d7c-2de2e1b5fa20",
       "luxe-cozy-3-bed-whistler-village":
         "https://www.airbnb.ca/rooms/1249285355870765792?guests=1&adults=1&s=67&unique_share_id=5fc53f3d-300c-4b8b-aee5-d9f5b263ae3c",
