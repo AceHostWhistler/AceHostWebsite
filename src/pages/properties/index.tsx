@@ -403,8 +403,8 @@ export default function Properties() {
             name: "Wedge Mountain Lodge & Spa",
             images: [
               "/photos/properties/Wedge Mountain Lodge Spa/Wedge Mountain Lodge & Spa - Exterior 1.jpg",
-              "/photos/properties/Wedge Mountain Lodge Spa/Wedge Mountain Lodge & Spa - Exterior 1.jpg",
-              "/photos/properties/Wedge Mountain Lodge Spa/Wedge Mountain Lodge & Spa - Exterior 1.jpg",
+              "/photos/properties/Wedge Mountain Lodge Spa/Wedge Mountain Lodge & Spa - Great Room 1.jpg",
+              "/photos/properties/Wedge Mountain Lodge Spa/Wedge Mountain Lodge & Spa - Aerial 2.jpg",
             ],
             guests: 26,
             bedrooms: 10,
@@ -689,7 +689,7 @@ export default function Properties() {
             id: "vancouver-house-corner-unit-30th-floor",
             name: "The Vancouver House, Corner Unit | 30th Floor",
             images: [
-              "/photos/properties/vancouver-house/645adc480342565cb5e2cac6_Vancouver_House-12.jpg",
+              "/photos/properties/vancouver-house/645adc4aca79d22167763483_Vancouver_House-03.jpg",
               "/photos/properties/vancouver-house/645adc4803425681d3e2cab2_Vancouver_House-15.jpg",
               "/photos/properties/vancouver-house/645adc4a8fd51115efee7fd0_Vancouver_House-20.jpg",
             ],
