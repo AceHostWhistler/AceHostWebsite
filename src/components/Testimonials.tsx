@@ -64,7 +64,7 @@ const Testimonials = () => {
     {
       name: "Brad Schwartzberg",
       role: "Guest",
-      text: "We just returned from a wonderful family vacation in Whistler. We stayed at Chalet La Forja in Kadenwood. The property was magnificent, but as nice as the property was (and it was fantastic), the \"around-the-clock\" service provided by AceHost was even better. The house was meticulously maintained and the AceHost team were extraordinary hosts. There was literally not one single thing that we asked for that they did not provide.",
+      text: "We just returned from a wonderful family vacation in Whistler. We stayed at Chalet La Forja in Kadenwood. The property was magnificent, but as nice as the property was (and it was fantastic), the 'around-the-clock' service provided by AceHost was even better. There was literally not one single thing that we asked for that they did not provide.",
       date: "35 weeks ago",
       hasImage: false,
     },
@@ -138,11 +138,6 @@ const Testimonials = () => {
 
   return (
     <section className="py-24 px-5 bg-white relative overflow-hidden">
-      {/* Subtle background pattern */}
-      <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
-        <div className="absolute inset-0 bg-[url('/texture/noise.png')] opacity-5" />
-      </div>
-
       <div className="max-w-6xl mx-auto relative">
         {/* Header */}
         <div className="text-center mb-16">
@@ -264,7 +259,7 @@ const Testimonials = () => {
               className="mr-1"
               fill="currentColor"
             >
-              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zM12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z" />
             </svg>
             View all reviews on Google
           </a>

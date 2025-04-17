@@ -234,7 +234,7 @@ const Home = () => {
       id: "slopeside-villa",
       name: "Slope Slide Chalet | Kadenwood",
       image:
-        "/photos/properties/Slopeside-new/slope-side-chalet.jpg",
+        "/photos/properties/Slopeside Kadenwood/01-2945 Kadenwood Dr 01.jpg",
       guests: 16,
       bedrooms: 7,
       beds: 12,
@@ -315,7 +315,7 @@ const Home = () => {
     {
       id: "falcon-blueberry",
       name: "Falcon | Blueberry Drive",
-      image: "/photos/properties/Falcon-new/falcon.jpg",
+      image: "/photos/properties/Falcon/15-3595 Falcon Cres-15.jpg",
       guests: 15,
       bedrooms: 7,
       beds: 13,
@@ -460,7 +460,7 @@ const Home = () => {
     {
       id: "whistler-village-views-luxury-2-5-bedroom",
       name: "Whistler Village Views | Luxury 2.5 Bedroom",
-      image: "/photos/properties/whistler-village-views-new/whistler-village-views.jpg",
+      image: "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge.jpg",
       guests: 6,
       bedrooms: 2.5,
       beds: 4,
@@ -644,7 +644,7 @@ const Home = () => {
         />
         <meta
           property="og:image"
-          content="https://acehost.ca/photos/homepage/hero.jpg"
+          content="https://acehost.ca/photos/homepage/WhistlerVacationRental.jpg"
         />
         <meta property="og:url" content="https://acehost.ca" />
         <link rel="canonical" href="https://acehost.ca" />
@@ -711,7 +711,7 @@ const Home = () => {
 
         {/* Optimize core web vitals */}
         <link rel="preload" href="/logo.png" as="image" />
-        <link rel="preload" href="/photos/homepage/hero.jpg" as="image" />
+        <link rel="preload" href="/photos/homepage/WhistlerVacationRental.jpg" as="image" />
       </Head>
 
       <div className="min-h-screen bg-white text-gray-900">
