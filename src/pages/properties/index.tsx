@@ -205,7 +205,7 @@ export default function Properties() {
             id: "slopeside-villa-kadenwood",
             name: "Slope Slide Chalet | Kadenwood",
             images: [
-              "/photos/properties/Slopeside-new/slope-side-chalet.jpg",
+              "/photos/properties/Slopeside Kadenwood/01-2945 Kadenwood Dr 01.jpg",
               "/photos/properties/Slopeside Kadenwood/01-2945 Kadenwood Dr 01.jpg",
               "/photos/properties/Slopeside Kadenwood/01-2945 Kadenwood Dr 01.jpg",
             ],
@@ -334,7 +334,7 @@ export default function Properties() {
             id: "falcon-blueberry-drive",
             name: "Falcon | Blueberry Drive",
             images: [
-              "/photos/properties/Falcon-new/falcon.jpg",
+              "/photos/properties/Falcon/15-3595 Falcon Cres-15.jpg",
               "/photos/properties/Falcon/01-3595 Falcon Cres-01.jpg",
               "/photos/properties/Falcon/01-3595 Falcon Cres-01.jpg",
             ],
@@ -613,7 +613,7 @@ export default function Properties() {
             id: "whistler-village-views-luxury-2-5-bedroom",
             name: "Whistler Village Views | Luxury 2.5 Bedroom",
             images: [
-              "/photos/properties/whistler-village-views-new/whistler-village-views.jpg",
+              "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge.jpg",
               "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-2.jpg",
               "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-3.jpg",
               "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-4.jpg",
