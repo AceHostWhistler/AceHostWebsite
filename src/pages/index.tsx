@@ -35,8 +35,8 @@ const Home = () => {
       addressCountry: "CA",
     },
     sameAs: [
-      "https://www.instagram.com/acehost_whistler",
-      "https://www.youtube.com/acehost",
+      "https://www.instagram.com/acehost_whistler/",
+      "https://www.youtube.com/@acehost_Whistler/videos",
     ],
     offers: {
       "@type": "AggregateOffer",
@@ -683,8 +683,8 @@ const Home = () => {
                 contactType: "customer service",
               },
               sameAs: [
-                "https://www.instagram.com/acehost",
-                "https://www.youtube.com/acehost",
+                "https://www.instagram.com/acehost_whistler/",
+                "https://www.youtube.com/@acehost_Whistler/videos",
               ],
               potentialAction: {
                 "@type": "SearchAction",
