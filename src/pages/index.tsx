@@ -233,8 +233,7 @@ const Home = () => {
     {
       id: "slopeside-villa",
       name: "Slope Slide Chalet | Kadenwood",
-      image:
-        "/photos/properties/Slopeside Kadenwood/01-2945 Kadenwood Dr 01.jpg",
+      image: "/photos/properties/Slopeside Kadenwood/02-2945 Kadenwood Dr 02.jpg",
       guests: 16,
       bedrooms: 7,
       beds: 12,

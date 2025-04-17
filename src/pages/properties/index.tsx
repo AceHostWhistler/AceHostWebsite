@@ -205,9 +205,9 @@ export default function Properties() {
             id: "slopeside-villa-kadenwood",
             name: "Slope Slide Chalet | Kadenwood",
             images: [
-              "/photos/properties/Slopeside Kadenwood/01-2945 Kadenwood Dr 01.jpg",
-              "/photos/properties/Slopeside Kadenwood/01-2945 Kadenwood Dr 01.jpg",
-              "/photos/properties/Slopeside Kadenwood/01-2945 Kadenwood Dr 01.jpg",
+              "/photos/properties/Slopeside Kadenwood/02-2945 Kadenwood Dr 02.jpg",
+              "/photos/properties/Slopeside Kadenwood/02-2945 Kadenwood Dr 02.jpg",
+              "/photos/properties/Slopeside Kadenwood/02-2945 Kadenwood Dr 02.jpg",
             ],
             guests: 16,
             bedrooms: 7,
