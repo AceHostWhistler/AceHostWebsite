@@ -1,18 +1,19 @@
-import React, { useState, useRef } from "react";
+import { useRef, useState } from "react";
+import { GetStaticProps } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { XCircle, ChevronRight, ChevronLeft, X } from "lucide-react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PropertyGallery from "@/components/PropertyGallery";
 
 const RavensNest = () => {
+  const photosRef = useRef<HTMLDivElement>(null);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(
     null
   );
-  const photosRef = useRef<HTMLDivElement>(null);
 
-  // Define photos array for the property
   const photos = [
     "/photos/properties/ravens-nest/1.jpg",
     "/photos/properties/ravens-nest/2.jpg",
@@ -24,28 +25,6 @@ const RavensNest = () => {
     "/photos/properties/ravens-nest/8.jpg",
     "/photos/properties/ravens-nest/9.jpg",
   ];
-
-  const handlePhotoClick = (index: number) => {
-    setSelectedPhotoIndex(index);
-  };
-
-  const handleNextPhoto = () => {
-    if (selectedPhotoIndex !== null) {
-      setSelectedPhotoIndex((selectedPhotoIndex + 1) % photos.length);
-    }
-  };
-
-  const handlePrevPhoto = () => {
-    if (selectedPhotoIndex !== null) {
-      setSelectedPhotoIndex(
-        (selectedPhotoIndex - 1 + photos.length) % photos.length
-      );
-    }
-  };
-
-  const handleCloseFullScreen = () => {
-    setSelectedPhotoIndex(null);
-  };
 
   const scrollToPhotos = () => {
     photosRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -119,28 +98,11 @@ const RavensNest = () => {
             </p>
           </div>
 
-          <div ref={photosRef} className="mb-16">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Photos</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {photos.map((photo, index) => (
-                <div key={index} className="mb-6">
-                  <div
-                    className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer"
-                    onClick={() => handlePhotoClick(index)}
-                  >
-                    <Image
-                      src={photo}
-                      alt={`Raven's Nest ${index + 1}`}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover"
-                      priority={index < 6}
-                      loading={index < 6 ? "eager" : "lazy"}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
+          <div ref={photosRef}>
+            <PropertyGallery 
+              photos={photos}
+              propertyName="Raven's Nest"
+            />
           </div>
 
           <div className="mb-12">
@@ -167,41 +129,6 @@ const RavensNest = () => {
             </ul>
           </div>
         </main>
-
-        {selectedPhotoIndex !== null && (
-          <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center">
-            <button
-              className="absolute top-4 right-4 text-white"
-              onClick={handleCloseFullScreen}
-            >
-              <X className="h-8 w-8" />
-            </button>
-
-            <button
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white"
-              onClick={handlePrevPhoto}
-            >
-              <ChevronLeft className="h-10 w-10" />
-            </button>
-
-            <div className="relative h-[80vh] w-[80vw]">
-              <Image
-                src={photos[selectedPhotoIndex]}
-                alt={`Raven's Nest ${selectedPhotoIndex + 1}`}
-                fill
-                className="object-contain"
-                sizes="80vw"
-              />
-            </div>
-
-            <button
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white"
-              onClick={handleNextPhoto}
-            >
-              <ChevronRight className="h-10 w-10" />
-            </button>
-          </div>
-        )}
 
         <Footer />
       </div>

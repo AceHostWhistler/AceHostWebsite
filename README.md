@@ -38,3 +38,52 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Property Gallery Component
+
+The `PropertyGallery` component can be used to display a grid of property photos with a fullscreen viewer. This component is designed to be reused across all property listing pages.
+
+### Usage
+
+```jsx
+import PropertyGallery from "@/components/PropertyGallery";
+
+// In your property page component:
+const MyPropertyPage = () => {
+  const photos = [
+    "/photos/properties/my-property/1.jpg",
+    "/photos/properties/my-property/2.jpg",
+    "/photos/properties/my-property/3.jpg",
+    // ... more photos
+  ];
+
+  return (
+    <div>
+      <h1>My Amazing Property</h1>
+      {/* Other property content */}
+      
+      <div ref={photosRef}>
+        <PropertyGallery 
+          photos={photos}
+          propertyName="My Property"
+          maxInitialPhotos={9} // Optional, defaults to 8
+        />
+      </div>
+    </div>
+  );
+};
+```
+
+### Props
+
+- `photos` (required): An array of photo URLs to display in the gallery
+- `propertyName` (required): The name of the property, used for alt text and modal titles
+- `maxInitialPhotos` (optional): Maximum number of photos to show initially before "View All" button appears (defaults to 8)
+
+### Features
+
+- Responsive grid layout
+- Fullscreen modal gallery when "View All" is clicked
+- Individual photo fullscreen view with navigation
+- Lazy loading for performance optimization
+- Mobile-friendly design
