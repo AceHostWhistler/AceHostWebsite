@@ -205,7 +205,7 @@ export default function Properties() {
             id: "slopeside-villa-kadenwood",
             name: "Slope Slide Chalet | Kadenwood",
             images: [
-              "/photos/properties/Slopeside Kadenwood/01-2945 Kadenwood Dr 01.jpg",
+              "/photos/properties/Slopeside-new/slope-side-chalet.jpg",
               "/photos/properties/Slopeside Kadenwood/01-2945 Kadenwood Dr 01.jpg",
               "/photos/properties/Slopeside Kadenwood/01-2945 Kadenwood Dr 01.jpg",
             ],
@@ -334,7 +334,7 @@ export default function Properties() {
             id: "falcon-blueberry-drive",
             name: "Falcon | Blueberry Drive",
             images: [
-              "/photos/properties/Falcon/15-3595 Falcon Cres-15.jpg",
+              "/photos/properties/Falcon-new/falcon.jpg",
               "/photos/properties/Falcon/01-3595 Falcon Cres-01.jpg",
               "/photos/properties/Falcon/01-3595 Falcon Cres-01.jpg",
             ],
@@ -402,10 +402,9 @@ export default function Properties() {
             id: "wedge-mountain-lodge-spa",
             name: "Wedge Mountain Lodge & Spa",
             images: [
-              "/photos/properties/new-images/snow-covered-chalet.jpg",
-              "/photos/properties/Wedge Mountain Lodge Spa/Wedge Mountain Lodge & Spa _ Aerial 1.jpg",
-              "/photos/properties/Wedge Mountain Lodge Spa/Wedge Mountain Lodge & Spa _ Great Room 1.jpg",
-              "/photos/properties/Wedge Mountain Lodge Spa/Wedge Mountain Lodge & Spa _ Covered Outdoor Space 1.jpg",
+              "/photos/properties/Wedge Mountain Lodge Spa/Wedge Mountain Lodge & Spa - Exterior 1.jpg",
+              "/photos/properties/Wedge Mountain Lodge Spa/Wedge Mountain Lodge & Spa - Exterior 1.jpg",
+              "/photos/properties/Wedge Mountain Lodge Spa/Wedge Mountain Lodge & Spa - Exterior 1.jpg",
             ],
             guests: 26,
             bedrooms: 10,
@@ -469,10 +468,9 @@ export default function Properties() {
             id: "dream-log-chalet-5-bedroom-4-bath-creekside",
             name: "Dream Log Chalet | 5-Bed | 4-Bath | Creekside",
             images: [
-              "/photos/properties/new-images/modern-living-room.jpg",
-              "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00339.jpg",
               "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00333.jpg",
-              "/photos/properties/Dream Log 5-bedroom Chalet/Dream Log.jpg",
+              "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00635.jpg",
+              "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00620.jpg",
             ],
             guests: 11,
             bedrooms: 5,
@@ -615,7 +613,7 @@ export default function Properties() {
             id: "whistler-village-views-luxury-2-5-bedroom",
             name: "Whistler Village Views | Luxury 2.5 Bedroom",
             images: [
-              "/photos/properties/new-images/whistler-village-balcony-view.jpg",
+              "/photos/properties/whistler-village-views-new/whistler-village-views.jpg",
               "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-2.jpg",
               "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-3.jpg",
               "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-4.jpg",

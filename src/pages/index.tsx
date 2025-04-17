@@ -234,7 +234,7 @@ const Home = () => {
       id: "slopeside-villa",
       name: "Slope Slide Chalet | Kadenwood",
       image:
-        "/photos/properties/Slopeside Kadenwood/01-2945 Kadenwood Dr 01.jpg",
+        "/photos/properties/Slopeside-new/slope-side-chalet.jpg",
       guests: 16,
       bedrooms: 7,
       beds: 12,
@@ -315,7 +315,7 @@ const Home = () => {
     {
       id: "falcon-blueberry",
       name: "Falcon | Blueberry Drive",
-      image: "/photos/properties/Falcon/15-3595 Falcon Cres-15.jpg",
+      image: "/photos/properties/Falcon-new/falcon.jpg",
       guests: 15,
       bedrooms: 7,
       beds: 13,
@@ -365,7 +365,8 @@ const Home = () => {
     {
       id: "wedge-mountain-lodge",
       name: "Wedge Mountain Lodge & Spa",
-      image: "/photos/properties/new-images/snow-covered-chalet.jpg",
+      image:
+        "/photos/properties/Wedge Mountain Lodge Spa/Wedge Mountain Lodge & Spa - Exterior 1.jpg",
       guests: "20+6",
       bedrooms: 10,
       beds: 10,
@@ -396,7 +397,8 @@ const Home = () => {
     {
       id: "dream-log-chalet",
       name: "Dream Log Chalet | 5-Bed | 4-Bath | Creekside",
-      image: "/photos/properties/new-images/modern-living-room.jpg",
+      image:
+        "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00333.jpg",
       guests: 11,
       bedrooms: 5,
       beds: 5,
@@ -458,7 +460,7 @@ const Home = () => {
     {
       id: "whistler-village-views-luxury-2-5-bedroom",
       name: "Whistler Village Views | Luxury 2.5 Bedroom",
-      image: "/photos/properties/new-images/whistler-village-balcony-view.jpg",
+      image: "/photos/properties/whistler-village-views-new/whistler-village-views.jpg",
       guests: 6,
       bedrooms: 2.5,
       beds: 4,
