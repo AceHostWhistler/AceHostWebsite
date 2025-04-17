@@ -233,7 +233,7 @@ const Home = () => {
     {
       id: "slopeside-villa",
       name: "Slope Slide Chalet | Kadenwood",
-      image: "/photos/properties/Slopeside Kadenwood/02-2945 Kadenwood Dr 02.jpg",
+      image: "/photos/properties/Slopeside Kadenwood/01-2945 Slope Side 01.jpg",
       guests: 16,
       bedrooms: 7,
       beds: 12,
@@ -314,7 +314,7 @@ const Home = () => {
     {
       id: "falcon-blueberry",
       name: "Falcon | Blueberry Drive",
-      image: "/photos/properties/Falcon/15-3595 Falcon Cres-15.jpg",
+      image: "/photos/properties/Falcon/15-3595 Falcon Cres-15-.jpg",
       guests: 15,
       bedrooms: 7,
       beds: 13,
