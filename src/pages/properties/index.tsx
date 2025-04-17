@@ -403,8 +403,8 @@ export default function Properties() {
             name: "Wedge Mountain Lodge & Spa",
             images: [
               "/photos/properties/Wedge Mountain Lodge Spa/Wedge Mountain Lodge & Spa - Exterior 1.jpg",
-              "/photos/properties/Wedge Mountain Lodge Spa/Wedge Mountain Lodge & Spa - Great Room 1.jpg",
-              "/photos/properties/Wedge Mountain Lodge Spa/Wedge Mountain Lodge & Spa - Aerial 2.jpg",
+              "/photos/properties/Wedge Mountain Lodge Spa/Wedge Mountain Lodge & Spa _ Great Room 2.jpg",
+              "/photos/properties/Wedge Mountain Lodge Spa/WML Great Room (Looking South).jpg",
             ],
             guests: 26,
             bedrooms: 10,
