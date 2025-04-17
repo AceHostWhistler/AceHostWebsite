@@ -749,8 +749,8 @@ const Home = () => {
                 View Luxury Rental Properties
               </Link>
             </div>
-            <div className="mt-8 md:mt-0 md:w-[58%] lg:w-[58%] md:flex md:items-center md:pr-4">
-              <div className="relative mx-auto w-[94%] md:w-[95%] overflow-hidden">
+            <div className="mt-8 md:mt-0 md:w-[58%] lg:w-[58%] flex justify-center md:justify-normal md:items-center px-1 md:px-0 md:pr-4">
+              <div className="w-[98%] md:w-[95%] overflow-hidden">
                 <iframe
                   src="https://player.vimeo.com/video/1053582724?title=0&byline=0&portrait=0&autoplay=0&loop=1&background=0"
                   className="w-full aspect-video"
