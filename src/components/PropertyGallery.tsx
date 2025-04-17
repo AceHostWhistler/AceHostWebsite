@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -15,6 +15,21 @@ export const PropertyGallery = ({
 }: PropertyGalleryProps) => {
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [showAllPhotos, setShowAllPhotos] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if device is mobile
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkIfMobile();
+    window.addEventListener('resize', checkIfMobile);
+    
+    return () => {
+      window.removeEventListener('resize', checkIfMobile);
+    };
+  }, []);
 
   const handlePhotoClick = (index: number) => {
     setSelectedPhotoIndex(index);
@@ -51,7 +66,7 @@ export const PropertyGallery = ({
           {photos.slice(0, maxInitialPhotos).map((photo, index) => (
             <div key={index} className="mb-6">
               <div
-                className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer"
+                className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer group"
                 onClick={() => handlePhotoClick(index)}
               >
                 <Image
@@ -63,6 +78,10 @@ export const PropertyGallery = ({
                   priority={index < 6}
                   loading={index < 6 ? "eager" : "lazy"}
                 />
+                {/* Mobile photo counter */}
+                <div className="absolute bottom-2 right-2 bg-black bg-opacity-60 text-white text-xs px-2 py-1 rounded md:hidden">
+                  {index + 1}/{photos.length}
+                </div>
               </div>
             </div>
           ))}
@@ -111,6 +130,10 @@ export const PropertyGallery = ({
                       priority={index < 6}
                       loading={index < 6 ? "eager" : "lazy"}
                     />
+                    {/* Mobile photo counter */}
+                    <div className="absolute bottom-2 right-2 bg-black bg-opacity-60 text-white text-xs px-2 py-1 rounded md:hidden">
+                      {index + 1}/{photos.length}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -148,6 +171,13 @@ export const PropertyGallery = ({
                 className="object-contain"
                 sizes="100vw"
               />
+              
+              {/* Mobile photo counter - shows on the photo */}
+              {isMobile && (
+                <div className="absolute top-4 left-4 bg-black bg-opacity-70 text-white px-3 py-1 rounded-full text-sm">
+                  {selectedPhotoIndex + 1}/{photos.length}
+                </div>
+              )}
             </div>
           </div>
 
@@ -158,8 +188,9 @@ export const PropertyGallery = ({
             <ChevronRight className="h-6 w-6" />
           </button>
 
+          {/* Desktop photo counter - shows at bottom */}
           <div className="absolute bottom-4 left-0 right-0 text-center">
-            <p className="text-white text-sm">
+            <p className="text-white text-sm md:text-base bg-black bg-opacity-60 inline-block px-3 py-1 rounded-full">
               {selectedPhotoIndex + 1} / {photos.length}
             </p>
           </div>
