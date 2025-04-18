@@ -5,35 +5,13 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 
 const WhistlerWinterOutlook = () => {
-  // Related articles
-  const relatedArticles = [
-    {
-      title:
-        "Whistler Snow Report: Record Snowfall Marks the Start of the 2024/2025 Ski Season",
-      category: "Whistler Snow/Weather Report",
-      description: "Whistler Snow & Weather Report 2024/2025 Opening Day",
-      readTime: "11 minute read",
-      link: "/post/whistler-snow-report-record-snowfall-marks-the-start-of-the-2024-2025-ski-season",
-    },
-    {
-      title:
-        "Luxury Whistler Vacation Redefined: How AceHost Whistler Caters to the 1% in Canada&apos;s Ultimate Playground",
-      category: "VIP Concierge | Luxury Vacation",
-      description: "",
-      readTime: "20 min",
-      link: "/post/luxury-whistler-vacation-redefined-how-acehost-whistler-caters-to-the-1-in-canadas-ultimate-playground",
-    },
-    {
-      title: "Find Your Dream Long-Term Luxury Rental in Whistler with AceHost",
-      category: "Long-term, Property",
-      description: "Luxury long-term home rental options",
-      readTime: "10 min read",
-      link: "/post/find-your-dream-long-term-luxury-rental-in-whistler-with-acehost",
-    },
-  ];
-
+  const currentArticleLink = "/post/whistlers-winter-outlook-2024-from-el-nino-challenges-to-la-nina-promises";
+  
+  // Related articles removed as they will be handled by BlogRelatedArticles component
+  
   return (
     <>
       <Head>
@@ -297,57 +275,8 @@ const WhistlerWinterOutlook = () => {
               </div>
             </div>
 
-            {/* More Articles Section */}
-            <div className="mt-20 mb-10">
-              <h2 className="text-2xl font-bold mb-8">More Articles</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {relatedArticles.map((article, index) => (
-                  <div
-                    key={index}
-                    className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300"
-                  >
-                    <div className="p-6">
-                      <div className="flex justify-between items-start mb-3">
-                        <span className="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full">
-                          {article.category}
-                        </span>
-                        <span className="text-xs text-gray-500">
-                          {article.readTime}
-                        </span>
-                      </div>
-                      <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2">
-                        {article.title}
-                      </h3>
-                      {article.description && (
-                        <p className="text-sm text-gray-600 mb-4 line-clamp-2">
-                          {article.description}
-                        </p>
-                      )}
-                      <Link
-                        href={article.link}
-                        className="inline-flex items-center text-black font-medium hover:underline"
-                      >
-                        Read post
-                        <svg
-                          className="ml-1 w-4 h-4"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"
-                          ></path>
-                        </svg>
-                      </Link>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            {/* Related Articles Section */}
+            <BlogRelatedArticles currentArticleLink={currentArticleLink} />
           </div>
         </main>
 

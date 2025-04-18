@@ -5,32 +5,31 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import BlogRelatedArticles from '../../../components/BlogRelatedArticles';
 
 const WhistlerSnowReport = () => {
   // Related articles
   const relatedArticles = [
     {
-      title:
-        "Luxury Whistler Vacation Redefined: How AceHost Whistler Caters to the 1% in Canada's Ultimate Playground",
-      category: "VIP Concierge | Luxury Vacation",
-      readTime: "20 min",
-      link: "#",
-    },
-    {
       title: "Find Your Dream Long-Term Luxury Rental in Whistler with AceHost",
       category: "Long-term, Property",
       description: "Luxury long-term home rental options",
       readTime: "10 min read",
-      link: "#",
+      link: "/post/find-your-dream-long-term-luxury-rental-in-whistler-with-acehost",
     },
     {
-      title:
-        "Top 7 of the Most Luxury Vacation Rental Homes in Whistler | Christmas and New Year&apos;s",
+      title: "Top 7 of the Most Luxury Vacation Rental Homes in Whistler | Christmas and New Year's",
       category: "Travel Christmas",
-      description:
-        "Top 7 of the Most Luxury Vacation Rental Homes in Whistler | Christmas & New Year&apos;s",
+      description: "Top 7 of the Most Luxury Vacation Rental Homes in Whistler | Christmas & New Year's",
       readTime: "15 min read",
-      link: "#",
+      link: "/post/top-7-of-the-most-luxury-vacation-rental-homes-in-whistler-for-christmas-new-years",
+    },
+    {
+      title: "Whistler's Winter Outlook 2024: From El Niño Challenges to La Niña Promises",
+      category: "Weather Report",
+      description: "Whistler's weather outlook for the upcoming ski season",
+      readTime: "10 min read",
+      link: "/post/whistlers-winter-outlook-2024-from-el-nino-challenges-to-la-nina-promises",
     },
   ];
 
@@ -259,37 +258,9 @@ const WhistlerSnowReport = () => {
           </div>
 
           {/* Related Articles */}
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 mb-20">
-            <h3 className="text-2xl font-bold mb-10">More Articles</h3>
-            <div className="grid md:grid-cols-3 gap-8">
-              {relatedArticles.map((article, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-lg overflow-hidden shadow-md"
-                >
-                  <div className="p-6">
-                    <div className="text-sm text-gray-500 mb-2">
-                      {article.category}
-                    </div>
-                    <h4 className="text-xl font-semibold mb-3">
-                      <Link
-                        href={article.link}
-                        className="hover:text-gray-700 transition-colors"
-                      >
-                        {article.title}
-                      </Link>
-                    </h4>
-                    {article.description && (
-                      <p className="text-gray-600 mb-4 text-sm">
-                        {article.description}
-                      </p>
-                    )}
-                    <p className="text-sm text-gray-500">{article.readTime}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          <BlogRelatedArticles 
+            currentArticleLink="/post/whistler-snow-report-record-snowfall-marks-the-start-of-the-2024-2025-ski-season" 
+          />
         </main>
 
         <Footer />
