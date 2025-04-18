@@ -25,7 +25,7 @@ const LongTermRentals = () => {
       description: "",
       readTime: "20 min",
       link: "/post/luxury-whistler-vacation-redefined-how-acehost-whistler-caters-to-the-1-in-canadas-ultimate-playground",
-      coverImage: "/photos/post/Luxury Whistler Vacation/1.jpg",
+      coverImage: "/photos/post/Luxury Whistler Vacation/Hero.jpg",
     },
     {
       title:
@@ -35,7 +35,7 @@ const LongTermRentals = () => {
         "Top 7 of the Most Luxury Vacation Rental Homes in Whistler | Christmas & New Year's",
       readTime: "15 min read",
       link: "/post/top-7-of-the-most-luxury-vacation-rental-homes-in-whistler-for-christmas-new-years",
-      coverImage: "/photos/post/top-7-of-the-most-luxury-vacation-rental-homes-in-whistler-for-christmas-new-years/hero.jpg",
+      coverImage: "/photos/post/top-7-of-the-most-luxury-vacation-rental-homes-in-whistler-for-christmas-new-years/Hero.png",
     },
   ];
 

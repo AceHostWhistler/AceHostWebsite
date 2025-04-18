@@ -25,7 +25,7 @@ const PropertyManagementBlog = () => {
       description: "",
       readTime: "20 min",
       link: "/post/luxury-whistler-vacation-redefined-how-acehost-whistler-caters-to-the-1-in-canadas-ultimate-playground",
-      coverImage: "/photos/post/Luxury Whistler Vacation/1.jpg",
+      coverImage: "/photos/post/Luxury Whistler Vacation/Hero.jpg",
     },
     {
       title: "Find Your Dream Long-Term Luxury Rental in Whistler with AceHost",
@@ -33,7 +33,7 @@ const PropertyManagementBlog = () => {
       description: "Luxury long-term home rental options",
       readTime: "10 min read",
       link: "/post/find-your-dream-long-term-luxury-rental-in-whistler-with-acehost",
-      coverImage: "/photos/post/find-your-dream-long-term-luxury-rental-in-whistler-with-acehost/hero.jpg",
+      coverImage: "/photos/post/find-your-dream-long-term-luxury-rental-in-whistler-with-acehost/Hero.jpg",
     },
   ];
 
