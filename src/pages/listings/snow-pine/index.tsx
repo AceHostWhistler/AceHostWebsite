@@ -7,36 +7,41 @@ import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { FaBed, FaBath } from "react-icons/fa";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
-import PropertyGallery from "@/components/PropertyGallery";
+import { X } from "lucide-react";
 
 const SnowPine = () => {
-  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [showAllPhotos, setShowAllPhotos] = useState(false);
-  const photosRef = useRef<HTMLDivElement>(null);
+  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(
+    null
+  );
+  const videoRef = useRef<HTMLVideoElement>(null);
 
-  // Array of photos
+  // Property photos
   const photos = [
-    "/photos/properties/snow-pine/hero.jpg",
-    "/photos/properties/snow-pine/2.jpg",
-    "/photos/properties/snow-pine/3.jpg",
-    "/photos/properties/snow-pine/4.jpg",
-    "/photos/properties/snow-pine/5.jpg",
-    "/photos/properties/snow-pine/6.jpg",
-    "/photos/properties/snow-pine/7.jpg",
-    "/photos/properties/snow-pine/8.jpg",
-    "/photos/properties/snow-pine/9.jpg",
-    "/photos/properties/snow-pine/10.jpg",
-    "/photos/properties/snow-pine/11.jpg",
-    "/photos/properties/snow-pine/12.jpg",
-    "/photos/properties/snow-pine/13.jpg",
-    "/photos/properties/snow-pine/14.jpg",
-    "/photos/properties/snow-pine/15.jpg",
+    "/photos/properties/Snowpine 3-bed Saul/01-2040 Karen Cres-01.jpg",
+    "/photos/properties/Snowpine 3-bed Saul/02-2040 Karen Cres-02.jpg",
+    "/photos/properties/Snowpine 3-bed Saul/03-2040 Karen Cres-03.jpg",
+    "/photos/properties/Snowpine 3-bed Saul/04-2040 Karen Cres-04.jpg",
+    "/photos/properties/Snowpine 3-bed Saul/05-2040 Karen Cres-05.jpg",
+    "/photos/properties/Snowpine 3-bed Saul/06-2040 Karen Cres-06.jpg",
+    "/photos/properties/Snowpine 3-bed Saul/07-2040 Karen Cres-07.jpg",
+    "/photos/properties/Snowpine 3-bed Saul/08-2040 Karen Cres-08.jpg",
+    "/photos/properties/Snowpine 3-bed Saul/09-2040 Karen Cres-09.jpg",
+    "/photos/properties/Snowpine 3-bed Saul/10-2040 Karen Cres-10.jpg",
+    "/photos/properties/Snowpine 3-bed Saul/11-2040 Karen Cres-11.jpg",
+    "/photos/properties/Snowpine 3-bed Saul/12-2040 Karen Cres-12.jpg",
+    "/photos/properties/Snowpine 3-bed Saul/13-2040 Karen Cres-13.jpg",
+    "/photos/properties/Snowpine 3-bed Saul/14-2040 Karen Cres-14.jpg",
+    "/photos/properties/Snowpine 3-bed Saul/15-2040 Karen Cres-15.jpg",
+    "/photos/properties/Snowpine 3-bed Saul/16-2040 Karen Cres-16.jpg",
+    "/photos/properties/Snowpine 3-bed Saul/17-2040 Karen Cres-17.jpg",
+    "/photos/properties/Snowpine 3-bed Saul/18-2040 Karen Cres-18.jpg",
+    "/photos/properties/Snowpine 3-bed Saul/19-2040 Karen Cres-19.jpg",
+    "/photos/properties/Snowpine 3-bed Saul/20-2040 Karen Cres-20.jpg",
+    "/photos/properties/Snowpine 3-bed Saul/21-2040 Karen Cres-21.jpg",
+    "/photos/properties/Snowpine 3-bed Saul/22-2040 Karen Cres-22.jpg",
+    "/photos/properties/Snowpine 3-bed Saul/23-2040 Karen Cres-23.jpg",
   ];
-
-  const scrollToPhotos = () => {
-    photosRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
 
   const handlePhotoClick = (index: number) => {
     setSelectedPhotoIndex(index);
@@ -79,73 +84,102 @@ const SnowPine = () => {
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
 
-        <main className="w-full">
-          {/* Hero Section */}
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-              <div>
-                <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  Snowpine | Creekside Modern Ski Chalet
-                </h1>
-                <p className="text-gray-600 mb-6">
-                  Modern chalet, minutes from Creekside Gondola with luxury
-                  amenities
-                </p>
+        <main>
+          {/* Header with Property Info */}
+          <div className="max-w-7xl mx-auto px-4 pt-8">
+            <div className="flex justify-center mb-6">
+              <div className="bg-black text-white rounded-full py-2 px-4 sm:px-6 flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-4 text-center sm:text-left">
+                <span>6 guests</span>
+                <span className="hidden sm:block mx-3 text-gray-500">|</span>
+                <span>Monthly Price Range: $10,000 - $12,000</span>
+              </div>
+            </div>
 
-                <div className="flex flex-wrap gap-3 mb-8">
-                  <Link
-                    href="https://www.airbnb.com/luxury/listing/12345"
-                    target="_blank"
-                    className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-black hover:bg-gray-800"
-                  >
-                    Book on Airbnb
-                  </Link>
-                  <button
-                    onClick={scrollToPhotos}
-                    className="inline-flex items-center px-4 py-2 border border-gray-300 text-base font-medium rounded-md shadow-sm text-gray-700 bg-white hover:bg-gray-50"
-                  >
-                    View Photos
-                  </button>
-                </div>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-gray-900 mb-6 sm:mb-8">
+              Snowpine | Creekside Modern Ski Chalet
+            </h1>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-4">
-                  <div className="flex flex-col items-center border-r pr-3">
-                    <span className="font-semibold text-gray-900">6</span>
-                    <span className="text-sm text-gray-500">Guests</span>
-                  </div>
-                  <div className="flex flex-col items-center border-r pr-3">
-                    <span className="font-semibold text-gray-900">3</span>
-                    <span className="text-sm text-gray-500">Bedrooms</span>
-                  </div>
-                  <div className="flex flex-col items-center border-r pr-3">
-                    <span className="font-semibold text-gray-900">3.5</span>
-                    <span className="text-sm text-gray-500">Bathrooms</span>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <span className="font-semibold text-gray-900">Yes</span>
-                    <span className="text-sm text-gray-500">Hot Tub</span>
-                  </div>
+            {/* Pricing Information */}
+            <div className="flex flex-col items-center mb-8 space-y-2">
+              <div className="bg-gray-100 rounded-lg px-6 py-4 max-w-2xl w-full">
+                <div className="space-y-2">
+                  <p className="text-gray-800 text-center font-medium">
+                    Monthly Price Range: $10,000 - $12,000
+                  </p>
+                  <p className="text-gray-800 text-center">90 night minimum</p>
+                  <p className="text-gray-800 text-center">
+                    $30,000 - 3 months | $40,000- 4 months
+                  </p>
                 </div>
               </div>
+            </div>
 
-              <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
-                <Image
-                  src={photos[0]}
-                  alt="Snowpine Main View"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
+              <button
+                onClick={() => setShowAllPhotos(true)}
+                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
+              >
+                More Photos
+              </button>
+              <Link
+                href="#details"
+                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium hover:bg-gray-800 text-sm sm:text-base"
+              >
+                Details
+              </Link>
+              <Link
+                href="/contact"
+                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
+              >
+                Contact Us
+              </Link>
+              <a
+                href="https://www.airbnb.ca/rooms/744832560480313027?guests=1&adults=1&s=67&unique_share_id=50412c76-d839-4753-bf56-19310f38a4ef"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
+              >
+                Book on Airbnb
+              </a>
+            </div>
+
+            <div className="text-center mb-6 sm:mb-8">
+              <p className="text-gray-700 text-sm sm:text-base">
+                Minimum Stay Requirement: 90 Nights
+              </p>
             </div>
           </div>
 
-          {/* Photo Gallery */}
-          <div ref={photosRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <PropertyGallery 
-              photos={photos}
-              propertyName="Snowpine"
-            />
+          {/* Photo Grid */}
+          <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+              {photos.slice(0, 8).map((photo, index) => (
+                <div
+                  key={index}
+                  className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
+                  onClick={() => handlePhotoClick(index)}
+                >
+                  <Image
+                    src={photo}
+                    alt={`Snowpine interior ${index + 1}`}
+                    fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                    priority={index < 4}
+                  />
+                </div>
+              ))}
+            </div>
+            {photos.length > 8 && (
+              <div className="text-center mt-6">
+                <button
+                  onClick={() => setShowAllPhotos(true)}
+                  className="inline-flex items-center px-6 py-2 bg-black hover:bg-gray-900 text-white rounded-full text-sm font-medium"
+                >
+                  View all {photos.length} photos
+                </button>
+              </div>
+            )}
           </div>
 
           {/* Property Description */}
@@ -335,6 +369,11 @@ const SnowPine = () => {
                         loading={index < 6 ? "eager" : "lazy"}
                       />
                     </div>
+                    <div className="mt-1 text-center">
+                      <span className="text-white text-xs">
+                        {index + 1} / {photos.length}
+                      </span>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -382,7 +421,7 @@ const SnowPine = () => {
             </button>
 
             <div className="absolute bottom-4 left-0 right-0 text-center">
-              <p className="text-white text-sm">
+              <p className="text-white text-sm bg-black bg-opacity-60 inline-block px-3 py-1 rounded-full">
                 {selectedPhotoIndex + 1} / {photos.length}
               </p>
             </div>
