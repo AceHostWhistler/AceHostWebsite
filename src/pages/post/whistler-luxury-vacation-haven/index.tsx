@@ -4,30 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 
 export default function BlogPost() {
   const publishDate = "March 4, 2024";
-
-  // Related articles
-  const relatedArticles = [
-    {
-      title:
-        "Whistler Snow Report: Record Snowfall Marks the Start of the 2024/2025 Ski Season",
-      slug: "whistler-snow-report-record-snowfall-marks-the-start-of-the-2024-2025-ski-season",
-      category: "Whistler Snow/Weather Report",
-    },
-    {
-      title:
-        "Luxury Whistler Vacation Redefined: How AceHost Whistler Caters to the 1% in Canada&apos;s Ultimate Playground",
-      slug: "luxury-whistler-vacation-redefined-how-acehost-whistler-caters-to-the-1-in-canadas-ultimate-playground",
-      category: "VIP Concierge | Luxury Vacation",
-    },
-    {
-      title: "Find Your Dream Long-Term Luxury Rental in Whistler with AceHost",
-      slug: "find-your-dream-long-term-luxury-rental-in-whistler-with-acehost",
-      category: "Long-term, Property",
-    },
-  ];
+  const currentArticleLink = "/post/whistler-luxury-vacation-haven";
 
   return (
     <>
@@ -629,44 +610,8 @@ export default function BlogPost() {
                 </Link>
               </div>
 
-              {/* Related Articles */}
-              <h2 className="text-3xl font-bold text-gray-900 mt-16 mb-8">
-                More Articles
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {relatedArticles.map((article, index) => (
-                  <div
-                    key={index}
-                    className="border border-gray-200 rounded-xl overflow-hidden"
-                  >
-                    <Link href={`/post/${article.slug}`} className="block">
-                      <div className="p-6">
-                        <span className="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full mb-3">
-                          {article.category}
-                        </span>
-                        <h3 className="text-lg font-semibold text-gray-900 mb-4 line-clamp-2">
-                          {article.title}
-                        </h3>
-                        <span className="text-blue-600 font-medium hover:underline inline-flex items-center">
-                          Read article
-                          <svg
-                            className="ml-1 w-4 h-4"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                              clipRule="evenodd"
-                            ></path>
-                          </svg>
-                        </span>
-                      </div>
-                    </Link>
-                  </div>
-                ))}
-              </div>
+              {/* Related Articles Section */}
+              <BlogRelatedArticles currentArticleLink={currentArticleLink} />
             </div>
           </div>
         </main>
