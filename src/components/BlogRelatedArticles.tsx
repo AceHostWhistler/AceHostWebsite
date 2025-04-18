@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { getRelatedArticles, Article } from '../utils/blogArticles';
+import { ArrowRight } from 'lucide-react';
 
 interface BlogRelatedArticlesProps {
   currentArticleLink: string;
@@ -11,42 +12,43 @@ export default function BlogRelatedArticles({ currentArticleLink, count = 3 }: B
   const relatedArticles = getRelatedArticles(currentArticleLink, count);
 
   return (
-    <div className="bg-white py-12 md:py-20">
+    <section className="py-16 md:py-24 bg-gray-50">
       <div className="container max-w-screen-xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">More Articles</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">More Articles</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {relatedArticles.map((article, index) => (
             <Link key={index} href={article.link} className="group">
-              <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl h-full flex flex-col">
-                <div className="relative h-48 w-full overflow-hidden">
+              <div className="bg-white overflow-hidden rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 h-full flex flex-col transform group-hover:translate-y-[-4px]">
+                <div className="relative h-56 w-full overflow-hidden">
                   <Image
                     src={article.coverImage}
                     alt={article.title}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
-                </div>
-                <div className="p-5 flex-grow flex flex-col">
-                  <div className="mb-2">
-                    <span className="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">
-                      {article.category}
-                    </span>
-                    <span className="text-gray-500 text-xs ml-2">{article.readTime}</span>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-60"></div>
+                  <div className="absolute top-4 left-4 px-3 py-1 bg-black/70 text-white text-xs font-medium rounded-full">
+                    {article.category}
                   </div>
-                  <h3 className="text-lg font-bold mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors">
+                </div>
+                <div className="p-6 flex-grow flex flex-col">
+                  <h3 className="text-xl font-semibold mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors">
                     {article.title}
                   </h3>
                   {article.description && (
-                    <p className="text-gray-600 text-sm mb-4 line-clamp-3">{article.description}</p>
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-3 flex-grow">
+                      {article.description}
+                    </p>
                   )}
-                  <div className="mt-auto">
-                    <span className="text-blue-600 font-medium text-sm inline-flex items-center group-hover:underline">
-                      Read More
-                      <svg className="w-3.5 h-3.5 ml-1 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                      </svg>
+                  <div className="flex items-center justify-between mt-4">
+                    <span className="text-xs text-gray-500">
+                      {article.readTime}
+                    </span>
+                    <span className="inline-flex items-center text-blue-600 font-medium text-sm transition-all group-hover:translate-x-1">
+                      Read article
+                      <ArrowRight className="ml-1 w-4 h-4" />
                     </span>
                   </div>
                 </div>
@@ -55,6 +57,6 @@ export default function BlogRelatedArticles({ currentArticleLink, count = 3 }: B
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 } 

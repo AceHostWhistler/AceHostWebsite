@@ -532,7 +532,6 @@ const LuxuryChristmasRentals = () => {
 
           {/* Related Articles */}
           <div className="max-w-5xl mx-auto px-4 sm:px-6 mb-20">
-            <h3 className="text-2xl font-bold mb-10">More Articles</h3>
             <BlogRelatedArticles currentArticleLink={currentArticleLink} />
           </div>
         </main>
