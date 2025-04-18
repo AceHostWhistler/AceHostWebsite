@@ -20,10 +20,10 @@ const nextConfig = {
   images: {
     // Enable image optimization for better performance
     unoptimized: false,
-    // Set image domains that are allowed to be optimized
-    domains: ['acehost.ca', 'acehost.vercel.app', 'img.youtube.com'],
+    // Remove deprecated domains config
+    // domains: ['acehost.ca', 'acehost.vercel.app', 'img.youtube.com'],
     // Set reasonable device sizes for responsive images
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
+    deviceSizes: [320, 480, 640, 750, 828, 1080, 1200, 1920, 2048],
     // Set image sizes for the Image component
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     // Configure image formats
@@ -32,6 +32,21 @@ const nextConfig = {
     minimumCacheTTL: 60,
     // Configure remote patterns
     remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'acehost.ca',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'acehost.vercel.app',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'img.youtube.com',
+        pathname: '/**',
+      },
       {
         protocol: 'https',
         hostname: 'images.unsplash.com',

@@ -710,7 +710,20 @@ const Home = () => {
 
         {/* Optimize core web vitals */}
         <link rel="preload" href="/logo.png" as="image" />
-        <link rel="preload" href="/photos/homepage/WhistlerVacationRental.jpg" as="image" />
+        <link 
+          rel="preload" 
+          href="/photos/homepage/WhistlerVacationRental.jpg" 
+          as="image" 
+          media="(min-width: 768px)" 
+          fetchPriority="high" 
+        />
+        <link 
+          rel="preload" 
+          href="/photos/homepage/ViewOurCollection.jpg" 
+          as="image" 
+          media="(min-width: 768px)" 
+          fetchPriority="high"
+        />
       </Head>
 
       <div className="min-h-screen bg-white text-gray-900">
@@ -773,11 +786,16 @@ const Home = () => {
               <div key={index} className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="mb-6 h-48 relative overflow-hidden rounded-lg">
                   <Link href="/properties">
-                    <img
-                      src={section.image}
-                      alt={section.title}
-                      className="w-full h-full object-cover cursor-pointer"
-                    />
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={section.image}
+                        alt={section.title}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 400px"
+                        className="object-cover cursor-pointer"
+                        priority={index === 0}
+                      />
+                    </div>
                   </Link>
                 </div>
                 <h3 className="text-2xl font-medium mb-4 text-gray-900">

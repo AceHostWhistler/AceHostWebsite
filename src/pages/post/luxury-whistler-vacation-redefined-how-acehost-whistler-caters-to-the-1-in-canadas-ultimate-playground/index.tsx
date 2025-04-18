@@ -5,8 +5,11 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 
 const LuxuryWhistlerVacation = () => {
+  const currentArticleLink = "/post/luxury-whistler-vacation-redefined-how-acehost-whistler-caters-to-the-1-in-canadas-ultimate-playground";
+
   // Related articles
   const relatedArticles = [
     {
@@ -474,35 +477,7 @@ const LuxuryWhistlerVacation = () => {
 
           {/* Related Articles */}
           <div className="max-w-5xl mx-auto px-4 sm:px-6 mb-20">
-            <h3 className="text-2xl font-bold mb-10">More Articles</h3>
-            <div className="grid md:grid-cols-3 gap-8">
-              {relatedArticles.map((article, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-lg overflow-hidden shadow-md"
-                >
-                  <div className="p-6">
-                    <div className="text-sm text-gray-500 mb-2">
-                      {article.category}
-                    </div>
-                    <h4 className="text-xl font-semibold mb-3">
-                      <Link
-                        href={article.link}
-                        className="hover:text-gray-700 transition-colors"
-                      >
-                        {article.title}
-                      </Link>
-                    </h4>
-                    {article.description && (
-                      <p className="text-gray-600 mb-4 text-sm">
-                        {article.description}
-                      </p>
-                    )}
-                    <p className="text-sm text-gray-500">{article.readTime}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <BlogRelatedArticles currentArticleLink={currentArticleLink} />
           </div>
         </main>
 
