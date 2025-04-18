@@ -16,23 +16,26 @@ const LongTermRentals = () => {
       description: "Whistler Snow & Weather Report 2024/2025 Opening Day",
       readTime: "11 minute read",
       link: "/post/whistler-snow-report-record-snowfall-marks-the-start-of-the-2024-2025-ski-season",
+      coverImage: "/photos/post/WinterSnowReport/WinterSnowHero.png",
     },
     {
       title:
-        "Luxury Whistler Vacation Redefined: How AceHost Whistler Caters to the 1% in Canada&apos;s Ultimate Playground",
+        "Luxury Whistler Vacation Redefined: How AceHost Whistler Caters to the 1% in Canada's Ultimate Playground",
       category: "VIP Concierge | Luxury Vacation",
       description: "",
       readTime: "20 min",
       link: "/post/luxury-whistler-vacation-redefined-how-acehost-whistler-caters-to-the-1-in-canadas-ultimate-playground",
+      coverImage: "/photos/post/Luxury Whistler Vacation/1.jpg",
     },
     {
       title:
-        "Top 7 of the Most Luxury Vacation Rental Homes in Whistler | Christmas and New Year&apos;s",
+        "Top 7 of the Most Luxury Vacation Rental Homes in Whistler | Christmas and New Year's",
       category: "Travel Christmas",
       description:
-        "Top 7 of the Most Luxury Vacation Rental Homes in Whistler | Christmas & New Year&apos;s",
+        "Top 7 of the Most Luxury Vacation Rental Homes in Whistler | Christmas & New Year's",
       readTime: "15 min read",
       link: "/post/top-7-of-the-most-luxury-vacation-rental-homes-in-whistler-for-christmas-new-years",
+      coverImage: "/photos/post/top-7-of-the-most-luxury-vacation-rental-homes-in-whistler-for-christmas-new-years/hero.jpg",
     },
   ];
 
@@ -397,53 +400,49 @@ const LongTermRentals = () => {
             </article>
 
             {/* More Articles Section */}
-            <div className="mt-20 mb-10">
-              <h2 className="text-2xl font-bold mb-8">More Articles</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="mt-28 mb-20">
+              <h2 className="text-3xl font-bold mb-10 text-center">More Articles</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                 {relatedArticles.map((article, index) => (
-                  <div
+                  <Link 
+                    href={article.link}
                     key={index}
-                    className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300"
+                    className="group block transition-all duration-300 hover:-translate-y-2"
                   >
-                    <div className="p-6">
-                      <div className="flex justify-between items-start mb-3">
-                        <span className="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full">
+                    <div className="overflow-hidden rounded-2xl shadow-lg bg-white h-full flex flex-col">
+                      <div className="relative h-52 w-full overflow-hidden">
+                        <Image
+                          src={article.coverImage}
+                          alt={article.title}
+                          fill
+                          className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                        <div className="absolute top-4 left-4 px-3 py-1 bg-black/70 text-white text-xs font-medium rounded-full">
                           {article.category}
-                        </span>
-                        <span className="text-xs text-gray-500">
-                          {article.readTime}
-                        </span>
+                        </div>
                       </div>
-                      <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2">
-                        {article.title}
-                      </h3>
-                      {article.description && (
-                        <p className="text-sm text-gray-600 mb-4 line-clamp-2">
-                          {article.description}
-                        </p>
-                      )}
-                      <Link
-                        href={article.link}
-                        className="inline-flex items-center text-black font-medium hover:underline"
-                      >
-                        Read post
-                        <svg
-                          className="ml-1 w-4 h-4"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"
-                          ></path>
-                        </svg>
-                      </Link>
+                      <div className="p-6 flex flex-col flex-grow">
+                        <h3 className="font-semibold text-xl text-gray-900 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors duration-300">
+                          {article.title}
+                        </h3>
+                        {article.description && (
+                          <p className="text-sm text-gray-600 mb-4 flex-grow">
+                            {article.description}
+                          </p>
+                        )}
+                        <div className="flex items-center justify-between mt-4">
+                          <span className="text-xs text-gray-500">
+                            {article.readTime}
+                          </span>
+                          <span className="inline-flex items-center text-blue-600 font-medium group-hover:translate-x-1 transition-transform duration-300">
+                            Read article
+                            <ArrowRight className="ml-1 w-4 h-4" />
+                          </span>
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
