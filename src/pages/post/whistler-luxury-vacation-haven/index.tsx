@@ -94,15 +94,6 @@ export default function BlogPost() {
                 enthusiasts alike.
               </p>
 
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-vacation-haven/1.jpg"
-                  alt="Breathtaking natural beauty of Whistler mountains"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 2. Exceptional Accommodations
               </h2>
@@ -120,15 +111,6 @@ export default function BlogPost() {
                 getaway.
               </p>
 
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-vacation-haven/2.jpg"
-                  alt="Luxury accommodation in Whistler"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 3. World-Class Skiing and Snowboarding
               </h2>
@@ -143,15 +125,6 @@ export default function BlogPost() {
                 convenient shuttle services, Whistler makes it easy to hit the
                 slopes and enjoy a day on the mountain.
               </p>
-
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-vacation-haven/3.jpg"
-                  alt="World-class skiing at Whistler Blackcomb"
-                  fill
-                  className="object-cover"
-                />
-              </div>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 4. Year-Round Outdoor Activities
@@ -169,15 +142,6 @@ export default function BlogPost() {
                 perfect outdoor adventure.
               </p>
 
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-vacation-haven/4.jpg"
-                  alt="Year-round outdoor activities in Whistler"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 5. Vibrant Village Life
               </h2>
@@ -193,15 +157,6 @@ export default function BlogPost() {
                 those seeking a well-rounded vacation experience.
               </p>
 
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-vacation-haven/5.jpg"
-                  alt="Vibrant Whistler Village"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 6. Customized Experiences and Services
               </h2>
@@ -216,15 +171,6 @@ export default function BlogPost() {
                 exclusivity to your stay, ensuring a truly memorable and unique
                 getaway.
               </p>
-
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-vacation-haven/6.jpg"
-                  alt="Customized luxury experiences in Whistler"
-                  fill
-                  className="object-cover"
-                />
-              </div>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 7. Accessible Adventure
@@ -242,15 +188,6 @@ export default function BlogPost() {
                 travelers seeking a hassle-free, luxury vacation.
               </p>
 
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-vacation-haven/7.jpg"
-                  alt="Sea-to-Sky Highway to Whistler"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 8. Family-Friendly Appeal
               </h2>
@@ -267,15 +204,6 @@ export default function BlogPost() {
                 vacation.
               </p>
 
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-vacation-haven/8.jpg"
-                  alt="Family-friendly activities in Whistler"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 9. Romantic Retreats
               </h2>
@@ -290,15 +218,6 @@ export default function BlogPost() {
                 prepared by a personal chef to arranging couples' spa
                 treatments in the comfort of your luxury rental home.
               </p>
-
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-vacation-haven/9.jpg"
-                  alt="Romantic retreat in Whistler"
-                  fill
-                  className="object-cover"
-                />
-              </div>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 10. Group Getaways
@@ -315,15 +234,6 @@ export default function BlogPost() {
                 mountain biking excursions or private yoga sessions, ensuring a
                 memorable group vacation for all.
               </p>
-
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-vacation-haven/10.jpg"
-                  alt="Group vacation at a luxury Whistler property"
-                  fill
-                  className="object-cover"
-                />
-              </div>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 11. Cultural Experiences and Events
@@ -343,15 +253,6 @@ export default function BlogPost() {
                 stay.
               </p>
 
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-vacation-haven/11.jpg"
-                  alt="Cultural experiences in Whistler"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 12. Environmental Commitment
               </h2>
@@ -369,15 +270,6 @@ export default function BlogPost() {
                 beautiful and environmentally responsible destination.
               </p>
 
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-vacation-haven/12.jpg"
-                  alt="Eco-friendly initiatives in Whistler"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 13. Thrilling Adventure Sports
               </h2>
@@ -393,15 +285,6 @@ export default function BlogPost() {
                 adventure.
               </p>
 
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-vacation-haven/13.jpg"
-                  alt="Adventure sports in Whistler"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 14. Award-Winning Golf Courses
               </h2>
@@ -416,15 +299,6 @@ export default function BlogPost() {
                 conveniently located near these top golf courses, making it easy
                 to fit a round or two into your vacation itinerary.
               </p>
-
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-vacation-haven/14.jpg"
-                  alt="Golf course in Whistler"
-                  fill
-                  className="object-cover"
-                />
-              </div>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 15. Culinary Delights
@@ -442,15 +316,6 @@ export default function BlogPost() {
                 vacation is filled with delicious and memorable dining
                 experiences.
               </p>
-
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-vacation-haven/15.jpg"
-                  alt="Fine dining in Whistler"
-                  fill
-                  className="object-cover"
-                />
-              </div>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 16. Health and Wellness Focus
@@ -470,15 +335,6 @@ export default function BlogPost() {
                 you feeling refreshed and revitalized.
               </p>
 
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-vacation-haven/16.jpg"
-                  alt="Health and wellness facilities in Whistler"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 17. Unparalleled Hiking and Biking Trails
               </h2>
@@ -496,15 +352,6 @@ export default function BlogPost() {
                 incorporate outdoor adventures into your vacation itinerary.
               </p>
 
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-vacation-haven/17.jpg"
-                  alt="Hiking and biking trails in Whistler"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 18. Unique Wildlife Encounters
               </h2>
@@ -518,15 +365,6 @@ export default function BlogPost() {
                 encounters, ensuring that your Whistler vacation includes
                 memorable experiences with the region's fascinating fauna.
               </p>
-
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-vacation-haven/18.jpg"
-                  alt="Wildlife in Whistler's natural habitat"
-                  fill
-                  className="object-cover"
-                />
-              </div>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 19. Educational and Interactive Experiences
@@ -545,15 +383,6 @@ export default function BlogPost() {
                 cultural heritage.
               </p>
 
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-vacation-haven/19.jpg"
-                  alt="Squamish Lil'wat Cultural Centre in Whistler"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 20. Celebratory Occasions and Milestones
               </h2>
@@ -569,15 +398,6 @@ export default function BlogPost() {
                 experience that exceeds your expectations, ensuring your special
                 occasion is both memorable and stress-free.
               </p>
-
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-vacation-haven/20.jpg"
-                  alt="Special celebration at a Whistler luxury property"
-                  fill
-                  className="object-cover"
-                />
-              </div>
 
               <p className="text-xl leading-relaxed mt-10">
                 These reasons further reinforce why Whistler is the perfect
