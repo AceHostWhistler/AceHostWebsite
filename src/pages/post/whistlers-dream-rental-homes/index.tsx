@@ -111,7 +111,7 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/post/whistlers-dream-rental-homes/1.jpg"
+                  src="/photos/post/whistlers-dream-rental-homes/1.jpeg"
                   alt="Slope Side Chalet in Kadenwood"
                   fill
                   className="object-cover"
@@ -155,7 +155,7 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/post/whistlers-dream-rental-homes/2.jpg"
+                  src="/photos/post/whistlers-dream-rental-homes/2.png"
                   alt="Two Cedars in Kadenwood"
                   fill
                   className="object-cover"
@@ -197,7 +197,7 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/post/whistlers-dream-rental-homes/3.jpg"
+                  src="/photos/post/whistlers-dream-rental-homes/3.jpeg"
                   alt="Altitude Retreat in Kadenwood"
                   fill
                   className="object-cover"
@@ -257,7 +257,7 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/post/whistlers-dream-rental-homes/4.jpg"
+                  src="/photos/post/whistlers-dream-rental-homes/4.jpeg"
                   alt="Chalet La Forja in Kadenwood"
                   fill
                   className="object-cover"
@@ -316,7 +316,7 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/post/whistlers-dream-rental-homes/5.jpg"
+                  src="/photos/post/whistlers-dream-rental-homes/5.jpeg"
                   alt="Falcon in Blueberry"
                   fill
                   className="object-cover"
@@ -418,7 +418,7 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/post/whistlers-dream-rental-homes/7.jpg"
+                  src="/photos/post/whistlers-dream-rental-homes/11.png"
                   alt="Whistler Village Luxury 2 Bedroom Condo"
                   fill
                   className="object-cover"
