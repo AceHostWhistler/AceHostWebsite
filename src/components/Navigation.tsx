@@ -67,7 +67,6 @@ const Navigation = ({
   const resourcesDropdownItems = [
     { text: "All Blogs", url: "/blogs" },
     { text: "FAQ's", url: "/faq" },
-    { text: "More Resources", url: "/resources" },
   ];
 
   const navLinks = [
@@ -515,17 +514,6 @@ const Navigation = ({
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
                       Luxury Whistler Vacation
-                    </Link>
-                    <Link
-                      href="/resources"
-                      onClick={() => {
-                        setShowMobileResourcesDropdown(false);
-                        setIsMenuOpen(false);
-                      }}
-                      className="flex items-center py-3 px-4 text-base text-gray-600 hover:text-black rounded-md"
-                    >
-                      <ChevronRight className="h-4 w-4 mr-2" />
-                      More Resources
                     </Link>
                   </div>
                 )}

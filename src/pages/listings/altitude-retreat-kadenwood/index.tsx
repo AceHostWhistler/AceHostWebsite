@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
@@ -14,6 +14,9 @@ const AltitudeRetreat = () => {
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(
     null
   );
+  const [isImageLoading, setIsImageLoading] = useState(false);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const [touchEndX, setTouchEndX] = useState<number | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   // Property photos
@@ -88,6 +91,7 @@ const AltitudeRetreat = () => {
   ];
 
   const handlePhotoClick = (index: number) => {
+    setIsImageLoading(true);
     setSelectedPhotoIndex(index);
   };
 
@@ -97,7 +101,9 @@ const AltitudeRetreat = () => {
 
   const navigatePhoto = (direction: "prev" | "next") => {
     if (selectedPhotoIndex === null) return;
-
+    
+    setIsImageLoading(true);
+    
     if (direction === "prev") {
       setSelectedPhotoIndex(
         selectedPhotoIndex === 0 ? photos.length - 1 : selectedPhotoIndex - 1
@@ -107,6 +113,62 @@ const AltitudeRetreat = () => {
         selectedPhotoIndex === photos.length - 1 ? 0 : selectedPhotoIndex + 1
       );
     }
+  };
+
+  // Handle image load completion
+  const handleImageLoad = () => {
+    setIsImageLoading(false);
+  };
+
+  // Handle keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (selectedPhotoIndex !== null) {
+        if (e.key === 'ArrowLeft') {
+          navigatePhoto('prev');
+        } else if (e.key === 'ArrowRight') {
+          navigatePhoto('next');
+        } else if (e.key === 'Escape') {
+          closeFullScreenPhoto();
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [selectedPhotoIndex]);
+
+  // Handle touch navigation
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStartX(e.touches[0].clientX);
+    setTouchEndX(null);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEndX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX || !touchEndX) return;
+    
+    const difference = touchStartX - touchEndX;
+    
+    // If the swipe is significant enough (more than 50px)
+    if (Math.abs(difference) > 50) {
+      if (difference > 0) {
+        // Swiped left - go to next
+        navigatePhoto('next');
+      } else {
+        // Swiped right - go to previous
+        navigatePhoto('prev');
+      }
+    }
+    
+    // Reset touch coordinates
+    setTouchStartX(null);
+    setTouchEndX(null);
   };
 
   // Close full screen view when all photos modal is closed
@@ -216,15 +278,19 @@ const AltitudeRetreat = () => {
                 <div
                   key={index}
                   className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
-                  onClick={() => setShowAllPhotos(true)}
+                  onClick={() => handlePhotoClick(index)}
                 >
                   <Image
                     src={photo}
                     alt={`Altitude Retreat interior ${index + 1}`}
                     fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw"
+                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
                     className="object-cover hover:scale-105 transition-transform duration-300"
-                    priority={index < 4}
+                    priority={index < 2}
+                    loading={index < 2 ? "eager" : "lazy"}
+                    quality={index < 4 ? 85 : 75}
+                    placeholder="blur"
+                    blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzMiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="
                   />
                 </div>
               ))}
@@ -447,6 +513,7 @@ const AltitudeRetreat = () => {
               <button
                 onClick={closeAllPhotos}
                 className="text-white hover:text-gray-300 bg-gray-900 px-4 py-2 rounded-full"
+                aria-label="Close gallery"
               >
                 Close
               </button>
@@ -466,9 +533,17 @@ const AltitudeRetreat = () => {
                         fill
                         sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw"
                         className="object-cover hover:scale-105 transition-transform duration-300"
-                        priority={index < 6}
-                        loading={index < 6 ? "eager" : "lazy"}
+                        priority={index < 4}
+                        loading={index < 8 ? "eager" : "lazy"}
+                        quality={index < 12 ? 85 : 75}
+                        placeholder="blur"
+                        blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzMiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="
                       />
+                    </div>
+                    <div className="mt-1 text-center">
+                      <span className="text-white text-xs">
+                        {index + 1} / {photos.length}
+                      </span>
                     </div>
                   </div>
                 ))}
@@ -479,45 +554,61 @@ const AltitudeRetreat = () => {
 
         {/* Full-screen Photo View */}
         {selectedPhotoIndex !== null && (
-          <div className="fixed inset-0 z-[60] bg-black flex items-center justify-center">
+          <div 
+            className="fixed inset-0 z-[60] bg-black flex items-center justify-center"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
             <div className="absolute top-4 right-4 flex space-x-4">
               <button
                 onClick={closeFullScreenPhoto}
-                className="text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors"
+                className="text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
+                aria-label="Close"
               >
                 <X className="h-6 w-6" />
               </button>
             </div>
 
             <button
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
               onClick={() => navigatePhoto("prev")}
+              aria-label="Previous photo"
             >
               &larr;
             </button>
 
             <div className="relative w-full h-full max-w-6xl max-h-[80vh] mx-auto px-4">
+              {isImageLoading && (
+                <div className="absolute inset-0 flex items-center justify-center z-10">
+                  <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                </div>
+              )}
               <div className="relative w-full h-full">
                 <Image
                   src={photos[selectedPhotoIndex]}
                   alt={`Altitude Retreat full view ${selectedPhotoIndex + 1}`}
                   fill
                   priority
-                  className="object-contain"
+                  className={`object-contain transition-opacity duration-300 ${isImageLoading ? 'opacity-0' : 'opacity-100'}`}
                   sizes="100vw"
+                  onLoadingComplete={handleImageLoad}
+                  quality={85}
+                  loading="eager"
                 />
               </div>
             </div>
 
             <button
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
               onClick={() => navigatePhoto("next")}
+              aria-label="Next photo"
             >
               &rarr;
             </button>
 
-            <div className="absolute bottom-4 left-0 right-0 text-center">
-              <p className="text-white text-sm">
+            <div className="absolute bottom-4 left-0 right-0 text-center z-20">
+              <p className="text-white text-sm bg-black bg-opacity-50 inline-block px-4 py-2 rounded-full">
                 {selectedPhotoIndex + 1} / {photos.length}
               </p>
             </div>
