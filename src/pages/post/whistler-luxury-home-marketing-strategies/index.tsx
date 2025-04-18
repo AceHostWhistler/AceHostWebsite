@@ -10,6 +10,30 @@ export default function BlogPost() {
   const publishDate = "October 8, 2024";
   const currentArticleLink = "/post/whistler-luxury-home-marketing-strategies";
 
+  // Related articles
+  const relatedArticles = [
+    {
+      title: "Whistler Snow Report: Record Snowfall Marks the Start of the 2024/2025 Ski Season",
+      slug: "whistler-snow-report-record-snowfall-marks-the-start-of-the-2024-2025-ski-season",
+      category: "Whistler Snow/Weather Report",
+      readTime: "11 minute read",
+      description: "Whistler Snow & Weather Report 2024/2025 Opening Day"
+    },
+    {
+      title: "Luxury Whistler Vacation Redefined: How AceHost Whistler Caters to the 1% in Canada's Ultimate Playground",
+      slug: "luxury-whistler-vacation-redefined-how-acehost-whistler-caters-to-the-1-in-canadas-ultimate-playground",
+      category: "VIP Concierge | Luxury Vacation",
+      readTime: "20 min"
+    },
+    {
+      title: "Find Your Dream Long-Term Luxury Rental in Whistler with AceHost",
+      slug: "find-your-dream-long-term-luxury-rental-in-whistler-with-acehost",
+      category: "Long-term, Property",
+      readTime: "10 min read",
+      description: "Luxury long-term home rental options"
+    },
+  ];
+
   return (
     <>
       <Head>
@@ -35,18 +59,8 @@ export default function BlogPost() {
                 Marketing Strategies
               </h1>
               <div className="flex items-center text-sm text-gray-600 mb-8">
-                <span className="mr-4">Published: {publishDate}</span>
-                <span className="mr-4">|</span>
-                <span>14 min read</span>
-              </div>
-              <div className="relative w-full aspect-[16/9] mb-8 rounded-xl overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-home-marketing-strategies/Hero.png"
-                  alt="Celebrities in Whistler luxury property"
-                  fill
-                  className="object-cover"
-                  priority
-                />
+                <span>Published on</span>
+                <span className="ml-1 font-medium">{publishDate}</span>
               </div>
             </div>
 
@@ -58,6 +72,17 @@ export default function BlogPost() {
                   Celebrities spotted in Whistler Canada at AceHost Whistler
                   Luxury Property Rentals
                 </p>
+              </div>
+
+              <div className="float-right ml-4 mb-4 w-1/2">
+                <Image
+                  src="/photos/post/whistler-luxury-home-marketing-strategies/1.png"
+                  alt="Creators collaborating with AceHost Whistler"
+                  width={600}
+                  height={350}
+                  layout="responsive"
+                  className="rounded-lg"
+                />
               </div>
 
               <p className="text-xl leading-relaxed">
@@ -76,15 +101,6 @@ export default function BlogPost() {
                 Have a look at some of (not all) the creators we have had the
                 pleasure of working with in the past.
               </p>
-
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-home-marketing-strategies/1.jpg"
-                  alt="Creators collaborating with AceHost Whistler"
-                  fill
-                  className="object-cover"
-                />
-              </div>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 Riverdale Main Cast: Lili Reinhart 26.8 Million, Camila Mendes
@@ -107,19 +123,6 @@ export default function BlogPost() {
                 significant attention for our properties.
               </p>
 
-              <p className="mt-4 mb-6">
-                Link to reel at our &quot;Chalet La Forja&quot; property.
-              </p>
-
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-home-marketing-strategies/2.jpg"
-                  alt="Riverdale cast at AceHost property"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 Justin Tse: Youtube 821k, Instagram 140k
               </h2>
@@ -138,48 +141,13 @@ export default function BlogPost() {
                 captures the essence of luxury.
               </p>
 
-              <div className="bg-gray-50 p-4 rounded-lg my-6 text-center">
-                <p className="font-medium">
-                  Click Here to Watch Justin Tse Whistler Travel Video with
-                  AceHost
-                </p>
-              </div>
-
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/post/whistler-luxury-home-marketing-strategies/3.jpg"
+                  src="/photos/post/whistler-luxury-home-marketing-strategies/5.png"
                   alt="Justin Tse creating content for AceHost"
                   fill
                   className="object-cover"
                 />
-              </div>
-
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-home-marketing-strategies/4.jpg"
-                  alt="Riverdale Cast snowmobiling in Whistler"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-3">
-                  <p className="text-sm">
-                    Riverdale Cast snowmobiling in Whistler
-                  </p>
-                </div>
-              </div>
-
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-home-marketing-strategies/5.jpg"
-                  alt="Jesse and Francesca Farago in Whistler"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-3">
-                  <p className="text-sm">
-                    Jesse and Francesca Farago in Whistler
-                  </p>
-                </div>
               </div>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
@@ -191,12 +159,16 @@ export default function BlogPost() {
                 Francesca Farago and Jessi Sullivan, popular lifestyle
                 influencers, have also collaborated with us, providing valuable
                 exposure to their vast audience. Check out one of our favourite
-                posts they made by clicking the photos bellow, receiving 1.5
-                million views and counting.
+                posts they made, receiving 1.5 million views and counting.
               </p>
 
-              <div className="bg-gray-50 p-4 rounded-lg my-6 text-center">
-                <p className="font-medium">Link to reel</p>
+              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
+                <Image
+                  src="/photos/post/whistler-luxury-home-marketing-strategies/Hero.png"
+                  alt="Francesca Farago and Jessi Sullivan in Whistler"
+                  fill
+                  className="object-cover"
+                />
               </div>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
@@ -218,37 +190,11 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/post/whistler-luxury-home-marketing-strategies/6.jpg"
+                  src="/photos/post/whistler-luxury-home-marketing-strategies/3.jpg"
                   alt="LA influencers at AceHost property"
                   fill
                   className="object-cover"
                 />
-              </div>
-
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-home-marketing-strategies/7.jpg"
-                  alt="Ayla Woodruff in Kadenwood Neighbourhood"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-3">
-                  <p className="text-sm">
-                    Ayla Woodruff in Kadenwood Neighbourhood
-                  </p>
-                </div>
-              </div>
-
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-home-marketing-strategies/8.jpg"
-                  alt="Tyler Hassman w/ PropertyGrams"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-3">
-                  <p className="text-sm">Tyler Hassman w/ PropertyGrams</p>
-                </div>
               </div>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
@@ -266,6 +212,15 @@ export default function BlogPost() {
                 well as offering high quality home video tours for guests
                 considering booking.
               </p>
+
+              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
+                <Image
+                  src="/photos/post/whistler-luxury-home-marketing-strategies/4.png"
+                  alt="PropertyGrams filming AceHost luxury properties"
+                  fill
+                  className="object-cover"
+                />
+              </div>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 Luxury Listings: 3.3 Million Instagram
@@ -292,10 +247,6 @@ export default function BlogPost() {
                 back soon for his birthday this December.
               </p>
 
-              <div className="bg-gray-50 p-4 rounded-lg my-6 text-center">
-                <p className="font-medium">Link to reel</p>
-              </div>
-
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 Emmett 1 million+ and Zach Moxley: 110k
               </h2>
@@ -310,23 +261,12 @@ export default function BlogPost() {
                 select properties.
               </p>
 
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-home-marketing-strategies/9.jpg"
-                  alt="Drone footage of luxury property"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
               <p>
                 Other popular local influencers such as Strawberry Milkmob 2.3
                 Million Tiktok, and athletes such as Mark McMorris 812k
                 Instagram, have also been apart of Acehost Whistler marketing
                 collaborations and seen in AceHost luxury properties.
               </p>
-
-              <p>Check out this house tour from Strawberry Milkmob.</p>
 
               <p>
                 Not only does this style of marketing benefit with outreach by
@@ -337,18 +277,15 @@ export default function BlogPost() {
                 natural traffic.
               </p>
 
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
+              <div className="w-full my-10 rounded-lg overflow-hidden mx-auto" style={{ width: "40%" }}>
                 <Image
-                  src="/photos/post/whistler-luxury-home-marketing-strategies/10.jpg"
+                  src="/photos/post/whistler-luxury-home-marketing-strategies/6.jpg"
                   alt="Strawberry Milk Mob in Altitude Retreat Estate"
-                  fill
-                  className="object-cover"
+                  width={1200}
+                  height={600}
+                  layout="responsive"
+                  className="object-contain"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-3">
-                  <p className="text-sm">
-                    Strawberry Milk Mob in our gorgeous Altitude Retreat Estate
-                  </p>
-                </div>
               </div>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
@@ -368,26 +305,22 @@ export default function BlogPost() {
                 listings while also providing indirect benefits to our
                 homeowners.
               </p>
+            </div>
 
-              <div className="bg-gray-100 p-8 rounded-xl my-12">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                  Want to Learn More About Our Marketing Services?
-                </h2>
-                <p className="mb-6">
-                  Contact AceHost today to discover how our innovative marketing
-                  strategies can help showcase your Whistler property to a
-                  global audience.
-                </p>
-                <Link
-                  href="/contact"
-                  className="inline-block bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors"
-                >
-                  Contact Us
-                </Link>
-              </div>
+            {/* More Articles Section - Updated to use BlogRelatedArticles component */}
+            <BlogRelatedArticles currentArticleLink={currentArticleLink} />
 
-              {/* Related Articles Section */}
-              <BlogRelatedArticles currentArticleLink={currentArticleLink} />
+            {/* Contact Section */}
+            <div className="bg-gray-100 p-8 rounded-xl my-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                Get in-touch with us!
+              </h2>
+              <Link
+                href="/contact"
+                className="inline-block bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors"
+              >
+                Contact Us
+              </Link>
             </div>
           </div>
         </main>
