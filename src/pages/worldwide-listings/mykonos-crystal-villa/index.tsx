@@ -170,8 +170,8 @@ const MykonosCrystalVilla = () => {
             <p className="text-gray-800 mb-16 max-w-4xl">
               Nestled above the port of Mykonos and just a five-minute drive
               from Mykonos Town, Villa Imperial is a private luxury estate
-              surrounded by the island&apos;s cosmopolitan vibes, world-famous
-              restaurants, and vibrant social life. The villa&apos;s unique
+              surrounded by the island's cosmopolitan vibes, world-famous
+              restaurants, and vibrant social life. The villa's unique
               style epitomizes the traditional Cycladic architecture
               complemented with modern touches, creating a cozy and laid-back
               luxury retreat.
@@ -212,7 +212,7 @@ const MykonosCrystalVilla = () => {
                   wooden floors and ceilings, large windows with stunning
                   vistas, exquisite décor, and state-of-the-art furniture — the
                   perfect place to withdraw and relax after a full day exploring
-                  Mykonos&apos; treasures.
+                  Mykonos' treasures.
                 </p>
                 <p className="text-gray-800 mb-6">
                   The private villa offers ten bedrooms and can comfortably
@@ -223,7 +223,7 @@ const MykonosCrystalVilla = () => {
                   verandas.
                 </p>
                 <p className="text-gray-800">
-                  The villa&apos;s outdoors spaces enjoy breathtaking panoramic
+                  The villa's outdoors spaces enjoy breathtaking panoramic
                   views of the Aegean Sea and the magical sunsets of Mykonos,
                   and consist of an infinity swimming pool, shaded sitting and
                   lounge areas, an elegant outdoor living room with a fireplace,

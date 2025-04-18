@@ -155,7 +155,7 @@ const MarquiseSkiInSkiOut = () => {
               tub, and heated pool after a day on the slopes. In winter, ski
               right to Blackcomb gondola and back from your front door, and in
               summer, walk to the village in under 15 minutes to explore
-              Whistler&apos;s best restaurants in the main Village.
+              Whistler's best restaurants in the main Village.
             </p>
 
             {/* The Space Section */}
@@ -190,8 +190,8 @@ const MarquiseSkiInSkiOut = () => {
                 </div>
                 <p className="text-gray-800 mb-6">
                   Welcome to your luxury ski-in/ski-out retreat at the Marquise,
-                  offering unbeatable access to Whistler&apos;s world-class
-                  slopes and vibrant village life. Whether you&apos;re here to
+                  offering unbeatable access to Whistler's world-class
+                  slopes and vibrant village life. Whether you're here to
                   ski fresh powder in winter or hike and bike through scenic
                   trails in summer, this condo provides the perfect blend of
                   comfort and convenience.
@@ -200,7 +200,7 @@ const MarquiseSkiInSkiOut = () => {
                   <span className="font-medium">Bedroom Layout</span>
                   <br />
                   ✔ Master Suite: Sleep in absolute comfort on a brand-new Puffy
-                  Royal King mattress, designed for an exceptional night&apos;s
+                  Royal King mattress, designed for an exceptional night's
                   rest.
                   <br />
                   <br />

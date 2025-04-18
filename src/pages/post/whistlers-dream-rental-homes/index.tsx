@@ -55,7 +55,7 @@ export default function BlogPost() {
                 <h2 className="text-xl font-semibold mb-2">Summary</h2>
                 <p className="text-gray-700">
                   In this blog post, we unveil the top 5 luxury rental
-                  homes/airbnb&apos;s in Whistler that promise an extraordinary
+                  homes/airbnb's in Whistler that promise an extraordinary
                   vacation experience. Immerse yourself in the opulence,
                   comfort, and stunning views offered by these magnificent
                   properties, handpicked by AceHost.ca for an unforgettable
@@ -68,7 +68,7 @@ export default function BlogPost() {
                 world-class skiing, and vibrant culture. To truly experience the
                 best of this iconic destination, staying in a luxurious vacation
                 rental home is essential. With the help of AceHost Whistler,
-                we&apos;ve curated a list of the top 5 luxury rental homes that
+                we've curated a list of the top 5 luxury rental homes that
                 combine elegance, comfort, and exceptional amenities, ensuring
                 an unforgettable dream vacation in Whistler. Whether you are
                 looking for a luxury Christmas rental property or a new years
@@ -77,7 +77,7 @@ export default function BlogPost() {
               </p>
 
               <p className="font-medium text-xl mt-6 mb-8">
-                Introducing AceHost Whistler&apos;s top 5 luxury properties in
+                Introducing AceHost Whistler's top 5 luxury properties in
                 Whistler, where luxury and convenience meet for an unforgettable
                 vacation experience:
               </p>
@@ -98,7 +98,7 @@ export default function BlogPost() {
               </div>
 
               <p>
-                Introducing AceHost&apos;s Slope Side Chalet in Kadenwood, their
+                Introducing AceHost's Slope Side Chalet in Kadenwood, their
                 top property featuring luxurious amenities and a convenient
                 ski-in/ski-out access. This cozy home boasts a generous 5025+ sq
                 ft space with 7 bedrooms, 12 beds, and 8 baths, perfect for
@@ -145,7 +145,7 @@ export default function BlogPost() {
                 space. With 7 bedrooms and 12 beds, it can comfortably
                 accommodate up to 17 guests. Indulge in relaxation in the hot
                 tub and infrared sauna, and maintain your fitness routine in the
-                state-of-the-art gym. When it&apos;s time to unwind, enjoy a
+                state-of-the-art gym. When it's time to unwind, enjoy a
                 private movie theatre. The exclusive residence-only gondola
                 ensures easy access to the slopes, while a dedicated butler
                 enhances your stay with personalized service.
@@ -242,8 +242,8 @@ export default function BlogPost() {
               </p>
 
               <p className="mt-4">
-                Inside the chalet, you&apos;ll find a gourmet chef&apos;s
-                kitchen with a butler&apos;s pantry, two private offices,
+                Inside the chalet, you'll find a gourmet chef's
+                kitchen with a butler's pantry, two private offices,
                 state-of-the-art electronics with built-in Sonos speaker systems
                 in every room, a gym, a hot tub, a heated pool, a sauna, and
                 even a private gondola. Plus, with ski-in/ski-out access, you
@@ -393,7 +393,7 @@ export default function BlogPost() {
 
               <p>
                 This property is conveniently located in the heart of Whistler
-                Village, just a short walk from the ski hill! It&apos;s perfect
+                Village, just a short walk from the ski hill! It's perfect
                 for families visiting Whistler, with 2 bedrooms and 2 bathrooms.
                 The layout is spacious and offers views of Olympic Plaza and
                 Blackcomb Mountain.
@@ -519,7 +519,7 @@ export default function BlogPost() {
 
               {/* Condo 4 */}
               <h3 className="text-2xl font-bold text-gray-900 mt-12 mb-4">
-                4) Luxe 5-bed | 3 bedroom Ski in Ski out in Whistler&apos;s
+                4) Luxe 5-bed | 3 bedroom Ski in Ski out in Whistler's
                 Creekside Village
               </h3>
 
@@ -568,7 +568,7 @@ export default function BlogPost() {
                 organizing bespoke experiences such as guided wildlife tours,
                 in-home cooking classes, private chefs, daily cleaning, airport
                 transportation, private wine tastings, oyster shucking, heli
-                experiences, etc... Whether you&apos;re seeking a
+                experiences, etc... Whether you're seeking a
                 family-friendly escape, a romantic retreat, or a group
                 adventure, these top Whistler luxury rental homes promise to
                 deliver an unparalleled vacation experience that will leave you
@@ -577,7 +577,7 @@ export default function BlogPost() {
 
               <div className="bg-gray-100 p-8 rounded-xl my-12">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                  Ready to Experience Whistler&apos;s Luxury?
+                  Ready to Experience Whistler's Luxury?
                 </h2>
                 <p className="mb-6">
                   For more home options on luxury properties, pricing, &

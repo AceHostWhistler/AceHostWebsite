@@ -146,7 +146,7 @@ const FAQPage = () => {
                 </h1>
                 <p className="text-xl text-gray-600">
                   Everything you need to know about the product and billing.
-                  Can&apos;t find the answer you&apos;re looking for? Please
+                  Can't find the answer you're looking for? Please
                   chat to our team.
                 </p>
               </div>
@@ -164,7 +164,7 @@ const FAQPage = () => {
                   Experience the ultimate in luxury living with a Whistler BC
                   rental. Our exclusive selection of high-end properties offer
                   the perfect combination of comfort and convenience. From ski
-                  in ski out luxury rentals to nice condos, you&apos;ll find the
+                  in ski out luxury rentals to nice condos, you'll find the
                   perfect accommodation for your next getaway. Enjoy
                   breathtaking mountain views, world-class amenities, and easy
                   access to all the best activities and attractions in the area.

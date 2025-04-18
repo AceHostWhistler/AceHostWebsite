@@ -20,7 +20,7 @@ export default function BlogPost() {
     },
     {
       title:
-        "Luxury Whistler Vacation Redefined: How AceHost Whistler Caters to the 1% in Canada&apos;s Ultimate Playground",
+        "Luxury Whistler Vacation Redefined: How AceHost Whistler Caters to the 1% in Canada's Ultimate Playground",
       slug: "luxury-whistler-vacation-redefined-how-acehost-whistler-caters-to-the-1-in-canadas-ultimate-playground",
       category: "VIP Concierge | Luxury Vacation",
     },
@@ -96,7 +96,7 @@ export default function BlogPost() {
 
               <p>
                 Embark on a Heli-Day Trip with a Private Chef Lunch, where
-                you&apos;ll soar above breathtaking mountain ranges to a nearby
+                you'll soar above breathtaking mountain ranges to a nearby
                 glacier. Indulge in a catered meal and sip champagne around
                 ice-sculpted tables, served by a dedicated server catering to
                 your every need. This tour epitomizes luxury, offering a truly
@@ -143,7 +143,7 @@ export default function BlogPost() {
               </p>
 
               <p>
-                Whistler&apos;s nightclubs offer an extensive bottle service
+                Whistler's nightclubs offer an extensive bottle service
                 menu. With an array of top-shelf spirits, champagne, and custom
                 mixers, these establishments cater to their high-end clientele.
                 Expert mixologists are at your service, ready to craft your
@@ -151,8 +151,8 @@ export default function BlogPost() {
               </p>
 
               <p>
-                Whistler&apos;s nightclubs take celebrations to the next level
-                during holidays and events. Whether it&apos;s New Year&apos;s
+                Whistler's nightclubs take celebrations to the next level
+                during holidays and events. Whether it's New Year's
                 Eve or Halloween, the village comes alive with unmatched
                 festivity. Expect themed decorations, captivating light shows,
                 and live acts, creating a unique and lively party atmosphere.
@@ -181,7 +181,7 @@ export default function BlogPost() {
               <p>
                 Whistler is well known for its high-end/fine dining food scene.
                 One of the standout options to indulge in when it comes to
-                Whistler&apos;s culinary scene is the seafood towers. The towers
+                Whistler's culinary scene is the seafood towers. The towers
                 showcase an array of fresh, and high-quality seafood.
               </p>
 
@@ -198,7 +198,7 @@ export default function BlogPost() {
               </p>
 
               <p>
-                Wild Blue Restaurant + Bar. Wildblue&apos;s seafood tower
+                Wild Blue Restaurant + Bar. Wildblue's seafood tower
                 typically consists of a selection of oysters, prawns, mussels,
                 crab legs, and lobster, all beautifully displayed and served
                 with an assortment of dipping sauces and condiments.
@@ -265,7 +265,7 @@ export default function BlogPost() {
               </div>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
-                Bearfoot Bistro&apos;s Vodka Ice Room & Champagne Sabring
+                Bearfoot Bistro's Vodka Ice Room & Champagne Sabring
               </h2>
 
               <p>
@@ -394,7 +394,7 @@ export default function BlogPost() {
               </h2>
 
               <p>
-                Christines, Whistler&apos;s premier mountain-top fine dining
+                Christines, Whistler's premier mountain-top fine dining
                 restaurant is the perfect spot to indulge in an exquisite
                 culinary experience, surrounded by breathtaking panoramic views.
                 The menu showcases classic dishes crafted with only the finest,
@@ -437,17 +437,17 @@ export default function BlogPost() {
               </div>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
-                Luxury Airbnb&apos;s/Vacation Property Rentals
+                Luxury Airbnb's/Vacation Property Rentals
               </h2>
 
               <p>
                 Whistler, Canada is also a known destination for its
                 large-exclusive modern vacation homes. Whistler has some of the
                 most expensive properties to rent in Canada and has gained
-                recognition as the country&apos;s best vacation spot. These
+                recognition as the country's best vacation spot. These
                 homes exude grandeur and elegance, with unique architecture and
                 impeccable attention to detail. The amenities within these
-                chalets are outstanding, offering steam showers, chef&apos;s
+                chalets are outstanding, offering steam showers, chef's
                 kitchens, infrared saunas, and jacuzzis with sweeping mountain
                 views.
               </p>
@@ -456,7 +456,7 @@ export default function BlogPost() {
                 Whistler offers breathtaking views/surroundings and a world of
                 adventure, making it perfect for both a relaxing getaway and an
                 action-packed ski vacation. Book a stay in one of
-                Whistler&apos;s extravagant chalets in one of the most beautiful
+                Whistler's extravagant chalets in one of the most beautiful
                 destinations in the world.
               </p>
 

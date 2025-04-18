@@ -402,7 +402,7 @@ const LeChamoisApartment = () => {
                     <li>Free parking on premises</li>
                     <li>Shared outdoor pool – available all year, open specific hours, heated, lap pool open from 9:00 a.m. to 10:00 p.m.</li>
                     <li>Shared hot tub – available all year</li>
-                    <li>Elevator The home or building has an elevator that&apos;s at least 132 centimetres deep and a doorway that&apos;s at least 81 centimetres wide.</li>
+                    <li>Elevator The home or building has an elevator that's at least 132 centimetres deep and a doorway that's at least 81 centimetres wide.</li>
                     <li>Shared gym in building</li>
                     <li>Paid street parking off premises</li>
                     <li>Paid parking garage on premises – 1 space</li>
@@ -412,7 +412,7 @@ const LeChamoisApartment = () => {
 
                   <h3 className="font-medium text-xl">Services</h3>
                   <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                    <li>Luggage drop-off allowed For guests&apos; convenience when they have early arrival or late departure</li>
+                    <li>Luggage drop-off allowed For guests' convenience when they have early arrival or late departure</li>
                     <li>Long-term stays allowed</li>
                     <li>Allow stay for 28 days or more</li>
                     <li>Self check-in Keypad Check yourself into the home with a door code</li>

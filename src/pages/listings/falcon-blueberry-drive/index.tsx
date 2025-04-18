@@ -168,13 +168,13 @@ const FalconBlueberryDrive = () => {
                 </div>
                 <p className="text-gray-800">
                   As you enter through the unique West Coast native hand-carved
-                  front door, you&apos;ll be greeted by a heated slate entrance.
+                  front door, you'll be greeted by a heated slate entrance.
                   This remarkable property boasts 7 spacious bedrooms, providing
                   ample space and comfort for your stay, with 9 stylish beds and
                   3.5 well-appointed bathrooms. Find comfort and warmth by the
                   crackling wood-burning natural fireplace in the spacious
                   living room, creating an inviting and welcoming ambiance for
-                  relaxing after a day of enjoying Whistler&apos;s outdoors.
+                  relaxing after a day of enjoying Whistler's outdoors.
                   Savour the outdoors with a generous and inviting outdoor
                   dining space with a spacious deck, a dining table, and a
                   barbecue. There is plenty of space in the driveway to fit 4-5
@@ -291,8 +291,8 @@ const FalconBlueberryDrive = () => {
               <p className="text-gray-800 max-w-4xl">
                 The best part of this chalet is the location! A scenic 25-minute
                 stroll around the Whistler Golf course brings you straight into
-                Whistler Village. Alternatively, it&apos;s a 3-4 minute drive to
-                the village, or hop on the local bus a stone&apos;s throw away
+                Whistler Village. Alternatively, it's a 3-4 minute drive to
+                the village, or hop on the local bus a stone's throw away
                 from the front door, running every 10-15 minutes. The drive to
                 the village is just 3 minutes away. This is the ideal home for
                 your holiday!

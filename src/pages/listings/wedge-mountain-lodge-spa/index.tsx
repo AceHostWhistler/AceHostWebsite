@@ -15,9 +15,20 @@ const WedgeMountainLodgeSpa = () => {
   );
   const videoRef = useRef<HTMLVideoElement>(null);
 
+  // Helper function to encode image URLs
+  const encodeImageUrl = (url: string) => {
+    // Split the URL by directory separators
+    const parts = url.split('/');
+    // Encode only the filename (last part)
+    const filename = parts.pop();
+    const encodedFilename = encodeURIComponent(filename || '');
+    // Join back together
+    return [...parts, encodedFilename].join('/');
+  };
+
   const photos = [
-    "/photos/properties/Wedge Mountain Lodge Spa/Wedge Mountain Lodge & Spa _ Aerial 2.jpg",
-    "/photos/properties/Wedge Mountain Lodge Spa/Wedge Mountain Lodge & Spa _ Great Room 1.jpg",
+    "/photos/properties/Wedge Mountain Lodge Spa/Wedge Mountain Lodge & Spa - Exterior 1.jpg",
+    "/photos/properties/Wedge Mountain Lodge Spa/Wedge Mountain Lodge & Spa - Exterior 2.jpg",
     "/photos/properties/Wedge Mountain Lodge Spa/Wedge Mountain Lodge & Spa _ Great Room 2.jpg",
     "/photos/properties/Wedge Mountain Lodge Spa/Wedge Mountain Lodge & Spa _ Great Room 3.jpg",
     "/photos/properties/Wedge Mountain Lodge Spa/Wedge Mountain Lodge & Spa _ Great Room 4.jpg",
@@ -188,7 +199,7 @@ const WedgeMountainLodgeSpa = () => {
                   onClick={() => handlePhotoClick(index)}
                 >
                   <Image
-                    src={photo}
+                    src={encodeImageUrl(photo)}
                     alt={`Wedge Mountain Lodge & Spa ${index + 1}`}
                     fill
                     sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
@@ -225,7 +236,7 @@ const WedgeMountainLodgeSpa = () => {
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                 <div className="relative aspect-[4/3] mb-2">
                   <Image
-                    src={photos[3]}
+                    src={encodeImageUrl(photos[3])}
                     alt={`Wedge Mountain Lodge & Spa Great Room 2`}
                     fill
                     className="object-cover"
@@ -277,7 +288,7 @@ const WedgeMountainLodgeSpa = () => {
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
                 <div className="relative aspect-[4/3] mb-2">
                   <Image
-                    src={photos[32]}
+                    src={encodeImageUrl(photos[32])}
                     alt="Wedge Mountain Lodge & Spa Spa Area"
                     fill
                     className="object-cover"
@@ -358,7 +369,7 @@ const WedgeMountainLodgeSpa = () => {
                 Wedge Mountain Lodge & Spa is nestled in a beautiful location in
                 Whistler, providing privacy and stunning views. The property
                 offers a serene setting while still being accessible to
-                Whistler&apos;s amenities and attractions.
+                Whistler's amenities and attractions.
               </p>
             </div>
           </div>
@@ -366,89 +377,65 @@ const WedgeMountainLodgeSpa = () => {
 
         {/* Photo Gallery Modal */}
         {showAllPhotos && (
-          <div className="fixed inset-0 z-50 bg-black overflow-y-auto">
-            <div className="sticky top-0 z-10 bg-black p-4 flex justify-between items-center">
-              <h2 className="text-lg sm:text-xl text-white font-medium">
-                Wedge Mountain Lodge & Spa - All Photos
-              </h2>
+          <div className="fixed inset-0 bg-white z-50 overflow-y-auto">
+            <div className="sticky top-0 z-10 bg-white p-4 border-b flex justify-between items-center">
+              <h2 className="text-2xl font-bold">All Photos</h2>
               <button
                 onClick={closeAllPhotos}
-                className="text-white hover:text-gray-300 bg-gray-900 px-4 py-2 rounded-full"
+                className="p-2 rounded-full hover:bg-gray-100"
               >
-                Close
+                <X size={24} />
               </button>
             </div>
-
-            <div className="max-w-7xl mx-auto py-6 px-4">
-              <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {photos.map((photo, index) => (
-                  <div key={index} className="mb-6">
-                    <div
-                      className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer"
-                      onClick={() => handlePhotoClick(index)}
-                    >
-                      <Image
-                        src={photo}
-                        alt={`Wedge Mountain Lodge & Spa ${index + 1}`}
-                        fill
-                        sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw"
-                        className="object-cover hover:scale-105 transition-transform duration-300"
-                        priority={index < 6}
-                        loading={index < 6 ? "eager" : "lazy"}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+              {photos.map((photo, index) => (
+                <div
+                  key={index}
+                  className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
+                  onClick={() => handlePhotoClick(index)}
+                >
+                  <Image
+                    src={encodeImageUrl(photo)}
+                    alt={`Wedge Mountain Lodge & Spa ${index + 1}`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         )}
 
         {/* Full-screen Photo View */}
         {selectedPhotoIndex !== null && (
-          <div className="fixed inset-0 z-[60] bg-black flex items-center justify-center">
-            <div className="absolute top-4 right-4 flex space-x-4">
-              <button
-                onClick={closeFullScreenPhoto}
-                className="text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors"
-              >
-                <X className="h-6 w-6" />
-              </button>
-            </div>
-
+          <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center">
             <button
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors"
+              onClick={closeFullScreenPhoto}
+              className="absolute top-4 right-4 text-white p-2 rounded-full bg-black/50 hover:bg-black/70"
+            >
+              <X size={24} />
+            </button>
+            <button
               onClick={() => navigatePhoto("prev")}
+              className="absolute left-4 text-white p-4 rounded-full bg-black/30 hover:bg-black/50"
             >
-              &larr;
+              &lt;
             </button>
-
-            <div className="relative w-full h-full max-w-6xl max-h-[80vh] mx-auto px-4">
-              <div className="relative w-full h-full">
-                <Image
-                  src={photos[selectedPhotoIndex]}
-                  alt={`Wedge Mountain Lodge & Spa full view ${
-                    selectedPhotoIndex + 1
-                  }`}
-                  fill
-                  priority
-                  className="object-contain"
-                  sizes="100vw"
-                />
-              </div>
-            </div>
-
             <button
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors"
               onClick={() => navigatePhoto("next")}
+              className="absolute right-4 text-white p-4 rounded-full bg-black/30 hover:bg-black/50"
             >
-              &rarr;
+              &gt;
             </button>
-
-            <div className="absolute bottom-4 left-0 right-0 text-center">
-              <p className="text-white text-sm">
-                {selectedPhotoIndex + 1} / {photos.length}
-              </p>
+            <div className="relative w-full h-full max-w-7xl max-h-[90vh] flex items-center justify-center p-4">
+              <Image
+                src={encodeImageUrl(photos[selectedPhotoIndex])}
+                alt={`Wedge Mountain Lodge & Spa ${selectedPhotoIndex + 1}`}
+                fill
+                sizes="90vw"
+                className="object-contain"
+              />
             </div>
           </div>
         )}

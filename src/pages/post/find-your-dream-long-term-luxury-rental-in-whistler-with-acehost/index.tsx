@@ -86,10 +86,10 @@ const LongTermRentals = () => {
                 luxury, comfort, and convenience? Look no further than AceHost,
                 where we offer a wide selection of luxury chalets and homes
                 available for 6-month rentals, 12-month rentals, and year-long
-                stays. Whether you&apos;re after a ski-in/ski-out chalet for the
+                stays. Whether you're after a ski-in/ski-out chalet for the
                 winter or a modern family retreat, our properties provide the
                 perfect setting for your extended Whistler experience. We also
-                offer pet-friendly options, so you don&apos;t have to leave any
+                offer pet-friendly options, so you don't have to leave any
                 family members behind!
               </p>
             </div>
@@ -121,10 +121,10 @@ const LongTermRentals = () => {
                 </p>
 
                 <p className="text-xl text-gray-700 mb-12 leading-relaxed">
-                  Whether you&apos;re after a ski-in/ski-out chalet for the
+                  Whether you're after a ski-in/ski-out chalet for the
                   winter or a modern family retreat, our properties provide the
                   perfect setting for your extended Whistler experience. We also
-                  offer pet-friendly options, so you don&apos;t have to leave
+                  offer pet-friendly options, so you don't have to leave
                   any family members behind!
                 </p>
               </div>
@@ -208,7 +208,7 @@ const LongTermRentals = () => {
 
                 <p className="mb-6">
                   This property is conveniently located just a short drive from
-                  Creekside Village and Whistler Mountain&apos;s world-renowned
+                  Creekside Village and Whistler Mountain's world-renowned
                   slopes, making it ideal for both winter and summer stays.
                 </p>
 
@@ -264,7 +264,7 @@ const LongTermRentals = () => {
 
                 <p className="mb-6">
                   Snowpine Retreat is a stunning, spacious 5-bedroom home in
-                  Whistler&apos;s White Gold neighborhood, perfect for families
+                  Whistler's White Gold neighborhood, perfect for families
                   or groups looking for a luxurious long-term rental. This
                   beautifully designed property blends modern alpine charm with
                   comfort and sophistication. The home features an open-concept
@@ -275,10 +275,10 @@ const LongTermRentals = () => {
                 <p className="mb-6">
                   The fully equipped gourmet kitchen is perfect for
                   entertaining, and the outdoor hot tub provides a serene place
-                  to unwind after a day on the slopes. The home&apos;s layout is
+                  to unwind after a day on the slopes. The home's layout is
                   ideal for larger groups, offering plenty of space and privacy
                   for all guests, while its proximity to Whistler Village
-                  ensures you&apos;re never far from the action.
+                  ensures you're never far from the action.
                 </p>
 
                 <h3 className="text-xl font-semibold mb-4">Key Features:</h3>
@@ -292,10 +292,10 @@ const LongTermRentals = () => {
                 </ul>
 
                 <p className="mb-6">
-                  Whether you&apos;re looking for a winter rental in Whistler or
+                  Whether you're looking for a winter rental in Whistler or
                   an extended summer stay, Snowpine Retreat offers the perfect
                   balance of luxury and convenience, all while being nestled in
-                  one of Whistler&apos;s most desirable neighborhoods.
+                  one of Whistler's most desirable neighborhoods.
                 </p>
 
                 <Link
@@ -345,7 +345,7 @@ const LongTermRentals = () => {
                 activities and lifestyle benefits. Winter rentals provide easy
                 access to world-class skiing and snowboarding, while summer
                 rentals offer hiking, mountain biking, and golf opportunities.
-                Consider which season(s) you&apos;ll be staying in Whistler and
+                Consider which season(s) you'll be staying in Whistler and
                 choose a property that maximizes your enjoyment of those
                 activities.
               </p>
@@ -387,7 +387,7 @@ const LongTermRentals = () => {
                 <p className="text-lg text-center mb-8">
                   AceHost specializes in luxury long-term rentals in Whistler.
                   Our team is ready to help you find the perfect property for
-                  your extended stay, whether it&apos;s for a season or a full
+                  your extended stay, whether it's for a season or a full
                   year.
                 </p>
                 <div className="flex justify-center">

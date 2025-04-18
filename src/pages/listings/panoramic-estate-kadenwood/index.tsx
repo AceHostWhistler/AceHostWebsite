@@ -276,10 +276,10 @@ const PanoramicEstate = () => {
                 </div>
                 <p className="text-gray-800 mb-6">
                   Panoramic Estate is located in the prestigious Kadenwood
-                  neighborhood, Whistler&apos;s premier ski-in/ski-out
+                  neighborhood, Whistler's premier ski-in/ski-out
                   community. This exclusive enclave offers privacy and
                   tranquility while providing convenient access to
-                  Whistler&apos;s world-class amenities.
+                  Whistler's world-class amenities.
                 </p>
                 <p className="text-gray-800 mb-6">
                   This architectural masterpiece provides the perfect blend of
@@ -293,7 +293,7 @@ const PanoramicEstate = () => {
                   Modern amenities including a built-in sound system, multiple
                   fireplaces, a state-of-the-art kitchen, and entertainment
                   facilities ensure your stay is both comfortable and memorable,
-                  whether you&apos;re visiting for a family reunion, corporate
+                  whether you're visiting for a family reunion, corporate
                   retreat, or a luxury ski vacation.
                 </p>
               </div>
@@ -426,10 +426,10 @@ const PanoramicEstate = () => {
               </div>
               <p className="text-gray-800 max-w-4xl mb-6">
                 Kadenwood is considered the most exclusive area to rent or own
-                in all of Whistler. You&apos;ll have access to Kadenwood&apos;s
+                in all of Whistler. You'll have access to Kadenwood's
                 private gondola, providing quick and convenient access to
                 Creekside Village and the Creekside Gondola, connecting you to
-                Whistler&apos;s extensive ski terrain.
+                Whistler's extensive ski terrain.
               </p>
               <p className="text-gray-800 max-w-4xl mb-6">
                 There are less than 20 homes on the rental market in this

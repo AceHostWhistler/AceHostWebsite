@@ -185,7 +185,7 @@ const TheNest = () => {
           <div className="max-w-6xl mx-auto px-4" id="details">
             <p className="text-gray-800 mb-16 max-w-4xl">
               Welcome to The Nest, this newly renovated 5-bedroom home is
-              located right next to the ski hill. It&apos;s only a short walk to
+              located right next to the ski hill. It's only a short walk to
               the mountain, and you can ski back to your front door. This rare
               find is situated in the prestigious and quiet neighborhood of
               Nordic. Experience majestic mountain views and a gorgeous sunset,
@@ -331,8 +331,8 @@ const TheNest = () => {
               <p className="text-gray-800 max-w-4xl mb-6">
                 Prime ski-in/ski-out location in the prestigious and quiet
                 Nordic neighborhood, providing easy access to the mountain and
-                stunning views. Ride the local bus if you don&apos;t want to use
-                your car. For Whistler Village it&apos;s an 8-minute walk to the
+                stunning views. Ride the local bus if you don't want to use
+                your car. For Whistler Village it's an 8-minute walk to the
                 Eva Lake Road bus stop, catch the 20, 21, or 25 and the journey
                 is only 7 minutes. For Creekside Village walk 9 minutes to
                 Highlands bus stop and catch the 20 and 21 buses. The buses come
@@ -340,14 +340,14 @@ const TheNest = () => {
               </p>
               <p className="text-gray-800 max-w-4xl">
                 The best part of this chalet is the location! Nordic is a real
-                gem. It&apos;s just a short distance from both Creekside and
+                gem. It's just a short distance from both Creekside and
                 Whistler Village! Enjoy just a 7 minute stroll to access the
                 Dave Murray Ski trail and ski out to the Creekside Gondola and
                 village. The house is just a 3-minute drive to Creekside Village
                 or a 17 minutes walk. Easy access to the lakes in the Summer.
                 Stroll into Creekside and enjoy delicious coffee and pastries at
                 Bred Bakery and Rock-It Coffee co, the creekside market for
-                groceries, BC liquor stores, and Dusty&apos;s for Après. Great
+                groceries, BC liquor stores, and Dusty's for Après. Great
                 restaurants Rim Rock, Red door, Creekbread and Nita Lake lodge
                 located in Creekside. This is the ideal home for your holiday!
               </p>

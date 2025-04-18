@@ -77,7 +77,7 @@ const WhistlerSnowReport = () => {
                 Winter is here, and Whistler is off to an incredible start for
                 the 2024/25 ski season! The snow report is nothing short of
                 extraordinary, with record-breaking early-season snowfall
-                blanketing the slopes. Thanks to La Niña&apos;s frosty embrace,
+                blanketing the slopes. Thanks to La Niña's frosty embrace,
                 Whistler leads all Vail ski resorts across North America in
                 snowfall this year, promising an unforgettable ski experience.
               </p>
@@ -108,11 +108,11 @@ const WhistlerSnowReport = () => {
                 forecast, the resort is boasting some of the best conditions in
                 recent memory. This season is shaping up to be one for the
                 books, with pristine powder runs, wide-open groomers, and a snow
-                base that&apos;s steadily climbing.
+                base that's steadily climbing.
               </p>
 
               <p>
-                Here are the highlights from Whistler&apos;s latest snow report
+                Here are the highlights from Whistler's latest snow report
                 (Live: November 24th, 2024):
               </p>
               <ul>
@@ -146,12 +146,12 @@ const WhistlerSnowReport = () => {
                 As predicted, La Niña has arrived in full force, bringing colder
                 temperatures and heavy snowfall to Whistler. This weather
                 phenomenon, which is expected to stick around through the 2025
-                season, is a skier&apos;s dream. The snow forecast looks
+                season, is a skier's dream. The snow forecast looks
                 promising, with Whistler poised for a very white Christmas and a
                 powder-filled holiday season.
               </p>
               <p>
-                La Niña&apos;s impact ensures that Whistler remains a top
+                La Niña's impact ensures that Whistler remains a top
                 destination for snow enthusiasts. With its consistent snowfalls
                 and unrivaled mountain terrain, this winter season is perfect
                 for skiers and snowboarders of all skill levels.
@@ -174,7 +174,7 @@ const WhistlerSnowReport = () => {
                   year, making it one of the snowiest resorts in North America.
                 </li>
                 <li>
-                  <strong>Whistler&apos;s Snowiest Month:</strong> Historically,
+                  <strong>Whistler's Snowiest Month:</strong> Historically,
                   January and February are the snowiest months, meaning the best
                   is yet to come!
                 </li>
@@ -196,7 +196,7 @@ const WhistlerSnowReport = () => {
 
               <h2>A Very Snowy Holiday Season</h2>
               <p>
-                The snow forecast for Christmas and New Year&apos;s is nothing
+                The snow forecast for Christmas and New Year's is nothing
                 short of magical. Visitors can expect snow-covered trees,
                 picture-perfect slopes, and idyllic village scenes. Whistler
                 Blackcomb is preparing for an influx of holiday travelers eager
@@ -221,7 +221,7 @@ const WhistlerSnowReport = () => {
               <p>
                 Looking to make the most of this incredible ski season? AceHost
                 Whistler offers over 50 luxury properties perfect for your
-                winter escape. Whether you&apos;re planning a ski vacation with
+                winter escape. Whether you're planning a ski vacation with
                 friends or a cozy family retreat, our curated collection of
                 homes provides everything you need for a memorable stay.
               </p>
@@ -232,7 +232,7 @@ const WhistlerSnowReport = () => {
                 and let us help you plan the ultimate snow-filled getaway.
               </p>
               <p>
-                Don&apos;t miss your chance to experience Whistler&apos;s record
+                Don't miss your chance to experience Whistler's record
                 snowfall this season—book your stay with AceHost Whistler and
                 start creating memories in the mountains!
               </p>
@@ -241,7 +241,7 @@ const WhistlerSnowReport = () => {
             {/* Call to Action */}
             <div className="my-16 p-8 bg-gray-50 rounded-xl">
               <h3 className="text-2xl font-bold mb-4">
-                Ready to Experience Whistler&apos;s Epic Snow?
+                Ready to Experience Whistler's Epic Snow?
               </h3>
               <p className="text-gray-700 mb-6">
                 Book your luxury accommodation with AceHost Whistler and make

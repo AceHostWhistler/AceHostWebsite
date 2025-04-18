@@ -155,7 +155,7 @@ const ConciergeService = () => {
                       include VIP Concierge Services for your stay. Our
                       Concierge team designs an all-in-one personalized holiday
                       experience to ensure that every aspect of your vacation is
-                      taken care of. We don&apos;t just book your trip and send
+                      taken care of. We don't just book your trip and send
                       an itinerary - we go above and beyond to ensure your group
                       gets the best tables, service, and time slots. From
                       arrival to departure, we are at your service to plan and
@@ -311,7 +311,7 @@ const ConciergeService = () => {
                 Mountain Activities
               </h2>
               <p className="text-lg text-gray-600 mb-8 max-w-3xl">
-                Experience the best of Whistler&apos;s mountain adventures with
+                Experience the best of Whistler's mountain adventures with
                 our curated selection of premium activities, all bookable
                 through our concierge service.
               </p>
@@ -445,7 +445,7 @@ const ConciergeService = () => {
                       </h3>
                       <p className="text-gray-600 mb-4 card-description">
                         Enjoy the convenience of ski/snowboard rentals and
-                        fittings with Black Tie&apos;s award-winning delivery
+                        fittings with Black Tie's award-winning delivery
                         service. AceHost arranges Black Tie rentals to come
                         directly to your home between 7:30am-10pm with a
                         selection boots, skis, snowboards, and poles. Black Tie
@@ -477,7 +477,7 @@ const ConciergeService = () => {
                         Heli Glacier Meal
                       </h3>
                       <p className="text-gray-600 mb-4 card-description">
-                        The Heli Glacier Meal is one of AceHost&apos;s most
+                        The Heli Glacier Meal is one of AceHost's most
                         highly rated experiences. Enjoy a private chef prepared
                         meal while taking in the stunning views of the local
                         mountain ranges from a glacier. Our chefs and servers
@@ -541,10 +541,10 @@ const ConciergeService = () => {
                       </h3>
                       <p className="text-gray-600 mb-4 card-description">
                         Visiting Whistler Village? Stop by Spicy Sports
-                        Whistler&apos;s locations for ski & snowboard rentals in
+                        Whistler's locations for ski & snowboard rentals in
                         the winter and mountain bike rentals in the summer. With
                         a location in both the main and upper village, Spicy
-                        Sports&apos; expertise and professional staff will make
+                        Sports' expertise and professional staff will make
                         sure your experience on the mountain is comfortable and
                         safe.
                       </p>
@@ -577,7 +577,7 @@ const ConciergeService = () => {
                         mountain range. Soaring over ancient glacier formations,
                         guests can experience a guide-led tour inside ice
                         tunnels and remote ice caves. Elevate your tour
-                        experience by adding Bearfoot Bistro&apos;s charcuterie
+                        experience by adding Bearfoot Bistro's charcuterie
                         and dessert platters. Contact us for ice cave adventure
                         tour quote.
                       </p>
@@ -635,7 +635,7 @@ const ConciergeService = () => {
                         Zipline Tours
                       </h3>
                       <p className="text-gray-600 mb-4 card-description">
-                        Experience a bird&apos;s-eye view of Whistler Mountain
+                        Experience a bird's-eye view of Whistler Mountain
                         when you book a zip-line tour through AceHost. The
                         panoramic views of Whistler can be seen from treetop
                         suspension bridges and sky high viewing platforms. Enjoy
@@ -743,7 +743,7 @@ const ConciergeService = () => {
                         chef service through AceHost. Our partner chefs will
                         prepare a custom menu to curate a dining experience that
                         suits your preferences and dietary needs. Let us suggest
-                        a menu theme or simply let us know what you&apos;re
+                        a menu theme or simply let us know what you're
                         craving - our chefs will make it happen!
                       </p>
                     </div>
@@ -773,7 +773,7 @@ const ConciergeService = () => {
                         Enjoy the luxury of having a private bartender create
                         custom cocktails for your special celebrations. Book a
                         mixologist who specializes in crafting unique drinks
-                        suited to your preferences. Whether you&apos;re hosting
+                        suited to your preferences. Whether you're hosting
                         a family dinner, a cocktail reception, or anything in
                         between, our skilled bartenders add a touch of
                         sophistication to any gathering.
@@ -862,14 +862,14 @@ const ConciergeService = () => {
                         VIP Restaurant Reservations
                       </h3>
                       <p className="text-gray-600 mb-4 card-description">
-                        Are you looking to dine at Whistler&apos;s most coveted
+                        Are you looking to dine at Whistler's most coveted
                         restaurants? AceHost has established relationships with
                         many of the most exclusive restaurants in the area. We
                         can help you secure reservations at sought-after
                         establishments that might otherwise be fully booked. If
-                        you have a clear list of restaurants you&apos;d like to
+                        you have a clear list of restaurants you'd like to
                         visit during your stay, simply send us the list and
-                        we&apos;ll do our best to secure your reservations.
+                        we'll do our best to secure your reservations.
                       </p>
                     </div>
                   </div>
@@ -896,7 +896,7 @@ const ConciergeService = () => {
                       </h3>
                       <p className="text-gray-600 mb-4 card-description">
                         Elevate your private dinner experience with
-                        AceHost&apos;s TableScaping services. Our dedicated team
+                        AceHost's TableScaping services. Our dedicated team
                         can design and set up a beautiful tablescape for special
                         occasions. From elegant place settings to floral
                         arrangements, our table decorations add a touch of
@@ -929,7 +929,7 @@ const ConciergeService = () => {
                       </h3>
                       <p className="text-gray-600 mb-4 card-description">
                         AceHost offers pre-arrival grocery shopping services.
-                        Simply provide us with your grocery list, and we&apos;ll
+                        Simply provide us with your grocery list, and we'll
                         ensure that your kitchen is fully stocked upon your
                         arrival. From fresh produce to your favorite snacks and
                         beverages, we take care of the shopping so you can focus
@@ -938,7 +938,7 @@ const ConciergeService = () => {
                     </div>
                   </div>
 
-                  {/* Omakasi & Chef&apos;s Table Experience */}
+                  {/* Omakasi & Chef's Table Experience */}
                   <div
                     className="min-w-[calc(33.333%-16px)] w-1/3 bg-white rounded-lg overflow-hidden flex-shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 carousel-card"
                     style={{ scrollSnapAlign: "start" }}
@@ -956,13 +956,13 @@ const ConciergeService = () => {
                         <span className="service-icon">
                           <GiCookingPot className="text-lg" />
                         </span>
-                        Omakasi & Chef&apos;s Table Experience
+                        Omakasi & Chef's Table Experience
                       </h3>
                       <p className="text-gray-600 mb-4 card-description">
                         Book through AceHost to arrange a custom meal service
-                        that features a chef&apos;s selected set of dishes. This
+                        that features a chef's selected set of dishes. This
                         is the ultimate way to elevate your dining experience.
-                        Our chef&apos;s table experience offers a multi-course
+                        Our chef's table experience offers a multi-course
                         meal tailored to your preferences, with each dish
                         presented and explained by the chef.
                       </p>
@@ -993,7 +993,7 @@ const ConciergeService = () => {
                         Enhance your dining experience with a personalized wine
                         pairing service. Our sommeliers can recommend the
                         perfect wines to complement your meals, whether
-                        you&apos;re dining in or enjoying a meal prepared by our
+                        you're dining in or enjoying a meal prepared by our
                         private chef. This service can also include wine
                         tastings and educational sessions for those interested
                         in learning more about fine wines.
@@ -1616,7 +1616,7 @@ const ConciergeService = () => {
                         at night. They manage fireplaces, house cleanliness, and
                         setup of lighting, temperature, and music to your
                         preferences. When paired with our private chef service,
-                        they&apos;ll also set, serve, and clean meals, creating
+                        they'll also set, serve, and clean meals, creating
                         a complete 5-star dining experience.
                       </p>
                     </div>

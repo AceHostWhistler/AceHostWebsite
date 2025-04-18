@@ -112,7 +112,7 @@ export default function BlogPost() {
                 to snowmobiling to to a secluded hut in the mountains where a
                 delectable dining experience awaits. Summer visitors can enjoy
                 stunning golf courses, hiking trails, mountain biking, fishing,
-                and exhilarating zip-lining. The versatility of Whistler&apos;s
+                and exhilarating zip-lining. The versatility of Whistler's
                 recreational options makes it an ideal destination year-round.
               </p>
 
@@ -130,7 +130,7 @@ export default function BlogPost() {
               </h2>
 
               <p>
-                Whistler&apos;s pedestrian-only village is renowned for its
+                Whistler's pedestrian-only village is renowned for its
                 lively atmosphere and multicultural charm. The village has ample
                 retail shops, restaurants & bars, 5-star spas, art galleries,
                 and museums, ensuring that visitors have plenty of options for
@@ -229,14 +229,14 @@ export default function BlogPost() {
                 Whistler has a rich cultural arts scene. The community highly
                 values its cultural roots, with the influence of the indigenous
                 First Nations being felt throughout the region. The Squamish
-                Lil&apos;wat Cultural Centre is a must-visit destination that
+                Lil'wat Cultural Centre is a must-visit destination that
                 showcases this deep connection. It combines traditional
                 architecture and serves as a cultural hub for preserving and
                 promoting their traditions and heritage.
               </p>
 
               <p>
-                Beyond the cultural centre, Whistler&apos;s art scene is vibrant
+                Beyond the cultural centre, Whistler's art scene is vibrant
                 with galleries and studios showcasing local artists and unique
                 pieces only found in Whistler. Visitors can engage with the
                 local art scene by browsing galleries, attending festivals, or
@@ -346,7 +346,7 @@ export default function BlogPost() {
                 Known for its exceptional cuisine and impeccable service. The
                 restaurant is committed to using locally sourced and sustainable
                 ingredients, showcasing the freshest seasonal produce from
-                surrounding farms. Araxi&apos;s menu features a fusion of global
+                surrounding farms. Araxi's menu features a fusion of global
                 flavors and innovative techniques, resulting in visually
                 stunning and delicious dishes. The restaurant has an elegant and
                 warm atmosphere, blending contemporary elements with rustic
@@ -360,15 +360,15 @@ export default function BlogPost() {
                 <br />
                 Wild Blue Restaurant + Bar in Whistler has gained recognition as
                 one of the best places to eat in the area. It has been ranked #4
-                in Canada&apos;s Best New Restaurants for 2023 by
-                &apos;Canada&apos;s 100 Best&apos; and has received praise from
+                in Canada's Best New Restaurants for 2023 by
+                'Canada's 100 Best' and has received praise from
                 Vancouver Magazine and Condé Nast Traveler. The restaurant
                 focuses on elevated Pacific Northwest cuisine, sustainable
                 seafood, and local ingredients. With a team of experienced
                 individuals, including award-winning Chef Alex Chen and
                 Executive Chef Derek Bendig, Wild Blue offers a culinary
                 experience that is both delicious and visually appealing.
-                Whether you&apos;re looking for a fine-dining experience or a
+                Whether you're looking for a fine-dining experience or a
                 taste of the Pacific Northwest, Wild Blue is a must-visit spot
                 in Whistler.
               </p>
@@ -413,7 +413,7 @@ export default function BlogPost() {
                 Whistler Mountain and 3,414 acres on Blackcomb Mountain, there
                 are endless opportunities for exploration and excitement.
                 Whether you prefer powder-filled valleys or perfectly groomed
-                slopes, Whistler&apos;s diverse and expansive terrain guarantees
+                slopes, Whistler's diverse and expansive terrain guarantees
                 an extraordinary experience for skiers of all skill levels.
               </p>
 

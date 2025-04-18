@@ -56,7 +56,7 @@ export default function BlogPost() {
                 <p className="text-gray-700">
                   Our Concierge team designs an all-in-one personalized holiday
                   experience to ensure that every aspect of your vacation is
-                  taken care of. We don&apos;t just book your trip and send an
+                  taken care of. We don't just book your trip and send an
                   itinerary - we go above and beyond to ensure your group gets
                   the best tables, service, and time slots. From arrival to
                   departure, we are at your service to plan and execute your
@@ -73,7 +73,7 @@ export default function BlogPost() {
                 Winter in Whistler is a magical time. The picturesque
                 snow-covered landscape, thrilling outdoor activities, and a
                 vibrant atmosphere make it a sought-after destination for winter
-                enthusiasts from around the world. Whether you&apos;re planning
+                enthusiasts from around the world. Whether you're planning
                 a family vacation, a romantic getaway, or a group adventure,
                 Whistler has something to offer for everyone. To make your
                 winter retreat truly exceptional, consider booking your
@@ -102,14 +102,14 @@ export default function BlogPost() {
               <p>
                 At AceHost Whistler, we understand that planning a vacation can
                 be overwhelming, especially when you want everything to go
-                smoothly. That&apos;s why we offer a personalized and hands-on
+                smoothly. That's why we offer a personalized and hands-on
                 concierge service that takes care of every detail of your stay,
                 from the moment you arrive to the day you depart.
               </p>
 
               <p>
                 Our concierge team consists of Whistler locals who have an
-                insider&apos;s knowledge of the area and a network of
+                insider's knowledge of the area and a network of
                 connections throughout town. Whether you need last-minute
                 staffing, reservations at the finest restaurants in town, or
                 advice on finding the best skiing spots, we are here to help and
@@ -128,27 +128,27 @@ export default function BlogPost() {
 
               <p>
                 Finding the right luxury chalet for your stay in Whistler can be
-                a challenging feat especially if you&apos;ve never been to
+                a challenging feat especially if you've never been to
                 Whistler before. Our concierge team can find the right chalet
                 for your group, using your group preferences to create a
                 selection of homes to choose from. Whether you want spa
                 facilities, ski-in ski-out options, or a spacious chalet for a
-                large group, we&apos;ve got you covered. Reach out to our
+                large group, we've got you covered. Reach out to our
                 concierge team to find the right chalet for you.
               </p>
 
               <div className="bg-gray-100 p-8 rounded-xl my-12">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                  Unlock Whistler&apos;s Full Potential with Our VIP Concierge
+                  Unlock Whistler's Full Potential with Our VIP Concierge
                   Services
                 </h2>
                 <p className="mb-6">
-                  Whistler&apos;s winter wonderland is waiting for you, and
+                  Whistler's winter wonderland is waiting for you, and
                   AceHost is here to make your stay unforgettable. Contact us
                   today to book your luxury accommodations and unlock the full
                   potential of your Whistler vacation with our VIP Concierge
-                  Services. Whether you&apos;re seeking culinary delights,
-                  thrilling adventures, or ultimate relaxation, we&apos;ve got
+                  Services. Whether you're seeking culinary delights,
+                  thrilling adventures, or ultimate relaxation, we've got
                   you covered.
                 </p>
                 <Link
@@ -189,7 +189,7 @@ export default function BlogPost() {
 
               <p>
                 AceHost takes your in-home dining experience to the next level,
-                collaborating with Canada&apos;s finest chefs to create
+                collaborating with Canada's finest chefs to create
                 customized menus for breakfast, lunch, and dinner. Work with us
                 to create a personalized menu for you and your group, right from
                 the comfort of your home. In the mood for seafood? Our
@@ -201,15 +201,15 @@ export default function BlogPost() {
               </p>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
-                Restaurants and Fine-Dining | Explore Whistler&apos;s Culinary
+                Restaurants and Fine-Dining | Explore Whistler's Culinary
                 Scene
               </h2>
 
               <p>
-                For those looking to explore Whistler&apos;s dining scene beyond
+                For those looking to explore Whistler's dining scene beyond
                 their chalet, AceHost can assist with reservations at the
-                area&apos;s top restaurants, including Bearfoot Bistro, Wild
-                Blue, Rimrock Café, Il Caminetto, and Christine&apos;s, to name
+                area's top restaurants, including Bearfoot Bistro, Wild
+                Blue, Rimrock Café, Il Caminetto, and Christine's, to name
                 a few. With our expertise, we ensure that your evenings in
                 Whistler are as memorable as your days. Our VIP Concierge
                 Service extends to Aprés or nightlife plans, bottle service, and
@@ -266,7 +266,7 @@ export default function BlogPost() {
 
               <p>
                 High grade game & wild meats with fresh local seafood. Enjoy
-                Rimrock&apos;s wide selection of fine wine & cocktails in a cozy
+                Rimrock's wide selection of fine wine & cocktails in a cozy
                 atmosphere. Located in Creekside Village.
               </p>
 
@@ -283,7 +283,7 @@ export default function BlogPost() {
               </h2>
 
               <p>
-                Getting to and around Whistler is a breeze with AceHost&apos;s
+                Getting to and around Whistler is a breeze with AceHost's
                 transportation services.
               </p>
 
@@ -309,7 +309,7 @@ export default function BlogPost() {
                 car rental. Whether you want a large SUV or a Mercedes Sprinter,
                 we are happy to arrange a private driver with your ride. Our top
                 picks for luxury SUVs are the spacious 7 & 8 seater GMC Yukon or
-                Escalade – perfect vehicles for Whistler&apos;s mountainous
+                Escalade – perfect vehicles for Whistler's mountainous
                 terrain.
               </p>
 
@@ -338,7 +338,7 @@ export default function BlogPost() {
               </h2>
 
               <p>
-                Whistler isn&apos;t just about dining and relaxation—it&apos;s
+                Whistler isn't just about dining and relaxation—it's
                 also an adventure paradise. AceHost can arrange thrilling
                 experiences like heli-skiing and guided snowmobile tours through
                 the breathtaking landscapes of Whistler-Blackcomb. We even offer
@@ -402,11 +402,11 @@ export default function BlogPost() {
               </h3>
 
               <p>
-                If you&apos;re traveling with little ones, our Luxury Concierge
+                If you're traveling with little ones, our Luxury Concierge
                 team can also coordinate babysitting services with qualified
                 nannies, ensuring your peace of mind while you enjoy your time
-                in Whistler. With AceHost&apos;s dedication to VIP Concierge
-                Service, your family&apos;s safety and comfort are our top
+                in Whistler. With AceHost's dedication to VIP Concierge
+                Service, your family's safety and comfort are our top
                 priorities.
               </p>
 
@@ -425,16 +425,16 @@ export default function BlogPost() {
 
               <div className="bg-gray-100 p-8 rounded-xl my-12">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                  Unlock Whistler&apos;s Full Potential with Our VIP Concierge
+                  Unlock Whistler's Full Potential with Our VIP Concierge
                   Services
                 </h2>
                 <p className="mb-6">
-                  Whistler&apos;s winter wonderland is waiting for you, and
+                  Whistler's winter wonderland is waiting for you, and
                   AceHost is here to make your stay unforgettable. Contact us
                   today to book your luxury accommodations and unlock the full
                   potential of your Whistler vacation with our VIP Concierge
-                  Services. Whether you&apos;re seeking culinary delights,
-                  thrilling adventures, or ultimate relaxation, we&apos;ve got
+                  Services. Whether you're seeking culinary delights,
+                  thrilling adventures, or ultimate relaxation, we've got
                   you covered.
                 </p>
                 <Link

@@ -208,7 +208,7 @@ const TwoCedarsKadenwood = () => {
           <div className="max-w-6xl mx-auto px-4" id="details">
             <p className="text-gray-800 mb-16 max-w-4xl">
               Two Cedars is a luxurious 7-bedroom, 8.5-bathroom property located
-              in the prestigious Kadenwood neighborhood, Whistler&apos;s most
+              in the prestigious Kadenwood neighborhood, Whistler's most
               exclusive residential area. This stunning mountain retreat offers
               unparalleled luxury, privacy, and breathtaking views of the
               surrounding mountains and valleys.
@@ -268,7 +268,7 @@ const TwoCedarsKadenwood = () => {
                 </div>
                 <p className="text-gray-800">
                   Perfect for large groups or multiple families, Two Cedars
-                  offers the ultimate luxury getaway in Whistler&apos;s most
+                  offers the ultimate luxury getaway in Whistler's most
                   coveted location.
                 </p>
               </div>

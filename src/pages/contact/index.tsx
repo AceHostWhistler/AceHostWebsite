@@ -555,15 +555,9 @@ const Contact = () => {
                   </p>
                   <div className="prose prose-lg">
                     <p>
-                      Hello There, I&apos;m Ben, a Whistler local who has spent
-                      almost my whole life between Whistler and Vancouver.
-                      Having lived here since I was born, I have witnessed the
-                      changes and rapid growth the area has seen in recent
-                      years. I enjoy sharing my insider knowledge and contacts
-                      with guests so they can truly maximize their experiences
-                      here in Whistler. I enjoy connecting in English, Spanish,
-                      or French. Like most Whistler locals, I love the outdoors
-                      and the beautiful scenery our town offers.
+                      Hello There, I'm Ben, a Whistler local who has spent
+                      the last decade deeply involved in Whistler's hospitality
+                      industry.
                     </p>
                   </div>
                 </div>
@@ -589,14 +583,13 @@ const Contact = () => {
                   </p>
                   <div className="prose prose-lg">
                     <p>
-                      Hi there! My name is Max and I&apos;m a North Shore local.
-                      Born in Vancouver, I&apos;ve spent most of my life living
-                      between Vancouver and Moscow, where my family is
-                      originally from. AceHost brought me to Whistler in 2023,
-                      although I&apos;ve enjoyed many skiing holidays here in
-                      the past. I&apos;m looking forward to making the most of
-                      ample outdoor activities that Whistler has to offer all
-                      year round.
+                      Hi there! My name is Max and I'm a North Shore local.
+                      Born in Vancouver, I've spent most of my life living
+                      and skiing in the beautiful mountains of BC. I am
+                      fairly new to Whistler as a permanent resident
+                      although I've enjoyed many skiing holidays here in
+                      the past. I'm looking forward to making the most of
+                      what Whistler has to offer!
                     </p>
                   </div>
                 </div>
@@ -622,15 +615,12 @@ const Contact = () => {
                   </p>
                   <div className="prose prose-lg">
                     <p>
-                      I&apos;m Sally, I was born and grew up in Surrey in the
-                      UK. The mountains and skiing brought me to Whistler in
-                      2019 and I haven&apos;t looked back since! I have spent
-                      the past several years working for UHNW individuals in
-                      service, housekeeping, kitchens, and personal assistant
-                      roles on super yachts and private residences. As a result,
-                      I am incredibly detail-orientated with high standards and
-                      always strive to provide the best guest experience
-                      possible that will exceed 5 star hotels.
+                      I'm Sally, I was born and grew up in Surrey in the
+                      UK. I moved to Canada permanently in August
+                      2019 and I haven't looked back since! I have spent
+                      the last 4 years working in hospitality in Whistler
+                      and understand the importance of attention to
+                      detail to provide the best client experience.
                     </p>
                   </div>
                 </div>
@@ -647,8 +637,8 @@ const Contact = () => {
             Ready to experience the AceHost difference?
           </h2>
           <p className="text-lg max-w-3xl mx-auto mb-8">
-            Whether you&apos;re a property owner looking for management services
-            or a traveler seeking a luxury stay in Whistler, we&apos;re here to
+            Whether you're a property owner looking for management services
+            or a traveler seeking a luxury stay in Whistler, we're here to
             help.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

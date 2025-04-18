@@ -114,7 +114,7 @@ const QuoteResult = ({ quote, type, handleIsBlurred, contactForm, setContactForm
         {isBooking ? (
           <div className="space-y-2 text-center">
             <p className="text-gray-600">
-              We&apos;ll see you on {selectedSlot}
+              We'll see you on {selectedSlot}
             </p>
             <p className="text-gray-500 text-sm">
               Confirmation sent to {contactForm.email}
@@ -123,7 +123,7 @@ const QuoteResult = ({ quote, type, handleIsBlurred, contactForm, setContactForm
         ) : (
           <div className="space-y-2 text-center">
             <p className="text-gray-600">
-              We&apos;ll get back to you within 24 hours
+              We'll get back to you within 24 hours
             </p>
             <p className="text-gray-500 text-sm">
               Response will be sent to {contactForm.email}

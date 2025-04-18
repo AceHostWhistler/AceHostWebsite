@@ -87,7 +87,7 @@ const PropertyManagementBlog = () => {
                   turn to managed vacation rental services to optimize their
                   investment. These services offer a comprehensive solution to
                   managing your property, ensuring both profitability and peace
-                  of mind. Here&apos;s a deep dive into the benefits of opting
+                  of mind. Here's a deep dive into the benefits of opting
                   for an airbnb vacation rental property management company in
                   Whistler.
                 </p>
@@ -202,13 +202,13 @@ const PropertyManagementBlog = () => {
                   7. Customized and Comprehensive Service
                 </h3>
                 <p className="mb-6">
-                  Whether it&apos;s providing 24/7 support to guests, offering
+                  Whether it's providing 24/7 support to guests, offering
                   concierge services, or tailoring services to meet specific
                   owner goals, managed vacation rental services go above and
                   beyond to ensure both guests and owners are satisfied. This
                   includes everything from professional photography to staging
                   and interior design consultations to elevate your
-                  property&apos;s appeal.
+                  property's appeal.
                 </p>
 
                 <h3 className="text-xl md:text-2xl font-bold mb-6">
@@ -242,7 +242,7 @@ const PropertyManagementBlog = () => {
                 <p className="text-xl text-gray-700 mb-8 leading-relaxed">
                   Professional property management companies in Whistler such as
                   AceHost are not just experts in managing vacation rentals;
-                  they&apos;re also deeply embedded in the local real estate
+                  they're also deeply embedded in the local real estate
                   market. These companies often have established relationships
                   with top realtors in the area, providing them with insights
                   into the best investment opportunities, including luxury
@@ -299,10 +299,10 @@ const PropertyManagementBlog = () => {
                   management service, property owners can significantly enhance
                   their rental income, maintain high standards of property care,
                   and ensure a positive experience for their guests. Whether
-                  it&apos;s AceHost Whistler Property Management Services, or
+                  it's AceHost Whistler Property Management Services, or
                   another trusted and reputable managers, choosing the right
                   partner is crucial to maximizing your investment in
-                  Whistler&apos;s vibrant vacation rental market.
+                  Whistler's vibrant vacation rental market.
                 </p>
               </div>
             </article>

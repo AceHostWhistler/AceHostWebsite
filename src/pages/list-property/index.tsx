@@ -32,7 +32,7 @@ const faqs: FAQItem[] = [
   {
     question: "Can I Rent my Property with AceHost?",
     answer:
-      "Yes, if your property is zoned for nightly rentals and meets our quality standards for luxury vacation rentals. We&apos;ll help you determine if your property qualifies during our initial consultation.",
+      "Yes, if your property is zoned for nightly rentals and meets our quality standards for luxury vacation rentals. We'll help you determine if your property qualifies during our initial consultation.",
   },
   {
     question: "What management fee do you charge?",
@@ -102,7 +102,7 @@ const features: Feature[] = [
   {
     title: "The AceHost Brand",
     description:
-      "At AceHost, we strive to build trust and longevity with homeowners. Property management can be a time consuming and stressful feat. AceHost&apos;s rental expertise and quality assurance offers a solution to homeowners, yielding hassle-free and profitable property rental income.",
+      "At AceHost, we strive to build trust and longevity with homeowners. Property management can be a time consuming and stressful feat. AceHost's rental expertise and quality assurance offers a solution to homeowners, yielding hassle-free and profitable property rental income.",
     icon: Star,
   },
   {
@@ -114,7 +114,7 @@ const features: Feature[] = [
   {
     title: "Our Relationships",
     description:
-      "Our value driver is creating meaningful and lasting relationships with homeowners. We&apos;ve established a business model that relies on clear and frequent communication. Though we are home to Whistler, we have instilled confidence in homeowners and therefore have expanded our services to The United States, The United Kingdom, Spain, Greece, and Mexico. We offer a hands-off experience for homeowners both locally, but also overseas.",
+      "Our value driver is creating meaningful and lasting relationships with homeowners. We've established a business model that relies on clear and frequent communication. Though we are home to Whistler, we have instilled confidence in homeowners and therefore have expanded our services to The United States, The United Kingdom, Spain, Greece, and Mexico. We offer a hands-off experience for homeowners both locally, but also overseas.",
     icon: Users,
   },
 ];
@@ -123,7 +123,7 @@ const reasonsSections = [
   {
     title: "The AceHost Team",
     description:
-      "Our boutique and professional team has over 15 years of experience in luxury hospitality. AceHost&apos;s refined industry knowledge and high guest & homeowner retention rates set us apart from our competitors. After just under 4 years of business, we can confidently say that we are the fastest growing luxury vacation rental management company in Whistler.",
+      "Our boutique and professional team has over 15 years of experience in luxury hospitality. AceHost's refined industry knowledge and high guest & homeowner retention rates set us apart from our competitors. After just under 4 years of business, we can confidently say that we are the fastest growing luxury vacation rental management company in Whistler.",
   },
   {
     title: "Listing & Marketing Strategies",
@@ -143,7 +143,7 @@ const reasonsSections = [
   {
     title: "Returning Guest Satisfaction",
     description:
-      "Homeowners can benefit from AceHost&apos;s portfolio of returning guests. Our services go above and beyond at no cost to travellers, ensuring that trusted customer base has consistently had their expectations exceeded. We believe in building long term relationships with guests and using their feedback to understand how we can improve their next visit to Whistler. Referrals from past guests who have experienced AceHost hospitality contribute to our growing network of new customers.",
+      "Homeowners can benefit from AceHost's portfolio of returning guests. Our services go above and beyond at no cost to travellers, ensuring that trusted customer base has consistently had their expectations exceeded. We believe in building long term relationships with guests and using their feedback to understand how we can improve their next visit to Whistler. Referrals from past guests who have experienced AceHost hospitality contribute to our growing network of new customers.",
   },
   {
     title: "Hands-Off Homeowner Experience",
@@ -168,7 +168,7 @@ const reasonsSections = [
   {
     title: "Investment Property Consultations",
     description:
-      "Are you looking to buy an investment rental property in Whistler? It can be difficult to choose a location for your short term rental property in Whistler, as there are a wide range of neighbourhoods all offering different benefits. At AceHost, we provide one-on-one property consultations to ensure that you are choosing the best luxury property for your needs and investment goals. Whether you want a ski-in ski-out feature, closer proximity to the village, questions about bedrooms, or specific home amenities such as a hot tub or spa facilities, AceHost&apos;s knowledge of luxury investment homes can offer a wide selection of homes.\n\nWe are more than happy to introduce you to our favourite, honest, and hard working local realtors. We will also give you estimates on rental income based on the property, location, bedroom layout etc... We will also give you ideas on what you can do to improve your home to appeal to a larger audience of guests, allowing you to increase your rates, earn more income, and provide more value to your guests.\n\nWe are in the business and we know it well. We can help!",
+      "Are you looking to buy an investment rental property in Whistler? It can be difficult to choose a location for your short term rental property in Whistler, as there are a wide range of neighbourhoods all offering different benefits. At AceHost, we provide one-on-one property consultations to ensure that you are choosing the best luxury property for your needs and investment goals. Whether you want a ski-in ski-out feature, closer proximity to the village, questions about bedrooms, or specific home amenities such as a hot tub or spa facilities, AceHost's knowledge of luxury investment homes can offer a wide selection of homes.\n\nWe are more than happy to introduce you to our favourite, honest, and hard working local realtors. We will also give you estimates on rental income based on the property, location, bedroom layout etc... We will also give you ideas on what you can do to improve your home to appeal to a larger audience of guests, allowing you to increase your rates, earn more income, and provide more value to your guests.\n\nWe are in the business and we know it well. We can help!",
   },
 ];
 
@@ -285,7 +285,7 @@ const ListProperty = () => {
               List Your Luxury Property With AceHost
             </h1>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Partner with Whistler&apos;s premier luxury property management
+              Partner with Whistler's premier luxury property management
               company to maximize your rental income and provide exceptional
               guest experiences.
             </p>
@@ -331,6 +331,99 @@ const ListProperty = () => {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Airbnb Profile Section - Apple-style Design */}
+      <section className="py-20 bg-gradient-to-b from-white to-gray-50 overflow-hidden relative">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div className="lg:w-1/2 mb-8 lg:mb-0">
+              <div className="mb-2 text-sm font-semibold text-red-500 tracking-widest uppercase">Airbnb Superhost</div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight leading-tight">
+                Exceptional <span className="text-red-500">Reviews</span>
+              </h2>
+              <p className="text-base text-gray-600 mb-6">
+                Join our portfolio and benefit from our established Superhost status on Airbnb. 
+                Our properties consistently receive 5-star ratings and glowing reviews.
+              </p>
+              
+              {/* Stats */}
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="bg-white shadow-sm p-4 rounded-xl">
+                  <div className="text-3xl font-bold text-black">4.96</div>
+                  <div className="flex mt-1 mb-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <div className="text-sm text-gray-600">Overall Rating</div>
+                </div>
+                <div className="bg-white shadow-sm p-4 rounded-xl">
+                  <div className="text-3xl font-bold text-black">305+</div>
+                  <div className="text-sm text-gray-600">Reviews</div>
+                </div>
+              </div>
+              
+              <a 
+                href="https://www.airbnb.ca/users/show/425922828" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex items-center justify-center px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition-all duration-300"
+              >
+                <span className="text-sm font-medium">View on Airbnb</span>
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </div>
+            <div className="lg:w-1/2">
+              {/* Airbnb Profile Screenshot */}
+              <div className="relative mb-6">
+                <div className="relative">
+                  <Image 
+                    src="/texture/Screen_Shot_2025-04-18_at_2.26.04_PM-removebg-preview.png" 
+                    alt="AceHost Airbnb Superhost Profile" 
+                    width={600} 
+                    height={400}
+                    className="w-full object-contain"
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                {/* Real Reviews */}
+                <div className="bg-white shadow-sm p-4 rounded-xl">
+                  <p className="text-gray-700 text-sm mb-3">
+                    "...Probably our 10th trip to Whistler and hands down the best place we've stayed. 
+                    The garage was perfect for the gear, kitchen was beautifully appointed, everything super clean, hot tub perfect fo..."
+                  </p>
+                  <div className="flex items-center">
+                    <div className="font-medium text-sm">Krystle</div>
+                    <div className="text-xs text-gray-500 ml-2">April 2025</div>
+                  </div>
+                </div>
+                
+                <div className="bg-white shadow-sm p-4 rounded-xl">
+                  <p className="text-gray-700 text-sm mb-3">
+                    "...Great place, wonderful host and amazing location. My son and I stayed at Ben's place for 5 days of Spring riding. It's exactly as described..."
+                  </p>
+                  <div className="flex items-center">
+                    <div className="font-medium text-sm">Anthony</div>
+                    <div className="text-xs text-gray-500 ml-2">April 2025</div>
+                  </div>
+                </div>
+                
+                <div className="bg-white shadow-sm p-4 rounded-xl">
+                  <p className="text-gray-700 text-sm mb-3">
+                    "...The place is exactly as the pictures show. The location is perfect with ski in/out and valet for skis. Ben responded right away and the check in and check out was super easy. We look forward to coming back to..."
+                  </p>
+                  <div className="flex items-center">
+                    <div className="font-medium text-sm">Jerry</div>
+                    <div className="text-xs text-gray-500 ml-2">April 2025</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -431,7 +524,7 @@ const ListProperty = () => {
               Frequently Asked Questions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Have questions? We&apos;ve got answers.
+              Have questions? We've got answers.
             </p>
           </div>
 
@@ -475,7 +568,7 @@ const ListProperty = () => {
               Ready to List Your Property?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Contact us today to start maximizing your property&apos;s rental
+              Contact us today to start maximizing your property's rental
               potential.
             </p>
           </div>

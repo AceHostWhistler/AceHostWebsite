@@ -188,7 +188,7 @@ const SnowPine = () => {
               This home is a rare find and ideally located in Creekside, just a
               7-minute walk from the Creekside Gondola, making this the perfect
               location for your family ski getaway! The large open-concept
-              living area is spacious but homely and it&apos;s tastefully
+              living area is spacious but homely and it's tastefully
               furnished with a cozy fireplace. Relax on the large covered patio
               deck, while using the BBQ and outdoor fire pit.
             </p>
@@ -325,9 +325,9 @@ const SnowPine = () => {
                 This home is in a prime location just walking distance from
                 Creekside Gondola! Enjoy a 2-minute stroll on the valley trail
                 to Nita Lake and another 5-minute walk to Alpha Lake. On your
-                doorstep, you have some of Whistler&apos;s best restaurants, Red
+                doorstep, you have some of Whistler's best restaurants, Red
                 Door Bistro, Rimrock Cafe, Cure Lounge (my favorite),
-                Creekbread, and Dusty&apos;s are also just a short walk away!
+                Creekbread, and Dusty's are also just a short walk away!
                 The Co-Op gas station and convenience store is just a block
                 away. For groceries, the Creekside Market is also walking
                 distance.

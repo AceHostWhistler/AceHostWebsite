@@ -76,9 +76,9 @@ export default function BlogPost() {
               <p className="text-xl text-gray-700 mb-8">
                 Imagine waking up to the pristine snow-covered peaks of Whistler
                 Blackcomb, stepping outside your door, clicking into your skis,
-                and gliding directly onto the slopes. This isn&apos;t just a
-                skier&apos;s fantasy—it&apos;s the daily reality for those who
-                choose to stay in Whistler&apos;s exclusive ski-in/ski-out
+                and gliding directly onto the slopes. This isn't just a
+                skier's fantasy—it's the daily reality for those who
+                choose to stay in Whistler's exclusive ski-in/ski-out
                 luxury chalets.
               </p>
 
@@ -87,10 +87,10 @@ export default function BlogPost() {
               </h2>
               <p>
                 Ski-in/ski-out accommodations represent the pinnacle of winter
-                luxury living. In Whistler, home to one of North America&apos;s
+                luxury living. In Whistler, home to one of North America's
                 largest and most renowned ski resorts, these properties offer
                 unparalleled convenience, breathtaking views, and an elevated
-                vacation experience that simply can&apos;t be matched.
+                vacation experience that simply can't be matched.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
@@ -155,7 +155,7 @@ export default function BlogPost() {
               </div>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
-                Whistler&apos;s Premier Ski-in/Ski-out Destinations
+                Whistler's Premier Ski-in/Ski-out Destinations
               </h2>
               <p>
                 Whistler boasts several exclusive neighborhoods where you can
@@ -166,7 +166,7 @@ export default function BlogPost() {
               </h3>
               <p>
                 Perched above Creekside Village, Kadenwood is arguably
-                Whistler&apos;s most exclusive neighborhood. Accessible via
+                Whistler's most exclusive neighborhood. Accessible via
                 private gondola, these estates combine direct ski access with
                 absolute privacy. Properties like Two Cedars Kadenwood exemplify
                 the luxury mountain lifestyle with expansive living spaces,
@@ -293,7 +293,7 @@ export default function BlogPost() {
               </div>
 
               <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-                Raven&apos;s Nest
+                Raven's Nest
               </h3>
               <p>
                 This luxurious 3-bedroom ski-in/ski-out property offers direct
@@ -307,7 +307,7 @@ export default function BlogPost() {
                   href="/listings/ravens-nest-ski-in-ski-out-views"
                   className="inline-flex items-center text-blue-600 hover:text-blue-800"
                 >
-                  View Raven&apos;s Nest
+                  View Raven's Nest
                   <svg
                     className="ml-2 w-4 h-4"
                     fill="currentColor"
@@ -328,7 +328,7 @@ export default function BlogPost() {
               </h2>
               <p>
                 At AceHost, we understand that a true luxury ski vacation is
-                about more than just a beautiful property. That&apos;s why we
+                about more than just a beautiful property. That's why we
                 offer comprehensive concierge services to ensure every aspect of
                 your stay exceeds expectations:
               </p>
@@ -357,7 +357,7 @@ export default function BlogPost() {
 
               <div className="bg-gray-100 p-8 rounded-xl my-12">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                  Ready to Experience Whistler&apos;s Finest Ski-in/Ski-out
+                  Ready to Experience Whistler's Finest Ski-in/Ski-out
                   Accommodations?
                 </h2>
                 <p className="mb-6">

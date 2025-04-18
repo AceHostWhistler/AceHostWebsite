@@ -42,7 +42,7 @@ const LuxuryChristmasRentals = () => {
       <Head>
         <title>
           Top 7 of the Most Luxury Vacation Rental Homes in Whistler | Christmas
-          and New Year&apos;s | AceHost
+          and New Year's | AceHost
         </title>
         <meta
           name="description"
@@ -67,7 +67,7 @@ const LuxuryChristmasRentals = () => {
 
             <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
               Top 7 of the Most Luxury Vacation Rental Homes in Whistler |
-              Christmas and New Year&apos;s
+              Christmas and New Year's
             </h1>
 
             <div className="flex items-center text-gray-600 text-sm mb-8">
@@ -80,7 +80,7 @@ const LuxuryChristmasRentals = () => {
               <p className="text-gray-700">
                 Whistler is renowned for its world-class skiing, stunning
                 landscapes, and vibrant village, making it the perfect
-                destination for a luxurious Christmas and New Year&apos;s
+                destination for a luxurious Christmas and New Year's
                 getaway for the family.
               </p>
             </div>
@@ -108,7 +108,7 @@ const LuxuryChristmasRentals = () => {
                 homes that promise an unforgettable holiday experience. From
                 lavish chalets to exclusive villas, these properties provide the
                 perfect setting for creating cherished memories with family and
-                friends. Below are AceHost&apos;s top 7 most luxurious homes to
+                friends. Below are AceHost's top 7 most luxurious homes to
                 consider for your winter escape:
               </p>
 
@@ -137,7 +137,7 @@ const LuxuryChristmasRentals = () => {
 
               <p>
                 Panoramic Estate is an exceptional property that lives up to its
-                name, offering stunning 360-degree views of Whistler&apos;s
+                name, offering stunning 360-degree views of Whistler's
                 iconic mountains. This magnificent home features expansive
                 living spaces, high ceilings, and floor-to-ceiling windows that
                 frame the surrounding landscape. Welcome to this ski in ski out
@@ -205,7 +205,7 @@ const LuxuryChristmasRentals = () => {
                 prestigious Kadenwood neighborhood in Whistler. For ski
                 enthusiasts, Two Cedars in the exclusive Kadenwood neighborhood
                 is the ultimate ski-in/ski-out chalet. This luxurious home
-                offers direct access to some of Whistler&apos;s best slopes,
+                offers direct access to some of Whistler's best slopes,
                 making it perfect for those who want to maximize their time on
                 the mountain. The property features five beautifully appointed
                 bedrooms, a state-of-the-art media room, and a private hot tub
@@ -280,7 +280,7 @@ const LuxuryChristmasRentals = () => {
 
               <p>
                 Discover the epitome of luxury at Altitude Retreat, nestled in
-                Whistler&apos;s most prestigious ski-in, ski-out neighbourhood,
+                Whistler's most prestigious ski-in, ski-out neighbourhood,
                 Kadenwood. Set in close proximity to the Private Kadenwood
                 gondola, this 8 bedroom property offers an unrivalled location
                 for your Whistler vacation.
@@ -293,7 +293,7 @@ const LuxuryChristmasRentals = () => {
               </p>
 
               <p>
-                Secluded by trees and nature, it doesn&apos;t get more private
+                Secluded by trees and nature, it doesn't get more private
                 than this! The open-concept living and dining areas are ideal
                 for entertaining, while the master suite offers a spa-like
                 experience with its luxurious en-suite bathtub with a view of
@@ -487,15 +487,15 @@ const LuxuryChristmasRentals = () => {
               </div>
 
               <p>
-                Located in Whistler&apos;s prestigious Blueberry neighborhood,
+                Located in Whistler's prestigious Blueberry neighborhood,
                 minutes from the village, Falcon is a masterpiece of modern
                 alpine design. This stunning property offers 7-bedrooms, an
                 open-concept living area, and floor-to-ceiling windows that
                 provide breathtaking views of Whistler and Blackcomb mountains.
                 With a private hot tub, a spacious gourmet kitchen, and elegant
                 interiors, Falcon is the ideal retreat for those seeking luxury
-                and comfort. Whether you&apos;re planning a festive family
-                gathering or an elegant New Year&apos;s celebration, Falcon has
+                and comfort. Whether you're planning a festive family
+                gathering or an elegant New Year's celebration, Falcon has
                 everything you need for a magical holiday.
               </p>
 
@@ -517,7 +517,7 @@ const LuxuryChristmasRentals = () => {
               </h3>
               <p className="text-gray-700 mb-6">
                 Contact our team today to secure one of these exceptional
-                properties for your Christmas and New Year&apos;s celebration in
+                properties for your Christmas and New Year's celebration in
                 Whistler.
               </p>
               <Link

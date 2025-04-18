@@ -1281,10 +1281,10 @@ export default function Properties() {
                 <h2 className="text-3xl font-bold mb-6">
                   Looking for Something Special?
                 </h2>
-                <p className="text-gray-300 mb-6">
-                  Our concierge team is here to help you find the perfect
-                  property for your needs. Let us know what you&apos;re looking
-                  for, and we&apos;ll create a personalized recommendation.
+                <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6 max-w-3xl mx-auto">
+                  Not sure which property is right for you? Let us help find the perfect
+                  property for your needs. Let us know what you're looking
+                  for, and we'll create a personalized recommendation.
                 </p>
                 <Link
                   href="/contact"

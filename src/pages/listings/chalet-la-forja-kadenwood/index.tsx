@@ -226,7 +226,7 @@ const ChaletLaForja = () => {
               families seeking their own bedrooms.
               <br />
               <br />
-              Ranked one of VRBO&apos;s Top 10 vacation rentals in 2023.
+              Ranked one of VRBO's Top 10 vacation rentals in 2023.
             </p>
 
             {/* The Space Section */}
@@ -406,15 +406,15 @@ const ChaletLaForja = () => {
               <p className="text-gray-800 max-w-4xl">
                 Take the 5-minute gondola ride, a 5-minute drive, or a quick ski
                 ride down will bring you to all the amenities in Creekside
-                Village. Take advantage of some of Whistler&apos;s best
+                Village. Take advantage of some of Whistler's best
                 restaurants and shops. Enjoy quality coffee and delicious breads
                 and pastries at Rockit Coffee and Bred. Red Door Bistro, Rimrock
-                Cafe, Cure Lounge (my favorite), Creekbread, and Dusty&apos;s.
-                Enjoy Creekside&apos;s newest restaurant Mekong, this
+                Cafe, Cure Lounge (my favorite), Creekbread, and Dusty's.
+                Enjoy Creekside's newest restaurant Mekong, this
                 fine-dining Thai restaurant and gorgeous patio is a local
                 favorite. Tuck into delicious authentic food and imaginative
                 cocktails. Shop at 122 West for beautiful home decor and
-                Abigail&apos;s for stylish clothing. The Cop-Op gas station in
+                Abigail's for stylish clothing. The Cop-Op gas station in
                 Creekside has a convenience store and is open until 10 pm. For
                 groceries, the Creekside Market is also within walking distance.
                 Included when booking this property, we will help you with all

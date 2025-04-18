@@ -73,7 +73,7 @@ export default function BlogPost() {
                 what truly sets Whistler apart as a top choice for a luxury home
                 vacation is the combination of its stunning natural beauty,
                 exceptional accommodations, and diverse experiences that cater
-                to all preferences. In this article, we&apos;ll explore the
+                to all preferences. In this article, we'll explore the
                 reasons that make Whistler the perfect destination for a luxury
                 home vacation and the unique experiences it offers to visitors.
               </p>
@@ -86,7 +86,7 @@ export default function BlogPost() {
                 Whistler is nestled in the Coast Mountains, offering
                 unparalleled beauty with its snow-capped peaks, pristine lakes,
                 and lush forests. The striking scenery provides a stunning
-                backdrop for your luxury home vacation, whether you&apos;re
+                backdrop for your luxury home vacation, whether you're
                 staying in a sophisticated mountain lodge, a contemporary glass
                 house, or a cozy treehouse retreat. The ever-changing landscape
                 offers endless opportunities for exploration and appreciation,
@@ -108,7 +108,7 @@ export default function BlogPost() {
               </h2>
 
               <p>
-                Whistler&apos;s luxury rental homes, curated by AceHost, offer a
+                Whistler's luxury rental homes, curated by AceHost, offer a
                 diverse range of styles, sizes, and amenities, ensuring that
                 every discerning traveler can find the perfect property for
                 their vacation. From opulent palazzos to elegant villas and
@@ -164,7 +164,7 @@ export default function BlogPost() {
                 sports on the numerous lakes and rivers. During winter,
                 activities such as snowshoeing, cross-country skiing, and
                 snowmobiling provide alternative ways to explore the stunning
-                surroundings. No matter the season, Whistler&apos;s diverse
+                surroundings. No matter the season, Whistler's diverse
                 range of activities ensures that every visitor can find the
                 perfect outdoor adventure.
               </p>
@@ -186,7 +186,7 @@ export default function BlogPost() {
                 Whistler Village is a lively hub of shops, restaurants, and
                 bars, providing a wealth of entertainment options for visitors.
                 From fine dining establishments to cozy cafes and bustling
-                nightclubs, there&apos;s something for everyone in this
+                nightclubs, there's something for everyone in this
                 pedestrian-friendly village. Additionally, numerous art
                 galleries, cultural events, and festivals throughout the year
                 add to the vibrant atmosphere and make Whistler a top choice for
@@ -231,7 +231,7 @@ export default function BlogPost() {
               </h2>
 
               <p>
-                Whistler&apos;s convenient location, just a short drive from
+                Whistler's convenient location, just a short drive from
                 Vancouver International Airport, makes it an easily accessible
                 destination for both domestic and international travelers. The
                 scenic Sea-to-Sky Highway offers a breathtaking journey through
@@ -281,13 +281,13 @@ export default function BlogPost() {
               </h2>
 
               <p>
-                For couples seeking a romantic getaway, Whistler&apos;s luxury
+                For couples seeking a romantic getaway, Whistler's luxury
                 home rentals provide the perfect setting for an intimate escape.
                 With properties featuring private hot tubs, cozy fireplaces, and
                 breathtaking mountain views, Whistler offers a romantic backdrop
                 for a memorable retreat. AceHost can also help create the
                 perfect romantic experience, from organizing private dinners
-                prepared by a personal chef to arranging couples&apos; spa
+                prepared by a personal chef to arranging couples' spa
                 treatments in the comfort of your luxury rental home.
               </p>
 
@@ -308,8 +308,8 @@ export default function BlogPost() {
                 Whistler is an ideal destination for group vacations, with many
                 luxury rental homes offering spacious accommodations and
                 amenities designed to cater to larger parties. Whether
-                you&apos;re planning a corporate retreat, a family reunion, or a
-                getaway with friends, Whistler&apos;s luxury home rentals
+                you're planning a corporate retreat, a family reunion, or a
+                getaway with friends, Whistler's luxury home rentals
                 provide the perfect setting for group gatherings. AceHost can
                 help arrange group activities and experiences, such as guided
                 mountain biking excursions or private yoga sessions, ensuring a
@@ -330,7 +330,7 @@ export default function BlogPost() {
               </h2>
 
               <p>
-                Whistler&apos;s rich cultural scene offers visitors a chance to
+                Whistler's rich cultural scene offers visitors a chance to
                 immerse themselves in the local arts, history, and indigenous
                 heritage. With numerous art galleries, museums, and cultural
                 centers, Whistler provides ample opportunities to explore the
@@ -357,8 +357,8 @@ export default function BlogPost() {
               </h2>
 
               <p>
-                Whistler&apos;s commitment to environmental sustainability and
-                conservation is another reason why it&apos;s the perfect
+                Whistler's commitment to environmental sustainability and
+                conservation is another reason why it's the perfect
                 destination for a luxury home vacation. The town has implemented
                 various eco-friendly initiatives, such as energy-efficient
                 transportation options and waste reduction programs, to minimize
@@ -431,8 +431,8 @@ export default function BlogPost() {
               </h2>
 
               <p>
-                Whistler&apos;s thriving culinary scene is another reason why
-                it&apos;s the perfect destination for a luxury home vacation.
+                Whistler's thriving culinary scene is another reason why
+                it's the perfect destination for a luxury home vacation.
                 With a diverse range of restaurants offering everything from
                 farm-to-table cuisine to international fare, Whistler caters to
                 all tastes and preferences. Many luxury rental homes feature
@@ -457,7 +457,7 @@ export default function BlogPost() {
               </h2>
 
               <p>
-                Whistler&apos;s focus on health and wellness is another
+                Whistler's focus on health and wellness is another
                 compelling reason to choose this destination for your luxury
                 home vacation. With numerous spas, fitness centers, and yoga
                 studios available throughout the area, Whistler offers ample
@@ -484,10 +484,10 @@ export default function BlogPost() {
               </h2>
 
               <p>
-                Whistler&apos;s extensive network of hiking and biking trails
+                Whistler's extensive network of hiking and biking trails
                 provides visitors with endless opportunities to explore the
                 stunning natural surroundings. From leisurely strolls along
-                picturesque lakeshores to challenging alpine treks, there&apos;s
+                picturesque lakeshores to challenging alpine treks, there's
                 a trail for every skill level and preference. Mountain bikers
                 can also enjoy the world-famous Whistler Mountain Bike Park,
                 which offers a range of trails and terrain for both beginners
@@ -510,13 +510,13 @@ export default function BlogPost() {
               </h2>
 
               <p>
-                Whistler&apos;s diverse ecosystem is home to a variety of
+                Whistler's diverse ecosystem is home to a variety of
                 wildlife, including black bears, bald eagles, and deer. With
                 numerous guided wildlife tours available, visitors have the
                 opportunity to witness these majestic creatures in their natural
                 habitat. AceHost.ca can help arrange these unique wildlife
                 encounters, ensuring that your Whistler vacation includes
-                memorable experiences with the region&apos;s fascinating fauna.
+                memorable experiences with the region's fascinating fauna.
               </p>
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
@@ -535,13 +535,13 @@ export default function BlogPost() {
               <p>
                 For those seeking to enrich their luxury home vacation with
                 educational experiences, Whistler offers several interactive
-                attractions and activities. The Squamish Lil&apos;wat Cultural
-                Centre provides insight into the region&apos;s First Nations
+                attractions and activities. The Squamish Lil'wat Cultural
+                Centre provides insight into the region's First Nations
                 history and culture, while the Whistler Museum allows visitors
-                to explore the town&apos;s development from a small fishing
+                to explore the town's development from a small fishing
                 lodge to a world-renowned ski resort. These engaging experiences
                 add depth and meaning to your Whistler vacation, providing a
-                greater appreciation for the area&apos;s rich history and
+                greater appreciation for the area's rich history and
                 cultural heritage.
               </p>
 
@@ -559,11 +559,11 @@ export default function BlogPost() {
               </h2>
 
               <p>
-                Whistler&apos;s exceptional accommodations and diverse
+                Whistler's exceptional accommodations and diverse
                 experiences make it the perfect destination for celebrating
-                special occasions and milestones. Whether you&apos;re planning
+                special occasions and milestones. Whether you're planning
                 an intimate wedding, a milestone birthday, or a memorable
-                anniversary, Whistler&apos;s luxury rental homes provide the
+                anniversary, Whistler's luxury rental homes provide the
                 perfect setting for your celebration. AceHost can help
                 coordinate the necessary arrangements and create a tailored
                 experience that exceeds your expectations, ensuring your special
@@ -587,7 +587,7 @@ export default function BlogPost() {
                 top choice for discerning travelers. Allow AceHost to guide you
                 in selecting the ideal luxury rental home and create a tailored
                 vacation experience that exceeds your expectations. Whether
-                you&apos;re seeking a family-friendly escape, a romantic
+                you're seeking a family-friendly escape, a romantic
                 retreat, or a group adventure, Whistler promises to deliver an
                 unparalleled vacation experience that will leave you with
                 cherished memories for years to come.
@@ -595,7 +595,7 @@ export default function BlogPost() {
 
               <div className="bg-gray-100 p-8 rounded-xl my-12">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                  Ready to Experience Whistler&apos;s Luxury?
+                  Ready to Experience Whistler's Luxury?
                 </h2>
                 <p className="mb-6">
                   Contact AceHost today to book your perfect Whistler luxury

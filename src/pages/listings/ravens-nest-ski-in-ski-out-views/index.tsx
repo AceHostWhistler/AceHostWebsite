@@ -95,7 +95,7 @@ const RavensNest = () => {
   return (
     <>
       <Head>
-        <title>Raven&apos;s Nest | Ski in Ski out | Views - AceHost</title>
+        <title>Raven's Nest | Ski in Ski out | Views - AceHost</title>
         <meta
           name="description"
           content="Escape to luxury in this newly renovated 3-king bedroom chalet in Tantalus, offering ski-in/ski-out convenience and breathtaking mountain views. Features private hot tub, sauna, and garage parking."
@@ -117,7 +117,7 @@ const RavensNest = () => {
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-gray-900 mb-6 sm:mb-8">
-              Raven&apos;s Nest | Ski in Ski out | Views
+              Raven's Nest | Ski in Ski out | Views
             </h1>
 
             <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
@@ -239,7 +239,7 @@ const RavensNest = () => {
                   • Walk down the driveway and take a right.
                   <br />
                   • Head slightly uphill to the area between units 21 and 22,
-                  where you&apos;ll find a set of stairs.
+                  where you'll find a set of stairs.
                   <br />
                   • Walk up the stairs and continue a short distance to reach
                   the ski run.
@@ -339,8 +339,8 @@ const RavensNest = () => {
                 and convenience with ski-in/ski-out access to the slopes.
               </p>
               <p className="text-gray-800 max-w-4xl">
-                With its central location, you&apos;ll have easy access to all
-                of Whistler&apos;s attractions, dining options, and activities.
+                With its central location, you'll have easy access to all
+                of Whistler's attractions, dining options, and activities.
                 After a day of mountain adventures, return to your private
                 sanctuary with breathtaking mountain views.
               </p>
@@ -353,7 +353,7 @@ const RavensNest = () => {
           <div className="fixed inset-0 z-50 bg-black overflow-y-auto">
             <div className="sticky top-0 z-10 bg-black p-4 flex justify-between items-center">
               <h2 className="text-lg sm:text-xl text-white font-medium">
-                Raven&apos;s Nest - All Photos
+                Raven's Nest - All Photos
               </h2>
               <button
                 onClick={closeAllPhotos}

@@ -289,7 +289,7 @@ const WhisperingPines = () => {
               <p className="text-gray-800 max-w-4xl">
                 Main & Upper Whistler Village are within walking distance,
                 giving you easy access to all the restaurants, shops, and
-                entertainment options. In the summer, you&apos;re close to
+                entertainment options. In the summer, you're close to
                 biking trails, 2 golf courses, and Lost Lake, making this spot
                 perfect year-round.
               </p>

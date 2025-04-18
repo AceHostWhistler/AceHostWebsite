@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useState, useRef, useEffect } from "react";
-import { Menu, X, ChevronDown, ChevronRight, Play } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight, Play, Info, Home } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
@@ -189,7 +189,7 @@ const Navigation = ({
                               className="text-xs text-gray-600 hover:text-gray-900"
                               onClick={() => setShowResourcesDropdown(false)}
                             >
-                              FAQ&apos;s
+                              FAQ's
                             </Link>
                           </li>
                         </ul>
@@ -223,10 +223,9 @@ const Navigation = ({
                                 Acehost Whistler Property Management Services
                               </h4>
                               <p className="text-xs text-gray-600 leading-tight">
-                                AceHost Whistler&apos;s guide on property
-                                management services and why Whistler&apos;s
-                                vacation homes are a timeless investment
-                                opportunity.
+                                AceHost Whistler's guide on property
+                                management services and why Whistler's
+                                best property managers are key.
                               </p>
                             </div>
                           </Link>
@@ -277,7 +276,7 @@ const Navigation = ({
                             <div className="flex-grow">
                               <h4 className="font-semibold text-sm mb-1 group-hover:text-blue-600 transition-colors duration-300">
                                 Luxury Whistler Vacation Redefined: How AceHost
-                                Whistler Caters to the 1% in Canada&apos;s
+                                Whistler Caters to the 1% in Canada's
                                 Ultimate Playground
                               </h4>
                               <p className="text-xs text-gray-600 leading-tight">
@@ -480,7 +479,7 @@ const Navigation = ({
                       className="flex items-center py-3 px-4 text-base text-gray-600 hover:text-black rounded-md"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
-                      FAQ&apos;s
+                      FAQ's
                     </Link>
                     <Link
                       href="/post/luxury-property-management-investment-opportunities-in-whistler"

@@ -61,7 +61,7 @@ export default function BlogPost() {
               </div>
 
               <p className="text-xl leading-relaxed">
-                AceHost&apos;s commitment to creative marketing has allowed us
+                AceHost's commitment to creative marketing has allowed us
                 to differentiate ourselves within the industry. By capitalizing
                 on influencer collaborations, Instagram presence, and the
                 endorsement of individuals within the entertainment industry, we
@@ -100,7 +100,7 @@ export default function BlogPost() {
                 as Lili Reinhart, Camila Mendes, Madelaine Petsch, and Vanessa
                 Morgan, all of whom we have had the pleasure of hosting on
                 multiple occasions. With a vast fan base, &quot;Riverdale&quot;
-                has become one of Netflix&apos;s highest-rated shows. Lili
+                has become one of Netflix's highest-rated shows. Lili
                 Reinhart, Camila Mendes, and Vanessa Morgan boast a collective
                 following of just under 100 million on their Instagram accounts
                 alone. Their collaborative efforts with AceHost have resulted in
@@ -256,7 +256,7 @@ export default function BlogPost() {
               </h2>
 
               <p>
-                To enhance the visibility of our homeowners&apos; properties,
+                To enhance the visibility of our homeowners' properties,
                 AceHost has established a valuable partnership with Property
                 Grams, an Instagram profile exclusively dedicated to showcasing
                 the breathtaking visuals of our luxurious listings. The

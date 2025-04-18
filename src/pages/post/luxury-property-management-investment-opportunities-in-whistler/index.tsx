@@ -54,8 +54,8 @@ export default function BlogPost() {
               <div className="bg-gray-50 p-6 rounded-lg mb-8">
                 <h2 className="text-xl font-semibold mb-2">Summary</h2>
                 <p className="text-gray-700">
-                  AceHost Whistler&apos;s guide on property management services
-                  and why Whistler&apos;s vacation homes are a timeless
+                  AceHost Whistler's guide on property management services
+                  and why Whistler's vacation homes are a timeless
                   investment opportunity.
                 </p>
               </div>
@@ -124,7 +124,7 @@ export default function BlogPost() {
                 that you are choosing the best luxury property for your needs.
                 Whether you want a ski-in ski-out feature, closer proximity to
                 the village, or specific home amenities such as a hot tub or spa
-                facilities, AceHost&apos;s exposure to local luxury real estate
+                facilities, AceHost's exposure to local luxury real estate
                 yields a wide selection of homes.
               </p>
 
@@ -138,14 +138,14 @@ export default function BlogPost() {
               </div>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
-                I Just Bought a Home in Whistler - What&apos;s next?
+                I Just Bought a Home in Whistler - What's next?
               </h2>
 
               <p>
                 Whether you decide to live in seasonally in your Whistler home
                 or use it for short term rentals exclusively, choosing a
                 reliable property management service is important. If you
-                don&apos;t live in Whistler, using or AirBnb or VRBO can be a
+                don't live in Whistler, using or AirBnb or VRBO can be a
                 challenging and time-consuming task. To ensure that your home is
                 well maintained and prepared for guest arrivals, we recommend
                 using our property management service that focuses on delivering
@@ -188,7 +188,7 @@ export default function BlogPost() {
                 high-quality standard of cleanliness for every home. Our
                 housekeepers take care of laundry and cleaning immediately after
                 guest check-out, outsourcing linens and supplying their own
-                cleaning supplies for a thorough cleaning. AceHost&apos;s team
+                cleaning supplies for a thorough cleaning. AceHost's team
                 of maintenance contractors work around the clock, tending to
                 homes to ensure that all aspects of the home are in working
                 order.
@@ -380,7 +380,7 @@ export default function BlogPost() {
               </h2>
 
               <p>
-                Whether you&apos;re looking to buy a property in Whistler or
+                Whether you're looking to buy a property in Whistler or
                 looking to rent out your property, reach out to AceHost today to
                 join our portfolio of satisfied homeowners. Here are some steps
                 you can take to get started with us:
@@ -400,7 +400,7 @@ export default function BlogPost() {
                       </h3>
                       <p className="mt-2 text-gray-600">
                         Send us some photos, videos or details of your property
-                        and your rental preferences. If you&apos;re interested
+                        and your rental preferences. If you're interested
                         in buying real estate – we can help with that too.
                       </p>
                     </div>
@@ -465,7 +465,7 @@ export default function BlogPost() {
 
               <div className="bg-gray-100 p-8 rounded-xl my-12">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                  Ready to Maximize Your Property&apos;s Potential?
+                  Ready to Maximize Your Property's Potential?
                 </h2>
                 <p className="mb-6">
                   Contact AceHost today to learn more about our property

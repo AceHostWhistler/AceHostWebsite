@@ -20,7 +20,7 @@ export default function BlogPost() {
     },
     {
       title:
-        "Luxury Whistler Vacation Redefined: How AceHost Whistler Caters to the 1% in Canada&apos;s Ultimate Playground",
+        "Luxury Whistler Vacation Redefined: How AceHost Whistler Caters to the 1% in Canada's Ultimate Playground",
       slug: "luxury-whistler-vacation-redefined-how-acehost-whistler-caters-to-the-1-in-canadas-ultimate-playground",
       category: "VIP Concierge | Luxury Vacation",
     },
@@ -83,8 +83,8 @@ export default function BlogPost() {
               </div>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
-                Discovering Culinary Gems in Whistler: A Foodie&apos;s Guide to
-                Whistler&apos;s Best Restaurants, Bars, and Coffee
+                Discovering Culinary Gems in Whistler: A Foodie's Guide to
+                Whistler's Best Restaurants, Bars, and Coffee
               </h2>
 
               <p>
@@ -106,9 +106,9 @@ export default function BlogPost() {
               </h2>
 
               <p>
-                Whistler&apos;s restaurant scene mirrors the diversity of its
+                Whistler's restaurant scene mirrors the diversity of its
                 visitors, offering a global and West Coast tour of flavors.
-                Let&apos;s dive into some of the town&apos;s culinary
+                Let's dive into some of the town's culinary
                 highlights.
               </p>
 
@@ -126,9 +126,9 @@ export default function BlogPost() {
               </h3>
 
               <p>
-                WildBlue has recently made waves in Whistler&apos;s culinary
+                WildBlue has recently made waves in Whistler's culinary
                 scene, presenting a modern dining experience with a focus on
-                seafood and innovative dishes. The restaurant&apos;s sleek,
+                seafood and innovative dishes. The restaurant's sleek,
                 contemporary design is matched by its forward-thinking menu,
                 which emphasizes sustainable and locally sourced ingredients.
                 WildBlue stands out not only for its cuisine but also for its
@@ -144,9 +144,9 @@ export default function BlogPost() {
               </h3>
 
               <p>
-                Bearfoot Bistro is not just a restaurant; it&apos;s an
+                Bearfoot Bistro is not just a restaurant; it's an
                 adventure. Here, you can saber a bottle of champagne or indulge
-                in the chef&apos;s exquisite creations. The bistro&apos;s wine
+                in the chef's exquisite creations. The bistro's wine
                 cellar is a treasure trove for oenophiles, boasting an extensive
                 collection of international and local wines, making it a
                 destination for those looking to explore the world of wine. The
@@ -161,7 +161,7 @@ export default function BlogPost() {
               <p>
                 Rim Rock Café has long been celebrated for its seafood and game
                 dishes, offering a cozy cabin-like atmosphere that complements
-                its rustic, yet refined menu. It&apos;s a place where the
+                its rustic, yet refined menu. It's a place where the
                 quality of the ingredients speaks for itself, and the warm
                 service makes every meal memorable.
               </p>
@@ -191,10 +191,10 @@ export default function BlogPost() {
 
               <p>
                 Bar Oso &quot;oso&quot; meaning &quot;bear&quot; in Spanish,
-                pays homage to Whistler&apos;s natural inhabitants with its
+                pays homage to Whistler's natural inhabitants with its
                 Spanish-influenced small plates and handcrafted cocktails. This
                 intimate space is perfect for savouring tapas, charcuterie, and
-                artisanal cheeses. The bar&apos;s creative cocktails are a
+                artisanal cheeses. The bar's creative cocktails are a
                 must-try, offering a refreshing twist on classic flavors.
               </p>
 
@@ -206,21 +206,21 @@ export default function BlogPost() {
                 Il Caminetto brings the warmth and richness of Italian cuisine
                 to Whistler, offering a modern take on traditional dishes. The
                 extensive wine list is a highlight, featuring selections from
-                Italy&apos;s best vineyards alongside local and international
+                Italy's best vineyards alongside local and international
                 choices. This makes Il Caminetto a perfect spot for wine
                 enthusiasts looking to pair their meal with the perfect glass of
                 wine.
               </p>
 
               <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-                Hy&apos;s Steakhouse
+                Hy's Steakhouse
               </h3>
 
               <p>
-                An institution in the Canadian steakhouse scene, Hy&apos;s
+                An institution in the Canadian steakhouse scene, Hy's
                 Steakhouse offers classic elegance, impeccable service, and
                 exceptional steaks. The ambiance evokes old-world charm,
-                creating the ultimate steakhouse experience. Hy&apos;s wine list
+                creating the ultimate steakhouse experience. Hy's wine list
                 is extensive, featuring robust selections that perfectly
                 complement the rich menu, from classic Cabernets to bold
                 Bordeaux, ensuring a perfect match for every cut of steak.
@@ -236,14 +236,14 @@ export default function BlogPost() {
               </div>
 
               <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-                Christine&apos;s on Blackcomb | Elevated Dining with a View
+                Christine's on Blackcomb | Elevated Dining with a View
               </h3>
 
               <p>
-                Perched on Blackcomb Mountain, Christine&apos;s Restaurant is
+                Perched on Blackcomb Mountain, Christine's Restaurant is
                 accessible via the scenic gondola ride, offering guests a unique
                 opportunity to dine among the peaks. As part of the
-                mountain&apos;s offerings, Christine&apos;s stands out for its
+                mountain's offerings, Christine's stands out for its
                 refined atmosphere, panoramic mountain views, and a menu that
                 showcases the best of Pacific Northwest cuisine.
               </p>
@@ -271,20 +271,20 @@ export default function BlogPost() {
                 For those craving the bold flavors of Southeast Asia, Mekong is
                 a must-visit. This restaurant offers a diverse menu that spans
                 the culinary landscapes of Thailand, Vietnam, and beyond. From
-                spicy curries to refreshing salads, Mekong&apos;s dishes are
+                spicy curries to refreshing salads, Mekong's dishes are
                 crafted with authenticity and spice, promising an adventurous
                 dining experience.
               </p>
 
               <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-                Dusty&apos;s
+                Dusty's
               </h3>
 
               <p>
-                An iconic spot in Whistler, Dusty&apos;s Bar & BBQ is located at
-                the base of Creekside Gondola. It&apos;s famous for its
+                An iconic spot in Whistler, Dusty's Bar & BBQ is located at
+                the base of Creekside Gondola. It's famous for its
                 laid-back vibe, live music, and, most importantly, its
-                mouth-watering barbecue dishes. Dusty&apos;s is the perfect
+                mouth-watering barbecue dishes. Dusty's is the perfect
                 place to unwind after a day on the slopes.
               </p>
 
@@ -310,17 +310,17 @@ export default function BlogPost() {
               </div>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
-                Coffee and Casual Bites: A Deep Dive into Whistler&apos;s Café
+                Coffee and Casual Bites: A Deep Dive into Whistler's Café
                 Culture
               </h2>
 
               <p>
-                Whistler&apos;s café culture is a thriving aspect of its
+                Whistler's café culture is a thriving aspect of its
                 culinary landscape, with numerous spots offering the perfect
                 ambiance for a leisurely breakfast, a mid-day break, or a cozy
-                afternoon. Adding to our previous highlights, let&apos;s explore
+                afternoon. Adding to our previous highlights, let's explore
                 Rockit Coffee Co., Forecast Coffee, and Fix Café, each bringing
-                its unique flavor to Whistler&apos;s coffee scene.
+                its unique flavor to Whistler's coffee scene.
               </p>
 
               <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
@@ -333,7 +333,7 @@ export default function BlogPost() {
                 dining experiences across British Columbia & New York. This new
                 café and market concept is quickly becoming a staple for both
                 locals and visitors, offering a unique blend of convenience,
-                quality, and culinary innovation that enriches Whistler&apos;s
+                quality, and culinary innovation that enriches Whistler's
                 vibrant food scene.
               </p>
 
@@ -378,7 +378,7 @@ export default function BlogPost() {
                 coffee and freshly baked goods. The café prides itself on its
                 warm, inviting atmosphere and the quality of its products, from
                 artisanal sandwiches to scrumptious pastries and cakes. Whether
-                you&apos;re looking for a quick grab-and-go breakfast or a
+                you're looking for a quick grab-and-go breakfast or a
                 leisurely afternoon snack, Fix Café provides a serene backdrop
                 to enjoy your meal.
               </p>
@@ -389,7 +389,7 @@ export default function BlogPost() {
 
               <p>
                 Ideal for coffee aficionados, Lift Coffee Company offers
-                expertly brewed coffee and a friendly atmosphere. It&apos;s a
+                expertly brewed coffee and a friendly atmosphere. It's a
                 great place to start your day or recharge after exploring the
                 mountains.
               </p>
@@ -418,22 +418,22 @@ export default function BlogPost() {
               </h2>
 
               <p>
-                Whistler&apos;s dining scene is a dynamic and diverse reflection
+                Whistler's dining scene is a dynamic and diverse reflection
                 of its stunning natural surroundings. From upscale dining
                 experiences to casual eateries and innovative cocktail bars, the
                 town offers a gastronomic adventure for every palate and
-                occasion. Whether you&apos;re a seasoned foodie or simply in
-                search of a memorable meal, Whistler&apos;s restaurants, cafes,
+                occasion. Whether you're a seasoned foodie or simply in
+                search of a memorable meal, Whistler's restaurants, cafes,
                 and bistros promise experiences that will tantalize your taste
                 buds and leave you longing for more.
               </p>
 
               <p>
                 As Whistler continues to evolve, its culinary scene remains a
-                cornerstone of the town&apos;s vibrant culture. The passion and
+                cornerstone of the town's vibrant culture. The passion and
                 creativity of local chefs, combined with the abundance of fresh,
                 local ingredients and an exceptional selection of wines and
-                cocktails, ensure that Whistler&apos;s dining scene will
+                cocktails, ensure that Whistler's dining scene will
                 continue to thrive and surprise. So, the next time you find
                 yourself in this beautiful mountain town, embark on a culinary
                 journey that takes you from the peaks of the mountains to the
@@ -442,7 +442,7 @@ export default function BlogPost() {
 
               <div className="bg-gray-100 p-8 rounded-xl my-12">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                  Experience Whistler&apos;s Culinary Excellence
+                  Experience Whistler's Culinary Excellence
                 </h2>
                 <p className="mb-6">
                   For more information on your trip to Whistler, our concierge

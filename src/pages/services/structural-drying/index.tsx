@@ -149,7 +149,7 @@ const StructuralDrying = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold mb-6 text-[#1C1917]">Why We&apos;re Brooklyn&apos;s #1 Choice</h2>
+              <h2 className="text-4xl font-bold mb-6 text-[#1C1917]">Why We're Brooklyn's #1 Choice</h2>
               <p className="text-lg text-[#44403C] mb-6 leading-relaxed">
                 Our military-grade equipment and scientific approach removes water 3x faster than standard methods. We prevent mold growth and structural damage by extracting hidden moisture other companies miss.
               </p>

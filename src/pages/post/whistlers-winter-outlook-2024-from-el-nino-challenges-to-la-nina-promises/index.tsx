@@ -16,7 +16,7 @@ const WhistlerWinterOutlook = () => {
     <>
       <Head>
         <title>
-          Whistler&apos;s Winter Outlook 2024: From El Niño Challenges to La
+          Whistler's Winter Outlook 2024: From El Niño Challenges to La
           Niña Promises | AceHost
         </title>
         <meta
@@ -41,7 +41,7 @@ const WhistlerWinterOutlook = () => {
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              Whistler&apos;s Winter Outlook 2024: From El Niño Challenges to La
+              Whistler's Winter Outlook 2024: From El Niño Challenges to La
               Niña Promises
             </h1>
 
@@ -56,7 +56,7 @@ const WhistlerWinterOutlook = () => {
                 Whistler experienced one of its toughest winters this past
                 season. The culprit? A strong El Niño. But with La Niña on the
                 horizon, we are gearing up for what could be a record-breaking
-                snow season in 2024. Let&apos;s delve into what these climate
+                snow season in 2024. Let's delve into what these climate
                 phenomena mean for Whistler and why next season holds so much
                 promise for snow enthusiasts.
               </p>
@@ -84,7 +84,7 @@ const WhistlerWinterOutlook = () => {
                   Whistler experienced one of its slowest snow winters this past
                   2023/2024 season due to the expected El Niño. But with La Niña
                   on the horizon, we are gearing up for what could be a
-                  record-breaking snow season in 2024. Let&apos;s dive into what
+                  record-breaking snow season in 2024. Let's dive into what
                   these climate phenomena mean for Whistler and why next season
                   holds so much promise for travelers looking to ski/snowboard
                   in Whistler this 2024/25 season.
@@ -141,8 +141,8 @@ const WhistlerWinterOutlook = () => {
                 <p className="mb-8">
                   Meteorological models and climate predictions for 2024 are
                   indicating a strong La Niña event, raising our hopes for a
-                  spectacular recovery from last year&apos;s disappointing
-                  season. La Niña&apos;s influence is expected to deliver
+                  spectacular recovery from last year's disappointing
+                  season. La Niña's influence is expected to deliver
                   consistent, heavy snowfall, setting the stage for what could
                   be a historic ski season.
                 </p>
@@ -168,7 +168,7 @@ const WhistlerWinterOutlook = () => {
                   skiing, snowboarding, and other winter sports. This makes it
                   an ideal time to book your stay at one of our luxurious
                   ski-in/ski-out properties at AceHost.ca, where you can enjoy
-                  the best of Whistler&apos;s winter right from your doorstep.
+                  the best of Whistler's winter right from your doorstep.
                 </p>
 
                 <p className="mb-8">
@@ -192,7 +192,7 @@ const WhistlerWinterOutlook = () => {
 
               <div className="bg-white border border-gray-100 rounded-xl shadow-sm p-8 mb-12">
                 <h2 className="text-2xl md:text-3xl font-bold mb-6">
-                  Whistler&apos;s Winter Wonderland: A Closer Look at the Snow
+                  Whistler's Winter Wonderland: A Closer Look at the Snow
                   Stats
                 </h2>
                 <p className="mb-6">
@@ -202,7 +202,7 @@ const WhistlerWinterOutlook = () => {
                   is about 11.7 meters (approximately 38 feet), covering the
                   expansive slopes of Whistler and Blackcomb mountains with a
                   thick, powdery blanket of snow. This generous dusting
-                  transforms the landscape into a skier&apos;s paradise,
+                  transforms the landscape into a skier's paradise,
                   offering a wide range of terrains suitable for beginners
                   through to expert-level enthusiasts.
                 </p>
@@ -217,7 +217,7 @@ const WhistlerWinterOutlook = () => {
                   Whistler Blackcomb reported an astounding 16 meters (over 52
                   feet) of snowfall. This season remains etched in the memory of
                   locals and seasoned visitors alike, highlighting the
-                  area&apos;s potential for monumental winter seasons. Such
+                  area's potential for monumental winter seasons. Such
                   historical data not only illustrates the natural abundance of
                   snow in Whistler but also underscores its reliability as a
                   premier skiing destination.
@@ -246,10 +246,10 @@ const WhistlerWinterOutlook = () => {
                 Plan Your Perfect Snow Getaway
               </h2>
               <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                Don&apos;t miss out on what could be one of the best snow
+                Don't miss out on what could be one of the best snow
                 seasons in Whistler. Visit AceHost.ca to choose from our premium
                 selection of properties and get ready for your ultimate winter
-                holiday. With La Niña&apos;s cooler temperatures and plentiful
+                holiday. With La Niña's cooler temperatures and plentiful
                 snow on the horizon, the 2024 ski season at Whistler is poised
                 to be truly spectacular.
               </p>

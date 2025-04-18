@@ -84,7 +84,7 @@ const Services = () => {
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Brooklyn&apos;s 24/7 Emergency<br />Flood Response Team
+              Brooklyn's 24/7 Emergency<br />Flood Response Team
             </h1>
             <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-8">
               <button

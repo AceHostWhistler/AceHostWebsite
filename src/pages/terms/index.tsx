@@ -233,7 +233,7 @@ const TermsOfService = () => {
                   You agree to indemnify, defend, and hold harmless AceHost, its
                   officers, directors, employees, agents, and suppliers from and
                   against all losses, expenses, damages, and costs, including
-                  reasonable attorneys&apos; fees, resulting from any violation
+                  reasonable attorneys' fees, resulting from any violation
                   of these Terms or any activity related to your account.
                 </p>
               </section>
@@ -268,7 +268,7 @@ const TermsOfService = () => {
                 <p>
                   We reserve the right to modify or replace these Terms at any
                   time. If a revision is material, we will provide at least 30
-                  days&apos; notice prior to any new terms taking effect.
+                  days' notice prior to any new terms taking effect.
                 </p>
                 <p>
                   Your continued use of our services after any changes to these

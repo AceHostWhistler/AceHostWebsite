@@ -101,7 +101,7 @@ const OurStory = () => {
                 have grown to become a trusted name in luxury accommodations.
               </p>
               <p className="text-gray-700 mb-6">
-                Our team&apos;s deep knowledge of Whistler and passion for
+                Our team's deep knowledge of Whistler and passion for
                 hospitality allows us to offer a personalized service that large
                 rental companies simply cannot match. We carefully select each
                 property in our collection, ensuring it meets our high standards
@@ -111,7 +111,7 @@ const OurStory = () => {
                 Beyond just providing beautiful properties, we offer
                 comprehensive concierge services to create truly memorable
                 vacations for our guests. From arranging private chefs to
-                organizing exclusive experiences, we&apos;re committed to making
+                organizing exclusive experiences, we're committed to making
                 every stay special.
               </p>
               <Link
@@ -204,9 +204,9 @@ const OurStory = () => {
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">Join Our Journey</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Whether you&apos;re looking for a luxury vacation rental, want to
+            Whether you're looking for a luxury vacation rental, want to
             list your property with us, or are interested in our concierge
-            services, we&apos;d love to hear from you.
+            services, we'd love to hear from you.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link

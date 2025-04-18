@@ -382,16 +382,16 @@ const SlopesideVilla = () => {
                 amenities in Creekside Village.
               </p>
               <p className="text-gray-800 max-w-4xl mb-6">
-                Take advantage of some of Whistler&apos;s best restaurants and
+                Take advantage of some of Whistler's best restaurants and
                 shops. Enjoy quality coffee and delicious breads and pastries at
                 Rockit Coffee and Bred. Red Door Bistro, Rimrock Cafe, Cure
-                Lounge (my favorite), Creekbread, and Dusty&apos;s. Enjoy
-                Creekside&apos;s newest restaurant Mekong, this fine-dining Thai
+                Lounge (my favorite), Creekbread, and Dusty's. Enjoy
+                Creekside's newest restaurant Mekong, this fine-dining Thai
                 restaurant and gorgeous patio is a local favorite. Tuck into
                 delicious authentic food and imaginative cocktails.
               </p>
               <p className="text-gray-800 max-w-4xl">
-                Shop at 122 West for beautiful home decor and Abigail&apos;s for
+                Shop at 122 West for beautiful home decor and Abigail's for
                 stylish clothing. The Cop-Op gas station in Creekside has a
                 convenience store and is open until 10 pm. For groceries, the
                 Creekside Market is also within walking distance. Included when

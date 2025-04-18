@@ -199,7 +199,7 @@ const DreamLogChalet = () => {
                 quiet residential family-friendly neighborhood in Bayshores,
                 Whistler. This home features 5 bedrooms, 4 baths, and a large
                 backyard with a professionally built treehouse, perfect for
-                children and socializing with guests. It&apos;s just a quick
+                children and socializing with guests. It's just a quick
                 4-minute drive to Creekside Village and the newly upgraded
                 Creekside Gondola, which takes you up to the top of Whistler
                 Mountain in record speed!
@@ -346,7 +346,7 @@ const DreamLogChalet = () => {
                 </div>
                 <p className="text-gray-800 max-w-4xl">
                   Located in a quiet residential family-friendly neighborhood in
-                  Bayshores, Whistler. It&apos;s just a quick 4-minute drive to
+                  Bayshores, Whistler. It's just a quick 4-minute drive to
                   Creekside Village and the newly upgraded Creekside Gondola,
                   which takes you up to the top of Whistler Mountain in record
                   speed!

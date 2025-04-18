@@ -206,15 +206,15 @@ const VancouverHouseCornerUnit = () => {
                 </div>
                 <div>
                   <p className="text-gray-700 mb-6">
-                    As a guest, you&apos;ll have access to the building&apos;s
+                    As a guest, you'll have access to the building's
                     exceptional amenities, including a fitness center, indoor
                     pool and hot tub, and the stunning rooftop garden. The
                     building also offers 24-hour concierge service for added
                     convenience and security.
                   </p>
                   <p className="text-gray-700 mb-6">
-                    Located in the heart of Vancouver&apos;s Beach District,
-                    you&apos;ll be steps away from the Seawall, Granville
+                    Located in the heart of Vancouver's Beach District,
+                    you'll be steps away from the Seawall, Granville
                     Island, and countless restaurants, shops, and entertainment
                     options. This prime location makes it the perfect base for
                     exploring everything Vancouver has to offer.
@@ -482,7 +482,7 @@ const VancouverHouseCornerUnit = () => {
                 Location
               </h2>
               <p className="text-gray-700 mb-6">
-                Located in Vancouver&apos;s Beach District, you&apos;ll be
+                Located in Vancouver's Beach District, you'll be
                 perfectly positioned to explore the city. The Vancouver House is
                 just:
               </p>

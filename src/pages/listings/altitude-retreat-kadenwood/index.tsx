@@ -311,13 +311,13 @@ const AltitudeRetreat = () => {
           <div className="max-w-6xl mx-auto px-4" id="details">
             <p className="text-gray-800 mb-16 max-w-4xl">
               Altitude Retreat is situated in the most prestigious ski-in
-              ski-out neighbourhood in Whistler. Located just a stone&apos;s
+              ski-out neighbourhood in Whistler. Located just a stone's
               throw away from the exclusive Kadenwood residence only gondola
               makes this property the perfect location for your Whistler
               vacation! This well equipped property features everything you need
-              for an indulgent stay. Enjoy a workout in the fully spec&apos;d
+              for an indulgent stay. Enjoy a workout in the fully spec'd
               gym then take a dip in the hot tub. Secluded by trees, it
-              doesn&apos;t get more private than this!
+              doesn't get more private than this!
             </p>
 
             {/* The Space Section */}
@@ -410,7 +410,7 @@ const AltitudeRetreat = () => {
                 </p>
                 <p className="mb-4">
                   Master bedroom with king bed and ensuite bathroom with large
-                  walk in shower and stand alone bath tub, 12&apos; x 15&apos;
+                  walk in shower and stand alone bath tub, 12' x 15'
                   walk ensuite walk-in closet. Master Bedroom has a large TV and
                   fireplace, with stunning mountain views. Behind the master
                   bedroom, is the bunk house with 3 queen beds with a large
@@ -482,15 +482,15 @@ const AltitudeRetreat = () => {
               <p className="text-gray-800 max-w-4xl">
                 Take the 5-minute gondola ride, a 5-minute drive, or a quick ski
                 ride down will bring you to all the amenities in Creekside
-                Village. Take advantage of some of Whistler&apos;s best
+                Village. Take advantage of some of Whistler's best
                 restaurants and shops. Enjoy quality coffee and delicious breads
                 and pastries at Rockit Coffee and Bred. Red Door Bistro, Rimrock
-                Cafe, Cure Lounge (my favorite), Creekbread, and Dusty&apos;s.
-                Enjoy Creekside&apos;s newest restaurant Mekong, this
+                Cafe, Cure Lounge (my favorite), Creekbread, and Dusty's.
+                Enjoy Creekside's newest restaurant Mekong, this
                 fine-dining Thai restaurant and gorgeous patio is a local
                 favorite. Tuck into delicious authentic food and imaginative
                 cocktails. Shop at 122 West for beautiful home decor and
-                Abigail&apos;s for stylish clothing. The Cop-Op gas station in
+                Abigail's for stylish clothing. The Cop-Op gas station in
                 Creekside has a convenience store and is open until 10 pm. For
                 groceries, the Creekside Market is also within walking distance.
                 Included when booking this property, we will help you with all
