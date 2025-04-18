@@ -4,9 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 
 export default function BlogPost() {
   const publishDate = "March 4, 2024";
+  const currentArticleLink = "/post/whistlers-luxury-rental-escapes";
 
   // Related articles
   const relatedArticles = [
@@ -750,131 +752,11 @@ export default function BlogPost() {
                 AceHost.ca, you are well-equipped to find the perfect luxury
                 rental home for your next unforgettable Whistler getaway.
               </p>
-
-              {/* Related Articles */}
-              <div className="mt-16">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                  More Articles
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  {relatedArticles.map((article, index) => (
-                    <Link
-                      href={`/post/${article.slug}`}
-                      key={index}
-                      className="group"
-                    >
-                      <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all duration-200 group-hover:shadow-md">
-                        <div className="p-5">
-                          <div className="text-sm font-medium text-blue-600 mb-2">
-                            {article.category}
-                          </div>
-                          <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-200">
-                            {article.title}
-                          </h4>
-                        </div>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              {/* Footer Links */}
-              <div className="mt-16 grid grid-cols-2 md:grid-cols-5 gap-6 text-sm">
-                <div>
-                  <h4 className="font-medium text-gray-900 mb-4">Properties</h4>
-                  <ul className="space-y-2">
-                    <li>
-                      <Link
-                        href="/concierge-services"
-                        className="text-gray-600 hover:text-blue-600"
-                      >
-                        Concierge Services
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/properties"
-                        className="text-gray-600 hover:text-blue-600"
-                      >
-                        Luxury Properties
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/property-management"
-                        className="text-gray-600 hover:text-blue-600"
-                      >
-                        Property Management
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-medium text-gray-900 mb-4">Resources</h4>
-                  <ul className="space-y-2">
-                    <li>
-                      <Link
-                        href="/blogs"
-                        className="text-gray-600 hover:text-blue-600"
-                      >
-                        Blog
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/faq"
-                        className="text-gray-600 hover:text-blue-600"
-                      >
-                        FAQ&apos;s
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-medium text-gray-900 mb-4">Our Story</h4>
-                  <ul className="space-y-2">
-                    <li>
-                      <Link
-                        href="/contact"
-                        className="text-gray-600 hover:text-blue-600"
-                      >
-                        Contact
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-medium text-gray-900 mb-4">Social</h4>
-                  <ul className="space-y-2">
-                    <li>
-                      <a
-                        href="https://instagram.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-600 hover:text-blue-600"
-                      >
-                        Instagram
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://youtube.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-600 hover:text-blue-600"
-                      >
-                        Youtube
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <p className="text-sm text-gray-600 text-center mt-12">
-                © 2021 AceHost Whistler. All rights reserved.
-              </p>
             </div>
           </div>
+          
+          {/* Related Articles */}
+          <BlogRelatedArticles currentArticleLink={currentArticleLink} />
         </main>
 
         <Footer />

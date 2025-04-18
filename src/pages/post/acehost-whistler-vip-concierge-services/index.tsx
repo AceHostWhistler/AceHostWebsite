@@ -444,11 +444,11 @@ export default function BlogPost() {
                   Contact Our Concierge
                 </Link>
               </div>
-
-              {/* Related Articles Section */}
-              <BlogRelatedArticles currentArticleLink={currentArticleLink} />
             </div>
           </div>
+          
+          {/* Related Articles */}
+          <BlogRelatedArticles currentArticleLink={currentArticleLink} />
         </main>
 
         <Footer />
