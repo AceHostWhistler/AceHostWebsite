@@ -1180,7 +1180,7 @@ const ConciergeService = () => {
                   >
                     <div className="relative h-56 card-image">
                       <Image
-                        src="/photos/homepage/concierge-service/PrivateChef.jpeg"
+                        src="/photos/homepage/concierge-service/In-House Messages.jpg"
                         alt="Private Spa Services"
                         fill
                         className="object-cover"

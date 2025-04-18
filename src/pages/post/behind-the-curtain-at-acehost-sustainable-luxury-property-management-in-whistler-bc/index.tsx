@@ -6,16 +6,15 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 
+const currentArticleLink = "/post/behind-the-curtain-at-acehost-sustainable-luxury-property-management-in-whistler-bc";
+
 const SustainableLuxury = () => {
-  const currentArticleLink = "/post/behind-the-curtain-at-acehost-sustainable-luxury-property-management-in-whistler-bc";
-
-  // ... existing code ...
-
   return (
     <>
       <Head>
         <title>
-          Behind the Curtain at AceHost: Sustainable Luxury Property Management in Whistler BC | AceHost
+          Behind the Curtain at AceHost: Sustainable Luxury Property Management
+          in Whistler, BC
         </title>
         <meta
           name="description"
@@ -27,8 +26,6 @@ const SustainableLuxury = () => {
         <Navigation transparent={false} />
 
         <main className="pt-20">
-          // ... existing code ...
-
           {/* Related Articles */}
           <div className="max-w-5xl mx-auto px-4 sm:px-6 mb-20">
             <BlogRelatedArticles currentArticleLink={currentArticleLink} />

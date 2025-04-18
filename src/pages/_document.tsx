@@ -78,6 +78,23 @@ export default function Document() {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
+        
+        {/* Additional metadata for search engines */}
+        <meta name="application-name" content="AceHost Whistler" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff" />
+        
+        {/* OpenGraph metadata for social sharing and search results */}
+        <meta property="og:site_name" content="AceHost Whistler" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://acehost.ca/logo.png" />
+        <meta property="og:image:width" content="512" />
+        <meta property="og:image:height" content="512" />
+        <meta property="og:image:alt" content="AceHost Whistler Logo" />
+        
+        {/* Twitter Card data */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:image" content="https://acehost.ca/logo.png" />
 
         {/* Enable DNS prefetching */}
         <meta httpEquiv="x-dns-prefetch-control" content="on" />
