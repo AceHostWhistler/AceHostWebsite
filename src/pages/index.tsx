@@ -189,7 +189,7 @@ const Home = () => {
       bedrooms: 7,
       beds: 9,
       bathrooms: 5.5,
-      priceRange: "$7,500-$10,000+",
+      priceRange: "$7,500-$10,000+ per night",
       winterPrice: "$8,000-$10,000+ Nightly | Winter",
       holidayPrice: "$14,500-$19,000 Nightly | Christmas & NY",
       location: "whistler",
@@ -205,7 +205,7 @@ const Home = () => {
       bedrooms: 7,
       beds: 12,
       bathrooms: 8.5,
-      priceRange: "$6,500-$9,500+",
+      priceRange: "$6,500-$9,500+ per night",
       winterPrice: "$8,500-$10,000+ Nightly | Winter",
       holidayPrice: "$17,500-$21,000+ Nightly | Christmas & NY",
       location: "whistler",
@@ -222,7 +222,7 @@ const Home = () => {
       bedrooms: 7.5,
       beds: 15,
       bathrooms: 8,
-      priceRange: "$7,000-11,000+ | Private Butler Included",
+      priceRange: "$7,000-11,000+ per night | Private Butler Included",
       winterPrice: "$8500-$11,000+ Nightly | Winter",
       holidayPrice: "$16,000-$21,000+ Nightly | Christmas & NY",
       location: "whistler",
@@ -238,7 +238,7 @@ const Home = () => {
       bedrooms: 7,
       beds: 12,
       bathrooms: 7.5,
-      priceRange: "$2,600-$6,000",
+      priceRange: "$2,600-$6,000 per night",
       winterPrice: "$4,500-$6,500+ Nightly | Winter",
       holidayPrice: "$10,000+ Nightly | Christmas & NY",
       location: "whistler",
@@ -255,7 +255,7 @@ const Home = () => {
       bedrooms: 8,
       beds: 10,
       bathrooms: 7,
-      priceRange: "$5,800-$9,000+",
+      priceRange: "$5,800-$9,000+ per night",
       winterPrice: "$8,500-$10,000+ | Winter",
       holidayPrice: "$16,000+ Nightly | Christmas & NY",
       location: "whistler",
@@ -271,7 +271,7 @@ const Home = () => {
       bedrooms: 5,
       beds: 6,
       bathrooms: 6,
-      priceRange: "$1,200-$3,500",
+      priceRange: "$1,200-$3,500 per night",
       winterPrice: "",
       holidayPrice: "$4,000-$6,800+ Nightly | Christmas & NY",
       location: "whistler",
@@ -303,7 +303,7 @@ const Home = () => {
       bedrooms: 3,
       beds: 3,
       bathrooms: 3,
-      priceRange: "$2,000-$3,500",
+      priceRange: "$2,000-$3,500 per night",
       winterPrice: "",
       holidayPrice: "$2,300-$4,000 Nightly | Christmas & NY",
       location: "whistler",
@@ -319,7 +319,7 @@ const Home = () => {
       bedrooms: 7,
       beds: 13,
       bathrooms: 3.5,
-      priceRange: "$1,300-$3,500",
+      priceRange: "$1,300-$3,500 per night",
       winterPrice: "$2,000-$3,500+ Nightly | Winter",
       holidayPrice: "$4,000-$7,200+ Nightly | Christmas & NY",
       location: "whistler",
@@ -385,7 +385,7 @@ const Home = () => {
       bedrooms: 3,
       beds: 5,
       bathrooms: 3,
-      priceRange: "$750-$2,200+",
+      priceRange: "$750-$2,200+ per night",
       winterPrice: "$750-$1,500+ Nightly | Winter",
       holidayPrice: "$1,800-$2,200+ Nightly | Christmas & NY",
       location: "whistler",
@@ -476,13 +476,13 @@ const Home = () => {
     // Worldwide Properties
     {
       id: "yacht-thailand",
-      name: "Yacht Thailand Sea D",
+      name: "Super Yacht Thailand | Luxury Charter | Full Crew",
       image: "/photos/properties/Yacht Thailand Sea D/Sun Deck WEB-12.jpg",
-      guests: 12,
-      bedrooms: 6,
-      beds: 6,
+      guests: 10,
+      bedrooms: 5,
+      beds: 8,
       bathrooms: 6,
-      priceRange: "On Request",
+      priceRange: "Weekly Rate | 170,000 - 210,000 USD",
       winterPrice: "",
       holidayPrice: "",
       location: "worldwide",
@@ -497,7 +497,7 @@ const Home = () => {
       bedrooms: 7,
       beds: 10,
       bathrooms: 7,
-      priceRange: "On Request",
+      priceRange: "$2,500-$5,000 per night",
       winterPrice: "",
       holidayPrice: "",
       location: "worldwide",
@@ -511,7 +511,7 @@ const Home = () => {
       bedrooms: 8,
       beds: 10,
       bathrooms: 8,
-      priceRange: "Nightly Price Range: $3,500-$5,000 USD",
+      priceRange: "$3,500-$5,000 USD per night",
       winterPrice: "",
       holidayPrice: "",
       location: "worldwide",
@@ -785,7 +785,7 @@ const Home = () => {
             {sections.map((section, index) => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="mb-6 h-48 relative overflow-hidden rounded-lg">
-                  <Link href="/properties">
+                  <Link href={index === 0 ? "/properties" : index === 1 ? "/list-property" : "/concierge-service"}>
                     <div className="relative w-full h-full">
                       <Image
                         src={section.image}
@@ -803,7 +803,7 @@ const Home = () => {
                 </h3>
                 <p className="text-gray-600 mb-6">{section.description}</p>
                 <Link
-                  href="/properties"
+                  href={index === 0 ? "/properties" : index === 1 ? "/list-property" : "/concierge-service"}
                   className="inline-block text-gray-900 font-medium border-b-2 border-gray-900 hover:border-gray-600 hover:text-gray-600 transition-colors"
                 >
                   {section.linkText}

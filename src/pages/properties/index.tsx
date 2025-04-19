@@ -134,7 +134,7 @@ export default function Properties() {
               "7 Luxury Bedrooms",
               "Ski-In/Ski-Out Access",
             ],
-            priceRange: "$7,500-$10,000+",
+            priceRange: "$7,500-$10,000+ per night",
           },
           {
             id: "two-cedars-kadenwood",
@@ -166,7 +166,7 @@ export default function Properties() {
               "Private Hot Tub",
               "Ski-in/Ski-out Access",
             ],
-            priceRange: "$6,500-$9,500+",
+            priceRange: "$6,500-$9,500+ per night",
             isPetFriendly: true,
           },
           {
@@ -199,7 +199,7 @@ export default function Properties() {
               "Hot Tub with Mountain Views",
               "Luxury Design",
             ],
-            priceRange: "$7,000-11,000+ | Private Butler Included",
+            priceRange: "$7,000-11,000+ per night | Private Butler Included",
           },
           {
             id: "slopeside-villa-kadenwood",
@@ -231,7 +231,7 @@ export default function Properties() {
               "Luxury Design & Finishes",
               "Panoramic Mountain Views",
             ],
-            priceRange: "$2,600-$6,000",
+            priceRange: "$2,600-$6,000 per night",
             isPetFriendly: true,
           },
           {
@@ -264,7 +264,7 @@ export default function Properties() {
               "Ski-in/Ski-out Access",
               "Ultimate Luxury Experience",
             ],
-            priceRange: "$5,800-$9,000+",
+            priceRange: "$5,800-$9,000+ per night",
           },
           {
             id: "heron-views-whistler-village",
@@ -296,7 +296,7 @@ export default function Properties() {
               "Mountain Views",
               "Recently Renovated",
             ],
-            priceRange: "$1,200-$3,500",
+            priceRange: "$1,200-$3,500 per night",
           },
           {
             id: "ravens-nest-ski-in-ski-out-views",
@@ -328,7 +328,7 @@ export default function Properties() {
               "Private Hot Tub",
               "Creekside Convenience",
             ],
-            priceRange: "$2,000-$3,500",
+            priceRange: "$2,000-$3,500 per night",
           },
           {
             id: "falcon-blueberry-drive",
@@ -360,7 +360,7 @@ export default function Properties() {
               "Home Theater Room",
               "Private Setting",
             ],
-            priceRange: "$1,300-$3,500",
+            priceRange: "$1,300-$3,500 per night",
           },
         
           {
@@ -462,7 +462,7 @@ export default function Properties() {
               "5-Minute Walk to Gondolas",
               "Fully Equipped Kitchen",
             ],
-            priceRange: "$750-$2,200+",
+            priceRange: "$750-$2,200+ per night",
           },
           {
             id: "dream-log-chalet-5-bedroom-4-bath-creekside",
@@ -751,7 +751,7 @@ export default function Properties() {
               "Designer Interiors",
               "Close to Top Beaches",
             ],
-            priceRange: "$2,500-$5,000",
+            priceRange: "$2,500-$5,000 per night",
           },
           {
             id: "super-yacht-thailand",
@@ -761,8 +761,9 @@ export default function Properties() {
               "/photos/properties/Yacht Thailand Sea D/Bow WEB-1.jpg",
               "/photos/properties/Yacht Thailand Sea D/Bow WEB-1.jpg",
             ],
-            guests: 8,
-            bedrooms: 4,
+            guests: 10,
+            bedrooms: 5,
+            beds: 8,
             bathrooms: 4,
             location: "Phuket, Thailand",
             description:
@@ -783,7 +784,7 @@ export default function Properties() {
               "All-Inclusive Experience",
               "Ultimate Luxury Adventure",
             ],
-            priceRange: "$5,000-$8,000/day",
+            priceRange: "Weekly Rate | 170,000 - 210,000 USD",
           },
           {
             id: "punta-mita---casa-juntos",
@@ -815,7 +816,7 @@ export default function Properties() {
               "Exclusive Resort Access",
               "Spectacular Ocean Views",
             ],
-            priceRange: "$3,000-$7,000",
+            priceRange: "$3,000-$7,000 per night",
           },
           {
             id: "hood-river-luxury-home",

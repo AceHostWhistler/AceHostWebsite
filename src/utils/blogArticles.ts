@@ -11,6 +11,14 @@ export interface Article {
 // All blog articles data with proper image paths
 export const allArticles: Article[] = [
   {
+    title: "Whistler's Dream Rental Homes: Top 5 Luxury Vacation Properties",
+    category: "Luxury Properties",
+    description: "Explore Whistler's most exclusive luxury vacation rentals, from ski-in/ski-out chalets to stunning village properties. Discover what makes these 5 properties the ultimate mountain getaway.",
+    readTime: "13 min read",
+    link: "/post/whistlers-dream-rental-homes",
+    coverImage: "/photos/post/whistlers-dream-rental-homes/hero.jpg",
+  },
+  {
     title: "Whistler Snow Report: Record Snowfall Marks the Start of the 2024/2025 Ski Season",
     category: "Whistler Snow/Weather Report",
     description: "Whistler Snow & Weather Report 2024/2025 Opening Day",

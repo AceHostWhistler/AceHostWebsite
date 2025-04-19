@@ -236,15 +236,6 @@ export default function BlogPost() {
                 tours are available for a more intimate gathering.
               </p>
 
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/high-budget-things-to-do-on-vacation-in-whistler-canada/4.png"
-                  alt="Private chef experience in Whistler"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 Dog-sledding
               </h2>
@@ -254,15 +245,6 @@ export default function BlogPost() {
                 through the picturesque forest of the Callaghan Valley, led by a
                 skilled sled dog team.
               </p>
-
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/high-budget-things-to-do-on-vacation-in-whistler-canada/5.jpeg"
-                  alt="Luxury spa treatment in Whistler"
-                  fill
-                  className="object-cover"
-                />
-              </div>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 Bearfoot Bistro's Vodka Ice Room & Champagne Sabring
@@ -279,8 +261,8 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/post/high-budget-things-to-do-on-vacation-in-whistler-canada/6.jpeg"
-                  alt="Shopping in Whistler Village"
+                  src="/photos/post/high-budget-things-to-do-on-vacation-in-whistler-canada/5.jpeg"
+                  alt="Bearfoot Bistro vodka ice room experience"
                   fill
                   className="object-cover"
                 />
@@ -301,8 +283,8 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/post/high-budget-things-to-do-on-vacation-in-whistler-canada/7.jpg"
-                  alt="Luxury transportation in Whistler"
+                  src="/photos/post/high-budget-things-to-do-on-vacation-in-whistler-canada/4.png"
+                  alt="Private chef experience in Whistler"
                   fill
                   className="object-cover"
                 />
@@ -321,6 +303,15 @@ export default function BlogPost() {
                 fun to the experience.
               </p>
 
+              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
+                <Image
+                  src="/photos/post/high-budget-things-to-do-on-vacation-in-whistler-canada/7.jpg"
+                  alt="Private sushi chef experience in Whistler"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 In House Oyster Shucking and Champagne
               </h2>
@@ -332,15 +323,6 @@ export default function BlogPost() {
                 delectable treasures. Beautifully paired with a crisp glass of
                 top end champagne, all in the comfort of your chalet.
               </p>
-
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/high-budget-things-to-do-on-vacation-in-whistler-canada/8.jpg"
-                  alt="Oyster shucking and champagne service"
-                  fill
-                  className="object-cover"
-                />
-              </div>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 Private Ski Instructor
@@ -359,15 +341,6 @@ export default function BlogPost() {
                 worthwhile.
               </p>
 
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/high-budget-things-to-do-on-vacation-in-whistler-canada/9.jpg"
-                  alt="Private ski lesson on Whistler mountain"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 Private Driver & Vehicle
               </h2>
@@ -382,7 +355,7 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/post/high-budget-things-to-do-on-vacation-in-whistler-canada/10.jpg"
+                  src="/photos/post/high-budget-things-to-do-on-vacation-in-whistler-canada/Screen Shot 2025-04-18 at 4.07.22 PM.png"
                   alt="Luxury vehicle and private driver service in Whistler"
                   fill
                   className="object-cover"
@@ -407,15 +380,6 @@ export default function BlogPost() {
                 meters (6,102 feet) above ground.
               </p>
 
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/high-budget-things-to-do-on-vacation-in-whistler-canada/11.jpg"
-                  alt="Top of the mountain fine dining at Christines"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 In-House Private Bartenders (Mixologists)
               </h2>
@@ -429,7 +393,7 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/post/high-budget-things-to-do-on-vacation-in-whistler-canada/12.jpg"
+                  src="/photos/post/high-budget-things-to-do-on-vacation-in-whistler-canada/Private bartending service 2025-04-18 at 4.02.11 PM.png"
                   alt="Private mixologist preparing craft cocktails"
                   fill
                   className="object-cover"
@@ -459,15 +423,6 @@ export default function BlogPost() {
                 Whistler's extravagant chalets in one of the most beautiful
                 destinations in the world.
               </p>
-
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/high-budget-things-to-do-on-vacation-in-whistler-canada/13.jpg"
-                  alt="Luxury vacation rental in Whistler"
-                  fill
-                  className="object-cover"
-                />
-              </div>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 Conclusion

@@ -90,15 +90,6 @@ export default function BlogPost() {
                 Whistler has it all.
               </p>
 
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/10-reasons-why-you-must-visit-whistler-canada-for-your-next-winter-ski-vacation/1.jpg"
-                  alt="Spectacular natural beauty of Whistler's mountain landscape"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 2. Year Round Recreation
               </h2>
@@ -116,15 +107,6 @@ export default function BlogPost() {
                 recreational options makes it an ideal destination year-round.
               </p>
 
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/10-reasons-why-you-must-visit-whistler-canada-for-your-next-winter-ski-vacation/2.jpg"
-                  alt="Year-round recreational activities in Whistler"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 3. Vibrant Village Lifestyle
               </h2>
@@ -136,15 +118,6 @@ export default function BlogPost() {
                 and museums, ensuring that visitors have plenty of options for
                 entertainment.
               </p>
-
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/10-reasons-why-you-must-visit-whistler-canada-for-your-next-winter-ski-vacation/3.jpg"
-                  alt="Vibrant Whistler Village with shops and restaurants"
-                  fill
-                  className="object-cover"
-                />
-              </div>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 4. World-Class Accommodations
@@ -161,15 +134,6 @@ export default function BlogPost() {
                 dream property for your vacation, be sure to check out
                 AceHost.ca
               </p>
-
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/10-reasons-why-you-must-visit-whistler-canada-for-your-next-winter-ski-vacation/4.jpg"
-                  alt="Luxury accommodation in Whistler with mountain views"
-                  fill
-                  className="object-cover"
-                />
-              </div>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 5. World-Class Events
@@ -212,15 +176,6 @@ export default function BlogPost() {
                 big screen.
               </p>
 
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/10-reasons-why-you-must-visit-whistler-canada-for-your-next-winter-ski-vacation/5.jpg"
-                  alt="World-class event in Whistler"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 6. Culture and Art
               </h2>
@@ -242,15 +197,6 @@ export default function BlogPost() {
                 local art scene by browsing galleries, attending festivals, or
                 participating in workshops.
               </p>
-
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/10-reasons-why-you-must-visit-whistler-canada-for-your-next-winter-ski-vacation/6.jpg"
-                  alt="Cultural and art scene in Whistler"
-                  fill
-                  className="object-cover"
-                />
-              </div>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 7. Easy Access Destination With Breathtaking Views
@@ -293,15 +239,6 @@ export default function BlogPost() {
                 Whistler with well maintained paved commuting trails.
               </p>
 
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/10-reasons-why-you-must-visit-whistler-canada-for-your-next-winter-ski-vacation/7.jpg"
-                  alt="Sea to Sky Highway with breathtaking views"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 8. Friendly Locals
               </h2>
@@ -314,15 +251,6 @@ export default function BlogPost() {
                 small-town atmosphere fosters a genuine connection between
                 residents, contributing to a warm welcome for visitors.
               </p>
-
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/10-reasons-why-you-must-visit-whistler-canada-for-your-next-winter-ski-vacation/8.jpg"
-                  alt="Friendly locals in Whistler"
-                  fill
-                  className="object-cover"
-                />
-              </div>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 9. World Class Dining: Private Chefs / Fine Dining Restaurant
@@ -388,15 +316,6 @@ export default function BlogPost() {
                 cellar.
               </p>
 
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/10-reasons-why-you-must-visit-whistler-canada-for-your-next-winter-ski-vacation/9.jpg"
-                  alt="Fine dining experience at a Whistler restaurant"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 10. World Class Skiing
               </h2>
@@ -416,15 +335,6 @@ export default function BlogPost() {
                 slopes, Whistler's diverse and expansive terrain guarantees
                 an extraordinary experience for skiers of all skill levels.
               </p>
-
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/10-reasons-why-you-must-visit-whistler-canada-for-your-next-winter-ski-vacation/10.jpg"
-                  alt="World-class skiing at Whistler Blackcomb"
-                  fill
-                  className="object-cover"
-                />
-              </div>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 Conclusion

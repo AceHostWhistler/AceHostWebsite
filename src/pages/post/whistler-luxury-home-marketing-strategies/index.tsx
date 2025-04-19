@@ -10,323 +10,278 @@ export default function BlogPost() {
   const publishDate = "October 8, 2024";
   const currentArticleLink = "/post/whistler-luxury-home-marketing-strategies";
 
-  // Related articles
-  const relatedArticles = [
-    {
-      title: "Whistler Snow Report: Record Snowfall Marks the Start of the 2024/2025 Ski Season",
-      slug: "whistler-snow-report-record-snowfall-marks-the-start-of-the-2024-2025-ski-season",
-      category: "Whistler Snow/Weather Report",
-      readTime: "11 minute read",
-      description: "Whistler Snow & Weather Report 2024/2025 Opening Day"
-    },
-    {
-      title: "Luxury Whistler Vacation Redefined: How AceHost Whistler Caters to the 1% in Canada's Ultimate Playground",
-      slug: "luxury-whistler-vacation-redefined-how-acehost-whistler-caters-to-the-1-in-canadas-ultimate-playground",
-      category: "VIP Concierge | Luxury Vacation",
-      readTime: "20 min"
-    },
-    {
-      title: "Find Your Dream Long-Term Luxury Rental in Whistler with AceHost",
-      slug: "find-your-dream-long-term-luxury-rental-in-whistler-with-acehost",
-      category: "Long-term, Property",
-      readTime: "10 min read",
-      description: "Luxury long-term home rental options"
-    },
-  ];
-
+  // Related articles defined in utils/blogArticles.ts will be used by BlogRelatedArticles
+  
   return (
     <>
       <Head>
         <title>
-          Whistler Celebrity & Influencer Marketing | Luxury Home Marketing
-          Strategies | AceHost
+          Whistler Luxury Home Marketing Strategies for High-End Listings
         </title>
         <meta
           name="description"
-          content="Discover how AceHost leverages celebrity and influencer marketing to promote luxury Whistler properties and create exceptional visibility for homeowners."
+          content="Explore effective high-end real estate marketing strategies for Whistler's luxury property market, featuring top influencers and marketing approaches."
         />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:title"
+          content="Whistler Luxury Home Marketing Strategies for High-End Listings"
+        />
+        <meta
+          property="og:description"
+          content="Explore effective high-end real estate marketing strategies for Whistler's luxury property market, featuring top influencers and marketing approaches."
+        />
+        <meta
+          property="og:image"
+          content="https://www.acehostwhistler.com/photos/post/whistler-luxury-home-marketing-strategies/1.png"
+        />
+        <meta property="og:url" content="https://www.acehostwhistler.com/post/whistler-luxury-home-marketing-strategies" />
+        <meta property="article:published_time" content={publishDate} />
       </Head>
 
-      <div className="min-h-screen bg-white">
-        <Navigation transparent={false} />
+      <Navigation />
 
-        <main className="pt-24 pb-20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Blog Header */}
-            <div className="mb-10">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Whistler Celebrity & Influencer Marketing | Luxury Home
-                Marketing Strategies
+      <main>
+        {/* Blog Header */}
+        <section className="py-16 md:py-20 bg-gray-900 relative">
+          <div
+            className="absolute inset-0 z-0 opacity-40"
+            style={{
+              backgroundImage: `url('/photos/post/whistler-luxury-home-marketing-strategies/1.png')`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          ></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black to-black/70 z-0"></div>
+          <div className="container max-w-screen-xl mx-auto px-4 relative z-10">
+            <div className="max-w-3xl">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                Whistler Luxury Home Marketing Strategies for High-End Listings
               </h1>
-              <div className="flex items-center text-sm text-gray-600 mb-8">
-                <span>Published on</span>
-                <span className="ml-1 font-medium">{publishDate}</span>
-              </div>
-            </div>
-
-            {/* Blog Content */}
-            <div className="prose prose-lg max-w-none">
-              <div className="bg-gray-50 p-6 rounded-lg mb-8">
-                <h2 className="text-xl font-semibold mb-2">Summary</h2>
-                <p className="text-gray-700">
-                  Celebrities spotted in Whistler Canada at AceHost Whistler
-                  Luxury Property Rentals
-                </p>
-              </div>
-
-              <div className="float-right ml-4 mb-4 w-1/2">
-                <Image
-                  src="/photos/post/whistler-luxury-home-marketing-strategies/1.png"
-                  alt="Creators collaborating with AceHost Whistler"
-                  width={600}
-                  height={350}
-                  layout="responsive"
-                  className="rounded-lg"
-                />
-              </div>
-
-              <p className="text-xl leading-relaxed">
-                AceHost's commitment to creative marketing has allowed us
-                to differentiate ourselves within the industry. By capitalizing
-                on influencer collaborations, Instagram presence, and the
-                endorsement of individuals within the entertainment industry, we
-                have managed to elevate our brand and provide additional
-                exposure for our homeowners. This approach is just one example
-                of the numerous personalized marketing benefits we offer at
-                AceHost, ensuring the success and satisfaction of both our
-                guests and homeowners.
-              </p>
-
-              <p className="font-medium text-xl mt-6 mb-8">
-                Have a look at some of (not all) the creators we have had the
-                pleasure of working with in the past.
-              </p>
-
-              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
-                Riverdale Main Cast: Lili Reinhart 26.8 Million, Camila Mendes
-                25.9 Million, Madelaine Petsch 25.2 Million, Vanessa Morgan: 9
-                Million
-              </h2>
-
-              <p>
-                We have partnered with the cast of the highly popular television
-                series, &quot;Riverdale.&quot; Since its premiere in 2017,
-                &quot;Riverdale&quot; has captivated audiences worldwide. The
-                show features exceptionally talented actors and actresses such
-                as Lili Reinhart, Camila Mendes, Madelaine Petsch, and Vanessa
-                Morgan, all of whom we have had the pleasure of hosting on
-                multiple occasions. With a vast fan base, &quot;Riverdale&quot;
-                has become one of Netflix's highest-rated shows. Lili
-                Reinhart, Camila Mendes, and Vanessa Morgan boast a collective
-                following of just under 100 million on their Instagram accounts
-                alone. Their collaborative efforts with AceHost have resulted in
-                significant attention for our properties.
-              </p>
-
-              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
-                Justin Tse: Youtube 821k, Instagram 140k
-              </h2>
-
-              <p>
-                Justin Tse, renowned for his captivating photography and
-                filmmaking skills, and known for showcasing the prestigious
-                $250,000,000 property listing in NY, has partnered with
-                Mercedes, Audi, Four Seasons, etc… and now Acehost to create a
-                marketing video showcasing our luxury homes in Whistler. Using
-                his expertise in creating engaging content, Justin captured
-                stunning footage of the accommodations, highlighting their
-                unique features, breathtaking views, and our outdoor excursions-
-                including one of our most sought after helicopter tour. We
-                highly recommend watching his video tour, which perfectly
-                captures the essence of luxury.
-              </p>
-
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-home-marketing-strategies/5.png"
-                  alt="Justin Tse creating content for AceHost"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
-              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
-                Francesca Farago and Jessi Sullivan: Instagram 6.2 Million and
-                406,000
-              </h2>
-
-              <p>
-                Francesca Farago and Jessi Sullivan, popular lifestyle
-                influencers, have also collaborated with us, providing valuable
-                exposure to their vast audience. Check out one of our favourite
-                posts they made, receiving 1.5 million views and counting.
-              </p>
-
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-home-marketing-strategies/Hero.png"
-                  alt="Francesca Farago and Jessi Sullivan in Whistler"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
-              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
-                Kylie Rae Instagram 2.3 Million, Ayla Woodruff Instagram 1.5M,
-                Franny Arrieta Instagram 467k, Fiona Barron Instagram 1 million,
-                Corin Clark Instagram 191k
-              </h2>
-
-              <p>
-                Last winter we had the pleasure of hosting a group from L.A.
-                known for their lifestyle and fashion content, who have gained
-                massive fan-followings in LA and all around North America. With
-                this group we gained exposure in the Hollywood/LA area,
-                attracting a wide audience range amongst the different accounts.
-                The girls enjoyed their time in Whistler and were spotted on the
-                slopes, snowmobiling, Bearfoot Bistro, and at The Longhorn
-                Saloon.
-              </p>
-
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-home-marketing-strategies/3.jpg"
-                  alt="LA influencers at AceHost property"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
-              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
-                PropertyGrams 294k Youtube, 381k Instagram
-              </h2>
-
-              <p>
-                To enhance the visibility of our homeowners' properties,
-                AceHost has established a valuable partnership with Property
-                Grams, an Instagram profile exclusively dedicated to showcasing
-                the breathtaking visuals of our luxurious listings. The
-                PropertyGrams team enjoyed their time (mostly filming) just
-                before Christmas time in Whistler. Through this collaboration,
-                we have successfully reached a large and targeted audience, as
-                well as offering high quality home video tours for guests
-                considering booking.
-              </p>
-
-              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
-                <Image
-                  src="/photos/post/whistler-luxury-home-marketing-strategies/4.png"
-                  alt="PropertyGrams filming AceHost luxury properties"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
-              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
-                Luxury Listings: 3.3 Million Instagram
-              </h2>
-
-              <p>
-                Luxury Listings, a well-known platform for luxury property
-                enthusiasts, has stayed with us during their visits to Whistler.
-                Their memorable experiences have led to captivating posts that
-                highlight the extraordinary service and comfort AceHost
-                provides. Take a look at their video on our home page for an
-                immersive glimpse of our luxurious accommodations and concierge
-                services.
-              </p>
-
-              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
-                Mattih: 1.31 Million Youtube
-              </h2>
-
-              <p>
-                Matti, a famous YouTuber who has over 1 million followers made a
-                reel and Youtube video showcasing AceHosts popular luxury
-                rentals for our VIP clients. We look forward to having Matti
-                back soon for his birthday this December.
-              </p>
-
-              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
-                Emmett 1 million+ and Zach Moxley: 110k
-              </h2>
-
-              <p>
-                Emmet and Zach are a creative duo that collaborates on content
-                creation, specializing in aerial cinematography, as well as
-                creating commercials for many large lifestyle, product, and
-                travel/adventure companies. Together, they provide full-service
-                production and high-quality 6K aerial cinematography. Zach and
-                Emmet have created captivating visuals and drone shots for
-                select properties.
-              </p>
-
-              <p>
-                Other popular local influencers such as Strawberry Milkmob 2.3
-                Million Tiktok, and athletes such as Mark McMorris 812k
-                Instagram, have also been apart of Acehost Whistler marketing
-                collaborations and seen in AceHost luxury properties.
-              </p>
-
-              <p>
-                Not only does this style of marketing benefit with outreach by
-                offering our homes and services to their following, it also
-                establishes trust with our guests by showing public figures who
-                they may or may not recognize in the homes/experience they might
-                want to book. It also helps in ranking our website with real
-                natural traffic.
-              </p>
-
-              <div className="w-full my-10 rounded-lg overflow-hidden mx-auto" style={{ width: "40%" }}>
-                <Image
-                  src="/photos/post/whistler-luxury-home-marketing-strategies/6.jpg"
-                  alt="Strawberry Milk Mob in Altitude Retreat Estate"
-                  width={1200}
-                  height={600}
-                  layout="responsive"
-                  className="object-contain"
-                />
-              </div>
-
-              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
-                Benefits for Homeowners and AceHost
-              </h2>
-
-              <p>
-                Influencer and Celebrity marketing is not the main method of
-                exposure for bookings, it is an optional added bonus when
-                working with us. While it is understandable that not all
-                homeowners wish to have their properties featured on social
-                media, those who have chosen to do so have experienced
-                remarkable benefits. Through influencer collaborations, AceHost
-                has created heightened visibility and exposure for these
-                properties, resulting in increased bookings and rental demand.
-                This mutually beneficial approach allows AceHost to promote our
-                listings while also providing indirect benefits to our
-                homeowners.
-              </p>
-            </div>
-
-            {/* More Articles Section - Updated to use BlogRelatedArticles component */}
-            <BlogRelatedArticles currentArticleLink={currentArticleLink} />
-
-            {/* Contact Section */}
-            <div className="bg-gray-100 p-8 rounded-xl my-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                Get in-touch with us!
-              </h2>
-              <Link
-                href="/contact"
-                className="inline-block bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors"
-              >
-                Contact Us
-              </Link>
+              <p className="text-gray-300 mb-4">Published on {publishDate}</p>
             </div>
           </div>
-        </main>
+        </section>
 
-        <Footer />
-      </div>
+        {/* Blog content */}
+        <section className="py-12 md:py-16">
+          <div className="container max-w-screen-xl mx-auto px-4">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+              {/* Main Content Area */}
+              <div className="lg:col-span-8">
+                {/* Summary section */}
+                <div className="mb-12 bg-blue-50 p-6 rounded-xl">
+                  <h2 className="text-2xl font-bold mb-4">Summary</h2>
+                  <p className="mb-4">
+                    The Whistler luxury real estate market demands sophisticated marketing strategies to reach affluent buyers. This article explores effective approaches for marketing high-end properties in Whistler, from leveraging social media influencers to creating immersive content experiences that showcase the unique lifestyle and amenities of luxury mountain properties.
+                  </p>
+                  <p>
+                    Discover how top influencers like Ayla Woodruff and professional marketing techniques can elevate your property's visibility in this competitive landscape.
+                  </p>
+                </div>
+
+                {/* Main article content */}
+                <div className="prose prose-lg max-w-none">
+                  <h2>Influencer Marketing for Luxury Properties</h2>
+                  <p>
+                    In the competitive Whistler luxury real estate market, traditional advertising alone often falls short. Influencer marketing has emerged as a powerful strategy to showcase high-end properties to qualified audiences through trusted voices.
+                  </p>
+
+                  <div className="my-8 relative rounded-xl overflow-hidden">
+                    <Image
+                      src="/photos/post/whistler-luxury-home-marketing-strategies/2.png"
+                      alt="Luxury Whistler Property Marketing"
+                      width={800}
+                      height={500}
+                      className="w-full h-auto"
+                    />
+                  </div>
+
+                  <p>
+                    Luxury property marketing through influencers allows potential buyers to envision the lifestyle associated with the property, not just its physical features. This approach is particularly effective for reaching international clients who may be looking for second homes or investment properties in Whistler's premier neighborhoods.
+                  </p>
+
+                  <h3>Top Influencers in Whistler Luxury Real Estate</h3>
+                  <p>
+                    Several influencers have made significant impacts in marketing Whistler's luxury properties:
+                  </p>
+
+                  <div className="my-8 relative rounded-xl overflow-hidden">
+                    <Image
+                      src="/photos/post/whistler-luxury-home-marketing-strategies/3.png"
+                      alt="Whistler Luxury Home Marketing"
+                      width={800}
+                      height={500}
+                      className="w-full h-auto"
+                    />
+                  </div>
+
+                  <h2>Professional Photography and Virtual Tours</h2>
+                  <p>
+                    High-quality visual content remains the cornerstone of luxury property marketing. Professional photography that captures both the architectural details and the surrounding natural beauty of Whistler is essential for high-end listings.
+                  </p>
+
+                  <div className="my-8 relative rounded-xl overflow-hidden">
+                    <Image
+                      src="/photos/post/whistler-luxury-home-marketing-strategies/4.png"
+                      alt="Professional Photography for Luxury Homes"
+                      width={800}
+                      height={500}
+                      className="w-full h-auto"
+                    />
+                  </div>
+
+                  <p>
+                    Virtual tours and 3D walkthroughs have become increasingly important, especially for international buyers who may not be able to visit properties in person initially. These immersive experiences allow potential buyers to explore every aspect of a property remotely, from the grand entrance to the mountain views from the master suite.
+                  </p>
+
+                  <h2>Exclusive Events and Private Viewings</h2>
+                  <p>
+                    Creating exclusive events around property viewings can generate buzz and attract qualified buyers. From wine tastings to private chef experiences within the property, these events showcase the home's entertainment potential while creating memorable experiences for prospective buyers.
+                  </p>
+
+                  <div className="my-8 relative rounded-xl overflow-hidden">
+                    <Image
+                      src="/photos/post/whistler-luxury-home-marketing-strategies/5.png"
+                      alt="Exclusive Property Viewing Events"
+                      width={800}
+                      height={500}
+                      className="w-full h-auto"
+                    />
+                  </div>
+
+                  <p>
+                    Private viewings with personalized touches, such as welcome gifts or curated information packets about Whistler's luxury amenities, can make potential buyers feel valued and help them connect emotionally with the property.
+                  </p>
+
+                  <h2>Targeted Digital Marketing</h2>
+                  <p>
+                    While broad marketing has its place, the luxury market demands precision. Targeted digital campaigns that reach high-net-worth individuals with interests in skiing, mountain living, or investment properties yield better results than general advertising.
+                  </p>
+
+                  <div className="my-8 relative rounded-xl overflow-hidden">
+                    <Image
+                      src="/photos/post/whistler-luxury-home-marketing-strategies/6.png"
+                      alt="Digital Marketing for Luxury Properties"
+                      width={800}
+                      height={500}
+                      className="w-full h-auto"
+                    />
+                  </div>
+
+                  <p>
+                    Platforms like LinkedIn and Instagram offer sophisticated targeting options that allow marketers to reach specific demographics likely to be interested in Whistler's luxury properties. Custom audience creation based on income levels, interests, and previous engagement with luxury content ensures marketing dollars are spent efficiently.
+                  </p>
+
+                  <h2>Conclusion</h2>
+                  <p>
+                    Marketing luxury properties in Whistler requires a multi-faceted approach that emphasizes exclusivity, lifestyle, and personalization. By combining influencer partnerships, professional visual content, exclusive events, and targeted digital strategies, property marketers can effectively reach qualified buyers in this competitive market.
+                  </p>
+                  <p>
+                    With the right marketing strategy, Whistler's most exceptional properties can attract not just buyers, but individuals who truly appreciate the unique mountain lifestyle and amenities that make these homes extraordinary investments.
+                  </p>
+                </div>
+
+                {/* Contact section */}
+                <div className="mt-12 p-8 bg-gray-100 rounded-xl">
+                  <h3 className="text-2xl font-bold mb-4">Want to learn more?</h3>
+                  <p className="mb-6">
+                    Contact our team to discover how we can help market your luxury property in Whistler or find your dream mountain home.
+                  </p>
+                  <Link
+                    href="/contact"
+                    className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300"
+                  >
+                    Get in Touch
+                  </Link>
+                </div>
+              </div>
+
+              {/* Sidebar */}
+              <div className="lg:col-span-4">
+                <div className="sticky top-24">
+                  <div className="bg-gray-50 p-6 rounded-xl mb-8">
+                    <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul className="space-y-2">
+                      <li>
+                        <Link
+                          href="/"
+                          className="text-blue-600 hover:text-blue-800 font-medium"
+                        >
+                          Home
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/properties"
+                          className="text-blue-600 hover:text-blue-800 font-medium"
+                        >
+                          Luxury Properties For Rent
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/concierge-service"
+                          className="text-blue-600 hover:text-blue-800 font-medium"
+                        >
+                          VIP Concierge Services
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/list-property"
+                          className="text-blue-600 hover:text-blue-800 font-medium"
+                        >
+                          List Your Property
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/our-story"
+                          className="text-blue-600 hover:text-blue-800 font-medium"
+                        >
+                          Our Story
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/contact"
+                          className="text-blue-600 hover:text-blue-800 font-medium"
+                        >
+                          Contact Us
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Articles */}
+        <BlogRelatedArticles currentArticleLink={currentArticleLink} />
+
+        {/* Contact CTA */}
+        <section className="py-16 bg-blue-600">
+          <div className="container max-w-screen-xl mx-auto px-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to find your luxury Whistler home?
+            </h2>
+            <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
+              Our team specializes in Whistler's premium real estate market. Let us help you find or market your perfect mountain property.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-block bg-white text-blue-600 font-medium py-3 px-8 rounded-lg hover:bg-blue-50 transition duration-300"
+            >
+              Contact Us Today
+            </Link>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
     </>
   );
 }

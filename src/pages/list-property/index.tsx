@@ -745,8 +745,8 @@ const ListProperty = () => {
                     "Sending..."
                   ) : (
                     <>
-                      <span>Submit</span>
-                      <ArrowRight className="ml-3 h-5 w-5" />
+                  <span>Submit</span>
+                  <ArrowRight className="ml-3 h-5 w-5" />
                     </>
                   )}
                 </button>

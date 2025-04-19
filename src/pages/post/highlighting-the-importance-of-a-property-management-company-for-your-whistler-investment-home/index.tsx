@@ -9,7 +9,7 @@ import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 
 const PropertyManagementBlog = () => {
   const currentArticleLink = "/post/highlighting-the-importance-of-a-property-management-company-for-your-whistler-investment-home";
-  
+
   return (
     <>
       <Head>
@@ -284,6 +284,15 @@ const PropertyManagementBlog = () => {
                   trends, occupancy rates, and seasonal demand, ensuring you
                   make an informed decision.
                 </p>
+
+                <div className="relative aspect-video rounded-lg overflow-hidden">
+                  <Image
+                    src="/photos/properties/Two Cedars New/24-2934 Ancient Cedars-24.jpg"
+                    alt="Luxury Whistler property investment opportunity"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
               </div>
 
               <div className="bg-gray-50 border border-gray-200 rounded-xl shadow-sm p-8 mb-16">

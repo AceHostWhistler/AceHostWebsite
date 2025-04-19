@@ -9,17 +9,54 @@ import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 export default function BlogPost() {
   const publishDate = "August 27, 2024";
   const currentArticleLink = "/post/whistlers-dream-rental-homes";
+  
+  // Structured Data for Article
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Whistler's Dream Rental Homes: Top 5 Luxury Vacation Properties",
+    "image": "https://acehost.ca/photos/post/whistlers-dream-rental-homes/hero.jpg",
+    "datePublished": "2024-08-27T08:00:00+00:00",
+    "dateModified": "2024-08-27T08:00:00+00:00", 
+    "author": {
+      "@type": "Organization",
+      "name": "AceHost Whistler",
+      "url": "https://acehost.ca"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AceHost Whistler",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://acehost.ca/logo.png"
+      }
+    },
+    "description": "Explore Whistler's most exclusive luxury vacation rentals, from ski-in/ski-out chalets to stunning village properties. Discover what makes these 5 properties the ultimate mountain getaway."
+  };
 
   return (
     <>
       <Head>
         <title>
-          Top 5 Luxury Vacation Rental Homes/airbnbs in Whistler Canada |
-          AceHost
+          Whistler's Dream Rental Homes: Top 5 Luxury Vacation Properties | AceHost
         </title>
         <meta
           name="description"
-          content="Discover the top 5 luxury rental homes in Whistler that promise an extraordinary vacation experience. Handpicked by AceHost for an unforgettable Whistler getaway."
+          content="Explore Whistler's most exclusive luxury vacation rentals, from ski-in/ski-out chalets to stunning village properties. Discover what makes these 5 properties the ultimate mountain getaway."
+        />
+        <meta property="og:title" content="Whistler's Dream Rental Homes: Top 5 Luxury Vacation Properties | AceHost" />
+        <meta property="og:description" content="Explore Whistler's most exclusive luxury vacation rentals, from ski-in/ski-out chalets to stunning village properties. Discover what makes these 5 properties the ultimate mountain getaway." />
+        <meta property="og:image" content="https://acehost.ca/photos/post/whistlers-dream-rental-homes/hero.jpg" />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Whistler's Dream Rental Homes: Top 5 Luxury Vacation Properties | AceHost" />
+        <meta name="twitter:description" content="Explore Whistler's most exclusive luxury vacation rentals, from ski-in/ski-out chalets to stunning village properties. Discover what makes these 5 properties the ultimate mountain getaway." />
+        <meta name="twitter:image" content="https://acehost.ca/photos/post/whistlers-dream-rental-homes/hero.jpg" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
         />
       </Head>
 
@@ -31,7 +68,7 @@ export default function BlogPost() {
             {/* Blog Header */}
             <div className="mb-10">
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Top 5 Luxury Vacation Rental Homes/airbnbs in Whistler Canada
+                Whistler's Dream Rental Homes: Top 5 Luxury Vacation Properties
               </h1>
               <div className="flex items-center text-sm text-gray-600 mb-8">
                 <span className="mr-4">Published: {publishDate}</span>
@@ -107,7 +144,17 @@ export default function BlogPost() {
                 long day on the slopes.
               </p>
 
-              <p className="text-blue-600 font-medium mt-2 mb-6">Airbnb Link</p>
+              <p className="text-blue-600 font-medium mt-2 mb-6">
+                <Link 
+                  href="/listings/slopeside-villa-kadenwood" 
+                  className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  View Property Details
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </Link>
+              </p>
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
@@ -151,7 +198,17 @@ export default function BlogPost() {
                 enhances your stay with personalized service.
               </p>
 
-              <p className="text-blue-600 font-medium mt-2 mb-6">Airbnb Link</p>
+              <p className="text-blue-600 font-medium mt-2 mb-6">
+                <Link 
+                  href="/listings/two-cedars-kadenwood" 
+                  className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  View Property Details
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </Link>
+              </p>
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
@@ -193,7 +250,17 @@ export default function BlogPost() {
                 stay truly extraordinary.
               </p>
 
-              <p className="text-blue-600 font-medium mt-2 mb-6">Airbnb Link</p>
+              <p className="text-blue-600 font-medium mt-2 mb-6">
+                <Link 
+                  href="/listings/altitude-retreat-kadenwood" 
+                  className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  View Property Details
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </Link>
+              </p>
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
@@ -253,7 +320,17 @@ export default function BlogPost() {
                 experience.
               </p>
 
-              <p className="text-blue-600 font-medium mt-2 mb-6">Airbnb Link</p>
+              <p className="text-blue-600 font-medium mt-2 mb-6">
+                <Link 
+                  href="/listings/chalet-la-forja-kadenwood" 
+                  className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  View Property Details
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </Link>
+              </p>
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
@@ -312,7 +389,17 @@ export default function BlogPost() {
                 comfortable and memorable stay in Whistler.
               </p>
 
-              <p className="text-blue-600 font-medium mt-2 mb-6">Airbnb Link</p>
+              <p className="text-blue-600 font-medium mt-2 mb-6">
+                <Link 
+                  href="/listings/falcon-blueberry-drive" 
+                  className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  View Property Details
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </Link>
+              </p>
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
@@ -362,7 +449,17 @@ export default function BlogPost() {
                 retreat.
               </p>
 
-              <p className="text-blue-600 font-medium mt-2 mb-6">Airbnb Link</p>
+              <p className="text-blue-600 font-medium mt-2 mb-6">
+                <Link 
+                  href="/listings/heron-views-whistler-village" 
+                  className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  View Property Details
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </Link>
+              </p>
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
@@ -414,7 +511,17 @@ export default function BlogPost() {
                 country on it and place it in the wine rack.
               </p>
 
-              <p className="text-blue-600 font-medium mt-2 mb-6">Airbnb Link</p>
+              <p className="text-blue-600 font-medium mt-2 mb-6">
+                <Link 
+                  href="/listings/whistler-village-views-luxury-2-5-bedroom" 
+                  className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  View Property Details
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </Link>
+              </p>
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
@@ -457,7 +564,17 @@ export default function BlogPost() {
                 the perfect ambiance for your Whistler retreat
               </p>
 
-              <p className="text-blue-600 font-medium mt-2 mb-6">Airbnb Link</p>
+              <p className="text-blue-600 font-medium mt-2 mb-6">
+                <Link 
+                  href="/listings/whispering-pines-ski-in-ski-out" 
+                  className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  View Property Details
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </Link>
+              </p>
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
@@ -501,7 +618,17 @@ export default function BlogPost() {
                 located off the living space, features a shower and bathtub
               </p>
 
-              <p className="text-blue-600 font-medium mt-2 mb-6">Airbnb Link</p>
+              <p className="text-blue-600 font-medium mt-2 mb-6">
+                <Link 
+                  href="/listings/ski-in-ski-out-walk-to-lifts-2-bed" 
+                  className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  View Property Details
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </Link>
+              </p>
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
@@ -542,7 +669,17 @@ export default function BlogPost() {
                 also only a short 2-3 minute walk away.
               </p>
 
-              <p className="text-blue-600 font-medium mt-2 mb-6">Airbnb Link</p>
+              <p className="text-blue-600 font-medium mt-2 mb-6">
+                <Link 
+                  href="/listings/dream-log-chalet-5-bedroom-4-bath-creekside" 
+                  className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  View Property Details
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </Link>
+              </p>
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
