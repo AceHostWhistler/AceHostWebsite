@@ -11,6 +11,14 @@ export interface Article {
 // All blog articles data with proper image paths
 export const allArticles: Article[] = [
   {
+    title: "Whistler's Best Luxury Airbnb Rental chalets. Where Large Luxury Vacation Homes Redefine Your Mountain Getaway",
+    category: "Luxury Properties",
+    description: "Discover Whistler's most exclusive luxury vacation rental homes, from ski-in/ski-out chalets to private butler service. Experience the ultimate mountain getaway with AceHost's premium properties.",
+    readTime: "15 min read",
+    link: "/post/whistlers-crown-jewels-where-luxury-rental-homes-redefine-the-mountain-getaway",
+    coverImage: "/photos/post/whistlers-crown-jewels-where-luxury-rental-homes-redefine-the-mountain-getaway/hero.jpg",
+  },
+  {
     title: "Whistler's Dream Rental Homes: Top 5 Luxury Vacation Properties",
     category: "Luxury Properties",
     description: "Explore Whistler's most exclusive luxury vacation rentals, from ski-in/ski-out chalets to stunning village properties. Discover what makes these 5 properties the ultimate mountain getaway.",
