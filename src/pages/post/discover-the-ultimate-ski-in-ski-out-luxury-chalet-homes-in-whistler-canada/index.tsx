@@ -323,6 +323,163 @@ export default function BlogPost() {
                 </Link>
               </div>
 
+              <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+                Panoramic Estate | Kadenwood
+              </h3>
+              <p>
+                This stunning mountain estate in Kadenwood offers unparalleled luxury with over
+                6,500 sq. ft. of living space. Accommodating up to 17 guests across 8 bedrooms,
+                this architectural masterpiece features breathtaking panoramic views, high-end finishes,
+                ski-in/ski-out access via the private Kadenwood gondola, a home theater, multiple
+                fireplaces, and a spacious outdoor hot tub perfect for après-ski relaxation.
+              </p>
+              <div className="mt-4 mb-8">
+                <Link
+                  href="/listings/panoramic-estate-kadenwood"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800"
+                >
+                  View Panoramic Estate
+                  <svg
+                    className="ml-2 w-4 h-4"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </Link>
+              </div>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+                Two Cedars | Kadenwood
+              </h3>
+              <p>
+                Set in exclusive Kadenwood, Two Cedars is a luxurious 7-bedroom, 8.5-bathroom
+                property that comfortably accommodates 10 guests. This magnificent 8,000+ square foot
+                mountain retreat offers true ski-in/ski-out access, breathtaking panoramic views, and
+                elegant design throughout. Features include soaring ceilings, floor-to-ceiling windows,
+                multiple fireplaces, a gourmet kitchen, home theater, and a private hot tub.
+              </p>
+              <div className="mt-4 mb-8">
+                <Link
+                  href="/listings/two-cedars-kadenwood"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800"
+                >
+                  View Two Cedars
+                  <svg
+                    className="ml-2 w-4 h-4"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </Link>
+              </div>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+                Altitude Retreat | Kadenwood | Private Butler
+              </h3>
+              <p>
+                This extraordinary 10,000+ sq. ft. mansion in Kadenwood accommodates up to 
+                18 guests in the ultimate luxury. Featuring ski-in/ski-out access via the private 
+                Kadenwood gondola, Altitude Retreat offers 8 bedrooms, a fully equipped gym, 
+                sauna, steam room, private theater, and multiple living spaces for entertaining. 
+                The property includes the services of a private butler to ensure a truly 
+                exceptional stay experience.
+              </p>
+              <div className="mt-4 mb-8">
+                <Link
+                  href="/listings/altitude-retreat-kadenwood"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800"
+                >
+                  View Altitude Retreat
+                  <svg
+                    className="ml-2 w-4 h-4"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </Link>
+              </div>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+                Marquise 2-Bed | More Affordable Ski-in/Ski-out Option
+              </h3>
+              <p>
+                For those seeking a more affordable ski-in/ski-out experience without 
+                sacrificing quality, this luxurious 2-bedroom condo in the Marquise 
+                offers the perfect solution. Located walking distance to Whistler Village, 
+                this property features a brand-new Puffy Royal King bed, Queen pull-out couch, 
+                modern amenities, and access to building facilities including a heated outdoor 
+                pool, hot tub, and gym. Ski directly to Blackcomb gondola in winter or enjoy a 
+                scenic 15-minute walk to the village in summer.
+              </p>
+              <div className="mt-4 mb-8">
+                <Link
+                  href="/listings/marquise-2-bed-ski-in-ski-out"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800"
+                >
+                  View Marquise Property
+                  <svg
+                    className="ml-2 w-4 h-4"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </Link>
+              </div>
+
+              <div className="bg-blue-50 p-6 rounded-lg my-8">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  More Ski-in/Ski-out Options Available
+                </h3>
+                <p className="text-gray-700 mb-4">
+                  AceHost maintains an exclusive portfolio of additional ski-in/ski-out properties 
+                  that may not be listed on our website. Contact our team directly to discuss your 
+                  specific requirements, and we'll help you find the perfect property for your 
+                  Whistler vacation.
+                </p>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                >
+                  Contact Us For More Options
+                  <svg
+                    className="ml-2 w-4 h-4"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </Link>
+              </div>
+
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 Experience True Luxury with AceHost Whistler
               </h2>
