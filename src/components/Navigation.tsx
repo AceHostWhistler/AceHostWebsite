@@ -1,10 +1,21 @@
-import { useRouter } from "next/router";
-import { useState, useRef, useEffect } from "react";
-import { Menu, X, ChevronDown, ChevronRight, Play, Info, Home } from "lucide-react";
-import Image from "next/image";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useTranslation } from "next-i18next";
+import {
+  Menu,
+  ChevronDown,
+  ChevronRight,
+  X,
+  Globe,
+  Instagram,
+  Facebook,
+  MessageCircle,
+} from "lucide-react";
 import LanguageSelector from "./LanguageSelector";
+import MobileMenu from "./MobileMenu";
+import { useRouter } from "next/router";
+import { allArticles } from "@/utils/blogArticles";
 
 interface NavigationProps {
   currentPage?: string;
@@ -149,44 +160,47 @@ const Navigation = ({
                     <div className="grid grid-cols-12 gap-6">
                       {/* Left column */}
                       <div className="col-span-3">
-                        <h3 className="text-xs font-semibold mb-3 pb-2 border-b border-gray-200">
+                        <h3 className="text-sm font-semibold mb-3 pb-2 border-b border-gray-200">
                           Featured Blog Article
                         </h3>
                         <div className="mb-6">
                           <div className="mb-3 rounded-md overflow-hidden">
-                            <Image
-                              src="/photos/homepage/resources/FindYour.jpg"
-                              alt="Luxury chalet"
-                              width={300}
-                              height={150}
-                              className="w-full h-36 object-cover"
-                            />
+                            <Link href={allArticles[0].link} onClick={() => setShowResourcesDropdown(false)}>
+                              <Image
+                                src={allArticles[0].coverImage}
+                                alt={allArticles[0].title}
+                                width={300}
+                                height={150}
+                                className="w-full h-36 object-cover"
+                              />
+                            </Link>
                           </div>
-                          <h4 className="text-base font-bold leading-tight">
-                            Find Your Dream Long-Term Luxury Rental in Whistler
-                            with AceHost
-                          </h4>
+                          <Link href={allArticles[0].link} onClick={() => setShowResourcesDropdown(false)}>
+                            <h4 className="text-base font-bold leading-tight hover:text-blue-600 transition-colors duration-300">
+                              {allArticles[0].title}
+                            </h4>
+                          </Link>
                         </div>
 
-                        <h3 className="text-xs font-semibold mb-2 pb-2 border-b border-gray-200">
+                        <h3 className="text-sm font-semibold mb-3 pb-2 border-b border-gray-200">
                           More Resources
                         </h3>
-                        <ul className="space-y-1">
+                        <ul className="space-y-2">
                           <li className="flex items-center">
-                            <ChevronRight className="h-3 w-3 text-gray-400 mr-1" />
+                            <ChevronRight className="h-4 w-4 text-gray-400 mr-1" />
                             <Link
                               href="/blogs"
-                              className="text-xs text-gray-600 hover:text-gray-900"
+                              className="text-sm text-gray-600 hover:text-gray-900 hover:underline py-1"
                               onClick={() => setShowResourcesDropdown(false)}
                             >
                               All Blogs
                             </Link>
                           </li>
                           <li className="flex items-center">
-                            <ChevronRight className="h-3 w-3 text-gray-400 mr-1" />
+                            <ChevronRight className="h-4 w-4 text-gray-400 mr-1" />
                             <Link
                               href="/faq"
-                              className="text-xs text-gray-600 hover:text-gray-900"
+                              className="text-sm text-gray-600 hover:text-gray-900 hover:underline py-1"
                               onClick={() => setShowResourcesDropdown(false)}
                             >
                               FAQ's
@@ -197,7 +211,7 @@ const Navigation = ({
 
                       {/* Middle column - Blog Posts */}
                       <div className="col-span-6 border-l border-gray-100 pl-6">
-                        <h3 className="text-xs font-semibold mb-3 pb-2 border-b border-gray-200">
+                        <h3 className="text-sm font-semibold mb-3 pb-2 border-b border-gray-200">
                           More Blogs
                         </h3>
 
@@ -291,7 +305,7 @@ const Navigation = ({
 
                       {/* Right column - YouTube Videos */}
                       <div className="col-span-3 border-l border-gray-100 pl-6">
-                        <h3 className="text-xs font-semibold mb-3 pb-2 border-b border-gray-200">
+                        <h3 className="text-sm font-semibold mb-3 pb-2 border-b border-gray-200">
                           YouTube Videos
                         </h3>
 
@@ -303,7 +317,7 @@ const Navigation = ({
                             target="_blank"
                             className="block group hover:bg-gray-50 p-2 rounded-lg transition-all duration-300"
                           >
-                            <div className="w-full h-16 rounded-md overflow-hidden mb-1 relative">
+                            <div className="w-full h-20 rounded-md overflow-hidden mb-1 relative">
                               <iframe
                                 width="100%"
                                 height="100%"
@@ -329,12 +343,12 @@ const Navigation = ({
                             target="_blank"
                             className="block group hover:bg-gray-50 p-2 rounded-lg transition-all duration-300"
                           >
-                            <div className="w-full h-16 rounded-md overflow-hidden mb-1 relative">
+                            <div className="w-full h-20 rounded-md overflow-hidden mb-1 relative">
                               <iframe
                                 width="100%"
                                 height="100%"
                                 src="https://www.youtube.com/embed/GOzVT9x08sc?autoplay=1&mute=1&playsinline=1&loop=1&playlist=GOzVT9x08sc&controls=0&showinfo=0&modestbranding=1"
-                                title="Whistler Private Chef Experience"
+                                title="Luxury Chalet Tour"
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 className="w-full h-full pointer-events-none"
@@ -342,10 +356,10 @@ const Navigation = ({
                               <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity"></div>
                             </div>
                             <h5 className="text-xs font-medium leading-tight mt-1 group-hover:text-blue-600 transition-colors">
-                              Whistler Private Chef Experience
+                              Tour a Luxury Ski Chalet in Whistler
                             </h5>
                             <p className="text-[10px] text-gray-500">
-                              Luxury home all inclusive chef walkthrough
+                              AceHost Chalet La Forja Showcase
                             </p>
                           </Link>
 
