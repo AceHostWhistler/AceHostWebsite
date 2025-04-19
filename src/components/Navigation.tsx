@@ -13,7 +13,6 @@ import {
   MessageCircle,
 } from "lucide-react";
 import LanguageSelector from "./LanguageSelector";
-import MobileMenu from "./MobileMenu";
 import { useRouter } from "next/router";
 import { allArticles } from "@/utils/blogArticles";
 
