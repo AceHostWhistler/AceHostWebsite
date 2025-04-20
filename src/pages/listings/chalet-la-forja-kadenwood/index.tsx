@@ -179,6 +179,7 @@ const ChaletLaForja = () => {
                   allow="autoplay; fullscreen; picture-in-picture"
                   allowFullScreen
                   title="Chalet La Forja Property Walkthrough"
+                  loading="lazy"
                 ></iframe>
               </div>
             </div>

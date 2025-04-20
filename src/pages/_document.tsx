@@ -12,11 +12,29 @@ export default function Document() {
           crossOrigin="anonymous"
         />
 
-        {/* Font optimization - using style tag instead of onLoad */}
+        {/* Font optimization - using preload instead of stylesheet to avoid render blocking */}
+        <link
+          rel="preload"
+          as="style"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+          fetchPriority="high"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
+          media="print"
+          onLoad={() => {
+            // @ts-ignore - This is a DOM element property
+            document.currentScript.media = 'all';
+          }}
         />
+        <noscript>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
+        </noscript>
+        
         <style
           dangerouslySetInnerHTML={{
             __html: `

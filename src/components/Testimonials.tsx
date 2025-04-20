@@ -208,7 +208,7 @@ const Testimonials = () => {
           </div>
 
           {/* Navigation Dots */}
-          <div className="flex justify-center mt-10 space-x-2">
+          <div className="flex justify-center mt-10 space-x-3">
             {[...Array(testimonials.length - 2)].map((_, idx) => (
               <button
                 key={idx}
@@ -216,13 +216,21 @@ const Testimonials = () => {
                   setCurrentIndex(idx);
                   setIsAutoPlaying(false);
                 }}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                className={`p-3 flex items-center justify-center ${
                   currentIndex === idx
-                    ? "bg-gray-800 w-6"
-                    : "bg-gray-300 hover:bg-gray-400"
+                    ? "min-w-[44px] min-h-[44px]"
+                    : "min-w-[44px] min-h-[44px]"
                 }`}
                 aria-label={`Go to slide ${idx + 1}`}
-              />
+              >
+                <span 
+                  className={`rounded-full transition-all duration-300 ${
+                    currentIndex === idx
+                      ? "bg-gray-800 w-6 h-3"
+                      : "bg-gray-300 hover:bg-gray-400 w-3 h-3"
+                  }`}
+                ></span>
+              </button>
             ))}
           </div>
 
