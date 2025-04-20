@@ -17,7 +17,7 @@ const PuntaMitaCasaJuntos = () => {
 
   // Property photos
   const photos = [
-    "/photos/properties/Punta Mita/DSC_1442 copy.jpg",
+    "/photos/properties/Punta Mita/DSC_1443 copy.jpg",
     "/photos/properties/Punta Mita/DSC_1473 copy.jpg",
     "/photos/properties/Punta Mita/DSC_1500 copy.jpg",
     "/photos/properties/Punta Mita/DSC_1615 copy.jpg",
@@ -98,12 +98,14 @@ const PuntaMitaCasaJuntos = () => {
               >
                 Details
               </Link>
-              <Link
-                href="/contact"
+              <a
+                href="https://www.airbnb.ca/rooms/561767409786915919?guests=1&adults=1&s=67&unique_share_id=7a6e7b88-1a8b-4352-acca-56db762955cd"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
               >
-                Book Now
-              </Link>
+                Book on Airbnb
+              </a>
             </div>
           </div>
 

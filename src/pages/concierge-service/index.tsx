@@ -1695,18 +1695,18 @@ const ConciergeService = () => {
           </section>
 
           {/* Contact Section */}
-          <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-500 text-white">
+          <section className="py-20 bg-white text-black border-t border-gray-100">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-              <h2 className="text-3xl font-bold mb-6">
+              <h2 className="text-3xl font-bold mb-6 tracking-tight">
                 Interested in Concierge Services?
               </h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+              <p className="text-xl mb-10 max-w-2xl mx-auto text-gray-700">
                 Let us enhance your Whistler experience with our premium
                 concierge services.
               </p>
               <Link
                 href="/contact"
-                className="inline-block bg-white text-blue-600 font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition duration-200 text-lg tracking-tight"
+                className="inline-block bg-white text-black font-medium px-8 py-4 rounded-full border border-gray-200 hover:border-gray-400 shadow-sm hover:shadow transition duration-200 text-lg"
               >
                 Contact Us
               </Link>

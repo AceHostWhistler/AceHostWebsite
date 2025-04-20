@@ -8,7 +8,6 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { FaBed, FaBath } from "react-icons/fa";
 import { X } from "lucide-react";
-import ContactForm from "@/components/ContactForm";
 
 const VancouverHouseCornerUnit = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -112,7 +111,7 @@ const VancouverHouseCornerUnit = () => {
                 Contact Us
               </Link>
               <a
-                href="https://www.airbnb.ca"
+                href="https://www.airbnb.ca/rooms/561767409786915919?guests=1&adults=1&s=67&unique_share_id=7a6e7b88-1a8b-4352-acca-56db762955cd"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
@@ -494,14 +493,6 @@ const VancouverHouseCornerUnit = () => {
                 <li>Close to public transit options</li>
                 <li>25-minute drive from Vancouver International Airport</li>
               </ul>
-            </div>
-
-            {/* Contact Form */}
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <h2 className="text-2xl font-bold mb-6 text-gray-900">
-                Contact Us About This Property
-              </h2>
-              <ContactForm property="Vancouver House Corner Unit" />
             </div>
           </div>
         </main>
