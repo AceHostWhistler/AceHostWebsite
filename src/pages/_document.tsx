@@ -77,12 +77,20 @@ export default function Document() {
         <link rel="preload" href="/logo.png" as="image" type="image/png" />
 
         {/* Add favicon */}
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta
+          name="google-site-verification"
+          content="UmTMmjHtW3Q_-Uzi8WXxrPgE2YBsv0GXgq0RXCQuB_Y"
+        />
         
         {/* Additional metadata for search engines */}
         <meta name="application-name" content="AceHost Whistler" />
         <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta name="theme-color" content="#ffffff" />
         
         {/* OpenGraph metadata for social sharing and search results */}
         <meta property="og:site_name" content="AceHost Whistler" />
