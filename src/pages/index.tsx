@@ -315,7 +315,7 @@ const Home = () => {
       id: "falcon-blueberry-drive",
       name: "Falcon | Blueberry Drive",
       link: "/listings/falcon-blueberry-drive",
-      image: "/photos/properties/Falcon/Falcon Cr-12.jpg",
+      image: "/photos/properties/Falcon/15-3595 Falcon Cres-15-.jpg",
       bedrooms: 7,
       beds: 9,
       guests: 15,

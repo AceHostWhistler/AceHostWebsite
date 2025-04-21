@@ -18,6 +18,7 @@ const HeronViewsWhistlerVillage = () => {
 
   // Property photos
   const photos = [
+    // Main featured photos (keep these at the top)
     "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05891.jpg",
     "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05831-Edit.jpg",
     "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05851.jpg",
@@ -26,6 +27,22 @@ const HeronViewsWhistlerVillage = () => {
     "/photos/properties/3445-Heron-Place/69-3445 Heron Place 55-Edit.jpg",
     "/photos/properties/3445-Heron-Place/67-3445 Heron Place 52-Edit.jpg",
     "/photos/properties/3445-Heron-Place/66-3445 Heron Place 51-Edit.jpg",
+    // New DJI drone shots
+    "/photos/properties/3445-Heron-Place/20241125 MM2 02 DJI_0463-Enhanced-NR.jpg",
+    "/photos/properties/3445-Heron-Place/20241125 MM2 02 DJI_0479-Enhanced-NR.jpg",
+    // New A7M3 shots
+    "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05676.jpg",
+    "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05691.jpg",
+    "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05696.jpg",
+    "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05701.jpg",
+    "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05706.jpg",
+    "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05711.jpg",
+    "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05731.jpg",
+    "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05780-Edit.jpg",
+    "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05791-Edit.jpg",
+    "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05811.jpg",
+    "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05846-Edit.jpg",
+    // Continue with existing photos
     "/photos/properties/3445-Heron-Place/65-3445 Heron Place 25-Edit.jpg",
     "/photos/properties/3445-Heron-Place/64-3445 Heron Place 24-Edit.jpg",
     "/photos/properties/3445-Heron-Place/63-3445 Heron Place 63.jpg",

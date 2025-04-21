@@ -13,7 +13,7 @@ const FalconBlueberryDrive = () => {
 
   // Property photos
   const images = [
-    "/photos/properties/Falcon/Falcon Cr-12.jpg",
+    "/photos/properties/Falcon/15-3595 Falcon Cres-15-.jpg",
     "/photos/properties/Falcon/Falcon Cr-13.jpg",
     "/photos/properties/Falcon/Falcon Cr-14.jpg",
     "/photos/properties/Falcon/Falcon Cr-15.jpg",
