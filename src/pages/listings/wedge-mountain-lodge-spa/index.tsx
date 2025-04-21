@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
@@ -7,6 +7,7 @@ import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { X } from "lucide-react";
+import LazyVimeoPlayer from "../../../components/LazyVimeoPlayer";
 
 const WedgeMountainLodgeSpa = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -177,15 +178,13 @@ const WedgeMountainLodgeSpa = () => {
 
             {/* Featured Video */}
             <div className="max-w-5xl mx-auto mb-10 sm:mb-16">
-              <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
-                <iframe
-                  src="https://player.vimeo.com/video/982089217"
-                  className="w-full h-full"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowFullScreen
-                  title="Wedge Mountain Lodge & Spa Property Walkthrough"
-                ></iframe>
-              </div>
+              <LazyVimeoPlayer 
+                videoId="982089217"
+                title="Wedge Mountain Lodge & Spa Property Walkthrough"
+                aspectRatio="video"
+                className="rounded-lg shadow-lg"
+                autoplay={false}
+              />
             </div>
           </div>
 

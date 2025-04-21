@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
@@ -8,6 +8,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { FaBed, FaBath } from "react-icons/fa";
 import { X } from "lucide-react";
+import LazyVimeoPlayer from "../../../components/LazyVimeoPlayer";
 
 const AltitudeRetreat = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -259,15 +260,13 @@ const AltitudeRetreat = () => {
 
             {/* Featured Video */}
             <div className="max-w-5xl mx-auto mb-10 sm:mb-16">
-              <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
-                <iframe
-                  src="https://player.vimeo.com/video/906479830"
-                  className="w-full h-full"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowFullScreen
-                  title="Altitude Retreat Property Walkthrough"
-                ></iframe>
-              </div>
+              <LazyVimeoPlayer 
+                videoId="906479830"
+                title="Altitude Retreat Property Walkthrough"
+                aspectRatio="video"
+                className="rounded-lg shadow-lg"
+                autoplay={false}
+              />
             </div>
           </div>
 

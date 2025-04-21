@@ -8,6 +8,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { FaBed, FaBath } from "react-icons/fa";
 import { X } from "lucide-react";
+import LazyVimeoPlayer from "../../../components/LazyVimeoPlayer";
 
 const ChaletLaForja = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -172,16 +173,13 @@ const ChaletLaForja = () => {
 
             {/* Featured Video */}
             <div className="max-w-5xl mx-auto mb-10 sm:mb-16">
-              <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
-                <iframe
-                  src="https://player.vimeo.com/video/922794848"
-                  className="w-full h-full"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowFullScreen
-                  title="Chalet La Forja Property Walkthrough"
-                  loading="lazy"
-                ></iframe>
-              </div>
+              <LazyVimeoPlayer 
+                videoId="922794848"
+                title="Chalet La Forja Property Walkthrough"
+                aspectRatio="video"
+                className="rounded-lg shadow-lg"
+                autoplay={false}
+              />
             </div>
           </div>
 
@@ -445,13 +443,13 @@ const ChaletLaForja = () => {
 
             <div className="max-w-7xl mx-auto py-6 px-4">
               <div className="relative aspect-video mb-8 rounded-lg overflow-hidden">
-                <iframe
-                  src="https://player.vimeo.com/video/922794848"
-                  className="w-full h-full"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowFullScreen
+                <LazyVimeoPlayer 
+                  videoId="922794848"
                   title="Chalet La Forja Property Walkthrough"
-                ></iframe>
+                  aspectRatio="video"
+                  className="w-full h-full"
+                  autoplay={false}
+                />
               </div>
 
               <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
