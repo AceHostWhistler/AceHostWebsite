@@ -17,6 +17,16 @@ const nextConfig = {
       },
     ];
   },
+  // Add redirects for broken links or SEO improvements
+  async redirects() {
+    return [
+      {
+        source: '/luxury-rentals',
+        destination: '/properties',
+        permanent: true,
+      },
+    ];
+  },
   images: {
     // Enable image optimization for better performance
     unoptimized: false,
