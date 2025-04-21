@@ -13,13 +13,35 @@ const FalconBlueberryDrive = () => {
 
   // Property photos
   const images = [
+    // Main featured photo - use this as the cover image
     "/photos/properties/Falcon/15-3595 Falcon Cres-15-.jpg",
+    // Original naming format
     "/photos/properties/Falcon/09-3595 Falcon Cres-09.jpg",
     "/photos/properties/Falcon/10-3595 Falcon Cres-10.jpg", 
     "/photos/properties/Falcon/11-3595 Falcon Cres-11.jpg",
     "/photos/properties/Falcon/12-3595 Falcon Cres-12.jpg",
     "/photos/properties/Falcon/13-3595 Falcon Cres-13.jpg",
-    "/photos/properties/Falcon/14-3595 Falcon Cres-14.jpg"
+    "/photos/properties/Falcon/14-3595 Falcon Cres-14.jpg",
+    "/photos/properties/Falcon/15-3595 Falcon Cres-15.jpg",
+    "/photos/properties/Falcon/16-3595 Falcon Cres-16.jpg",
+    "/photos/properties/Falcon/17-3595 Falcon Cres-17.jpg",
+    "/photos/properties/Falcon/18-3595 Falcon Cres-18.jpg",
+    "/photos/properties/Falcon/19-3595 Falcon Cres-19.jpg",
+    "/photos/properties/Falcon/20-3595 Falcon Cres-20.jpg",
+    "/photos/properties/Falcon/23-3595 Falcon Cres-23.jpg",
+    // Alternative naming format 
+    "/photos/properties/Falcon/Falcon Cr-12.jpg",
+    "/photos/properties/Falcon/Falcon Cr-13.jpg",
+    "/photos/properties/Falcon/Falcon Cr-14.jpg",
+    "/photos/properties/Falcon/Falcon Cr-15.jpg",
+    "/photos/properties/Falcon/Falcon Cr-16.jpg",
+    "/photos/properties/Falcon/Falcon Cr-17.jpg",
+    "/photos/properties/Falcon/Falcon Cr-18.jpg",
+    "/photos/properties/Falcon/Falcon Cr-19.jpg",
+    "/photos/properties/Falcon/Falcon Cr-22.jpg",
+    "/photos/properties/Falcon/Falcon Cr-24.jpg",
+    "/photos/properties/Falcon/Falcon Cr-25.jpg",
+    "/photos/properties/Falcon/Falcon Cr-26.jpg"
   ];
 
   return (
@@ -91,22 +113,34 @@ const FalconBlueberryDrive = () => {
 
           {/* Photo Grid */}
           <div className="max-w-7xl mx-auto px-4 mb-16">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-              {images.map((photo, index) => (
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+              {images.slice(0, 8).map((photo, index) => (
                 <div
                   key={index}
-                  className="aspect-[4/3] relative cursor-pointer"
+                  className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
                   onClick={() => setShowAllPhotos(true)}
                 >
                   <Image
                     src={photo}
                     alt={`Falcon Blueberry Drive interior ${index + 1}`}
                     fill
-                    className="object-cover"
+                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                    priority={index < 4}
                   />
                 </div>
               ))}
             </div>
+            {images.length > 8 && (
+              <div className="text-center mt-6">
+                <button
+                  onClick={() => setShowAllPhotos(true)}
+                  className="inline-flex items-center px-6 py-2 bg-black hover:bg-gray-900 text-white rounded-full text-sm font-medium"
+                >
+                  View all {images.length} photos
+                </button>
+              </div>
+            )}
           </div>
 
           {/* Property Description */}
@@ -287,29 +321,37 @@ const FalconBlueberryDrive = () => {
 
         {/* Photo Gallery Modal */}
         {showAllPhotos && (
-          <div className="fixed inset-0 z-50 bg-black overflow-y-auto">
-            <div className="sticky top-0 z-10 bg-black p-4 flex justify-between items-center">
-              <h2 className="text-xl text-white font-medium">
-                Falcon | Blueberry Drive - All Photos
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-90 overflow-y-auto">
+            <div className="sticky top-0 z-10 bg-black bg-opacity-75 p-4 flex justify-between items-center">
+              <h2 className="text-white text-xl font-medium">
+                Falcon | Blueberry Drive - All Photos ({images.length})
               </h2>
               <button
                 onClick={() => setShowAllPhotos(false)}
-                className="text-white hover:text-gray-300"
+                className="text-white hover:text-gray-300 bg-gray-900 px-4 py-2 rounded-full"
               >
                 Close
               </button>
             </div>
 
-            <div className="max-w-7xl mx-auto py-6 px-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="container mx-auto py-8 px-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {images.map((photo, index) => (
-                  <div key={index} className="relative aspect-[4/3]">
+                  <div
+                    key={index}
+                    className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden"
+                  >
                     <Image
                       src={photo}
                       alt={`Falcon Blueberry Drive photo ${index + 1}`}
                       fill
-                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover hover:opacity-95 transition-opacity"
                     />
+                    {/* Photo counter */}
+                    <div className="absolute bottom-2 right-2 bg-black bg-opacity-60 text-white text-xs px-2 py-1 rounded">
+                      {index + 1}/{images.length}
+                    </div>
                   </div>
                 ))}
               </div>
