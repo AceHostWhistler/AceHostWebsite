@@ -264,9 +264,9 @@ const Home = () => {
         "https://www.airbnb.ca/rooms/1104637821836596397?guests=1&adults=1&s=67&unique_share_id=67164555-993c-40dc-b188-23ffe0755654",
     },
     {
-      id: "heron-views",
+      id: "heron-views-whistler",
       name: "Heron Views | Whistler Village",
-      image: "/photos/properties/3445-Heron-Place/36-3445 Heron Place 36.jpg",
+      image: "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05891.jpg",
       guests: 11,
       bedrooms: 5,
       beds: 6,

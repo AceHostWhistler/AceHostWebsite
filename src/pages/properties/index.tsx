@@ -271,9 +271,9 @@ export default function Properties() {
             id: "heron-views-whistler-village",
             name: "Heron Views | Whistler Village",
             images: [
-              "/photos/properties/3445-Heron-Place/36-3445 Heron Place 36.jpg",
-              "/photos/properties/3445-Heron-Place/01-3445 Heron Place 01.jpg",
-              "/photos/properties/3445-Heron-Place/01-3445 Heron Place 01.jpg",
+              "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05891.jpg",
+              "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05831-Edit.jpg",
+              "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05851.jpg",
             ],
             guests: 11,
             bedrooms: 5,

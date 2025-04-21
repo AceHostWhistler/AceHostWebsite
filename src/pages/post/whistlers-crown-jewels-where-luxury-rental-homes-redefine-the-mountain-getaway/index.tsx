@@ -264,7 +264,7 @@ export default function BlogPost() {
               </h3>
               <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/Falcon/08-3595 Falcon Cres-08.jpg"
+                  src="/photos/properties/Falcon/15-3595 Falcon Cres-15-.jpg"
                   alt="Falcon luxury chalet in Blueberry Hill, Whistler"
                   fill
                   className="object-cover"
@@ -369,7 +369,7 @@ export default function BlogPost() {
               </h3>
               <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/3445-Heron-Place/01-3445 Heron Place 01.jpg"
+                  src="/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05891.jpg"
                   alt="Heron Views luxury chalet in Whistler Village area"
                   fill
                   className="object-cover"

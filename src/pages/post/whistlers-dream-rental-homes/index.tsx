@@ -403,7 +403,7 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/post/whistlers-dream-rental-homes/5.jpeg"
+                  src="/photos/properties/Falcon/15-3595 Falcon Cres-15-.jpg"
                   alt="Falcon in Blueberry"
                   fill
                   className="object-cover"
@@ -463,7 +463,7 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/post/whistlers-dream-rental-homes/6.jpg"
+                  src="/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05891.jpg"
                   alt="Heron Views in Whistler Village"
                   fill
                   className="object-cover"

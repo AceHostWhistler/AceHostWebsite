@@ -576,7 +576,7 @@ const LuxuryChristmasRentals = () => {
 
                 <div className="my-6 relative aspect-[16/9] rounded-xl overflow-hidden shadow-md">
                   <Image
-                    src="/photos/post/top-7-of-the-most-luxury-vacation-rental-homes-in-whistler-for-christmas-new-years/6.png"
+                    src="/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05891.jpg"
                     alt="Modern Alpine Residence"
                     fill
                     className="object-cover"
@@ -638,7 +638,7 @@ const LuxuryChristmasRentals = () => {
 
                 <div className="my-6 relative aspect-[16/9] rounded-xl overflow-hidden shadow-md">
                   <Image
-                    src="/photos/post/top-7-of-the-most-luxury-vacation-rental-homes-in-whistler-for-christmas-new-years/7.png"
+                    src="/photos/properties/Falcon/15-3595 Falcon Cres-15-.jpg"
                     alt="Luxury Ski Chalet"
                     fill
                     className="object-cover"

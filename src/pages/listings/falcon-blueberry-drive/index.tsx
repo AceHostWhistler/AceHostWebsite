@@ -12,8 +12,8 @@ const FalconBlueberryDrive = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
 
   // Property photos
-  const photos = [
-    "/photos/properties/Falcon/01-3595 Falcon Cres-01.jpg",
+  const images = [
+    "/photos/properties/Falcon/15-3595 Falcon Cres-15-.jpg",
     "/photos/properties/Falcon/02-3595 Falcon Cres-02.jpg",
     "/photos/properties/Falcon/03-3595 Falcon Cres-03.jpg",
     "/photos/properties/Falcon/04-3595 Falcon Cres-04.jpg",
@@ -108,7 +108,7 @@ const FalconBlueberryDrive = () => {
           {/* Photo Grid */}
           <div className="max-w-7xl mx-auto px-4 mb-16">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-              {photos.map((photo, index) => (
+              {images.map((photo, index) => (
                 <div
                   key={index}
                   className="aspect-[4/3] relative cursor-pointer"
@@ -141,7 +141,7 @@ const FalconBlueberryDrive = () => {
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                 <div className="relative aspect-[4/3] mb-2">
                   <Image
-                    src={photos[1]}
+                    src={images[1]}
                     alt="Falcon Blueberry Drive Interior"
                     fill
                     className="object-cover"
@@ -318,7 +318,7 @@ const FalconBlueberryDrive = () => {
 
             <div className="max-w-7xl mx-auto py-6 px-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {photos.map((photo, index) => (
+                {images.map((photo, index) => (
                   <div key={index} className="relative aspect-[4/3]">
                     <Image
                       src={photo}
