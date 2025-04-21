@@ -1200,7 +1200,7 @@ export default function Properties() {
               <h2 className="text-lg md:text-xl font-semibold mb-6 text-gray-700">
                 Ski-in/Ski-out Chalets, 7+ Bedroom Villas, and Exclusive Concierge Services
               </h2>
-              <div className="text-sm text-gray-600 mb-8 space-y-3 max-w-3xl mx-auto">
+              <div className="text-sm text-gray-600 mb-12 space-y-3 max-w-3xl mx-auto">
                 <p>
                   AceHost Whistler invites you to experience our curated collection of luxury vacation rentals including everything from ski-in/ski-out chalets to large 7- and 8-bedroom homes, ideal for group getaways, family holidays, or unforgettable corporate retreats. Whether you're visiting during Christmas, New Year's, peak winter ski season, or summer, we have stunning homes suited for you.
                 </p>
@@ -1214,10 +1214,10 @@ export default function Properties() {
                   All prices are in Canadian Dollars (CAD) & not in (USD).
                 </p>
               </div>
-              <div className="flex flex-wrap justify-center gap-2 mb-4">
+              <div className="flex flex-wrap justify-center gap-3 mb-6">
                 <button
                   onClick={() => setActiveCategory("all")}
-                  className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${
+                  className={`px-6 py-2.5 rounded-full text-sm font-medium transition-colors ${
                     activeCategory === "all"
                       ? "bg-black text-white"
                       : "bg-gray-200 text-gray-800 hover:bg-gray-300"
@@ -1227,7 +1227,7 @@ export default function Properties() {
                 </button>
                 <button
                   onClick={() => setActiveCategory("whistler")}
-                  className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${
+                  className={`px-6 py-2.5 rounded-full text-sm font-medium transition-colors ${
                     activeCategory === "whistler"
                       ? "bg-black text-white"
                       : "bg-gray-200 text-gray-800 hover:bg-gray-300"
@@ -1237,7 +1237,7 @@ export default function Properties() {
                 </button>
                 <button
                   onClick={() => setActiveCategory("vancouver")}
-                  className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${
+                  className={`px-6 py-2.5 rounded-full text-sm font-medium transition-colors ${
                     activeCategory === "vancouver"
                       ? "bg-black text-white"
                       : "bg-gray-200 text-gray-800 hover:bg-gray-300"
@@ -1247,7 +1247,7 @@ export default function Properties() {
                 </button>
                 <button
                   onClick={() => setActiveCategory("worldwide")}
-                  className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${
+                  className={`px-6 py-2.5 rounded-full text-sm font-medium transition-colors ${
                     activeCategory === "worldwide"
                       ? "bg-black text-white"
                       : "bg-gray-200 text-gray-800 hover:bg-gray-300"
@@ -1263,16 +1263,14 @@ export default function Properties() {
                       petFriendly: !prev.petFriendly
                     }));
                   }}
-                  className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${
+                  className={`px-6 py-2.5 rounded-full text-sm font-medium transition-colors ${
                     filters.petFriendly
                       ? "bg-blue-600 text-white"
                       : "bg-gray-200 text-gray-800 hover:bg-gray-300"
                   }`}
                 >
-                  <span className="flex items-center">
-                    <CheckCircle className={`w-4 h-4 mr-1 ${filters.petFriendly ? 'opacity-100' : 'opacity-0'}`} />
-                    Pet Friendly
-                  </span>
+                  {filters.petFriendly && <CheckCircle className="w-4 h-4 mr-1.5 inline" />}
+                  Pet Friendly
                 </button>
               </div>
             </div>
