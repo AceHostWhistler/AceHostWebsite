@@ -21,6 +21,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
   });
   const [showSuccess, setShowSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -37,11 +38,27 @@ const ContactForm: React.FC<ContactFormProps> = ({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setErrorMessage("");
 
     const zapierWebhook =
       "https://hooks.zapier.com/hooks/catch/20756347/2r9c4e2/";
 
     try {
+      // Submit to internal API endpoint
+      const apiResponse = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          inquiryType: property,
+          propertyInterest: property,
+          dates: `${formData.checkin} to ${formData.checkout}`,
+        }),
+      });
+
+      // Also submit to Zapier as a backup
       await fetch(zapierWebhook, {
         method: "POST",
         mode: "no-cors",
@@ -53,6 +70,11 @@ const ContactForm: React.FC<ContactFormProps> = ({
           property,
         }),
       });
+
+      if (!apiResponse.ok) {
+        const errorData = await apiResponse.json();
+        throw new Error(errorData.error || "Failed to submit form");
+      }
 
       setShowSuccess(true);
       setFormData({
@@ -66,6 +88,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
       });
     } catch (error) {
       console.error("Error submitting form:", error);
+      setErrorMessage("There was an error sending your message. Please try again or contact us directly at ben@acehost.ca");
     } finally {
       setIsSubmitting(false);
     }
@@ -105,6 +128,12 @@ const ContactForm: React.FC<ContactFormProps> = ({
       {showSuccess && <SuccessMessage />}
 
       <form onSubmit={handleSubmit} className="space-y-6">
+        {errorMessage && (
+          <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded">
+            <p className="text-red-700">{errorMessage}</p>
+          </div>
+        )}
+        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-2">
             <Label className="text-gray-700 text-sm font-medium">
@@ -149,6 +178,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
             className="rounded-xl h-12 border-gray-200 focus:border-yellow-500 focus:ring-yellow-500"
             value={formData.phone}
             onChange={handleChange}
+            required
           />
         </div>
 
@@ -212,6 +242,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
             className="w-full rounded-xl border-gray-200 focus:border-yellow-500 focus:ring-yellow-500"
             value={formData.message}
             onChange={handleChange}
+            required
           />
         </div>
 

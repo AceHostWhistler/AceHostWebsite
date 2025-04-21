@@ -32,6 +32,17 @@ const saveSubmissionToFile = async (data: any) => {
 
 // Function to create a nodemailer transport using environment variables
 const createTransport = () => {
+  // Log all environment variables for debugging
+  if (DEBUG_MODE) {
+    console.log("Environment Variables Available:");
+    console.log("SMTP_USER:", process.env.SMTP_USER);
+    console.log("SMTP_PASSWORD:", process.env.SMTP_PASSWORD ? "Set (length: " + process.env.SMTP_PASSWORD.length + ")" : "Not Set");
+    console.log("SMTP_HOST:", process.env.SMTP_HOST);
+    console.log("SMTP_PORT:", process.env.SMTP_PORT);
+    console.log("SMTP_SECURE:", process.env.SMTP_SECURE);
+    console.log("NODE_ENV:", process.env.NODE_ENV);
+  }
+
   // Use explicit Gmail SMTP configuration rather than just 'service: gmail'
   const smtpConfig = {
     host: process.env.SMTP_HOST || 'smtp.gmail.com',
@@ -42,6 +53,7 @@ const createTransport = () => {
       pass: process.env.SMTP_PASSWORD || '',
     },
     debug: true, // Enable debug output
+    logger: true // Log information to console
   };
 
   const emailUser = smtpConfig.auth.user;
@@ -154,6 +166,13 @@ export default async function handler(
         console.log("SMTP connection verified successfully");
       } catch (verifyError: any) {
         console.error("SMTP connection failed:", verifyError);
+        console.error("Error details:", verifyError.message);
+        console.error("Error code:", verifyError.code);
+        console.error("Error command:", verifyError.command);
+        
+        // Try to save to file as backup
+        savedToFile || await saveSubmissionToFile(submissionData);
+        
         return response.status(200).json({ 
           message: "Your message has been recorded. We will contact you soon." 
         });
@@ -161,7 +180,7 @@ export default async function handler(
       
       // Configure email
       const mailOptions = {
-        from: `"AceHost Website" <${recipient}>`,
+        from: `"AceHost Website" <${process.env.SMTP_USER || 'benkirsh1@gmail.com'}>`,
         to: recipient,
         subject: `[AceHost Contact] New ${inquiryType} Inquiry from ${name}`,
         html: generateEmail(submissionData),
@@ -188,6 +207,8 @@ export default async function handler(
       } catch (emailError: any) {
         console.error("Error sending email:", emailError);
         console.error("Error details:", emailError.message);
+        console.error("Error code:", emailError.code);
+        console.error("Error command:", emailError.command);
         
         // Return success anyway since we saved the submission
         return response.status(200).json({ 
