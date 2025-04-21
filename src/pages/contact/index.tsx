@@ -198,10 +198,10 @@ const Contact = () => {
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Email Us</h3>
                     <a
-                      href="mailto:benkirsh1@gmail.com"
+                      href="mailto:ben@acehost.ca"
                       className="text-lg text-gray-700 hover:text-black transition-colors"
                     >
-                      benkirsh1@gmail.com
+                      ben@acehost.ca
                     </a>
                   </div>
                 </div>
@@ -341,7 +341,7 @@ const Contact = () => {
                 <form
                   onSubmit={handleSubmit}
                   className="space-y-6"
-                  action="mailto:benkirsh1@gmail.com"
+                  action="mailto:ben@acehost.ca"
                   method="post"
                   encType="text/plain"
                 >
@@ -524,7 +524,7 @@ const Contact = () => {
                   {submitError && (
                     <div className="p-4 bg-red-50 text-red-700 rounded-md">
                       <p className="font-medium">{statusMessage || "There was an error sending your message."}</p>
-                      <p>Please try again later or contact us directly at benkirsh1@gmail.com or +1 604 764 8919.</p>
+                      <p>Please try again later or contact us directly at ben@acehost.ca or +1 604 764 8919.</p>
                     </div>
                   )}
                 </form>
