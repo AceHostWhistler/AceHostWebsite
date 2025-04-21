@@ -14,28 +14,12 @@ const FalconBlueberryDrive = () => {
   // Property photos
   const images = [
     "/photos/properties/Falcon/15-3595 Falcon Cres-15-.jpg",
-    "/photos/properties/Falcon/Falcon Cr-13.jpg",
-    "/photos/properties/Falcon/Falcon Cr-14.jpg",
-    "/photos/properties/Falcon/Falcon Cr-15.jpg",
-    "/photos/properties/Falcon/Falcon Cr-16.jpg",
-    "/photos/properties/Falcon/Falcon Cr-17.jpg",
-    "/photos/properties/Falcon/Falcon Cr-18.jpg",
-    "/photos/properties/Falcon/Falcon Cr-19.jpg",
-    "/photos/properties/Falcon/Falcon Cr-22.jpg",
-    "/photos/properties/Falcon/Falcon Cr-24.jpg",
-    "/photos/properties/Falcon/Falcon Cr-25.jpg",
-    "/photos/properties/Falcon/Falcon Cr-26.jpg",
-    "/photos/properties/Falcon/Falcon Cr-27.jpg",
-    "/photos/properties/Falcon/Falcon Cr-28.jpg",
-    "/photos/properties/Falcon/Falcon Cr-29.jpg",
-    "/photos/properties/Falcon/Falcon Cr-30.jpg",
-    "/photos/properties/Falcon/Falcon Cr-31.jpg",
-    "/photos/properties/Falcon/Falcon Cr-32.jpg",
-    "/photos/properties/Falcon/Falcon Cr-33.jpg",
-    "/photos/properties/Falcon/Falcon Cr-34.jpg",
-    "/photos/properties/Falcon/Falcon Cr-35.jpg",
-    "/photos/properties/Falcon/Falcon Cr-36.jpg",
-    "/photos/properties/Falcon/Falcon Cr-37.jpg",
+    "/photos/properties/Falcon/09-3595 Falcon Cres-09.jpg",
+    "/photos/properties/Falcon/10-3595 Falcon Cres-10.jpg", 
+    "/photos/properties/Falcon/11-3595 Falcon Cres-11.jpg",
+    "/photos/properties/Falcon/12-3595 Falcon Cres-12.jpg",
+    "/photos/properties/Falcon/13-3595 Falcon Cres-13.jpg",
+    "/photos/properties/Falcon/14-3595 Falcon Cres-14.jpg"
   ];
 
   return (
@@ -193,7 +177,7 @@ const FalconBlueberryDrive = () => {
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
                 <div className="relative aspect-[4/3] mb-2">
                   <Image
-                    src="/photos/properties/Falcon/Falcon Cr-13.jpg"
+                    src="/photos/properties/Falcon/13-3595 Falcon Cres-13.jpg"
                     alt="Falcon Blueberry Drive Bedroom"
                     fill
                     className="object-cover"

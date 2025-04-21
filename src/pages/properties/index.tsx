@@ -336,8 +336,8 @@ export default function Properties() {
             name: "Falcon | Blueberry Drive",
             images: [
               "/photos/properties/Falcon/15-3595 Falcon Cres-15-.jpg",
-              "/photos/properties/Falcon/Falcon Cr-13.jpg",
-              "/photos/properties/Falcon/Falcon Cr-14.jpg",
+              "/photos/properties/Falcon/09-3595 Falcon Cres-09.jpg",
+              "/photos/properties/Falcon/10-3595 Falcon Cres-10.jpg",
             ],
             guests: 15,
             bedrooms: 7,
@@ -1086,7 +1086,7 @@ export default function Properties() {
                   `/photos/properties/Chalet La Forja/hero00002.jpg`,
                   `/photos/properties/3445-Heron-Place/01-3445 Heron Place 01.jpg`,
                   `/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00635.jpg`,
-                  `/photos/properties/Falcon/Falcon Cr-12.jpg`,
+                  `/photos/properties/Falcon/15-3595 Falcon Cres-15-.jpg`,
                   // Fallback to a default image
                   `/photos/homepage/WhistlerVacationRental.jpg`,
                 ];
