@@ -60,6 +60,7 @@ export default function Properties() {
     minGuests: 0,
     maxGuests: 50,
     amenities: [] as string[],
+    petFriendly: false
   });
   const [showFilters, setShowFilters] = useState(false);
 
@@ -884,8 +885,10 @@ export default function Properties() {
             feature.toLowerCase().includes(amenity.toLowerCase())
           )
         );
+      // Check if property is pet friendly when the filter is active
+      const petFriendlyMatch = !filters.petFriendly || property.isPetFriendly === true;
 
-      return bedroomsMatch && guestsMatch && amenitiesMatch;
+      return bedroomsMatch && guestsMatch && amenitiesMatch && petFriendlyMatch;
     });
 
     return { ...category, properties: filteredProperties };
@@ -942,6 +945,7 @@ export default function Properties() {
       minGuests: 0,
       maxGuests: 50,
       amenities: [],
+      petFriendly: false
     });
   };
 
@@ -1210,46 +1214,65 @@ export default function Properties() {
                   All prices are in Canadian Dollars (CAD) & not in (USD).
                 </p>
               </div>
-              <div className="flex flex-wrap justify-center gap-2">
+              <div className="flex flex-wrap justify-center gap-2 mb-4">
                 <button
                   onClick={() => setActiveCategory("all")}
-                  className={`px-5 py-2 rounded-full text-xs font-medium transition-colors ${
+                  className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${
                     activeCategory === "all"
                       ? "bg-black text-white"
-                      : "bg-[#e8e8ed] text-gray-800 hover:bg-gray-300"
+                      : "bg-gray-200 text-gray-800 hover:bg-gray-300"
                   }`}
                 >
                   All Properties
                 </button>
                 <button
                   onClick={() => setActiveCategory("whistler")}
-                  className={`px-5 py-2 rounded-full text-xs font-medium transition-colors ${
+                  className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${
                     activeCategory === "whistler"
                       ? "bg-black text-white"
-                      : "bg-[#e8e8ed] text-gray-800 hover:bg-gray-300"
+                      : "bg-gray-200 text-gray-800 hover:bg-gray-300"
                   }`}
                 >
                   Whistler
                 </button>
                 <button
                   onClick={() => setActiveCategory("vancouver")}
-                  className={`px-5 py-2 rounded-full text-xs font-medium transition-colors ${
+                  className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${
                     activeCategory === "vancouver"
                       ? "bg-black text-white"
-                      : "bg-[#e8e8ed] text-gray-800 hover:bg-gray-300"
+                      : "bg-gray-200 text-gray-800 hover:bg-gray-300"
                   }`}
                 >
                   Vancouver
                 </button>
                 <button
                   onClick={() => setActiveCategory("worldwide")}
-                  className={`px-5 py-2 rounded-full text-xs font-medium transition-colors ${
+                  className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${
                     activeCategory === "worldwide"
                       ? "bg-black text-white"
-                      : "bg-[#e8e8ed] text-gray-800 hover:bg-gray-300"
+                      : "bg-gray-200 text-gray-800 hover:bg-gray-300"
                   }`}
                 >
                   Worldwide
+                </button>
+                <button
+                  onClick={() => {
+                    // Toggle pet-friendly filter
+                    setFilters(prev => ({
+                      ...prev,
+                      petFriendly: !prev.petFriendly
+                    }));
+                  }}
+                  className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${
+                    filters.petFriendly
+                      ? "bg-blue-600 text-white"
+                      : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+                  }`}
+                >
+                  <span className="flex items-center">
+                    <CheckCircle className={`w-4 h-4 mr-1 ${filters.petFriendly ? 'opacity-100' : 'opacity-0'}`} />
+                    Pet Friendly
+                  </span>
                 </button>
               </div>
             </div>
