@@ -14,6 +14,7 @@ export default function BlogRedirect() {
       <Head>
         <title>The AceHost Blog | Redirecting...</title>
         <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href="https://acehost.ca/blogs" />
       </Head>
       <div className="min-h-screen flex items-center justify-center">
         <p className="text-lg">Redirecting to blog...</p>
