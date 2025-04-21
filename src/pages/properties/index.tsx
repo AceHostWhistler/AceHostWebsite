@@ -199,7 +199,7 @@ export default function Properties() {
               "Hot Tub with Mountain Views",
               "Luxury Design",
             ],
-            priceRange: "Explore Chalet La Forja",
+            priceRange: "$7,000-11,000+ per night | Private Butler Included",
           },
           {
             id: "slopeside-villa-kadenwood",
@@ -1220,12 +1220,16 @@ export default function Properties() {
                 >
                   Whistler
                 </button>
-                <Link
-                  href="/blogs"
-                  className="px-5 py-2 rounded-full text-sm font-medium transition-colors bg-gray-200 text-gray-800 hover:bg-gray-300"
+                <button
+                  onClick={() => setActiveCategory("vancouver")}
+                  className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${
+                    activeCategory === "vancouver"
+                      ? "bg-black text-white"
+                      : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+                  }`}
                 >
-                  Blog
-                </Link>
+                  Vancouver
+                </button>
                 <button
                   onClick={() => setActiveCategory("worldwide")}
                   className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${
