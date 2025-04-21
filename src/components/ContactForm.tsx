@@ -40,8 +40,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
     setIsSubmitting(true);
     setErrorMessage("");
 
-    const zapierWebhook =
-      "https://hooks.zapier.com/hooks/catch/20756347/2r9c4e2/";
+    console.log("Submitting form data:", formData);
 
     try {
       // Submit to internal API endpoint
@@ -58,22 +57,42 @@ const ContactForm: React.FC<ContactFormProps> = ({
         }),
       });
 
-      // Also submit to Zapier as a backup
-      await fetch(zapierWebhook, {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          ...formData,
-          property,
-        }),
-      });
+      console.log("Response status:", apiResponse.status);
+      
+      // Get the response data
+      let data;
+      try {
+        data = await apiResponse.json();
+        console.log("Response data:", data);
+      } catch (e) {
+        console.error("Failed to parse response:", e);
+        throw new Error("Failed to parse server response");
+      }
 
       if (!apiResponse.ok) {
-        const errorData = await apiResponse.json();
-        throw new Error(errorData.error || "Failed to submit form");
+        const errorMessage = data?.error || "Network response was not ok";
+        console.error("Form submission error:", errorMessage, data?.details);
+        throw new Error(errorMessage);
+      }
+
+      // Also submit to Zapier as a backup
+      try {
+        const zapierWebhook = "https://hooks.zapier.com/hooks/catch/20756347/2r9c4e2/";
+        await fetch(zapierWebhook, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            ...formData,
+            property,
+          }),
+        });
+        console.log("Backup submission to Zapier completed");
+      } catch (zapierError) {
+        console.warn("Zapier backup submission failed:", zapierError);
+        // Don't throw error for Zapier - it's just a backup
       }
 
       setShowSuccess(true);
@@ -86,9 +105,9 @@ const ContactForm: React.FC<ContactFormProps> = ({
         checkout: "",
         guests: "1",
       });
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error submitting form:", error);
-      setErrorMessage("There was an error sending your message. Please try again or contact us directly at ben@acehost.ca");
+      setErrorMessage(error.message || "There was an error sending your message. Please try again or contact us directly at benkirsh1@gmail.com");
     } finally {
       setIsSubmitting(false);
     }

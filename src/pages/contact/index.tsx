@@ -107,6 +107,9 @@ const Contact = () => {
         console.log("Response data:", data);
       } catch (e) {
         console.error("Failed to parse response:", e);
+        setSubmitError(true);
+        setStatusMessage("Failed to parse server response. Please contact us directly.");
+        return;
       }
 
       if (!response.ok) {
@@ -136,7 +139,7 @@ const Contact = () => {
     } catch (error) {
       console.error("Error submitting form:", error);
       setSubmitError(true);
-      setStatusMessage("There was an error connecting to our server.");
+      setStatusMessage("There was an error connecting to our server. Please email us directly.");
     } finally {
       setIsSubmitting(false);
     }
@@ -195,10 +198,10 @@ const Contact = () => {
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Email Us</h3>
                     <a
-                      href="mailto:ben@acehost.ca"
+                      href="mailto:benkirsh1@gmail.com"
                       className="text-lg text-gray-700 hover:text-black transition-colors"
                     >
-                      ben@acehost.ca
+                      benkirsh1@gmail.com
                     </a>
                   </div>
                 </div>
@@ -333,190 +336,199 @@ const Contact = () => {
                 </button>
               </div>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Phone Number *
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
-                  />
-                </div>
-
-                {formType === "traveler" && (
-                  <>
-                <div>
-                  <label
-                    htmlFor="dates"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    What dates are you interested in?
-                  </label>
-                  <input
-                    type="text"
-                    id="dates"
-                    name="dates"
-                    value={formData.dates}
-                    onChange={handleChange}
-                    placeholder="e.g., Dec 20, 2024 - Jan 3, 2025"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="guests"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Number of Guests
-                  </label>
-                  <input
-                    type="text"
-                    id="guests"
-                    name="guests"
-                    value={formData.guests}
-                    onChange={handleChange}
-                    placeholder="e.g., 4 adults, 2 children"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="propertyInterest"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Which property are you interested in?
-                  </label>
-                  <input
-                    type="text"
-                    id="propertyInterest"
-                    name="propertyInterest"
-                    value={formData.propertyInterest}
-                    onChange={handleChange}
-                    placeholder="e.g., Altitude Retreat, or any 4-bedroom property"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
-                  />
-                </div>
-                  </>
-                )}
-
-                {formType === "propertyManagement" && (
+              {/* Contact Form */}
+              <div className="mt-8">
+                <form
+                  onSubmit={handleSubmit}
+                  className="space-y-6"
+                  action="mailto:benkirsh1@gmail.com"
+                  method="post"
+                  encType="text/plain"
+                >
                   <div>
                     <label
-                      htmlFor="propertyAddress"
+                      htmlFor="name"
                       className="block text-sm font-medium text-gray-700 mb-1"
                     >
-                      Address of Property to Manage *
+                      Full Name *
                     </label>
                     <input
                       type="text"
-                      id="propertyAddress"
-                      name="propertyAddress"
-                      value={formData.propertyAddress}
+                      id="name"
+                      name="name"
+                      value={formData.name}
                       onChange={handleChange}
                       required
-                      placeholder="e.g., 123 Whistler Way, Whistler, BC"
                       className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
                     />
                   </div>
-                )}
 
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Additional Information *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
-                    placeholder={formType === "propertyManagement" 
-                      ? "Please provide details about your property (bedrooms, bathrooms, amenities, etc.)" 
-                      : "Please provide any additional details about your stay."
-                    }
-                  ></textarea>
-                </div>
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
+                    />
+                  </div>
 
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-black text-white px-6 py-4 rounded-md text-lg font-medium hover:bg-gray-800 transition-colors flex items-center justify-center disabled:opacity-70"
-                >
-                  {isSubmitting ? (
-                    "Sending..."
-                  ) : (
+                  <div>
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      Phone Number *
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
+                    />
+                  </div>
+
+                  {formType === "traveler" && (
                     <>
-                      <span>Send Message</span>
-                      <ArrowRight className="ml-2 h-5 w-5" />
+                  <div>
+                    <label
+                      htmlFor="dates"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      What dates are you interested in?
+                    </label>
+                    <input
+                      type="text"
+                      id="dates"
+                      name="dates"
+                      value={formData.dates}
+                      onChange={handleChange}
+                      placeholder="e.g., Dec 20, 2024 - Jan 3, 2025"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="guests"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      Number of Guests
+                    </label>
+                    <input
+                      type="text"
+                      id="guests"
+                      name="guests"
+                      value={formData.guests}
+                      onChange={handleChange}
+                      placeholder="e.g., 4 adults, 2 children"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="propertyInterest"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      Which property are you interested in?
+                    </label>
+                    <input
+                      type="text"
+                      id="propertyInterest"
+                      name="propertyInterest"
+                      value={formData.propertyInterest}
+                      onChange={handleChange}
+                      placeholder="e.g., Altitude Retreat, or any 4-bedroom property"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
+                    />
+                  </div>
                     </>
                   )}
-                </button>
 
-                {submitSuccess && (
-                  <div className="p-4 bg-green-50 text-green-700 rounded-md">
-                    <p className="font-medium">{statusMessage}</p>
-                  </div>
-                )}
+                  {formType === "propertyManagement" && (
+                    <div>
+                      <label
+                        htmlFor="propertyAddress"
+                        className="block text-sm font-medium text-gray-700 mb-1"
+                      >
+                        Address of Property to Manage *
+                      </label>
+                      <input
+                        type="text"
+                        id="propertyAddress"
+                        name="propertyAddress"
+                        value={formData.propertyAddress}
+                        onChange={handleChange}
+                        required
+                        placeholder="e.g., 123 Whistler Way, Whistler, BC"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
+                      />
+                    </div>
+                  )}
 
-                {submitError && (
-                  <div className="p-4 bg-red-50 text-red-700 rounded-md">
-                    <p className="font-medium">{statusMessage || "There was an error sending your message."}</p>
-                    <p>Please try again later or contact us directly at ben@acehost.ca or +1 604 764 8919.</p>
+                  <div>
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      Additional Information *
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={5}
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
+                      placeholder={formType === "propertyManagement" 
+                        ? "Please provide details about your property (bedrooms, bathrooms, amenities, etc.)" 
+                        : "Please provide any additional details about your stay."
+                      }
+                    ></textarea>
                   </div>
-                )}
-              </form>
+
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-black text-white px-6 py-4 rounded-md text-lg font-medium hover:bg-gray-800 transition-colors flex items-center justify-center disabled:opacity-70"
+                  >
+                    {isSubmitting ? (
+                      "Sending..."
+                    ) : (
+                      <>
+                        <span>Send Message</span>
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </>
+                    )}
+                  </button>
+
+                  {submitSuccess && (
+                    <div className="p-4 bg-green-50 text-green-700 rounded-md">
+                      <p className="font-medium">{statusMessage}</p>
+                    </div>
+                  )}
+
+                  {submitError && (
+                    <div className="p-4 bg-red-50 text-red-700 rounded-md">
+                      <p className="font-medium">{statusMessage || "There was an error sending your message."}</p>
+                      <p>Please try again later or contact us directly at benkirsh1@gmail.com or +1 604 764 8919.</p>
+                    </div>
+                  )}
+                </form>
+              </div>
             </div>
           </div>
         </div>

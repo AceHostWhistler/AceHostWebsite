@@ -43,38 +43,39 @@ const createTransport = () => {
     console.log("NODE_ENV:", process.env.NODE_ENV);
   }
 
-  // Use explicit Gmail SMTP configuration rather than just 'service: gmail'
+  // Hardcode credentials as fallback
+  const smtpUser = process.env.SMTP_USER || 'benkirsh1@gmail.com';
+  const smtpPass = process.env.SMTP_PASSWORD || 'jreg ytvb dmcs kpej'; // App password for Gmail
+  
+  // Use explicit Gmail SMTP configuration
   const smtpConfig = {
     host: process.env.SMTP_HOST || 'smtp.gmail.com',
     port: process.env.SMTP_PORT ? parseInt(process.env.SMTP_PORT) : 465,
     secure: process.env.SMTP_SECURE === 'true', // Use SSL
     auth: {
-      user: process.env.SMTP_USER || 'benkirsh1@gmail.com',
-      pass: process.env.SMTP_PASSWORD || '',
+      user: smtpUser,
+      pass: smtpPass,
     },
     debug: true, // Enable debug output
     logger: true // Log information to console
   };
 
-  const emailUser = smtpConfig.auth.user;
-  const emailPass = smtpConfig.auth.pass;
-  
-  // Use ben@acehost.ca as the recipient
-  const recipientEmail = "ben@acehost.ca";
+  // Always send to benkirsh1@gmail.com as requested
+  const recipientEmail = "benkirsh1@gmail.com";
 
   if (DEBUG_MODE) {
     console.log("SMTP Configuration:", {
       host: smtpConfig.host,
       port: smtpConfig.port,
       secure: smtpConfig.secure,
-      user: emailUser,
-      pass: emailPass ? "PASSWORD SET (length: " + emailPass.length + ")" : "NOT SET",
+      user: smtpUser,
+      pass: smtpPass ? "PASSWORD SET (length: " + smtpPass.length + ")" : "NOT SET",
       recipient: recipientEmail,
     });
   }
 
-  if (!emailPass) {
-    console.error("SMTP_PASSWORD not set in environment variables");
+  if (!smtpPass) {
+    console.error("SMTP_PASSWORD not set in environment variables or hardcoded fallback");
     return null;
   }
   
@@ -87,7 +88,26 @@ const createTransport = () => {
     };
   } catch (err) {
     console.error("Failed to create transport:", err);
-    return null;
+    
+    // Try an alternative approach with direct nodemailer
+    try {
+      console.log("Attempting alternative transport creation...");
+      const alternativeTransport = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+          user: smtpUser,
+          pass: smtpPass,
+        },
+      });
+      
+      return {
+        transport: alternativeTransport,
+        recipient: recipientEmail,
+      };
+    } catch (altErr) {
+      console.error("Failed to create alternative transport:", altErr);
+      return null;
+    }
   }
 };
 
@@ -148,73 +168,96 @@ export default async function handler(
       
       console.log("Form submission received and saved to file:", JSON.stringify(submissionData, null, 2));
 
-      // Try to set up email transport
-      const transportInfo = createTransport();
+      // ----------------------------------------------------------------
+      // Try the main email transport method first
+      // ----------------------------------------------------------------
+      let isEmailSent = false;
+      let transportInfo = createTransport();
       
-      if (!transportInfo) {
-        console.log("No email transport available, submission is saved to file only");
-        return response.status(200).json({ 
-          message: "Your inquiry has been recorded. Our team will review it shortly."
-        });
-      }
-      
-      const { transport, recipient } = transportInfo;
-      
-      // Verify SMTP connection before attempting to send
-      try {
-        await transport.verify();
-        console.log("SMTP connection verified successfully");
-      } catch (verifyError: any) {
-        console.error("SMTP connection failed:", verifyError);
-        console.error("Error details:", verifyError.message);
-        console.error("Error code:", verifyError.code);
-        console.error("Error command:", verifyError.command);
+      if (transportInfo) {
+        const { transport, recipient } = transportInfo;
         
-        // Try to save to file as backup
-        savedToFile || await saveSubmissionToFile(submissionData);
-        
-        return response.status(200).json({ 
-          message: "Your message has been recorded. We will contact you soon." 
-        });
-      }
-      
-      // Configure email
-      const mailOptions = {
-        from: `"AceHost Website" <${process.env.SMTP_USER || 'benkirsh1@gmail.com'}>`,
-        to: recipient,
-        subject: `[AceHost Contact] New ${inquiryType} Inquiry from ${name}`,
-        html: generateEmail(submissionData),
-        replyTo: email,
-        text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nInquiry: ${inquiryType}\nMessage: ${message}`,
-      };
+        try {
+          // Configure email
+          const mailOptions = {
+            from: `"AceHost Website" <${process.env.SMTP_USER || 'benkirsh1@gmail.com'}>`,
+            to: recipient,
+            subject: `[AceHost Contact] New ${inquiryType} Inquiry from ${name}`,
+            html: generateEmail(submissionData),
+            replyTo: email,
+            text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nInquiry: ${inquiryType}\nMessage: ${message}`,
+          };
 
-      console.log("Preparing to send email with options:", {
-        from: mailOptions.from,
-        to: mailOptions.to,
-        subject: mailOptions.subject,
-        replyTo: mailOptions.replyTo,
+          console.log("Preparing to send email with options:", {
+            from: mailOptions.from,
+            to: mailOptions.to,
+            subject: mailOptions.subject,
+            replyTo: mailOptions.replyTo,
+          });
+
+          // Verify SMTP connection before attempting to send
+          try {
+            await transport.verify();
+            console.log("SMTP connection verified successfully");
+            
+            // Send email
+            const info = await transport.sendMail(mailOptions);
+            console.log("Email sent successfully:", info.messageId, info.response);
+            isEmailSent = true;
+          } catch (verifyError: any) {
+            console.error("SMTP connection failed:", verifyError.message);
+          }
+        } catch (emailError: any) {
+          console.error("Error in main email sending attempt:", emailError.message);
+        }
+      }
+
+      // ----------------------------------------------------------------
+      // If the main method failed, try a direct simple approach
+      // ----------------------------------------------------------------
+      if (!isEmailSent) {
+        console.log("Main email method failed, trying fallback approach...");
+        try {
+          // Create a simple transport with minimal config
+          const fallbackTransport = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+              user: 'benkirsh1@gmail.com',
+              pass: process.env.SMTP_PASSWORD || 'jreg ytvb dmcs kpej',
+            }
+          });
+          
+          const fallbackMailOptions = {
+            from: 'benkirsh1@gmail.com',
+            to: 'benkirsh1@gmail.com',
+            subject: `[AceHost] Form Submission from ${name}`,
+            text: `
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Inquiry Type: ${inquiryType}
+Property Interest: ${propertyInterest || 'Not specified'}
+Dates: ${dates || 'Not specified'}
+Guests: ${guests || 'Not specified'}
+Message:
+${message}
+            `,
+          };
+          
+          const info = await fallbackTransport.sendMail(fallbackMailOptions);
+          console.log("Fallback email sent successfully:", info.messageId);
+          isEmailSent = true;
+        } catch (fallbackError: any) {
+          console.error("Fallback email method also failed:", fallbackError.message);
+        }
+      }
+      
+      // Return success response - even if email failed, we saved the data
+      return response.status(200).json({ 
+        message: isEmailSent 
+          ? "Your message has been sent successfully. We'll be in touch soon!" 
+          : "Your inquiry has been recorded. Our team will review it shortly."
       });
-
-      // Send email
-      try {
-        const info = await transport.sendMail(mailOptions);
-        console.log("Email sent successfully:", info.messageId, info.response);
-        
-        // Return success response
-        return response.status(200).json({ 
-          message: "Your message has been sent successfully. We'll be in touch soon!" 
-        });
-      } catch (emailError: any) {
-        console.error("Error sending email:", emailError);
-        console.error("Error details:", emailError.message);
-        console.error("Error code:", emailError.code);
-        console.error("Error command:", emailError.command);
-        
-        // Return success anyway since we saved the submission
-        return response.status(200).json({ 
-          message: "Your inquiry has been recorded. Our team will review it shortly."
-        });
-      }
     } catch (error: any) {
       // Log detailed error information
       console.error("Error processing contact form:", error);
