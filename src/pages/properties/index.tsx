@@ -271,7 +271,7 @@ export default function Properties() {
             id: "heron-views-whistler-village",
             name: "Heron Views | Whistler Village",
             images: [
-              "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05891.jpg",
+              "/photos/properties/3445-Heron-Place/68-3445 Heron Place 53-Edit.jpg",
               "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05831-Edit.jpg",
               "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05851.jpg",
             ],

@@ -266,7 +266,7 @@ const Home = () => {
     {
       id: "heron-views-whistler",
       name: "Heron Views | Whistler Village",
-      image: "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05891.jpg",
+      image: "/photos/properties/3445-Heron-Place/68-3445 Heron Place 53-Edit.jpg",
       guests: 11,
       bedrooms: 5,
       beds: 6,
