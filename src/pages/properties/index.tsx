@@ -1050,11 +1050,11 @@ export default function Properties() {
     const shouldLinkToContact = property.id === "scandinavian-mountainside-retreat-pemberton-meadows-50-acres";
 
     return (
-      <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow h-full border border-gray-100">
-        <div className="relative h-56 overflow-hidden">
+      <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow h-full">
+        <div className="relative h-64 sm:h-72 overflow-hidden">
           {/* Pet Friendly Badge */}
           {property.isPetFriendly && (
-            <div className="absolute top-3 left-3 bg-black bg-opacity-80 text-white px-2 py-1 text-[10px] font-medium rounded-md z-10">
+            <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 text-xs font-medium rounded-md z-10">
               Pet Friendly
             </div>
           )}
@@ -1093,21 +1093,21 @@ export default function Properties() {
           </Link>
 
           {/* Book Now Button in bottom-right corner */}
-          <div className="absolute bottom-3 right-3 z-10">
+          <div className="absolute bottom-4 right-4 z-10">
             {airbnbLink && !shouldLinkToContact ? (
               <a
                 href={airbnbLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
-                className="bg-black text-white px-3 py-1.5 rounded-md text-xs font-medium hover:bg-gray-800 transition-colors"
+                className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
               >
                 Book Now
               </a>
             ) : shouldLinkToContact ? (
               <Link
                 href="/contact"
-                className="bg-black text-white px-3 py-1.5 rounded-md text-xs font-medium hover:bg-gray-800 transition-colors"
+                className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
                 onClick={(e) => e.stopPropagation()}
               >
                 Contact Us
@@ -1115,7 +1115,7 @@ export default function Properties() {
             ) : (
               <Link
                 href={propertyUrl}
-                className="bg-black text-white px-3 py-1.5 rounded-md text-xs font-medium hover:bg-gray-800 transition-colors"
+                className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
                 onClick={(e) => e.stopPropagation()}
               >
                 Book Now
@@ -1124,43 +1124,43 @@ export default function Properties() {
           </div>
         </div>
 
-        <div className="p-4">
+        <div className="p-6">
           {/* Property details */}
-          <div className="flex flex-wrap gap-1.5 mb-2">
-            <div className="flex items-center text-[10px] bg-gray-100 text-gray-800 px-2 py-0.5 rounded-md">
-              <Users className="w-3 h-3 mr-1" /> {property.guests}
+          <div className="flex flex-wrap gap-2 mb-4">
+            <div className="flex items-center text-xs bg-gray-900 text-white px-3 py-1 rounded-md">
+              <Users className="w-3 h-3 mr-1" /> {property.guests} {property.guests === 1 ? "Guest" : "Guests"}
             </div>
-            <div className="flex items-center text-[10px] bg-gray-100 text-gray-800 px-2 py-0.5 rounded-md">
-              <Bed className="w-3 h-3 mr-1" /> {property.bedrooms}
+            <div className="flex items-center text-xs bg-gray-200 text-gray-900 px-3 py-1 rounded-md">
+              <Bed className="w-3 h-3 mr-1" /> {property.bedrooms} {property.bedrooms === 1 ? "Bedroom" : "Bedrooms"}
             </div>
-            <div className="flex items-center text-[10px] bg-gray-100 text-gray-800 px-2 py-0.5 rounded-md">
-              <Bath className="w-3 h-3 mr-1" /> {property.bathrooms}
+            <div className="flex items-center text-xs bg-gray-200 text-gray-900 px-3 py-1 rounded-md">
+              <Bath className="w-3 h-3 mr-1" /> {property.bathrooms} {property.bathrooms === 1 ? "Bathroom" : "Bathrooms"}
             </div>
           </div>
 
           {/* Property name */}
-          <h3 className="text-sm font-medium mb-1 text-gray-900 line-clamp-2">
+          <h3 className="text-xl font-medium mb-2 text-gray-900 line-clamp-2">
             {property.name}
           </h3>
 
           {/* Location */}
-          <p className="flex items-center text-xs text-gray-600 mb-2">
-            <MapPin className="w-3 h-3 mr-1 flex-shrink-0" />
+          <p className="flex items-center text-sm text-gray-600 mb-4">
+            <MapPin className="w-4 h-4 mr-1 flex-shrink-0" />
             <span className="line-clamp-1">{property.location}</span>
           </p>
 
           {/* Price range */}
           {property.priceRange && (
-            <p className="text-xs text-gray-900 font-medium mb-2">{property.priceRange}</p>
+            <p className="text-gray-900 font-medium mb-4">{property.priceRange}</p>
           )}
 
           {/* View property link */}
           <Link
             href={propertyUrl}
-            className="inline-flex items-center text-xs text-gray-900 font-medium hover:text-gray-600 transition-colors"
+            className="inline-flex items-center text-gray-900 font-medium hover:text-gray-600 transition-colors"
           >
             <span>View Property</span>
-            <ArrowRight size={12} className="ml-1" />
+            <ArrowRight size={18} className="ml-2" />
           </Link>
         </div>
       </div>
@@ -1257,24 +1257,24 @@ export default function Properties() {
         </section>
 
         {/* Filters and Properties Grid */}
-        <section className="py-8 bg-white">
-          <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
+        <section className="py-12 bg-white">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             {/* Property Listings */}
             <div className="w-full">
               {displayProperties.map((category) => (
-                <div key={category.id} className="mb-12 sm:mb-16">
-                  <div className="mb-4 sm:mb-6">
-                    <h2 className="text-2xl sm:text-2xl font-light mb-2 sm:mb-3 text-gray-900">
+                <div key={category.id} className="mb-16 sm:mb-20">
+                  <div className="mb-8 sm:mb-10">
+                    <h2 className="text-2xl sm:text-3xl font-light mb-3 sm:mb-4 text-gray-900">
                       {category.title}
                     </h2>
                     {category.description && (
-                      <p className="text-sm text-gray-600 max-w-4xl">
+                      <p className="text-base sm:text-lg text-gray-600 max-w-4xl">
                         {category.description}
                       </p>
                     )}
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                     {category.properties.map((property) => (
                       <PropertyCard key={property.id} property={property} />
                     ))}
@@ -1284,64 +1284,65 @@ export default function Properties() {
             </div>
             
             {/* Pricing Information */}
-            <div className="max-w-4xl mx-auto mt-12 mb-12 p-6 bg-[#f5f5f7] rounded-xl">
-              <div className="space-y-4">
-                <p className="font-medium text-sm">Pricing: When booking through AceHost, we guarantee the lowest or equal pricing you can find for all properties listed above.</p>
-                <p className="text-xs text-gray-600">All prices are listed in Canadian Dollar (CAD). 6 or 7 Night Minimum stay required for all Christmas & New Years bookings. Pricing above is an accurate estimate, but please contact us for exact quotes.</p>
-                <p className="text-xs text-gray-600 italic">We warmly invite travel agents to join us in offering their valued clients an unparalleled chalet villa rental experience in Whistler. Please <Link href="/contact" className="text-gray-900 hover:underline">contact us</Link> to discuss this opportunity.</p>
+            <div className="max-w-4xl mx-auto mt-16 mb-12 px-4 py-8 bg-gray-50 rounded-xl">
+              <div className="text-lg space-y-6">
+                <p className="font-semibold text-xl">Pricing: When booking through AceHost, we guarantee the lowest or equal pricing you can find for all properties listed above.</p>
+                <p>All prices are listed in Canadian Dollar (CAD). 6 or 7 Night Minimum stay required for all Christmas & New Years bookings. Pricing above is an accurate estimate, but please contact us for exact quotes.</p>
+                <p className="italic">We warmly invite travel agents to join us in offering their valued clients an unparalleled chalet villa rental experience in the breathtaking locale of Whistler. Please do not hesitate to <Link href="/contact" className="text-blue-600 hover:underline">contact us</Link> to discuss this opportunity further.</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="bg-black text-white py-12">
-          <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
-              <div className="lg:col-span-2">
-                <h2 className="text-2xl font-bold mb-4">
+        <section className="bg-gray-900 text-white py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl font-bold mb-6">
                   Looking for Something Special?
                 </h2>
-                <p className="text-sm text-gray-400 mb-6">
+                <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6 max-w-3xl mx-auto">
                   Not sure which property is right for you? Let us help find the perfect
-                  property for your needs.
+                  property for your needs. Let us know what you're looking
+                  for, and we'll create a personalized recommendation.
                 </p>
                 <Link
                   href="/contact"
-                  className="inline-block bg-white text-black px-6 py-2 rounded-md hover:bg-gray-100 transition-colors text-sm font-medium"
+                  className="inline-block bg-white text-gray-900 px-8 py-4 rounded-md hover:bg-gray-100 transition-colors font-medium"
                 >
                   Contact Our Team
                 </Link>
               </div>
-              <div className="lg:col-span-3 grid grid-cols-2 gap-3">
-                <div className="bg-gray-900 rounded-lg p-4">
-                  <Coffee className="h-6 w-6 text-white mb-2" />
-                  <h3 className="text-sm font-medium mb-1">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-gray-800 rounded-lg p-6">
+                  <Coffee className="h-8 w-8 text-white mb-4" />
+                  <h3 className="text-xl font-medium mb-2">
                     <Link href="/concierge-service" className="hover:underline">Concierge Services</Link>
                   </h3>
-                  <p className="text-xs text-gray-400">
+                  <p className="text-gray-300">
                     Private chefs, butler services, and personalized
                     experiences.
                   </p>
                 </div>
-                <div className="bg-gray-900 rounded-lg p-4">
-                  <Wifi className="h-6 w-6 text-white mb-2" />
-                  <h3 className="text-sm font-medium mb-1">Smart Homes</h3>
-                  <p className="text-xs text-gray-400">
+                <div className="bg-gray-800 rounded-lg p-6">
+                  <Wifi className="h-8 w-8 text-white mb-4" />
+                  <h3 className="text-xl font-medium mb-2">Smart Homes</h3>
+                  <p className="text-gray-300">
                     Modern amenities and tech-enabled luxury experiences.
                   </p>
                 </div>
-                <div className="bg-gray-900 rounded-lg p-4">
-                  <Car className="h-6 w-6 text-white mb-2" />
-                  <h3 className="text-sm font-medium mb-1">Transportation</h3>
-                  <p className="text-xs text-gray-400">
+                <div className="bg-gray-800 rounded-lg p-6">
+                  <Car className="h-8 w-8 text-white mb-4" />
+                  <h3 className="text-xl font-medium mb-2">Transportation</h3>
+                  <p className="text-gray-300">
                     Airport transfers and luxury vehicle rentals.
                   </p>
                 </div>
-                <div className="bg-gray-900 rounded-lg p-4">
-                  <MapPin className="h-6 w-6 text-white mb-2" />
-                  <h3 className="text-sm font-medium mb-1">Local Expertise</h3>
-                  <p className="text-xs text-gray-400">
+                <div className="bg-gray-800 rounded-lg p-6">
+                  <MapPin className="h-8 w-8 text-white mb-4" />
+                  <h3 className="text-xl font-medium mb-2">Local Expertise</h3>
+                  <p className="text-gray-300">
                     Insider knowledge of the best experiences.
                   </p>
                 </div>
