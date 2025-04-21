@@ -971,11 +971,10 @@ export default function Properties() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
         <div className="relative container mx-auto px-4 h-full flex flex-col justify-center z-10">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white max-w-2xl mb-4">
-            Discover Our Premium Properties
+            Luxury Vacation Rental Properties in Whistler, Canada
           </h1>
           <p className="text-white/90 max-w-xl text-lg md:text-xl">
-            Explore our curated collection of luxury properties in the most
-            desirable locations
+            Ski-in/Ski-out Chalets, 7+ Bedroom Villas, and Exclusive <Link href="/concierge-service" className="text-white underline">Concierge Services</Link>
           </p>
         </div>
       </div>
@@ -1192,13 +1191,25 @@ export default function Properties() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-                Luxury Vacation Rental Properties
+                Luxury Vacation Rental Properties in Whistler, Canada
               </h1>
-              <p className="text-lg text-gray-600 mb-8">
-                Browse our exclusive collection of luxury vacation rental
-                properties in Whistler. From ski-in/ski-out chalets to village
-                condos, find your perfect mountain getaway.
-              </p>
+              <h2 className="text-xl md:text-2xl font-semibold mb-6 text-gray-700">
+                Ski-in/Ski-out Chalets, 7+ Bedroom Villas, and Exclusive <Link href="/concierge-service" className="text-blue-600 hover:underline">Concierge Services</Link>
+              </h2>
+              <div className="text-lg text-gray-600 mb-8 space-y-4">
+                <p>
+                  AceHost Whistler invites you to experience our curated collection of luxury vacation rentals including everything from ski-in/ski-out chalets to large 7- and 8-bedroom homes, ideal for group getaways, family holidays, or unforgettable corporate retreats. Whether you're visiting during Christmas, New Year's, peak winter ski season, or summer, we have stunning homes suited for you.
+                </p>
+                <p>
+                  All bookings at our top villas include our VIP <Link href="/concierge-service" className="text-blue-600 hover:underline">Concierge Services</Link>, where you can expect a fully personalized trip—think private chefs, heli-skiing, snowmobile fondue tours, airport transfers, and hard-to-get restaurant reservations, local contacts and expertise, all arranged seamlessly by our local experts.
+                </p>
+                <p>
+                  Travellers can book directly on Airbnb links below, or speak with us directly to find exact pricing, more information, & more chalet options.
+                </p>
+                <p>
+                  All prices are in Canadian Dollars (CAD) & not in (USD).
+                </p>
+              </div>
               <div className="flex flex-wrap justify-center gap-2">
                 <button
                   onClick={() => setActiveCategory("all")}
@@ -1271,6 +1282,15 @@ export default function Properties() {
                 </div>
               ))}
             </div>
+            
+            {/* Pricing Information */}
+            <div className="max-w-4xl mx-auto mt-16 mb-12 px-4 py-8 bg-gray-50 rounded-xl">
+              <div className="text-lg space-y-6">
+                <p className="font-semibold text-xl">Pricing: When booking through AceHost, we guarantee the lowest or equal pricing you can find for all properties listed above.</p>
+                <p>All prices are listed in Canadian Dollar (CAD). 6 or 7 Night Minimum stay required for all Christmas & New Years bookings. Pricing above is an accurate estimate, but please contact us for exact quotes.</p>
+                <p className="italic">We warmly invite travel agents to join us in offering their valued clients an unparalleled chalet villa rental experience in the breathtaking locale of Whistler. Please do not hesitate to <Link href="/contact" className="text-blue-600 hover:underline">contact us</Link> to discuss this opportunity further.</p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -1298,7 +1318,7 @@ export default function Properties() {
                 <div className="bg-gray-800 rounded-lg p-6">
                   <Coffee className="h-8 w-8 text-white mb-4" />
                   <h3 className="text-xl font-medium mb-2">
-                    Concierge Services
+                    <Link href="/concierge-service" className="hover:underline">Concierge Services</Link>
                   </h3>
                   <p className="text-gray-300">
                     Private chefs, butler services, and personalized
