@@ -107,7 +107,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
       });
     } catch (error: any) {
       console.error("Error submitting form:", error);
-      setErrorMessage(error.message || "There was an error sending your message. Please try again or contact us directly at ben@acehost.ca");
+      setErrorMessage(error.message || "There was an error sending your message. Please try again or contact us directly at benkirsh1@gmail.com");
     } finally {
       setIsSubmitting(false);
     }

@@ -60,9 +60,8 @@ const createTransport = () => {
     logger: true // Log information to console
   };
 
-  // Set recipient to ben@acehost.ca (the business email) 
-  // but use the Gmail account for sending
-  const recipientEmail = "ben@acehost.ca";
+  // Use the same Gmail address for both sending and receiving
+  const recipientEmail = process.env.SMTP_USER || "benkirsh1@gmail.com";
 
   if (DEBUG_MODE) {
     console.log("SMTP Configuration:", {
@@ -230,7 +229,7 @@ export default async function handler(
           
           const fallbackMailOptions = {
             from: process.env.SMTP_USER || 'benkirsh1@gmail.com',
-            to: 'ben@acehost.ca',
+            to: process.env.SMTP_USER || 'benkirsh1@gmail.com',
             subject: `[AceHost] Form Submission from ${name}`,
             text: `
 Name: ${name}
