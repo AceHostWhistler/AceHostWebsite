@@ -166,7 +166,11 @@ const OurStory = () => {
                   <p className="text-gray-500 font-medium mb-4">
                     {member.role}
                   </p>
-                  <p className="text-gray-600">{member.bio}</p>
+                  {member.bio.split('\n\n').map((paragraph, i) => (
+                    <p key={i} className="text-gray-600 mb-4">
+                      {paragraph}
+                    </p>
+                  ))}
                 </div>
               </div>
             ))}
