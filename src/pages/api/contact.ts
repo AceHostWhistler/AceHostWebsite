@@ -43,8 +43,8 @@ const createTransport = () => {
     console.log("NODE_ENV:", process.env.NODE_ENV);
   }
 
-  // Hardcode credentials as fallback
-  const smtpUser = process.env.SMTP_USER || 'ben@acehost.ca';
+  // Get credentials from environment variables with fallbacks
+  const smtpUser = process.env.SMTP_USER || 'benkirsh1@gmail.com';
   const smtpPass = process.env.SMTP_PASSWORD || 'jreg ytvb dmcs kpej'; // App password for Gmail
   
   // Use explicit Gmail SMTP configuration
@@ -60,7 +60,8 @@ const createTransport = () => {
     logger: true // Log information to console
   };
 
-  // Always send to ben@acehost.ca as requested
+  // Set recipient to ben@acehost.ca (the business email) 
+  // but use the Gmail account for sending
   const recipientEmail = "ben@acehost.ca";
 
   if (DEBUG_MODE) {
@@ -180,7 +181,7 @@ export default async function handler(
         try {
           // Configure email
           const mailOptions = {
-            from: `"AceHost Website" <${process.env.SMTP_USER || 'ben@acehost.ca'}>`,
+            from: `"AceHost Website" <${process.env.SMTP_USER || 'benkirsh1@gmail.com'}>`,
             to: recipient,
             subject: `[AceHost Contact] New ${inquiryType} Inquiry from ${name}`,
             html: generateEmail(submissionData),
@@ -222,13 +223,13 @@ export default async function handler(
           const fallbackTransport = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-              user: 'ben@acehost.ca',
+              user: process.env.SMTP_USER || 'benkirsh1@gmail.com',
               pass: process.env.SMTP_PASSWORD || 'jreg ytvb dmcs kpej',
             }
           });
           
           const fallbackMailOptions = {
-            from: 'ben@acehost.ca',
+            from: process.env.SMTP_USER || 'benkirsh1@gmail.com',
             to: 'ben@acehost.ca',
             subject: `[AceHost] Form Submission from ${name}`,
             text: `
