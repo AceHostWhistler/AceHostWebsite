@@ -354,7 +354,7 @@ export default function Properties() {
             guests: 15,
             bedrooms: 7,
             bathrooms: 3.5,
-            location: "Blueberry Hill, Whistler",
+            location: "whistler",
             description:
               "Cozy chalet in an amazing location! Beautiful views of the mountain in the prestigious, quiet and family orientated Blueberry Hill. Perfect for a large group or family retreat in Whistler.",
             features: [

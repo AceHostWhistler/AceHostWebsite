@@ -323,7 +323,7 @@ const Home = () => {
       priceRange: "$1,300-$3,500",
       winterPrice: "$1,800-$3,000",
       holidayPrice: "$3,000-$3,500",
-      location: "Blueberry Hill, Whistler",
+      location: "whistler",
       isPetFriendly: true,
     },
     {
