@@ -96,7 +96,7 @@ const LuxeCozyWhistlerVillage = () => {
                 Contact Us
               </Link>
               <a
-                href="https://www.airbnb.ca/rooms/00011803"
+                href="https://www.airbnb.ca/rooms/1249285355870765792?guests=1&adults=1&s=67&unique_share_id=dcc074b1-0fe5-477a-bc67-701bc6736b13"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium"

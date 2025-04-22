@@ -156,7 +156,7 @@ const TwoCedarsKadenwood = () => {
                 Contact Us
               </Link>
               <a
-                href="https://www.airbnb.ca/rooms/658945646684454022"
+                href="https://www.airbnb.ca/rooms/666613336620375768?guests=1&adults=1&s=67&unique_share_id=7e52bdf8-80c0-4a37-9f8b-b411e6e9ad3e"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"

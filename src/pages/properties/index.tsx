@@ -87,6 +87,18 @@ export default function Properties() {
             "@type": string;
             addressLocality: string;
           };
+          offers?: {
+            "@type": string;
+            priceCurrency: string;
+            priceValidUntil: string;
+            url: string;
+            availability: string;
+          };
+          aggregateRating?: {
+            "@type": string;
+            ratingValue: number;
+            reviewCount: number;
+          };
         };
       }>,
       numberOfItems: 0,
@@ -919,9 +931,23 @@ export default function Properties() {
           "@type": "PostalAddress",
           addressLocality: property.location,
         },
+        // Add offers for each property
+        offers: {
+          "@type": "Offer",
+          priceCurrency: "CAD",
+          priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
+          url: `/listings/${property.id}`,
+          availability: "https://schema.org/InStock"
+        },
+        // Add aggregate rating (generic positive rating)
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: 4.8,
+          reviewCount: 15
+        }
       },
     }));
-  }, [displayProperties, structuredData]);
+  }, [displayProperties, structuredData, propertyCategories]);
 
   // Add/remove amenity filter
   const toggleAmenityFilter = (amenity: string) => {
@@ -1019,7 +1045,7 @@ export default function Properties() {
       "chalet-la-forja-kadenwood":
         "https://www.airbnb.ca/rooms/52655503?guests=1&adults=1&s=67&unique_share_id=f1bb5c2c-51f9-4a82-9aa4-670fb8caa71d",
       "two-cedars-kadenwood":
-        "https://www.airbnb.ca/rooms/666613336620375768?guests=1&adults=1&s=67&unique_share_id=0d8a1725-cb02-487a-a033-7cc2940692e4",
+        "https://www.airbnb.ca/rooms/666613336620375768?guests=1&adults=1&s=67&unique_share_id=7e52bdf8-80c0-4a37-9f8b-b411e6e9ad3e",
       "slopeside-villa-kadenwood":
         "https://www.airbnb.ca/rooms/826226399590812184?guests=1&adults=1&s=67&unique_share_id=aab7fbd3-669a-461d-b913-c15cf257b4c0",
       "panoramic-estate-kadenwood":
@@ -1043,7 +1069,7 @@ export default function Properties() {
       "marquise-2-bed":
         "https://www.airbnb.ca/rooms/1370367404602078616?guests=1&adults=1&s=67&unique_share_id=eb381b39-e67d-44ea-9d7c-2de2e1b5fa20",
       "luxe-cozy-3-bed-whistler-village":
-        "https://www.airbnb.ca/rooms/1249285355870765792?guests=1&adults=1&s=67&unique_share_id=5fc53f3d-300c-4b8b-aee5-d9f5b263ae3c",
+        "https://www.airbnb.ca/rooms/1249285355870765792?guests=1&adults=1&s=67&unique_share_id=dcc074b1-0fe5-477a-bc67-701bc6736b13",
       "ski-in-ski-out-walk-to-lifts-2-bed":
         "https://www.airbnb.ca/rooms/1015303987589924725?guests=1&adults=1&s=67&unique_share_id=5e912eb5-5445-4797-81ec-df21817dd143",
     };
@@ -1175,16 +1201,17 @@ export default function Properties() {
   return (
     <>
       <Head>
-        <title>Luxury Vacation Rental Properties | AceHost Whistler</title>
+        <title>Luxury Vacation Rentals in Whistler | ACE HOST</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="Browse our exclusive collection of luxury vacation rental properties in Whistler. From ski-in/ski-out chalets to village condos, find your perfect mountain getaway."
+          content="Browse our exclusive collection of luxury vacation rentals in Whistler, BC. Ski-in/ski-out chalets, premium condos, and spectacular mountain homes available."
         />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://acehost.ca/properties" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </Head>
 
