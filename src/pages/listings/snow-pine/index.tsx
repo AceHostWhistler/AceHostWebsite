@@ -43,6 +43,57 @@ const SnowPine = () => {
     "/photos/properties/Snowpine 3-bed Saul/23-2040 Karen Cres-23.jpg",
   ];
 
+  // Structured data for the property
+  const structuredData = {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "Snowpine | Creekside Modern Ski Chalet",
+    "image": photos[0],
+    "description": "This modern ski chalet in Creekside features a hot tub, BBQ, and fire pit, just 7 min walk to gondola.",
+    "sku": "snowpine-creekside",
+    "brand": {
+      "@type": "Brand",
+      "name": "AceHost"
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "offerCount": 3,
+      "lowPrice": 10000,
+      "highPrice": 12000,
+      "priceCurrency": "CAD",
+      "availability": "https://schema.org/LimitedAvailability",
+      "validFrom": "2024-01-01",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Monthly Rate",
+          "price": 10000,
+          "priceCurrency": "CAD",
+          "availability": "https://schema.org/LimitedAvailability"
+        },
+        {
+          "@type": "Offer",
+          "name": "3-Month Rate",
+          "price": 30000,
+          "priceCurrency": "CAD",
+          "availability": "https://schema.org/LimitedAvailability"
+        },
+        {
+          "@type": "Offer",
+          "name": "4-Month Rate",
+          "price": 40000,
+          "priceCurrency": "CAD",
+          "availability": "https://schema.org/LimitedAvailability"
+        }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "15"
+    }
+  };
+
   const handlePhotoClick = (index: number) => {
     setSelectedPhotoIndex(index);
   };
@@ -78,6 +129,10 @@ const SnowPine = () => {
         <meta
           name="description"
           content="Experience the perfect Whistler getaway at Snowpine. This modern ski chalet in Creekside features a hot tub, BBQ, and fire pit, just 7 min walk to gondola."
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </Head>
 
