@@ -60,8 +60,8 @@ const createTransport = () => {
     logger: true // Log information to console
   };
 
-  // Use the same Gmail address for both sending and receiving
-  const recipientEmail = process.env.SMTP_USER || "benkirsh1@gmail.com";
+  // Use ben@acehost.ca as the recipient email regardless of SMTP sending account
+  const recipientEmail = "ben@acehost.ca";
 
   if (DEBUG_MODE) {
     console.log("SMTP Configuration:", {
@@ -229,7 +229,7 @@ export default async function handler(
           
           const fallbackMailOptions = {
             from: process.env.SMTP_USER || 'benkirsh1@gmail.com',
-            to: process.env.SMTP_USER || 'benkirsh1@gmail.com',
+            to: "ben@acehost.ca",
             subject: `[AceHost] Form Submission from ${name}`,
             text: `
 Name: ${name}
