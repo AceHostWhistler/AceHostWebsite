@@ -4,26 +4,6 @@ import smtpTransport from 'nodemailer-smtp-transport';
 import fs from 'fs';
 import path from 'path';
 
-// ====================================================================
-// IMPORTANT: EMAIL CONFIGURATION
-// ====================================================================
-// This file contains critical email configuration for the contact form.
-// The email setup has been carefully configured to ensure reliable
-// delivery and should not be changed without thorough testing.
-//
-// CURRENT WORKING SETUP:
-// - Sending Account: benkirsh1@gmail.com (using Google App Password)
-// - Receiving Account: ben@acehost.ca
-//
-// If the contact form stops working:
-// 1. Verify .env.local contains the correct configuration
-// 2. Ensure benkirsh1@gmail.com is used as the sender (SMTP_USER)
-// 3. Confirm the app password is still valid
-//
-// DO NOT change SMTP_USER to ben@acehost.ca - it will cause auth issues
-// See EMAIL_CONFIGURATION.md for complete documentation
-// ====================================================================
-
 // For debugging
 const DEBUG_MODE = true;
 
@@ -64,7 +44,6 @@ const createTransport = () => {
   }
 
   // Get credentials from environment variables with fallbacks
-  // CRITICAL: Must use benkirsh1@gmail.com for sending - DO NOT CHANGE THIS
   const smtpUser = process.env.SMTP_USER || 'benkirsh1@gmail.com';
   const smtpPass = process.env.SMTP_PASSWORD || 'jreg ytvb dmcs kpej'; // App password for Gmail
   
@@ -83,7 +62,6 @@ const createTransport = () => {
 
   // Set recipient to ben@acehost.ca (the business email) 
   // but use the Gmail account for sending
-  // CRITICAL: Always send TO ben@acehost.ca but FROM benkirsh1@gmail.com
   const recipientEmail = "ben@acehost.ca";
 
   if (DEBUG_MODE) {
@@ -202,7 +180,6 @@ export default async function handler(
         
         try {
           // Configure email
-          // CRITICAL: FROM must be benkirsh1@gmail.com, TO must be ben@acehost.ca
           const mailOptions = {
             from: `"AceHost Website" <${process.env.SMTP_USER || 'benkirsh1@gmail.com'}>`,
             to: recipient,
@@ -243,7 +220,6 @@ export default async function handler(
         console.log("Main email method failed, trying fallback approach...");
         try {
           // Create a simple transport with minimal config
-          // CRITICAL: Always use benkirsh1@gmail.com for sending
           const fallbackTransport = nodemailer.createTransport({
             service: 'gmail',
             auth: {
