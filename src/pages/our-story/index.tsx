@@ -19,19 +19,19 @@ const teamMembers: TeamMember[] = [
   {
     name: "Ben Kirsh",
     role: "Founder & CEO",
-    bio: "Ben founded AceHost with a vision to transform the vacation rental experience in Whistler. With over a decade of experience in luxury hospitality, he personally oversees each property to ensure it meets our premium standards.",
+    bio: "Hello There, I'm Ben, a Whistler local who has spent almost my whole life between Whistler and Vancouver. Having lived here since I was born, I have witnessed the changes and rapid growth the area has seen in recent years. I enjoy sharing my insider knowledge and contacts with guests so they can truly maximize their experiences here in Whistler. I enjoy connecting in English, Spanish, or French. Like most Whistler locals, I love the outdoors and the beautiful scenery our town offers.\n\nPrior to playing semi-professional tennis, competing at the NCAA collegiate level and achieving All-American status, I was a member of the Whistler Ski Racing team, where I had the opportunity to participate in the famed Whistler Cup events. I enjoy going on road trips, exploring new lakes/mountains all around beautiful BC. Above all, I enjoy my food, so please ask me for recommendations.\n\nMy goal for AceHost is to provide homeowners with a seamless and profitable venture while providing guests with an unforgettable vacation. I am always around to answer any questions, and if time permits, to hit the slopes with guests.",
     imagePath: "/photos/homepage/about/Ben.jpg",
   },
   {
     name: "Max Korkh",
     role: "Co-Founder & Head of Operations",
-    bio: "Max brings extensive operational expertise to AceHost, managing our day-to-day operations and ensuring each guest receives exceptional service. His attention to detail is unmatched in the industry.",
+    bio: "Hi there! My name is Max and I'm a North Shore local. Born in Vancouver, I've spent most of my life living between Vancouver and Moscow, where my family is originally from. AceHost brought me to Whistler in 2023, although I've enjoyed many skiing holidays here in the past. I'm looking forward to making the most of ample outdoor activities that Whistler has to offer all year round.\n\nSimilar to Ben, I grew up playing tennis from the age of 5. After playing pro events and NCAA division 1 at the University of Montana, I stayed active in the tennis community, working as a club professional and the Director of Events at Tennis BC. I still love to smack that fuzzy yellow ball from time to time. When I'm not on court, I love to travel, ski, road bike and eat out.\n\nMy goal at AceHost is to deliver a first-rate experiences for both guests and homeowners. As our business ventures to new heights, it's important that we focus on small details in customer service, communication and administration to ensure healthy, sustainable growth.",
     imagePath: "/photos/homepage/about/Max.jpg",
   },
   {
     name: "Sally Fewson",
-    role: "Director of Guest Experience",
-    bio: "Sally's passion for creating unforgettable experiences drives our concierge services. She works closely with each guest to curate personalized itineraries that showcase the best of Whistler.",
+    role: "Executive Assistant / Lead Property Manager",
+    bio: "I'm Sally, I was born and grew up in Surrey in the UK. The mountains and skiing brought me to Whistler in 2019 and I haven't looked back since! I have spent the past several years working for UHNW individuals in service, housekeeping, kitchens, and personal assistant roles on super yachts and private residences. As a result, I am incredibly detail-orientated with high standards and always strive to provide the best guest experience possible that will exceed 5 star hotels.\n\nWhistler has sucked me in and has since been unable to spit me out. I spend my time enjoying everything this town has to offer. Mountain biking, skiing, hiking, running, and like Ben, I love road tripping and exploring what else BC has to offer. I aim to ensure that your property is kept to the highest standard possible, attend to all guest needs, and make sure they have an incredible stay that will leave them wanting more. No ask is too big or small!",
     imagePath: "/photos/homepage/about/Sally.jpeg",
   },
 ];
