@@ -1030,10 +1030,17 @@ export default function Properties() {
         "wedge-mountain-lodge-spa",
         "luxe-cozy-3-bed-whistler-village",
         "dream-log-chalet-5-bedroom-4-bath-creekside",
-        "whispering-pines",
-        "marquise-2-bed",
+        "scandinavian-mountainside-retreat-pemberton-meadows-50-acres",
       ].includes(property.id)
         ? `/listings/${property.id}`
+        : property.id === "whispering-pines"
+        ? "/listings/whispering-pines-ski-in-ski-out"
+        : property.id === "marquise-2-bed"
+        ? "/listings/marquise-2-bed-ski-in-ski-out"
+        : property.id === "the-nest-pets"
+        ? "/listings/the-nest-ski-in-ski-out"
+        : property.id === "ski-in-ski-out-walk-to-lifts-2-bed"
+        ? "/listings/ski-in-ski-out-walk-to-lifts-2-bed"
         : property.id.startsWith("vancouver-")
         ? `/vancouver-listings/${property.id}`
         : `/worldwide-listings/${property.id}`;
