@@ -250,7 +250,6 @@ export default function Properties() {
               "Mountain Views",
             ],
             priceRange: "$2,600-$6,000 per night",
-            isPetFriendly: true,
             isSkiInSkiOut: true,
           },
           {
@@ -364,7 +363,6 @@ export default function Properties() {
               "Spacious Deck",
               "BBQ",
               "Wood-burning Fireplace",
-              "Pet Friendly",
               "Parking for 4-5 Cars",
             ],
             highlights: [
@@ -373,12 +371,12 @@ export default function Properties() {
               "Beautiful Mountain Views",
               "15-Minute Walk to Village",
             ],
-            priceRange: "$1,300-$3,500 per night",
-            isPetFriendly: true,
+            priceRange: "Nightly Price Range: $1,300-$3,500+",
+            winterPrice: "$2,000-$3,500+ Nightly | Winter",
+            holidayPrice: "$4,000-$7,200+ Nightly | Christmas & NY",
           },
-        
           {
-            id: "snow-pine",
+            id: "snowpine",
             name: "Snowpine | Creekside",
             images: [
               "/photos/properties/Snowpine 3-bed Saul/02-2040 Karen Cres-02.jpg",
@@ -408,9 +406,7 @@ export default function Properties() {
               "Quiet Neighborhood",
             ],
             priceRange: "Monthly Price Range: $10,000-$12,000",
-            winterPrice: "90 night minimum",
-            holidayPrice: "$30,000 - 3 months | $40,000 - 4 months",
-            isPetFriendly: true,
+            isSkiInSkiOut: true,
           },
           {
             id: "wedge-mountain-lodge-spa",
@@ -571,7 +567,7 @@ export default function Properties() {
               "Cozy Mountain Retreat",
             ],
             priceRange: "Nightly Price Range: $160-450",
-            isPetFriendly: true,
+            isSkiInSkiOut: true,
           },
           {
             id: "the-nest-pets",
