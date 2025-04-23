@@ -4,41 +4,74 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        {/* Preconnect to important domains */}
-        <link
-          rel="preconnect"
-          href="https://fonts.googleapis.com"
-          crossOrigin="anonymous"
-        />
+        {/* Preconnect to domains for faster loading */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
-        <link 
-          rel="preconnect" 
-          href="https://i.vimeocdn.com" 
-          crossOrigin="anonymous"
-        />
-        <link 
-          rel="preconnect" 
-          href="https://f.vimeocdn.com" 
-          crossOrigin="anonymous"
-        />
-        
-        {/* Add critical fonts with display=swap */}
+
+        {/* Font optimization - using preload instead of stylesheet to avoid render blocking */}
         <link
-          rel="stylesheet"
+          rel="preload"
+          as="style"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+          fetchPriority="high"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet"
+          media="print"
+          onLoad={() => {
+            // @ts-ignore - This is a DOM element property
+            document.currentScript.media = 'all';
+          }}
+        />
+        <noscript>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
+        </noscript>
         
-        {/* Add DNS prefetch for third party services */}
-        <link rel="dns-prefetch" href="https://i.vimeocdn.com" />
-        <link rel="dns-prefetch" href="https://f.vimeocdn.com" />
-        <link rel="dns-prefetch" href="https://player.vimeo.com" />
-        
-        {/* Meta color */}
-        <meta name="theme-color" content="#000000" />
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+              /* Font display optimization */
+              @font-face {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 300;
+                font-display: swap;
+              }
+              @font-face {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+              }
+              @font-face {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 500;
+                font-display: swap;
+              }
+              @font-face {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 600;
+                font-display: swap;
+              }
+              @font-face {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+              }
+            `,
+          }}
+        />
 
         {/* Preload critical assets */}
         <link rel="preload" href="/logo.png" as="image" type="image/png" />
@@ -49,6 +82,7 @@ export default function Document() {
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#ffffff" />
         <meta
           name="google-site-verification"
           content="UmTMmjHtW3Q_-Uzi8WXxrPgE2YBsv0GXgq0RXCQuB_Y"

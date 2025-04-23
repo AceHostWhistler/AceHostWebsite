@@ -208,7 +208,7 @@ const FAQPage = () => {
                             <h3 className="text-lg font-medium text-gray-900 text-left">
                               {item.question}
                             </h3>
-                            <span className="text-gray-600 flex-shrink-0 ml-4">
+                            <span className="text-gray-400 flex-shrink-0 ml-4">
                               {expandedFaq === faqIndex ? (
                                 <Minus size={20} />
                               ) : (
