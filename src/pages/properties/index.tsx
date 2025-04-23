@@ -40,6 +40,7 @@ interface PropertyFeature {
   highlights?: string[];
   priceRange?: string;
   isPetFriendly?: boolean;
+  isSkiInSkiOut?: boolean;
 }
 
 interface PropertyCategory {
@@ -60,7 +61,8 @@ export default function Properties() {
     minGuests: 0,
     maxGuests: 50,
     amenities: [] as string[],
-    petFriendly: false
+    petFriendly: false,
+    skiInSkiOut: false
   });
   const [showFilters, setShowFilters] = useState(false);
 
@@ -148,6 +150,7 @@ export default function Properties() {
               "Ski-In/Ski-Out Access",
             ],
             priceRange: "$7,500-$10,000+ per night",
+            isSkiInSkiOut: true,
           },
           {
             id: "two-cedars-kadenwood",
@@ -181,6 +184,7 @@ export default function Properties() {
             ],
             priceRange: "$6,500-$9,500+ per night",
             isPetFriendly: true,
+            isSkiInSkiOut: true,
           },
           {
             id: "chalet-la-forja-kadenwood",
@@ -213,39 +217,41 @@ export default function Properties() {
               "Luxury Design",
             ],
             priceRange: "$7,000-11,000+ per night | Private Butler Included",
+            isSkiInSkiOut: true,
           },
           {
             id: "slopeside-villa-kadenwood",
             name: "Slope Slide Chalet | Kadenwood",
             images: [
               "/photos/properties/Slopeside Kadenwood/01-2945 Slope Side 01.jpg",
-              "/photos/properties/Slopeside Kadenwood/01-2945 Slope Side 01.jpg",
-              "/photos/properties/Slopeside Kadenwood/01-2945 Slope Side 01.jpg",
+              "/photos/properties/Slopeside Kadenwood/08-2945 Slope Side 08.jpg",
+              "/photos/properties/Slopeside Kadenwood/06-2945 Slope Side 06.jpg",
             ],
             guests: 16,
             bedrooms: 7,
             bathrooms: 7.5,
             location: "Kadenwood, Whistler",
             description:
-              "Experience the height of alpine luxury in this magnificent Kadenwood estate. With direct ski-in/ski-out access and spectacular mountain views, this residence combines exceptional design with premium comfort.",
+              "Slope Side is a luxury retreat in Whistler's exclusive Kadenwood neighborhood. This ski-in/ski-out property offers breathtaking views, elegant interiors, and premium amenities for an unforgettable mountain experience.",
             features: [
-              "Direct Ski-in/Ski-out Access",
+              "Ski-in/Ski-out Access",
               "Private Hot Tub",
-              "Outdoor Firepit",
-              "Home Theater",
-              "Wine Cellar",
+              "Mountain Views",
               "Gourmet Kitchen",
-              "Designer Furnishings",
               "Multiple Fireplaces",
+              "Large Deck",
+              "Media Room",
+              "Heated Floors",
             ],
             highlights: [
-              "Exclusive Kadenwood Estate",
-              "Direct Slope Access",
-              "Luxury Design & Finishes",
-              "Panoramic Mountain Views",
+              "Exclusive Kadenwood Location",
+              "Private Hot Tub",
+              "Ski-in/Ski-out Access",
+              "Mountain Views",
             ],
             priceRange: "$2,600-$6,000 per night",
             isPetFriendly: true,
+            isSkiInSkiOut: true,
           },
           {
             id: "panoramic-estate-kadenwood",
@@ -316,32 +322,27 @@ export default function Properties() {
             name: "Raven's Nest | Ski in Ski out | Views",
             images: [
               "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05349.jpg",
-              "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05566.jpg",
-              "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05566.jpg",
+              "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05352.jpg",
+              "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05360.jpg",
             ],
             guests: 6,
             bedrooms: 3,
             bathrooms: 3,
-            location: "Creekside, Whistler",
+            location: "Blackcomb, Whistler",
             description:
-              "Perched above Whistler Creekside with stunning valley views, this ski-in/ski-out townhome offers perfect mountain access and elegant comfort. Features vaulted ceilings, a stone fireplace, and a private hot tub.",
+              "Ravens Nest is a beautiful ski-in/ski-out townhome on Blackcomb Mountain, offering stunning views and luxury accommodations for your Whistler getaway.",
             features: [
               "Ski-in/Ski-out Access",
+              "Mountain Views",
               "Private Hot Tub",
-              "Valley Views",
-              "Vaulted Ceilings",
-              "Stone Fireplace",
-              "Gourmet Kitchen",
-              "Large Deck",
-              "Heated Floors",
-            ],
-            highlights: [
-              "True Ski-in/Ski-out",
-              "Panoramic Valley Views",
-              "Private Hot Tub",
-              "Creekside Convenience",
+              "Fully Equipped Kitchen",
+              "Garage",
+              "Fireplace",
+              "High-Speed WiFi",
+              "Smart TV",
             ],
             priceRange: "$2,000-$3,500 per night",
+            isSkiInSkiOut: true,
           },
           {
             id: "falcon-blueberry-drive",
@@ -875,36 +876,31 @@ export default function Properties() {
     }
   }, [queryCategoryId]);
 
-  // Filter properties based on active filter
-  const filteredListings =
-    activeCategory === "all"
-      ? propertyCategories
-      : propertyCategories.filter((category) => category.id === activeCategory);
-
-  // Apply all filters (except search which is removed)
-  const displayProperties = filteredListings.map((category) => {
-    const filteredProperties = category.properties.filter((property) => {
-      const bedroomsMatch =
-        property.bedrooms >= filters.minBedrooms &&
-        property.bedrooms <= filters.maxBedrooms;
-      const guestsMatch =
-        property.guests >= filters.minGuests &&
-        property.guests <= filters.maxGuests;
-      const amenitiesMatch =
-        filters.amenities.length === 0 ||
-        filters.amenities.every((amenity) =>
-          property.features.some((feature) =>
-            feature.toLowerCase().includes(amenity.toLowerCase())
-          )
-        );
-      // Check if property is pet friendly when the filter is active
-      const petFriendlyMatch = !filters.petFriendly || property.isPetFriendly === true;
-
-      return bedroomsMatch && guestsMatch && amenitiesMatch && petFriendlyMatch;
-    });
-
-    return { ...category, properties: filteredProperties };
-  });
+  // Filter the properties for display
+  const displayProperties = useMemo(() => {
+    return propertyCategories
+      .filter(category => activeCategory === "all" || category.id === activeCategory)
+      .map(category => {
+        const filteredProperties = category.properties.filter((property) => {
+          // Apply all filters
+          const bedroomsMatch = property.bedrooms >= filters.minBedrooms && property.bedrooms <= filters.maxBedrooms;
+          const guestsMatch = property.guests >= filters.minGuests && property.guests <= filters.maxGuests;
+          const petFriendlyMatch = !filters.petFriendly || property.isPetFriendly;
+          const skiInSkiOutMatch = !filters.skiInSkiOut || property.isSkiInSkiOut;
+          const amenitiesMatch = 
+            filters.amenities.length === 0 || 
+            filters.amenities.every(amenity => 
+              property.features.some(feature => 
+                feature.toLowerCase().includes(amenity.toLowerCase())
+              )
+            );
+          
+          return bedroomsMatch && guestsMatch && petFriendlyMatch && skiInSkiOutMatch && amenitiesMatch;
+        });
+        
+        return { ...category, properties: filteredProperties };
+      });
+  }, [propertyCategories, activeCategory, filters]);
 
   // Populate structured data with filtered properties for SEO
   useEffect(() => {
@@ -971,7 +967,8 @@ export default function Properties() {
       minGuests: 0,
       maxGuests: 50,
       amenities: [],
-      petFriendly: false
+      petFriendly: false,
+      skiInSkiOut: false
     });
   };
 
@@ -1075,8 +1072,6 @@ export default function Properties() {
         "https://www.airbnb.ca/rooms/50025973?preview_for_ml=true&source_impression_id=p3_1699290307_SHcNx7EoXySmn6j5",
       "marquise-2-bed":
         "https://www.airbnb.ca/rooms/1370367404602078616?guests=1&adults=1&s=67&unique_share_id=eb381b39-e67d-44ea-9d7c-2de2e1b5fa20",
-      "luxe-cozy-3-bed-whistler-village":
-        "https://www.airbnb.ca/rooms/1249285355870765792?guests=1&adults=1&s=67&unique_share_id=dcc074b1-0fe5-477a-bc67-701bc6736b13",
       "ski-in-ski-out-walk-to-lifts-2-bed":
         "https://www.airbnb.ca/rooms/1015303987589924725?guests=1&adults=1&s=67&unique_share_id=5e912eb5-5445-4797-81ec-df21817dd143",
     };
@@ -1306,6 +1301,23 @@ export default function Properties() {
                 >
                   {filters.petFriendly && <CheckCircle className="w-4 h-4 mr-1.5 inline" />}
                   Pet Friendly
+                </button>
+                <button
+                  onClick={() => {
+                    // Toggle ski-in/ski-out filter
+                    setFilters(prev => ({
+                      ...prev,
+                      skiInSkiOut: !prev.skiInSkiOut
+                    }));
+                  }}
+                  className={`px-6 py-2.5 rounded-full text-sm font-medium transition-colors ${
+                    filters.skiInSkiOut
+                      ? "bg-blue-600 text-white"
+                      : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+                  }`}
+                >
+                  {filters.skiInSkiOut && <CheckCircle className="w-4 h-4 mr-1.5 inline" />}
+                  Ski in Ski out
                 </button>
               </div>
             </div>

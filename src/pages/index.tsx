@@ -196,6 +196,7 @@ const Home = () => {
       link: "/listings/altitude-retreat-kadenwood",
       airbnbLink:
         "https://www.airbnb.ca/rooms/771060491470943213?guests=1&adults=1&s=67&unique_share_id=a8ff5a7a-4bda-4cc7-aaad-e99b178f3a5d",
+      isSkiInSkiOut: true,
     },
     {
       id: "two-cedars",
@@ -213,6 +214,7 @@ const Home = () => {
       airbnbLink:
         "https://www.airbnb.ca/rooms/666613336620375768?guests=1&adults=1&s=67&unique_share_id=0d8a1725-cb02-487a-a033-7cc2940692e4",
       isPetFriendly: true,
+      isSkiInSkiOut: true,
     },
     {
       id: "chalet-la-forja",
@@ -229,6 +231,7 @@ const Home = () => {
       link: "/listings/chalet-la-forja-kadenwood",
       airbnbLink:
         "https://www.airbnb.ca/rooms/52655503?guests=1&adults=1&s=67&unique_share_id=f1bb5c2c-51f9-4a82-9aa4-670fb8caa71d",
+      isSkiInSkiOut: true,
     },
     {
       id: "slopeside-villa",
@@ -246,6 +249,7 @@ const Home = () => {
       airbnbLink:
         "https://www.airbnb.ca/rooms/826226399590812184?guests=1&adults=1&s=67&unique_share_id=aab7fbd3-669a-461d-b913-c15cf257b4c0",
       isPetFriendly: true,
+      isSkiInSkiOut: true,
     },
     {
       id: "panoramic-estate",
@@ -310,6 +314,7 @@ const Home = () => {
       link: "/listings/ravens-nest-ski-in-ski-out-views",
       airbnbLink:
         "https://www.airbnb.ca/rooms/1300258964918876012?guests=1&adults=1&s=67&unique_share_id=41b635e9-00a9-441c-a134-056b2b3814ac",
+      isSkiInSkiOut: true,
     },
     {
       id: "falcon-blueberry-drive",
@@ -342,6 +347,7 @@ const Home = () => {
       airbnbLink:
         "https://www.airbnb.ca/rooms/763259660349118016?guests=1&adults=1&s=67&unique_share_id=d18218f6-da74-4763-a199-d5a1dc8c85ff&source_impression_id=p3_1744822209_P3U3_5CgXenHmYC6",
       isPetFriendly: true,
+      isSkiInSkiOut: true,
     },
     {
       id: "snow-pine",
@@ -422,6 +428,7 @@ const Home = () => {
       link: "/listings/whispering-pines-ski-in-ski-out",
       airbnbLink:
         "https://www.airbnb.com/rooms/1072474554447345991?guests=1&adults=1&s=67&unique_share_id=e556b35c-05b5-40b6-91e1-5304ffafc23b",
+      isSkiInSkiOut: true,
     },
     {
       id: "marquise-2-bed",
@@ -439,6 +446,7 @@ const Home = () => {
       airbnbLink:
         "https://www.airbnb.ca/rooms/1370367404602078616?guests=1&adults=1&s=67&unique_share_id=eb381b39-e67d-44ea-9d7c-2de2e1b5fa20",
       isPetFriendly: true,
+      isSkiInSkiOut: true,
     },
     {
       id: "ski-in-ski-out-walk-to-lifts-2-bed",
@@ -454,6 +462,7 @@ const Home = () => {
       location: "whistler",
       link: "/listings/ski-in-ski-out-walk-to-lifts-2-bed",
       airbnbLink: "https://www.airbnb.ca/rooms/1015303987589924725?guests=1&adults=1&s=67&unique_share_id=5e912eb5-5445-4797-81ec-df21817dd143",
+      isSkiInSkiOut: true,
     },
     {
       id: "whistler-village-views-luxury-2-5-bedroom",
@@ -556,6 +565,8 @@ const Home = () => {
       ? allListings
       : activeFilter === "pets"
       ? allListings.filter((listing) => listing.isPetFriendly === true)
+      : activeFilter === "skiinout"
+      ? allListings.filter((listing) => listing.isSkiInSkiOut === true)
       : allListings.filter((listing) => listing.location === activeFilter);
 
   // This ensures only one Two Cedars property is displayed
@@ -895,6 +906,16 @@ const Home = () => {
                 </button>
                 <button
                   className={`px-6 py-2 border-b-2 ${
+                    activeFilter === "skiinout"
+                      ? "border-gray-900 text-gray-900 font-medium"
+                      : "border-transparent text-gray-500 hover:text-gray-900 hover:border-gray-900 transition-colors"
+                  }`}
+                  onClick={() => setActiveFilter("skiinout")}
+                >
+                  Ski in Ski out
+                </button>
+                <button
+                  className={`px-6 py-2 border-b-2 ${
                     activeFilter === "worldwide"
                       ? "border-gray-900 text-gray-900 font-medium"
                       : "border-transparent text-gray-500 hover:text-gray-900 hover:border-gray-900 transition-colors"
@@ -921,6 +942,7 @@ const Home = () => {
                 .filter((listing) => {
                   if (activeFilter === "all") return true;
                   if (activeFilter === "pets") return listing.isPetFriendly;
+                  if (activeFilter === "skiinout") return listing.isSkiInSkiOut;
                   return listing.location === activeFilter;
                 })
                 .map((property, i) => renderPropertyCard(property, i))}
