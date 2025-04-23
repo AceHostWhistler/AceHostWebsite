@@ -283,6 +283,7 @@ export default function Properties() {
               "Ultimate Luxury Experience",
             ],
             priceRange: "$5,800-$9,000+ per night",
+            isSkiInSkiOut: true,
           },
           {
             id: "heron-views-whistler-village",

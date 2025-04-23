@@ -266,6 +266,7 @@ const Home = () => {
       link: "/listings/panoramic-estate-kadenwood",
       airbnbLink:
         "https://www.airbnb.ca/rooms/1104637821836596397?guests=1&adults=1&s=67&unique_share_id=67164555-993c-40dc-b188-23ffe0755654",
+      isSkiInSkiOut: true,
     },
     {
       id: "heron-views-whistler",
