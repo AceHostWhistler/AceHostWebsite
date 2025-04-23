@@ -68,7 +68,7 @@ const Home = () => {
       className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
     >
       <div className="relative h-64">
-        <Link href={property.link}>
+        <Link href={property.link || `/listings/${property.id}`}>
           <Image
             src={property.image}
             alt={property.title || property.name}
@@ -103,7 +103,7 @@ const Home = () => {
             </a>
           ) : (
             <Link
-              href={property.link}
+              href={property.link || `/listings/${property.id}`}
               className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
             >
               Book Now
@@ -169,7 +169,7 @@ const Home = () => {
 
         {/* View property link */}
         <Link
-          href={property.link}
+          href={property.link || `/listings/${property.id}`}
           className="inline-flex items-center text-gray-900 font-medium hover:text-gray-600 transition-colors"
         >
           <span>View Property</span>
@@ -319,34 +319,16 @@ const Home = () => {
     {
       id: "falcon-blueberry-drive",
       name: "Falcon | Blueberry Drive",
-      images: [
-        "/photos/properties/Falcon/15-3595 Falcon Cres-15-.jpg",
-        "/photos/properties/Falcon/09-3595 Falcon Cres-09.jpg",
-        "/photos/properties/Falcon/10-3595 Falcon Cres-10.jpg",
-      ],
+      image: "/photos/properties/Falcon/15-3595 Falcon Cres-15-.jpg",
       guests: 15,
       bedrooms: 7,
+      beds: 9,
       bathrooms: 3.5,
-      shortDescription:
-        "Cozy chalet in the prestigious and family-oriented Blueberry Hill area. Perfect for large groups with stunning mountain views.",
-      location: "whistler",
-      features: [
-        "Hot Tub",
-        "Mountain Views",
-        "Spacious Deck",
-        "BBQ",
-        "Wood-burning Fireplace",
-        "Parking for 4-5 Cars",
-      ],
-      highlights: [
-        "7 Spacious Bedrooms",
-        "Family-Friendly Area",
-        "Beautiful Mountain Views",
-        "15-Minute Walk to Village",
-      ],
       priceRange: "Nightly Price Range: $1,300-$3,500+",
       winterPrice: "$2,000-$3,500+ Nightly | Winter",
       holidayPrice: "$4,000-$7,200+ Nightly | Christmas & NY",
+      location: "whistler",
+      link: "/listings/falcon-blueberry-drive",
       airbnbLink: "",
     },
     {
@@ -463,6 +445,7 @@ const Home = () => {
       link: "/listings/marquise-2-bed-ski-in-ski-out",
       airbnbLink:
         "https://www.airbnb.ca/rooms/1370367404602078616?guests=1&adults=1&s=67&unique_share_id=eb381b39-e67d-44ea-9d7c-2de2e1b5fa20",
+      isPetFriendly: true,
       isSkiInSkiOut: true,
     },
     {
