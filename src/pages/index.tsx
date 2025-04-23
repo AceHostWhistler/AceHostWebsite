@@ -365,6 +365,7 @@ const Home = () => {
       airbnbLink:
         "https://www.airbnb.ca/rooms/744832560480313027?guests=1&adults=1&s=67&unique_share_id=50412c76-d839-4753-bf56-19310f38a4ef",
       isPetFriendly: true,
+      isSkiInSkiOut: true,
     },
     {
       id: "wedge-mountain-lodge",
