@@ -94,8 +94,6 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],
     // Enable content-aware image resizing
     minimumCacheTTL: 60,
-    // Optimize image quality without sacrificing too much
-    quality: 80,
     // Configure remote patterns
     remotePatterns: [
       {
