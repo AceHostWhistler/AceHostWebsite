@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { ArrowRight, Instagram, Youtube } from "lucide-react";
 import Head from "next/head";
 import Image from "next/image";
@@ -11,6 +11,94 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import { FaUser, FaBed, FaBath } from "react-icons/fa";
 import { Users, Bed, Bath } from "lucide-react";
+
+// Vimeo Lazy Load Component
+const VimeoLazyLoad = ({ videoId, title }: { videoId: string, title: string }) => {
+  const [isIntersecting, setIsIntersecting] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Only update state when the value changes to avoid unnecessary re-renders
+        if (entry.isIntersecting !== isIntersecting) {
+          setIsIntersecting(entry.isIntersecting);
+        }
+      },
+      {
+        rootMargin: '200px 0px', // Load a bit before it's visible
+        threshold: 0.01,
+      }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+    };
+  }, [isIntersecting]);
+
+  // Load the player when in viewport
+  useEffect(() => {
+    if (isIntersecting && !isLoaded) {
+      // Small delay to ensure it doesn't impact initial page load metrics
+      const timer = setTimeout(() => {
+        setIsLoaded(true);
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [isIntersecting, isLoaded]);
+
+  // Handle click to load if needed
+  const handleClick = () => {
+    if (!isLoaded) {
+      setIsLoaded(true);
+    }
+  };
+
+  return (
+    <div 
+      ref={containerRef}
+      className="w-full aspect-video relative bg-gray-100 rounded overflow-hidden"
+      onClick={handleClick}
+    >
+      {!isLoaded ? (
+        <>
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 cursor-pointer">
+            <div className="w-16 h-16 rounded-full bg-black/80 flex items-center justify-center mb-2">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 8L16 12L10 16V8Z" fill="white" />
+              </svg>
+            </div>
+            <span className="text-sm text-gray-700 font-medium">Click to load video</span>
+          </div>
+          <Image 
+            src={`https://vumbnail.com/${videoId}.jpg`}
+            alt={title || "Video thumbnail"}
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover opacity-40"
+            loading="lazy"
+          />
+        </>
+      ) : (
+        <iframe
+          src={`https://player.vimeo.com/video/${videoId}?title=0&byline=0&portrait=0&autoplay=0&loop=1&background=0`}
+          className="w-full h-full absolute inset-0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowFullScreen
+          title={title}
+          loading="lazy"
+        ></iframe>
+      )}
+    </div>
+  );
+};
 
 const Home = () => {
   const { t } = useTranslation("common");
@@ -74,9 +162,11 @@ const Home = () => {
             alt={property.title || property.name}
             fill
             className="object-cover cursor-pointer"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             loading={index < 3 ? "eager" : "lazy"}
-            quality={85}
+            quality={75}
+            placeholder="blur"
+            blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjY2NjY2NjIj48L3JlY3Q+Cjwvc3ZnPgo="
           />
         </Link>
         {property.isPetFriendly && (
@@ -806,16 +896,10 @@ const Home = () => {
             </div>
             <div className="mt-8 md:mt-0 md:w-[58%] lg:w-[58%] flex justify-center md:justify-normal md:items-center px-1 md:px-0 md:pr-4">
               <div className="w-[98%] md:w-[95%] overflow-hidden">
-                <iframe
-                  src="https://player.vimeo.com/video/1053582724?title=0&byline=0&portrait=0&autoplay=0&loop=1&background=0"
-                  className="w-full aspect-video"
-                  frameBorder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowFullScreen
-                  title="AceHost Whistler Concierge Experience"
-                  loading="lazy"
-                  style={{ display: 'block' }}
-                ></iframe>
+                <VimeoLazyLoad 
+                  videoId="1053582724" 
+                  title="AceHost Whistler Concierge Experience" 
+                />
               </div>
             </div>
           </div>
@@ -836,6 +920,9 @@ const Home = () => {
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 400px"
                         className="object-cover cursor-pointer"
                         priority={index === 0}
+                        quality={75}
+                        placeholder="blur"
+                        blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjY2NjY2NjIj48L3JlY3Q+Cjwvc3ZnPgo="
                       />
                     </div>
                   </Link>
@@ -956,7 +1043,7 @@ const Home = () => {
                     <h3 className="text-base font-medium text-gray-900 text-left">
                       {item.question}
                     </h3>
-                    <span className="text-2xl text-gray-400">
+                    <span className="text-2xl text-gray-600">
                       {expandedFaq === index ? "−" : "+"}
                     </span>
                   </button>

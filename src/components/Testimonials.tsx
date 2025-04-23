@@ -176,7 +176,7 @@ const Testimonials = () => {
                             className="text-yellow-500 fill-yellow-500 mr-0.5"
                           />
                         ))}
-                        <span className="ml-2 text-sm text-gray-400">
+                        <span className="ml-2 text-sm text-gray-600">
                           {review.date}
                         </span>
                       </div>

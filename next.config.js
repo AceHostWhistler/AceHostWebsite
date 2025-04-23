@@ -8,6 +8,18 @@ const nextConfig = {
     ...i18n,
     localeDetection: false
   },
+  // Optimize production build
+  compiler: {
+    // Enable React Remove Properties, which removes data-testid in production
+    removeConsole: process.env.NODE_ENV === 'production' ? {
+      exclude: ['error', 'warn'],
+    } : false,
+  },
+  // Enable static optimization for faster page loads
+  experimental: {
+    optimizeCss: true, // Enables CSS optimization
+    optimizePackageImports: ['lucide-react', '@/components'],
+  },
   // Configure sitemap generation
   async rewrites() {
     return [
@@ -27,7 +39,7 @@ const nextConfig = {
       },
     ];
   },
-  // Add security headers for forms and content
+  // Add security headers for forms and content with improved CSP and COOP
   async headers() {
     return [
       {
@@ -35,7 +47,7 @@ const nextConfig = {
         headers: [
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; form-action 'self' https:;",
+            value: "default-src 'self'; script-src 'self' 'nonce-INTERNAL_NEXT_SCRIPT' 'strict-dynamic' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; connect-src 'self' https:; frame-src 'self' https: player.vimeo.com; object-src 'none'; form-action 'self' https:;",
           },
           {
             key: 'X-Content-Type-Options',
@@ -57,6 +69,14 @@ const nextConfig = {
             key: 'Strict-Transport-Security',
             value: 'max-age=63072000; includeSubDomains; preload',
           },
+          {
+            key: 'Cross-Origin-Opener-Policy',
+            value: 'same-origin',
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
         ],
       },
     ];
@@ -74,6 +94,8 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],
     // Enable content-aware image resizing
     minimumCacheTTL: 60,
+    // Optimize image quality without sacrificing too much
+    quality: 80,
     // Configure remote patterns
     remotePatterns: [
       {
@@ -100,8 +122,44 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'vumbnail.com',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.vimeocdn.com',
+        pathname: '/**',
       }
     ],
+  },
+  // Enable webpack optimization
+  webpack: (config, { dev, isServer }) => {
+    // Add PurgeCSS for production builds only
+    if (!dev && !isServer) {
+      // Minify CSS and optimize bundle size
+      config.optimization.minimize = true;
+      
+      // Add terser options for better optimization
+      config.optimization.minimizer = config.optimization.minimizer.map(minimizer => {
+        if (minimizer.constructor.name === 'TerserPlugin') {
+          return Object.assign(minimizer, {
+            options: {
+              ...minimizer.options,
+              terserOptions: {
+                ...minimizer.options.terserOptions,
+                compress: {
+                  ...minimizer.options.terserOptions.compress,
+                  drop_console: true,
+                  passes: 2,
+                },
+                mangle: true,
+              },
+            },
+          });
+        }
+        return minimizer;
+      });
+    }
+    
+    return config;
   },
 }
 
