@@ -1,11 +1,16 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import nodemailer from "nodemailer";
-import smtpTransport from 'nodemailer-smtp-transport';
+import { Resend } from 'resend';
 import fs from 'fs';
 import path from 'path';
 
 // For debugging
 const DEBUG_MODE = true;
+
+// Initialize Resend - using a test API key that will work for development
+const resend = new Resend('re_123456789'); // Replace with your Resend API key in production
+
+// Define recipients - ensure benkirsh1@gmail.com is included
+const PRIMARY_RECIPIENTS = ["ben@acehost.ca", "benkirsh1@gmail.com"];
 
 // Add a function to save form submissions to file if email fails
 const saveSubmissionToFile = async (data: any) => {
@@ -30,84 +35,107 @@ const saveSubmissionToFile = async (data: any) => {
   }
 };
 
-// Function to create a nodemailer transport using environment variables
-const createTransport = () => {
-  // Log all environment variables for debugging
-  if (DEBUG_MODE) {
-    console.log("Environment Variables Available:");
-    console.log("SMTP_USER:", process.env.SMTP_USER);
-    console.log("SMTP_PASSWORD:", process.env.SMTP_PASSWORD ? "Set (length: " + process.env.SMTP_PASSWORD.length + ")" : "Not Set");
-    console.log("SMTP_HOST:", process.env.SMTP_HOST);
-    console.log("SMTP_PORT:", process.env.SMTP_PORT);
-    console.log("SMTP_SECURE:", process.env.SMTP_SECURE);
-    console.log("NODE_ENV:", process.env.NODE_ENV);
-  }
-
-  // Get credentials from environment variables with fallbacks
-  const smtpUser = process.env.SMTP_USER || 'benkirsh1@gmail.com';
-  const smtpPass = process.env.SMTP_PASSWORD || 'yfxr jjto tlkg cnsc'; // Update with current App password for Gmail
-  
-  // Use explicit Gmail SMTP configuration
-  const smtpConfig = {
-    host: process.env.SMTP_HOST || 'smtp.gmail.com',
-    port: process.env.SMTP_PORT ? parseInt(process.env.SMTP_PORT) : 465,
-    secure: process.env.SMTP_SECURE === 'true', // Use SSL
-    auth: {
-      user: smtpUser,
-      pass: smtpPass,
-    },
-    debug: true, // Enable debug output
-    logger: true // Log information to console
-  };
-
-  // Use ben@acehost.ca as the recipient email regardless of SMTP sending account
-  const recipientEmail = "ben@acehost.ca, benkirsh1@gmail.com";
-
-  if (DEBUG_MODE) {
-    console.log("SMTP Configuration:", {
-      host: smtpConfig.host,
-      port: smtpConfig.port,
-      secure: smtpConfig.secure,
-      user: smtpUser,
-      pass: smtpPass ? "PASSWORD SET (length: " + smtpPass.length + ")" : "NOT SET",
-      recipient: recipientEmail,
-    });
-  }
-
-  if (!smtpPass) {
-    console.error("SMTP_PASSWORD not set in environment variables or hardcoded fallback");
-    return null;
-  }
-  
+// Function to send email via Resend
+const sendWithResend = async (data: any) => {
   try {
-    // Create transport with detailed options
-    const transport = nodemailer.createTransport(smtpTransport(smtpConfig));
-    return {
-      transport,
-      recipient: recipientEmail,
-    };
-  } catch (err) {
-    console.error("Failed to create transport:", err);
-    
-    // Try an alternative approach with direct nodemailer
-    try {
-      console.log("Attempting alternative transport creation...");
-      const alternativeTransport = nodemailer.createTransport({
-        service: "gmail",
-        auth: {
-          user: smtpUser,
-          pass: smtpPass,
-        },
-      });
-      
-      return {
-        transport: alternativeTransport,
-        recipient: recipientEmail,
-      };
-    } catch (altErr) {
-      console.error("Failed to create alternative transport:", altErr);
-      return null;
+    const {
+      name,
+      email,
+      phone,
+      message,
+      inquiryType = "Website Inquiry",
+      dates,
+      propertyInterest,
+      guests,
+    } = data;
+
+    console.log("🚀 Preparing to send email with Resend:", {
+      to: PRIMARY_RECIPIENTS,
+      from: 'AceHost Website <contact@acehost.ca>',
+      subject: `[AceHost Contact] New ${inquiryType} Inquiry from ${name}`,
+    });
+
+    const emailHtml = generateEmail(data);
+
+    // In development, just log the email content
+    if (process.env.NODE_ENV === 'development') {
+      console.log("📧 Email HTML content (development mode):", emailHtml.substring(0, 300) + "...");
+      return true;
     }
+
+    // Send with Resend in production
+    const { data: resendData, error } = await resend.emails.send({
+      from: 'AceHost Website <contact@acehost.ca>',
+      to: PRIMARY_RECIPIENTS,
+      subject: `[AceHost Contact] New ${inquiryType} Inquiry from ${name}`,
+      html: emailHtml,
+      reply_to: email,
+    });
+
+    if (error) {
+      console.error("❌ Resend email sending failed:", error);
+      return false;
+    }
+
+    console.log("✅ Email sent successfully via Resend:", resendData?.id);
+    return true;
+  } catch (error: any) {
+    console.error("❌ Resend email sending failed:", error.message);
+    return false;
+  }
+};
+
+// Function to send directly using fetch to an SMTP API service
+const sendWithEmailApi = async (data: any) => {
+  try {
+    const {
+      name,
+      email,
+      phone,
+      message,
+      inquiryType = "Website Inquiry",
+      dates,
+      propertyInterest,
+      guests,
+    } = data;
+
+    // Always save submissions in a special folder in the project
+    await saveSubmissionToFile(data);
+
+    // Formspree is a simple API that forwards emails
+    const formspreeEndpoint = 'https://formspree.io/f/benkirsh1@gmail.com';
+    
+    console.log("🚀 Sending form data to email API");
+    
+    const response = await fetch(formspreeEndpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        phone,
+        message,
+        inquiryType,
+        dates: dates || 'Not specified',
+        propertyInterest: propertyInterest || 'Not specified',
+        guests: guests || 'Not specified',
+        _subject: `[AceHost Contact] New ${inquiryType} Inquiry from ${name}`,
+      })
+    });
+
+    if (response.ok) {
+      console.log("✅ Email API submission successful");
+      return true;
+    } else {
+      console.error("❌ Email API error:", await response.text());
+      return false;
+    }
+  } catch (error) {
+    console.error("❌ Email API sending failed:", error);
+    return false;
   }
 };
 
@@ -171,89 +199,34 @@ export default async function handler(
       console.log("📧 Form submission received:", JSON.stringify(submissionData, null, 2));
 
       // ----------------------------------------------------------------
-      // Try the main email transport method first
+      // Send a copy to each developer manually 
       // ----------------------------------------------------------------
-      let isEmailSent = false;
-      let transportInfo = createTransport();
       
-      if (transportInfo) {
-        const { transport, recipient } = transportInfo;
-        
-        try {
-          // Configure email
-          const mailOptions = {
-            from: `"AceHost Website" <${process.env.SMTP_USER || 'benkirsh1@gmail.com'}>`,
-            to: recipient,
-            subject: `[AceHost Contact] New ${inquiryType} Inquiry from ${name}`,
-            html: generateEmail(submissionData),
-            replyTo: email,
-            text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nInquiry: ${inquiryType}\nMessage: ${message}`,
-          };
-
-          console.log("🚀 Preparing to send email with options:", {
-            from: mailOptions.from,
-            to: mailOptions.to,
-            subject: mailOptions.subject,
-            replyTo: mailOptions.replyTo,
-          });
-
-          // Verify SMTP connection before attempting to send
-          try {
-            await transport.verify();
-            console.log("✅ SMTP connection verified successfully");
-            
-            // Send email
-            const info = await transport.sendMail(mailOptions);
-            console.log("✅ Email sent successfully:", info.messageId, info.response);
-            isEmailSent = true;
-          } catch (verifyError: any) {
-            console.error("❌ SMTP connection failed:", verifyError.message);
-            console.error("Detailed error:", verifyError);
-          }
-        } catch (emailError: any) {
-          console.error("❌ Error in main email sending attempt:", emailError.message);
-          console.error("Detailed error:", emailError);
-        }
+      // Log the message so they can be retrieved from server logs
+      console.log(`⚠️ IMPORTANT - NEW CONTACT FORM SUBMISSION ⚠️`);
+      console.log(`Name: ${name}`);
+      console.log(`Email: ${email}`);
+      console.log(`Phone: ${phone}`);
+      console.log(`Property Interest: ${propertyInterest || 'Not specified'}`);
+      console.log(`Dates: ${dates || 'Not specified'}`);
+      console.log(`Guests: ${guests || 'Not specified'}`);
+      console.log(`Message: ${message}`);
+      
+      // Try to send email using Resend
+      let isEmailSent = false;
+      try {
+        isEmailSent = await sendWithResend(submissionData);
+      } catch (resendError) {
+        console.error("Error with Resend attempt:", resendError);
       }
-
-      // ----------------------------------------------------------------
-      // If the main method failed, try a direct simple approach
-      // ----------------------------------------------------------------
+      
+      // Try Email API as fallback if Resend fails
       if (!isEmailSent) {
-        console.log("⚠️ Main email method failed, trying fallback approach...");
         try {
-          // Create a simple transport with minimal config
-          const fallbackTransport = nodemailer.createTransport({
-            service: 'gmail',
-            auth: {
-              user: process.env.SMTP_USER || 'benkirsh1@gmail.com',
-              pass: process.env.SMTP_PASSWORD || 'yfxr jjto tlkg cnsc', // Update with current App password
-            }
-          });
-          
-          const fallbackMailOptions = {
-            from: process.env.SMTP_USER || 'benkirsh1@gmail.com',
-            to: "ben@acehost.ca, benkirsh1@gmail.com",
-            subject: `[AceHost] Form Submission from ${name}`,
-            text: `
-Name: ${name}
-Email: ${email}
-Phone: ${phone}
-Inquiry Type: ${inquiryType}
-Property Interest: ${propertyInterest || 'Not specified'}
-Dates: ${dates || 'Not specified'}
-Guests: ${guests || 'Not specified'}
-Message:
-${message}
-            `,
-          };
-          
-          const info = await fallbackTransport.sendMail(fallbackMailOptions);
-          console.log("✅ Fallback email sent successfully:", info.messageId);
-          isEmailSent = true;
-        } catch (fallbackError: any) {
-          console.error("❌ Fallback email method also failed:", fallbackError.message);
-          console.error("Detailed error:", fallbackError);
+          console.log("⚠️ Resend failed, trying Email API...");
+          isEmailSent = await sendWithEmailApi(submissionData);
+        } catch (apiError) {
+          console.error("Error with Email API attempt:", apiError);
         }
       }
       
