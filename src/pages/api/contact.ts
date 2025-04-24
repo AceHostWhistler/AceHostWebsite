@@ -69,7 +69,7 @@ const sendWithResend = async (data: any) => {
       to: PRIMARY_RECIPIENTS,
       subject: `[AceHost Contact] New ${inquiryType} Inquiry from ${name}`,
       html: emailHtml,
-      reply_to: email,
+      replyTo: email,
     });
 
     if (error) {
