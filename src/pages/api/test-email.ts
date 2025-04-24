@@ -6,58 +6,55 @@ export default async function handler(
   res: NextApiResponse
 ) {
   console.log("Starting test email handler...");
-  
-  try {
-    // Create test transport
-    const transport = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: 'benkirsh1@gmail.com',
-        pass: 'maqc bzts clrx qkul', // Updated app password
-      }
-    });
 
+  // Create test SMTP transporter
+  const transport = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true, // use SSL
+    auth: {
+      user: "benkirsh1@gmail.com",
+      pass: process.env.SMTP_PASSWORD || "password_placeholder",
+    },
+  });
+
+  // This is a security-sensitive API that should only be accessible in development mode
+  if (process.env.NODE_ENV !== "development") {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+
+  try {
     console.log("🔍 Testing transport connection...");
     
-    // Verify connection
+    // Verify the connection configuration
     await transport.verify();
-    console.log("✅ Connection verified!");
     
+    console.log("✅ SMTP connection verified, sending test email...");
+
     // Send test email
     const info = await transport.sendMail({
-      from: '"AceHost Test" <benkirsh1@gmail.com>',
+      from: '"AceHost Website Test" <benkirsh1@gmail.com>',
       to: "benkirsh1@gmail.com",
       subject: "Test Email from AceHost Website",
-      text: "This is a test email to verify that the email sending functionality is working.",
+      text: "This is a test email sent from the AceHost website.",
       html: `
-        <div style="font-family: Arial, sans-serif; padding: 20px; max-width: 600px; margin: 0 auto; border: 1px solid #eee;">
-          <h1 style="color: #333;">Test Email</h1>
-          <p>This is a test email to verify that the email sending functionality is working.</p>
-          <p>Time sent: ${new Date().toISOString()}</p>
-          <p style="margin-top: 30px; font-size: 12px; color: #777;">
-            This is an automated test email from the AceHost website.
-          </p>
-        </div>
+        <h1>Test Email</h1>
+        <p>This is a test email sent from the AceHost website at ${new Date().toLocaleString()}</p>
+        <p>If you received this, your email settings are working correctly.</p>
+        <p>The following is your current email configuration:</p>
+        <ul>
+          <li>SMTP Host: smtp.gmail.com</li>
+          <li>SMTP Port: 465</li>
+          <li>Secure: true</li>
+          <li>Username: benkirsh1@gmail.com</li>
+        </ul>
       `,
     });
 
-    console.log("✅ Test email sent successfully:", info.messageId);
-    
-    res.status(200).json({ 
-      success: true, 
-      message: "Test email sent successfully!",
-      details: {
-        messageId: info.messageId,
-        recipient: "benkirsh1@gmail.com",
-        timestamp: new Date().toISOString()
-      }
-    });
-  } catch (error: any) {
+    console.log("✅ Test email sent:", info.messageId);
+    return res.status(200).json({ success: true, messageId: info.messageId });
+  } catch (error) {
     console.error("❌ Test email failed:", error);
-    res.status(500).json({ 
-      success: false, 
-      error: error.message || "Unknown error",
-      stack: process.env.NODE_ENV === "development" ? error.stack : undefined
-    });
+    return res.status(500).json({ success: false, error: error });
   }
 } 

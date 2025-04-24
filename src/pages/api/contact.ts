@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { Resend } from 'resend';
 import fs from 'fs';
 import path from 'path';
+import nodemailer from "nodemailer";
 
 // For debugging
 const DEBUG_MODE = true;
@@ -9,8 +10,8 @@ const DEBUG_MODE = true;
 // Initialize Resend - using a test API key that will work for development
 const resend = new Resend('re_123456789'); // Replace with your Resend API key in production
 
-// Define recipients - ensure benkirsh1@gmail.com is included
-const PRIMARY_RECIPIENTS = ["ben@acehost.ca", "benkirsh1@gmail.com"];
+// Define recipients - ensure benkirsh1@gmail.com is primary
+const PRIMARY_RECIPIENTS = ["benkirsh1@gmail.com", "ben@acehost.ca"];
 
 // Add a function to save form submissions to file if email fails
 const saveSubmissionToFile = async (data: any) => {
@@ -85,6 +86,54 @@ const sendWithResend = async (data: any) => {
   }
 };
 
+// Create Gmail SMTP transport
+const createTransport = () => {
+  return nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true, // Use SSL
+    auth: {
+      user: "benkirsh1@gmail.com",
+      pass: process.env.SMTP_PASSWORD || "",
+    },
+  });
+};
+
+// Function to send email via SMTP
+const sendWithSMTP = async (data: any) => {
+  try {
+    const {
+      name,
+      email,
+      phone,
+      message,
+      inquiryType = "Website Inquiry",
+      dates,
+      propertyInterest,
+      guests,
+    } = data;
+
+    console.log("🚀 Preparing to send email with SMTP:");
+
+    const emailHtml = generateEmail(data);
+    const transport = createTransport();
+
+    const info = await transport.sendMail({
+      from: '"AceHost Website" <benkirsh1@gmail.com>',
+      to: PRIMARY_RECIPIENTS.join(", "),
+      subject: `[AceHost Contact] New ${inquiryType} Inquiry from ${name}`,
+      html: emailHtml,
+      replyTo: email,
+    });
+
+    console.log("✅ Email sent successfully via SMTP:", info.messageId);
+    return true;
+  } catch (error: any) {
+    console.error("❌ SMTP email sending failed:", error.message);
+    return false;
+  }
+};
+
 // Function to send directly using fetch to an SMTP API service
 const sendWithEmailApi = async (data: any) => {
   try {
@@ -103,7 +152,7 @@ const sendWithEmailApi = async (data: any) => {
     await saveSubmissionToFile(data);
 
     // Formspree is a simple API that forwards emails
-    const formspreeEndpoint = 'https://formspree.io/f/benkirsh1@gmail.com';
+    const formspreeEndpoint = 'https://formspree.io/f/xqkqaboy'; // Use your Formspree endpoint
     
     console.log("🚀 Sending form data to email API");
     
@@ -123,6 +172,7 @@ const sendWithEmailApi = async (data: any) => {
         propertyInterest: propertyInterest || 'Not specified',
         guests: guests || 'Not specified',
         _subject: `[AceHost Contact] New ${inquiryType} Inquiry from ${name}`,
+        _replyto: email
       })
     });
 
@@ -212,15 +262,28 @@ export default async function handler(
       console.log(`Guests: ${guests || 'Not specified'}`);
       console.log(`Message: ${message}`);
       
-      // Try to send email using Resend
+      // Try multiple email sending methods in sequence
       let isEmailSent = false;
+
+      // 1. Try SMTP with Gmail first (most reliable)
       try {
-        isEmailSent = await sendWithResend(submissionData);
-      } catch (resendError) {
-        console.error("Error with Resend attempt:", resendError);
+        console.log("⚠️ Trying SMTP with Gmail...");
+        isEmailSent = await sendWithSMTP(submissionData);
+      } catch (smtpError) {
+        console.error("Error with SMTP attempt:", smtpError);
       }
       
-      // Try Email API as fallback if Resend fails
+      // 2. Try Resend if SMTP fails
+      if (!isEmailSent) {
+        try {
+          console.log("⚠️ SMTP failed, trying Resend...");
+          isEmailSent = await sendWithResend(submissionData);
+        } catch (resendError) {
+          console.error("Error with Resend attempt:", resendError);
+        }
+      }
+      
+      // 3. Try Email API as last resort
       if (!isEmailSent) {
         try {
           console.log("⚠️ Resend failed, trying Email API...");
