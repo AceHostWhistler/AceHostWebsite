@@ -1272,47 +1272,18 @@ export default function Properties() {
                 </div>
               </div>
               
-              {/* Image Section with modern gallery layout */}
-              <div className="md:col-span-7 relative min-h-[500px] md:min-h-[700px] lg:min-h-[800px]">
-                <div className="absolute inset-0 grid grid-cols-2 gap-5 p-8 md:p-12 lg:p-16 xl:p-20">
-                  {/* First image slot - larger hero image */}
-                  <div className="h-full rounded-3xl overflow-hidden shadow-xl transform transition-transform duration-700 hover:scale-[1.02]">
-                    <img 
-                      src="/photos/properties/Falcon/Falcon Cr-12.jpg" 
-                      alt="Luxury Whistler Chalet" 
-                      className="h-full w-full object-cover"
-                      onError={(e) => {
-                        e.currentTarget.src = "/photos/homepage/WhistlerVacationRental.jpg";
-                      }}
-                      loading="eager"
-                    />
-                  </div>
-                  
-                  {/* Second image slot - split into two */}
-                  <div className="h-full flex flex-col gap-5">
-                    <div className="h-1/2 rounded-3xl overflow-hidden shadow-xl transform transition-transform duration-700 hover:scale-[1.02]">
-                      <img 
-                        src="/photos/properties/Slopeside Kadenwood/46 Kadenwood Drive-22.jpg" 
-                        alt="Ski-in Ski-out Chalet" 
-                        className="h-full w-full object-cover"
-                        onError={(e) => {
-                          e.currentTarget.src = "/photos/properties/Slopeside-new/1.jpg";
-                        }}
-                        loading="eager"
-                      />
-                    </div>
-                    <div className="h-1/2 rounded-3xl overflow-hidden shadow-xl transform transition-transform duration-700 hover:scale-[1.02]">
-                      <img 
-                        src="/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00635.jpg" 
-                        alt="Luxury Interior" 
-                        className="h-full w-full object-cover"
-                        onError={(e) => {
-                          e.currentTarget.src = "/photos/homepage/WhistlerVacationRental.jpg";
-                        }}
-                        loading="eager"
-                      />
-                    </div>
-                  </div>
+              {/* Image Section with single high-quality photo - Apple style */}
+              <div className="md:col-span-7 p-8 md:p-12 lg:p-16 xl:p-20 flex items-center justify-center">
+                <div className="w-full h-[500px] md:h-[600px] lg:h-[700px] rounded-3xl overflow-hidden shadow-2xl">
+                  <img 
+                    src="/photos/properties/Two Cedars New/OSA_AncientCW1248.jpg" 
+                    alt="Luxury Whistler Chalet" 
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.currentTarget.src = "/photos/properties/Altitude New Photos Best/altitude retreat-12.jpg";
+                    }}
+                    loading="eager"
+                  />
                 </div>
               </div>
             </div>
