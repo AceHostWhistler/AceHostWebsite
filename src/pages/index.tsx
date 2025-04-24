@@ -71,12 +71,15 @@ const Home = () => {
         <Link href={property.link || `/listings/${property.id}`}>
           <Image
             src={property.image}
-            alt={property.title || property.name}
+            alt={`${property.title || property.name} - Luxury ${property.location === 'whistler' ? 'Whistler' : property.location === 'vancouver' ? 'Vancouver' : 'Worldwide'} vacation rental with ${property.bedrooms} bedroom${property.bedrooms !== 1 ? 's' : ''}, accommodating up to ${property.guests} guest${property.guests !== 1 ? 's' : ''}`}
             fill
             className="object-cover cursor-pointer"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            loading={index < 3 ? "eager" : "lazy"}
-            quality={85}
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+            loading={index < 6 ? "eager" : "lazy"}
+            quality={80}
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAEhAI/w5RW4AAAAABJRU5ErkJggg=="
+            priority={index < 3}
           />
         </Link>
         {property.isPetFriendly && (
@@ -849,6 +852,10 @@ const Home = () => {
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 400px"
                         className="object-cover cursor-pointer"
                         priority={index === 0}
+                        quality={85}
+                        loading={index === 0 ? "eager" : "lazy"}
+                        placeholder="blur"
+                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAEhAI/w5RW4AAAAABJRU5ErkJggg=="
                       />
                     </div>
                   </Link>

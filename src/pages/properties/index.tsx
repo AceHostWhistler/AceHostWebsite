@@ -1113,38 +1113,31 @@ export default function Properties() {
             </div>
           )}
           
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <Link href={propertyUrl}>
-            <img
-              src={property.images[0]}
-              alt={property.name}
-              className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
-              onError={(e) => {
-                // Get property folder name from the ID
-                const propertyId = property.id;
+            <div className="relative w-full h-full">
+              <Image
+                src={property.images[0]}
+                alt={`${property.name} - Luxury ${property.location === 'whistler' ? 'Whistler' : property.location === 'vancouver' ? 'Vancouver' : 'Worldwide'} vacation rental with ${property.bedrooms} bedrooms, accommodating up to ${property.guests} guests`}
+                className="object-cover"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                quality={80}
+                loading="lazy"
+                placeholder="blur"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAEhAI/w5RW4AAAAABJRU5ErkJggg=="
+                onError={(e) => {
+                  // Get property folder name from the ID
+                  const propertyId = property.id;
 
-                // Try folder variants - check if image exists at typical locations
-                let paths = [
-                  // Using a directory name matching property name patterns
-                  `/photos/properties/${propertyId}/1.jpg`,
-                  // Try capitalized first letter
-                  `/photos/properties/${
-                    propertyId.charAt(0).toUpperCase() + propertyId.slice(1)
-                  }/1.jpg`,
-                  // Specific override for common properties
-                  `/photos/properties/Altitude New Photos Best/altitude retreat-12.jpg`,
-                  `/photos/properties/Chalet La Forja/hero00002.jpg`,
-                  `/photos/properties/3445-Heron-Place/01-3445 Heron Place 01.jpg`,
-                  `/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00635.jpg`,
-                  `/photos/properties/Falcon/15-3595 Falcon Cres-15-.jpg`,
-                  // Fallback to a default image
-                  `/photos/homepage/WhistlerVacationRental.jpg`,
-                ];
-
-                // Try the first image path
-                e.currentTarget.src = paths[paths.length - 1]; // Default to the last (fallback) option
-              }}
-            />
+                  // Try folder variants with typical locations
+                  const fallbackSrc = '/photos/homepage/WhistlerVacationRental.jpg';
+                  
+                  // Set to fallback image on error
+                  // @ts-ignore - Next Image doesn't officially support onError but it works
+                  e.currentTarget.src = fallbackSrc;
+                }}
+              />
+            </div>
           </Link>
 
           {/* Book Now Button in bottom-right corner */}
@@ -1274,15 +1267,20 @@ export default function Properties() {
               
               {/* Image Section with specified photo */}
               <div className="md:col-span-7 p-6 md:p-10 lg:p-16 xl:p-16 flex items-center justify-center">
-                <div className="w-full h-[500px] md:h-[600px] lg:h-[700px] rounded-3xl overflow-hidden shadow-2xl">
-                  <img 
+                <div className="w-full h-[500px] md:h-[600px] lg:h-[700px] rounded-3xl overflow-hidden shadow-2xl relative">
+                  <Image 
                     src="/photos/properties/Panoramic Estate/20241127 MM4P 01 0225-Edit.jpg" 
                     alt="Luxury Whistler Chalet" 
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
+                    quality={90}
+                    priority
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAEhAI/w5RW4AAAAABJRU5ErkJggg=="
                     onError={(e) => {
+                      // @ts-ignore - Next Image doesn't officially support onError but it works
                       e.currentTarget.src = "/photos/properties/Altitude New Photos Best/altitude retreat-12.jpg";
                     }}
-                    loading="eager"
                   />
                 </div>
               </div>
