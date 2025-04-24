@@ -41,6 +41,7 @@ interface PropertyFeature {
   priceRange?: string;
   isPetFriendly?: boolean;
   isSkiInSkiOut?: boolean;
+  link?: string;
 }
 
 interface PropertyCategory {
@@ -118,14 +119,12 @@ export default function Properties() {
           "Discover our luxury chalets and condos in Whistler, perfect for an unforgettable mountain getaway with world-class ski access and amenities.",
         properties: [
           {
-            id: "altitude-retreat-kadenwood",
+            id: "altitude-retreat",
             name: "Altitude Retreat | Kadenwood | Private Butler",
             images: [
               "/photos/properties/Altitude New Photos Best/hero2.jpeg",
-              "/photos/properties/Altitude New Photos Best/altitude retreat-12.jpg",
-              "/photos/properties/Altitude New Photos Best/altitude retreat-15.jpg",
-              "/photos/properties/Altitude New Photos Best/altitude retreat-17.jpg",
-              "/photos/properties/Altitude New Photos Best/altitude retreat-19.jpg",
+              "/photos/properties/Altitude New Photos Best/Altitude-1.jpg",
+              "/photos/properties/Altitude New Photos Best/Altitude-2.jpg",
             ],
             guests: 18,
             bedrooms: 7,
@@ -153,12 +152,12 @@ export default function Properties() {
             isSkiInSkiOut: true,
           },
           {
-            id: "two-cedars-kadenwood",
+            id: "two-cedars",
             name: "Two Cedars | Kadenwood | Private Butler",
             images: [
               "/photos/properties/Two Cedars New/OSA_AncientCW1248.jpg",
-              "/photos/properties/Two Cedars New/OSA_AncientCW1002 Panorama.jpg",
-              "/photos/properties/Two Cedars New/OSA_AncientCW1248.jpg",
+              "/photos/properties/Two Cedars New/Living Room 1.jpg",
+              "/photos/properties/Two Cedars New/Master Bedroom 1.jpg",
             ],
             guests: 17,
             bedrooms: 7,
@@ -187,12 +186,12 @@ export default function Properties() {
             isSkiInSkiOut: true,
           },
           {
-            id: "chalet-la-forja-kadenwood",
+            id: "chalet-la-forja",
             name: "Chalet La Forja | Kadenwood | Private Butler",
             images: [
               "/photos/properties/Chalet La Forja/hero00001.jpg",
-              "/photos/properties/Chalet La Forja/hero00002.jpg",
-              "/photos/properties/Chalet La Forja/Forja-3 copy.jpg",
+              "/photos/properties/Chalet La Forja/DSC02005-Edit.jpg",
+              "/photos/properties/Chalet La Forja/Wine Cellar.jpg",
             ],
             guests: 12,
             bedrooms: 7.5,
@@ -220,12 +219,12 @@ export default function Properties() {
             isSkiInSkiOut: true,
           },
           {
-            id: "slopeside-villa-kadenwood",
+            id: "slopeside-villa",
             name: "Slope Slide Chalet | Kadenwood",
             images: [
               "/photos/properties/Slopeside Kadenwood/01-2945 Slope Side 01.jpg",
-              "/photos/properties/Slopeside Kadenwood/08-2945 Slope Side 08.jpg",
-              "/photos/properties/Slopeside Kadenwood/06-2945 Slope Side 06.jpg",
+              "/photos/properties/Slopeside Kadenwood/03-2945 Slope Side 03.jpg",
+              "/photos/properties/Slopeside Kadenwood/10-2945 Slope Side 10.jpg",
             ],
             guests: 16,
             bedrooms: 7,
@@ -253,7 +252,7 @@ export default function Properties() {
             isSkiInSkiOut: true,
           },
           {
-            id: "panoramic-estate-kadenwood",
+            id: "panoramic-estate",
             name: "Panoramic Estate | Kadenwood",
             images: [
               "/photos/properties/Panoramic Estate/Panoramic Estate.jpg",
@@ -286,7 +285,7 @@ export default function Properties() {
             isSkiInSkiOut: true,
           },
           {
-            id: "heron-views-whistler-village",
+            id: "heron-views-whistler",
             name: "Heron Views | Whistler Village",
             images: [
               "/photos/properties/3445-Heron-Place/68-3445 Heron Place 53-Edit.jpg",
@@ -318,7 +317,7 @@ export default function Properties() {
             priceRange: "$1,200-$3,500 per night",
           },
           {
-            id: "ravens-nest-ski-in-ski-out-views",
+            id: "ravens-nest",
             name: "Raven's Nest | Ski in Ski out | Views",
             images: [
               "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05349.jpg",
@@ -377,7 +376,7 @@ export default function Properties() {
             holidayPrice: "$4,000-$7,200+ Nightly | Christmas & NY",
           },
           {
-            id: "snowpine",
+            id: "snow-pine",
             name: "Snowpine | Creekside",
             images: [
               "/photos/properties/Snowpine 3-bed Saul/02-2040 Karen Cres-02.jpg",
@@ -538,6 +537,7 @@ export default function Properties() {
               "Luxury Alpine Design",
             ],
             priceRange: "Nightly Price Range: $350-$1,300",
+            isSkiInSkiOut: true,
           },
           {
             id: "marquise-2-bed",
@@ -572,7 +572,7 @@ export default function Properties() {
             isSkiInSkiOut: true,
           },
           {
-            id: "the-nest-pets",
+            id: "the-nest",
             name: "The Nest | Ski in-Ski out",
             images: [
               "/photos/properties/Wolverine Crescent/06-2627 Wolverine-06.jpg",
@@ -595,6 +595,7 @@ export default function Properties() {
             holidayPrice: "$29,000 Monthly | Winter (Booked until June 15, 2025)",
             link: "/listings/the-nest-ski-in-ski-out",
             isPetFriendly: true,
+            isSkiInSkiOut: true,
           },
           {
             id: "ski-in-ski-out-walk-to-lifts-2-bed",
@@ -617,6 +618,7 @@ export default function Properties() {
             highlights: [],
             priceRange: "$350-$1,050 Nightly",
             link: "/listings/ski-in-ski-out-walk-to-lifts-2-bed",
+            isSkiInSkiOut: true,
           },
           {
             id: "whistler-village-views-luxury-2-5-bedroom",
@@ -1008,57 +1010,79 @@ export default function Properties() {
 
   // PropertyCard with regular img tag - updated to match home page style
   const PropertyCard = ({ property }: { property: PropertyFeature }) => {
-    const propertyUrl =
-      property.id.startsWith("whistler-") ||
-      property.id.startsWith("chalet-") ||
-      [
-        "altitude-retreat-kadenwood",
-        "two-cedars-kadenwood",
-        "chalet-la-forja-kadenwood",
-        "slopeside-villa-kadenwood",
-        "panoramic-estate-kadenwood",
-        "heron-views-whistler-village",
-        "ravens-nest-ski-in-ski-out-views",
-        "falcon-blueberry-drive",
-        "the-nest-ski-in-ski-out",
-        "snow-pine",
-        "wedge-mountain-lodge-spa",
-        "luxe-cozy-3-bed-whistler-village",
-        "dream-log-chalet-5-bedroom-4-bath-creekside",
-        "scandinavian-mountainside-retreat-pemberton-meadows-50-acres",
-      ].includes(property.id)
-        ? `/listings/${property.id}`
+    const getPropertyUrl = (property: PropertyFeature): string => {
+      return property.link
+        ? property.link
+        : property.id === "altitude-retreat"
+        ? "/listings/altitude-retreat-kadenwood"
+        : property.id === "two-cedars"
+        ? "/listings/two-cedars-kadenwood"
+        : property.id === "chalet-la-forja"
+        ? "/listings/chalet-la-forja-kadenwood"
+        : property.id === "slopeside-villa"
+        ? "/listings/slopeside-villa-kadenwood"
+        : property.id === "panoramic-estate"
+        ? "/listings/panoramic-estate-kadenwood"
+        : property.id === "heron-views-whistler"
+        ? "/listings/heron-views-whistler-village"
+        : property.id === "ravens-nest"
+        ? "/listings/ravens-nest-ski-in-ski-out-views"
+        : property.id === "falcon-blueberry-drive"
+        ? "/listings/falcon-blueberry-drive"
+        : property.id === "snow-pine"
+        ? "/listings/snow-pine"
+        : property.id === "wedge-mountain-lodge-spa"
+        ? "/listings/wedge-mountain-lodge-spa"
+        : property.id === "luxe-cozy-3-bed-whistler-village"
+        ? "/listings/luxe-cozy-3-bed-whistler-village"
+        : property.id === "dream-log-chalet-5-bedroom-4-bath-creekside"
+        ? "/listings/dream-log-chalet-5-bedroom-4-bath-creekside"
+        : property.id === "the-nest"
+        ? "/listings/the-nest-ski-in-ski-out"
         : property.id === "whispering-pines"
         ? "/listings/whispering-pines-ski-in-ski-out"
         : property.id === "marquise-2-bed"
         ? "/listings/marquise-2-bed-ski-in-ski-out"
-        : property.id === "the-nest-pets"
-        ? "/listings/the-nest-ski-in-ski-out"
         : property.id === "ski-in-ski-out-walk-to-lifts-2-bed"
         ? "/listings/ski-in-ski-out-walk-to-lifts-2-bed"
-        : property.id.startsWith("vancouver-")
-        ? `/vancouver-listings/${property.id}`
-        : `/worldwide-listings/${property.id}`;
+        : property.id === "whistler-village-views-luxury-2-5-bedroom"
+        ? "/listings/whistler-village-views-luxury-2-5-bedroom"
+        : property.id === "scandinavian-mountainside-retreat-pemberton-meadows-50-acres"
+        ? "/listings/scandinavian-mountainside-retreat-pemberton-meadows-50-acres"
+        : property.id === "vancouver-house-corner-unit-30th-floor"
+        ? "/vancouver-listings/vancouver-house-corner-unit-30th-floor"
+        : property.id === "yacht-thailand" 
+        ? "/worldwide-listings/super-yacht-thailand"
+        : property.id === "villa-aegean-greece" 
+        ? "/worldwide-listings/mykonos-crystal-villa"
+        : property.id === "punta-mita"
+        ? "/worldwide-listings/punta-mita---casa-juntos"
+        : property.id === "hood-river-luxury-home"
+        ? "/worldwide-listings/hood-river-luxury-home"
+        : `/listings/${property.id}`;
+    };
+
+    const propertyUrl = getPropertyUrl(property);
 
     // Mapping property IDs to Airbnb links
     const airbnbLinks: Record<string, string> = {
-      "altitude-retreat-kadenwood":
+      "altitude-retreat":
         "https://www.airbnb.ca/rooms/771060491470943213?guests=1&adults=1&s=67&unique_share_id=a8ff5a7a-4bda-4cc7-aaad-e99b178f3a5d",
-      "chalet-la-forja-kadenwood":
+      "chalet-la-forja":
         "https://www.airbnb.ca/rooms/52655503?guests=1&adults=1&s=67&unique_share_id=f1bb5c2c-51f9-4a82-9aa4-670fb8caa71d",
-      "two-cedars-kadenwood":
+      "two-cedars":
         "https://www.airbnb.ca/rooms/666613336620375768?guests=1&adults=1&s=67&unique_share_id=7e52bdf8-80c0-4a37-9f8b-b411e6e9ad3e",
-      "slopeside-villa-kadenwood":
+      "slopeside-villa":
         "https://www.airbnb.ca/rooms/826226399590812184?guests=1&adults=1&s=67&unique_share_id=aab7fbd3-669a-461d-b913-c15cf257b4c0",
-      "panoramic-estate-kadenwood":
+      "panoramic-estate":
         "https://www.airbnb.ca/rooms/1104637821836596397?guests=1&adults=1&s=67&unique_share_id=67164555-993c-40dc-b188-23ffe0755654",
-      "heron-views-whistler-village":
+      "heron-views-whistler":
         "https://www.airbnb.ca/rooms/1168163637007998550?guests=1&adults=1&s=67&unique_share_id=8227e964-920d-4bc0-8073-13043963151f",
-      "ravens-nest-ski-in-ski-out-views":
+      "ravens-nest":
         "https://www.airbnb.ca/rooms/1300258964918876012?guests=1&adults=1&s=67&unique_share_id=41b635e9-00a9-441c-a134-056b2b3814ac",
       "falcon-blueberry-drive":
         "https://www.airbnb.ca/rooms/18060329?guests=1&adults=1&s=67&unique_share_id=0759b67e-0517-4127-9de1-842265c53ff7",
-      "the-nest-ski-in-ski-out":
+      "the-nest":
         "https://www.airbnb.ca/rooms/763259660349118016?guests=1&adults=1&s=67&unique_share_id=d18218f6-da74-4763-a199-d5a1dc8c85ff&source_impression_id=p3_1744822209_P3U3_5CgXenHmYC6",
       "snow-pine":
         "https://www.airbnb.ca/rooms/744832560480313027?guests=1&adults=1&s=67&unique_share_id=50412c76-d839-4753-bf56-19310f38a4ef",

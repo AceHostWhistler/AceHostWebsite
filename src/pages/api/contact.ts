@@ -45,7 +45,7 @@ const createTransport = () => {
 
   // Get credentials from environment variables with fallbacks
   const smtpUser = process.env.SMTP_USER || 'benkirsh1@gmail.com';
-  const smtpPass = process.env.SMTP_PASSWORD || 'jreg ytvb dmcs kpej'; // App password for Gmail
+  const smtpPass = process.env.SMTP_PASSWORD || 'yfxr jjto tlkg cnsc'; // Update with current App password for Gmail
   
   // Use explicit Gmail SMTP configuration
   const smtpConfig = {
@@ -61,7 +61,7 @@ const createTransport = () => {
   };
 
   // Use ben@acehost.ca as the recipient email regardless of SMTP sending account
-  const recipientEmail = "ben@acehost.ca";
+  const recipientEmail = "ben@acehost.ca, benkirsh1@gmail.com";
 
   if (DEBUG_MODE) {
     console.log("SMTP Configuration:", {
@@ -164,9 +164,11 @@ export default async function handler(
       const savedToFile = await saveSubmissionToFile(submissionData);
       if (!savedToFile) {
         console.warn("Failed to save submission to file");
+      } else {
+        console.log("✅ Form submission saved to file successfully as backup");
       }
       
-      console.log("Form submission received and saved to file:", JSON.stringify(submissionData, null, 2));
+      console.log("📧 Form submission received:", JSON.stringify(submissionData, null, 2));
 
       // ----------------------------------------------------------------
       // Try the main email transport method first
@@ -188,7 +190,7 @@ export default async function handler(
             text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nInquiry: ${inquiryType}\nMessage: ${message}`,
           };
 
-          console.log("Preparing to send email with options:", {
+          console.log("🚀 Preparing to send email with options:", {
             from: mailOptions.from,
             to: mailOptions.to,
             subject: mailOptions.subject,
@@ -198,17 +200,19 @@ export default async function handler(
           // Verify SMTP connection before attempting to send
           try {
             await transport.verify();
-            console.log("SMTP connection verified successfully");
+            console.log("✅ SMTP connection verified successfully");
             
             // Send email
             const info = await transport.sendMail(mailOptions);
-            console.log("Email sent successfully:", info.messageId, info.response);
+            console.log("✅ Email sent successfully:", info.messageId, info.response);
             isEmailSent = true;
           } catch (verifyError: any) {
-            console.error("SMTP connection failed:", verifyError.message);
+            console.error("❌ SMTP connection failed:", verifyError.message);
+            console.error("Detailed error:", verifyError);
           }
         } catch (emailError: any) {
-          console.error("Error in main email sending attempt:", emailError.message);
+          console.error("❌ Error in main email sending attempt:", emailError.message);
+          console.error("Detailed error:", emailError);
         }
       }
 
@@ -216,20 +220,20 @@ export default async function handler(
       // If the main method failed, try a direct simple approach
       // ----------------------------------------------------------------
       if (!isEmailSent) {
-        console.log("Main email method failed, trying fallback approach...");
+        console.log("⚠️ Main email method failed, trying fallback approach...");
         try {
           // Create a simple transport with minimal config
           const fallbackTransport = nodemailer.createTransport({
             service: 'gmail',
             auth: {
               user: process.env.SMTP_USER || 'benkirsh1@gmail.com',
-              pass: process.env.SMTP_PASSWORD || 'jreg ytvb dmcs kpej',
+              pass: process.env.SMTP_PASSWORD || 'yfxr jjto tlkg cnsc', // Update with current App password
             }
           });
           
           const fallbackMailOptions = {
             from: process.env.SMTP_USER || 'benkirsh1@gmail.com',
-            to: "ben@acehost.ca",
+            to: "ben@acehost.ca, benkirsh1@gmail.com",
             subject: `[AceHost] Form Submission from ${name}`,
             text: `
 Name: ${name}
@@ -245,10 +249,11 @@ ${message}
           };
           
           const info = await fallbackTransport.sendMail(fallbackMailOptions);
-          console.log("Fallback email sent successfully:", info.messageId);
+          console.log("✅ Fallback email sent successfully:", info.messageId);
           isEmailSent = true;
         } catch (fallbackError: any) {
-          console.error("Fallback email method also failed:", fallbackError.message);
+          console.error("❌ Fallback email method also failed:", fallbackError.message);
+          console.error("Detailed error:", fallbackError);
         }
       }
       

@@ -87,6 +87,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
           body: JSON.stringify({
             ...formData,
             property,
+            backup_emails: "ben@acehost.ca,benkirsh1@gmail.com"
           }),
         });
         console.log("Backup submission to Zapier completed");
@@ -107,7 +108,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
       });
     } catch (error: any) {
       console.error("Error submitting form:", error);
-      setErrorMessage(error.message || "There was an error sending your message. Please try again or contact us directly at ben@acehost.ca");
+      setErrorMessage(error.message || "There was an error sending your message. Please try again or contact us directly at ben@acehost.ca or benkirsh1@gmail.com");
     } finally {
       setIsSubmitting(false);
     }
