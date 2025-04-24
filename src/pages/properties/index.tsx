@@ -1243,66 +1243,119 @@ export default function Properties() {
         <Navigation transparent={false} />
 
         {/* Hero Section */}
-        <section className="py-12 md:py-16 bg-[#f5f5f7]">
-          <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-                Luxury Vacation Rental Properties in Whistler, Canada
-              </h1>
-              <h2 className="text-lg md:text-xl font-semibold mb-6 text-gray-700">
-                Ski-in/Ski-out Chalets, 7+ Bedroom Villas, and Exclusive Concierge Services
-              </h2>
-              <div className="text-sm text-gray-600 mb-12 space-y-3 max-w-3xl mx-auto">
-                <p>
-                  AceHost Whistler invites you to experience our curated collection of luxury vacation rentals including everything from ski-in/ski-out chalets to large 7- and 8-bedroom homes, ideal for group getaways, family holidays, or unforgettable corporate retreats. Whether you're visiting during Christmas, New Year's, peak winter ski season, or summer, we have stunning homes suited for you.
-                </p>
-                <p>
-                  All bookings at our top villas include our VIP <Link href="/concierge-service" className="text-blue-600 hover:underline">Concierge Services</Link>, where you can expect a fully personalized trip—think private chefs, heli-skiing, snowmobile fondue tours, airport transfers, and hard-to-get restaurant reservations, local contacts and expertise, all arranged seamlessly by our local experts.
-                </p>
-                <p>
-                  Travellers can book directly on Airbnb links below, or speak with us directly to find exact pricing, more information, & more chalet options.
-                </p>
-                <p className="text-xs text-gray-500">
-                  All prices are in Canadian Dollars (CAD) & not in (USD).
-                </p>
+        <section className="bg-[#f5f5f7] overflow-hidden relative">
+          <div className="max-w-[1400px] mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-0">
+              {/* Text Content Section */}
+              <div className="md:col-span-5 p-8 md:p-12 lg:p-16 xl:p-20 flex items-center">
+                <div className="max-w-xl">
+                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 tracking-tight leading-tight">
+                    Luxury Vacation Rental Properties in Whistler, Canada
+                  </h1>
+                  <h2 className="text-lg md:text-xl font-semibold mb-8 text-gray-700">
+                    Ski-in/Ski-out Chalets, 7+ Bedroom Villas, and Exclusive Concierge Services
+                  </h2>
+                  <div className="text-sm md:text-base text-gray-600 mb-12 space-y-5">
+                    <p className="leading-relaxed">
+                      AceHost Whistler invites you to experience our curated collection of luxury vacation rentals including everything from ski-in/ski-out chalets to large 7- and 8-bedroom homes, ideal for group getaways, family holidays, or unforgettable corporate retreats. Whether you're visiting during Christmas, New Year's, peak winter ski season, or summer, we have stunning homes suited for you.
+                    </p>
+                    <p className="leading-relaxed">
+                      All bookings at our top villas include our VIP <Link href="/concierge-service" className="text-blue-600 hover:text-blue-800 transition-colors">Concierge Services</Link>, where you can expect a fully personalized trip—think private chefs, heli-skiing, snowmobile fondue tours, airport transfers, and hard-to-get restaurant reservations, local contacts and expertise, all arranged seamlessly by our local experts.
+                    </p>
+                    <p className="leading-relaxed">
+                      Travellers can book directly on Airbnb links below, or speak with us directly to find exact pricing, more information, & more chalet options.
+                    </p>
+                    <p className="text-xs text-gray-500 pt-2">
+                      All prices are in Canadian Dollars (CAD) & not in (USD).
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="flex flex-wrap justify-center gap-3 mb-6">
+              
+              {/* Image Section with modern gallery layout */}
+              <div className="md:col-span-7 relative min-h-[500px] md:min-h-[700px] lg:min-h-[800px]">
+                <div className="absolute inset-0 grid grid-cols-2 gap-5 p-8 md:p-12 lg:p-16 xl:p-20">
+                  {/* First image slot - larger hero image */}
+                  <div className="h-full rounded-3xl overflow-hidden shadow-xl transform transition-transform duration-700 hover:scale-[1.02]">
+                    <img 
+                      src="/photos/properties/Falcon/Falcon Cr-12.jpg" 
+                      alt="Luxury Whistler Chalet" 
+                      className="h-full w-full object-cover"
+                      onError={(e) => {
+                        e.currentTarget.src = "/photos/homepage/WhistlerVacationRental.jpg";
+                      }}
+                      loading="eager"
+                    />
+                  </div>
+                  
+                  {/* Second image slot - split into two */}
+                  <div className="h-full flex flex-col gap-5">
+                    <div className="h-1/2 rounded-3xl overflow-hidden shadow-xl transform transition-transform duration-700 hover:scale-[1.02]">
+                      <img 
+                        src="/photos/properties/Slopeside Kadenwood/46 Kadenwood Drive-22.jpg" 
+                        alt="Ski-in Ski-out Chalet" 
+                        className="h-full w-full object-cover"
+                        onError={(e) => {
+                          e.currentTarget.src = "/photos/properties/Slopeside-new/1.jpg";
+                        }}
+                        loading="eager"
+                      />
+                    </div>
+                    <div className="h-1/2 rounded-3xl overflow-hidden shadow-xl transform transition-transform duration-700 hover:scale-[1.02]">
+                      <img 
+                        src="/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00635.jpg" 
+                        alt="Luxury Interior" 
+                        className="h-full w-full object-cover"
+                        onError={(e) => {
+                          e.currentTarget.src = "/photos/homepage/WhistlerVacationRental.jpg";
+                        }}
+                        loading="eager"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Filter Buttons in a separate row with subtle gradient bg */}
+            <div className="bg-gradient-to-b from-[#f5f5f7] to-[#eaeaec] py-10 px-8 lg:px-16">
+              <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
                 <button
                   onClick={() => setActiveCategory("all")}
-                  className={`px-6 py-2.5 rounded-full text-sm font-medium transition-colors ${
+                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                     activeCategory === "all"
-                      ? "bg-black text-white"
-                      : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+                      ? "bg-black text-white shadow-md"
+                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
                   }`}
                 >
                   All Properties
                 </button>
                 <button
                   onClick={() => setActiveCategory("whistler")}
-                  className={`px-6 py-2.5 rounded-full text-sm font-medium transition-colors ${
+                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                     activeCategory === "whistler"
-                      ? "bg-black text-white"
-                      : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+                      ? "bg-black text-white shadow-md"
+                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
                   }`}
                 >
                   Whistler
                 </button>
                 <button
                   onClick={() => setActiveCategory("vancouver")}
-                  className={`px-6 py-2.5 rounded-full text-sm font-medium transition-colors ${
+                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                     activeCategory === "vancouver"
-                      ? "bg-black text-white"
-                      : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+                      ? "bg-black text-white shadow-md"
+                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
                   }`}
                 >
                   Vancouver
                 </button>
                 <button
                   onClick={() => setActiveCategory("worldwide")}
-                  className={`px-6 py-2.5 rounded-full text-sm font-medium transition-colors ${
+                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                     activeCategory === "worldwide"
-                      ? "bg-black text-white"
-                      : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+                      ? "bg-black text-white shadow-md"
+                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
                   }`}
                 >
                   Worldwide
@@ -1315,10 +1368,10 @@ export default function Properties() {
                       petFriendly: !prev.petFriendly
                     }));
                   }}
-                  className={`px-6 py-2.5 rounded-full text-sm font-medium transition-colors ${
+                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                     filters.petFriendly
-                      ? "bg-blue-600 text-white"
-                      : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+                      ? "bg-blue-600 text-white shadow-md"
+                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
                   }`}
                 >
                   {filters.petFriendly && <CheckCircle className="w-4 h-4 mr-1.5 inline" />}
@@ -1332,10 +1385,10 @@ export default function Properties() {
                       skiInSkiOut: !prev.skiInSkiOut
                     }));
                   }}
-                  className={`px-6 py-2.5 rounded-full text-sm font-medium transition-colors ${
+                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                     filters.skiInSkiOut
-                      ? "bg-blue-600 text-white"
-                      : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+                      ? "bg-blue-600 text-white shadow-md"
+                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
                   }`}
                 >
                   {filters.skiInSkiOut && <CheckCircle className="w-4 h-4 mr-1.5 inline" />}
