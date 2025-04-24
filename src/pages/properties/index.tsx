@@ -1246,16 +1246,16 @@ export default function Properties() {
         <section className="bg-[#f5f5f7] overflow-hidden relative">
           <div className="max-w-[1400px] mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-0">
-              {/* Text Content Section */}
-              <div className="md:col-span-5 p-8 md:p-12 lg:p-16 xl:p-20 flex items-center">
-                <div className="max-w-xl">
-                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 tracking-tight leading-tight">
+              {/* Text Content Section - Refined layout with better spacing */}
+              <div className="md:col-span-5 p-6 md:p-10 lg:p-16 xl:p-16 flex items-center">
+                <div className="w-full">
+                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 tracking-tight leading-[1.1]">
                     Luxury Vacation Rental Properties in Whistler, Canada
                   </h1>
-                  <h2 className="text-lg md:text-xl font-semibold mb-8 text-gray-700">
+                  <h2 className="text-lg md:text-xl lg:text-2xl font-semibold mb-8 text-gray-700 tracking-tight">
                     Ski-in/Ski-out Chalets, 7+ Bedroom Villas, and Exclusive Concierge Services
                   </h2>
-                  <div className="text-sm md:text-base text-gray-600 mb-12 space-y-5">
+                  <div className="text-base text-gray-600 space-y-6 mb-10">
                     <p className="leading-relaxed">
                       AceHost Whistler invites you to experience our curated collection of luxury vacation rentals including everything from ski-in/ski-out chalets to large 7- and 8-bedroom homes, ideal for group getaways, family holidays, or unforgettable corporate retreats. Whether you're visiting during Christmas, New Year's, peak winter ski season, or summer, we have stunning homes suited for you.
                     </p>
@@ -1265,18 +1265,18 @@ export default function Properties() {
                     <p className="leading-relaxed">
                       Travellers can book directly on Airbnb links below, or speak with us directly to find exact pricing, more information, & more chalet options.
                     </p>
-                    <p className="text-xs text-gray-500 pt-2">
+                    <p className="text-sm text-gray-500 pt-2">
                       All prices are in Canadian Dollars (CAD) & not in (USD).
                     </p>
                   </div>
                 </div>
               </div>
               
-              {/* Image Section with single high-quality photo - Apple style */}
-              <div className="md:col-span-7 p-8 md:p-12 lg:p-16 xl:p-20 flex items-center justify-center">
+              {/* Image Section with specified photo */}
+              <div className="md:col-span-7 p-6 md:p-10 lg:p-16 xl:p-16 flex items-center justify-center">
                 <div className="w-full h-[500px] md:h-[600px] lg:h-[700px] rounded-3xl overflow-hidden shadow-2xl">
                   <img 
-                    src="/photos/properties/Two Cedars New/OSA_AncientCW1248.jpg" 
+                    src="/photos/properties/Panoramic Estate/20241127 MM4P 01 0225-Edit.jpg" 
                     alt="Luxury Whistler Chalet" 
                     className="w-full h-full object-cover"
                     onError={(e) => {
