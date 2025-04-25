@@ -17,14 +17,21 @@ const MarquiseSkiInSkiOut = () => {
 
   // Property photos - adjust paths when photos are available
   const photos = [
-    "/photos/properties/Marquise 2-bed/marquise-1.jpg",
-    "/photos/properties/Marquise 2-bed/marquise-2.jpg",
-    "/photos/properties/Marquise 2-bed/marquise-3.jpg",
-    "/photos/properties/Marquise 2-bed/marquise-4.jpg",
-    "/photos/properties/Marquise 2-bed/marquise-5.jpg",
-    "/photos/properties/Marquise 2-bed/marquise-6.jpg",
-    "/photos/properties/Marquise 2-bed/marquise-7.jpg",
-    "/photos/properties/Marquise 2-bed/marquise-8.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-1.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-2.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-3.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-4.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-5.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-6.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-7.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-8.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-9.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-10.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-11.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-12.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-13.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-14.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-15.jpg",
   ];
 
   const handlePhotoClick = (index: number) => {
