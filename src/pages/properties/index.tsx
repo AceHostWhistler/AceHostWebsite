@@ -881,25 +881,25 @@ export default function Properties() {
     return propertyCategories
       .filter(category => activeCategory === "all" || category.id === activeCategory)
       .map(category => {
-        const filteredProperties = category.properties.filter((property) => {
+    const filteredProperties = category.properties.filter((property) => {
           // Apply all filters
           const bedroomsMatch = property.bedrooms >= filters.minBedrooms && property.bedrooms <= filters.maxBedrooms;
           const guestsMatch = property.guests >= filters.minGuests && property.guests <= filters.maxGuests;
           const petFriendlyMatch = !filters.petFriendly || property.isPetFriendly;
           const skiInSkiOutMatch = !filters.skiInSkiOut || property.isSkiInSkiOut;
-          const amenitiesMatch = 
-            filters.amenities.length === 0 || 
+      const amenitiesMatch =
+        filters.amenities.length === 0 ||
             filters.amenities.every(amenity => 
               property.features.some(feature => 
-                feature.toLowerCase().includes(amenity.toLowerCase())
-              )
-            );
-          
+            feature.toLowerCase().includes(amenity.toLowerCase())
+          )
+        );
+
           return bedroomsMatch && guestsMatch && petFriendlyMatch && skiInSkiOutMatch && amenitiesMatch;
-        });
-        
-        return { ...category, properties: filteredProperties };
-      });
+    });
+
+    return { ...category, properties: filteredProperties };
+  });
   }, [propertyCategories, activeCategory, filters]);
 
   // Populate structured data with filtered properties for SEO
@@ -1116,7 +1116,7 @@ export default function Properties() {
           <Link href={propertyUrl}>
             <div className="relative w-full h-full">
               <Image
-                src={property.images[0]}
+              src={property.images[0]}
                 alt={`${property.name} - Luxury ${property.location === 'whistler' ? 'Whistler' : property.location === 'vancouver' ? 'Vancouver' : 'Worldwide'} vacation rental with ${property.bedrooms} bedrooms, accommodating up to ${property.guests} guests`}
                 className="object-cover"
                 fill
@@ -1125,9 +1125,9 @@ export default function Properties() {
                 loading="lazy"
                 placeholder="blur"
                 blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAEhAI/w5RW4AAAAABJRU5ErkJggg=="
-                onError={(e) => {
-                  // Get property folder name from the ID
-                  const propertyId = property.id;
+              onError={(e) => {
+                // Get property folder name from the ID
+                const propertyId = property.id;
 
                   // Try folder variants with typical locations
                   const fallbackSrc = '/photos/homepage/WhistlerVacationRental.jpg';
@@ -1135,8 +1135,8 @@ export default function Properties() {
                   // Set to fallback image on error
                   // @ts-ignore - Next Image doesn't officially support onError but it works
                   e.currentTarget.src = fallbackSrc;
-                }}
-              />
+              }}
+            />
             </div>
           </Link>
 
@@ -1244,7 +1244,7 @@ export default function Properties() {
                 <div className="w-full">
                   <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 tracking-tight leading-[1.1]">
                     Luxury Vacation Rental Properties in Whistler, Canada
-                  </h1>
+              </h1>
                   <h2 className="text-lg md:text-xl lg:text-2xl font-semibold mb-8 text-gray-700 tracking-tight">
                     Ski-in/Ski-out Chalets, 7+ Bedroom Villas, and Exclusive Concierge Services
                   </h2>

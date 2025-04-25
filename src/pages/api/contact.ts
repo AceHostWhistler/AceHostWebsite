@@ -1,13 +1,16 @@
 import { NextApiRequest, NextApiResponse } from "next";
+import nodemailer from "nodemailer";
 import fs from 'fs';
 import path from 'path';
-import nodemailer from "nodemailer";
 
-// For debugging
-const DEBUG_MODE = true;
-
-// Define recipients - ensure benkirsh1@gmail.com is primary
-const PRIMARY_RECIPIENTS = ["benkirsh1@gmail.com"];
+// Create transporter using environment variables
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.SMTP_USER || "benkirsh1@gmail.com",
+    pass: process.env.SMTP_PASSWORD,
+  },
+});
 
 // Add a function to save form submissions to file for backup
 const saveSubmissionToFile = async (data: any) => {
@@ -32,8 +35,8 @@ const saveSubmissionToFile = async (data: any) => {
   }
 };
 
-// Create a plain text version of the message for logging
-const createPlainTextMessage = (data: any) => {
+// Create HTML email content
+const createHtmlMessage = (data: any) => {
   const {
     name,
     email,
@@ -46,22 +49,41 @@ const createPlainTextMessage = (data: any) => {
   } = data;
 
   return `
-=============================================
-NEW CONTACT FORM SUBMISSION
-=============================================
-Time: ${new Date().toISOString()}
-Name: ${name}
-Email: ${email}
-Phone: ${phone}
-Inquiry Type: ${inquiryType}
-${propertyInterest ? `Property Interest: ${propertyInterest}\n` : ''}
-${dates ? `Dates: ${dates}\n` : ''}
-${guests ? `Guests: ${guests}\n` : ''}
-
-MESSAGE:
-${message}
-=============================================
-`;
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+    .header { background-color: #3366cc; color: white; padding: 10px 20px; }
+    .content { padding: 20px; border: 1px solid #ddd; }
+    .footer { font-size: 12px; color: #666; padding-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>New Contact Form Submission</h2>
+    </div>
+    <div class="content">
+      <p><strong>Date:</strong> ${new Date().toLocaleString()}</p>
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
+      <p><strong>Phone:</strong> ${phone}</p>
+      <p><strong>Inquiry Type:</strong> ${inquiryType}</p>
+      ${propertyInterest ? `<p><strong>Property Interest:</strong> ${propertyInterest}</p>` : ''}
+      ${dates ? `<p><strong>Dates:</strong> ${dates}</p>` : ''}
+      ${guests ? `<p><strong>Guests:</strong> ${guests}</p>` : ''}
+      <p><strong>Message:</strong></p>
+      <p>${message.replace(/\n/g, '<br>')}</p>
+    </div>
+    <div class="footer">
+      <p>This email was sent from the AceHost Website contact form.</p>
+    </div>
+  </div>
+</body>
+</html>  
+  `;
 };
 
 export default async function handler(
@@ -69,9 +91,6 @@ export default async function handler(
   response: NextApiResponse<{ message: string } | { error: string, details?: string }>
 ) {
   console.log("Contact form API handler started");
-  
-  // First, save all form submissions to disk regardless of what happens
-  const submissionTimestamp = new Date().toISOString();
   
   if (request.method === "POST") {
     try {
@@ -88,16 +107,13 @@ export default async function handler(
         guests,
       } = formData;
 
-      // Log for debugging
-      if (DEBUG_MODE) {
-        console.log("Request body:", request.body);
-      }
+      console.log("Request body:", request.body);
 
       // Validate required fields
       if (!name || !email || !phone || !message) {
         return response.status(400).json({
           error: "Missing required fields",
-          details: `Required: name, email, phone, message. Missing: ${!name ? 'name ' : ''}${!email ? 'email ' : ''}${!phone ? 'phone ' : ''}${!message ? 'message' : ''}`
+          details: `Required: name, email, phone, message.`
         });
       }
 
@@ -111,25 +127,43 @@ export default async function handler(
         dates,
         propertyInterest,
         guests,
-        submittedAt: submissionTimestamp,
+        submittedAt: new Date().toISOString(),
       };
 
-      // First, always save to file as backup
+      // Save to file as backup (this always works)
       await saveSubmissionToFile(submissionData);
       
-      // Create and log a plain text version of the message
-      const plainTextMessage = createPlainTextMessage(submissionData);
-      console.log(plainTextMessage);
-      
+      // Create HTML content
+      const htmlMessage = createHtmlMessage(submissionData);
+
+      // Get the recipient email from env var or use default
+      const to = process.env.SMTP_USER || "benkirsh1@gmail.com";
+        
+      // Set email options
+      const mailOptions = {
+        from: process.env.SMTP_FROM || "benkirsh1@gmail.com",
+        to,
+        replyTo: email,
+        subject: `${inquiryType} from ${name}`,
+        html: htmlMessage
+      };
+
+      // Log attempt
+      console.log("Attempting to send email to:", mailOptions.to);
+
+      // Send email
+      await transporter.sendMail(mailOptions);
+      console.log("Email sent successfully");
+        
       // Return success
-      return response.status(200).json({ 
+        return response.status(200).json({ 
         message: "Your message has been received. Our team will be in touch soon!"
-      });
+        });
     } catch (error: any) {
       // Log detailed error information
       console.error("Error processing contact form:", error);
       
-      // Return error response with details if available
+      // Return error response with details
       return response.status(500).json({
         error: "We couldn't process your request at this time",
         details: error.message || "Unknown error occurred"
@@ -147,4 +181,4 @@ export const config = {
       sizeLimit: "10mb",
     },
   },
-}; 
+};

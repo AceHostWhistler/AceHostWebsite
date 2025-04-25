@@ -17,7 +17,7 @@ const FalconBlueberryDrive = () => {
     "/photos/properties/Falcon/15-3595 Falcon Cres-15-.jpg",
     // Original naming format
     "/photos/properties/Falcon/09-3595 Falcon Cres-09.jpg",
-    "/photos/properties/Falcon/10-3595 Falcon Cres-10.jpg", 
+    "/photos/properties/Falcon/10-3595 Falcon Cres-10.jpg",
     "/photos/properties/Falcon/11-3595 Falcon Cres-11.jpg",
     "/photos/properties/Falcon/12-3595 Falcon Cres-12.jpg",
     "/photos/properties/Falcon/13-3595 Falcon Cres-13.jpg",

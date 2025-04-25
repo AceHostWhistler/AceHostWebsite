@@ -1,59 +1,74 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import fs from 'fs';
-import path from 'path';
+import nodemailer from "nodemailer";
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  console.log("Running test email handler...");
-  
-  // Test data
-  const testData = {
-    name: "Test User",
-    email: "benkirsh1@gmail.com",
-    phone: "555-123-4567",
-    message: "This is a test message from the contact form.",
-    inquiryType: "Test Inquiry",
-    submittedAt: new Date().toISOString()
-  };
+  console.log("Testing email configuration...");
 
   try {
-    // Save to file for testing
-    const dir = path.join(process.cwd(), 'contact-submissions');
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
-
-    // Create a unique filename with timestamp
-    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-    const filename = path.join(dir, `test-submission-${timestamp}.json`);
-    
-    // Write the submission data to file
-    fs.writeFileSync(filename, JSON.stringify(testData, null, 2));
-    
-    // Log test message in a format that's easy to find
-    console.log(`
-=============================================
-TEST CONTACT FORM SUBMISSION
-=============================================
-Time: ${new Date().toISOString()}
-Name: ${testData.name}
-Email: ${testData.email}
-Phone: ${testData.phone}
-Inquiry Type: ${testData.inquiryType}
-
-MESSAGE:
-${testData.message}
-=============================================
-`);
-
-    return res.status(200).json({ 
-      success: true, 
-      message: "Test successful! Check server logs and contact-submissions folder." 
+    // Create transport
+    const transport = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false,
+      auth: {
+        user: "benkirsh1@gmail.com",
+        pass: process.env.GMAIL_APP_PASSWORD
+      },
+      tls: {
+        rejectUnauthorized: false
+      }
     });
-  } catch (error) {
-    console.error("Test failed:", error);
-    return res.status(500).json({ success: false, error: error });
+
+    // Log configuration (without password)
+    console.log("Email configuration:", {
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false,
+      auth: {
+        user: "benkirsh1@gmail.com",
+        pass: "[MASKED]"
+      }
+    });
+
+    // Verify connection
+    console.log("Verifying connection...");
+    await transport.verify();
+    console.log("Connection verified successfully!");
+
+    // Send test email
+    console.log("Sending test email...");
+    const info = await transport.sendMail({
+      from: "benkirsh1@gmail.com",
+      to: "benkirsh1@gmail.com",
+      subject: "AceHost Website - Test Email",
+      text: "This is a test email to verify the email configuration is working.",
+      html: `
+        <h2>AceHost Website - Test Email</h2>
+        <p>This is a test email sent at ${new Date().toLocaleString()}</p>
+        <p>If you received this email, the email configuration is working correctly.</p>
+      `
+    });
+
+    console.log("Test email sent successfully:", info.messageId);
+
+    return res.status(200).json({
+      success: true,
+      messageId: info.messageId,
+      message: "Test email sent successfully"
+    });
+
+  } catch (error: any) {
+    console.error("Email test failed:", error);
+    return res.status(500).json({
+      success: false,
+      error: {
+        message: error.message,
+        code: error.code,
+        response: error.response
+      }
+    });
   }
 } 

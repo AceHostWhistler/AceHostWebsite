@@ -671,7 +671,7 @@ const Home = () => {
             __html: JSON.stringify(structuredData),
           }}
         />
-        
+
         {/* Website schema */}
         <script
           type="application/ld+json"
