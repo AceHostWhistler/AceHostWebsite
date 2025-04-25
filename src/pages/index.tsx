@@ -882,79 +882,40 @@ const Home = () => {
               <h2 className="text-4xl font-light mb-6 text-gray-900">
                 View Our Full Collection Of Luxury Vacation Rental Properties
               </h2>
-              <div className="flex justify-center flex-wrap space-x-2 mt-8">
+              {/* Property Filters */}
+              <div className="flex justify-center gap-4 mb-12">
                 <button
-                  className={`px-6 py-2 border-b-2 ${
-                    activeFilter === "all"
-                      ? "border-gray-900 text-gray-900 font-medium"
-                      : "border-transparent text-gray-500 hover:text-gray-900 hover:border-gray-900 transition-colors"
-                  }`}
-                  onClick={() => setActiveFilter("all")}
-                >
-                  View All
-                </button>
-                <button
-                  className={`px-6 py-2 border-b-2 ${
-                    activeFilter === "whistler"
-                      ? "border-gray-900 text-gray-900 font-medium"
-                      : "border-transparent text-gray-500 hover:text-gray-900 hover:border-gray-900 transition-colors"
-                  }`}
                   onClick={() => setActiveFilter("whistler")}
+                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                    activeFilter === "whistler"
+                      ? "bg-black text-white shadow-md"
+                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
+                  }`}
                 >
                   Whistler Properties
                 </button>
                 <button
-                  className={`px-6 py-2 border-b-2 ${
-                    activeFilter === "vancouver"
-                      ? "border-gray-900 text-gray-900 font-medium"
-                      : "border-transparent text-gray-500 hover:text-gray-900 hover:border-gray-900 transition-colors"
-                  }`}
-                  onClick={() => setActiveFilter("vancouver")}
-                >
-                  Vancouver Properties
-                </button>
-                <button
-                  className={`px-6 py-2 border-b-2 ${
-                    activeFilter === "skiinout"
-                      ? "border-gray-900 text-gray-900 font-medium"
-                      : "border-transparent text-gray-500 hover:text-gray-900 hover:border-gray-900 transition-colors"
-                  }`}
-                  onClick={() => setActiveFilter("skiinout")}
-                >
-                  Ski in Ski out
-                </button>
-                <button
-                  className={`px-6 py-2 border-b-2 ${
-                    activeFilter === "worldwide"
-                      ? "border-gray-900 text-gray-900 font-medium"
-                      : "border-transparent text-gray-500 hover:text-gray-900 hover:border-gray-900 transition-colors"
-                  }`}
                   onClick={() => setActiveFilter("worldwide")}
+                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                    activeFilter === "worldwide"
+                      ? "bg-black text-white shadow-md"
+                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
+                  }`}
                 >
                   Worldwide
-                </button>
-                <button
-                  className={`px-6 py-2 border-b-2 ${
-                    activeFilter === "pets"
-                      ? "border-gray-900 text-gray-900 font-medium"
-                      : "border-transparent text-gray-500 hover:text-gray-900 hover:border-gray-900 transition-colors"
-                  }`}
-                  onClick={() => setActiveFilter("pets")}
-                >
-                  Pets Allowed
                 </button>
               </div>
             </div>
 
-            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
+            {/* Property Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {allListings
-                .filter((listing) => {
-                  if (activeFilter === "all") return true;
-                  if (activeFilter === "pets") return listing.isPetFriendly;
-                  if (activeFilter === "skiinout") return listing.isSkiInSkiOut;
-                  return listing.location === activeFilter;
+                .filter((property) => {
+                  if (activeFilter === "whistler") return property.location === "whistler";
+                  if (activeFilter === "worldwide") return property.location !== "whistler";
+                  return true;
                 })
-                .map((property, i) => renderPropertyCard(property, i))}
+                .map((property, index) => renderPropertyCard(property, index))}
             </div>
           </div>
         </section>

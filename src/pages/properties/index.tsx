@@ -688,53 +688,43 @@ export default function Properties() {
         ],
       },
       {
-        id: "vancouver",
-        title: "Vancouver Properties",
+        id: "worldwide",
+        title: "Worldwide Properties",
         description:
-          "Experience the best of Vancouver with our luxury properties located in the city's most desirable neighborhoods, offering urban elegance with stunning views.",
+          "Experience luxury living in our handpicked properties across the globe, from Vancouver's urban sophistication to exotic international destinations.",
         properties: [
           {
-            id: "vancouver-house-corner-unit-30th-floor",
-            name: "The Vancouver House, Corner Unit | 30th Floor",
+            id: "vancouver-house-corner",
+            name: "Vancouver House Corner Unit | 30th Floor",
             images: [
-              "/photos/properties/vancouver-house/645adc4a44759e465d596517_Vancouver_House-23.jpg",
-              "/photos/properties/vancouver-house/645adc4803425681d3e2cab2_Vancouver_House-15.jpg",
-              "/photos/properties/vancouver-house/645adc4a8fd51115efee7fd0_Vancouver_House-20.jpg",
+              "/photos/properties/Vancouver House/Vancouver House-1.jpg",
+              "/photos/properties/Vancouver House/Vancouver House-2.jpg",
+              "/photos/properties/Vancouver House/Vancouver House-3.jpg",
             ],
             guests: 4,
             bedrooms: 2,
             bathrooms: 2,
-            location: "Beach District, Vancouver",
+            location: "Vancouver, BC",
             description:
-              "Welcome to this spectacular corner unit on the 30th floor of the iconic Vancouver House. This architectural masterpiece offers breathtaking 270-degree views of False Creek, English Bay, and the North Shore mountains through floor-to-ceiling windows.",
+              "Experience the epitome of luxury urban living in this stunning corner unit at Vancouver House. Located on the 30th floor, this property offers breathtaking views of False Creek, downtown Vancouver, and the North Shore mountains.",
             features: [
-              "Floor-to-Ceiling Windows",
-              "Large Balcony with Seating",
-              "Air Conditioning",
-              "High-Speed Wi-Fi",
-              "Smart TVs",
-              "Designer Furnishings",
-              "Fitness Center Access",
-              "Indoor Pool & Hot Tub Access",
-              "Rooftop Garden Access",
-              "24-Hour Concierge",
+              "Corner Unit Views",
+              "30th Floor",
+              "Fully Equipped Kitchen",
+              "High-End Appliances",
+              "In-Building Gym",
+              "Concierge Service",
+              "Central Location",
+              "Parking Available",
             ],
             highlights: [
-              "270-degree Views",
-              "Designer Furnishings",
-              "Steps to Seawall",
-              "Luxury Building Amenities",
+              "Panoramic City Views",
+              "Luxury Finishes",
+              "Prime Location",
+              "Building Amenities",
             ],
-            priceRange: "$750/night",
+            priceRange: "$450-$750 per night",
           },
-        ],
-      },
-      {
-        id: "worldwide",
-        title: "Worldwide Properties",
-        description:
-          "From Mediterranean villas to tropical beach houses, our curated collection of worldwide properties offers exceptional luxury experiences in the most desirable global destinations.",
-        properties: [
           {
             id: "mykonos-crystal-villa",
             name: "Mykonos Crystal Villa | Infinity Pool | Sea Views",
@@ -1049,8 +1039,8 @@ export default function Properties() {
         ? "/listings/whistler-village-views-luxury-2-5-bedroom"
         : property.id === "scandinavian-mountainside-retreat-pemberton-meadows-50-acres"
         ? "/listings/scandinavian-mountainside-retreat-pemberton-meadows-50-acres"
-        : property.id === "vancouver-house-corner-unit-30th-floor"
-        ? "/vancouver-listings/vancouver-house-corner-unit-30th-floor"
+        : property.id === "vancouver-house-corner"
+        ? "/worldwide-listings/vancouver-house-corner"
         : property.id === "yacht-thailand" 
         ? "/worldwide-listings/super-yacht-thailand"
         : property.id === "villa-aegean-greece" 
@@ -1215,6 +1205,34 @@ export default function Properties() {
     );
   };
 
+  // Update the category tabs section
+  const CategoryTabs = () => (
+    <div className="mb-8">
+      <div className="flex flex-wrap gap-4 justify-center text-lg">
+        <button
+          onClick={() => setActiveCategory("whistler")}
+          className={`px-6 py-2 rounded-full transition-colors ${
+            activeCategory === "whistler"
+              ? "bg-black text-white"
+              : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+          }`}
+        >
+          Whistler Properties
+        </button>
+        <button
+          onClick={() => setActiveCategory("worldwide")}
+          className={`px-6 py-2 rounded-full transition-colors ${
+            activeCategory === "worldwide"
+              ? "bg-black text-white"
+              : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+          }`}
+        >
+          Worldwide
+        </button>
+      </div>
+    </div>
+  );
+
   return (
     <>
       <Head>
@@ -1308,16 +1326,6 @@ export default function Properties() {
                   }`}
                 >
                   Whistler
-                </button>
-                <button
-                  onClick={() => setActiveCategory("vancouver")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                    activeCategory === "vancouver"
-                      ? "bg-black text-white shadow-md"
-                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
-                  }`}
-                >
-                  Vancouver
                 </button>
                 <button
                   onClick={() => setActiveCategory("worldwide")}
