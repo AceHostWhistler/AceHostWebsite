@@ -1,43 +1,33 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
-import PropertyHeader from "@/components/PropertyHeader";import Footer from "@/components/Footer";
+import PropertyHeader from "@/components/PropertyHeader";
+import Footer from "@/components/Footer";
+import PropertyDetails from "@/components/PropertyDetails";
 import { X } from "lucide-react";
+import LazyVimeoPlayer from "../../../components/LazyVimeoPlayer";
 
-const PuntaMitaCasaJuntos = () => {
+const BlackcombGreens = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
-  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(
+  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [isImageLoading, setIsImageLoading] = useState(false);
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
-  const [touchEndX, setTouchEndX] = useState<number | null>(null);    null
-  );
+  const [touchEndX, setTouchEndX] = useState<number | null>(null);  const videoRef = useRef<HTMLVideoElement>(null);
 
   // Property photos
   const photos = [
-    "/photos/properties/Punta Mita/DSC_1443 copy.jpg",
-    "/photos/properties/Punta Mita/DSC_1473 copy.jpg",
-    "/photos/properties/Punta Mita/DSC_1500 copy.jpg",
-    "/photos/properties/Punta Mita/DSC_1615 copy.jpg",
-    "/photos/properties/Punta Mita/DSC_1679 copy.jpg",
-    "/photos/properties/Punta Mita/DSC_1695 copy.jpg",
-    "/photos/properties/Punta Mita/DSC_1723 copy.jpg",
-    "/photos/properties/Punta Mita/DSC_1761 copy.jpg",
-    "/photos/properties/Punta Mita/DSC_1846 copy.jpg",
-    "/photos/properties/Punta Mita/DSC_1848 copy.jpg",
-    "/photos/properties/Punta Mita/DSC_1855 copy.jpg",
-    "/photos/properties/Punta Mita/DSC_1921 copy.jpg",
-    "/photos/properties/Punta Mita/DSC_1942 copy.jpg",
-    "/photos/properties/Punta Mita/DSC_1988 copy.jpg",
-    "/photos/properties/Punta Mita/DSC_2042 copy.jpg",
-    "/photos/properties/Punta Mita/DSC_2056 copy.jpg",
-    "/photos/properties/Punta Mita/DSC_2122 copy.jpg",
-    "/photos/properties/Punta Mita/DSC_2275 copy.jpg",
+    "/photos/properties/blackcomb-greens/exterior1.jpg",
+    "/photos/properties/blackcomb-greens/living1.jpg",
+    "/photos/properties/blackcomb-greens/kitchen1.jpg",
+    "/photos/properties/blackcomb-greens/bedroom1.jpg",
+    // Add all your photos here
   ];
 
+  // Photo navigation functions
   const handlePhotoClick = (index: number) => {
   const handleImageLoad = () => {
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -88,7 +78,6 @@ const PuntaMitaCasaJuntos = () => {
     }
   };
 
-  // Close full screen view when all photos modal is closed
   const closeAllPhotos = () => {
     setShowAllPhotos(false);
     setSelectedPhotoIndex(null);
@@ -97,10 +86,10 @@ const PuntaMitaCasaJuntos = () => {
   return (
     <>
       <Head>
-        <title>Punta Mita - Casa Juntos | AceHost</title>
+        <title>Blackcomb Greens Luxury Townhouse - AceHost</title>
         <meta
           name="description"
-          content="Experience luxury in Punta Mita at Casa Juntos, a beautiful Mexican property perfect for family getaways and relaxation."
+          content="Experience luxury living in this stunning Blackcomb Greens townhouse. Featuring modern amenities, spectacular mountain views, and easy access to Whistler's attractions."
         />
       </Head>
 
@@ -108,37 +97,17 @@ const PuntaMitaCasaJuntos = () => {
         <Navigation transparent={false} />
 
         <main>
-          {/* Header with Property Info */}
-          <div className="max-w-7xl mx-auto px-4 pt-8">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-gray-900 mb-6 sm:mb-8">
-              Punta Mita - Casa Juntos
-            </h1>
+          <PropertyHeader
+            title="Blackcomb Greens Luxury Townhouse"
+            guests={8}
+            bedrooms={3}
+            beds={4}
+            bathrooms={2.5}
+            priceRange="$500-$1,200 per night"
+            airbnbLink="https://www.airbnb.com/your-listing-url"
+          />
 
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
-              <button
-                onClick={() => setShowAllPhotos(true)}
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
-              >
-                More Photos
-              </button>
-              <Link
-                href="#details"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white border border-gray-700 rounded font-medium hover:bg-gray-800 text-sm sm:text-base"
-              >
-                Details
-              </Link>
-              <a
-                href="https://www.airbnb.ca/rooms/561767409786915919?guests=1&adults=1&s=67&unique_share_id=7a6e7b88-1a8b-4352-acca-56db762955cd"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
-              >
-                Book on Airbnb
-              </a>
-            </div>
-          </div>
-
-          {/* Property Photos */}
+          {/* Photo Grid */}
           <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16">
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">              {photos.slice(0, 8).map((photo, index) => (
                 <div
@@ -148,9 +117,9 @@ const PuntaMitaCasaJuntos = () => {
                 >
                   <Image
                     src={photo}
-                    alt={`Punta Mita - Casa Juntos ${index + 1}`}
+                    alt={`Blackcomb Greens interior ${index + 1}`}
                     fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
                     className="object-cover hover:scale-105 transition-transform duration-300"
                     priority={index < 2}
                     loading={index < 2 ? "eager" : "lazy"}
@@ -172,57 +141,51 @@ const PuntaMitaCasaJuntos = () => {
             )}
           </div>
 
-          {/* Property Description */}
-          <div className="max-w-6xl mx-auto px-4" id="details">
-            <p className="text-gray-800 mb-16 max-w-4xl">
-              Punta Mita Casa Juntos offers a luxurious retreat in the beautiful
-              Punta Mita region of Mexico. This property features stunning views
-              of the Pacific Ocean and provides a perfect setting for relaxation
-              and leisure activities.
-            </p>
+          {/* Property Details */}
+          <div id="details" className="max-w-7xl mx-auto px-4 mb-16">
+            <PropertyDetails
+              guests={8}
+              bedrooms={3}
+              beds={4}
+              bathrooms={2.5}
+              priceRange="$500-$1,200 per night"
+            />
           </div>
         </main>
 
-        {/* Photo Gallery Modal */}
+        {/* Photo Modal */}
         {showAllPhotos && (
-          <div className="fixed inset-0 z-50 bg-black overflow-y-auto">
-            <div className="sticky top-0 z-10 bg-black p-4 flex justify-between items-center">
-              <h2 className="text-lg sm:text-xl text-white font-medium">
-                Punta Mita - Casa Juntos - All Photos
-              </h2>
+          <div className="fixed inset-0 bg-black z-50 overflow-y-auto">
+            <div className="relative min-h-screen">
               <button
                 onClick={closeAllPhotos}
-                className="text-white hover:text-gray-300 bg-gray-900 px-4 py-2 rounded-full"
+                className="absolute top-4 right-4 text-white hover:text-gray-300"
               >
-                Close
+                <X size={24} />
               </button>
-            </div>
-
-            <div className="max-w-7xl mx-auto py-6 px-4">
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">                {photos.map((photo, index) => (
-                  <div key={index} className="mb-6">
+              <div className="p-4">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">                  {photos.map((photo, index) => (
                     <div
-                      className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer"
+                      key={index}
+                      className="aspect-[4/3] relative cursor-pointer"
                       onClick={() => handlePhotoClick(index)}
                     >
                       <Image
                         src={photo}
-                        alt={`Punta Mita - Casa Juntos ${index + 1}`}
+                        alt={`Blackcomb Greens interior ${index + 1}`}
                         fill
-                        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw"
-                        className="object-cover hover:scale-105 transition-transform duration-300"
-                        priority={index < 6}
-                        loading={index < 6 ? "eager" : "lazy"}
+                        className="object-cover hover:opacity-90 transition-opacity"
+                        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                       />
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         )}
 
-        {/* Full-screen Photo View */}
+        {/* Full Screen Photo */}
         {selectedPhotoIndex !== null && (
           <div 
             className="fixed inset-0 z-[60] bg-black flex items-center justify-center"
@@ -283,43 +246,31 @@ const PuntaMitaCasaJuntos = () => {
               </p>
             </div>
           </div>
-        )}                className="text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors"
-              >
-                <X className="h-6 w-6" />
-              </button>
-            </div>
-
+        )}              className="absolute top-4 right-4 text-white hover:text-gray-300"
+            >
+              <X size={24} />
+            </button>
             <button
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-[60]"
               onClick={() => navigatePhoto("prev")}
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300"
             >
-              &larr;
+              ←
             </button>
-
-            <div className="relative w-full h-full max-w-6xl max-h-[80vh] mx-auto px-4">
-              <div className="relative w-full h-full">
-                <Image
-                  src={photos[selectedPhotoIndex]}
-                  alt={`Punta Mita - Casa Juntos full view ${
-                    selectedPhotoIndex + 1
-                  }`}
-                  fill
-                  priority
-                  className="object-contain"
-                  sizes="100vw"
-                />
-              </div>
-            </div>
-
             <button
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-[60]"
               onClick={() => navigatePhoto("next")}
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300"
             >
-              &rarr;
+              →
             </button>
-
-            <div className="absolute bottom-4 left-0 right-0 text-center">
-              <p className="text-white text-sm">
+            <div className="relative w-full h-full flex items-center justify-center">
+              <Image
+                src={photos[selectedPhotoIndex]}
+                alt={`Blackcomb Greens interior ${selectedPhotoIndex + 1}`}
+                fill
+                className="object-contain"
+                sizes="100vw"
+              />
+              <p className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white bg-black bg-opacity-50 px-3 py-1 rounded-full">
                 {selectedPhotoIndex + 1} / {photos.length}
               </p>
             </div>
@@ -332,12 +283,12 @@ const PuntaMitaCasaJuntos = () => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export default BlackcombGreens;
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(context.locale || "en", ["common"])),
+      ...(await serverSideTranslations(locale || "en", ["common"])),
     },
   };
-};
-
-export default PuntaMitaCasaJuntos;
+}; 

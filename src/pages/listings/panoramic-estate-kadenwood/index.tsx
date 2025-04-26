@@ -5,17 +5,18 @@ import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
+import PropertyHeader from "@/components/PropertyHeader";
 import Footer from "@/components/Footer";
-import { FaBed, FaBath } from "react-icons/fa";
 import { X } from "lucide-react";
 import { useTranslation } from "next-i18next";
 import { FiX, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 const PanoramicEstate = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
-  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(
-    null
-  );
+  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
+  const [isImageLoading, setIsImageLoading] = useState(false);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const [touchEndX, setTouchEndX] = useState<number | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const { t } = useTranslation("common");
 
@@ -85,7 +86,38 @@ const PanoramicEstate = () => {
   ];
 
   const handlePhotoClick = (index: number) => {
+    setIsImageLoading(true);
     setSelectedPhotoIndex(index);
+  };
+
+  const handleImageLoad = () => {
+    setIsImageLoading(false);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStartX(e.touches[0].clientX);
+    setTouchEndX(null);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEndX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX || !touchEndX) return;
+    
+    const difference = touchStartX - touchEndX;
+    
+    if (Math.abs(difference) > 50) {
+      if (difference > 0) {
+        navigatePhoto("next");
+      } else {
+        navigatePhoto("prev");
+      }
+    }
+    
+    setTouchStartX(null);
+    setTouchEndX(null);
   };
 
   const closeFullScreenPhoto = () => {
@@ -209,7 +241,11 @@ const PanoramicEstate = () => {
                     fill
                     sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     className="object-cover hover:scale-105 transition-transform duration-300"
-                    priority={index < 4}
+                    priority={index < 2}
+                    loading={index < 2 ? "eager" : "lazy"}
+                    quality={index < 4 ? 85 : 75}
+                    placeholder="blur"
+                    blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzMiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="
                   />
                 </div>
               ))}
@@ -252,7 +288,7 @@ const PanoramicEstate = () => {
                     src={photos[4]}
                     alt="Panoramic Estate Interior"
                     fill
-                    className="object-cover"
+                    className="object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>
@@ -307,7 +343,7 @@ const PanoramicEstate = () => {
                     src={photos[14]}
                     alt="Panoramic Estate Bedroom"
                     fill
-                    className="object-cover"
+                    className="object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>
@@ -476,7 +512,7 @@ const PanoramicEstate = () => {
                 </div>
                 <h2 className="text-2xl font-bold">Amenities</h2>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
                 <div>
                   <h3 className="font-semibold mb-3">Exterior & Access</h3>
                   <ul className="space-y-2 text-gray-800">
@@ -594,104 +630,130 @@ const PanoramicEstate = () => {
               </div>
             </div>
           </div>
-
-          {/* All Photos Modal */}
-          {showAllPhotos && (
-            <div className="fixed inset-0 bg-black bg-opacity-90 z-50 p-4 overflow-y-auto flex flex-col">
-              <div className="sticky top-0 flex justify-between items-center mb-4 z-10 bg-black bg-opacity-75 p-2 rounded-lg">
-                <h3 className="text-white text-xl font-bold">
-                  All Photos ({photos.length})
-                </h3>
-                <button
-                  onClick={closeAllPhotos}
-                  className="text-white hover:text-gray-300 p-2"
-                >
-                  <FiX size={24} />
-                </button>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-                {photos.map((photo, index) => (
-                  <div
-                    key={index}
-                    className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden"
-                    onClick={() => handlePhotoClick(index)}
-                  >
-                    <Image
-                      src={photo}
-                      alt={`Panoramic Estate image ${index + 1}`}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
-                      className="object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Full Screen Photo View */}
-          {selectedPhotoIndex !== null && (
-            <div
-              className="fixed inset-0 bg-black z-50 flex flex-col"
-              onClick={closeFullScreenPhoto}
-            >
-              <div className="flex justify-between items-center p-4 bg-black bg-opacity-75">
-                <span className="text-white">
-                  {selectedPhotoIndex + 1} / {photos.length}
-                </span>
-                <button
-                  onClick={closeFullScreenPhoto}
-                  className="text-white hover:text-gray-300"
-                >
-                  <FiX size={24} />
-                </button>
-              </div>
-              <div
-                className="flex-1 flex items-center justify-center p-4 relative"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    navigatePhoto("prev");
-                  }}
-                  className="absolute left-4 bg-black bg-opacity-50 p-2 rounded-full text-white hover:bg-opacity-75 z-10"
-                >
-                  <FiChevronLeft size={24} />
-                </button>
-                <div className="relative w-full h-full max-h-[80vh]">
-                  <Image
-                    src={photos[selectedPhotoIndex]}
-                    alt={`Panoramic Estate full view ${selectedPhotoIndex + 1}`}
-                    fill
-                    sizes="100vw"
-                    className="object-contain"
-                  />
-                </div>
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    navigatePhoto("next");
-                  }}
-                  className="absolute right-4 bg-black bg-opacity-50 p-2 rounded-full text-white hover:bg-opacity-75 z-10"
-                >
-                  <FiChevronRight size={24} />
-                </button>
-              </div>
-            </div>
-          )}
         </main>
 
         <Footer />
       </div>
+
+      {/* Photo Gallery Modal */}
+      {showAllPhotos && (
+        <div className="fixed inset-0 z-50 bg-black overflow-y-auto">
+          <div className="sticky top-0 z-10 bg-black p-4 flex justify-between items-center">
+            <h2 className="text-lg sm:text-xl text-white font-medium">
+              Panoramic Estate - All Photos
+            </h2>
+            <button
+              onClick={closeAllPhotos}
+              className="text-white hover:text-gray-300 bg-gray-900 px-4 py-2 rounded-full"
+              aria-label="Close gallery"
+            >
+              Close
+            </button>
+          </div>
+
+          <div className="max-w-7xl mx-auto py-6 px-4">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {photos.map((photo, index) => (
+                <div key={index} className="mb-6">
+                  <div
+                    className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer"
+                    onClick={() => handlePhotoClick(index)}
+                  >
+                    <Image
+                      src={photo}
+                      alt={`Panoramic Estate ${index + 1}`}
+                      fill
+                      sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw"
+                      className="object-cover hover:scale-105 transition-transform duration-300"
+                      priority={index < 4}
+                      loading={index < 8 ? "eager" : "lazy"}
+                      quality={index < 12 ? 85 : 75}
+                      placeholder="blur"
+                      blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzMiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="
+                    />
+                  </div>
+                  <div className="mt-1 text-center">
+                    <span className="text-white text-xs">
+                      {index + 1} / {photos.length}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Full-screen Photo View */}
+      {selectedPhotoIndex !== null && (
+        <div 
+          className="fixed inset-0 z-[60] bg-black flex items-center justify-center"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
+          <div className="absolute top-4 right-4 flex space-x-4">
+            <button
+              onClick={closeFullScreenPhoto}
+              className="text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
+              aria-label="Close"
+            >
+              <X className="h-6 w-6" />
+            </button>
+          </div>
+
+          <button
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
+            onClick={() => navigatePhoto("prev")}
+            aria-label="Previous photo"
+          >
+            &larr;
+          </button>
+
+          <div className="relative w-full h-full max-w-6xl max-h-[80vh] mx-auto px-4">
+            {isImageLoading && (
+              <div className="absolute inset-0 flex items-center justify-center z-10">
+                <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+              </div>
+            )}
+            <div className="relative w-full h-full">
+              <Image
+                src={photos[selectedPhotoIndex]}
+                alt={`Property full view ${selectedPhotoIndex + 1}`}
+                fill
+                priority
+                className={`object-contain transition-opacity duration-300 ${isImageLoading ? 'opacity-0' : 'opacity-100'}`}
+                sizes="100vw"
+                onLoadingComplete={handleImageLoad}
+                quality={85}
+                loading="eager"
+              />
+            </div>
+          </div>
+
+          <button
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
+            onClick={() => navigatePhoto("next")}
+            aria-label="Next photo"
+          >
+            &rarr;
+          </button>
+
+          <div className="absolute bottom-4 left-0 right-0 text-center z-20">
+            <p className="text-white text-sm bg-black bg-opacity-50 inline-block px-4 py-2 rounded-full">
+              {selectedPhotoIndex + 1} / {photos.length}
+            </p>
+          </div>
+        </div>
+      )}
     </>
   );
 };
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(context.locale || "en", ["common"])),
+      ...(await serverSideTranslations(locale || "en", ["common"])),
     },
   };
 };

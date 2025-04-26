@@ -1,19 +1,21 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
+import PropertyHeader from "@/components/PropertyHeader";
 import Footer from "@/components/Footer";
-import { FaBed, FaBath } from "react-icons/fa";
 import { X } from "lucide-react";
+import { FaBed, FaBath } from "react-icons/fa";
 
 const VancouverHouseCornerUnit = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
-  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(
-    null
-  );
+  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
+  const [isImageLoading, setIsImageLoading] = useState(false);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const [touchEndX, setTouchEndX] = useState<number | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   // Property photos
@@ -35,6 +37,36 @@ const VancouverHouseCornerUnit = () => {
 
   const handlePhotoClick = (index: number) => {
     setSelectedPhotoIndex(index);
+  };
+
+  const handleImageLoad = () => {
+    setIsImageLoading(false);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStartX(e.touches[0].clientX);
+    setTouchEndX(null);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEndX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX || !touchEndX) return;
+    
+    const difference = touchStartX - touchEndX;
+    
+    if (Math.abs(difference) > 50) {
+      if (difference > 0) {
+        navigatePhoto("next");
+      } else {
+        navigatePhoto("prev");
+      }
+    }
+    
+    setTouchStartX(null);
+    setTouchEndX(null);
   };
 
   const closeFullScreenPhoto = () => {
@@ -75,70 +107,15 @@ const VancouverHouseCornerUnit = () => {
         <Navigation transparent={false} />
 
         <main>
-          {/* Header with Property Info */}
-          <div className="max-w-7xl mx-auto px-4 pt-8">
-            <div className="flex justify-center mb-6">
-              <div className="bg-black text-white rounded-full py-2 px-4 sm:px-6 flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-4 text-center sm:text-left">
-                <span>4 guests</span>
-                <span className="hidden sm:block mx-3 text-gray-500">|</span>
-                <span>
-                  Nightly Price Range: $400-$700 | Luxury Building Amenities
-                </span>
-              </div>
-            </div>
-
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-gray-900 mb-6 sm:mb-8">
-              The Vancouver House, Corner Unit | 30th Floor
-            </h1>
-
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
-              <button
-                onClick={() => setShowAllPhotos(true)}
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
-              >
-                More Photos
-              </button>
-              <Link
-                href="#details"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium hover:bg-gray-800 text-sm sm:text-base"
-              >
-                Details
-              </Link>
-              <Link
-                href="/contact"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
-              >
-                Contact Us
-              </Link>
-              <a
-                href="https://www.airbnb.ca/rooms/561767409786915919?guests=1&adults=1&s=67&unique_share_id=7a6e7b88-1a8b-4352-acca-56db762955cd"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
-              >
-                Book on Airbnb
-              </a>
-            </div>
-
-            <div className="text-center mb-6 sm:mb-8">
-              <p className="text-gray-700 text-sm sm:text-base">
-                Minimum Stay Requirement: 2 Nights | 4 Nights in Peak Season
-              </p>
-            </div>
-
-            {/* Featured Video/Photo */}
-            <div className="max-w-5xl mx-auto mb-10 sm:mb-16">
-              <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
-                <Image
-                  src={photos[0]}
-                  alt="Vancouver House Corner Unit"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-            </div>
-          </div>
+          <PropertyHeader
+            title="The Vancouver House, Corner Unit | 30th Floor"
+            guests={4}
+            bedrooms={2}
+            beds={2}
+            bathrooms={2}
+            priceRange="$400-$700 per night"
+            airbnbLink="https://www.airbnb.ca/rooms/561767409786915919?guests=1&adults=1&s=67&unique_share_id=7a6e7b88-1a8b-4352-acca-56db762955cd"
+          />
 
           {/* Photo Grid */}
           <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16">
@@ -155,7 +132,11 @@ const VancouverHouseCornerUnit = () => {
                     fill
                     sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     className="object-cover hover:scale-105 transition-transform duration-300"
-                    priority={index < 4}
+                    priority={index < 2}
+                    loading={index < 2 ? "eager" : "lazy"}
+                    quality={index < 4 ? 85 : 75}
+                    placeholder="blur"
+                    blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzMiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="
                   />
                 </div>
               ))}
@@ -178,7 +159,7 @@ const VancouverHouseCornerUnit = () => {
               <h2 className="text-3xl font-bold mb-6 text-gray-900">
                 Property Details
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
                 <div>
                   <p className="text-gray-700 mb-6">
                     Welcome to this spectacular corner unit on the 30th floor of
@@ -237,7 +218,7 @@ const VancouverHouseCornerUnit = () => {
               <h2 className="text-2xl font-bold mb-6 text-gray-900">
                 Room Layout
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
                 <div>
                   <h3 className="text-xl font-semibold mb-3 text-gray-900">
                     Primary Bedroom
@@ -267,7 +248,7 @@ const VancouverHouseCornerUnit = () => {
               <h2 className="text-2xl font-bold mb-6 text-gray-900">
                 Amenities
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
                 <div className="flex items-start">
                   <svg
                     className="h-5 w-5 text-gray-900 mt-0.5 mr-2"
@@ -511,7 +492,7 @@ const VancouverHouseCornerUnit = () => {
                 <h2 className="text-white text-2xl font-bold mb-6">
                   All Photos ({photos.length})
                 </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
                   {photos.map((photo, index) => (
                     <div
                       key={index}
@@ -535,60 +516,61 @@ const VancouverHouseCornerUnit = () => {
 
         {/* Full Screen Photo */}
         {selectedPhotoIndex !== null && (
-          <div className="fixed inset-0 bg-black z-50 flex items-center justify-center">
+          <div 
+            className="fixed inset-0 z-[60] bg-black flex items-center justify-center"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
+            <div className="absolute top-4 right-4 flex space-x-4">
+              <button
+                onClick={closeFullScreenPhoto}
+                className="text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
+                aria-label="Close"
+              >
+                <X className="h-6 w-6" />
+              </button>
+            </div>
+
             <button
-              onClick={closeFullScreenPhoto}
-              className="absolute top-4 right-4 text-white hover:text-gray-300 z-20 text-3xl"
-            >
-              <X size={32} />
-            </button>
-            <button
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
               onClick={() => navigatePhoto("prev")}
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 z-20"
+              aria-label="Previous photo"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-10 w-10"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
+              &larr;
             </button>
+
+            <div className="relative w-full h-full max-w-6xl max-h-[80vh] mx-auto px-4">
+              {isImageLoading && (
+                <div className="absolute inset-0 flex items-center justify-center z-10">
+                  <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                </div>
+              )}
+              <div className="relative w-full h-full">
+                <Image
+                  src={photos[selectedPhotoIndex]}
+                  alt={`Property full view ${selectedPhotoIndex + 1}`}
+                  fill
+                  priority
+                  className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
+                  sizes="100vw"
+                  onLoadingComplete={handleImageLoad}
+                  quality={85}
+                  loading="eager"
+                />
+              </div>
+            </div>
+
             <button
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
               onClick={() => navigatePhoto("next")}
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 z-20"
+              aria-label="Next photo"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-10 w-10"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
+              &rarr;
             </button>
-            <div className="relative w-full h-full flex items-center justify-center">
-              <Image
-                src={photos[selectedPhotoIndex]}
-                alt={`Vancouver House interior ${selectedPhotoIndex + 1}`}
-                fill
-                className="object-contain"
-                sizes="100vw"
-              />
-              <p className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white bg-black bg-opacity-50 px-3 py-1 rounded-full">
+
+            <div className="absolute bottom-4 left-0 right-0 text-center z-20">
+              <p className="text-white text-sm bg-black bg-opacity-50 inline-block px-4 py-2 rounded-full">
                 {selectedPhotoIndex + 1} / {photos.length}
               </p>
             </div>

@@ -5,8 +5,8 @@ import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
+import PropertyHeader from "@/components/PropertyHeader";
 import Footer from "@/components/Footer";
-import { FaBed, FaBath } from "react-icons/fa";
 
 const LuxeCozyWhistlerVillage = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -51,64 +51,20 @@ const LuxeCozyWhistlerVillage = () => {
         <Navigation transparent={false} />
 
         <main>
-          {/* Header with Property Info */}
-          <div className="max-w-7xl mx-auto px-4 pt-8">
-            <div className="flex justify-center mb-6">
-              <div className="bg-black text-white rounded-full py-2 px-6 flex items-center space-x-4">
-                <span>6 guests</span>
-                <span className="mx-3 text-gray-500">|</span>
-                <span>Nightly Price Range: $400-$1,700+</span>
-              </div>
-            </div>
-
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-gray-900 mb-6 sm:mb-8">
-              Luxe-Cozy 3-Bed Whistler Village
-            </h1>
-
-            {/* Pricing Information */}
-            <div className="flex flex-col items-center mb-8 space-y-2">
-              <div className="bg-gray-100 rounded-lg px-6 py-4 max-w-2xl w-full">
-                <div className="space-y-2">
-                  <p className="text-gray-800 text-center font-medium">
-                    Nightly Price Range: $400-$1,700+
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-4 mb-10">
-              <button
-                onClick={() => setShowAllPhotos(true)}
-                className="px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium"
-              >
-                More Photos
-              </button>
-              <Link
-                href="#details"
-                className="px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium"
-              >
-                Details
-              </Link>
-              <Link
-                href="/contact"
-                className="px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium"
-              >
-                Contact Us
-              </Link>
-              <a
-                href="https://www.airbnb.ca/rooms/1249285355870765792?guests=1&adults=1&s=67&unique_share_id=dcc074b1-0fe5-477a-bc67-701bc6736b13"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium"
-              >
-                Book on Airbnb
-              </a>
-            </div>
-          </div>
+          <PropertyHeader
+            title="Luxe-Cozy 3-Bed Whistler Village"
+            guests={6}
+            bedrooms={3}
+            beds={4}
+            bathrooms={3}
+            priceRange="$400-$1,700+ per night"
+            airbnbLink="https://www.airbnb.ca/rooms/1249285355870765792?guests=1&adults=1&s=67&unique_share_id=dcc074b1-0fe5-477a-bc67-701bc6736b13"
+            contactLink="/contact"
+          />
 
           {/* Photo Grid */}
           <div className="max-w-7xl mx-auto px-4 mb-16">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
               {photos.map((photo, index) => (
                 <div
                   key={index}
@@ -119,7 +75,7 @@ const LuxeCozyWhistlerVillage = () => {
                     src={photo}
                     alt={`Luxe-Cozy Whistler Village interior ${index + 1}`}
                     fill
-                    className="object-cover"
+                    className="object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               ))}
@@ -146,7 +102,7 @@ const LuxeCozyWhistlerVillage = () => {
                     src={photos[4]}
                     alt="Luxe-Cozy Whistler Village Interior"
                     fill
-                    className="object-cover"
+                    className="object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>
@@ -204,7 +160,7 @@ const LuxeCozyWhistlerVillage = () => {
                     src={photos[9]}
                     alt="Luxe-Cozy Whistler Village Living Area"
                     fill
-                    className="object-cover"
+                    className="object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>
@@ -303,14 +259,14 @@ const LuxeCozyWhistlerVillage = () => {
             </div>
 
             <div className="max-w-7xl mx-auto py-6 px-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
                 {photos.map((photo, index) => (
                   <div key={index} className="relative aspect-[4/3]">
                     <Image
                       src={photo}
                       alt={`Luxe-Cozy Whistler Village photo ${index + 1}`}
                       fill
-                      className="object-cover"
+                      className="object-cover hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                 ))}

@@ -5,13 +5,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import PropertyHeader from "@/components/PropertyHeader";import Footer from "@/components/Footer";
 import PropertyGallery from "@/components/PropertyGallery";
 
 const RavensNest = () => {
   const photosRef = useRef<HTMLDivElement>(null);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(
-    null
+  const [isImageLoading, setIsImageLoading] = useState(false);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const [touchEndX, setTouchEndX] = useState<number | null>(null);    null
   );
 
   const photos = [
@@ -44,8 +46,7 @@ const RavensNest = () => {
         <Navigation transparent={false} />
 
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-            <div>
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">            <div>
               <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Raven's Nest | Ski-in/Ski-out with Views
               </h1>
@@ -75,7 +76,7 @@ const RavensNest = () => {
                 src={photos[0]}
                 alt="Raven's Nest Main View"
                 fill
-                className="object-cover"
+                className="object-cover hover:scale-105 transition-transform duration-300"
                 priority
               />
             </div>

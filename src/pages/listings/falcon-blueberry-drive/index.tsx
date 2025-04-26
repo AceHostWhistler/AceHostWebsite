@@ -5,8 +5,8 @@ import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
+import PropertyHeader from "@/components/PropertyHeader";
 import Footer from "@/components/Footer";
-import { FaBed, FaBath } from "react-icons/fa";
 
 const FalconBlueberryDrive = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -60,61 +60,27 @@ const FalconBlueberryDrive = () => {
         <Navigation transparent={false} />
 
         <main>
-          {/* Header with Property Info */}
-          <div className="max-w-7xl mx-auto px-4 pt-8">
-            <div className="flex justify-center mb-6">
-              <div className="bg-black text-white rounded-full py-2 px-6 flex items-center space-x-4">
-                <span>15 guests</span>
-                <span className="mx-3 text-gray-500">|</span>
-                <span>Nightly Price Range: $1,300-$3,500</span>
-              </div>
-            </div>
+          <PropertyHeader
+            title="Falcon | Blueberry Drive"
+            guests={15}
+            bedrooms={7}
+            beds={9}
+            bathrooms={3.5}
+            priceRange="$1,300-$3,500 per night"
+            airbnbLink="https://www.airbnb.ca/rooms/18060329?preview_for_ml=true&source_impression_id=p3_1684112119_tL0LL7QnYLFGOCBI"
+            contactLink="/contact"
+          />
 
-            <h1 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-8">
-              Falcon | Blueberry Drive
-            </h1>
-
-            <div className="flex flex-wrap justify-center gap-4 mb-10">
-              <button
-                onClick={() => setShowAllPhotos(true)}
-                className="px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium"
-              >
-                More Photos
-              </button>
-              <Link
-                href="#details"
-                className="px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium"
-              >
-                Details
-              </Link>
-              <Link
-                href="/contact"
-                className="px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium"
-              >
-                Contact Us
-              </Link>
-              <a
-                href="https://www.airbnb.ca/rooms/18060329?preview_for_ml=true&source_impression_id=p3_1684112119_tL0LL7QnYLFGOCBI"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium"
-              >
-                Book on Airbnb
-              </a>
-            </div>
-
-            <div className="text-center mb-16">
-              <p className="text-gray-700">
-                Minimum Stay Requirement: 2 Nights weekdays | 3 weekends | 7
-                Christmas/NY
-              </p>
-            </div>
+          <div className="text-center mb-16">
+            <p className="text-gray-700">
+              Minimum Stay Requirement: 2 Nights weekdays | 3 weekends | 7
+              Christmas/NY
+            </p>
           </div>
 
           {/* Photo Grid */}
           <div className="max-w-7xl mx-auto px-4 mb-16">
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
-              {images.slice(0, 8).map((photo, index) => (
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">              {images.slice(0, 8).map((photo, index) => (
                 <div
                   key={index}
                   className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
@@ -126,8 +92,11 @@ const FalconBlueberryDrive = () => {
                     fill
                     sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     className="object-cover hover:scale-105 transition-transform duration-300"
-                    priority={index < 4}
-                  />
+                    priority={index < 2}
+                    loading={index < 2 ? "eager" : "lazy"}
+                    quality={index < 4 ? 85 : 75}
+                    placeholder="blur"
+                    blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzMiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="                  />
                 </div>
               ))}
             </div>
@@ -162,7 +131,7 @@ const FalconBlueberryDrive = () => {
                     src={images[1]}
                     alt="Falcon Blueberry Drive Interior"
                     fill
-                    className="object-cover"
+                    className="object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>
@@ -214,7 +183,7 @@ const FalconBlueberryDrive = () => {
                     src="/photos/properties/Falcon/13-3595 Falcon Cres-13.jpg"
                     alt="Falcon Blueberry Drive Bedroom"
                     fill
-                    className="object-cover"
+                    className="object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>
@@ -335,8 +304,7 @@ const FalconBlueberryDrive = () => {
             </div>
 
             <div className="container mx-auto py-8 px-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {images.map((photo, index) => (
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">                {images.map((photo, index) => (
                   <div
                     key={index}
                     className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden"

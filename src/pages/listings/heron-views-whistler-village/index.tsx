@@ -1,19 +1,26 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
+import PropertyHeader from "@/components/PropertyHeader";
 import Footer from "@/components/Footer";
-import { FaBed, FaBath } from "react-icons/fa";
 import { X } from "lucide-react";
+import { FaBed, FaBath } from "react-icons/fa";
+
+type PropertyPhoto = {
+  url: string;
+  alt?: string;
+};
 
 const HeronViewsWhistlerVillage = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
-  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(
-    null
-  );
+  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
+  const [isImageLoading, setIsImageLoading] = useState(false);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const [touchEndX, setTouchEndX] = useState<number | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   // Property photos
@@ -127,6 +134,24 @@ const HeronViewsWhistlerVillage = () => {
     setSelectedPhotoIndex(null);
   };
 
+  // Add keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (selectedPhotoIndex === null) return;
+      
+      if (e.key === "ArrowLeft") {
+        navigatePhoto("prev");
+      } else if (e.key === "ArrowRight") {
+        navigatePhoto("next");
+      } else if (e.key === "Escape") {
+        closeFullScreenPhoto();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedPhotoIndex]);
+
   return (
     <>
       <Head>
@@ -220,10 +245,11 @@ const HeronViewsWhistlerVillage = () => {
                   <Image
                     src={photo}
                     alt={`Heron Views interior ${index + 1}`}
-                    fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                    priority={index < 4}
+                    width={1920}
+                    height={1080}
+                    className="w-full h-full object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    priority
                   />
                 </div>
               ))}
@@ -263,8 +289,9 @@ const HeronViewsWhistlerVillage = () => {
                   <Image
                     src={photos[2]}
                     alt="Heron Views Interior"
-                    fill
-                    className="object-cover"
+                    width={1920}
+                    height={1080}
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>
@@ -330,7 +357,7 @@ const HeronViewsWhistlerVillage = () => {
               </div>
 
               <div className="container mx-auto px-4 py-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
                   {photos.map((photo, index) => (
                     <div
                       key={index}
@@ -340,9 +367,10 @@ const HeronViewsWhistlerVillage = () => {
                       <Image
                         src={photo}
                         alt={`Heron Views photo ${index + 1}`}
-                        fill
+                        width={1920}
+                        height={1080}
+                        className="w-full h-full object-cover"
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        className="object-cover hover:opacity-95 transition-opacity"
                       />
                     </div>
                   ))}
@@ -353,72 +381,93 @@ const HeronViewsWhistlerVillage = () => {
 
           {/* Full Screen Photo View */}
           {selectedPhotoIndex !== null && (
-            <div
-              className="fixed inset-0 bg-black z-50 flex items-center justify-center"
-              onClick={closeFullScreenPhoto}
+            <div 
+              className="fixed inset-0 z-[60] bg-black flex items-center justify-center"
+              onTouchStart={() => {
+                setTouchStartX(null);
+                setTouchEndX(null);
+              }}
+              onTouchMove={(e) => {
+                setTouchEndX(e.touches[0].clientX);
+              }}
+              onTouchEnd={(e) => {
+                if (!touchStartX || !touchEndX) return;
+                
+                const difference = touchStartX - touchEndX;
+                
+                if (Math.abs(difference) > 50) {
+                  if (difference > 0) {
+                    navigatePhoto("prev");
+                  } else {
+                    navigatePhoto("next");
+                  }
+                }
+                
+                setTouchStartX(null);
+                setTouchEndX(null);
+              }}
             >
+              <div className="absolute top-4 right-4 flex space-x-4">
+                <button
+                  onClick={closeFullScreenPhoto}
+                  className="text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
+                  aria-label="Close"
+                >
+                  <X className="h-6 w-6" />
+                </button>
+              </div>
+
               <button
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
                 onClick={(e) => {
                   e.stopPropagation();
                   navigatePhoto("prev");
                 }}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 rounded-full p-2 text-white hover:bg-opacity-75 z-10"
+                aria-label="Previous photo"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 19l-7-7 7-7"
-                  />
-                </svg>
+                &larr;
               </button>
 
-              <div className="relative h-screen w-screen flex items-center justify-center">
-                <Image
-                  src={photos[selectedPhotoIndex]}
-                  alt={`Heron Views photo ${selectedPhotoIndex + 1}`}
-                  fill
-                  sizes="100vw"
-                  className="object-contain p-4"
-                />
+              <div className="relative w-full h-full max-w-6xl max-h-[80vh] mx-auto px-4">
+                {isImageLoading && (
+                  <div className="absolute inset-0 flex items-center justify-center z-10">
+                    <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                  </div>
+                )}
+                <div className="relative w-full h-full">
+                  <Image
+                    src={photos[selectedPhotoIndex]}
+                    alt={`Property full view ${selectedPhotoIndex + 1}`}
+                    width={1920}
+                    height={1080}
+                    className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
+                    sizes="100vw"
+                    onLoadingComplete={(img) => {
+                      setIsImageLoading(false);
+                      img.classList.remove("opacity-0");
+                    }}
+                    quality={85}
+                    loading="eager"
+                  />
+                </div>
               </div>
 
               <button
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
                 onClick={(e) => {
                   e.stopPropagation();
                   navigatePhoto("next");
                 }}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 rounded-full p-2 text-white hover:bg-opacity-75 z-10"
+                aria-label="Next photo"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
+                &rarr;
               </button>
 
-              <button
-                onClick={closeFullScreenPhoto}
-                className="absolute top-4 right-4 bg-black bg-opacity-50 rounded-full p-2 text-white hover:bg-opacity-75 z-10"
-              >
-                <X size={24} />
-              </button>
+              <div className="absolute bottom-4 left-0 right-0 text-center z-20">
+                <p className="text-white text-sm bg-black bg-opacity-50 inline-block px-4 py-2 rounded-full">
+                  {selectedPhotoIndex + 1} / {photos.length}
+                </p>
+              </div>
             </div>
           )}
         </main>

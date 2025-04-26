@@ -1,19 +1,21 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
+import PropertyHeader from "@/components/PropertyHeader";
 import Footer from "@/components/Footer";
-import { FaBed, FaBath } from "react-icons/fa";
 import { X } from "lucide-react";
+import { FaBed, FaBath } from "react-icons/fa";
 
 const LeChamoisApartment = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
-  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(
-    null
-  );
+  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
+  const [isImageLoading, setIsImageLoading] = useState(false);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const [touchEndX, setTouchEndX] = useState<number | null>(null);
 
   // Property photos
   const photos = [
@@ -37,6 +39,7 @@ const LeChamoisApartment = () => {
   ];
 
   const handlePhotoClick = (index: number) => {
+    setIsImageLoading(false);
     setSelectedPhotoIndex(index);
   };
 
@@ -67,10 +70,10 @@ const LeChamoisApartment = () => {
   return (
     <>
       <Head>
-        <title>Le Chamois 2 Bed | Walk to Lifts - AceHost</title>
+        <title>Le Chamois Apartment | Ski-in Ski-out - AceHost</title>
         <meta
           name="description"
-          content="Modern apartment in the Le Chamois hotel, situated in the heart of Upper Village and just a short distance from Blackcomb Gondola. This cozy getaway is perfect for skiing and offers 1.5 beds and 2 baths."
+          content="Experience the perfect ski-in ski-out location at Le Chamois Apartment in Whistler. This 2-bedroom unit offers direct access to lifts, stunning mountain views, and modern amenities."
         />
       </Head>
 
@@ -137,7 +140,11 @@ const LeChamoisApartment = () => {
                     fill
                     sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     className="object-cover hover:scale-105 transition-transform duration-300"
-                    priority={index < 4}
+                    priority={index < 2}
+                    loading={index < 2 ? "eager" : "lazy"}
+                    quality={index < 4 ? 85 : 75}
+                    placeholder="blur"
+                    blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzMiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="
                   />
                 </div>
               ))}
@@ -168,7 +175,7 @@ const LeChamoisApartment = () => {
                     src={photos[2]}
                     alt="Le Chamois Interior"
                     fill
-                    className="object-cover"
+                    className="object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>
@@ -226,7 +233,7 @@ const LeChamoisApartment = () => {
                     src={photos[4]}
                     alt="Le Chamois facilities"
                     fill
-                    className="object-cover"
+                    className="object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>
@@ -276,7 +283,7 @@ const LeChamoisApartment = () => {
                     src={photos[5]}
                     alt="Le Chamois bedroom"
                     fill
-                    className="object-cover"
+                    className="object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>
@@ -305,7 +312,7 @@ const LeChamoisApartment = () => {
                     src={photos[8]}
                     alt="Le Chamois amenities"
                     fill
-                    className="object-cover"
+                    className="object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>
@@ -353,7 +360,7 @@ const LeChamoisApartment = () => {
                     src={photos[10]}
                     alt="Le Chamois location"
                     fill
-                    className="object-cover"
+                    className="object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>
@@ -438,7 +445,7 @@ const LeChamoisApartment = () => {
                     <X size={24} />
                   </button>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
                   {photos.map((photo, index) => (
                     <div
                       key={index}
@@ -450,7 +457,7 @@ const LeChamoisApartment = () => {
                         alt={`Le Chamois apartment photo ${index + 1}`}
                         fill
                         sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
-                        className="object-cover"
+                        className="object-cover hover:scale-105 transition-transform duration-300"
                       />
                     </div>
                   ))}
@@ -461,62 +468,85 @@ const LeChamoisApartment = () => {
 
           {/* Full Screen Photo Modal */}
           {selectedPhotoIndex !== null && (
-            <div className="fixed inset-0 bg-black z-50 flex items-center justify-center">
-              <button
-                onClick={closeFullScreenPhoto}
-                className="absolute top-4 right-4 text-white hover:text-gray-300 z-10"
-              >
-                <X size={32} />
-              </button>
-              <button
-                onClick={() => navigatePhoto("prev")}
-                className="absolute left-4 text-white hover:text-gray-300 z-10"
-              >
-                <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+            <div 
+              className="fixed inset-0 z-[60] bg-black flex items-center justify-center"
+              onTouchStart={() => {
+                setTouchStartX(null);
+                setTouchEndX(null);
+              }}
+              onTouchMove={(e) => {
+                if (touchStartX === null) {
+                  setTouchStartX(e.touches[0].clientX);
+                }
+                setTouchEndX(e.touches[0].clientX);
+              }}
+              onTouchEnd={() => {
+                if (touchStartX !== null && touchEndX !== null) {
+                  const difference = touchStartX - touchEndX;
+                  if (Math.abs(difference) > 50) {
+                    if (difference > 0) {
+                      navigatePhoto("prev");
+                    } else {
+                      navigatePhoto("next");
+                    }
+                  }
+                }
+                setTouchStartX(null);
+                setTouchEndX(null);
+              }}
+            >
+              <div className="absolute top-4 right-4 flex space-x-4">
+                <button
+                  onClick={closeFullScreenPhoto}
+                  className="text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
+                  aria-label="Close"
                 >
-                  <path
-                    d="M15 19L8 12L15 5"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
-              <div className="relative w-full h-full max-w-6xl max-h-[80vh] mx-auto">
-                <Image
-                  src={photos[selectedPhotoIndex]}
-                  alt={`Le Chamois apartment photo ${selectedPhotoIndex + 1}`}
-                  fill
-                  sizes="100vw"
-                  className="object-contain"
-                />
+                  <X className="h-6 w-6" />
+                </button>
               </div>
+
               <button
-                onClick={() => navigatePhoto("next")}
-                className="absolute right-4 text-white hover:text-gray-300 z-10"
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
+                onClick={() => navigatePhoto("prev")}
+                aria-label="Previous photo"
               >
-                <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9 5L16 12L9 19"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                &larr;
               </button>
+
+              <div className="relative w-full h-full max-w-6xl max-h-[80vh] mx-auto px-4">
+                {isImageLoading && (
+                  <div className="absolute inset-0 flex items-center justify-center z-10">
+                    <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                  </div>
+                )}
+                <div className="relative w-full h-full">
+                  <Image
+                    src={photos[selectedPhotoIndex]}
+                    alt={`Property full view ${selectedPhotoIndex + 1}`}
+                    fill
+                    priority
+                    className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
+                    sizes="100vw"
+                    onLoadingComplete={() => setIsImageLoading(false)}
+                    quality={85}
+                    loading="eager"
+                  />
+                </div>
+              </div>
+
+              <button
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
+                onClick={() => navigatePhoto("next")}
+                aria-label="Next photo"
+              >
+                &rarr;
+              </button>
+
+              <div className="absolute bottom-4 left-0 right-0 text-center z-20">
+                <p className="text-white text-sm bg-black bg-opacity-50 inline-block px-4 py-2 rounded-full">
+                  {selectedPhotoIndex + 1} / {photos.length}
+                </p>
+              </div>
             </div>
           )}
         </main>

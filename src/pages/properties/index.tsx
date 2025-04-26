@@ -250,6 +250,7 @@ export default function Properties() {
             ],
             priceRange: "$2,600-$6,000 per night",
             isSkiInSkiOut: true,
+            isPetFriendly: true,
           },
           {
             id: "panoramic-estate",
@@ -283,6 +284,7 @@ export default function Properties() {
             ],
             priceRange: "$5,800-$9,000+ per night",
             isSkiInSkiOut: true,
+            isPetFriendly: false,
           },
           {
             id: "heron-views-whistler",
@@ -315,6 +317,8 @@ export default function Properties() {
               "Recently Renovated",
             ],
             priceRange: "$1,200-$3,500 per night",
+            isPetFriendly: false,
+            isSkiInSkiOut: false,
           },
           {
             id: "ravens-nest",
@@ -342,6 +346,7 @@ export default function Properties() {
             ],
             priceRange: "$2,000-$3,500 per night",
             isSkiInSkiOut: true,
+            isPetFriendly: false,
           },
           {
             id: "falcon-blueberry-drive",
@@ -374,6 +379,8 @@ export default function Properties() {
             priceRange: "Nightly Price Range: $1,300-$3,500+",
             winterPrice: "$2,000-$3,500+ Nightly | Winter",
             holidayPrice: "$4,000-$7,200+ Nightly | Christmas & NY",
+            isPetFriendly: false,
+            isSkiInSkiOut: false,
           },
           {
             id: "snow-pine",
@@ -407,6 +414,7 @@ export default function Properties() {
             ],
             priceRange: "Monthly Price Range: $10,000-$12,000",
             isSkiInSkiOut: true,
+            isPetFriendly: true,
           },
           {
             id: "wedge-mountain-lodge-spa",
@@ -619,6 +627,7 @@ export default function Properties() {
             priceRange: "$350-$1,050 Nightly",
             link: "/listings/ski-in-ski-out-walk-to-lifts-2-bed",
             isSkiInSkiOut: true,
+            isPetFriendly: false,
           },
           {
             id: "whistler-village-views-luxury-2-5-bedroom",
@@ -649,6 +658,8 @@ export default function Properties() {
               "Recently Renovated"
             ],
             priceRange: "$400-$1,150+ Nightly",
+            isPetFriendly: false,
+            isSkiInSkiOut: false,
           },
           {
             id: "scandinavian-mountainside-retreat-pemberton-meadows-50-acres",
@@ -697,9 +708,9 @@ export default function Properties() {
             id: "vancouver-house-corner",
             name: "Vancouver House Corner Unit | 30th Floor",
             images: [
-              "/photos/properties/Vancouver House/Vancouver House-1.jpg",
-              "/photos/properties/Vancouver House/Vancouver House-2.jpg",
-              "/photos/properties/Vancouver House/Vancouver House-3.jpg",
+              "/photos/properties/vancouver-house/645adc4aca79d22167763483_Vancouver_House-03.jpg",
+              "/photos/properties/vancouver-house/645adc49fb32ea8384334e2e_Vancouver_House-05.jpg",
+              "/photos/properties/vancouver-house/645adc48fb32ea2543334d52_Vancouver_House-13.jpg"
             ],
             guests: 4,
             bedrooms: 2,
@@ -724,6 +735,7 @@ export default function Properties() {
               "Building Amenities",
             ],
             priceRange: "$450-$750 per night",
+            link: "/vancouver-listings/vancouver-house-corner-unit-30th-floor"
           },
           {
             id: "mykonos-crystal-villa",
@@ -1040,7 +1052,7 @@ export default function Properties() {
         : property.id === "scandinavian-mountainside-retreat-pemberton-meadows-50-acres"
         ? "/listings/scandinavian-mountainside-retreat-pemberton-meadows-50-acres"
         : property.id === "vancouver-house-corner"
-        ? "/worldwide-listings/vancouver-house-corner"
+        ? "/vancouver-listings/vancouver-house-corner-unit-30th-floor"
         : property.id === "yacht-thailand" 
         ? "/worldwide-listings/super-yacht-thailand"
         : property.id === "villa-aegean-greece" 

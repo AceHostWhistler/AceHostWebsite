@@ -1,20 +1,19 @@
-import React, { useState, useRef, useEffect, useCallback } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
+import PropertyHeader from "@/components/PropertyHeader";
 import Footer from "@/components/Footer";
-import { FaBed, FaBath } from "react-icons/fa";
+import PropertyDetails from "@/components/PropertyDetails";
 import { X } from "lucide-react";
 import LazyVimeoPlayer from "../../../components/LazyVimeoPlayer";
 
 const AltitudeRetreat = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
-  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(
-    null
-  );
+  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [isImageLoading, setIsImageLoading] = useState(false);
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
   const [touchEndX, setTouchEndX] = useState<number | null>(null);
@@ -116,12 +115,10 @@ const AltitudeRetreat = () => {
     }
   };
 
-  // Handle image load completion
   const handleImageLoad = () => {
     setIsImageLoading(false);
   };
 
-  // Handle keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (selectedPhotoIndex !== null) {
@@ -141,7 +138,6 @@ const AltitudeRetreat = () => {
     };
   }, [selectedPhotoIndex]);
 
-  // Handle touch navigation
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchStartX(e.touches[0].clientX);
     setTouchEndX(null);
@@ -156,23 +152,18 @@ const AltitudeRetreat = () => {
     
     const difference = touchStartX - touchEndX;
     
-    // If the swipe is significant enough (more than 50px)
     if (Math.abs(difference) > 50) {
       if (difference > 0) {
-        // Swiped left - go to next
         navigatePhoto('next');
       } else {
-        // Swiped right - go to previous
         navigatePhoto('prev');
       }
     }
     
-    // Reset touch coordinates
     setTouchStartX(null);
     setTouchEndX(null);
   };
 
-  // Close full screen view when all photos modal is closed
   const closeAllPhotos = () => {
     setShowAllPhotos(false);
     setSelectedPhotoIndex(null);
@@ -190,85 +181,16 @@ const AltitudeRetreat = () => {
 
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
-
         <main>
-          {/* Header with Property Info */}
-          <div className="max-w-7xl mx-auto px-4 pt-8">
-            <div className="flex justify-center mb-6">
-              <div className="bg-black text-white rounded-full py-2 px-4 sm:px-6 flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-4 text-center sm:text-left">
-                <span>18 guests</span>
-                <span className="hidden sm:block mx-3 text-gray-500">|</span>
-                <span>Nightly Price Range: $7,500-$10,000 +</span>
-              </div>
-            </div>
-
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-gray-900 mb-6 sm:mb-8">
-              Altitude Retreat | Kadenwood | Private Butler
-            </h1>
-
-            {/* Pricing Information */}
-            <div className="flex flex-col items-center mb-8 space-y-2">
-              <div className="bg-gray-100 rounded-lg px-6 py-4 max-w-2xl w-full">
-                <div className="space-y-2">
-                  <p className="text-gray-800 text-center font-medium">
-                    $7,500-$10,000+
-                  </p>
-                  <p className="text-gray-800 text-center">
-                    $8,000-$10,000+ Nightly | Winter
-                  </p>
-                  <p className="text-gray-800 text-center">
-                    $14,500-$19,000 Nightly | Christmas & NY
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
-              <button
-                onClick={() => setShowAllPhotos(true)}
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
-              >
-                More Photos
-              </button>
-              <Link
-                href="#details"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white border border-gray-700 rounded font-medium hover:bg-gray-800 text-sm sm:text-base"
-              >
-                Details
-              </Link>
-              <Link
-                href="/contact"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
-              >
-                Contact Us
-              </Link>
-              <a
-                href="https://www.airbnb.ca/rooms/771060491470943213?guests=1&adults=1&s=67&unique_share_id=a8ff5a7a-4bda-4cc7-aaad-e99b178f3a5d"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
-              >
-                Book on Airbnb
-              </a>
-            </div>
-
-            <div className="text-center mb-6 sm:mb-8">
-              <p className="text-gray-700 text-sm sm:text-base">
-                Minimum Stay Requirement: 3-4 nights | 7 Christmas/NY
-              </p>
-            </div>
-
-            {/* Featured Video */}
-            <div className="max-w-5xl mx-auto mb-10 sm:mb-16">
-              <LazyVimeoPlayer 
-                videoId="906479830"
-                title="Altitude Retreat Property Walkthrough"
-                aspectRatio="video"
-                className="rounded-lg shadow-lg"
-                autoplay={false}
-              />
-            </div>
-          </div>
+          <PropertyHeader
+            title="Altitude Retreat | Kadenwood | Private Butler"
+            guests={18}
+            bedrooms={8}
+            beds={12}
+            bathrooms={8.5}
+            priceRange="$7,000-11,000+ per night"
+            airbnbLink="https://www.airbnb.ca/rooms/771060491470943213?guests=1&adults=1&s=67&unique_share_id=a8ff5a7a-4bda-4cc7-aaad-e99b178f3a5d"
+          />
 
           {/* Photo Grid - Updated to have 2 columns on mobile */}
           <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16">
@@ -327,7 +249,7 @@ const AltitudeRetreat = () => {
                     src={photos[3]}
                     alt="Altitude Retreat Interior"
                     fill
-                    className="object-cover"
+                    className="object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>
@@ -381,7 +303,7 @@ const AltitudeRetreat = () => {
                     src={photos[12]}
                     alt="Altitude Retreat Bedroom"
                     fill
-                    className="object-cover"
+                    className="object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>
@@ -502,7 +424,7 @@ const AltitudeRetreat = () => {
           </div>
         </main>
 
-        {/* Photo Gallery Modal - Updated to support 2 columns on mobile and full-screen view */}
+        {/* Photo Gallery Modal */}
         {showAllPhotos && (
           <div className="fixed inset-0 z-50 bg-black overflow-y-auto">
             <div className="sticky top-0 z-10 bg-black p-4 flex justify-between items-center">
@@ -586,7 +508,7 @@ const AltitudeRetreat = () => {
               <div className="relative w-full h-full">
                 <Image
                   src={photos[selectedPhotoIndex]}
-                  alt={`Altitude Retreat full view ${selectedPhotoIndex + 1}`}
+                  alt={`Property full view ${selectedPhotoIndex + 1}`}
                   fill
                   priority
                   className={`object-contain transition-opacity duration-300 ${isImageLoading ? 'opacity-0' : 'opacity-100'}`}
@@ -620,10 +542,10 @@ const AltitudeRetreat = () => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(context.locale || "en", ["common"])),
+      ...(await serverSideTranslations(locale || "en", ["common"])),
     },
   };
 };

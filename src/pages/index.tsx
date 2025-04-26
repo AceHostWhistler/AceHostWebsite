@@ -199,6 +199,7 @@ const Home = () => {
       link: "/listings/altitude-retreat-kadenwood",
       airbnbLink:
         "https://www.airbnb.ca/rooms/771060491470943213?guests=1&adults=1&s=67&unique_share_id=a8ff5a7a-4bda-4cc7-aaad-e99b178f3a5d",
+      isPetFriendly: false,
       isSkiInSkiOut: true,
     },
     {
@@ -234,6 +235,7 @@ const Home = () => {
       link: "/listings/chalet-la-forja-kadenwood",
       airbnbLink:
         "https://www.airbnb.ca/rooms/52655503?guests=1&adults=1&s=67&unique_share_id=f1bb5c2c-51f9-4a82-9aa4-670fb8caa71d",
+      isPetFriendly: false,
       isSkiInSkiOut: true,
     },
     {
@@ -269,6 +271,7 @@ const Home = () => {
       link: "/listings/panoramic-estate-kadenwood",
       airbnbLink:
         "https://www.airbnb.ca/rooms/1104637821836596397?guests=1&adults=1&s=67&unique_share_id=67164555-993c-40dc-b188-23ffe0755654",
+      isPetFriendly: false,
       isSkiInSkiOut: true,
     },
     {
@@ -286,6 +289,8 @@ const Home = () => {
       link: "/listings/heron-views-whistler-village",
       airbnbLink:
         "https://www.airbnb.ca/rooms/1168163637007998550?guests=1&adults=1&s=67&unique_share_id=8227e964-920d-4bc0-8073-13043963151f",
+      isPetFriendly: false,
+      isSkiInSkiOut: false,
     },
     {
       id: "scandinavian-mountainside-retreat-pemberton-meadows-50-acres",
@@ -300,7 +305,9 @@ const Home = () => {
       holidayPrice: "Includes 2 Night Accommodation",
       location: "whistler",
       link: "/listings/scandinavian-mountainside-retreat-pemberton-meadows-50-acres",
-      contactLink: "/contact"
+      contactLink: "/contact",
+      isPetFriendly: false,
+      isSkiInSkiOut: false,
     },
     {
       id: "ravens-nest",
@@ -318,6 +325,7 @@ const Home = () => {
       link: "/listings/ravens-nest-ski-in-ski-out-views",
       airbnbLink:
         "https://www.airbnb.ca/rooms/1300258964918876012?guests=1&adults=1&s=67&unique_share_id=41b635e9-00a9-441c-a134-056b2b3814ac",
+      isPetFriendly: false,
       isSkiInSkiOut: true,
     },
     {
@@ -334,6 +342,8 @@ const Home = () => {
       location: "whistler",
       link: "/listings/falcon-blueberry-drive",
       airbnbLink: "",
+      isPetFriendly: false,
+      isSkiInSkiOut: false,
     },
     {
       id: "the-nest",
@@ -385,6 +395,8 @@ const Home = () => {
       holidayPrice: "Request for Nightly rates",
       location: "whistler",
       link: "/listings/wedge-mountain-lodge-spa",
+      isPetFriendly: false,
+      isSkiInSkiOut: false,
     },
     {
       id: "luxe-cozy-3-bed-whistler-village",
@@ -402,6 +414,8 @@ const Home = () => {
       link: "/listings/luxe-cozy-3-bed-whistler-village",
       airbnbLink:
         "https://www.airbnb.ca/rooms/1249285355870765792?guests=1&adults=1&s=67&unique_share_id=5fc53f3d-300c-4b8b-aee5-d9f5b263ae3c",
+      isPetFriendly: false,
+      isSkiInSkiOut: false,
     },
     {
       id: "dream-log-chalet",
@@ -417,6 +431,8 @@ const Home = () => {
       holidayPrice: "6-months Winter: $17,000 monthly | 12+ months: $14,000 monthly",
       location: "whistler",
       link: "/listings/dream-log-chalet-5-bedroom-4-bath-creekside",
+      isPetFriendly: false,
+      isSkiInSkiOut: false,
     },
     {
       id: "whispering-pines",
@@ -433,6 +449,7 @@ const Home = () => {
       link: "/listings/whispering-pines-ski-in-ski-out",
       airbnbLink:
         "https://www.airbnb.com/rooms/1072474554447345991?guests=1&adults=1&s=67&unique_share_id=e556b35c-05b5-40b6-91e1-5304ffafc23b",
+      isPetFriendly: false,
       isSkiInSkiOut: true,
     },
     {
@@ -467,6 +484,7 @@ const Home = () => {
       location: "whistler",
       link: "/listings/ski-in-ski-out-walk-to-lifts-2-bed",
       airbnbLink: "https://www.airbnb.ca/rooms/1015303987589924725?guests=1&adults=1&s=67&unique_share_id=5e912eb5-5445-4797-81ec-df21817dd143",
+      isPetFriendly: false,
       isSkiInSkiOut: true,
     },
     {
@@ -483,6 +501,8 @@ const Home = () => {
       location: "whistler",
       link: "/listings/whistler-village-views-luxury-2-5-bedroom",
       airbnbLink: "https://www.airbnb.ca/rooms/50025973?preview_for_ml=true&source_impression_id=p3_1699290307_SHcNx7EoXySmn6j5",
+      isPetFriendly: false,
+      isSkiInSkiOut: false,
     },
    
   
@@ -500,6 +520,8 @@ const Home = () => {
       holidayPrice: "",
       location: "worldwide",
       link: "/worldwide-listings/super-yacht-thailand",
+      isPetFriendly: false,
+      isSkiInSkiOut: false,
     },
     {
       id: "villa-aegean-greece",
@@ -515,6 +537,8 @@ const Home = () => {
       holidayPrice: "",
       location: "worldwide",
       link: "/worldwide-listings/mykonos-crystal-villa",
+      isPetFriendly: false,
+      isSkiInSkiOut: false,
     },
     {
       id: "punta-mita",
@@ -529,6 +553,8 @@ const Home = () => {
       holidayPrice: "",
       location: "worldwide",
       link: "/worldwide-listings/punta-mita---casa-juntos",
+      isPetFriendly: false,
+      isSkiInSkiOut: false,
     },
     {
       id: "hood-river-luxury-home",
@@ -543,6 +569,8 @@ const Home = () => {
       holidayPrice: "",
       location: "worldwide",
       link: "/worldwide-listings/hood-river-luxury-home",
+      isPetFriendly: false,
+      isSkiInSkiOut: false,
     },
     
     // Vancouver Properties
@@ -560,24 +588,21 @@ const Home = () => {
       holidayPrice: "",
       location: "vancouver",
       link: "/vancouver-listings/vancouver-house-corner-unit-30th-floor",
+      isPetFriendly: false,
+      isSkiInSkiOut: false,
     },
     
   ];
 
-  // Filter properties based on active filter
-  const filteredListings =
-    activeFilter === "all"
-      ? allListings
-      : activeFilter === "pets"
-      ? allListings.filter((listing) => listing.isPetFriendly === true)
-      : activeFilter === "skiinout"
-      ? allListings.filter((listing) => listing.isSkiInSkiOut === true)
-      : allListings.filter((listing) => listing.location === activeFilter);
-
-  // This ensures only one Two Cedars property is displayed
-  const displayedListings = filteredListings.filter(
-    (listing) => listing.id !== "two-cedars-duplicate"
-  );
+  // Update filtering logic to match properties page
+  const filteredListings = allListings.filter((listing) => {
+    if (activeFilter === "all") return true;
+    if (activeFilter === "pets") return listing.isPetFriendly === true;
+    if (activeFilter === "skiinout") return listing.isSkiInSkiOut === true;
+    if (activeFilter === "whistler") return listing.location === "whistler";
+    if (activeFilter === "worldwide") return listing.location === "worldwide" || listing.location === "vancouver";
+    return listing.location === activeFilter;
+  });
 
   const faqItems = [
     {
@@ -885,6 +910,16 @@ const Home = () => {
               {/* Property Filters */}
               <div className="flex justify-center gap-4 mb-12">
                 <button
+                  onClick={() => setActiveFilter("all")}
+                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                    activeFilter === "all"
+                      ? "bg-black text-white shadow-md"
+                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
+                  }`}
+                >
+                  All Properties
+                </button>
+                <button
                   onClick={() => setActiveFilter("whistler")}
                   className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                     activeFilter === "whistler"
@@ -892,7 +927,7 @@ const Home = () => {
                       : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
                   }`}
                 >
-                  Whistler Properties
+                  Whistler
                 </button>
                 <button
                   onClick={() => setActiveFilter("worldwide")}
@@ -904,18 +939,32 @@ const Home = () => {
                 >
                   Worldwide
                 </button>
+                <button
+                  onClick={() => setActiveFilter("pets")}
+                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                    activeFilter === "pets"
+                      ? "bg-black text-white shadow-md"
+                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
+                  }`}
+                >
+                  Pet Friendly
+                </button>
+                <button
+                  onClick={() => setActiveFilter("skiinout")}
+                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                    activeFilter === "skiinout"
+                      ? "bg-black text-white shadow-md"
+                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
+                  }`}
+                >
+                  Ski in Ski out
+                </button>
               </div>
             </div>
 
             {/* Property Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {allListings
-                .filter((property) => {
-                  if (activeFilter === "whistler") return property.location === "whistler";
-                  if (activeFilter === "worldwide") return property.location !== "whistler";
-                  return true;
-                })
-                .map((property, index) => renderPropertyCard(property, index))}
+              {filteredListings.map((property, index) => renderPropertyCard(property, index))}
             </div>
           </div>
         </section>

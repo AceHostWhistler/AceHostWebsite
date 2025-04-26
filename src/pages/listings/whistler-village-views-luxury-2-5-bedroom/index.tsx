@@ -1,44 +1,131 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
+import PropertyHeader from "@/components/PropertyHeader";
 import Footer from "@/components/Footer";
-import { FaBed, FaBath } from "react-icons/fa";
-import { X } from "lucide-react";
+import { X, Users, MapPin, ChevronLeft, ChevronRight, Home } from "lucide-react";
+
+type PropertyPhoto = {
+  src: string;
+  alt: string;
+};
 
 const WhistlerVillageViews = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
-  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(
-    null
-  );
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
+  const [isImageLoading, setIsImageLoading] = useState(false);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const [touchEndX, setTouchEndX] = useState<number | null>(null);
 
   // Property photos
-  const photos = [
-    "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge.jpg",
-    "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-2.jpg",
-    "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-3.jpg",
-    "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-4.jpg",
-    "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-5.jpg",
-    "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-6.jpg",
-    "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-7.jpg",
-    "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-8.jpg",
-    "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-9.jpg",
-    "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-10.jpg",
-    "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-11.jpg",
-    "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-12.jpg",
-    "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-13.jpg",
-    "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-14.jpg",
-    "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-15.jpg",
-    "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-16.jpg",
-    "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-17.jpg",
+  const photos: PropertyPhoto[] = [
+    {
+      src: "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge.jpg",
+      alt: "Whistler Village Views interior 1"
+    },
+    {
+      src: "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-2.jpg",
+      alt: "Whistler Village Views interior 2"
+    },
+    {
+      src: "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-3.jpg",
+      alt: "Whistler Village Views interior 3"
+    },
+    {
+      src: "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-4.jpg",
+      alt: "Whistler Village Views interior 4"
+    },
+    {
+      src: "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-5.jpg",
+      alt: "Whistler Village Views interior 5"
+    },
+    {
+      src: "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-6.jpg",
+      alt: "Whistler Village Views interior 6"
+    },
+    {
+      src: "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-7.jpg",
+      alt: "Whistler Village Views interior 7"
+    },
+    {
+      src: "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-8.jpg",
+      alt: "Whistler Village Views interior 8"
+    },
+    {
+      src: "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-9.jpg",
+      alt: "Whistler Village Views interior 9"
+    },
+    {
+      src: "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-10.jpg",
+      alt: "Whistler Village Views interior 10"
+    },
+    {
+      src: "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-11.jpg",
+      alt: "Whistler Village Views interior 11"
+    },
+    {
+      src: "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-12.jpg",
+      alt: "Whistler Village Views interior 12"
+    },
+    {
+      src: "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-13.jpg",
+      alt: "Whistler Village Views interior 13"
+    },
+    {
+      src: "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-14.jpg",
+      alt: "Whistler Village Views interior 14"
+    },
+    {
+      src: "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-15.jpg",
+      alt: "Whistler Village Views interior 15"
+    },
+    {
+      src: "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-16.jpg",
+      alt: "Whistler Village Views interior 16"
+    },
+    {
+      src: "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-17.jpg",
+      alt: "Whistler Village Views interior 17"
+    }
   ];
 
   const handlePhotoClick = (index: number) => {
+    setIsImageLoading(true);
     setSelectedPhotoIndex(index);
+  };
+
+  const handleImageLoad = () => {
+    setIsImageLoading(false);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStartX(e.touches[0].clientX);
+    setTouchEndX(null);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEndX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX || !touchEndX) return;
+    
+    const difference = touchStartX - touchEndX;
+    
+    if (Math.abs(difference) > 50) {
+      if (difference > 0) {
+        navigatePhoto("next");
+      } else {
+        navigatePhoto("prev");
+      }
+    }
+    
+    setTouchStartX(null);
+    setTouchEndX(null);
   };
 
   const closeFullScreenPhoto = () => {
@@ -59,11 +146,27 @@ const WhistlerVillageViews = () => {
     }
   };
 
-  // Close full screen view when all photos modal is closed
   const closeAllPhotos = () => {
     setShowAllPhotos(false);
     setSelectedPhotoIndex(null);
   };
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (selectedPhotoIndex === null) return;
+      
+      if (e.key === "ArrowLeft") {
+        navigatePhoto("prev");
+      } else if (e.key === "ArrowRight") {
+        navigatePhoto("next");
+      } else if (e.key === "Escape") {
+        closeFullScreenPhoto();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedPhotoIndex]);
 
   return (
     <>
@@ -71,7 +174,7 @@ const WhistlerVillageViews = () => {
         <title>Whistler Village Views | Luxury 2.5 Bedroom - AceHost</title>
         <meta
           name="description"
-          content="Experience luxury in the heart of Whistler Village. This 2.5 bedroom property offers stunning views of Olympic Plaza and Blackcomb Mountain, with a spacious layout and all comforts of home."
+          content="Experience luxury living in this stunning 2.5 bedroom property in the heart of Whistler Village. Features breathtaking views of Olympic Plaza and Blackcomb Mountain, modern amenities, and sleeps up to 6 guests. Perfect for families and groups seeking a premium Whistler experience. Nightly rates from $400-$1,150+."
         />
       </Head>
 
@@ -136,21 +239,22 @@ const WhistlerVillageViews = () => {
 
           {/* Photo Grid */}
           <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16">
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
               {photos.slice(0, 8).map((photo, index) => (
                 <div
                   key={index}
-                  className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
+                  className="relative aspect-[4/3] cursor-pointer group rounded-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]"
                   onClick={() => handlePhotoClick(index)}
                 >
                   <Image
-                    src={photo}
-                    alt={`Whistler Village Views interior ${index + 1}`}
+                    src={photo.src}
+                    alt={photo.alt}
                     fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                    priority={index < 4}
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    onLoad={handleImageLoad}
                   />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-opacity duration-300" />
                 </div>
               ))}
             </div>
@@ -184,30 +288,20 @@ const WhistlerVillageViews = () => {
             {/* The Space Section */}
             <div className="flex flex-col md:flex-row mb-20">
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
-                <div className="relative aspect-[4/3] mb-2">
+                <div className="relative aspect-[4/3] mb-2 rounded-lg overflow-hidden">
                   <Image
-                    src={photos[3]}
-                    alt="Whistler Village Views Interior"
+                    src={photos[3].src}
+                    alt={photos[3].alt}
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
               </div>
               <div className="md:w-1/2">
                 <div className="flex items-center mb-6">
                   <div className="bg-black text-white p-4 rounded-full mr-4">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z"
-                        fill="white"
-                      />
-                    </svg>
+                    <Home className="h-6 w-6" />
                   </div>
                   <h2 className="text-2xl font-bold">The Space</h2>
                 </div>
@@ -231,28 +325,17 @@ const WhistlerVillageViews = () => {
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
                 <div className="relative aspect-[4/3] mb-2">
                   <Image
-                    src={photos[4]}
-                    alt="Whistler Village Views Bedroom"
+                    src={photos[4].src}
+                    alt={photos[4].alt}
                     fill
-                    className="object-cover"
+                    className="object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>
               <div className="md:w-1/2 order-2 md:order-1">
                 <div className="flex items-center mb-6">
                   <div className="bg-black text-white p-4 rounded-full mr-4">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M7 13C8.66 13 10 11.66 10 10C10 8.34 8.66 7 7 7C5.34 7 4 8.34 4 10C4 11.66 5.34 13 7 13ZM19 13C20.66 13 22 11.66 22 10C22 8.34 20.66 7 19 7C17.34 7 16 8.34 16 10C16 11.66 17.34 13 19 13ZM7 15C4.67 15 0 16.17 0 18.5V20H14V18.5C14 16.17 9.33 15 7 15ZM19 15C18.71 15 18.38 15.02 18.03 15.05C19.19 15.89 20 17.02 20 18.5V20H24V18.5C24 16.17 21.33 15 19 15Z"
-                        fill="white"
-                      />
-                    </svg>
+                    <Users className="h-6 w-6" />
                   </div>
                   <h2 className="text-2xl font-bold">Bedroom Layout</h2>
                 </div>
@@ -276,18 +359,7 @@ const WhistlerVillageViews = () => {
             <div className="mb-16">
               <div className="flex items-center mb-6">
                 <div className="bg-black text-white p-4 rounded-full mr-4">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"
-                      fill="white"
-                    />
-                  </svg>
+                  <MapPin className="h-6 w-6" />
                 </div>
                 <h2 className="text-2xl font-bold">Location</h2>
               </div>
@@ -306,37 +378,39 @@ const WhistlerVillageViews = () => {
 
         {/* Photo Gallery Modal */}
         {showAllPhotos && (
-          <div className="fixed inset-0 z-50 bg-black overflow-y-auto">
-            <div className="sticky top-0 z-10 bg-black p-4 flex justify-between items-center">
+          <div className="fixed inset-0 z-50 bg-black/95 overflow-y-auto">
+            <div className="sticky top-0 z-10 bg-black/90 backdrop-blur-sm p-4 flex justify-between items-center">
               <h2 className="text-lg sm:text-xl text-white font-medium">
                 Whistler Village Views - All Photos
               </h2>
               <button
                 onClick={closeAllPhotos}
-                className="text-white hover:text-gray-300 bg-gray-900 px-4 py-2 rounded-full"
+                className="text-white hover:text-gray-300 bg-gray-900/80 px-4 py-2 rounded-full flex items-center gap-2"
               >
-                Close
+                <X className="h-5 w-5" />
+                <span>Close</span>
               </button>
             </div>
 
             <div className="max-w-7xl mx-auto py-6 px-4">
-              <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
                 {photos.map((photo, index) => (
-                  <div key={index} className="mb-6">
-                    <div
-                      className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer"
-                      onClick={() => handlePhotoClick(index)}
-                    >
-                      <Image
-                        src={photo}
-                        alt={`Whistler Village Views ${index + 1}`}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        className="object-cover"
-                        priority={index < 6}
-                        loading={index < 6 ? "eager" : "lazy"}
-                      />
-                    </div>
+                  <div 
+                    key={index} 
+                    className="group relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
+                    onClick={() => handlePhotoClick(index)}
+                  >
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                      className="object-cover"
+                      priority={index < 8}
+                      loading={index < 8 ? "eager" : "lazy"}
+                      onLoad={handleImageLoad}
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
                   </div>
                 ))}
               </div>
@@ -346,48 +420,58 @@ const WhistlerVillageViews = () => {
 
         {/* Full-screen Photo View */}
         {selectedPhotoIndex !== null && (
-          <div className="fixed inset-0 z-[60] bg-black flex items-center justify-center">
+          <div 
+            className="fixed inset-0 z-[60] bg-black/95 backdrop-blur-sm flex items-center justify-center"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
             <div className="absolute top-4 right-4 flex space-x-4">
               <button
                 onClick={closeFullScreenPhoto}
-                className="text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors"
+                className="text-white bg-gray-900/80 p-2 rounded-full hover:bg-gray-800 transition-colors z-20 flex items-center gap-2"
+                aria-label="Close"
               >
                 <X className="h-6 w-6" />
               </button>
             </div>
 
             <button
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900/80 p-3 rounded-full hover:bg-gray-800 transition-colors z-20"
               onClick={() => navigatePhoto("prev")}
+              aria-label="Previous photo"
             >
-              &larr;
+              <ChevronLeft className="h-6 w-6" />
             </button>
 
-            <div className="relative w-full h-full max-w-6xl max-h-[80vh] mx-auto px-4">
+            <div className="relative w-full h-full max-w-7xl max-h-[85vh] mx-auto px-4">
+              {isImageLoading && (
+                <div className="absolute inset-0 flex items-center justify-center z-10">
+                  <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                </div>
+              )}
               <div className="relative w-full h-full">
                 <Image
-                  src={photos[selectedPhotoIndex]}
-                  alt={`Whistler Village Views full view ${selectedPhotoIndex + 1}`}
+                  src={photos[selectedPhotoIndex].src}
+                  alt={photos[selectedPhotoIndex].alt}
                   fill
                   priority
-                  className="object-contain"
+                  className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
                   sizes="100vw"
+                  onLoadingComplete={handleImageLoad}
+                  quality={90}
+                  loading="eager"
                 />
               </div>
             </div>
 
             <button
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900/80 p-3 rounded-full hover:bg-gray-800 transition-colors z-20"
               onClick={() => navigatePhoto("next")}
+              aria-label="Next photo"
             >
-              &rarr;
+              <ChevronRight className="h-6 w-6" />
             </button>
-
-            <div className="absolute bottom-4 left-0 right-0 text-center">
-              <p className="text-white text-sm">
-                {selectedPhotoIndex + 1} / {photos.length}
-              </p>
-            </div>
           </div>
         )}
 

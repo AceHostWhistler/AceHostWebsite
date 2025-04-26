@@ -47,3 +47,11 @@ dist/
 *.avi
 *.webm
 *.mkv
+
+# Contact submissions
+contact-submissions/
+email-debug/
+email-errors/
+tmp-env
+email-config-instructions.txt
+sendgrid-setup.txt

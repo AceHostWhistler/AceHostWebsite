@@ -1,0 +1,459 @@
+import { PropertyLayout } from '../../../components/PropertyLayout';
+import { PropertyInfo } from '../../../types/property';
+
+const propertyInfo: PropertyInfo = {
+  title: "Heron Views",
+  description: "Experience Whistler luxury at Heron Views, a beautiful 7,800 sq ft log chalet in Blueberry Hill with breathtaking mountain views, 5 bedrooms, 5.5 baths, and spectacular outdoor spaces including a 14-person hot tub and fire pit.",
+  guests: 11,
+  bedrooms: 0,
+  beds: 0,
+  bathrooms: 0,
+  priceRange: "$1,200-$3,500",
+  winterPriceRange: "",
+  holidayPriceRange: "",
+  minimumStay: "",
+  airbnbLink: "",
+  photos: [
+  {
+    "src": "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05831-Edit.jpg",
+    "alt": "Property interior view 1",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05851.jpg",
+    "alt": "Property interior view 2",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/68-3445 Heron Place 53-Edit.jpg",
+    "alt": "Property interior view 3",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/70-3445 Heron Place 27-Edit.jpg",
+    "alt": "Property interior view 4",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/69-3445 Heron Place 55-Edit.jpg",
+    "alt": "Property interior view 5",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/67-3445 Heron Place 52-Edit.jpg",
+    "alt": "Property interior view 6",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/66-3445 Heron Place 51-Edit.jpg",
+    "alt": "Property interior view 7",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/20241125 MM2 02 DJI_0479-Enhanced-NR.jpg",
+    "alt": "Property interior view 8",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05691.jpg",
+    "alt": "Property interior view 9",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05696.jpg",
+    "alt": "Property interior view 10",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05701.jpg",
+    "alt": "Property interior view 11",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05706.jpg",
+    "alt": "Property interior view 12",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05711.jpg",
+    "alt": "Property interior view 13",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05731.jpg",
+    "alt": "Property interior view 14",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05780-Edit.jpg",
+    "alt": "Property interior view 15",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05791-Edit.jpg",
+    "alt": "Property interior view 16",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05811.jpg",
+    "alt": "Property interior view 17",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05846-Edit.jpg",
+    "alt": "Property interior view 18",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/64-3445 Heron Place 24-Edit.jpg",
+    "alt": "Property interior view 19",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/63-3445 Heron Place 63.jpg",
+    "alt": "Property interior view 20",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/62-3445 Heron Place 62.jpg",
+    "alt": "Property interior view 21",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/61-3445 Heron Place 61.jpg",
+    "alt": "Property interior view 22",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/60-3445 Heron Place 60.jpg",
+    "alt": "Property interior view 23",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/59-3445 Heron Place 59.jpg",
+    "alt": "Property interior view 24",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/58-3445 Heron Place 58.jpg",
+    "alt": "Property interior view 25",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/54-3445 Heron Place 54.jpg",
+    "alt": "Property interior view 26",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/50-3445 Heron Place 50.jpg",
+    "alt": "Property interior view 27",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/48-3445 Heron Place 48.jpg",
+    "alt": "Property interior view 28",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/47-3445 Heron Place 47.jpg",
+    "alt": "Property interior view 29",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/46-3445 Heron Place 46.jpg",
+    "alt": "Property interior view 30",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/45-3445 Heron Place 45.jpg",
+    "alt": "Property interior view 31",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/44-3445 Heron Place 44.jpg",
+    "alt": "Property interior view 32",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/43-3445 Heron Place 43.jpg",
+    "alt": "Property interior view 33",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/42-3445 Heron Place 42.jpg",
+    "alt": "Property interior view 34",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/41-3445 Heron Place 41.jpg",
+    "alt": "Property interior view 35",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/40-3445 Heron Place 40.jpg",
+    "alt": "Property interior view 36",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/39-3445 Heron Place 39.jpg",
+    "alt": "Property interior view 37",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/38-3445 Heron Place 38.jpg",
+    "alt": "Property interior view 38",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/37-3445 Heron Place 37.jpg",
+    "alt": "Property interior view 39",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/36-3445 Heron Place 36.jpg",
+    "alt": "Property interior view 40",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/35-3445 Heron Place 35.jpg",
+    "alt": "Property interior view 41",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/34-3445 Heron Place 34.jpg",
+    "alt": "Property interior view 42",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/33-3445 Heron Place 33.jpg",
+    "alt": "Property interior view 43",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/32-3445 Heron Place 32.jpg",
+    "alt": "Property interior view 44",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/31-3445 Heron Place 31.jpg",
+    "alt": "Property interior view 45",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/30-3445 Heron Place 30.jpg",
+    "alt": "Property interior view 46",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/29-3445 Heron Place 29.jpg",
+    "alt": "Property interior view 47",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/28-3445 Heron Place 28.jpg",
+    "alt": "Property interior view 48",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/27-3445 Heron Place 27-Edit.jpg",
+    "alt": "Property interior view 49",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/25-3445 Heron Place 25.jpg",
+    "alt": "Property interior view 50",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/24-3445 Heron Place 24.jpg",
+    "alt": "Property interior view 51",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/23-3445 Heron Place 23.jpg",
+    "alt": "Property interior view 52",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/22-3445 Heron Place 22.jpg",
+    "alt": "Property interior view 53",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/21-3445 Heron Place 21.jpg",
+    "alt": "Property interior view 54",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/19-3445 Heron Place 19.jpg",
+    "alt": "Property interior view 55",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/18-3445 Heron Place 18.jpg",
+    "alt": "Property interior view 56",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/17-3445 Heron Place 17.jpg",
+    "alt": "Property interior view 57",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/16-3445 Heron Place 16.jpg",
+    "alt": "Property interior view 58",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/15-3445 Heron Place 15.jpg",
+    "alt": "Property interior view 59",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/14-3445 Heron Place 14.jpg",
+    "alt": "Property interior view 60",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/13-3445 Heron Place 13.jpg",
+    "alt": "Property interior view 61",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/11-3445 Heron Place 11.jpg",
+    "alt": "Property interior view 62",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/09-3445 Heron Place 09.jpg",
+    "alt": "Property interior view 63",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/08-3445 Heron Place 08.jpg",
+    "alt": "Property interior view 64",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/07-3445 Heron Place 07.jpg",
+    "alt": "Property interior view 65",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/06-3445 Heron Place 06.jpg",
+    "alt": "Property interior view 66",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/05-3445 Heron Place 05.jpg",
+    "alt": "Property interior view 67",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/04-3445 Heron Place 04.jpg",
+    "alt": "Property interior view 68",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/03-3445 Heron Place 03.jpg",
+    "alt": "Property interior view 69",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/02-3445 Heron Place 02.jpg",
+    "alt": "Property interior view 70",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "src": "/photos/properties/3445-Heron-Place/01-3445 Heron Place 01.jpg",
+    "alt": "Property interior view 71",
+    "width": 1920,
+    "height": 1080
+  }
+],
+  spaceDetails: {
+    description: "",
+    highlights: []
+  },
+  bedroomLayout: {
+    description: "",
+    rooms: []
+  },
+  location: {
+    description: ""
+  }
+};
+
+export default function Property() {
+  return <PropertyLayout propertyInfo={propertyInfo} />;
+}
