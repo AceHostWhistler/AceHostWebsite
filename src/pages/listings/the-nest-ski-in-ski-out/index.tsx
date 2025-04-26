@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
-import PropertyHeader from "@/components/PropertyHeader";import Footer from "@/components/Footer";
+import PropertyHeader from "@/components/PropertyHeader";
+import Footer from "@/components/Footer";
 import { X } from "lucide-react";
 
 const TheNest = () => {

@@ -5,7 +5,8 @@ import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
-import PropertyHeader from "@/components/PropertyHeader";import Footer from "@/components/Footer";
+import PropertyHeader from "@/components/PropertyHeader";
+import Footer from "@/components/Footer";
 import { X } from "lucide-react";
 
 const SuperYachtThailand = () => {
@@ -67,35 +68,8 @@ const SuperYachtThailand = () => {
   ];
 
   const handlePhotoClick = (index: number) => {
-  const handleImageLoad = () => {
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchStartX(e.touches[0].clientX);
-    setTouchEndX(null);
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    setTouchEndX(e.touches[0].clientX);
-  };
-
-  const handleTouchEnd = () => {
-    if (!touchStartX || !touchEndX) return;
-    
-    const difference = touchStartX - touchEndX;
-    
-    if (Math.abs(difference) > 50) {
-      if (difference > 0) {
-        navigatePhoto("next");
-      } else {
-        navigatePhoto("prev");
-      }
-    }
-    
-    setTouchStartX(null);
-    setTouchEndX(null);
-  };    setIsImageLoading(false);
-  };    setIsImageLoading(true);
+    setIsImageLoading(false);
     setSelectedPhotoIndex(index);
-  };    setSelectedPhotoIndex(index);
   };
 
   const closeFullScreenPhoto = () => {
@@ -178,7 +152,8 @@ const SuperYachtThailand = () => {
 
           {/* Photo Grid */}
           <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16">
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">              {photos.slice(0, 8).map((photo, index) => (
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+              {photos.slice(0, 8).map((photo, index) => (
                 <div
                   key={index}
                   className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
@@ -194,7 +169,8 @@ const SuperYachtThailand = () => {
                     loading={index < 2 ? "eager" : "lazy"}
                     quality={index < 4 ? 85 : 75}
                     placeholder="blur"
-                    blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzMiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="                  />
+                    blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzMiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="
+                  />
                 </div>
               ))}
             </div>
@@ -301,7 +277,8 @@ const SuperYachtThailand = () => {
             </div>
 
             <div className="max-w-7xl mx-auto py-6 px-4">
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">                {photos.map((photo, index) => (
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+                {photos.map((photo, index) => (
                   <div key={index} className="mb-6">
                     <div
                       className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer"
@@ -328,9 +305,32 @@ const SuperYachtThailand = () => {
         {selectedPhotoIndex !== null && (
           <div 
             className="fixed inset-0 z-[60] bg-black flex items-center justify-center"
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}
+            onTouchStart={() => {
+              setTouchStartX(null);
+              setTouchEndX(null);
+            }}
+            onTouchMove={(e) => {
+              if (touchStartX === null) {
+                setTouchStartX(e.touches[0].clientX);
+              }
+              setTouchEndX(e.touches[0].clientX);
+            }}
+            onTouchEnd={() => {
+              if (touchStartX === null || touchEndX === null) return;
+              
+              const difference = touchStartX - touchEndX;
+              
+              if (Math.abs(difference) > 50) {
+                if (difference > 0) {
+                  navigatePhoto("next");
+                } else {
+                  navigatePhoto("prev");
+                }
+              }
+              
+              setTouchStartX(null);
+              setTouchEndX(null);
+            }}
           >
             <div className="absolute top-4 right-4 flex space-x-4">
               <button
@@ -364,7 +364,7 @@ const SuperYachtThailand = () => {
                   priority
                   className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
                   sizes="100vw"
-                  onLoadingComplete={handleImageLoad}
+                  onLoadingComplete={() => setIsImageLoading(false)}
                   quality={85}
                   loading="eager"
                 />
