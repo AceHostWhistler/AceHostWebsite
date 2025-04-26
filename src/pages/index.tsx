@@ -913,55 +913,35 @@ const Home = () => {
               <h2 className="text-4xl font-light mb-6 text-gray-900">
                 View Our Full Collection Of Luxury Vacation Rental Properties
               </h2>
-              {/* Property Filters */}
-              <div className="flex overflow-x-auto flex-nowrap -mx-4 px-4 sm:overflow-x-visible sm:justify-center sm:gap-4 sm:mb-12 sm:mx-0 sm:px-0">
+              {/* Property Filters - match properties page style */}
+              <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto mb-12">
                 <button
                   onClick={() => setActiveFilter("all")}
-                  className={`flex-shrink-0 w-full sm:w-auto px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                    activeFilter === "all"
-                      ? "bg-black text-white shadow-md"
-                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
-                  }`}
+                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "all" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
                 >
                   All Properties
                 </button>
                 <button
                   onClick={() => setActiveFilter("whistler")}
-                  className={`flex-shrink-0 w-full sm:w-auto px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                    activeFilter === "whistler"
-                      ? "bg-black text-white shadow-md"
-                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
-                  }`}
+                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "whistler" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
                 >
                   Whistler
                 </button>
                 <button
                   onClick={() => setActiveFilter("worldwide")}
-                  className={`flex-shrink-0 w-full sm:w-auto px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                    activeFilter === "worldwide"
-                      ? "bg-black text-white shadow-md"
-                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
-                  }`}
+                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "worldwide" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
                 >
                   Worldwide
                 </button>
                 <button
                   onClick={() => setActiveFilter("pets")}
-                  className={`flex-shrink-0 w-full sm:w-auto px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                    activeFilter === "pets"
-                      ? "bg-black text-white shadow-md"
-                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
-                  }`}
+                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "pets" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
                 >
                   Pet Friendly
                 </button>
                 <button
                   onClick={() => setActiveFilter("skiinout")}
-                  className={`flex-shrink-0 w-full sm:w-auto px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                    activeFilter === "skiinout"
-                      ? "bg-black text-white shadow-md"
-                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
-                  }`}
+                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "skiinout" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
                 >
                   Ski in Ski out
                 </button>
