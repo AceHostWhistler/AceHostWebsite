@@ -62,125 +62,131 @@ const Home = () => {
   };
 
   // Render optimized property card directly
-  const renderPropertyCard = (property: any, index: number) => (
-    <div
-      key={property.id}
-      className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
-    >
-      <div className="relative h-64">
-        <Link href={property.link || `/listings/${property.id}`}>
-          <Image
-            src={property.image}
-            alt={`${property.title || property.name} - Luxury ${property.location === 'whistler' ? 'Whistler' : property.location === 'vancouver' ? 'Vancouver' : 'Worldwide'} vacation rental with ${property.bedrooms} bedroom${property.bedrooms !== 1 ? 's' : ''}, accommodating up to ${property.guests} guest${property.guests !== 1 ? 's' : ''}`}
-            fill
-            className="object-cover cursor-pointer"
-            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-            loading={index < 6 ? "eager" : "lazy"}
-            quality={80}
-            placeholder="blur"
-            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAEhAI/w5RW4AAAAABJRU5ErkJggg=="
-            priority={index < 3}
-          />
-        </Link>
-        {property.isPetFriendly && (
-          <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 text-xs font-medium rounded-md z-10">
-            Pet Friendly
+  const renderPropertyCard = (property: any, index: number) => {
+    // Ensure correct link for these three properties
+    let cardLink = property.link;
+    if (!cardLink) cardLink = `/listings/${property.id}`;
+
+    return (
+      <div
+        key={property.id}
+        className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
+      >
+        <div className="relative h-64">
+          <Link href={cardLink}>
+            <Image
+              src={property.image}
+              alt={`${property.title || property.name} - Luxury ${property.location === 'whistler' ? 'Whistler' : property.location === 'vancouver' ? 'Vancouver' : 'Worldwide'} vacation rental with ${property.bedrooms} bedroom${property.bedrooms !== 1 ? 's' : ''}, accommodating up to ${property.guests} guest${property.guests !== 1 ? 's' : ''}`}
+              fill
+              className="object-cover cursor-pointer"
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              loading={index < 6 ? "eager" : "lazy"}
+              quality={80}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAEhAI/w5RW4AAAAABJRU5ErkJggg=="
+              priority={index < 3}
+            />
+          </Link>
+          {property.isPetFriendly && (
+            <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 text-xs font-medium rounded-md z-10">
+              Pet Friendly
+            </div>
+          )}
+          <div className="absolute bottom-4 right-4">
+            {property.contactLink ? (
+              <Link
+                href={property.contactLink}
+                className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
+              >
+                Contact Us
+              </Link>
+            ) : property.airbnbLink ? (
+              <a
+                href={property.airbnbLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
+              >
+                Book Now
+              </a>
+            ) : (
+              <Link
+                href={cardLink}
+                className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
+              >
+                Book Now
+              </Link>
+            )}
           </div>
-        )}
-        <div className="absolute bottom-4 right-4">
-          {property.contactLink ? (
-            <Link
-              href={property.contactLink}
-              className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
-            >
-              Contact Us
-            </Link>
-          ) : property.airbnbLink ? (
-            <a
-              href={property.airbnbLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
-            >
-              Book Now
-            </a>
-          ) : (
-            <Link
-              href={property.link || `/listings/${property.id}`}
-              className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
-            >
-              Book Now
-            </Link>
-          )}
+        </div>
+        <div className="p-6">
+          {/* Property details */}
+          <div className="flex flex-wrap gap-2 mb-4">
+            {property.guests && (
+              <span className="bg-gray-900 text-white px-3 py-1 text-sm font-medium rounded-md">
+                {property.guests}{" "}
+                {typeof property.guests === "number" && property.guests === 1
+                  ? "Guest"
+                  : "Guests"}
+              </span>
+            )}
+            {property.bedrooms && (
+              <span className="bg-gray-200 text-gray-900 px-3 py-1 text-sm font-medium rounded-md">
+                {property.bedrooms}{" "}
+                {typeof property.bedrooms === "number" && property.bedrooms === 1
+                  ? "Bedroom"
+                  : "Bedrooms"}
+              </span>
+            )}
+            {property.beds && (
+              <span className="bg-gray-200 text-gray-900 px-3 py-1 text-sm font-medium rounded-md">
+                {property.beds}{" "}
+                {typeof property.beds === "number" && property.beds === 1
+                  ? "Bed"
+                  : "Beds"}
+              </span>
+            )}
+            {property.bathrooms && (
+              <span className="bg-gray-200 text-gray-900 px-3 py-1 text-sm font-medium rounded-md">
+                {property.bathrooms}{" "}
+                {typeof property.bathrooms === "number" &&
+                property.bathrooms === 1
+                  ? "Bathroom"
+                  : "Bathrooms"}
+              </span>
+            )}
+          </div>
+
+          {/* Property name */}
+          <h3 className="text-xl font-medium mb-4 text-gray-900">
+            {property.name}
+          </h3>
+
+          {/* Pricing information */}
+          <div className="space-y-2 mb-6">
+            {property.priceRange && (
+              <p className="text-gray-600">{property.priceRange}</p>
+            )}
+            {property.winterPrice && (
+              <p className="text-gray-600">{property.winterPrice}</p>
+            )}
+            {property.holidayPrice && (
+              <p className="text-gray-600">{property.holidayPrice}</p>
+            )}
+          </div>
+
+          {/* View property link */}
+          <Link
+            href={cardLink}
+            className="inline-flex items-center text-gray-900 font-medium hover:text-gray-600 transition-colors"
+          >
+            <span>View Property</span>
+            <ArrowRight size={18} className="ml-2" />
+          </Link>
         </div>
       </div>
-      <div className="p-6">
-        {/* Property details */}
-        <div className="flex flex-wrap gap-2 mb-4">
-          {property.guests && (
-            <span className="bg-gray-900 text-white px-3 py-1 text-sm font-medium rounded-md">
-              {property.guests}{" "}
-              {typeof property.guests === "number" && property.guests === 1
-                ? "Guest"
-                : "Guests"}
-            </span>
-          )}
-          {property.bedrooms && (
-            <span className="bg-gray-200 text-gray-900 px-3 py-1 text-sm font-medium rounded-md">
-              {property.bedrooms}{" "}
-              {typeof property.bedrooms === "number" && property.bedrooms === 1
-                ? "Bedroom"
-                : "Bedrooms"}
-            </span>
-          )}
-          {property.beds && (
-            <span className="bg-gray-200 text-gray-900 px-3 py-1 text-sm font-medium rounded-md">
-              {property.beds}{" "}
-              {typeof property.beds === "number" && property.beds === 1
-                ? "Bed"
-                : "Beds"}
-            </span>
-          )}
-          {property.bathrooms && (
-            <span className="bg-gray-200 text-gray-900 px-3 py-1 text-sm font-medium rounded-md">
-              {property.bathrooms}{" "}
-              {typeof property.bathrooms === "number" &&
-              property.bathrooms === 1
-                ? "Bathroom"
-                : "Bathrooms"}
-            </span>
-          )}
-        </div>
-
-        {/* Property name */}
-        <h3 className="text-xl font-medium mb-4 text-gray-900">
-          {property.name}
-        </h3>
-
-        {/* Pricing information */}
-        <div className="space-y-2 mb-6">
-          {property.priceRange && (
-            <p className="text-gray-600">{property.priceRange}</p>
-          )}
-          {property.winterPrice && (
-            <p className="text-gray-600">{property.winterPrice}</p>
-          )}
-          {property.holidayPrice && (
-            <p className="text-gray-600">{property.holidayPrice}</p>
-          )}
-        </div>
-
-        {/* View property link */}
-        <Link
-          href={property.link || `/listings/${property.id}`}
-          className="inline-flex items-center text-gray-900 font-medium hover:text-gray-600 transition-colors"
-        >
-          <span>View Property</span>
-          <ArrowRight size={18} className="ml-2" />
-        </Link>
-      </div>
-    </div>
-  );
+    );
+  };
 
   // Define all property listings
   const allListings = [
@@ -809,7 +815,7 @@ const Home = () => {
         />
       </Head>
 
-      <div className="min-h-screen bg-white text-gray-900">
+      <div className="min-h-screen bg-white text-gray-900 overflow-x-hidden max-w-full">
         <Navigation transparent={false} />
 
         {/* Hero Section */}
@@ -911,7 +917,7 @@ const Home = () => {
               <div className="flex justify-center gap-4 mb-12">
                 <button
                   onClick={() => setActiveFilter("all")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                  className={`w-full sm:w-auto px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                     activeFilter === "all"
                       ? "bg-black text-white shadow-md"
                       : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
@@ -921,7 +927,7 @@ const Home = () => {
                 </button>
                 <button
                   onClick={() => setActiveFilter("whistler")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                  className={`w-full sm:w-auto px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                     activeFilter === "whistler"
                       ? "bg-black text-white shadow-md"
                       : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
@@ -931,7 +937,7 @@ const Home = () => {
                 </button>
                 <button
                   onClick={() => setActiveFilter("worldwide")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                  className={`w-full sm:w-auto px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                     activeFilter === "worldwide"
                       ? "bg-black text-white shadow-md"
                       : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
@@ -941,7 +947,7 @@ const Home = () => {
                 </button>
                 <button
                   onClick={() => setActiveFilter("pets")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                  className={`w-full sm:w-auto px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                     activeFilter === "pets"
                       ? "bg-black text-white shadow-md"
                       : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
@@ -951,7 +957,7 @@ const Home = () => {
                 </button>
                 <button
                   onClick={() => setActiveFilter("skiinout")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                  className={`w-full sm:w-auto px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                     activeFilter === "skiinout"
                       ? "bg-black text-white shadow-md"
                       : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"

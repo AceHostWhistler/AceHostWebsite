@@ -28,6 +28,7 @@ const AltitudeRetreat = () => {
     "/photos/properties/Altitude New Photos Best/altitude retreat-17.jpg",
     "/photos/properties/Altitude New Photos Best/altitude retreat-15.jpg",
     "/photos/properties/Altitude New Photos Best/altitude retreat-12.jpg",
+    "/photos/properties/Altitude New Photos Best/altitude retreat-9.jpg",
     "/photos/properties/Altitude New Photos Best/066-2919 Ancient Cedars 2024-53.jpg",
     "/photos/properties/Altitude New Photos Best/065-2919 Ancient Cedars 2024-52.jpg",
     "/photos/properties/Altitude New Photos Best/064-2919 Ancient Cedars 2024-51.jpg",
