@@ -914,10 +914,10 @@ const Home = () => {
                 View Our Full Collection Of Luxury Vacation Rental Properties
               </h2>
               {/* Property Filters */}
-              <div className="flex justify-center gap-4 mb-12">
+              <div className="flex overflow-x-auto flex-nowrap -mx-4 px-4 sm:overflow-x-visible sm:justify-center sm:gap-4 sm:mb-12 sm:mx-0 sm:px-0">
                 <button
                   onClick={() => setActiveFilter("all")}
-                  className={`w-full sm:w-auto px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                  className={`flex-shrink-0 w-full sm:w-auto px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                     activeFilter === "all"
                       ? "bg-black text-white shadow-md"
                       : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
@@ -927,7 +927,7 @@ const Home = () => {
                 </button>
                 <button
                   onClick={() => setActiveFilter("whistler")}
-                  className={`w-full sm:w-auto px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                  className={`flex-shrink-0 w-full sm:w-auto px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                     activeFilter === "whistler"
                       ? "bg-black text-white shadow-md"
                       : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
@@ -937,7 +937,7 @@ const Home = () => {
                 </button>
                 <button
                   onClick={() => setActiveFilter("worldwide")}
-                  className={`w-full sm:w-auto px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                  className={`flex-shrink-0 w-full sm:w-auto px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                     activeFilter === "worldwide"
                       ? "bg-black text-white shadow-md"
                       : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
@@ -947,7 +947,7 @@ const Home = () => {
                 </button>
                 <button
                   onClick={() => setActiveFilter("pets")}
-                  className={`w-full sm:w-auto px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                  className={`flex-shrink-0 w-full sm:w-auto px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                     activeFilter === "pets"
                       ? "bg-black text-white shadow-md"
                       : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
@@ -957,7 +957,7 @@ const Home = () => {
                 </button>
                 <button
                   onClick={() => setActiveFilter("skiinout")}
-                  className={`w-full sm:w-auto px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                  className={`flex-shrink-0 w-full sm:w-auto px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                     activeFilter === "skiinout"
                       ? "bg-black text-white shadow-md"
                       : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
