@@ -5,9 +5,8 @@ import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
-import PropertyHeader from "@/components/PropertyHeader";
 import Footer from "@/components/Footer";
-import { X } from "lucide-react";
+import { X, MapPin, Users, Bed, Bath, Check } from "lucide-react";
 
 const PuntaMitaCasaJuntos = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -15,12 +14,45 @@ const PuntaMitaCasaJuntos = () => {
   const [isImageLoading, setIsImageLoading] = useState(false);
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
   const [touchEndX, setTouchEndX] = useState<number | null>(null);
+  const videoRef = useRef<HTMLIFrameElement>(null);
 
-  // Property photos
+  // Property photos - updated to match actual files in the directory
   const photos = [
+    "/photos/properties/Punta Mita/242608_2093 copy 2.jpg",
+    "/photos/properties/Punta Mita/242608_2089 copy 2.jpg",
+    "/photos/properties/Punta Mita/242608_2083 copy.jpg",
+    "/photos/properties/Punta Mita/242608_2031 copy.jpg",
+    "/photos/properties/Punta Mita/242608_2005 copy.jpg",
+    "/photos/properties/Punta Mita/242708_1946 copy.jpg",
+    "/photos/properties/Punta Mita/242708_1943 copy.jpg",
+    "/photos/properties/Punta Mita/242708_1941 copy.jpg",
+    "/photos/properties/Punta Mita/242708_1915 copy.jpg",
+    "/photos/properties/Punta Mita/242708_1913 copy.jpg",
+    "/photos/properties/Punta Mita/242708_1910 copy.jpg",
+    "/photos/properties/Punta Mita/242708_1997 copy.jpg",
+    "/photos/properties/Punta Mita/242708_1992 copy.jpg",
+    "/photos/properties/Punta Mita/DSC_1061 copy.jpg",
+    "/photos/properties/Punta Mita/DSC_1079 copy.jpg",
+    "/photos/properties/Punta Mita/DSC_1098 copy.jpg",
+    "/photos/properties/Punta Mita/DSC_1103 copy.jpg",
+    "/photos/properties/Punta Mita/DSC_1106 copy.jpg",
+    "/photos/properties/Punta Mita/DSC_1125 copy.jpg",
+    "/photos/properties/Punta Mita/DSC_1145 copy.jpg",
+    "/photos/properties/Punta Mita/DSC_1164 copy.jpg",
+    "/photos/properties/Punta Mita/DSC_1197 copy.jpg",
+    "/photos/properties/Punta Mita/DSC_1234 copy.jpg",
+    "/photos/properties/Punta Mita/DSC_1254 copy.jpg",
+    "/photos/properties/Punta Mita/DSC_1287 copy.jpg",
+    "/photos/properties/Punta Mita/DSC_1377 copy.jpg",
+    "/photos/properties/Punta Mita/DSC_1400 copy.jpg",
+    "/photos/properties/Punta Mita/DSC_1423 copy.jpg",
     "/photos/properties/Punta Mita/DSC_1443 copy.jpg",
+    "/photos/properties/Punta Mita/DSC_1445 copy.jpg",
+    "/photos/properties/Punta Mita/DSC_1466 copy.jpg",
     "/photos/properties/Punta Mita/DSC_1473 copy.jpg",
+    "/photos/properties/Punta Mita/DSC_1487 copy.jpg",
     "/photos/properties/Punta Mita/DSC_1500 copy.jpg",
+    "/photos/properties/Punta Mita/DSC_1535 copy.jpg",
     "/photos/properties/Punta Mita/DSC_1615 copy.jpg",
     "/photos/properties/Punta Mita/DSC_1679 copy.jpg",
     "/photos/properties/Punta Mita/DSC_1695 copy.jpg",
@@ -36,6 +68,22 @@ const PuntaMitaCasaJuntos = () => {
     "/photos/properties/Punta Mita/DSC_2056 copy.jpg",
     "/photos/properties/Punta Mita/DSC_2122 copy.jpg",
     "/photos/properties/Punta Mita/DSC_2275 copy.jpg",
+  ];
+
+  const amenities = [
+    "Beachfront",
+    "Private Pool",
+    "Ocean Views",
+    "Gourmet Kitchen",
+    "Full Staff",
+    "Daily Housekeeping",
+    "Concierge Service",
+    "Private Chef",
+    "Air Conditioning",
+    "WiFi",
+    "Outdoor Dining",
+    "BBQ Area",
+    "Jacuzzi",
   ];
 
   const handlePhotoClick = (index: number) => {
@@ -70,10 +118,10 @@ const PuntaMitaCasaJuntos = () => {
   return (
     <>
       <Head>
-        <title>Punta Mita - Casa Juntos | AceHost</title>
+        <title>Punta Mita - Casa Juntos | AceHost Luxury Rentals</title>
         <meta
           name="description"
-          content="Experience luxury in Punta Mita at Casa Juntos, a beautiful Mexican property perfect for family getaways and relaxation."
+          content="Experience luxury in Punta Mita at Casa Juntos, a beautiful Mexican beachfront property with full staff including private chef, ocean views, and premium amenities."
         />
       </Head>
 
@@ -83,9 +131,29 @@ const PuntaMitaCasaJuntos = () => {
         <main>
           {/* Header with Property Info */}
           <div className="max-w-7xl mx-auto px-4 pt-8">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-gray-900 mb-6 sm:mb-8">
+            <div className="flex justify-center mb-4">
+              <div className="bg-black text-white rounded-full py-2 px-6 flex flex-col sm:flex-row items-center gap-4 text-center">
+                <span className="flex items-center">
+                  <Users className="w-4 h-4 mr-2" /> 16 guests
+                </span>
+                <span className="hidden sm:inline">•</span>
+                <span className="flex items-center">
+                  <Bed className="w-4 h-4 mr-2" /> 8 bedrooms
+                </span>
+                <span className="hidden sm:inline">•</span>
+                <span className="flex items-center">
+                  <Bath className="w-4 h-4 mr-2" /> 8 bathrooms
+                </span>
+              </div>
+            </div>
+
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-gray-900 mb-4">
               Punta Mita - Casa Juntos
             </h1>
+
+            <p className="text-center text-gray-600 mb-6 flex items-center justify-center">
+              <MapPin className="w-4 h-4 mr-1" /> Punta Mita, Mexico
+            </p>
 
             <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
               <button
@@ -111,9 +179,25 @@ const PuntaMitaCasaJuntos = () => {
             </div>
           </div>
 
+          {/* Video Section */}
+          <div className="max-w-7xl mx-auto px-4 mb-10">
+            <div className="aspect-video relative rounded-lg overflow-hidden shadow-lg">
+              <iframe
+                ref={videoRef}
+                src="https://player.vimeo.com/video/1072749932?h=a4f9e2ffdd"
+                className="absolute top-0 left-0 w-full h-full"
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+                title="Punta Mita - Casa Juntos"
+              ></iframe>
+            </div>
+          </div>
+
           {/* Property Photos */}
           <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16">
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+            <h2 className="text-2xl font-bold mb-6 text-gray-900">Photo Gallery</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-4">
               {photos.slice(0, 8).map((photo, index) => (
                 <div
                   key={index}
@@ -124,10 +208,9 @@ const PuntaMitaCasaJuntos = () => {
                     src={photo}
                     alt={`Punta Mita - Casa Juntos ${index + 1}`}
                     fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
                     className="object-cover hover:scale-105 transition-transform duration-300"
                     priority={index < 2}
-                    loading={index < 2 ? "eager" : "lazy"}
                     quality={index < 4 ? 85 : 75}
                     placeholder="blur"
                     blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzMiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="
@@ -148,13 +231,45 @@ const PuntaMitaCasaJuntos = () => {
           </div>
 
           {/* Property Description */}
-          <div className="max-w-6xl mx-auto px-4" id="details">
-            <p className="text-gray-800 mb-16 max-w-4xl">
-              Punta Mita Casa Juntos offers a luxurious retreat in the beautiful
-              Punta Mita region of Mexico. This property features stunning views
-              of the Pacific Ocean and provides a perfect setting for relaxation
-              and leisure activities.
-            </p>
+          <div className="max-w-6xl mx-auto px-4 mb-16" id="details">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h2 className="text-2xl font-bold mb-4 text-gray-900">About This Property</h2>
+                <div className="prose prose-lg text-gray-700">
+                  <p>
+                    Punta Mita Casa Juntos is a stunning beachfront luxury villa located within the exclusive Punta Mita resort community. This magnificent property offers panoramic views of the Pacific Ocean and direct beach access, creating the ultimate Mexican Riviera experience.
+                  </p>
+                  <p className="mt-4">
+                    With 8 bedrooms accommodating up to 16 guests, Casa Juntos features a gorgeous infinity pool overlooking the ocean, spacious indoor and outdoor living areas, and comes with full staff including a private chef to elevate your stay to the highest level of luxury and comfort.
+                  </p>
+                  <p className="mt-4">
+                    The villa's prime location within the gated Punta Mita community gives guests access to world-class golf courses, beach clubs, and restaurants, while offering complete privacy and security.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-bold mb-4 text-gray-900">Amenities</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-2">
+                  {amenities.map((amenity, index) => (
+                    <div key={index} className="flex items-center">
+                      <Check className="w-5 h-5 text-green-600 mr-2 flex-shrink-0" />
+                      <span>{amenity}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-8">
+                  <h2 className="text-2xl font-bold mb-4 text-gray-900">Pricing</h2>
+                  <div className="bg-gray-100 p-4 rounded-lg">
+                    <p className="font-medium mb-2">$3,500-$5,000 USD per night</p>
+                    <p className="text-sm text-gray-600">
+                      Rates vary by season and length of stay. Please contact us for specific dates.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </main>
 
@@ -163,7 +278,7 @@ const PuntaMitaCasaJuntos = () => {
           <div className="fixed inset-0 z-50 bg-black overflow-y-auto">
             <div className="sticky top-0 z-10 bg-black p-4 flex justify-between items-center">
               <h2 className="text-lg sm:text-xl text-white font-medium">
-                Punta Mita - Casa Juntos - All Photos
+                Punta Mita - Casa Juntos - All Photos ({photos.length})
               </h2>
               <button
                 onClick={closeAllPhotos}
@@ -174,7 +289,7 @@ const PuntaMitaCasaJuntos = () => {
             </div>
 
             <div className="max-w-7xl mx-auto py-6 px-4">
-              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {photos.map((photo, index) => (
                   <div key={index} className="mb-6">
                     <div
@@ -185,10 +300,9 @@ const PuntaMitaCasaJuntos = () => {
                         src={photo}
                         alt={`Punta Mita - Casa Juntos ${index + 1}`}
                         fill
-                        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw"
+                        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                         className="object-cover hover:scale-105 transition-transform duration-300"
-                        priority={index < 6}
-                        loading={index < 6 ? "eager" : "lazy"}
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -237,7 +351,6 @@ const PuntaMitaCasaJuntos = () => {
                   sizes="100vw"
                   onLoadingComplete={() => setIsImageLoading(false)}
                   quality={85}
-                  loading="eager"
                 />
               </div>
             </div>
