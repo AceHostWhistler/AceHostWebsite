@@ -63,10 +63,25 @@ const Home = () => {
 
   // Render optimized property card directly
   const renderPropertyCard = (property: any, index: number) => {
-    // Ensure correct link for these three properties
-    let cardLink = property.link;
-    if (!cardLink) cardLink = `/listings/${property.id}`;
-
+    // Set the correct links for worldwide properties
+    let cardLink;
+    
+    if (property.id === "super-yacht-thailand") {
+      cardLink = "/worldwide-listings/super-yacht-thailand";
+    } else if (property.id === "villa-aegean-greece") {
+      cardLink = "/worldwide-listings/mykonos-crystal-villa";
+    } else if (property.id === "punta-mita") {
+      cardLink = "/worldwide-listings/punta-mita---casa-juntos";
+    } else if (property.id === "hood-river-luxury-home") {
+      cardLink = "/worldwide-listings/hood-river-luxury-home";
+    } else if (property.link) {
+      // Use property.link if specified
+      cardLink = property.link;
+    } else {
+      // Default fallback
+      cardLink = `/listings/${property.id}`;
+    }
+    
     return (
       <div
         key={property.id}
