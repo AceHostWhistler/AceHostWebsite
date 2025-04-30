@@ -63,24 +63,13 @@ const Home = () => {
 
   // Render optimized property card directly
   const renderPropertyCard = (property: any, index: number) => {
-    // Set the correct links for worldwide properties
-    let cardLink;
+    // Directly use the property's link or contactLink as primary link
+    let cardLink = property.link || `/listings/${property.id}`;
     
-    if (property.id === "super-yacht-thailand") {
-      cardLink = "/worldwide-listings/super-yacht-thailand";
-    } else if (property.id === "villa-aegean-greece") {
-      cardLink = "/worldwide-listings/mykonos-crystal-villa";
-    } else if (property.id === "punta-mita") {
-      cardLink = "/worldwide-listings/punta-mita---casa-juntos";
-    } else if (property.id === "hood-river-luxury-home") {
-      cardLink = "/worldwide-listings/hood-river-luxury-home";
-    } else if (property.link) {
-      // Use property.link if specified
-      cardLink = property.link;
-    } else {
-      // Default fallback
-      cardLink = `/listings/${property.id}`;
-    }
+    // For display or booking links
+    const bookingLink = property.contactLink || property.airbnbLink || cardLink;
+    const isContactLink = !!property.contactLink;
+    const isAirbnbLink = !!property.airbnbLink;
     
     return (
       <div
@@ -108,16 +97,16 @@ const Home = () => {
             </div>
           )}
           <div className="absolute bottom-4 right-4">
-            {property.contactLink ? (
+            {isContactLink ? (
               <Link
-                href={property.contactLink}
+                href={bookingLink}
                 className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
               >
                 Contact Us
               </Link>
-            ) : property.airbnbLink ? (
+            ) : isAirbnbLink ? (
               <a
-                href={property.airbnbLink}
+                href={bookingLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
@@ -529,7 +518,7 @@ const Home = () => {
   
     // Worldwide Properties
     {
-      id: "yacht-thailand",
+      id: "super-yacht-thailand",
       name: "Super Yacht Thailand | Luxury Charter | Full Crew",
       image: "/photos/properties/Yacht Thailand Sea D/Sun Deck WEB-12.jpg",
       guests: 10,
@@ -541,6 +530,7 @@ const Home = () => {
       holidayPrice: "",
       location: "worldwide",
       link: "/worldwide-listings/super-yacht-thailand",
+      contactLink: "/contact",
       isPetFriendly: false,
       isSkiInSkiOut: false,
     },
@@ -558,6 +548,7 @@ const Home = () => {
       holidayPrice: "",
       location: "worldwide",
       link: "/worldwide-listings/mykonos-crystal-villa",
+      contactLink: "/contact",
       isPetFriendly: false,
       isSkiInSkiOut: false,
     },
@@ -574,6 +565,7 @@ const Home = () => {
       holidayPrice: "",
       location: "worldwide",
       link: "/worldwide-listings/punta-mita---casa-juntos",
+      contactLink: "/contact",
       isPetFriendly: false,
       isSkiInSkiOut: false,
     },
@@ -590,6 +582,7 @@ const Home = () => {
       holidayPrice: "",
       location: "worldwide",
       link: "/worldwide-listings/hood-river-luxury-home",
+      contactLink: "/contact",
       isPetFriendly: false,
       isSkiInSkiOut: false,
     },
