@@ -12,28 +12,11 @@ export default function Document() {
           crossOrigin="anonymous"
         />
 
-        {/* Font optimization - using preload instead of stylesheet to avoid render blocking */}
-        <link
-          rel="preload"
-          as="style"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-          fetchPriority="high"
-        />
+        {/* Font optimization */}
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
-          media="print"
-          onLoad={() => {
-            // @ts-ignore - This is a DOM element property
-            document.currentScript.media = 'all';
-          }}
         />
-        <noscript>
-          <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-            rel="stylesheet"
-          />
-        </noscript>
         
         <style
           dangerouslySetInnerHTML={{
@@ -74,7 +57,7 @@ export default function Document() {
         />
 
         {/* Preload critical assets */}
-        <link rel="preload" href="/logo.png" as="image" type="image/png" />
+        <link rel="preload" href="/logo.png" as="image" />
 
         {/* Add favicon */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -85,7 +68,7 @@ export default function Document() {
         <meta name="theme-color" content="#ffffff" />
         <meta
           name="google-site-verification"
-          content="UmTMmjHtW3Q_-Uzi8WXxrPgE2YBsv0GXgq0RXCQuB_Y"
+          content="UmTMmjHtW3Q_-Uzi8WXxrPgE2YBsv0RXCQuB_Y"
         />
         
         {/* Additional metadata for search engines */}
