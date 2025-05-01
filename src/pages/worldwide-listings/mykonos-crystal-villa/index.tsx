@@ -116,7 +116,7 @@ const MykonosCrystalVilla = () => {
         <title>Villa Aegean | Mykonos, Greece - AceHost</title>
         <meta
           name="description"
-          content="Experience luxury at Villa Aegean in Mykonos, Greece. This private luxury estate offers 10 bedrooms for up to 20 guests, stunning sea views, infinity pool, and is just a five-minute drive from Mykonos Town."
+          content="Experience luxury at Villa Aegean in Mykonos, Greece. This private luxury estate offers 10 bedrooms, 10 beds, and 10 bathrooms for up to 20 guests, stunning sea views, infinity pool, and is just a five-minute drive from Mykonos Town."
         />
       </Head>
 
@@ -129,6 +129,12 @@ const MykonosCrystalVilla = () => {
             <div className="flex justify-center mb-6">
               <div className="bg-black text-white rounded-full py-2 px-4 sm:px-6 flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-4 text-center sm:text-left">
                 <span>20 guests</span>
+                <span className="hidden sm:inline">•</span>
+                <span>10 bedrooms</span>
+                <span className="hidden sm:inline">•</span>
+                <span>10 beds</span>
+                <span className="hidden sm:inline">•</span>
+                <span>10 bathrooms</span>
               </div>
             </div>
 
@@ -139,6 +145,9 @@ const MykonosCrystalVilla = () => {
             <div className="text-center mb-6 sm:mb-8">
               <p className="text-gray-700 text-sm sm:text-base">
                 Minimum Stay Requirement: 4 Nights
+              </p>
+              <p className="text-gray-900 font-semibold text-lg mt-2">
+                €10.690 - €16.437 per night
               </p>
             </div>
 
@@ -332,8 +341,7 @@ const MykonosCrystalVilla = () => {
                   upon availability at an extra charge.
                 </p>
                 <p className="mb-2">
-                  <span className="font-bold">Rates:</span> Calculated per
-                  night. Include VAT & City Taxes and can be changed in case of
+                  <span className="font-bold">Rates:</span> €10.690 - €16.437 per night. Includes VAT & City Taxes and can be changed in case of
                   tax modification.
                 </p>
               </div>
