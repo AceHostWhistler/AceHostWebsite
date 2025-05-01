@@ -260,7 +260,7 @@ const ListProperty = () => {
   return (
     <>
       <Head>
-        <title>List Your Property | AceHost Whistler Property Management</title>
+        <title>List Your Luxury Vacation Rental Property | AceHost Whistler Property Management</title>
         <meta
           name="description"
           content="List your luxury property with AceHost, Whistler's best luxury Airbnb property management company. Maximize your rental income with our expertise."
@@ -282,7 +282,7 @@ const ListProperty = () => {
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
           <div className="max-w-4xl bg-black/40 p-8 rounded-xl backdrop-blur-sm">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              List Your Luxury Property With AceHost
+              List Your Luxury Vacation Rental Property With AceHost
             </h1>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Partner with Whistler's best luxury Airbnb property management company to maximize your rental income and provide exceptional guest experiences.
