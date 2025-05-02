@@ -705,6 +705,38 @@ export default function Properties() {
           "Experience luxury living in our handpicked properties across the globe, from Vancouver's urban sophistication to exotic international destinations.",
         properties: [
           {
+            id: "santorini-greece-villa-eclipse",
+            name: "Santorini Greece - Villa Eclipse",
+            images: [
+              "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(3 of 25).jpg",
+              "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(6 of 25).jpg",
+              "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(16 of 25).jpg"
+            ],
+            guests: 10,
+            bedrooms: 5,
+            bathrooms: 5,
+            location: "Santorini, Greece",
+            description:
+              "Villa Eclipse is a luxury private villa in Santorini offering total privacy and breathtaking sea views. Located on a peaceful cliffside on the southwest coast of the island, it promises a tranquil retreat while remaining close to the island's best spots.",
+            features: [
+              "Private Infinity Pool",
+              "Sea Views",
+              "Outdoor Jacuzzi",
+              "Daily Breakfast",
+              "Concierge Services",
+              "Air Conditioning",
+              "Smart TVs",
+              "Five En-suite Bedrooms"
+            ],
+            highlights: [
+              "Breathtaking Sea Views",
+              "Private Infinity Pool",
+              "Luxury Cycladic Design",
+              "Five-Star Services"
+            ],
+            priceRange: "€1,300-€1,920 per night",
+          },
+          {
             id: "vancouver-house-corner",
             name: "Vancouver House Corner Unit | 30th Floor",
             images: [
@@ -1053,6 +1085,8 @@ export default function Properties() {
         ? "/listings/scandinavian-mountainside-retreat-pemberton-meadows-50-acres"
         : property.id === "vancouver-house-corner"
         ? "/vancouver-listings/vancouver-house-corner-unit-30th-floor"
+        : property.id === "santorini-greece-villa-eclipse"
+        ? "/worldwide-listings/santorini-greece-villa-eclipse"
         : property.id === "yacht-thailand" 
         ? "/worldwide-listings/super-yacht-thailand"
         : property.id === "villa-aegean-greece" 

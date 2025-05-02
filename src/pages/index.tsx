@@ -518,6 +518,21 @@ const Home = () => {
   
     // Worldwide Properties
     {
+      id: "santorini-greece-villa-eclipse",
+      name: "Santorini Greece - Villa Eclipse",
+      image: "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(3 of 25).jpg",
+      guests: 10,
+      bedrooms: 5,
+      bathrooms: 5,
+      priceRange: "$2,500-$5,000 per night",
+      winterPrice: "",
+      holidayPrice: "",
+      location: "Santorini, Greece",
+      link: "/worldwide-listings/santorini-greece-villa-eclipse",
+      isPetFriendly: false,
+      isSkiInSkiOut: false,
+    },
+    {
       id: "super-yacht-thailand",
       name: "Super Yacht Thailand | Luxury Charter | Full Crew",
       image: "/photos/properties/Yacht Thailand Sea D/Sun Deck WEB-12.jpg",
@@ -528,7 +543,7 @@ const Home = () => {
       priceRange: "Weekly Rate | 170,000 - 210,000 USD",
       winterPrice: "",
       holidayPrice: "",
-      location: "worldwide",
+      location: "Phuket, Thailand",
       link: "/worldwide-listings/super-yacht-thailand",
       contactLink: "/contact",
       isPetFriendly: false,
