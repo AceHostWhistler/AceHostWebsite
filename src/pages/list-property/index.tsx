@@ -102,7 +102,7 @@ const features: Feature[] = [
   {
     title: "The AceHost Brand",
     description:
-      "At AceHost, we strive to build trust and longevity with homeowners. Property management can be a time consuming and stressful feat. AceHost's rental expertise and quality assurance offers a solution to homeowners, yielding hassle-free and profitable property rental income.",
+      "At AceHost, we strive to build trust and longevity with homeowners. Property management can be a time consuming and stressful feat. AceHost's rental expertise and quality assurance offers a solution to homeowners, yielding hassle-free and profitable property rental income. We handle every aspect of your rental management—from marketing and guest preparation to ensuring a flawless guest experience, professional cleaning that leaves your home spotless, and transparent invoicing and payouts to simplify your taxes.",
     icon: Star,
   },
   {
