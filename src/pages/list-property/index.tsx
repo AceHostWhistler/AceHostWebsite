@@ -95,6 +95,7 @@ const steps: Step[] = [
 interface Feature {
   title: string;
   description: string;
+  additionalDescription: string;
   icon: React.ElementType;
 }
 
@@ -102,19 +103,22 @@ const features: Feature[] = [
   {
     title: "The AceHost Brand",
     description:
-      "At AceHost, we strive to build trust and longevity with homeowners. Property management can be a time consuming and stressful feat. AceHost's rental expertise and quality assurance offers a solution to homeowners, yielding hassle-free and profitable property rental income.\n\nWe handle every aspect of your rental management—from marketing and guest preparation to ensuring a flawless guest experience, professional cleaning that leaves your home spotless, and transparent invoicing and payouts to simplify your taxes.",
+      "At AceHost, we strive to build trust and longevity with homeowners. Property management can be a time consuming and stressful feat. AceHost's rental expertise and quality assurance offers a solution to homeowners, yielding hassle-free and profitable property rental income.",
+    additionalDescription: "We handle every aspect of your rental management—from marketing and guest preparation to ensuring a flawless guest experience, professional cleaning that leaves your home spotless, and transparent invoicing and payouts to simplify your taxes.",
     icon: Star,
   },
   {
     title: "Luxury Is Our Focus",
     description:
       "We specialize in the management of luxury homes in Whistler. From small condos to luxurious multi-million dollar villas, we deliver first-rate property management for a wide range of homes. AceHost focuses on accommodating luxury homes with full service guest management and cleans, while offering VIP Concierge services, giving homeowners peace of mind in knowing that their home and guests are being looked after with diligence and care.",
+    additionalDescription: "",
     icon: Sparkles,
   },
   {
     title: "Our Relationships",
     description:
       "Our value driver is creating meaningful and lasting relationships with homeowners. We've established a business model that relies on clear and frequent communication. Though we are home to Whistler, we have instilled confidence in homeowners and therefore have expanded our services to The United States, The United Kingdom, Spain, Greece, and Mexico. We offer a hands-off experience for homeowners both locally, but also overseas.",
+    additionalDescription: "",
     icon: Users,
   },
 ];
@@ -327,6 +331,11 @@ const ListProperty = () => {
                 <p className="text-gray-600 text-lg leading-relaxed">
                   {feature.description}
                 </p>
+                {feature.additionalDescription && (
+                  <p className="text-gray-600 text-lg leading-relaxed mt-4">
+                    {feature.additionalDescription}
+                  </p>
+                )}
               </div>
             ))}
           </div>
