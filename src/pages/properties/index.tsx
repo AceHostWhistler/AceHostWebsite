@@ -116,7 +116,7 @@ export default function Properties() {
         id: "whistler",
         title: "Whistler Properties",
         description:
-          "Discover our luxury chalets and condos in Whistler, perfect for an unforgettable mountain getaway with world-class ski access and amenities.",
+          "Discover our luxury chalets and condos in Whistler, perfect for an unforgettable mountain getaway with world-class ski in ski out access, prime locations near Whistler Village & Creekside, and fully stocked amenities.",
         properties: [
           {
             id: "altitude-retreat",
