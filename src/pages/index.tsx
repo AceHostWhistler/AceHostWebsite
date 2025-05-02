@@ -520,7 +520,7 @@ const Home = () => {
     {
       id: "santorini-greece-villa-eclipse",
       name: "Santorini Greece - Villa Eclipse",
-      image: "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(3 of 25).jpg",
+      image: "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(7 of 25).jpg",
       guests: 10,
       bedrooms: 5,
       bathrooms: 5,

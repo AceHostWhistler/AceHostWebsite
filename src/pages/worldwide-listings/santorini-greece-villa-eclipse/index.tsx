@@ -17,13 +17,13 @@ const SantoriniGreeceVillaEclipse = () => {
 
   // Property photos
   const photos = [
+    "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(7 of 25).jpg",
     "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(1 of 25).jpg",
     "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(2 of 25).jpg",
     "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(3 of 25).jpg",
     "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(4 of 25).jpg",
     "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(5 of 25).jpg",
     "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(6 of 25).jpg",
-    "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(7 of 25).jpg",
     "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(8 of 25).jpg",
     "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(9 of 25).jpg",
     "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(10 of 25).jpg",
