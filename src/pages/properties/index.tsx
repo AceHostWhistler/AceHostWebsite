@@ -708,8 +708,8 @@ export default function Properties() {
             id: "santorini-greece-villa-eclipse",
             name: "Santorini Greece - Villa Eclipse",
             images: [
-              "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(3 of 25).jpg",
-              "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(6 of 25).jpg",
+              "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(7 of 25).jpg",
+              "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(6 of 25).jpg", 
               "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(16 of 25).jpg"
             ],
             guests: 10,
@@ -735,6 +735,38 @@ export default function Properties() {
               "Five-Star Services"
             ],
             priceRange: "€1,300-€1,920 per night",
+          },
+          {
+            id: "villa-oineas-greece-mykonos",
+            name: "Villa Oineas - Greece Mykonos",
+            images: [
+              "/photos/properties/Oineas Villa - Greece Mykonos/VILLA OINEAS-06614.jpg",
+              "/photos/properties/Oineas Villa - Greece Mykonos/VILLA OINEAS-06621.jpg",
+              "/photos/properties/Oineas Villa - Greece Mykonos/VILLA OINEAS - 17.jpg"
+            ],
+            guests: 12,
+            bedrooms: 5,
+            bathrooms: 5,
+            location: "Mykonos, Greece",
+            description:
+              "Villa Oineas is a newly built luxury estate in Santorini, nestled within 32 acres of private vineyards and designed to offer the ultimate blend of elegance, privacy, and premium living. With panoramic views of the island's southern coastline, this exclusive sanctuary is ideal for luxury holidays, destination weddings, and private VIP events.",
+            features: [
+              "Heated Seawater Infinity Pool",
+              "Private Tennis Court",
+              "Wine Cellar",
+              "Cinema",
+              "Daily Maid Service",
+              "Concierge Services",
+              "Smart TVs",
+              "Private Heliport"
+            ],
+            highlights: [
+              "32 Acres Private Estate",
+              "Panoramic Sea Views",
+              "Perfect for Events",
+              "Five-Star Amenities"
+            ],
+            priceRange: "€1,450-€2,550 per night",
           },
           {
             id: "vancouver-house-corner",
@@ -1075,18 +1107,22 @@ export default function Properties() {
         ? "/listings/the-nest-ski-in-ski-out"
         : property.id === "whispering-pines"
         ? "/listings/whispering-pines-ski-in-ski-out"
+        : property.id === "whistler-village-views"
+        ? "/listings/whistler-village-views-luxury-2-5-bedroom"
+        : property.id === "whistler-village-views-luxury-2-5-bedroom"
+        ? "/listings/whistler-village-views-luxury-2-5-bedroom"
         : property.id === "marquise-2-bed"
         ? "/listings/marquise-2-bed-ski-in-ski-out"
         : property.id === "ski-in-ski-out-walk-to-lifts-2-bed"
         ? "/listings/ski-in-ski-out-walk-to-lifts-2-bed"
-        : property.id === "whistler-village-views-luxury-2-5-bedroom"
-        ? "/listings/whistler-village-views-luxury-2-5-bedroom"
         : property.id === "scandinavian-mountainside-retreat-pemberton-meadows-50-acres"
         ? "/listings/scandinavian-mountainside-retreat-pemberton-meadows-50-acres"
         : property.id === "vancouver-house-corner"
         ? "/vancouver-listings/vancouver-house-corner-unit-30th-floor"
         : property.id === "santorini-greece-villa-eclipse"
         ? "/worldwide-listings/santorini-greece-villa-eclipse"
+        : property.id === "villa-oineas-greece-mykonos"
+        ? "/worldwide-listings/villa-oineas-greece-mykonos"
         : property.id === "yacht-thailand" 
         ? "/worldwide-listings/super-yacht-thailand"
         : property.id === "villa-aegean-greece" 
