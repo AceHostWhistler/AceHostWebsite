@@ -176,54 +176,17 @@ const DreamLogChalet = () => {
         <Navigation transparent={false} />
 
         <main>
-          {/* Header with Property Info */}
-          <div className="max-w-7xl mx-auto px-4 pt-8">
-            <div className="flex justify-center mb-6">
-              <div className="bg-black text-white rounded-full py-2 px-4 sm:px-6 flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-4 text-center sm:text-left">
-                <span>12 guests</span>
-                <span className="hidden sm:block mx-3 text-gray-500">|</span>
-                <span>5 bedrooms</span>
-                <span className="hidden sm:block mx-3 text-gray-500">|</span>
-                <span>4 bathrooms</span>
-                <span className="hidden sm:block mx-3 text-gray-500">|</span>
-                <span>$$$$</span>
-              </div>
-            </div>
+          <PropertyHeader 
+            title="Dream Log Chalet | 5 Bedroom | Creekside"
+            guests={10}
+            bedrooms={5}
+            bathrooms={4}
+            priceRange="$1,200-$3,000 per night"
+            airbnbLink="https://www.airbnb.ca/rooms/20190966?guests=1&adults=1&s=67&unique_share_id=e84d8ef3-67d7-4a87-8fd4-9a7e0c82ebb9"
+          />
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-gray-900 mb-6 sm:mb-8">
-              Dream Log Chalet | 5 Bedroom | 4 Bath | Creekside
-            </h1>
-
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
-              <button
-                onClick={() => setShowAllPhotos(true)}
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
-              >
-                More Photos
-              </button>
-              <Link
-                href="#details"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white border border-gray-700 rounded font-medium hover:bg-gray-800 text-sm sm:text-base"
-              >
-                Details
-              </Link>
-              <Link
-                href="/contact"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
-              >
-                Contact Us
-              </Link>
-            </div>
-
-            <div className="text-center mb-6 sm:mb-8">
-              <p className="text-gray-700 text-sm sm:text-base">
-                Long Term Monthly Rental Only | From $13,000/month
-              </p>
-            </div>
-          </div>
-
-          {/* Photo Grid - default to 2 columns on mobile */}
-          <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16">
+          {/* Photo Grid */}
+          <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16" id="photos">
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
               {photos.slice(0, 8).map((photo, index) => (
                 <div

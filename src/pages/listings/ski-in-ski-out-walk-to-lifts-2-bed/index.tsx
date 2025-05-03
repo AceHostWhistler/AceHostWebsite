@@ -81,52 +81,17 @@ const LeChamoisApartment = () => {
         <Navigation transparent={false} />
 
         <main>
-          {/* Header with Property Info */}
-          <div className="max-w-7xl mx-auto px-4 pt-8">
-            <div className="flex justify-center mb-6">
-              <div className="bg-black text-white rounded-full py-2 px-4 sm:px-6 flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-4 text-center sm:text-left">
-                <span>4 guests</span>
-                <span className="hidden sm:block mx-3 text-gray-500">|</span>
-                <span>Nightly Price Range: $350-1,050</span>
-              </div>
-            </div>
-
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-gray-900 mb-6 sm:mb-8">
-              Le Chamois 2 Bed | Walk to Lifts
-            </h1>
-
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
-              <button
-                onClick={() => setShowAllPhotos(true)}
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
-              >
-                More Photos
-              </button>
-              <Link
-                href="#details"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium hover:bg-gray-800 text-sm sm:text-base"
-              >
-                Details
-              </Link>
-              <Link
-                href="/contact"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
-              >
-                Contact Us
-              </Link>
-              <a
-                href="https://www.airbnb.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
-              >
-                Book on Airbnb
-              </a>
-            </div>
-          </div>
+          <PropertyHeader 
+            title="Ski-in/Ski-out | Walk to Lifts | 2 Bed"
+            guests={7}
+            bedrooms={2}
+            bathrooms={2}
+            priceRange="$650-$1,200 per night"
+            airbnbLink="https://www.airbnb.ca/rooms/48686605?guests=1&adults=1&s=67&unique_share_id=6e31db62-6ef3-4ae9-ba80-9c7fc7a1cab9"
+          />
 
           {/* Photo Grid */}
-          <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16">
+          <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16" id="photos">
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
               {photos.slice(0, 8).map((photo, index) => (
                 <div

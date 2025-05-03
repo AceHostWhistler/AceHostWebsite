@@ -116,73 +116,16 @@ const TheNest = () => {
         <Navigation transparent={false} />
 
         <main>
-          {/* Header with Property Info */}
-          <div className="max-w-7xl mx-auto px-4 pt-8">
-            <div className="flex justify-center mb-6">
-              <div className="bg-black text-white rounded-full py-2 px-4 sm:px-6 flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-4 text-center sm:text-left">
-                <span>10 guests</span>
-                <span className="hidden sm:block mx-3 text-gray-500">|</span>
-                <span>Monthly Price Range: $18,000-$29,000</span>
-              </div>
-            </div>
-
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-gray-900 mb-6 sm:mb-8">
-              The Nest | Ski in-Ski out
-            </h1>
-
-            {/* Pricing Information */}
-            <div className="flex flex-col items-center mb-8 space-y-2">
-              <div className="bg-gray-100 rounded-lg px-6 py-4 max-w-2xl w-full">
-                <div className="space-y-2">
-                  <p className="text-gray-800 text-center font-medium">
-                    Monthly Price Range: $18,000-$29,000
-                  </p>
-                  <p className="text-gray-800 text-center">90+ day minimum</p>
-                  <p className="text-gray-800 text-center">
-                    $29,000 Monthly | Winter (Booked until June 15, 2025)
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
-              <button
-                onClick={() => setShowAllPhotos(true)}
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
-              >
-                More Photos
-              </button>
-              <Link
-                href="#details"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium hover:bg-gray-800 text-sm sm:text-base"
-              >
-                Details
-              </Link>
-              <Link
-                href="/contact"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
-              >
-                Contact Us
-              </Link>
-              <a
-                href="https://www.airbnb.ca/rooms/763259660349118016?guests=1&adults=1&s=67&unique_share_id=d18218f6-da74-4763-a199-d5a1dc8c85ff"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
-              >
-                Book on Airbnb
-              </a>
-            </div>
-
-            <div className="text-center mb-6 sm:mb-8">
-              <p className="text-gray-700 text-sm sm:text-base">
-                Minimum Stay Requirement: 30 Nights
-              </p>
-            </div>
-          </div>
+          <PropertyHeader 
+            title="The Nest | Ski-in/Ski-out"
+            guests={8}
+            bedrooms={4}
+            bathrooms={3.5}
+            priceRange="$1,600-$2,600 per night"
+          />
 
           {/* Photo Grid */}
-          <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16">
+          <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16" id="photos">
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
               {photos.slice(0, 8).map((photo, index) => (
                 <div

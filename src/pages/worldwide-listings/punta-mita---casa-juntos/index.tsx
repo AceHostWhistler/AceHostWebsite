@@ -5,6 +5,7 @@ import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
+import PropertyHeader from "@/components/PropertyHeader";
 import Footer from "@/components/Footer";
 import { X, MapPin, Users, Bed, Bath, Check } from "lucide-react";
 
@@ -129,55 +130,14 @@ const PuntaMitaCasaJuntos = () => {
         <Navigation transparent={false} />
 
         <main>
-          {/* Header with Property Info */}
-          <div className="max-w-7xl mx-auto px-4 pt-8">
-            <div className="flex justify-center mb-4">
-              <div className="bg-black text-white rounded-full py-2 px-6 flex flex-col sm:flex-row items-center gap-4 text-center">
-                <span className="flex items-center">
-                  <Users className="w-4 h-4 mr-2" /> 16 guests
-                </span>
-                <span className="hidden sm:inline">•</span>
-                <span className="flex items-center">
-                  <Bed className="w-4 h-4 mr-2" /> 8 bedrooms
-                </span>
-                <span className="hidden sm:inline">•</span>
-                <span className="flex items-center">
-                  <Bath className="w-4 h-4 mr-2" /> 8 bathrooms
-                </span>
-              </div>
-            </div>
-
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-gray-900 mb-4">
-              Punta Mita - Casa Juntos
-            </h1>
-
-            <p className="text-center text-gray-600 mb-6 flex items-center justify-center">
-              <MapPin className="w-4 h-4 mr-1" /> Punta Mita, Mexico
-            </p>
-
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
-              <button
-                onClick={() => setShowAllPhotos(true)}
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
-              >
-                More Photos
-              </button>
-              <Link
-                href="#details"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white border border-gray-700 rounded font-medium hover:bg-gray-800 text-sm sm:text-base"
-              >
-                Details
-              </Link>
-              <a
-                href="https://www.airbnb.ca/rooms/561767409786915919?guests=1&adults=1&s=67&unique_share_id=7a6e7b88-1a8b-4352-acca-56db762955cd"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
-              >
-                Book on Airbnb
-              </a>
-            </div>
-          </div>
+          <PropertyHeader 
+            title="Punta Mita - Casa Juntos"
+            guests={16}
+            bedrooms={8}
+            bathrooms={8}
+            priceRange="$3,500-$5,000 per night"
+            airbnbLink="https://www.airbnb.ca/rooms/561767409786915919?guests=1&adults=1&s=67&unique_share_id=7a6e7b88-1a8b-4352-acca-56db762955cd"
+          />
 
           {/* Video Section */}
           <div className="max-w-7xl mx-auto px-4 mb-10">

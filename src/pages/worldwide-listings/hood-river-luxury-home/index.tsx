@@ -107,63 +107,16 @@ const HoodRiverLuxuryHome = () => {
         <Navigation transparent={false} />
 
         <main>
-          {/* Header with Property Info */}
-          <div className="max-w-7xl mx-auto px-4 pt-8">
-            <div className="flex justify-center mb-6">
-              <div className="bg-black text-white rounded-full py-2 px-4 sm:px-6 flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-4 text-center sm:text-left">
-                <span>10 guests</span>
-                <span className="hidden sm:block mx-3 text-gray-500">|</span>
-                <span>650+ USD Nightly | Winter</span>
-              </div>
-            </div>
-
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-gray-900 mb-6 sm:mb-8">
-              Hood River, US | Water Views
-            </h1>
-
-            {/* Pricing Information */}
-            <div className="flex flex-col items-center mb-8 space-y-2">
-              <div className="bg-gray-100 rounded-lg px-6 py-4 max-w-2xl w-full">
-                <div className="space-y-2">
-                  <p className="text-gray-800 text-center font-medium">
-                    650+ USD Nightly | Winter
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="text-center mb-6 sm:mb-8">
-              <p className="text-gray-700 text-sm sm:text-base">
-                Minimum Stay Requirement: 2 nights weekdays | 3 weekends
-              </p>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
-              <button
-                onClick={() => setShowAllPhotos(true)}
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
-              >
-                More Photos
-              </button>
-              <Link
-                href="#details"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium hover:bg-gray-800 text-sm sm:text-base"
-              >
-                Details
-              </Link>
-              <a
-                href="https://www.airbnb.ca/rooms/53497330?guests=1&adults=1&s=67&unique_share_id=b063d83c-aadc-4344-a38c-b009b67bd321&source_impression_id=p3_1744795711_P326VPoSz2IZZ4oG"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
-              >
-                Book on Airbnb
-              </a>
-            </div>
-          </div>
+          <PropertyHeader 
+            title="Hood River Luxury Home"
+            guests={10}
+            bedrooms={4}
+            bathrooms={3.5}
+            priceRange="$800-$1,200 per night"
+          />
 
           {/* Photo Grid */}
-          <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16">
+          <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16" id="photos">
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
               {photos.slice(0, 8).map((photo, index) => (
                 <div
