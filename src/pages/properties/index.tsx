@@ -776,9 +776,9 @@ export default function Properties() {
             id: "helios-estate-mykonos",
             name: "Helios Estate - Mykonos",
             images: [
-              "/photos/properties/Helios Estate - Mykonos/HELIOS ESTATE MYKONOS (1).jpg",
-              "/photos/properties/Helios Estate - Mykonos/HELIOS ESTATE MYKONOS (10).jpg",
-              "/photos/properties/Helios Estate - Mykonos/HELIOS ESTATE MYKONOS (30).jpg"
+              "/photos/properties/Helios Estate - Mykonos/01.jpg",
+              "/photos/properties/Helios Estate - Mykonos/02.jpg",
+              "/photos/properties/Helios Estate - Mykonos/03.jpg"
             ],
             guests: 16,
             bedrooms: 8,
@@ -811,9 +811,9 @@ export default function Properties() {
             id: "villa-rosabella-mykonos",
             name: "Villa Rosabella | Mykonos",
             images: [
-              "/photos/properties/Villa Rosabella Mykonos/Villa Rosabella (22).jpg",
-              "/photos/properties/Villa Rosabella Mykonos/Villa Rosabella (2).jpg",
-              "/photos/properties/Villa Rosabella Mykonos/Villa Rosabella (4).jpg"
+              "/photos/properties/Villa Rosabella Mykonos/Villa Rosabella (1).jpg",
+              "/photos/properties/Villa Rosabella Mykonos/Villa Rosabella (10).jpg",
+              "/photos/properties/Villa Rosabella Mykonos/Villa Rosabella (11).jpg"
             ],
             guests: 16,
             bedrooms: 8,

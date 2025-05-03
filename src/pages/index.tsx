@@ -550,7 +550,7 @@ const Home = () => {
     {
       id: "helios-estate-mykonos",
       name: "Helios Estate - Mykonos",
-      image: "/photos/properties/Helios Estate - Mykonos/HELIOS ESTATE MYKONOS (1).jpg",
+      image: "/photos/properties/Helios Estate - Mykonos/01.jpg",
       guests: 16,
       bedrooms: 8,
       bathrooms: 9,
@@ -565,7 +565,7 @@ const Home = () => {
     {
       id: "villa-rosabella-mykonos",
       name: "Villa Rosabella | Mykonos",
-      image: "/photos/properties/Villa Rosabella Mykonos/Villa Rosabella (22).jpg",
+      image: "/photos/properties/Villa Rosabella Mykonos/Villa Rosabella (1).jpg",
       guests: 16,
       bedrooms: 8,
       bathrooms: 8,
