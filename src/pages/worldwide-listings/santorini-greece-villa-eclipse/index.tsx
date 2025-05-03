@@ -135,245 +135,257 @@ const SantoriniGreeceVillaEclipse = () => {
           </div>
 
           {/* Property Description */}
-          <div className="max-w-6xl mx-auto px-4" id="details">
-            <p className="text-gray-800 mb-16 max-w-4xl">
+          <div className="max-w-5xl mx-auto px-6 md:px-10 lg:px-8" id="details">
+            <p className="text-gray-800 mb-16 max-w-3xl mx-auto leading-relaxed text-lg">
               Villa Eclipse is a luxury private villa in Santorini offering total privacy and breathtaking sea views. Located on a peaceful cliffside on the southwest coast of the island, it promises a tranquil retreat while remaining close to the island's best spots. The famous Santorini lighthouse is just five minutes away. Popular volcanic beaches can be reached within 10 minutes, while the vibrant town of Fira is only a 20-minute drive.
             </p>
 
             {/* The Space Section */}
-            <div className="flex flex-col md:flex-row mb-20">
-              <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
-                <div className="relative aspect-[4/3] mb-2">
-                  <Image
-                    src={photos[2]}
-                    alt="Villa Eclipse Santorini - Exterior View"
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              </div>
-              <div className="md:w-1/2">
-                <div className="flex items-center mb-6">
-                  <div className="bg-black text-white p-4 rounded-full mr-4">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z"
-                        fill="white"
-                      />
-                    </svg>
+            <div className="max-w-6xl mx-auto mb-24">
+              <div className="flex flex-col md:flex-row gap-12">
+                <div className="md:w-1/2">
+                  <div className="relative aspect-[4/3] mb-4 rounded-xl overflow-hidden shadow-lg">
+                    <Image
+                      src={photos[2]}
+                      alt="Villa Eclipse Santorini - Exterior View"
+                      fill
+                      className="object-cover hover:scale-105 transition-transform duration-500"
+                    />
                   </div>
-                  <h2 className="text-2xl font-bold">The Space</h2>
                 </div>
-                <p className="text-gray-800 mb-6">
-                  This luxury villa in Greece blends modern design with traditional Cycladic architecture. Spread over three spacious levels, it offers bright living spaces, elegant interiors, and stunning Aegean views from every room. Guests can unwind in multiple indoor lounges, relax in stylish reception areas, and enjoy meals in a beautifully designed open-plan kitchen and dining room.
-                </p>
-                <p className="text-gray-800 mb-6">
-                  For extra entertainment, a large lower-ground salon and a dedicated playroom are available. The main living room includes air conditioning, a flat-screen satellite TV, and a Hi-Fi sound system, perfect for cozy evenings indoors.
-                </p>
-                <p className="text-gray-800">
-                  Villa Eclipse offers five luxurious bedrooms, each with its own en-suite bathroom, Smart TV, air conditioning, and sound system. The two master suites on the lower-ground floor provide extra space and direct access to the terrace. Three more bedrooms are located on the upper levels, each filled with natural light and offering beautiful views of the sea or gardens.
-                </p>
+                <div className="md:w-1/2">
+                  <div className="flex items-center mb-6">
+                    <div className="bg-black text-white p-4 rounded-full mr-4">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                    <h2 className="text-2xl font-bold">The Space</h2>
+                  </div>
+                  <div className="space-y-6 leading-relaxed">
+                    <p className="text-gray-800">
+                      This luxury villa in Greece blends modern design with traditional Cycladic architecture. Spread over three spacious levels, it offers bright living spaces, elegant interiors, and stunning Aegean views from every room. Guests can unwind in multiple indoor lounges, relax in stylish reception areas, and enjoy meals in a beautifully designed open-plan kitchen and dining room.
+                    </p>
+                    <p className="text-gray-800">
+                      For extra entertainment, a large lower-ground salon and a dedicated playroom are available. The main living room includes air conditioning, a flat-screen satellite TV, and a Hi-Fi sound system, perfect for cozy evenings indoors.
+                    </p>
+                    <p className="text-gray-800">
+                      Villa Eclipse offers five luxurious bedrooms, each with its own en-suite bathroom, Smart TV, air conditioning, and sound system. The two master suites on the lower-ground floor provide extra space and direct access to the terrace. Three more bedrooms are located on the upper levels, each filled with natural light and offering beautiful views of the sea or gardens.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* Outdoor Living Section */}
-            <div className="flex flex-col md:flex-row mb-20">
-              <div className="md:w-1/2">
-                <div className="flex items-center mb-6">
-                  <div className="bg-black text-white p-4 rounded-full mr-4">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M3.05 13.05C2.75 12.74 2.75 12.26 3.05 11.95L8.65 6.35C8.95 6.05 9.43 6.05 9.74 6.35L12.34 8.95C12.64 9.26 12.64 9.74 12.34 10.04L6.74 15.64C6.43 15.95 5.95 15.95 5.65 15.64L3.05 13.05ZM3.05 20.05C2.75 19.74 2.75 19.26 3.05 18.95L14.05 7.95C14.36 7.64 14.84 7.64 15.14 7.95L17.74 10.55C18.05 10.85 18.05 11.33 17.74 11.64L6.74 22.64C6.43 22.95 5.95 22.95 5.65 22.64L3.05 20.05ZM10.05 6.05C9.75 5.74 9.75 5.26 10.05 4.95L12.65 2.35C12.96 2.05 13.44 2.05 13.74 2.35L16.34 4.95C16.65 5.26 16.65 5.74 16.34 6.04L13.74 8.64C13.43 8.95 12.95 8.95 12.65 8.64L10.05 6.05ZM14.05 20.05C13.75 19.74 13.75 19.26 14.05 18.95L19.65 13.35C19.96 13.05 20.44 13.05 20.74 13.35L23.34 15.95C23.65 16.26 23.65 16.74 23.34 17.04L17.74 22.64C17.43 22.95 16.95 22.95 16.65 22.64L14.05 20.05ZM14.05 13.05C13.75 12.74 13.75 12.26 14.05 11.95L19.65 6.35C19.96 6.05 20.44 6.05 20.74 6.35L23.34 8.95C23.65 9.26 23.65 9.74 23.34 10.04L17.74 15.64C17.43 15.95 16.95 15.95 16.65 15.64L14.05 13.05Z" fill="white" />
-                    </svg>
+            <div className="max-w-6xl mx-auto px-0 mb-24 bg-gray-50 py-12 rounded-xl">
+              <div className="flex flex-col md:flex-row gap-12 px-6 md:px-10">
+                <div className="md:w-1/2">
+                  <div className="flex items-center mb-6">
+                    <div className="bg-black text-white p-4 rounded-full mr-4">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M3.05 13.05C2.75 12.74 2.75 12.26 3.05 11.95L8.65 6.35C8.95 6.05 9.43 6.05 9.74 6.35L12.34 8.95C12.64 9.26 12.64 9.74 12.34 10.04L6.74 15.64C6.43 15.95 5.95 15.95 5.65 15.64L3.05 13.05ZM3.05 20.05C2.75 19.74 2.75 19.26 3.05 18.95L14.05 7.95C14.36 7.64 14.84 7.64 15.14 7.95L17.74 10.55C18.05 10.85 18.05 11.33 17.74 11.64L6.74 22.64C6.43 22.95 5.95 22.95 5.65 22.64L3.05 20.05ZM10.05 6.05C9.75 5.74 9.75 5.26 10.05 4.95L12.65 2.35C12.96 2.05 13.44 2.05 13.74 2.35L16.34 4.95C16.65 5.26 16.65 5.74 16.34 6.04L13.74 8.64C13.43 8.95 12.95 8.95 12.65 8.64L10.05 6.05ZM14.05 20.05C13.75 19.74 13.75 19.26 14.05 18.95L19.65 13.35C19.96 13.05 20.44 13.05 20.74 13.35L23.34 15.95C23.65 16.26 23.65 16.74 23.34 17.04L17.74 22.64C17.43 22.95 16.95 22.95 16.65 22.64L14.05 20.05ZM14.05 13.05C13.75 12.74 13.75 12.26 14.05 11.95L19.65 6.35C19.96 6.05 20.44 6.05 20.74 6.35L23.34 8.95C23.65 9.26 23.65 9.74 23.34 10.04L17.74 15.64C17.43 15.95 16.95 15.95 16.65 15.64L14.05 13.05Z" fill="white" />
+                      </svg>
+                    </div>
+                    <h2 className="text-2xl font-bold">Outdoor Living</h2>
                   </div>
-                  <h2 className="text-2xl font-bold">Outdoor Living</h2>
+                  <div className="space-y-6 leading-relaxed">
+                    <p className="text-gray-800">
+                      The villa's outdoor areas are simply outstanding. Four large terraces surround the property, offering endless space for sunbathing, alfresco dining, and sunset drinks. A private infinity pool overlooks the Aegean Sea, while a relaxing outdoor Jacuzzi invites guests to unwind in style.
+                    </p>
+                    <p className="text-gray-800">
+                      The barbecue area is ideal for evening gatherings under the stars, making every moment here unforgettable. With multiple outdoor seating and dining areas, you'll find the perfect spot to enjoy Santorini's famous sunsets.
+                    </p>
+                  </div>
                 </div>
-                <p className="text-gray-800 mb-6">
-                  The villa's outdoor areas are simply outstanding. Four large terraces surround the property, offering endless space for sunbathing, alfresco dining, and sunset drinks. A private infinity pool overlooks the Aegean Sea, while a relaxing outdoor Jacuzzi invites guests to unwind in style.
-                </p>
-                <p className="text-gray-800 mb-6">
-                  The barbecue area is ideal for evening gatherings under the stars, making every moment here unforgettable. With multiple outdoor seating and dining areas, you'll find the perfect spot to enjoy Santorini's famous sunsets.
-                </p>
-              </div>
-              <div className="md:w-1/2 pl-0 md:pl-12 mt-8 md:mt-0">
-                <div className="relative aspect-[4/3] mb-2">
-                  <Image
-                    src={photos[4]}
-                    alt="Villa Eclipse Santorini - Infinity Pool"
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                  />
+                <div className="md:w-1/2">
+                  <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+                    <Image
+                      src={photos[4]}
+                      alt="Villa Eclipse Santorini - Infinity Pool"
+                      fill
+                      className="object-cover hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Services & Amenities Section */}
-            <div className="flex flex-col md:flex-row mb-20">
-              <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
-                <div className="relative aspect-[4/3] mb-2">
-                  <Image
-                    src={photos[6]}
-                    alt="Villa Eclipse Santorini - Interior View"
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              </div>
-              <div className="md:w-1/2">
-                <div className="flex items-center mb-6">
-                  <div className="bg-black text-white p-4 rounded-full mr-4">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M13 4.06871V2H11V4.06871C7.38128 4.56343 4.56343 7.38128 4.06871 11H2V13H4.06871C4.56343 16.6187 7.38128 19.4366 11 19.9313V22H13V19.9313C16.6187 19.4366 19.4366 16.6187 19.9313 13H22V11H19.9313C19.4366 7.38128 16.6187 4.56343 13 4.06871ZM12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18Z"
-                        fill="white"
-                      />
-                      <path
-                        d="M12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8Z"
-                        fill="white"
-                      />
-                    </svg>
+            <div className="max-w-6xl mx-auto mb-24">
+              <div className="flex flex-col md:flex-row gap-12">
+                <div className="md:w-1/2">
+                  <div className="relative aspect-[4/3] mb-4 rounded-xl overflow-hidden shadow-lg">
+                    <Image
+                      src={photos[6]}
+                      alt="Villa Eclipse Santorini - Interior View"
+                      fill
+                      className="object-cover hover:scale-105 transition-transform duration-500"
+                    />
                   </div>
-                  <h2 className="text-2xl font-bold">Services & Amenities</h2>
                 </div>
-                <p className="text-gray-800 mb-6">
-                  Guests at Villa Eclipse enjoy daily breakfast, housekeeping, and personal concierge services. Private chef services, professional massage sessions, and personal waiter arrangements are available on request.
-                </p>
-                <p className="text-gray-800 mb-6">
-                  The price includes:
-                </p>
-                <ul className="list-disc pl-5 mb-6 text-gray-800">
-                  <li>Daily breakfast</li>
-                  <li>Daily maid service</li>
-                  <li>Complimentary WiFi</li>
-                  <li>All applicable taxes</li>
-                  <li>Luxury bath amenities</li>
-                  <li>Pool cleaning & gardening</li>
-                  <li>Concierge services</li>
-                </ul>
-                <p className="text-gray-800">
-                  VIP experiences such as private yacht rentals, helicopter tours, limousine services, and custom island tours can be organized to elevate your stay.
-                </p>
+                <div className="md:w-1/2">
+                  <div className="flex items-center mb-6">
+                    <div className="bg-black text-white p-4 rounded-full mr-4">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M13 4.06871V2H11V4.06871C7.38128 4.56343 4.56343 7.38128 4.06871 11H2V13H4.06871C4.56343 16.6187 7.38128 19.4366 11 19.9313V22H13V19.9313C16.6187 19.4366 19.4366 16.6187 19.9313 13H22V11H19.9313C19.4366 7.38128 16.6187 4.56343 13 4.06871ZM12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                    <h2 className="text-2xl font-bold">Services & Amenities</h2>
+                  </div>
+                  <div className="space-y-6 leading-relaxed">
+                    <p className="text-gray-800">
+                      Villa Eclipse goes beyond just luxury accommodation, offering five-star services to match the stunning setting. Guests enjoy daily breakfast, housekeeping, 24/7 security, and a dedicated concierge to arrange everything from yacht charters to private chef experiences.
+                    </p>
+                    <div>
+                      <p className="text-gray-800 mb-3">The villa's premium amenities include:</p>
+                      <ul className="list-disc pl-8 space-y-2 text-gray-800">
+                        <li>Private infinity pool with Aegean views</li>
+                        <li>Outdoor Jacuzzi</li>
+                        <li>Multiple terraces and sunbathing areas</li>
+                        <li>Fully equipped kitchen</li>
+                        <li>Smart TVs and sound systems throughout</li>
+                        <li>Dedicated playroom</li>
+                        <li>BBQ facilities</li>
+                        <li>Air conditioning in all rooms</li>
+                        <li>High-speed WiFi throughout</li>
+                        <li>Alfresco dining areas</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* Location Section */}
-            <div className="flex flex-col md:flex-row mb-20">
-              <div className="md:w-1/2">
-                <div className="flex items-center mb-6">
-                  <div className="bg-black text-white p-4 rounded-full mr-4">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"
-                        fill="white"
-                      />
-                    </svg>
+            <div className="max-w-6xl mx-auto px-0 mb-24 bg-gray-50 py-12 rounded-xl">
+              <div className="flex flex-col md:flex-row gap-12 px-6 md:px-10">
+                <div className="md:w-1/2">
+                  <div className="flex items-center mb-6">
+                    <div className="bg-black text-white p-4 rounded-full mr-4">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                    <h2 className="text-2xl font-bold">Perfect Location</h2>
                   </div>
-                  <h2 className="text-2xl font-bold">Location</h2>
+                  <div className="space-y-6 leading-relaxed">
+                    <p className="text-gray-800">
+                      Set on Santorini's serene southwest coast, Villa Eclipse offers the perfect balance of privacy and accessibility. The famous Santorini Lighthouse is just a five-minute drive away, while several volcanic beaches can be reached within 10 minutes.
+                    </p>
+                    <p className="text-gray-800">
+                      The island's capital, Fira, is only 20 minutes by car, and the iconic village of Oia with its world-famous sunsets is approximately 35 minutes away. For dining options, several excellent traditional tavernas are within a 10-minute drive.
+                    </p>
+                    <p className="text-gray-800">
+                      The villa's secluded setting means you'll enjoy peace and quiet, with just the sound of the sea to accompany your stay. Yet, whenever you wish to explore, all of Santorini's attractions are easily accessible.
+                    </p>
+                  </div>
                 </div>
-                <p className="text-gray-800 mb-6">
-                  Villa Eclipse is ideally located to offer both privacy and convenience. The villa is perched on a peaceful cliffside on the southwest coast of Santorini, just five minutes from the iconic lighthouse. Popular volcanic beaches can be reached within 10 minutes, while the bustling capital of Fira is just 20 minutes away.
-                </p>
-                <p className="text-gray-800">
-                  This location offers the perfect balance - secluded enough for complete privacy but close enough to enjoy all that Santorini has to offer. The famous caldera sunset viewpoints are within easy reach, as are some of the island's best restaurants and attractions.
-                </p>
-              </div>
-              <div className="md:w-1/2 pl-0 md:pl-12 mt-8 md:mt-0">
-                <div className="relative aspect-[4/3] mb-2">
-                  <Image
-                    src={photos[8]}
-                    alt="Villa Eclipse Santorini - Location View"
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                  />
+                <div className="md:w-1/2">
+                  <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+                    <Image
+                      src={photos[8]}
+                      alt="Villa Eclipse Santorini - Ocean View"
+                      fill
+                      className="object-cover hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Pricing and Terms Section */}
-            <div className="bg-gray-50 rounded-lg p-8 mb-20">
-              <h2 className="text-2xl font-bold mb-6">Pricing and Terms</h2>
+            {/* Pricing Section */}
+            <div className="max-w-5xl mx-auto mb-24 bg-gray-50 rounded-xl p-10">
+              <h2 className="text-2xl font-bold mb-8 text-center">Pricing & Availability</h2>
               
-              <div className="mb-8">
-                <h3 className="text-xl font-semibold mb-4">Seasonal Rates (per night)</h3>
+              <div className="mb-12">
+                <h3 className="text-xl font-semibold mb-6">Seasonal Rates (per night)</h3>
                 <div className="overflow-x-auto">
-                  <table className="min-w-full border border-gray-300">
+                  <table className="min-w-full border border-gray-300 rounded-lg shadow-sm">
                     <thead>
                       <tr className="bg-gray-100">
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider border-b">Season</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider border-b">Rate (€)</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider border-b">Minimum Stay</th>
+                        <th className="px-6 py-4 text-left text-sm font-medium text-gray-700 uppercase tracking-wider border-b">Season</th>
+                        <th className="px-6 py-4 text-left text-sm font-medium text-gray-700 uppercase tracking-wider border-b">Rate (€)</th>
+                        <th className="px-6 py-4 text-left text-sm font-medium text-gray-700 uppercase tracking-wider border-b">Minimum Stay</th>
                       </tr>
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-300">
                       <tr>
-                        <td className="px-6 py-4 whitespace-nowrap border-r">January 1 - May 31 & October 1 - December 31</td>
+                        <td className="px-6 py-4 whitespace-nowrap border-r">April & October</td>
                         <td className="px-6 py-4 whitespace-nowrap border-r">1,300 €</td>
                         <td className="px-6 py-4 whitespace-nowrap">3 nights</td>
                       </tr>
                       <tr>
-                        <td className="px-6 py-4 whitespace-nowrap border-r">June 1 - 30 & September 1 - 30</td>
-                        <td className="px-6 py-4 whitespace-nowrap border-r">1,600 €</td>
+                        <td className="px-6 py-4 whitespace-nowrap border-r">May & September</td>
+                        <td className="px-6 py-4 whitespace-nowrap border-r">1,650 €</td>
                         <td className="px-6 py-4 whitespace-nowrap">3 nights</td>
                       </tr>
                       <tr>
-                        <td className="px-6 py-4 whitespace-nowrap border-r">July 1 - August 31</td>
+                        <td className="px-6 py-4 whitespace-nowrap border-r">June - August</td>
                         <td className="px-6 py-4 whitespace-nowrap border-r">1,920 €</td>
-                        <td className="px-6 py-4 whitespace-nowrap">3 nights</td>
+                        <td className="px-6 py-4 whitespace-nowrap">4 nights</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
               
-              <div className="mb-8">
-                <h3 className="text-xl font-semibold mb-3">Payment Policy</h3>
-                <ul className="list-disc pl-5 space-y-2 text-gray-800">
-                  <li>To secure a reservation, 50% of the rental amount is required at the time of booking.</li>
-                  <li>For bookings made 60 days or less before check-in, the full rental amount (100%) must be paid, and no refunds will be issued if canceled.</li>
-                  <li>For bookings made more than 60 days in advance, an advance payment of 50% is required. The remaining 50% must be paid 60 days before check-in.</li>
-                  <li>Security Deposit: €3,000 (To be paid via bank transfer, credit card with 4% surcharge, or cash upon arrival).</li>
-                </ul>
-              </div>
-              
               <div>
-                <h3 className="text-xl font-semibold mb-3">Cancellation Policy</h3>
-                <ul className="list-disc pl-5 space-y-2 text-gray-800">
-                  <li>50% of the rental amount is non-refundable upon booking.</li>
-                  <li>Cancellations made 40 days or more before the arrival date will incur a 25% penalty of the rental amount.</li>
-                  <li>For cancellations or no-shows within 40 days to 0 days before arrival, 100% of the rental amount will be charged.</li>
-                  <li>Modifications or reductions to the stay past the cancellation deadlines will result in a penalty equal to 100% of the rental amount for each canceled night.</li>
+                <h3 className="text-xl font-semibold mb-4">Booking Terms</h3>
+                <ul className="list-disc pl-8 space-y-3 text-gray-800 leading-relaxed">
+                  <li>30% deposit required to secure your booking</li>
+                  <li>Balance payment due 60 days before arrival</li>
+                  <li>Security deposit: €2,000 (refundable)</li>
+                  <li>Check-in: 3:00 PM - 8:00 PM</li>
+                  <li>Check-out: by 11:00 AM</li>
+                  <li>Daily breakfast included</li>
+                  <li>Complimentary airport/port transfers</li>
                 </ul>
               </div>
             </div>
 
             {/* Book Now CTA */}
-            <div className="text-center mb-20">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-6">Experience the ultimate luxury escape in Santorini</h2>
-              <p className="text-gray-700 max-w-3xl mx-auto mb-8">
-                Villa Eclipse is perfect for family holidays, romantic escapes, destination weddings, and exclusive events. Combining panoramic views, modern comforts, and discreet five-star service, it offers an unforgettable stay on one of the world's most enchanting islands.
+            <div className="max-w-4xl mx-auto text-center mb-24">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-6">Experience the magic of Santorini at Villa Eclipse</h2>
+              <p className="text-gray-700 max-w-3xl mx-auto mb-8 leading-relaxed text-lg">
+                With its breathtaking views, luxurious amenities, and attentive service, Villa Eclipse offers a Santorini experience like no other. Whether you're planning a romantic getaway, family vacation, or celebration with friends, this exclusive villa provides the perfect setting for unforgettable memories.
               </p>
               <Link
                 href="/contact"
