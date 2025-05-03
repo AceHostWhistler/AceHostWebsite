@@ -550,7 +550,7 @@ const Home = () => {
     {
       id: "helios-estate-mykonos",
       name: "Helios Estate - Mykonos",
-      image: "/photos/properties/Helios Estate - Mykonos/01.jpg",
+      image: "/photos/properties/Helios Estate - Mykonos/HELIOS ESTATE MYKONOS (1).jpg",
       guests: 16,
       bedrooms: 8,
       bathrooms: 9,
