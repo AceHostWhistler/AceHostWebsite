@@ -7,6 +7,7 @@ import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { X } from "lucide-react";
+import PropertyHeader from "@/components/PropertyHeader";
 
 const VillaOineasGreeceMykonos = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -88,51 +89,17 @@ const VillaOineasGreeceMykonos = () => {
 
         <main>
           {/* Header with Property Info */}
-          <div className="max-w-7xl mx-auto px-4 pt-8">
-            <div className="flex justify-center mb-6">
-              <div className="bg-black text-white rounded-full py-2 px-4 sm:px-6 flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-4 text-center sm:text-left">
-                <span>12 guests</span>
-                <span className="hidden sm:inline">•</span>
-                <span>5 bedrooms</span>
-                <span className="hidden sm:inline">•</span>
-                <span>5 bathrooms</span>
-              </div>
-            </div>
-
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-gray-900 mb-6 sm:mb-8">
-              Villa Oineas | Mykonos, Greece
-            </h1>
-
-            <div className="text-center mb-6 sm:mb-8">
-              <p className="text-gray-700 text-sm sm:text-base">
-                €1,450 - €2,550 per night | 2-3 night minimum
-              </p>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
-              <button
-                onClick={() => setShowAllPhotos(true)}
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
-              >
-                More Photos
-              </button>
-              <Link
-                href="#details"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white border border-gray-700 rounded font-medium hover:bg-gray-800 text-sm sm:text-base"
-              >
-                Details
-              </Link>
-              <Link
-                href="/contact"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
-              >
-                Book Now
-              </Link>
-            </div>
-          </div>
+          <PropertyHeader
+            title="Villa Oineas | Mykonos, Greece"
+            guests={12}
+            bedrooms={5}
+            bathrooms={5}
+            priceRange="€1,450-€2,550 per night"
+            contactLink="/contact"
+          />
 
           {/* Photo Grid */}
-          <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16">
+          <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16" id="photos">
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
               {photos.slice(0, 8).map((photo, index) => (
                 <div
