@@ -42,6 +42,7 @@ interface PropertyFeature {
   isPetFriendly?: boolean;
   isSkiInSkiOut?: boolean;
   link?: string;
+  country?: string;
 }
 
 interface PropertyCategory {
@@ -740,16 +741,16 @@ export default function Properties() {
             id: "villa-oineas-greece-mykonos",
             name: "Villa Oineas - Greece Mykonos",
             images: [
-              "/photos/properties/Oineas Villa - Greece Mykonos/VILLA OINEAS-06614.jpg",
+              "/photos/properties/Oineas Villa - Greece Mykonos/VILLA OINEAS-06907.jpg",
               "/photos/properties/Oineas Villa - Greece Mykonos/VILLA OINEAS-06621.jpg",
               "/photos/properties/Oineas Villa - Greece Mykonos/VILLA OINEAS - 17.jpg"
             ],
             guests: 12,
             bedrooms: 5,
             bathrooms: 5,
+            priceRange: "€1,450-€2,550 per night",
             location: "Mykonos, Greece",
-            description:
-              "Villa Oineas is a newly built luxury estate in Santorini, nestled within 32 acres of private vineyards and designed to offer the ultimate blend of elegance, privacy, and premium living. With panoramic views of the island's southern coastline, this exclusive sanctuary is ideal for luxury holidays, destination weddings, and private VIP events.",
+            description: "Villa Oineas is a newly built luxury estate in Santorini, nestled within 32 acres of private vineyards and designed to offer the ultimate blend of elegance, privacy, and premium living. With panoramic views of the island's southern coastline, this exclusive sanctuary is ideal for luxury holidays, destination weddings, and private VIP events.",
             features: [
               "Heated Seawater Infinity Pool",
               "Private Tennis Court",
@@ -766,7 +767,45 @@ export default function Properties() {
               "Perfect for Events",
               "Five-Star Amenities"
             ],
-            priceRange: "€1,450-€2,550 per night",
+            link: "/worldwide-listings/villa-oineas-greece-mykonos",
+            isSkiInSkiOut: false,
+            isPetFriendly: false,
+            country: "greece"
+          },
+          {
+            id: "helios-estate-mykonos",
+            name: "Helios Estate - Mykonos",
+            images: [
+              "/photos/properties/Helios Estate - Mykonos/HELIOS ESTATE MYKONOS (1).jpg",
+              "/photos/properties/Helios Estate - Mykonos/HELIOS ESTATE MYKONOS (10).jpg",
+              "/photos/properties/Helios Estate - Mykonos/HELIOS ESTATE MYKONOS (30).jpg"
+            ],
+            guests: 16,
+            bedrooms: 8,
+            bathrooms: 9,
+            priceRange: "€15,000-€26,000 per night",
+            location: "Mykonos, Greece",
+            description: "Helios Estate is a magnificent luxury property perched on a hillside in one of Mykonos' most exclusive areas. With 8 luxurious bedrooms, 9 bathrooms, two swimming pools, expansive outdoor living spaces, and breathtaking panoramic views of the Aegean Sea, this exceptional estate offers an unparalleled retreat for the most discerning travelers.",
+            features: [
+              "Two Infinity Swimming Pools",
+              "Private Tennis Court",
+              "Fitness Center",
+              "Spa & Wellness Area",
+              "Cinema Room",
+              "Wine Cellar",
+              "Private Chef Available",
+              "Concierge Services"
+            ],
+            highlights: [
+              "Panoramic Sea Views",
+              "Entertainment Areas",
+              "Luxury Accommodations",
+              "Premium Location"
+            ],
+            link: "/worldwide-listings/helios-estate-mykonos",
+            isSkiInSkiOut: false,
+            isPetFriendly: false,
+            country: "greece"
           },
           {
             id: "vancouver-house-corner",
@@ -1197,18 +1236,7 @@ export default function Properties() {
                 loading="lazy"
                 placeholder="blur"
                 blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAEhAI/w5RW4AAAAABJRU5ErkJggg=="
-              onError={(e) => {
-                // Get property folder name from the ID
-                const propertyId = property.id;
-
-                  // Try folder variants with typical locations
-                  const fallbackSrc = '/photos/homepage/WhistlerVacationRental.jpg';
-                  
-                  // Set to fallback image on error
-                  // @ts-ignore - Next Image doesn't officially support onError but it works
-                  e.currentTarget.src = fallbackSrc;
-              }}
-            />
+              />
             </div>
           </Link>
 
