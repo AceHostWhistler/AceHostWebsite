@@ -5,6 +5,7 @@ import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
+import PropertyHeader from "@/components/PropertyHeader";
 import Footer from "@/components/Footer";
 import { X } from "lucide-react";
 import LazyVimeoPlayer from "../../../components/LazyVimeoPlayer";
@@ -134,78 +135,15 @@ const ChaletLaForja = () => {
         <Navigation transparent={false} />
 
         <main>
-          {/* Header with Property Info */}
-          <div className="max-w-7xl mx-auto px-4 pt-8">
-            <div className="flex justify-center mb-6">
-              <div className="bg-black text-white rounded-full py-2 px-4 sm:px-6 flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-4 text-center sm:text-left">
-                <span>12 guests</span>
-                <span className="hidden sm:block mx-3 text-gray-500">|</span>
-                <span>7.5 bedrooms</span>
-                <span className="hidden sm:block mx-3 text-gray-500">|</span>
-                <span>15 beds</span>
-                <span className="hidden sm:block mx-3 text-gray-500">|</span>
-                <span>8 bathrooms</span>
-                <span className="hidden sm:block mx-3 text-gray-500">|</span>
-                <span>$7,000-11,000+ per night</span>
-              </div>
-            </div>
-
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-gray-900 mb-6 sm:mb-8">
-              Chalet La Forja | Kadenwood | Private Butler
-            </h1>
-
-            {/* Pricing Information */}
-            <div className="flex flex-col items-center mb-8 space-y-2">
-              <div className="bg-gray-100 rounded-lg px-6 py-4 max-w-2xl w-full">
-                <div className="space-y-2">
-                  <p className="text-gray-800 text-center font-medium">
-                    $7,000-11,000+ | Private Butler Included
-                  </p>
-                  <p className="text-gray-800 text-center">
-                    $8,500-$11,000+ Nightly | Winter
-                  </p>
-                  <p className="text-gray-800 text-center">
-                    $16,000-$21,000+ Nightly | Christmas & NY
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
-              <button
-                onClick={() => setShowAllPhotos(true)}
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
-              >
-                More Photos
-              </button>
-              <Link
-                href="#details"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium hover:bg-gray-800 text-sm sm:text-base"
-              >
-                Details
-              </Link>
-              <Link
-                href="/contact"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
-              >
-                Contact Us
-              </Link>
-              <a
-                href="https://www.airbnb.ca/rooms/52655503?guests=1&adults=1&s=67&unique_share_id=f1bb5c2c-51f9-4a82-9aa4-670fb8caa71d"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium text-sm sm:text-base"
-              >
-                Book on Airbnb
-              </a>
-            </div>
-
-            <div className="text-center mb-6 sm:mb-8">
-              <p className="text-gray-700 text-sm sm:text-base">
-                Minimum Stay Requirement: 4 Nights | 7 Christmas & NY
-              </p>
-            </div>
-          </div>
+          <PropertyHeader
+            title="Chalet La Forja | Kadenwood | Private Butler"
+            guests={12}
+            bedrooms={7.5}
+            beds={15}
+            bathrooms={8}
+            priceRange="$7,000-11,000+ per night"
+            airbnbLink="https://www.airbnb.ca/rooms/52655503?guests=1&adults=1&s=67&unique_share_id=f1bb5c2c-51f9-4a82-9aa4-670fb8caa71d"
+          />
 
           {/* Featured Video */}
           <div className="max-w-5xl mx-auto mb-10 sm:mb-16">
@@ -219,7 +157,7 @@ const ChaletLaForja = () => {
           </div>
 
           {/* Photo Grid */}
-          <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16">
+          <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16" id="photos">
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
               {photos.slice(0, 8).map((photo, index) => (
                 <div
