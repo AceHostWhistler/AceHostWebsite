@@ -808,6 +808,41 @@ export default function Properties() {
             country: "greece"
           },
           {
+            id: "villa-rosabella-mykonos",
+            name: "Villa Rosabella | Mykonos",
+            images: [
+              "/photos/properties/Villa Rosabella Mykonos/Villa Rosabella (22).jpg",
+              "/photos/properties/Villa Rosabella Mykonos/Villa Rosabella (2).jpg",
+              "/photos/properties/Villa Rosabella Mykonos/Villa Rosabella (4).jpg"
+            ],
+            guests: 16,
+            bedrooms: 8,
+            bathrooms: 8,
+            priceRange: "€3,500-€5,800 per night",
+            location: "Mykonos, Greece",
+            description: "Villa Rosabella is a world-class luxury retreat designed for UHNW guests seeking privacy, exclusivity, and unparalleled Aegean views. Perched on a cliffside overlooking the shimmering Aegean, this ultra-private estate seamlessly blends modern luxury with authentic Mykonian elegance, creating the ultimate high-end escape in Mykonos.",
+            features: [
+              "Private Infinity Pool",
+              "Direct Sea Access",
+              "Private Gym",
+              "Outdoor Dining & BBQ Area",
+              "Daily Housekeeping",
+              "Wine Cellar",
+              "Smart Home System",
+              "Concierge Services"
+            ],
+            highlights: [
+              "Unrivaled Sunset Views",
+              "Exclusive Private Pathway to Beach",
+              "Expansive Outdoor Living Areas",
+              "Absolute Privacy & Luxury"
+            ],
+            link: "/worldwide-listings/villa-rosabella-mykonos",
+            isSkiInSkiOut: false,
+            isPetFriendly: false,
+            country: "greece"
+          },
+          {
             id: "vancouver-house-corner",
             name: "Vancouver House Corner Unit | 30th Floor",
             images: [
