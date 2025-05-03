@@ -162,7 +162,7 @@ export default function BlogPost() {
               </h3>
               <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/Altitude New Photos Best/Altitude-2.jpg"
+                  src="/photos/properties/Altitude New Photos Best/altitude retreat-21.jpg"
                   alt="Altitude Retreat luxury mansion in Kadenwood, Whistler"
                   fill
                   className="object-cover"
@@ -180,6 +180,177 @@ export default function BlogPost() {
                   className="inline-flex items-center justify-center px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-all shadow-sm hover:shadow-md font-medium"
                 >
                   View Altitude Retreat
+                  <svg
+                    className="ml-2 w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </Link>
+              </div>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+                Chalet La Forja | Kadenwood | Private Butler
+              </h3>
+              <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
+                <Image
+                  src="/photos/properties/Chalet La Forja/05-2950 Heritage Peaks Trail-05.jpg"
+                  alt="Chalet La Forja outdoor space with mountain views in summer"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p>
+                Chalet La Forja transforms into a summer paradise with its magnificent outdoor spaces and breathtaking mountain views. This prestigious Kadenwood property features expansive wraparound decks and terraces that become the heart of summer living, offering perfect spaces for al fresco dining, sunrise yoga sessions, and evening cocktails while watching the alpenglow illuminate Whistler and Blackcomb mountains.
+              </p>
+              <p>
+                In summer, guests can enjoy morning coffee on the private balcony as the mist rises from the valley below, revealing Whistler's stunning mountain panorama. The property's private butler service can arrange mountain picnics, guided hikes, or mountain biking adventures on Whistler's world-class trail network. After an active day, unwind in the private hot tub as the summer sun sets behind the Coast Mountains, or gather with friends and family around the fire pit for s'mores and stargazing in the clear mountain air.
+              </p>
+              <div className="mt-6 mb-8">
+                <Link
+                  href="/listings/chalet-la-forja-kadenwood"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-all shadow-sm hover:shadow-md font-medium"
+                >
+                  View Chalet La Forja
+                  <svg
+                    className="ml-2 w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </Link>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+                  <Image
+                    src="/photos/properties/Chalet La Forja/hero00001.jpg"
+                    alt="Chalet La Forja exterior with mountain views"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+                  <Image
+                    src="/photos/properties/Slopeside Kadenwood/01-2945 Slope Side 01.jpg"
+                    alt="Slopeside Villa outdoor space with mountain views"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+                Slope Side Chalet | Kadenwood
+              </h3>
+              <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
+                <Image
+                  src="/photos/properties/Slopeside Kadenwood/03-2945 Slope Side 03.jpg"
+                  alt="Slopeside Chalet in Kadenwood with summer views"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p>
+                Slope Side Chalet offers one of Whistler's most impressive summer settings, with its multiple outdoor terraces and decks providing 180-degree views of Whistler Valley, Blackcomb Mountain, and the distant Coast Mountain Range. The property's position in Kadenwood creates a perfect vantage point to appreciate the transition from snow-capped peaks to lush green mountainsides that characterizes Whistler's spectacular summer season.
+              </p>
+              <p>
+                The outdoor living spaces at Slope Side shine in summer, with a spectacular hot tub positioned to maximize the mountain views, and multiple terraces for sunbathing, outdoor dining, and relaxation. In the evenings, the hot tub and fire pit area becomes the perfect gathering spot to watch the sunset paint the mountain peaks in shades of pink and gold. From this exclusive Kadenwood location, guests can easily access hiking and biking trails that wind through alpine meadows and old-growth forests, with the private Kadenwood gondola providing convenient access to Whistler Village's summer attractions.
+              </p>
+              <div className="mt-6 mb-8">
+                <Link
+                  href="/listings/slopeside-villa-kadenwood"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-all shadow-sm hover:shadow-md font-medium"
+                >
+                  View Slope Side Chalet
+                  <svg
+                    className="ml-2 w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </Link>
+              </div>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+                Falcon | Blueberry Drive
+              </h3>
+              <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
+                <Image
+                  src="/photos/properties/Falcon/15-3595 Falcon Cres-15-.jpg"
+                  alt="Falcon property on Blueberry Drive with summer mountain views"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p>
+                Nestled in the prestigious Blueberry Hill neighborhood, Falcon offers a tranquil summer retreat with some of Whistler's most coveted views. From its elevated position, guests enjoy panoramic vistas of Whistler and Blackcomb mountains, Alpha Lake, and the entire Whistler Valley clothed in vibrant summer greenery. The property's spacious deck becomes an outdoor living room in summer, perfect for morning coffee as you watch the mist rise from the valley or evening gatherings as the setting sun illuminates the mountain peaks.
+              </p>
+              <p>
+                Summer at Falcon means enjoying the spacious grounds that surround this 7-bedroom home, with ample outdoor seating areas, BBQ facilities, and the soothing soundtrack of birds and mountain breezes. The proximity to Whistler's Valley Trail network makes it easy to explore the area's five lakes, perfect for swimming, paddleboarding, or picnicking on hot summer days. After a day of adventure, gather on the deck for a sunset BBQ while enjoying the cooling mountain air and spectacular views that make Blueberry Hill one of Whistler's most desirable summer locations.
+              </p>
+              <div className="mt-6 mb-8">
+                <Link
+                  href="/listings/falcon-blueberry-drive"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-all shadow-sm hover:shadow-md font-medium"
+                >
+                  View Falcon
+                  <svg
+                    className="ml-2 w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </Link>
+              </div>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+                Panoramic Estate | Kadenwood
+              </h3>
+              <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
+                <Image
+                  src="/photos/properties/Panoramic Estate/Panoramic Estate.jpg"
+                  alt="Panoramic Estate in Kadenwood with mountain views"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p>
+                Panoramic Estate lives up to its name in summer, offering some of the most spectacular views in Whistler from its prime Kadenwood location. This architectural masterpiece features walls of glass that frame postcard-perfect views of Whistler Valley and the surrounding mountains dressed in their summer splendor. The estate's name is no exaggeration—from sunrise to sunset, guests are treated to an ever-changing panorama of mountain peaks, alpine meadows, and the vibrant Whistler Village nestled in the valley below.
+              </p>
+              <p>
+                The outdoor living spaces at Panoramic Estate are designed to maximize the summer experience, with multiple decks and terraces oriented to capture the best views and sunshine throughout the day. The heated outdoor living area allows for comfortable evenings even when mountain temperatures drop, while the hot tub offers perhaps the most spectacular viewpoint on the property—perfect for stargazing on clear summer nights. During summer stays, guests can easily access hiking trails that lead to alpine meadows carpeted with wildflowers, or mountain bike on Whistler's legendary trail network before returning to the estate to relax and soak in the incomparable mountain views.
+              </p>
+              <div className="mt-6 mb-8">
+                <Link
+                  href="/listings/panoramic-estate-kadenwood"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-all shadow-sm hover:shadow-md font-medium"
+                >
+                  View Panoramic Estate
                   <svg
                     className="ml-2 w-5 h-5"
                     fill="currentColor"
@@ -232,6 +403,80 @@ export default function BlogPost() {
                   </svg>
                 </Link>
               </div>
+
+              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
+                Whistler's Spectacular Summer Views
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+                  <Image
+                    src="/photos/properties/Falcon/09-3595 Falcon Cres-09.jpg"
+                    alt="Summer mountain views from Whistler luxury property"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+                  <Image
+                    src="/photos/properties/Altitude New Photos Best/altitude retreat-9.jpg"
+                    alt="Luxury outdoor space with mountain backdrop in summer"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+              
+              <p>
+                What truly sets Whistler apart as a summer destination is the incredible diversity and beauty of its views. From any of our luxury properties, guests are treated to an ever-changing panorama that captures the essence of mountain living in its most spectacular form. Morning brings misty valleys with sunlight gradually illuminating the mountain peaks, while evenings offer the famous "alpenglow"—when the setting sun bathes the mountains in hues of pink and gold.
+              </p>
+              
+              <p>
+                Each of our properties offers a unique vantage point to appreciate Whistler's natural splendor. The elevated position of our Kadenwood properties—including Panoramic Estate, Slope Side Chalet, Chalet La Forja, and Altitude Retreat—provides sweeping views of the entire valley, while our Blueberry Hill property, Falcon, offers a perfect perspective of Alpha Lake framed by mountain peaks. Even our village property, Heron Views, delivers stunning mountain vistas from a convenient central location.
+              </p>
+              
+              <p>
+                These views become the backdrop for unforgettable summer moments: morning coffee on the deck as the valley awakens, afternoon relaxation by the pool or hot tub surrounded by mountain grandeur, and evening gatherings under a canvas of stars. Whether you're watching eagles soar above the valley, marveling at wildflower-covered slopes, or simply taking in the majesty of the Coast Mountains, Whistler's summer views create the perfect setting for a luxury mountain getaway.
+              </p>
+
+              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
+                Summer Relaxation: Pools, Hot Tubs & Outdoor Living
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+                  <Image
+                    src="/photos/properties/Panoramic Estate/03-2923 Ancient Cedars-03.jpg"
+                    alt="Luxury outdoor hot tub with mountain views"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+                  <Image
+                    src="/photos/properties/Slopeside Kadenwood/10-2945 Slope Side 10.jpg"
+                    alt="Outdoor dining area with mountain backdrop"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+              
+              <p>
+                Summer in Whistler is about embracing outdoor living, and our luxury properties are designed to maximize this experience. Each home features thoughtfully designed outdoor spaces that become natural extensions of the indoor living areas—creating perfect settings for everything from morning yoga to evening stargazing.
+              </p>
+              
+              <p>
+                The hot tubs at properties like Panoramic Estate, Slope Side, and Chalet La Forja are strategically positioned to capture the best views while providing a relaxing retreat after a day of summer adventures. Even on cooler summer evenings, these hot tubs offer a perfect vantage point to watch the sunset paint the mountains in spectacular colors before stars fill the clear mountain sky.
+              </p>
+              
+              <p>
+                Many of our properties feature professional outdoor kitchens and BBQ areas, allowing for memorable al fresco dining experiences with family and friends. Spacious decks and terraces are furnished with comfortable seating for lounging, reading, or simply soaking in the mountain vistas. And fire pits become gathering places for evening conversations and marshmallow roasting as the mountain air cools after sunset.
+              </p>
+              
+              <p>
+                Whether you're seeking active adventure or peaceful relaxation, our luxury Whistler properties provide the perfect summer sanctuary, combining indoor comfort with spectacular outdoor living spaces that make the most of Whistler's natural beauty.
+              </p>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 Summer Activities Near Your Luxury Retreat
