@@ -899,7 +899,7 @@ const Home = () => {
                 Concierge Services
               </h1>
               <p className="text-base md:text-lg text-gray-700 mb-8 max-w-2xl">
-                AceHost is a leading Whistler luxury property management
+                AceHost is a leading Whistler luxury Airbnb property management
                 company. We proudly offer an array of magnificent vacation
                 rental homes in Whistler, British Columbia. Offering a seamless
                 experience for property owners looking to rent out their homes
