@@ -521,6 +521,8 @@ export default function Properties() {
             id: "whispering-pines",
             name: "The Aspens | 1 Bed | Ski-in/Ski-out",
             images: [
+              "/photos/properties/The Aspens/4800-Spearhead-Drive-1.JPG",
+              "/photos/properties/The Aspens/4800-Spearhead-Drive-2.JPG",
               "/photos/properties/The Aspens/4800-Spearhead-Drive-3.JPG",
             ],
             guests: 4,
@@ -1310,15 +1312,30 @@ export default function Properties() {
         <div className="p-6">
           {/* Property details */}
           <div className="flex flex-wrap gap-2 mb-4">
-            <div className="flex items-center text-xs bg-gray-900 text-white px-3 py-1 rounded-md">
-              <Users className="w-3 h-3 mr-1" /> {property.guests} {property.guests === 1 ? "Guest" : "Guests"}
-            </div>
-            <div className="flex items-center text-xs bg-gray-200 text-gray-900 px-3 py-1 rounded-md">
-              <Bed className="w-3 h-3 mr-1" /> {property.bedrooms} {property.bedrooms === 1 ? "Bedroom" : "Bedrooms"}
-            </div>
-            <div className="flex items-center text-xs bg-gray-200 text-gray-900 px-3 py-1 rounded-md">
-              <Bath className="w-3 h-3 mr-1" /> {property.bathrooms} {property.bathrooms === 1 ? "Bathroom" : "Bathrooms"}
-            </div>
+            {property.guests && (
+              <span className="bg-gray-900 text-white px-3 py-1 text-sm font-medium rounded-md">
+                {property.guests}{" "}
+                {typeof property.guests === "number" && property.guests === 1
+                  ? "Guest"
+                  : "Guests"}
+              </span>
+            )}
+            {property.bedrooms && (
+              <span className="bg-gray-200 text-gray-900 px-3 py-1 text-sm font-medium rounded-md">
+                {property.bedrooms}{" "}
+                {typeof property.bedrooms === "number" && property.bedrooms === 1
+                  ? "Bedroom"
+                  : "Bedrooms"}
+              </span>
+            )}
+            {property.bathrooms && (
+              <span className="bg-gray-200 text-gray-900 px-3 py-1 text-sm font-medium rounded-md">
+                {property.bathrooms}{" "}
+                {typeof property.bathrooms === "number" && property.bathrooms === 1
+                  ? "Bathroom"
+                  : "Bathrooms"}
+              </span>
+            )}
           </div>
 
           {/* Property name */}

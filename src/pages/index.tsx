@@ -447,7 +447,7 @@ const Home = () => {
     {
       id: "whispering-pines",
       name: "The Aspens | 1 Bed | Ski-in/Ski-out",
-      image: "/photos/properties/The Aspens/4800-Spearhead-Drive-3.JPG",
+      image: "/photos/properties/The Aspens/4800-Spearhead-Drive-1.JPG",
       guests: 4,
       bedrooms: 2,
       beds: 2,
