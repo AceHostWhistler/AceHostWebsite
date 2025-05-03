@@ -652,8 +652,8 @@ const Home = () => {
       bedrooms: 2,
       beds: 2,
       bathrooms: 2,
-      priceRange: "$450-$750 per night",
-      winterPrice: "",
+      priceRange: "$12,000 per month",
+      winterPrice: "3 month minimum",
       holidayPrice: "",
       location: "Vancouver, BC",
       link: "/vancouver-listings/vancouver-house-corner-unit-30th-floor",
@@ -669,7 +669,7 @@ const Home = () => {
     if (activeFilter === "pets") return listing.isPetFriendly === true;
     if (activeFilter === "skiinout") return listing.isSkiInSkiOut === true;
     if (activeFilter === "whistler") return listing.location === "whistler";
-    if (activeFilter === "worldwide") return listing.location === "worldwide" || listing.location === "vancouver";
+    if (activeFilter === "worldwide") return listing.location !== "whistler";
     return listing.location === activeFilter;
   });
 

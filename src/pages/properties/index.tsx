@@ -872,7 +872,7 @@ export default function Properties() {
               "Prime Location",
               "Building Amenities",
             ],
-            priceRange: "$450-$750 per night",
+            priceRange: "$12,000 per month | 3 month minimum",
             link: "/vancouver-listings/vancouver-house-corner-unit-30th-floor"
           },
           {
