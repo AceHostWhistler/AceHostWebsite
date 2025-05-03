@@ -257,7 +257,7 @@ export default function BlogPost() {
               </h3>
               <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/Slopeside Kadenwood/03-2945 Slope Side 03.jpg"
+                  src="/photos/properties/Slopeside Kadenwood/03-2945 Kadenwood Dr 03.jpg"
                   alt="Slopeside Chalet in Kadenwood with summer views"
                   fill
                   className="object-cover"
@@ -454,7 +454,7 @@ export default function BlogPost() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Slopeside Kadenwood/10-2945 Slope Side 10.jpg"
+                    src="/photos/properties/Slopeside Kadenwood/10-2945 Kadenwood Dr 10.jpg"
                     alt="Outdoor dining area with mountain backdrop"
                     fill
                     className="object-cover"
