@@ -110,49 +110,15 @@ const MarquiseSkiInSkiOut = () => {
         <Navigation transparent={false} />
 
         <main>
-          {/* Header with Property Info */}
-          <div className="max-w-7xl mx-auto px-4 pt-8">
-            <div className="flex justify-center mb-6">
-              <div className="bg-black text-white rounded-full py-2 px-6 flex items-center space-x-4">
-                <span>4 guests</span>
-                <span className="mx-3 text-gray-500">|</span>
-                <span>Nightly Price Range: $160-$450</span>
-              </div>
-            </div>
-
-            <h1 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-8">
-              Marquise 2-Bed Ski-in Ski-out
-            </h1>
-
-            <div className="flex flex-wrap justify-center gap-4 mb-10">
-              <button
-                onClick={() => setShowAllPhotos(true)}
-                className="px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium"
-              >
-                More Photos
-              </button>
-              <Link
-                href="#details"
-                className="px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium"
-              >
-                Details
-              </Link>
-              <Link
-                href="/contact"
-                className="px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium"
-              >
-                Contact Us
-              </Link>
-              <a
-                href="https://www.airbnb.ca/rooms/1370367404602078616?guests=1&adults=1&s=67&unique_share_id=eb381b39-e67d-44ea-9d7c-2de2e1b5fa20"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-8 py-3 bg-black hover:bg-gray-900 text-white rounded font-medium"
-              >
-                Book on Airbnb
-              </a>
-            </div>
-          </div>
+          <PropertyHeader
+            title="Marquise 2-Bed Ski-in Ski-out"
+            guests={4}
+            bedrooms={1}
+            beds={2}
+            bathrooms={1}
+            priceRange="Nightly Price Range: $160-$450"
+            airbnbLink="https://www.airbnb.ca/rooms/1370367404602078616?guests=1&adults=1&s=67&unique_share_id=eb381b39-e67d-44ea-9d7c-2de2e1b5fa20"
+          />
 
           {/* Photo Grid */}
           <div className="max-w-7xl mx-auto px-4 mb-16">
