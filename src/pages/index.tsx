@@ -423,7 +423,7 @@ const Home = () => {
       location: "whistler",
       link: "/listings/luxe-cozy-3-bed-whistler-village",
       airbnbLink:
-        "https://www.airbnb.ca/rooms/1249285355870765792?guests=1&adults=1&s=67&unique_share_id=5fc53f3d-300c-4b8b-aee5-d9f5b263ae3c",
+        "https://www.airbnb.ca/rooms/1249285355870765792?guests=1&adults=1&s=67&unique_share_id=0ecd2877-9bf3-4bcc-92f2-5579a0af8e7f",
       isPetFriendly: false,
       isSkiInSkiOut: false,
     },
@@ -441,6 +441,7 @@ const Home = () => {
       holidayPrice: "6-months Winter: $17,000 monthly | 12+ months: $14,000 monthly",
       location: "whistler",
       link: "/listings/dream-log-chalet-5-bedroom-4-bath-creekside",
+      contactLink: "/contact",
       isPetFriendly: false,
       isSkiInSkiOut: false,
     },
@@ -1010,6 +1011,28 @@ const Home = () => {
                 </button>
               </div>
             </div>
+
+            {/* Worldwide Properties Description - Only shown when worldwide filter is active */}
+            {activeFilter === "worldwide" && (
+              <div className="max-w-4xl mx-auto mb-12">
+                <div className="bg-gray-50 p-10 rounded-2xl shadow-sm">
+                  <h3 className="text-2xl font-medium mb-6 text-gray-900">
+                    Introducing AceHost Global VIP Concierge Services & Villas
+                  </h3>
+                  <div className="text-gray-700 space-y-6">
+                    <p>
+                      We're thrilled to announce that AceHost now offers exclusive VIP concierge services and handpicked luxury properties across the globe. Whether you're dreaming of a beachfront estate, a serene countryside chateau, or a sleek modern villa for a group getaway, our team will source the perfect destination tailored to your vision.
+                    </p>
+                    <p>
+                      Below is a curated selection of homes we currently work with—but our network extends far beyond. If you're planning your next vacation and looking for a large, private villa paired with personalized service, we're here to make it happen.
+                    </p>
+                    <p className="font-medium">
+                      This offering is reserved for our top-tier VIP clients & repeat guests. Inquire today to see if you qualify.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
 
             {/* Property Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">

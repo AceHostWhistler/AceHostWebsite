@@ -703,7 +703,7 @@ export default function Properties() {
         id: "worldwide",
         title: "Worldwide Properties",
         description:
-          "Experience luxury living in our handpicked properties across the globe, from Vancouver's urban sophistication to exotic international destinations.",
+          "Introducing AceHost Global VIP Concierge Services & Villas We're thrilled to announce that AceHost now offers exclusive VIP concierge services and handpicked luxury properties across the globe. Whether you're dreaming of a beachfront estate, a serene countryside chateau, or a sleek modern villa for a group getaway, our team will source the perfect destination tailored to your vision.\nBelow is a curated selection of homes we currently work with—but our network extends far beyond. If you're planning your next vacation and looking for a large, private villa paired with personalized service, we're here to make it happen.\nThis offering is reserved for our top-tier VIP clients & repeat guests. Inquire today to see if you qualify.",
         properties: [
           {
             id: "santorini-greece-villa-eclipse",
@@ -1533,9 +1533,11 @@ export default function Properties() {
                       {category.title}
                     </h2>
                     {category.description && (
-                      <p className="text-base sm:text-lg text-gray-600 max-w-4xl">
-                        {category.description}
-                      </p>
+                      <div className="text-base sm:text-lg text-gray-600 max-w-4xl space-y-4">
+                        {category.description.split('\n').map((paragraph, index) => (
+                          <p key={index}>{paragraph}</p>
+                        ))}
+                      </div>
                     )}
                   </div>
 
