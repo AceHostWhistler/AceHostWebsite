@@ -12,7 +12,6 @@ import PropertyHeader from "@/components/PropertyHeader";
 const CotswoldsUKSohoFarmHouse = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
-  const [isImageLoading, setIsImageLoading] = useState(false);
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
   const [touchEndX, setTouchEndX] = useState<number | null>(null);
 
@@ -48,69 +47,83 @@ const CotswoldsUKSohoFarmHouse = () => {
     "/photos/properties/Cotswolds UK - Soho Farm House/224A5352.jpg",
     "/photos/properties/Cotswolds UK - Soho Farm House/224A5368.jpg",
     "/photos/properties/Cotswolds UK - Soho Farm House/224A5435.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5463.jpg"
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5463.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/012A0872.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/012A0876.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5297.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5313.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5314.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5324.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5331.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5339.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5345.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5351.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5361.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5362.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5398.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5405.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5413.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5430.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5433.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5437.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5441.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5468.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5470.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5492.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5502.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5508.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5518.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5532.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5535.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/8596128-exterior08-800.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/8596128-exterior10-800.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/8596128-exterior18-800.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/8596128-exterior21-800.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/DJI_20250502143633_0658_D.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/DJI_20250502143723_0661_D.jpg"
   ];
 
-  const handleImageLoad = () => {
-    setIsImageLoading(false);
-  };
-
-  const openPhotoGallery = (index: number) => {
+  const handlePhotoClick = (index: number) => {
     setSelectedPhotoIndex(index);
-    setShowAllPhotos(true);
-    document.body.style.overflow = "hidden";
   };
 
-  const closePhotoGallery = () => {
-    setShowAllPhotos(false);
-    document.body.style.overflow = "auto";
+  const closeFullScreenPhoto = () => {
+    setSelectedPhotoIndex(null);
   };
 
-  const navigatePhotos = (direction: "next" | "prev") => {
+  const navigatePhoto = (direction: "prev" | "next") => {
     if (selectedPhotoIndex === null) return;
-    
-    setIsImageLoading(true);
-    
-    if (direction === "next") {
-      setSelectedPhotoIndex((selectedPhotoIndex + 1) % photos.length);
+
+    if (direction === "prev") {
+      setSelectedPhotoIndex(
+        selectedPhotoIndex === 0 ? photos.length - 1 : selectedPhotoIndex - 1
+      );
     } else {
-      setSelectedPhotoIndex((selectedPhotoIndex - 1 + photos.length) % photos.length);
+      setSelectedPhotoIndex(
+        selectedPhotoIndex === photos.length - 1 ? 0 : selectedPhotoIndex + 1
+      );
     }
   };
 
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchStartX(e.touches[0].clientX);
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    setTouchEndX(e.touches[0].clientX);
-  };
-
-  const handleTouchEnd = () => {
-    if (!touchStartX || !touchEndX) return;
-    
-    const difference = touchStartX - touchEndX;
-    if (difference > 50) {
-      // Swipe left, go to next
-      navigatePhotos("next");
-    } else if (difference < -50) {
-      // Swipe right, go to previous
-      navigatePhotos("prev");
-    }
-    
-    setTouchStartX(null);
-    setTouchEndX(null);
+  // Close full screen view when all photos modal is closed
+  const closeAllPhotos = () => {
+    setShowAllPhotos(false);
+    setSelectedPhotoIndex(null);
   };
 
   const handleKeyDown = (e: KeyboardEvent) => {
-    if (!showAllPhotos) return;
+    if (!showAllPhotos && selectedPhotoIndex === null) return;
     
     if (e.key === "ArrowRight") {
-      navigatePhotos("next");
+      navigatePhoto("next");
     } else if (e.key === "ArrowLeft") {
-      navigatePhotos("prev");
+      navigatePhoto("prev");
     } else if (e.key === "Escape") {
-      closePhotoGallery();
+      if (selectedPhotoIndex !== null) {
+        closeFullScreenPhoto();
+      } else if (showAllPhotos) {
+        closeAllPhotos();
+      }
     }
   };
 
@@ -142,53 +155,44 @@ const CotswoldsUKSohoFarmHouse = () => {
             guests={14}
             bedrooms={8}
             bathrooms={5}
-            priceRange="Contact for pricing"
+            priceRange="£1,100-£1,500 per night"
             contactLink="/contact"
           />
 
           {/* Photo Grid */}
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-              {/* Main Large Image */}
-              <div 
-                className="col-span-2 row-span-2 relative rounded-xl overflow-hidden cursor-pointer h-[500px] md:h-auto"
-                onClick={() => openPhotoGallery(0)}
-              >
-                <Image
-                  src={photos[0]}
-                  alt="Cotswolds UK - Soho Farm House - Main Property View"
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-500"
-                  priority
-                />
-              </div>
-
-              {/* Smaller Grid Images */}
-              {photos.slice(1, 5).map((photo, index) => (
-                <div 
-                  key={index + 1} 
-                  className="relative rounded-xl overflow-hidden cursor-pointer h-64 md:h-auto"
-                  onClick={() => openPhotoGallery(index + 1)}
+          <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16" id="photos">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+              {photos.slice(0, 8).map((photo, index) => (
+                <div
+                  key={index}
+                  className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
+                  onClick={() => handlePhotoClick(index)}
                 >
                   <Image
                     src={photo}
-                    alt={`Cotswolds UK - Soho Farm House - Interior or Exterior View ${index + 1}`}
+                    alt={`Cotswolds UK - Soho Farm House ${index + 1}`}
                     fill
-                    className="object-cover hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                    priority={index < 2}
+                    loading={index < 2 ? "eager" : "lazy"}
+                    quality={index < 4 ? 85 : 75}
+                    placeholder="blur"
+                    blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzMiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="
                   />
                 </div>
               ))}
             </div>
-
-            <button
-              onClick={() => openPhotoGallery(0)}
-              className="mt-4 text-gray-800 hover:text-black flex items-center text-sm font-medium"
-            >
-              <span className="mr-2">View all photos</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </button>
+            {photos.length > 8 && (
+              <div className="text-center mt-6">
+                <button
+                  onClick={() => setShowAllPhotos(true)}
+                  className="inline-flex items-center px-6 py-2 bg-black hover:bg-gray-900 text-white rounded-full text-sm font-medium"
+                >
+                  View all {photos.length} photos
+                </button>
+              </div>
+            )}
           </div>
 
           {/* Property Description */}
@@ -197,7 +201,7 @@ const CotswoldsUKSohoFarmHouse = () => {
               Welcome to your countryside dream retreat—just 4 minutes by car (or a scenic 30-minute walk through a private trail) from the world-famous Soho Farmhouse. This beautifully renovated 8-bedroom, 5-bathroom stone estate offers over 320m² of luxurious living space across two dwellings, all set on a stunning and serene 2-acre property.
             </p>
           </div>
-
+          
           {/* Accommodation Section */}
           <div className="max-w-6xl mx-auto px-6 md:px-10 lg:px-8 mb-24">
             <div className="mb-16 text-center">
@@ -324,7 +328,7 @@ const CotswoldsUKSohoFarmHouse = () => {
                     <svg className="w-5 h-5 text-black mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                     </svg>
-                    <span>Private tennis court</span>
+                    <span>Private tennis court (New photos coming soon as court has recently been completely renovated and redone to pro standards)</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 text-black mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -343,6 +347,53 @@ const CotswoldsUKSohoFarmHouse = () => {
             </div>
           </div>
 
+          {/* Pricing and Terms Section */}
+          <div className="max-w-5xl mx-auto px-6 md:px-10 lg:px-8 mb-24 bg-gray-50 rounded-xl p-10">
+            <h2 className="text-2xl font-bold mb-8 text-center">Pricing and Terms</h2>
+            
+            <div className="mb-12">
+              <h3 className="text-xl font-semibold mb-6">Rates</h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-full border border-gray-300 rounded-lg shadow-sm">
+                  <thead>
+                    <tr className="bg-gray-100">
+                      <th className="px-6 py-4 text-left text-sm font-medium text-gray-700 uppercase tracking-wider border-b">Rate</th>
+                      <th className="px-6 py-4 text-left text-sm font-medium text-gray-700 uppercase tracking-wider border-b">Details</th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-white divide-y divide-gray-300">
+                    <tr>
+                      <td className="px-6 py-4 whitespace-nowrap border-r">Price Range</td>
+                      <td className="px-6 py-4 whitespace-nowrap">£1,100-£1,500 per night</td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 whitespace-nowrap border-r">Minimum Stay</td>
+                      <td className="px-6 py-4 whitespace-nowrap">3 nights</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+            <div className="mb-12">
+              <h3 className="text-xl font-semibold mb-4">Payment Policy</h3>
+              <ul className="list-disc pl-8 space-y-3 text-gray-800 leading-relaxed">
+                <li>To secure a reservation, 50% of the rental amount is required at the time of booking.</li>
+                <li>The remaining 50% must be paid 60 days before check-in.</li>
+                <li>For bookings made 60 days or less before check-in, the full rental amount (100%) must be paid.</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-semibold mb-4">Cancellation Policy</h3>
+              <ul className="list-disc pl-8 space-y-3 text-gray-800 leading-relaxed">
+                <li>Cancellations more than 60 days before arrival: 50% refund of the total reservation price</li>
+                <li>Cancellations within 60 days of arrival: No refund</li>
+                <li>Early departures or no-shows: No refund</li>
+              </ul>
+            </div>
+          </div>
+
           <div className="max-w-4xl mx-auto px-6 md:px-10 lg:px-8 text-center mb-24">
             <h2 className="text-2xl sm:text-3xl font-bold mb-6">Experience countryside luxury at its finest</h2>
             <p className="text-gray-700 max-w-3xl mx-auto mb-8 leading-relaxed text-lg">
@@ -357,55 +408,125 @@ const CotswoldsUKSohoFarmHouse = () => {
           </div>
 
           {/* All Photos Modal */}
-          {showAllPhotos && selectedPhotoIndex !== null && (
-            <div 
-              className="fixed inset-0 bg-black z-50 flex items-center justify-center"
-              onTouchStart={handleTouchStart}
-              onTouchMove={handleTouchMove}
-              onTouchEnd={handleTouchEnd}
+          {showAllPhotos && (
+            <div className="fixed inset-0 bg-black z-50 overflow-y-auto">
+              <div className="flex justify-between items-center p-4 sticky top-0 bg-black bg-opacity-75 z-10">
+                <h3 className="text-white font-medium">
+                  Cotswolds UK - Soho Farm House | All Photos ({photos.length})
+                </h3>
+                <button
+                  onClick={closeAllPhotos}
+                  className="text-white hover:text-gray-300"
+                >
+                  <X size={24} />
+                </button>
+              </div>
+              <div className="container mx-auto p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                {photos.map((photo, index) => (
+                  <div
+                    key={index}
+                    className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer"
+                    onClick={() => handlePhotoClick(index)}
+                  >
+                    <Image
+                      src={photo}
+                      alt={`Cotswolds UK - Soho Farm House photo ${index + 1}`}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                      className="object-cover hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Full Screen Photo Modal */}
+          {selectedPhotoIndex !== null && (
+            <div
+              className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center"
+              onClick={closeFullScreenPhoto}
+              onTouchStart={(e) => setTouchStartX(e.touches[0].clientX)}
+              onTouchMove={(e) => setTouchEndX(e.touches[0].clientX)}
+              onTouchEnd={() => {
+                if (touchStartX && touchEndX) {
+                  const diff = touchStartX - touchEndX;
+                  if (diff > 50) {
+                    // Swipe left
+                    navigatePhoto("next");
+                  } else if (diff < -50) {
+                    // Swipe right
+                    navigatePhoto("prev");
+                  }
+                }
+                setTouchStartX(null);
+                setTouchEndX(null);
+              }}
             >
-              <button 
-                className="absolute top-4 right-4 text-white hover:text-gray-300 z-10"
-                onClick={closePhotoGallery}
+              <button
+                className="absolute top-4 right-4 text-white z-10"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  closeFullScreenPhoto();
+                }}
               >
                 <X size={32} />
               </button>
-              
-              <button 
-                className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 z-10"
-                onClick={() => navigatePhotos("prev")}
+              <button
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white z-10 bg-black bg-opacity-50 p-2 rounded-full"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  navigatePhoto("prev");
+                }}
               >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M15 18l-6-6 6-6" />
                 </svg>
               </button>
-              
-              <button 
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 z-10"
-                onClick={() => navigatePhotos("next")}
+              <button
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white z-10 bg-black bg-opacity-50 p-2 rounded-full"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  navigatePhoto("next");
+                }}
               >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M9 18l6-6-6-6" />
                 </svg>
               </button>
-              
-              <div className="relative w-full h-full max-w-6xl max-h-[80vh] mx-auto flex items-center justify-center">
-                {isImageLoading && (
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-white"></div>
-                  </div>
-                )}
+              <div className="relative w-full h-[calc(100vh-120px)] max-w-6xl mx-auto">
                 <Image
                   src={photos[selectedPhotoIndex]}
-                  alt={`Photo ${selectedPhotoIndex + 1} of Cotswolds UK - Soho Farm House`}
+                  alt={`Cotswolds UK - Soho Farm House photo ${selectedPhotoIndex + 1}`}
                   fill
+                  sizes="100vw"
                   className="object-contain"
-                  onLoad={handleImageLoad}
+                  priority
                 />
               </div>
-              
-              <div className="absolute bottom-4 text-white text-center w-full">
-                <p>{selectedPhotoIndex + 1} of {photos.length}</p>
+              <div className="absolute bottom-4 left-0 right-0 text-center text-white">
+                {selectedPhotoIndex + 1} / {photos.length}
               </div>
             </div>
           )}
