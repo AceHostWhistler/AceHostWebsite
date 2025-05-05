@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
-import PropertyGallery from "@/components/PropertyGallery";
 import PropertyHeader from "@/components/PropertyHeader";
 import Footer from "@/components/Footer";
 
@@ -63,8 +62,25 @@ const LuxeCozyWhistlerVillage = () => {
             contactLink="/contact"
           />
 
-          {/* Photo Gallery */}
-          <PropertyGallery photos={photos} propertyName="luxe cozy 3 bed whistler village" />
+          {/* Photo Grid */}
+          <div className="max-w-7xl mx-auto px-4 mb-16">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+              {photos.map((photo, index) => (
+                <div
+                  key={index}
+                  className="aspect-[4/3] relative cursor-pointer"
+                  onClick={() => setShowAllPhotos(true)}
+                >
+                  <Image
+                    src={photo}
+                    alt={`Luxe-Cozy Whistler Village interior ${index + 1}`}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
 
           {/* Property Description */}
           <div className="max-w-6xl mx-auto px-4" id="details">
@@ -228,7 +244,36 @@ const LuxeCozyWhistlerVillage = () => {
         </main>
 
         {/* Photo Gallery Modal */}
-        
+        {showAllPhotos && (
+          <div className="fixed inset-0 z-50 bg-black overflow-y-auto">
+            <div className="sticky top-0 z-10 bg-black p-4 flex justify-between items-center">
+              <h2 className="text-xl text-white font-medium">
+                Luxe-Cozy 3-Bed Whistler Village - All Photos
+              </h2>
+              <button
+                onClick={() => setShowAllPhotos(false)}
+                className="text-white hover:text-gray-300"
+              >
+                Close
+              </button>
+            </div>
+
+            <div className="max-w-7xl mx-auto py-6 px-4">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+                {photos.map((photo, index) => (
+                  <div key={index} className="relative aspect-[4/3]">
+                    <Image
+                      src={photo}
+                      alt={`Luxe-Cozy Whistler Village photo ${index + 1}`}
+                      fill
+                      className="object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
 
         <Footer />
       </div>

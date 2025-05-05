@@ -1,14 +1,13 @@
-import React, { useRef } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
-import PropertyGallery from "@/components/PropertyGallery";
 import PropertyHeader from "@/components/PropertyHeader";
 import Footer from "@/components/Footer";
-
+import { X } from "lucide-react";
 import { FaBed, FaBath } from "react-icons/fa";
 
 type PropertyPhoto = {
@@ -17,7 +16,11 @@ type PropertyPhoto = {
 };
 
 const HeronViewsWhistlerVillage = () => {
-  
+  const [showAllPhotos, setShowAllPhotos] = useState(false);
+  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
+  const [isImageLoading, setIsImageLoading] = useState(false);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const [touchEndX, setTouchEndX] = useState<number | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   // Property photos
@@ -103,17 +106,51 @@ const HeronViewsWhistlerVillage = () => {
     "/photos/properties/3445-Heron-Place/01-3445 Heron Place 01.jpg",
   ];
 
-  
+  const handlePhotoClick = (index: number) => {
+    setSelectedPhotoIndex(index);
+  };
 
-  
+  const closeFullScreenPhoto = () => {
+    setSelectedPhotoIndex(null);
+  };
 
-  
+  const navigatePhoto = (direction: "prev" | "next") => {
+    if (selectedPhotoIndex === null) return;
+
+    if (direction === "prev") {
+      setSelectedPhotoIndex(
+        selectedPhotoIndex === 0 ? photos.length - 1 : selectedPhotoIndex - 1
+      );
+    } else {
+      setSelectedPhotoIndex(
+        selectedPhotoIndex === photos.length - 1 ? 0 : selectedPhotoIndex + 1
+      );
+    }
+  };
 
   // Close full screen view when all photos modal is closed
-  
+  const closeAllPhotos = () => {
+    setShowAllPhotos(false);
+    setSelectedPhotoIndex(null);
+  };
 
   // Add keyboard navigation
-  
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (selectedPhotoIndex === null) return;
+      
+      if (e.key === "ArrowLeft") {
+        navigatePhoto("prev");
+      } else if (e.key === "ArrowRight") {
+        navigatePhoto("next");
+      } else if (e.key === "Escape") {
+        closeFullScreenPhoto();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedPhotoIndex]);
 
   return (
     <>
@@ -138,8 +175,38 @@ const HeronViewsWhistlerVillage = () => {
             airbnbLink="https://www.airbnb.ca/rooms/1168163637007998550?guests=1&adults=1&s=67&unique_share_id=8227e964-920d-4bc0-8073-13043963151f"
           />
 
-          {/* Photo Gallery */}
-          <PropertyGallery photos={photos} propertyName="heron views whistler village" />
+          {/* Photo Grid */}
+          <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16" id="photos">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+              {photos.slice(0, 8).map((photo, index) => (
+                <div
+                  key={index}
+                  className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
+                  onClick={() => handlePhotoClick(index)}
+                >
+                  <Image
+                    src={photo}
+                    alt={`Heron Views interior ${index + 1}`}
+                    width={1920}
+                    height={1080}
+                    className="w-full h-full object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    priority
+                  />
+                </div>
+              ))}
+            </div>
+            {photos.length > 8 && (
+              <div className="text-center mt-6">
+                <button
+                  onClick={() => setShowAllPhotos(true)}
+                  className="inline-flex items-center px-6 py-2 bg-black hover:bg-gray-900 text-white rounded-full text-sm font-medium"
+                >
+                  View all {photos.length} photos
+                </button>
+              </div>
+            )}
+          </div>
 
           {/* Property Description */}
           <div className="max-w-6xl mx-auto px-4" id="details">
@@ -216,19 +283,109 @@ const HeronViewsWhistlerVillage = () => {
             </div>
           </div>
 
-          
+          {/* Photos Modal - Show all photos */}
+          {showAllPhotos && (
+            <div className="fixed inset-0 bg-black bg-opacity-90 z-50 overflow-y-auto">
+              <div className="flex justify-between items-center p-4 sticky top-0 bg-black bg-opacity-75 z-10">
+                <h3 className="text-white text-xl font-medium">
+                  Heron Views - {photos.length} photos
+                </h3>
+                <button
+                  onClick={closeAllPhotos}
+                  className="text-white hover:text-gray-300"
+                >
+                  <X size={24} />
+                </button>
+              </div>
 
-          
+              <div className="container mx-auto px-4 py-8">
+                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+                  {photos.map((photo, index) => (
+                    <div
+                      key={index}
+                      className="aspect-[4/3] relative cursor-pointer"
+                      onClick={() => handlePhotoClick(index)}
+                    >
+                      <Image
+                        src={photo}
+                        alt={`Heron Views photo ${index + 1}`}
+                        width={1920}
+                        height={1080}
+                        className="w-full h-full object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Full Screen Photo View */}
+          {selectedPhotoIndex !== null && (
+            <div 
+              className="fixed inset-0 z-[60] bg-black flex items-center justify-center"
+              onTouchStart={() => {
+                setTouchStartX(null);
+                setTouchEndX(null);
+              }}
+              onTouchMove={(e) => {
+                setTouchEndX(e.touches[0].clientX);
+              }}
+              onTouchEnd={(e) => {
+                if (!touchStartX || !touchEndX) return;
+                
+                const difference = touchStartX - touchEndX;
+                
+                if (Math.abs(difference) > 50) {
+                  if (difference > 0) {
+                    navigatePhoto("prev");
+                  } else {
+                    navigatePhoto("next");
+                  }
+                }
+                
+                setTouchStartX(null);
+                setTouchEndX(null);
+              }}
+            >
+              <div className="absolute top-4 right-4 flex space-x-4">
+                <button
+                  onClick={closeFullScreenPhoto}
+                  className="text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
+                  aria-label="Close"
+                >
+                  <X className="h-6 w-6" />
+                </button>
+              </div>
+
+              <button
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  navigatePhoto("prev");
+                }}
+                aria-label="Previous photo"
+              >
+                &larr;
+              </button>
+
+              <div className="relative w-full h-full max-w-6xl max-h-[80vh] mx-auto px-4">
+                {isImageLoading && (
+                  <div className="absolute inset-0 flex items-center justify-center z-10">
+                    <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                  </div>
+                )}
                 <div className="relative w-full h-full">
                   <Image
                     src={photos[selectedPhotoIndex]}
-                    alt={`Property full view ${1}`}
+                    alt={`Property full view ${selectedPhotoIndex + 1}`}
                     width={1920}
                     height={1080}
-                    className={`object-contain transition-opacity duration-300 true ? "opacity-100" : "opacity-0"`}
+                    className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
                     sizes="100vw"
                     onLoadingComplete={(img) => {
-                      
+                      setIsImageLoading(false);
                       img.classList.remove("opacity-0");
                     }}
                     quality={85}
@@ -250,7 +407,7 @@ const HeronViewsWhistlerVillage = () => {
 
               <div className="absolute bottom-4 left-0 right-0 text-center z-20">
                 <p className="text-white text-sm bg-black bg-opacity-50 inline-block px-4 py-2 rounded-full">
-                  {1} / {photos.length}
+                  {selectedPhotoIndex + 1} / {photos.length}
                 </p>
               </div>
             </div>

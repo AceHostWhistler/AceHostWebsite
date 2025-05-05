@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
-import PropertyGallery from "@/components/PropertyGallery";
 import Footer from "@/components/Footer";
-
+import { X } from "lucide-react";
 import PropertyHeader from "@/components/PropertyHeader";
 
 const VillaRosabellaMykonos = () => {
-  
+  const [showAllPhotos, setShowAllPhotos] = useState(false);
+  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
+  const [isImageLoading, setIsImageLoading] = useState(false);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const [touchEndX, setTouchEndX] = useState<number | null>(null);
 
   // Property photos
   const photos = [
@@ -77,14 +80,34 @@ const VillaRosabellaMykonos = () => {
     "/photos/properties/Villa Rosabella Mykonos/Villa Rosabella (59).jpg"
   ];
 
-  
+  const handlePhotoClick = (index: number) => {
+    setIsImageLoading(false);
+    setSelectedPhotoIndex(index);
+  };
 
-  
+  const closeFullScreenPhoto = () => {
+    setSelectedPhotoIndex(null);
+  };
 
-  
+  const navigatePhoto = (direction: "prev" | "next") => {
+    if (selectedPhotoIndex === null) return;
+
+    if (direction === "prev") {
+      setSelectedPhotoIndex(
+        selectedPhotoIndex === 0 ? photos.length - 1 : selectedPhotoIndex - 1
+      );
+    } else {
+      setSelectedPhotoIndex(
+        selectedPhotoIndex === photos.length - 1 ? 0 : selectedPhotoIndex + 1
+      );
+    }
+  };
 
   // Close full screen view when all photos modal is closed
-  
+  const closeAllPhotos = () => {
+    setShowAllPhotos(false);
+    setSelectedPhotoIndex(null);
+  };
 
   return (
     <>
@@ -110,8 +133,41 @@ const VillaRosabellaMykonos = () => {
             contactLink="/contact"
           />
 
-          {/* Photo Gallery */}
-          <PropertyGallery photos={photos} propertyName="villa rosabella mykonos" />
+          {/* Photo Grid */}
+          <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16" id="photos">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+              {photos.slice(0, 28).map((photo, index) => (
+                <div
+                  key={index}
+                  className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
+                  onClick={() => handlePhotoClick(index)}
+                >
+                  <Image
+                    src={photo}
+                    alt={`Villa Rosabella Mykonos ${index + 1}`}
+                    fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                    priority={index < 2}
+                    loading={index < 2 ? "eager" : "lazy"}
+                    quality={index < 4 ? 85 : 75}
+                    placeholder="blur"
+                    blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzMiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="
+                  />
+                </div>
+              ))}
+            </div>
+            {photos.length > 28 && (
+              <div className="text-center mt-6">
+                <button
+                  onClick={() => setShowAllPhotos(true)}
+                  className="inline-flex items-center px-6 py-2 bg-black hover:bg-gray-900 text-white rounded-full text-sm font-medium"
+                >
+                  View all {photos.length} photos
+                </button>
+              </div>
+            )}
+          </div>
 
           {/* Property Description */}
           <div className="max-w-5xl mx-auto px-6 md:px-10 lg:px-8" id="details">
@@ -349,13 +405,107 @@ const VillaRosabellaMykonos = () => {
         <Footer />
 
         {/* Full screen photo viewer */}
-        
+        {selectedPhotoIndex !== null && (
+          <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center">
+            <button
+              onClick={closeFullScreenPhoto}
+              className="absolute top-4 right-4 text-white z-10"
+              aria-label="Close full screen view"
+            >
+              <X size={32} />
+            </button>
+            <button
+              onClick={() => navigatePhoto("prev")}
+              className="absolute left-4 text-white z-10 bg-black bg-opacity-50 p-2 rounded-full"
+              aria-label="Previous photo"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.41 7.41L14 6L8 12L14 18L15.41 16.59L10.83 12L15.41 7.41Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+            <button
+              onClick={() => navigatePhoto("next")}
+              className="absolute right-4 text-white z-10 bg-black bg-opacity-50 p-2 rounded-full"
+              aria-label="Next photo"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 6L8.59 7.41L13.17 12L8.59 16.59L10 18L16 12L10 6Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+            <div className="relative w-full h-full flex items-center justify-center">
+              <Image
+                src={photos[selectedPhotoIndex]}
+                alt={`Villa Rosabella Mykonos photo ${selectedPhotoIndex + 1}`}
+                className="object-contain max-h-screen max-w-full"
+                width={1200}
+                height={800}
+                priority={true}
+                onLoadingComplete={() => setIsImageLoading(false)}
+              />
+              {isImageLoading && (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-white"></div>
+                </div>
+              )}
             </div>
           </div>
         )}
 
         {/* All photos modal */}
-        
+        {showAllPhotos && (
+          <div className="fixed inset-0 bg-white z-50 overflow-y-auto">
+            <div className="sticky top-0 bg-white shadow-md z-10 px-4 py-3 flex justify-between items-center">
+              <h3 className="text-xl font-semibold">
+                Villa Rosabella | Mykonos, Greece - All Photos
+              </h3>
+              <button
+                onClick={closeAllPhotos}
+                className="p-2 rounded-full hover:bg-gray-100"
+                aria-label="Close all photos"
+              >
+                <X size={24} />
+              </button>
+            </div>
+            <div className="container mx-auto py-8 px-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {photos.map((photo, index) => (
+                  <div
+                    key={index}
+                    className="relative aspect-[4/3] cursor-pointer rounded-lg overflow-hidden"
+                    onClick={() => handlePhotoClick(index)}
+                  >
+                    <Image
+                      src={photo}
+                      alt={`Villa Rosabella Mykonos photo ${index + 1}`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );

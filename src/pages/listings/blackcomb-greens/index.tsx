@@ -1,19 +1,22 @@
-import React from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
-import PropertyGallery from "@/components/PropertyGallery";
 import PropertyHeader from "@/components/PropertyHeader";
 import Footer from "@/components/Footer";
 import PropertyDetails from "@/components/PropertyDetails";
-
+import { X } from "lucide-react";
 import LazyVimeoPlayer from "../../../components/LazyVimeoPlayer";
 
 const BlackcombGreens = () => {
-  
+  const [showAllPhotos, setShowAllPhotos] = useState(false);
+  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
+  const [isImageLoading, setIsImageLoading] = useState(false);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const [touchEndX, setTouchEndX] = useState<number | null>(null);
 
   // Property photos
   const photos = [
@@ -24,21 +27,62 @@ const BlackcombGreens = () => {
     // Add all your photos here
   ];
 
-  
+  const handlePhotoClick = (index: number) => {
+    setSelectedPhotoIndex(index);
+  };
 
-  
+  const handleImageLoad = () => {
+    setIsImageLoading(false);
+  };
 
-  
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStartX(e.touches[0].clientX);
+    setTouchEndX(null);
+  };
 
-  
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEndX(e.touches[0].clientX);
+  };
 
-  
+  const handleTouchEnd = () => {
+    if (!touchStartX || !touchEndX) return;
+    
+    const difference = touchStartX - touchEndX;
+    
+    if (Math.abs(difference) > 50) {
+      if (difference > 0) {
+        navigatePhoto("next");
+      } else {
+        navigatePhoto("prev");
+      }
+    }
+    
+    setTouchStartX(null);
+    setTouchEndX(null);
+  };
 
-  
+  const closeFullScreenPhoto = () => {
+    setSelectedPhotoIndex(null);
+  };
 
-  
+  const navigatePhoto = (direction: "prev" | "next") => {
+    if (selectedPhotoIndex === null) return;
 
-  
+    if (direction === "prev") {
+      setSelectedPhotoIndex(
+        selectedPhotoIndex === 0 ? photos.length - 1 : selectedPhotoIndex - 1
+      );
+    } else {
+      setSelectedPhotoIndex(
+        selectedPhotoIndex === photos.length - 1 ? 0 : selectedPhotoIndex + 1
+      );
+    }
+  };
+
+  const closeAllPhotos = () => {
+    setShowAllPhotos(false);
+    setSelectedPhotoIndex(null);
+  };
 
   return (
     <>
@@ -71,7 +115,7 @@ const BlackcombGreens = () => {
                 <div
                   key={index}
                   className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
-                  
+                  onClick={() => handlePhotoClick(index)}
                 >
                   <Image
                     src={photo}
@@ -91,7 +135,7 @@ const BlackcombGreens = () => {
             {photos.length > 8 && (
               <div className="text-center mt-6">
                 <button
-                  
+                  onClick={() => setShowAllPhotos(true)}
                   className="inline-flex items-center px-6 py-2 bg-black hover:bg-gray-900 text-white rounded-full text-sm font-medium"
                 >
                   View all {photos.length} photos
@@ -113,18 +157,79 @@ const BlackcombGreens = () => {
         </main>
 
         {/* Photo Modal */}
-        
+        {showAllPhotos && (
+          <div className="fixed inset-0 bg-black z-50 overflow-y-auto">
+            <div className="relative min-h-screen">
+              <button
+                onClick={closeAllPhotos}
+                className="absolute top-4 right-4 text-white hover:text-gray-300"
+              >
+                <X size={24} />
+              </button>
+              <div className="p-4">
+                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+                  {photos.map((photo, index) => (
+                    <div
+                      key={index}
+                      className="aspect-[4/3] relative cursor-pointer"
+                      onClick={() => handlePhotoClick(index)}
+                    >
+                      <Image
+                        src={photo}
+                        alt={`Blackcomb Greens interior ${index + 1}`}
+                        fill
+                        className="object-cover hover:opacity-90 transition-opacity"
+                        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
 
-        
+        {/* Full Screen Photo */}
+        {selectedPhotoIndex !== null && (
+          <div 
+            className="fixed inset-0 z-[60] bg-black flex items-center justify-center"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
+            <div className="absolute top-4 right-4 flex space-x-4">
+              <button
+                onClick={closeFullScreenPhoto}
+                className="text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
+                aria-label="Close"
+              >
+                <X className="h-6 w-6" />
+              </button>
+            </div>
+
+            <button
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
+              onClick={() => navigatePhoto("prev")}
+              aria-label="Previous photo"
+            >
+              &larr;
+            </button>
+
+            <div className="relative w-full h-full max-w-6xl max-h-[80vh] mx-auto px-4">
+              {isImageLoading && (
+                <div className="absolute inset-0 flex items-center justify-center z-10">
+                  <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                </div>
+              )}
               <div className="relative w-full h-full">
                 <Image
                   src={photos[selectedPhotoIndex]}
-                  alt={`Property full view ${1}`}
+                  alt={`Property full view ${selectedPhotoIndex + 1}`}
                   fill
                   priority
-                  className={`object-contain transition-opacity duration-300 true ? "opacity-100" : "opacity-0"`}
+                  className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
                   sizes="100vw"
-                  
+                  onLoadingComplete={handleImageLoad}
                   quality={85}
                   loading="eager"
                 />
@@ -133,7 +238,7 @@ const BlackcombGreens = () => {
 
             <button
               className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
-              
+              onClick={() => navigatePhoto("next")}
               aria-label="Next photo"
             >
               &rarr;
@@ -141,7 +246,7 @@ const BlackcombGreens = () => {
 
             <div className="absolute bottom-4 left-0 right-0 text-center z-20">
               <p className="text-white text-sm bg-black bg-opacity-50 inline-block px-4 py-2 rounded-full">
-                {1} / {photos.length}
+                {selectedPhotoIndex + 1} / {photos.length}
               </p>
             </div>
           </div>

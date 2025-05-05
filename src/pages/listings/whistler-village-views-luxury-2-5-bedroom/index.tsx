@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
-import PropertyGallery from "@/components/PropertyGallery";
 import PropertyHeader from "@/components/PropertyHeader";
 import Footer from "@/components/Footer";
 import { X, Users, MapPin, ChevronLeft, ChevronRight, Home } from "lucide-react";
@@ -16,7 +15,11 @@ type PropertyPhoto = {
 };
 
 const WhistlerVillageViews = () => {
-  
+  const [showAllPhotos, setShowAllPhotos] = useState(false);
+  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
+  const [isImageLoading, setIsImageLoading] = useState(false);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const [touchEndX, setTouchEndX] = useState<number | null>(null);
 
   // Property photos
   const photos: PropertyPhoto[] = [
@@ -90,23 +93,80 @@ const WhistlerVillageViews = () => {
     }
   ];
 
-  
+  const handlePhotoClick = (index: number) => {
+    setIsImageLoading(true);
+    setSelectedPhotoIndex(index);
+  };
 
-  
+  const handleImageLoad = () => {
+    setIsImageLoading(false);
+  };
 
-  
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStartX(e.touches[0].clientX);
+    setTouchEndX(null);
+  };
 
-  
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEndX(e.touches[0].clientX);
+  };
 
-  
+  const handleTouchEnd = () => {
+    if (!touchStartX || !touchEndX) return;
+    
+    const difference = touchStartX - touchEndX;
+    
+    if (Math.abs(difference) > 50) {
+      if (difference > 0) {
+        navigatePhoto("next");
+      } else {
+        navigatePhoto("prev");
+      }
+    }
+    
+    setTouchStartX(null);
+    setTouchEndX(null);
+  };
 
-  
+  const closeFullScreenPhoto = () => {
+    setSelectedPhotoIndex(null);
+  };
 
-  
+  const navigatePhoto = (direction: "prev" | "next") => {
+    if (selectedPhotoIndex === null) return;
 
-  
+    if (direction === "prev") {
+      setSelectedPhotoIndex(
+        selectedPhotoIndex === 0 ? photos.length - 1 : selectedPhotoIndex - 1
+      );
+    } else {
+      setSelectedPhotoIndex(
+        selectedPhotoIndex === photos.length - 1 ? 0 : selectedPhotoIndex + 1
+      );
+    }
+  };
 
-  
+  const closeAllPhotos = () => {
+    setShowAllPhotos(false);
+    setSelectedPhotoIndex(null);
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (selectedPhotoIndex === null) return;
+      
+      if (e.key === "ArrowLeft") {
+        navigatePhoto("prev");
+      } else if (e.key === "ArrowRight") {
+        navigatePhoto("next");
+      } else if (e.key === "Escape") {
+        closeFullScreenPhoto();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedPhotoIndex]);
 
   return (
     <>
@@ -130,8 +190,38 @@ const WhistlerVillageViews = () => {
             priceRange="$1,000-$2,100 per night"
           />
 
-          {/* Photo Gallery */}
-          <PropertyGallery photos={photos} propertyName="whistler village views luxury 2 5 bedroom" />
+          {/* Photo Grid */}
+          <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16" id="photos">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+              {photos.slice(0, 8).map((photo, index) => (
+                <div
+                  key={index}
+                  className="relative aspect-[4/3] cursor-pointer group rounded-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]"
+                  onClick={() => handlePhotoClick(index)}
+                >
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    onLoad={handleImageLoad}
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-opacity duration-300" />
+                </div>
+              ))}
+            </div>
+            {photos.length > 8 && (
+              <div className="text-center mt-6">
+                <button
+                  onClick={() => setShowAllPhotos(true)}
+                  className="inline-flex items-center px-6 py-2 bg-black hover:bg-gray-900 text-white rounded-full text-sm font-medium"
+                >
+                  View all {photos.length} photos
+                </button>
+              </div>
+            )}
+          </div>
 
           {/* Property Description */}
           <div className="max-w-6xl mx-auto px-4" id="details">
@@ -240,18 +330,88 @@ const WhistlerVillageViews = () => {
         </main>
 
         {/* Photo Gallery Modal */}
-        
+        {showAllPhotos && (
+          <div className="fixed inset-0 z-50 bg-black/95 overflow-y-auto">
+            <div className="sticky top-0 z-10 bg-black/90 backdrop-blur-sm p-4 flex justify-between items-center">
+              <h2 className="text-lg sm:text-xl text-white font-medium">
+                Whistler Village Views - All Photos
+              </h2>
+              <button
+                onClick={closeAllPhotos}
+                className="text-white hover:text-gray-300 bg-gray-900/80 px-4 py-2 rounded-full flex items-center gap-2"
+              >
+                <X className="h-5 w-5" />
+                <span>Close</span>
+              </button>
+            </div>
 
-        
+            <div className="max-w-7xl mx-auto py-6 px-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+                {photos.map((photo, index) => (
+                  <div 
+                    key={index} 
+                    className="group relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
+                    onClick={() => handlePhotoClick(index)}
+                  >
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                      className="object-cover"
+                      priority={index < 8}
+                      loading={index < 8 ? "eager" : "lazy"}
+                      onLoad={handleImageLoad}
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Full-screen Photo View */}
+        {selectedPhotoIndex !== null && (
+          <div 
+            className="fixed inset-0 z-[60] bg-black/95 backdrop-blur-sm flex items-center justify-center"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
+            <div className="absolute top-4 right-4 flex space-x-4">
+              <button
+                onClick={closeFullScreenPhoto}
+                className="text-white bg-gray-900/80 p-2 rounded-full hover:bg-gray-800 transition-colors z-20 flex items-center gap-2"
+                aria-label="Close"
+              >
+                <X className="h-6 w-6" />
+              </button>
+            </div>
+
+            <button
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900/80 p-3 rounded-full hover:bg-gray-800 transition-colors z-20"
+              onClick={() => navigatePhoto("prev")}
+              aria-label="Previous photo"
+            >
+              <ChevronLeft className="h-6 w-6" />
+            </button>
+
+            <div className="relative w-full h-full max-w-7xl max-h-[85vh] mx-auto px-4">
+              {isImageLoading && (
+                <div className="absolute inset-0 flex items-center justify-center z-10">
+                  <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                </div>
+              )}
               <div className="relative w-full h-full">
                 <Image
                   src={photos[selectedPhotoIndex].src}
                   alt={photos[selectedPhotoIndex].alt}
                   fill
                   priority
-                  className={`object-contain transition-opacity duration-300 true ? "opacity-100" : "opacity-0"`}
+                  className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
                   sizes="100vw"
-                  
+                  onLoadingComplete={handleImageLoad}
                   quality={90}
                   loading="eager"
                 />
@@ -260,7 +420,7 @@ const WhistlerVillageViews = () => {
 
             <button
               className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900/80 p-3 rounded-full hover:bg-gray-800 transition-colors z-20"
-              
+              onClick={() => navigatePhoto("next")}
               aria-label="Next photo"
             >
               <ChevronRight className="h-6 w-6" />
