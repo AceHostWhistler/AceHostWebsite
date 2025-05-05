@@ -1,21 +1,18 @@
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
+import PropertyGallery from "@/components/PropertyGallery";
 import PropertyHeader from "@/components/PropertyHeader";
 import Footer from "@/components/Footer";
-import { X } from "lucide-react";
+
 import { FaBed, FaBath } from "react-icons/fa";
 
 const LeChamoisApartment = () => {
-  const [showAllPhotos, setShowAllPhotos] = useState(false);
-  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
-  const [isImageLoading, setIsImageLoading] = useState(false);
-  const [touchStartX, setTouchStartX] = useState<number | null>(null);
-  const [touchEndX, setTouchEndX] = useState<number | null>(null);
+  
 
   // Property photos
   const photos = [
@@ -90,41 +87,8 @@ const LeChamoisApartment = () => {
             airbnbLink="https://www.airbnb.ca/rooms/48686605?guests=1&adults=1&s=67&unique_share_id=6e31db62-6ef3-4ae9-ba80-9c7fc7a1cab9"
           />
 
-          {/* Photo Grid */}
-          <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16" id="photos">
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
-              {photos.slice(0, 8).map((photo, index) => (
-                <div
-                  key={index}
-                  className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
-                  onClick={() => handlePhotoClick(index)}
-                >
-                  <Image
-                    src={photo}
-                    alt={`Le Chamois apartment interior ${index + 1}`}
-                    fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                    priority={index < 2}
-                    loading={index < 2 ? "eager" : "lazy"}
-                    quality={index < 4 ? 85 : 75}
-                    placeholder="blur"
-                    blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzMiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="
-                  />
-                </div>
-              ))}
-            </div>
-            {photos.length > 8 && (
-              <div className="text-center mt-6">
-                <button
-                  onClick={() => setShowAllPhotos(true)}
-                  className="inline-flex items-center px-6 py-2 bg-black hover:bg-gray-900 text-white rounded-full text-sm font-medium"
-                >
-                  View all {photos.length} photos
-                </button>
-              </div>
-            )}
-          </div>
+          {/* Photo Gallery */}
+          <PropertyGallery photos={photos} propertyName="ski in ski out walk to lifts 2 bed" />
 
           {/* Property Description */}
           <div className="max-w-6xl mx-auto px-4" id="details">
@@ -395,96 +359,7 @@ const LeChamoisApartment = () => {
             </div>
           </div>
 
-          {/* All Photos Modal */}
-          {showAllPhotos && (
-            <div className="fixed inset-0 bg-black bg-opacity-90 z-50 overflow-y-auto py-4">
-              <div className="max-w-6xl mx-auto px-4">
-                <div className="flex justify-between items-center mb-4">
-                  <h2 className="text-white text-xl font-medium">
-                    All Photos ({photos.length})
-                  </h2>
-                  <button
-                    onClick={closeAllPhotos}
-                    className="text-white hover:text-gray-300"
-                  >
-                    <X size={24} />
-                  </button>
-                </div>
-                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
-                  {photos.map((photo, index) => (
-                    <div
-                      key={index}
-                      className="relative aspect-[4/3] cursor-pointer"
-                      onClick={() => handlePhotoClick(index)}
-                    >
-                      <Image
-                        src={photo}
-                        alt={`Le Chamois apartment photo ${index + 1}`}
-                        fill
-                        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
-                        className="object-cover hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Full Screen Photo Modal */}
-          {selectedPhotoIndex !== null && (
-            <div 
-              className="fixed inset-0 z-[60] bg-black flex items-center justify-center"
-              onTouchStart={() => {
-                setTouchStartX(null);
-                setTouchEndX(null);
-              }}
-              onTouchMove={(e) => {
-                if (touchStartX === null) {
-                  setTouchStartX(e.touches[0].clientX);
-                }
-                setTouchEndX(e.touches[0].clientX);
-              }}
-              onTouchEnd={() => {
-                if (touchStartX !== null && touchEndX !== null) {
-                  const difference = touchStartX - touchEndX;
-                  if (Math.abs(difference) > 50) {
-                    if (difference > 0) {
-                      navigatePhoto("prev");
-                    } else {
-                      navigatePhoto("next");
-                    }
-                  }
-                }
-                setTouchStartX(null);
-                setTouchEndX(null);
-              }}
-            >
-              <div className="absolute top-4 right-4 flex space-x-4">
-                <button
-                  onClick={closeFullScreenPhoto}
-                  className="text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
-                  aria-label="Close"
-                >
-                  <X className="h-6 w-6" />
-                </button>
-              </div>
-
-              <button
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
-                onClick={() => navigatePhoto("prev")}
-                aria-label="Previous photo"
-              >
-                &larr;
-              </button>
-
-              <div className="relative w-full h-full max-w-6xl max-h-[80vh] mx-auto px-4">
-                {isImageLoading && (
-                  <div className="absolute inset-0 flex items-center justify-center z-10">
-                    <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
-                  </div>
-                )}
-                <div className="relative w-full h-full">
+          <div className="relative w-full h-full">
                   <Image
                     src={photos[selectedPhotoIndex]}
                     alt={`Property full view ${selectedPhotoIndex + 1}`}

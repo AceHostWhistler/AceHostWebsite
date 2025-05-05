@@ -1,20 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
+import PropertyGallery from "@/components/PropertyGallery";
 import Footer from "@/components/Footer";
-import { X } from "lucide-react";
+
 import PropertyHeader from "@/components/PropertyHeader";
 
 const VillaRosabellaMykonos = () => {
-  const [showAllPhotos, setShowAllPhotos] = useState(false);
-  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
-  const [isImageLoading, setIsImageLoading] = useState(false);
-  const [touchStartX, setTouchStartX] = useState<number | null>(null);
-  const [touchEndX, setTouchEndX] = useState<number | null>(null);
+  
 
   // Property photos
   const photos = [
@@ -133,41 +130,8 @@ const VillaRosabellaMykonos = () => {
             contactLink="/contact"
           />
 
-          {/* Photo Grid */}
-          <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16" id="photos">
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
-              {photos.slice(0, 8).map((photo, index) => (
-                <div
-                  key={index}
-                  className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
-                  onClick={() => handlePhotoClick(index)}
-                >
-                  <Image
-                    src={photo}
-                    alt={`Villa Rosabella Mykonos ${index + 1}`}
-                    fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                    priority={index < 2}
-                    loading={index < 2 ? "eager" : "lazy"}
-                    quality={index < 4 ? 85 : 75}
-                    placeholder="blur"
-                    blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzMiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="
-                  />
-                </div>
-              ))}
-            </div>
-            {photos.length > 8 && (
-              <div className="text-center mt-6">
-                <button
-                  onClick={() => setShowAllPhotos(true)}
-                  className="inline-flex items-center px-6 py-2 bg-black hover:bg-gray-900 text-white rounded-full text-sm font-medium"
-                >
-                  View all {photos.length} photos
-                </button>
-              </div>
-            )}
-          </div>
+          {/* Photo Gallery */}
+          <PropertyGallery photos={photos} propertyName="villa rosabella mykonos" />
 
           {/* Property Description */}
           <div className="max-w-5xl mx-auto px-6 md:px-10 lg:px-8" id="details">

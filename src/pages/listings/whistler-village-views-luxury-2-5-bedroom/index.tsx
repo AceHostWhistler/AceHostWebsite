@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
+import PropertyGallery from "@/components/PropertyGallery";
 import PropertyHeader from "@/components/PropertyHeader";
 import Footer from "@/components/Footer";
 import { X, Users, MapPin, ChevronLeft, ChevronRight, Home } from "lucide-react";
@@ -15,11 +16,7 @@ type PropertyPhoto = {
 };
 
 const WhistlerVillageViews = () => {
-  const [showAllPhotos, setShowAllPhotos] = useState(false);
-  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
-  const [isImageLoading, setIsImageLoading] = useState(false);
-  const [touchStartX, setTouchStartX] = useState<number | null>(null);
-  const [touchEndX, setTouchEndX] = useState<number | null>(null);
+  
 
   // Property photos
   const photos: PropertyPhoto[] = [
@@ -190,38 +187,8 @@ const WhistlerVillageViews = () => {
             priceRange="$1,000-$2,100 per night"
           />
 
-          {/* Photo Grid */}
-          <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16" id="photos">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
-              {photos.slice(0, 8).map((photo, index) => (
-                <div
-                  key={index}
-                  className="relative aspect-[4/3] cursor-pointer group rounded-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]"
-                  onClick={() => handlePhotoClick(index)}
-                >
-                  <Image
-                    src={photo.src}
-                    alt={photo.alt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                    onLoad={handleImageLoad}
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-opacity duration-300" />
-                </div>
-              ))}
-            </div>
-            {photos.length > 8 && (
-              <div className="text-center mt-6">
-                <button
-                  onClick={() => setShowAllPhotos(true)}
-                  className="inline-flex items-center px-6 py-2 bg-black hover:bg-gray-900 text-white rounded-full text-sm font-medium"
-                >
-                  View all {photos.length} photos
-                </button>
-              </div>
-            )}
-          </div>
+          {/* Photo Gallery */}
+          <PropertyGallery photos={photos} propertyName="whistler village views luxury 2 5 bedroom" />
 
           {/* Property Description */}
           <div className="max-w-6xl mx-auto px-4" id="details">

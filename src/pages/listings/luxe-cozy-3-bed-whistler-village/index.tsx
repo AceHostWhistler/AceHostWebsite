@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
+import PropertyGallery from "@/components/PropertyGallery";
 import PropertyHeader from "@/components/PropertyHeader";
 import Footer from "@/components/Footer";
 
@@ -62,25 +63,8 @@ const LuxeCozyWhistlerVillage = () => {
             contactLink="/contact"
           />
 
-          {/* Photo Grid */}
-          <div className="max-w-7xl mx-auto px-4 mb-16">
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
-              {photos.map((photo, index) => (
-                <div
-                  key={index}
-                  className="aspect-[4/3] relative cursor-pointer"
-                  onClick={() => setShowAllPhotos(true)}
-                >
-                  <Image
-                    src={photo}
-                    alt={`Luxe-Cozy Whistler Village interior ${index + 1}`}
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
+          {/* Photo Gallery */}
+          <PropertyGallery photos={photos} propertyName="luxe cozy 3 bed whistler village" />
 
           {/* Property Description */}
           <div className="max-w-6xl mx-auto px-4" id="details">

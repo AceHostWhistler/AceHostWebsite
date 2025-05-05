@@ -1,20 +1,17 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
+import PropertyGallery from "@/components/PropertyGallery";
 import PropertyHeader from "@/components/PropertyHeader";
 import Footer from "@/components/Footer";
 import { X, MapPin, Users, Bed, Bath, Check } from "lucide-react";
 
 const PuntaMitaCasaJuntos = () => {
-  const [showAllPhotos, setShowAllPhotos] = useState(false);
-  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
-  const [isImageLoading, setIsImageLoading] = useState(false);
-  const [touchStartX, setTouchStartX] = useState<number | null>(null);
-  const [touchEndX, setTouchEndX] = useState<number | null>(null);
+  
   const videoRef = useRef<HTMLIFrameElement>(null);
 
   // Property photos - updated to match actual files in the directory
