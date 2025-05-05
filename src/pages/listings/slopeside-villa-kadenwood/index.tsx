@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
@@ -58,63 +58,22 @@ const SlopesideVilla = () => {
     "/photos/properties/Slopeside Kadenwood/42-2945 Kadenwood Dr 42.jpg",
   ];
 
-  const handlePhotoClick = (index: number) => {
-    setSelectedPhotoIndex(index);
-  };
+  
 
-  const handleImageLoad = () => {
-    setIsImageLoading(false);
-  };
+  
 
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchStartX(e.touches[0].clientX);
-    setTouchEndX(null);
-  };
+  
 
-  const handleTouchMove = (e: React.TouchEvent) => {
-    setTouchEndX(e.touches[0].clientX);
-  };
+  
 
-  const handleTouchEnd = () => {
-    if (!touchStartX || !touchEndX) return;
-    
-    const difference = touchStartX - touchEndX;
-    
-    if (Math.abs(difference) > 50) {
-      if (difference > 0) {
-        navigatePhoto("next");
-      } else {
-        navigatePhoto("prev");
-      }
-    }
-    
-    setTouchStartX(null);
-    setTouchEndX(null);
-  };
+  
 
-  const closeFullScreenPhoto = () => {
-    setSelectedPhotoIndex(null);
-  };
+  
 
-  const navigatePhoto = (direction: "prev" | "next") => {
-    if (selectedPhotoIndex === null) return;
-
-    if (direction === "prev") {
-      setSelectedPhotoIndex(
-        selectedPhotoIndex === 0 ? photos.length - 1 : selectedPhotoIndex - 1
-      );
-    } else {
-      setSelectedPhotoIndex(
-        selectedPhotoIndex === photos.length - 1 ? 0 : selectedPhotoIndex + 1
-      );
-    }
-  };
+  
 
   // Close full screen view when all photos modal is closed
-  const closeAllPhotos = () => {
-    setShowAllPhotos(false);
-    setSelectedPhotoIndex(null);
-  };
+  
 
   return (
     <>
@@ -463,81 +422,18 @@ const SlopesideVilla = () => {
             </div>
           </div>
 
-          {/* All Photos Modal */}
-          {showAllPhotos && (
-            <div className="fixed inset-0 bg-black bg-opacity-90 z-50 p-4 overflow-y-auto flex flex-col">
-              <div className="sticky top-0 flex justify-between items-center mb-4 z-10 bg-black bg-opacity-75 p-2 rounded-lg">
-                <h3 className="text-white text-xl font-bold">
-                  All Photos ({photos.length})
-                </h3>
-                <button
-                  onClick={closeAllPhotos}
-                  className="text-white hover:text-gray-300 p-2"
-                >
-                  <X size={24} />
-                </button>
-              </div>
-              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
-                {photos.map((photo, index) => (
-                  <div
-                    key={index}
-                    className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden"
-                    onClick={() => handlePhotoClick(index)}
-                  >
-                    <Image
-                      src={photo}
-                      alt={`Slope Side Chalet image ${index + 1}`}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
-                      className="object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
+          
 
-          {/* Full Screen Photo View */}
-          {selectedPhotoIndex !== null && (
-            <div 
-              className="fixed inset-0 z-[60] bg-black flex items-center justify-center"
-              onTouchStart={handleTouchStart}
-              onTouchMove={handleTouchMove}
-              onTouchEnd={handleTouchEnd}
-            >
-              <div className="absolute top-4 right-4 flex space-x-4">
-                <button
-                  onClick={closeFullScreenPhoto}
-                  className="text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
-                  aria-label="Close"
-                >
-                  <X className="h-6 w-6" />
-                </button>
-              </div>
-
-              <button
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
-                onClick={() => navigatePhoto("prev")}
-                aria-label="Previous photo"
-              >
-                &larr;
-              </button>
-
-              <div className="relative w-full h-full max-w-6xl max-h-[80vh] mx-auto px-4">
-                {isImageLoading && (
-                  <div className="absolute inset-0 flex items-center justify-center z-10">
-                    <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
-                  </div>
-                )}
+          
                 <div className="relative w-full h-full">
                   <Image
                     src={photos[selectedPhotoIndex]}
-                    alt={`Property full view ${selectedPhotoIndex + 1}`}
+                    alt={`Property full view ${1}`}
                     fill
                     priority
-                    className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
+                    className={`object-contain transition-opacity duration-300 true ? "opacity-100" : "opacity-0"`}
                     sizes="100vw"
-                    onLoadingComplete={handleImageLoad}
+                    
                     quality={85}
                     loading="eager"
                   />
@@ -546,7 +442,7 @@ const SlopesideVilla = () => {
 
               <button
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
-                onClick={() => navigatePhoto("next")}
+                
                 aria-label="Next photo"
               >
                 &rarr;
@@ -554,7 +450,7 @@ const SlopesideVilla = () => {
 
               <div className="absolute bottom-4 left-0 right-0 text-center z-20">
                 <p className="text-white text-sm bg-black bg-opacity-50 inline-block px-4 py-2 rounded-full">
-                  {selectedPhotoIndex + 1} / {photos.length}
+                  {1} / {photos.length}
                 </p>
               </div>
             </div>

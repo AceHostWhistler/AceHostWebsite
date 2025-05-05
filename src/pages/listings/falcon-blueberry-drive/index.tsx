@@ -259,43 +259,7 @@ const FalconBlueberryDrive = () => {
         </main>
 
         {/* Photo Gallery Modal */}
-        {showAllPhotos && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-90 overflow-y-auto">
-            <div className="sticky top-0 z-10 bg-black bg-opacity-75 p-4 flex justify-between items-center">
-              <h2 className="text-white text-xl font-medium">
-                Falcon | Blueberry Drive - All Photos ({images.length})
-              </h2>
-              <button
-                onClick={() => setShowAllPhotos(false)}
-                className="text-white hover:text-gray-300 bg-gray-900 px-4 py-2 rounded-full"
-              >
-                Close
-              </button>
-            </div>
-
-            <div className="container mx-auto py-8 px-4">
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">                {images.map((photo, index) => (
-                  <div
-                    key={index}
-                    className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden"
-                  >
-                    <Image
-                      src={photo}
-                      alt={`Falcon Blueberry Drive photo ${index + 1}`}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover hover:opacity-95 transition-opacity"
-                    />
-                    {/* Photo counter */}
-                    <div className="absolute bottom-2 right-2 bg-black bg-opacity-60 text-white text-xs px-2 py-1 rounded">
-                      {index + 1}/{images.length}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
+        
 
         <Footer />
       </div>

@@ -35,34 +35,14 @@ const LeChamoisApartment = () => {
     "/photos/properties/ski-in-ski-out-walk-to-lifts-2-bed/Le chamois-17.jpg",
   ];
 
-  const handlePhotoClick = (index: number) => {
-    setIsImageLoading(false);
-    setSelectedPhotoIndex(index);
-  };
+  
 
-  const closeFullScreenPhoto = () => {
-    setSelectedPhotoIndex(null);
-  };
+  
 
-  const navigatePhoto = (direction: "prev" | "next") => {
-    if (selectedPhotoIndex === null) return;
-
-    if (direction === "prev") {
-      setSelectedPhotoIndex(
-        selectedPhotoIndex === 0 ? photos.length - 1 : selectedPhotoIndex - 1
-      );
-    } else {
-      setSelectedPhotoIndex(
-        selectedPhotoIndex === photos.length - 1 ? 0 : selectedPhotoIndex + 1
-      );
-    }
-  };
+  
 
   // Close full screen view when all photos modal is closed
-  const closeAllPhotos = () => {
-    setShowAllPhotos(false);
-    setSelectedPhotoIndex(null);
-  };
+  
 
   return (
     <>
@@ -362,10 +342,10 @@ const LeChamoisApartment = () => {
           <div className="relative w-full h-full">
                   <Image
                     src={photos[selectedPhotoIndex]}
-                    alt={`Property full view ${selectedPhotoIndex + 1}`}
+                    alt={`Property full view ${1}`}
                     fill
                     priority
-                    className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
+                    className={`object-contain transition-opacity duration-300 true ? "opacity-100" : "opacity-0"`}
                     sizes="100vw"
                     onLoadingComplete={() => setIsImageLoading(false)}
                     quality={85}
@@ -376,7 +356,7 @@ const LeChamoisApartment = () => {
 
               <button
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
-                onClick={() => navigatePhoto("next")}
+                
                 aria-label="Next photo"
               >
                 &rarr;
@@ -384,7 +364,7 @@ const LeChamoisApartment = () => {
 
               <div className="absolute bottom-4 left-0 right-0 text-center z-20">
                 <p className="text-white text-sm bg-black bg-opacity-50 inline-block px-4 py-2 rounded-full">
-                  {selectedPhotoIndex + 1} / {photos.length}
+                  {1} / {photos.length}
                 </p>
               </div>
             </div>

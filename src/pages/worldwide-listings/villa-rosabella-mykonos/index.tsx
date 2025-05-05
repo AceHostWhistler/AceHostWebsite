@@ -77,34 +77,14 @@ const VillaRosabellaMykonos = () => {
     "/photos/properties/Villa Rosabella Mykonos/Villa Rosabella (59).jpg"
   ];
 
-  const handlePhotoClick = (index: number) => {
-    setIsImageLoading(false);
-    setSelectedPhotoIndex(index);
-  };
+  
 
-  const closeFullScreenPhoto = () => {
-    setSelectedPhotoIndex(null);
-  };
+  
 
-  const navigatePhoto = (direction: "prev" | "next") => {
-    if (selectedPhotoIndex === null) return;
-
-    if (direction === "prev") {
-      setSelectedPhotoIndex(
-        selectedPhotoIndex === 0 ? photos.length - 1 : selectedPhotoIndex - 1
-      );
-    } else {
-      setSelectedPhotoIndex(
-        selectedPhotoIndex === photos.length - 1 ? 0 : selectedPhotoIndex + 1
-      );
-    }
-  };
+  
 
   // Close full screen view when all photos modal is closed
-  const closeAllPhotos = () => {
-    setShowAllPhotos(false);
-    setSelectedPhotoIndex(null);
-  };
+  
 
   return (
     <>
@@ -369,107 +349,13 @@ const VillaRosabellaMykonos = () => {
         <Footer />
 
         {/* Full screen photo viewer */}
-        {selectedPhotoIndex !== null && (
-          <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center">
-            <button
-              onClick={closeFullScreenPhoto}
-              className="absolute top-4 right-4 text-white z-10"
-              aria-label="Close full screen view"
-            >
-              <X size={32} />
-            </button>
-            <button
-              onClick={() => navigatePhoto("prev")}
-              className="absolute left-4 text-white z-10 bg-black bg-opacity-50 p-2 rounded-full"
-              aria-label="Previous photo"
-            >
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M15.41 7.41L14 6L8 12L14 18L15.41 16.59L10.83 12L15.41 7.41Z"
-                  fill="white"
-                />
-              </svg>
-            </button>
-            <button
-              onClick={() => navigatePhoto("next")}
-              className="absolute right-4 text-white z-10 bg-black bg-opacity-50 p-2 rounded-full"
-              aria-label="Next photo"
-            >
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10 6L8.59 7.41L13.17 12L8.59 16.59L10 18L16 12L10 6Z"
-                  fill="white"
-                />
-              </svg>
-            </button>
-            <div className="relative w-full h-full flex items-center justify-center">
-              <Image
-                src={photos[selectedPhotoIndex]}
-                alt={`Villa Rosabella Mykonos photo ${selectedPhotoIndex + 1}`}
-                className="object-contain max-h-screen max-w-full"
-                width={1200}
-                height={800}
-                priority={true}
-                onLoadingComplete={() => setIsImageLoading(false)}
-              />
-              {isImageLoading && (
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-white"></div>
-                </div>
-              )}
+        
             </div>
           </div>
         )}
 
         {/* All photos modal */}
-        {showAllPhotos && (
-          <div className="fixed inset-0 bg-white z-50 overflow-y-auto">
-            <div className="sticky top-0 bg-white shadow-md z-10 px-4 py-3 flex justify-between items-center">
-              <h3 className="text-xl font-semibold">
-                Villa Rosabella | Mykonos, Greece - All Photos
-              </h3>
-              <button
-                onClick={closeAllPhotos}
-                className="p-2 rounded-full hover:bg-gray-100"
-                aria-label="Close all photos"
-              >
-                <X size={24} />
-              </button>
-            </div>
-            <div className="container mx-auto py-8 px-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {photos.map((photo, index) => (
-                  <div
-                    key={index}
-                    className="relative aspect-[4/3] cursor-pointer rounded-lg overflow-hidden"
-                    onClick={() => handlePhotoClick(index)}
-                  >
-                    <Image
-                      src={photo}
-                      alt={`Villa Rosabella Mykonos photo ${index + 1}`}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover hover:scale-105 transition-transform duration-300"
-                      loading="lazy"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
+        
       </div>
     </>
   );

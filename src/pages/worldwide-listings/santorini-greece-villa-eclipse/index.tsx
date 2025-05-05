@@ -42,34 +42,14 @@ const SantoriniGreeceVillaEclipse = () => {
     "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(25 of 25).jpg",
   ];
 
-  const handlePhotoClick = (index: number) => {
-    setIsImageLoading(false);
-    setSelectedPhotoIndex(index);
-  };
+  
 
-  const closeFullScreenPhoto = () => {
-    setSelectedPhotoIndex(null);
-  };
+  
 
-  const navigatePhoto = (direction: "prev" | "next") => {
-    if (selectedPhotoIndex === null) return;
-
-    if (direction === "prev") {
-      setSelectedPhotoIndex(
-        selectedPhotoIndex === 0 ? photos.length - 1 : selectedPhotoIndex - 1
-      );
-    } else {
-      setSelectedPhotoIndex(
-        selectedPhotoIndex === photos.length - 1 ? 0 : selectedPhotoIndex + 1
-      );
-    }
-  };
+  
 
   // Close full screen view when all photos modal is closed
-  const closeAllPhotos = () => {
-    setShowAllPhotos(false);
-    setSelectedPhotoIndex(null);
-  };
+  
 
   return (
     <>
@@ -362,7 +342,7 @@ const SantoriniGreeceVillaEclipse = () => {
 
           </div>
               <div className="absolute bottom-4 left-0 right-0 text-center text-white">
-                {selectedPhotoIndex + 1} / {photos.length}
+                {1} / {photos.length}
               </div>
             </div>
           )}
