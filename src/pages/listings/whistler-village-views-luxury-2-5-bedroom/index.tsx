@@ -193,7 +193,7 @@ const WhistlerVillageViews = () => {
           {/* Photo Grid */}
           <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16" id="photos">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
-              {photos.slice(0, 8).map((photo, index) => (
+              {photos.slice(0, 17).map((photo, index) => (
                 <div
                   key={index}
                   className="relative aspect-[4/3] cursor-pointer group rounded-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]"
@@ -211,16 +211,6 @@ const WhistlerVillageViews = () => {
                 </div>
               ))}
             </div>
-            {photos.length > 8 && (
-              <div className="text-center mt-6">
-                <button
-                  onClick={() => setShowAllPhotos(true)}
-                  className="inline-flex items-center px-6 py-2 bg-black hover:bg-gray-900 text-white rounded-full text-sm font-medium"
-                >
-                  View all {photos.length} photos
-                </button>
-              </div>
-            )}
           </div>
 
           {/* Property Description */}
