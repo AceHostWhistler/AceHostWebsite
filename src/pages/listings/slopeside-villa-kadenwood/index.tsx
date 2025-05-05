@@ -146,7 +146,7 @@ const SlopesideVilla = () => {
           {/* Photo Grid */}
           <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16">
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
-              {photos.slice(0, 8).map((photo, index) => (
+              {photos.slice(0, 28).map((photo, index) => (
                 <div
                   key={index}
                   className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
@@ -167,7 +167,7 @@ const SlopesideVilla = () => {
                 </div>
               ))}
             </div>
-            {photos.length > 8 && (
+            {photos.length > 28 && (
               <div className="text-center mt-6">
                 <button
                   onClick={() => setShowAllPhotos(true)}

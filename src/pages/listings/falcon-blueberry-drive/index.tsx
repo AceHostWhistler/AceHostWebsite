@@ -80,7 +80,8 @@ const FalconBlueberryDrive = () => {
 
           {/* Photo Grid */}
           <div className="max-w-7xl mx-auto px-4 mb-16">
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">              {images.slice(0, 8).map((photo, index) => (
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">              
+              {images.slice(0, 28).map((photo, index) => (
                 <div
                   key={index}
                   className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
@@ -100,7 +101,7 @@ const FalconBlueberryDrive = () => {
                 </div>
               ))}
             </div>
-            {images.length > 8 && (
+            {images.length > 28 && (
               <div className="text-center mt-6">
                 <button
                   onClick={() => setShowAllPhotos(true)}
