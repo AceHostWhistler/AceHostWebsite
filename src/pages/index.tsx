@@ -602,7 +602,7 @@ const Home = () => {
       guests: 14,
       bedrooms: 8,
       bathrooms: 5,
-      priceRange: "Contact for pricing",
+      priceRange: "£1,100-£1,500 per night",
       winterPrice: "",
       holidayPrice: "",
       location: "Cotswolds, United Kingdom",
