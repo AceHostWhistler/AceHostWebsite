@@ -60,7 +60,7 @@ const FAQPage = () => {
           question:
             "What is the cancellation policy for booking a luxury vacation rental home in Whistler with AceHost.ca?",
           answer:
-            "Our cancellation policy can vary depending on the property and specific terms set out by the owner. Please carefully read the contract before making a booking.\n\n1. Deposit Requirement: Typically, a 50% deposit is required to reserve the dates for your luxury vacation rental home. An additional 50% may be required 60 days prior to your arrival.\n\n2. Cancellation Period: No cancellations are allowed within 60 days of your scheduled arrival. However, in some cases, dates can be potentially moved subject to mutual agreement. *In the event of a pandemic, restricting border control in Canada, with advance notice (subject to mutual agreement) we are happy to move dates.",
+            "Our cancellation policies vary by property to accommodate different needs. As a standard practice, we typically implement a policy where cancellations more than 60 days prior to arrival may qualify for a 50% refund of the full booking amount, subject to mutual agreement. However, within 60 days of arrival, most properties have a no-cancellation policy in place to protect both our homeowners and our commitment to service quality.\n\nWe understand that plans can change unexpectedly, and we strive to find solutions that work for both our guests and property owners whenever possible. In certain circumstances, we may be able to offer date modifications or other alternatives.\n\nPlease review the specific cancellation terms for your chosen property during the booking process, as they will be clearly outlined in your rental agreement. Our team is always available to discuss any questions or concerns you might have regarding our cancellation policies.",
         },
         {
           question:
@@ -116,6 +116,30 @@ const FAQPage = () => {
             "What are the advantages of using AceHost concierge service?",
           answer:
             "Through our offered services, we've forged strong relationships with the best restaurants, businesses, and tour operators in town. Cultivating personal relationships with local owners and managers has granted us access to the best tables at some of the best restaurants in town. If needed\n\nIn the event of last minute changes on your trip and schedules, strong relationships can sometimes give you access to last minute exclusive reservations and bookings. \n\nWe recommend always booking in advance, however we understand that plans change and no ask is too big or too small. \n\nOur concierge service not only eases the burdens of trip planning but also comes at absolutely no cost to you!",
+        },
+      ],
+    },
+    {
+      questions: [
+        {
+          question: "What are the best luxury vacation rentals available in Whistler for Christmas or New Year's?",
+          answer: "At AceHost, we specialize in exclusive holiday escapes. Our luxury rentals during Christmas and New Year's include ski-in/ski-out chalets in Kadenwood, expansive 7+ bedroom estates perfect for large families, and mountain-view homes with private hot tubs, fireplaces, and chef kitchens. These homes book early and offer a five-star Whistler experience curated by our VIP concierge team.",
+        },
+        {
+          question: "Do you offer full-service Airbnb property management for luxury homes in Whistler?",
+          answer: "Yes—we provide full-service management specifically designed for high-end properties. From creating optimized listings and professional photography to guest screening, 24/7 support, and 5-star cleanings, we handle everything. Our team also offers concierge services, dynamic pricing, and direct booking strategies to ensure your home performs at the highest level.",
+        },
+        {
+          question: "How does AceHost Whistler cater to VIP guests and luxury travelers?",
+          answer: "We go beyond just accommodations. AceHost provides curated experiences for elite guests—from private chefs and heli-skiing to luxury transportation and spa bookings. Every stay includes personalized trip planning and insider access to Whistler's best. We're trusted by celebrities, global travelers, and guests who expect a five-star experience, every time.",
+        },
+        {
+          question: "What's included in your Airbnb management fees for luxury properties?",
+          answer: "Our management fee covers everything from listing optimization and guest communication to scheduling cleanings, managing check-ins, and handling maintenance. We also provide monthly reporting and revenue tracking. For high-end homes, we tailor our services to include concierge planning, mid-stay housekeeping, and luxury amenity stocking upon request.",
+        },
+        {
+          question: "Can AceHost help maximize revenue for my vacation rental property in Whistler?",
+          answer: "Absolutely. We specialize in increasing visibility, booking value, and guest satisfaction. Our data-driven pricing tools, strategic marketing (including influencer partnerships and SEO), and access to high-net-worth travelers all contribute to strong returns. Many of our homeowners see their rental income increase significantly after switching to AceHost.",
         },
       ],
     },
