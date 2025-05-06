@@ -30,6 +30,11 @@ interface FAQItem {
 
 const faqs: FAQItem[] = [
   {
+    question: "What makes AceHost different from other Airbnb property management companies in Whistler?",
+    answer:
+      "AceHost specializes exclusively in luxury vacation homes and high-end clientele. We don't just manage your listing—we elevate your property into a 5-star guest experience. Our white-glove service includes professional branding, curated guest experiences, luxury concierge services, and hands-on local support. With a strong reputation and global partnerships, we consistently outperform traditional property managers.",
+  },
+  {
     question: "Can I Rent my Property with AceHost?",
     answer:
       "Yes, if your property is zoned for nightly rentals and meets our quality standards for luxury vacation rentals. We'll help you determine if your property qualifies during our initial consultation.",
@@ -40,9 +45,33 @@ const faqs: FAQItem[] = [
       "Our management fee structure is tailored to each property based on factors like location, size, and amenities. We typically work on a percentage of rental income. Contact us for a personalized rate quote.",
   },
   {
+    question: "What's included in your Airbnb management fees for luxury properties?",
+    answer: "Our management fee covers everything from listing optimization and guest communication to scheduling cleanings, managing check-ins, and handling maintenance. We also provide monthly reporting and revenue tracking. For high-end homes, we tailor our services to include concierge planning, mid-stay housekeeping, and luxury amenity stocking upon request.",
+  },
+  {
     question: "What are the benefits working with AceHost?",
     answer:
       "Working with AceHost provides you with expert property management, premium marketing on multiple platforms, Airbnb SuperHost status, access to high-end travelers through our exclusive network, professional photography, VIP concierge services for guests, detailed reporting, and a completely hands-off rental experience.",
+  },
+  {
+    question: "Do I need to live in Whistler to rent out my home with AceHost?",
+    answer: "Not at all. Many of our homeowners live abroad or elsewhere in Canada. We provide a fully hands-off experience—handling everything from guest communication and property maintenance to financial reporting. You'll always have full visibility into your home's performance through regular updates and transparent reporting.",
+  },
+  {
+    question: "How do you screen guests to protect my luxury property?",
+    answer: "We use a combination of platform-integrated verification tools and personal screening to ensure every guest is a good fit for your home. For high-value properties, we prioritize quality over quantity—often hosting families, executives, or well-known guests who are looking for a premium, respectful experience.",
+  },
+  {
+    question: "Can AceHost manage my home if it's not listed on Airbnb?",
+    answer: "Yes. We manage both Airbnb and direct-booked properties. In fact, many of our homes are marketed off-platform to private clients or through our exclusive partnerships. We'll develop a custom marketing and booking strategy that best fits your property and revenue goals.",
+  },
+  {
+    question: "Can AceHost help maximize revenue for my vacation rental property in Whistler?",
+    answer: "Absolutely. We specialize in increasing visibility, booking value, and guest satisfaction. Our data-driven pricing tools, strategic marketing (including influencer partnerships and SEO), and access to high-net-worth travelers all contribute to strong returns. Many of our homeowners see their rental income increase significantly after switching to AceHost.",
+  },
+  {
+    question: "What's involved in getting started with AceHost as my property manager?",
+    answer: "Getting started is easy. After an initial consultation and property walkthrough, we handle onboarding, photography, listings, and setup. Whether your home is already listed or new to the market, we tailor everything for maximum performance—and handle all guest logistics from day one.",
   },
   {
     question:
