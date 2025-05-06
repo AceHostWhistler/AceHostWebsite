@@ -32,6 +32,10 @@ const FAQPage = () => {
           answer:
             "Whistler is located in British Columbia, Canada, approximately 120 kilometers (75 miles) north of Vancouver. It's nestled in the Coast Mountains and is renowned for its stunning natural beauty. Nearby, you'll find Vancouver, offering urban experiences, as well as other attractions like Squamish (45 minutes south) with rock climbing and outdoor activities, and Pemberton (30 minutes north) known for its farming valleys and outdoor adventures.",
         },
+        {
+          question: "What makes AceHost different from other Airbnb property management companies in Whistler?",
+          answer: "AceHost specializes exclusively in luxury vacation homes and high-end clientele. We don't just manage your listing—we elevate your property into a 5-star guest experience. Our white-glove service includes professional branding, curated guest experiences, luxury concierge services, and hands-on local support. With a strong reputation and global partnerships, we consistently outperform traditional property managers.",
+        },
       ],
     },
     {
@@ -51,6 +55,10 @@ const FAQPage = () => {
           question: "What does the host/butler service include?",
           answer:
             "In addition to setting up and serving breakfast, lunch, and dinner, the butler is responsible for all food and drink service throughout the day, as well as assisting the chef where needed in providing you a 5-star dining experience. Have someone else empty the dishwasher as you sit back and relax with a drink in hand. To create the perfect ambiance, they will set up the hot tub, light the fire, and adjust the music and household functions. Get your daily dose of caffeine from your own personal barista. Overall, the butler is there to make your stay as smooth and comfortable as possible.",
+        },
+        {
+          question: "Do I need to live in Whistler to rent out my home with AceHost?",
+          answer: "Not at all. Many of our homeowners live abroad or elsewhere in Canada. We provide a fully hands-off experience—handling everything from guest communication and property maintenance to financial reporting. You'll always have full visibility into your home's performance through regular updates and transparent reporting.",
         },
       ],
     },
@@ -72,6 +80,10 @@ const FAQPage = () => {
           question: "Is there a fee for early check-in or late checkout?",
           answer:
             "No, we are very flexible and lenient on check-in and checkout timings at no additional cost. As long as the place is clean and there are no checkouts that day, we are more than happy to accommodate an early check-in. Please contact us with your desired time, and we will try our best to accommodate your needs. We understand the importance of convenience and want to ensure that your travel plans are as stress-free as possible.",
+        },
+        {
+          question: "How do you screen guests to protect my luxury property?",
+          answer: "We use a combination of platform-integrated verification tools and personal screening to ensure every guest is a good fit for your home. For high-value properties, we prioritize quality over quantity—often hosting families, executives, or well-known guests who are looking for a premium, respectful experience.",
         },
       ],
     },
@@ -95,6 +107,10 @@ const FAQPage = () => {
           answer:
             "At AceHost, we pride ourselves on offering a diverse array of luxury rental homes in Whistler to suit every taste and requirement. Our selection includes a variety of property types and styles, ensuring that every guest finds their ideal vacation home. Some of the property types you can find on AceHost.ca include:\n\nModern, architecturally designed chalets: These stunning properties feature cutting-edge design, state-of-the-art technology, and luxurious amenities that cater to the most discerning guests.\nSpacious, multi-bedroom condos with stunning views: Perfect for families or groups of friends, these large condos offer ample space, breathtaking views, and convenient access to local attractions and amenities.\nElegant townhouses nestled in exclusive communities: These sophisticated properties provide a perfect blend of luxury and privacy, featuring beautifully designed interiors and access to upscale community facilities.\nCozy mountain cabins with rustic charm: For guests who prefer a more intimate and traditional mountain experience, our cozy cabins offer a warm and inviting atmosphere, complete with charming rustic details.\nSprawling estates with extensive outdoor spaces: Ideal for large groups or special events, our expansive estates offer unparalleled privacy, luxury, and outdoor amenities, such as private pools, tennis courts, and landscaped gardens.",
         },
+        {
+          question: "Can AceHost manage my home if it's not listed on Airbnb?",
+          answer: "Yes. We manage both Airbnb and direct-booked properties. In fact, many of our homes are marketed off-platform to private clients or through our exclusive partnerships. We'll develop a custom marketing and booking strategy that best fits your property and revenue goals.",
+        },
       ],
     },
     {
@@ -116,6 +132,10 @@ const FAQPage = () => {
             "What are the advantages of using AceHost concierge service?",
           answer:
             "Through our offered services, we've forged strong relationships with the best restaurants, businesses, and tour operators in town. Cultivating personal relationships with local owners and managers has granted us access to the best tables at some of the best restaurants in town. If needed\n\nIn the event of last minute changes on your trip and schedules, strong relationships can sometimes give you access to last minute exclusive reservations and bookings. \n\nWe recommend always booking in advance, however we understand that plans change and no ask is too big or too small. \n\nOur concierge service not only eases the burdens of trip planning but also comes at absolutely no cost to you!",
+        },
+        {
+          question: "What's involved in getting started with AceHost as my property manager?",
+          answer: "Getting started is easy. After an initial consultation and property walkthrough, we handle onboarding, photography, listings, and setup. Whether your home is already listed or new to the market, we tailor everything for maximum performance—and handle all guest logistics from day one.",
         },
       ],
     },
