@@ -12,6 +12,7 @@ import PropertyHeader from "@/components/PropertyHeader";
 const CotswoldsUKSohoFarmHouse = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
+  const [isImageLoading, setIsImageLoading] = useState(false);
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
   const [touchEndX, setTouchEndX] = useState<number | null>(null);
 
@@ -84,6 +85,7 @@ const CotswoldsUKSohoFarmHouse = () => {
   ];
 
   const handlePhotoClick = (index: number) => {
+    setIsImageLoading(true);
     setSelectedPhotoIndex(index);
   };
 
@@ -91,8 +93,14 @@ const CotswoldsUKSohoFarmHouse = () => {
     setSelectedPhotoIndex(null);
   };
 
+  const handleImageLoad = () => {
+    setIsImageLoading(false);
+  };
+
   const navigatePhoto = (direction: "prev" | "next") => {
     if (selectedPhotoIndex === null) return;
+
+    setIsImageLoading(true);
 
     if (direction === "prev") {
       setSelectedPhotoIndex(
@@ -520,9 +528,12 @@ const CotswoldsUKSohoFarmHouse = () => {
                   src={photos[selectedPhotoIndex]}
                   alt={`Cotswolds UK - Soho Farm House photo ${selectedPhotoIndex + 1}`}
                   fill
-                  sizes="100vw"
-                  className="object-contain"
                   priority
+                  className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
+                  sizes="100vw"
+                  onLoadingComplete={handleImageLoad}
+                  quality={85}
+                  loading="eager"
                 />
               </div>
               <div className="absolute bottom-4 left-0 right-0 text-center text-white">

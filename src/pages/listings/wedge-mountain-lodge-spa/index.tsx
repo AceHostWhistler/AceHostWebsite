@@ -86,6 +86,7 @@ const WedgeMountainLodgeSpa = () => {
   ];
 
   const handlePhotoClick = (index: number) => {
+    setIsImageLoading(true);
     setSelectedPhotoIndex(index);
   };
 
@@ -125,6 +126,8 @@ const WedgeMountainLodgeSpa = () => {
 
   const navigatePhoto = (direction: "prev" | "next") => {
     if (selectedPhotoIndex === null) return;
+
+    setIsImageLoading(true);
 
     if (direction === "prev") {
       setSelectedPhotoIndex(
@@ -437,6 +440,16 @@ const WedgeMountainLodgeSpa = () => {
                   alt={`Property full view ${selectedPhotoIndex + 1}`}
                   fill
                   priority
+                  className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
+                  sizes="100vw"
+                  onLoadingComplete={handleImageLoad}
+                  quality={85}
+                  loading="eager"
+                  className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
+                  sizes="100vw"
+                  onLoadingComplete={handleImageLoad}
+                  quality={85}
+                  loading="eager"
                   className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
                   sizes="100vw"
                   onLoadingComplete={handleImageLoad}

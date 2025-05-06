@@ -68,6 +68,8 @@ const BlackcombGreens = () => {
   const navigatePhoto = (direction: "prev" | "next") => {
     if (selectedPhotoIndex === null) return;
 
+    setIsImageLoading(true);
+
     if (direction === "prev") {
       setSelectedPhotoIndex(
         selectedPhotoIndex === 0 ? photos.length - 1 : selectedPhotoIndex - 1

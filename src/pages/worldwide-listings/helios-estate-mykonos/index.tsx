@@ -111,8 +111,14 @@ const HeliosEstateMykonos = () => {
     setSelectedPhotoIndex(null);
   };
 
+  const handleImageLoad = () => {
+    setIsImageLoading(false);
+  };
+
   const navigatePhoto = (direction: "prev" | "next") => {
     if (selectedPhotoIndex === null) return;
+
+    setIsImageLoading(true);
 
     if (direction === "prev") {
       setSelectedPhotoIndex(

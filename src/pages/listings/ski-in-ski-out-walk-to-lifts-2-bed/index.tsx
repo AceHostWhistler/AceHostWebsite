@@ -47,8 +47,14 @@ const LeChamoisApartment = () => {
     setSelectedPhotoIndex(null);
   };
 
+  const handleImageLoad = () => {
+    setIsImageLoading(false);
+  };
+
   const navigatePhoto = (direction: "prev" | "next") => {
     if (selectedPhotoIndex === null) return;
+
+    setIsImageLoading(true);
 
     if (direction === "prev") {
       setSelectedPhotoIndex(
@@ -489,6 +495,12 @@ const LeChamoisApartment = () => {
                     src={photos[selectedPhotoIndex]}
                     alt={`Property full view ${selectedPhotoIndex + 1}`}
                     fill
+                  priority
+                  className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
+                  sizes="100vw"
+                  onLoadingComplete={handleImageLoad}
+                  quality={85}
+                  loading="eager"
                     priority
                     className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
                     sizes="100vw"
