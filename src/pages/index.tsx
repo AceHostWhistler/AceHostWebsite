@@ -447,7 +447,7 @@ const Home = () => {
     },
     {
       id: "whispering-pines",
-      name: "The Aspens | 1 Bed | Ski-in/Ski-out",
+      name: "The Aspens | 2-Bed Ski in/Out",
       image: "/photos/properties/The Aspens/4800-Spearhead-Drive-1.JPG",
       guests: 4,
       bedrooms: 2,
@@ -607,7 +607,7 @@ const Home = () => {
       holidayPrice: "",
       location: "Cotswolds, United Kingdom",
       link: "/worldwide-listings/cotswolds-uk-soho-farm-house",
-      contactLink: "/contact",
+      airbnbLink: "https://www.airbnb.ca/rooms/1414129878809697902?guests=1&adults=1&s=67&unique_share_id=ba3bff7b-bc57-416c-bcd6-96b0943cfe51",
       isPetFriendly: false,
       isSkiInSkiOut: false,
     },
@@ -1021,140 +1021,4 @@ const Home = () => {
                 </button>
                 <button
                   onClick={() => setActiveFilter("skiinout")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "skiinout" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
-                >
-                  Ski in Ski out
-                </button>
-              </div>
-            </div>
-
-            {/* Worldwide Properties Description - Only shown when worldwide filter is active */}
-            {activeFilter === "worldwide" && (
-              <div className="max-w-4xl mx-auto mb-12">
-                <div className="bg-gray-50 p-10 rounded-2xl shadow-sm">
-                  <h3 className="text-2xl font-medium mb-6 text-gray-900">
-                    Introducing AceHost Global VIP Concierge Services & Villas
-                  </h3>
-                  <div className="text-gray-700 space-y-6">
-                    <p>
-                      We're thrilled to announce that AceHost now offers exclusive VIP concierge services and handpicked luxury properties across the globe. Whether you're dreaming of a beachfront estate, a serene countryside chateau, or a sleek modern villa for a group getaway, our team will source the perfect destination tailored to your vision.
-                    </p>
-                    <p>
-                      Below is a curated selection of homes we currently work with—but our network extends far beyond. If you're planning your next vacation and looking for a large, private villa paired with personalized service, we're here to make it happen.
-                    </p>
-                    <p className="font-medium">
-                      This offering is reserved for our top-tier VIP clients & repeat guests. Inquire today to see if you qualify.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* Property Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {filteredListings.map((property, index) => renderPropertyCard(property, index))}
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="py-24 bg-white">
-          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="mb-16 text-center">
-              <h2 className="text-4xl font-light mb-6 text-gray-900">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
-                Find answers to common questions about our luxury vacation
-                rentals in Whistler, British Columbia.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              {faqItems.map((item, index) => (
-                <div
-                  key={index}
-                  className="border border-gray-100 rounded-lg overflow-hidden"
-                >
-                  <button
-                    onClick={() =>
-                      setExpandedFaq(expandedFaq === index ? null : index)
-                    }
-                    className="w-full px-6 py-4 flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
-                  >
-                    <h3 className="text-base font-medium text-gray-900 text-left">
-                      {item.question}
-                    </h3>
-                    <span className="text-2xl text-gray-400">
-                      {expandedFaq === index ? "−" : "+"}
-                    </span>
-                  </button>
-                  {expandedFaq === index && (
-                    <div className="px-6 py-4 bg-white">
-                      <p className="text-sm text-gray-600">{item.answer}</p>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-
-            <div className="text-center mt-8">
-              <Link
-                href="/contact"
-                className="inline-flex items-center text-black font-medium hover:text-gray-700 transition-colors"
-              >
-                <span>Have more questions? Contact us</span>
-                <ArrowRight size={18} className="ml-2" />
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials Section */}
-        <Testimonials />
-
-        {/* Call to Action Section */}
-        <section className="py-24 bg-black text-white">
-          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl font-light mb-6">
-              Ready to Experience Whistler in Luxury?
-            </h2>
-            <p className="text-base md:text-lg max-w-3xl mx-auto mb-8">
-              Discover our collection of premium vacation rentals and elevate
-              your Whistler experience. Our team is ready to assist you in
-              finding the perfect accommodation for your next mountain getaway.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/properties"
-                className="inline-block bg-white text-black px-8 py-4 rounded-md hover:bg-gray-100 transition-colors text-base font-medium"
-              >
-                Browse Properties
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-block bg-transparent border border-white text-white px-8 py-4 rounded-md hover:bg-white/10 transition-colors text-base font-medium"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        <Footer />
-      </div>
-    </>
-  );
-};
-
-export const getStaticProps: GetStaticProps = async ({
-  locale,
-}) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale || "en", ["common"])),
-    },
-  };
-};
-
-export default Home;
+                  className={`

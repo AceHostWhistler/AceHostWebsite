@@ -68,14 +68,7 @@ const PropertyHeader: React.FC<PropertyHeaderProps> = ({
         >
           Details
         </Link>
-        {contactLink ? (
-          <Link
-            href={contactLink}
-            className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors"
-          >
-            Contact Us
-          </Link>
-        ) : airbnbLink ? (
+        {airbnbLink ? (
           <a
             href={airbnbLink}
             target="_blank"
@@ -84,6 +77,13 @@ const PropertyHeader: React.FC<PropertyHeaderProps> = ({
           >
             Book on Airbnb
           </a>
+        ) : contactLink ? (
+          <Link
+            href={contactLink}
+            className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors"
+          >
+            Contact Us
+          </Link>
         ) : (
           <Link
             href="/contact"
