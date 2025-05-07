@@ -1,0 +1,47 @@
+diff --git a/src/pages/worldwide-listings/santorini-greece-villa-eclipse/index.tsx b/src/pages/worldwide-listings/santorini-greece-villa-eclipse/index.tsx
+index da5c461..c82572b 100644
+--- a/src/pages/worldwide-listings/santorini-greece-villa-eclipse/index.tsx
++++ b/src/pages/worldwide-listings/santorini-greece-villa-eclipse/index.tsx
+@@ -521,10 +521,6 @@ const SantoriniGreeceVillaEclipse = () => {
+                   onLoadingComplete={handleImageLoad}
+                   quality={85}
+                   loading="eager"
+-                  sizes="100vw"
+-                  className="object-contain"
+-                  loading="eager"
+-                  onLoadingComplete={() => setIsImageLoading(false)}
+                 />
+                 {isImageLoading && (
+                   <div className="absolute inset-0 flex items-center justify-center">
+diff --git a/src/pages/worldwide-listings/super-yacht-thailand/index.tsx b/src/pages/worldwide-listings/super-yacht-thailand/index.tsx
+index 64e5e4c..3a80025 100644
+--- a/src/pages/worldwide-listings/super-yacht-thailand/index.tsx
++++ b/src/pages/worldwide-listings/super-yacht-thailand/index.tsx
+@@ -341,12 +341,6 @@ const SuperYachtThailand = () => {
+                   onLoadingComplete={handleImageLoad}
+                   quality={85}
+                   loading="eager"
+-                  priority
+-                  className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
+-                  sizes="100vw"
+-                  onLoadingComplete={() => setIsImageLoading(false)}
+-                  quality={85}
+-                  loading="eager"
+                 />
+               </div>
+             </div>
+diff --git a/src/pages/worldwide-listings/villa-oineas-greece-mykonos/index.tsx b/src/pages/worldwide-listings/villa-oineas-greece-mykonos/index.tsx
+index f631b42..c86f003 100644
+--- a/src/pages/worldwide-listings/villa-oineas-greece-mykonos/index.tsx
++++ b/src/pages/worldwide-listings/villa-oineas-greece-mykonos/index.tsx
+@@ -630,10 +630,6 @@ const VillaOineasGreeceMykonos = () => {
+                   onLoadingComplete={handleImageLoad}
+                   quality={85}
+                   loading="eager"
+-                  sizes="100vw"
+-                  className="object-contain"
+-                  loading="eager"
+-                  onLoadingComplete={() => setIsImageLoading(false)}
+                 />
+                 {isImageLoading && (
+                   <div className="absolute inset-0 flex items-center justify-center">

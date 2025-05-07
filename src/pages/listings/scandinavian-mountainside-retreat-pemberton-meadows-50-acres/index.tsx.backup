@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
@@ -8,8 +8,9 @@ import Navigation from "@/components/Navigation";
 import PropertyHeader from "@/components/PropertyHeader";
 import Footer from "@/components/Footer";
 import { X } from "lucide-react";
+import { FaBed, FaBath } from "react-icons/fa";
 
-const HoodRiverLuxuryHome = () => {
+const PembertonMeadowsRetreat = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [isImageLoading, setIsImageLoading] = useState(false);
@@ -19,49 +20,49 @@ const HoodRiverLuxuryHome = () => {
 
   // Property photos
   const photos = [
-    "/photos/properties/hood-river-luxury-home/View 1.jpg",
-    "/photos/properties/hood-river-luxury-home/View 2.jpg",
-    "/photos/properties/hood-river-luxury-home/View 3.jpg",
-    "/photos/properties/hood-river-luxury-home/View 4.jpg",
-    "/photos/properties/hood-river-luxury-home/View 5.jpg",
-    "/photos/properties/hood-river-luxury-home/View 6.jpg",
-    "/photos/properties/hood-river-luxury-home/View 7.jpg",
-    "/photos/properties/hood-river-luxury-home/View 9.jpg",
-    "/photos/properties/hood-river-luxury-home/View 10.jpg",
-    "/photos/properties/hood-river-luxury-home/Exterior 1.jpg",
-    "/photos/properties/hood-river-luxury-home/Exterior 3sv.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 1.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 2.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 3.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 4.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 5.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 6.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 7.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 8.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 9.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 10.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 11.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 12.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 13b.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 14.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 15.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 16.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 17.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 18.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 19.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 20.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 21.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 22.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 23.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 24.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 25.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 26.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 27.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 28.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 29.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 30 - Garage.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 31 - Garage.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 32 - Garage.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/DJI_0202-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/DJI_0195-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/DJI_0096-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_R001526-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ2221-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ2209-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ2206-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ2172-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ2140-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ2119-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ2049-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ2043-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ2027-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ1933-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ1899-Edit-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ1896-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ1871-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ1855-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ1853-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ1771-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ1759-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ1741-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ1722-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ1651-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ1640-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ1609-Pano-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ1604-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ1597-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ1577-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ1565-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ1546-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ1518-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KJ20678-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KJ20478-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KJ20285-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KJ14319-Edit-2.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KJ14205-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KJ14105-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KJ14090-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KJ14032-Edit-2.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KJ14026-Editcopy.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KJ13990-Edit.jpg",
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KJ13981-Edit.jpg"
   ];
 
   const handlePhotoClick = (index: number) => {
@@ -71,10 +72,6 @@ const HoodRiverLuxuryHome = () => {
 
   const closeFullScreenPhoto = () => {
     setSelectedPhotoIndex(null);
-  };
-
-  const handleImageLoad = () => {
-    setIsImageLoading(false);
   };
 
   const navigatePhoto = (direction: "prev" | "next") => {
@@ -99,13 +96,43 @@ const HoodRiverLuxuryHome = () => {
     setSelectedPhotoIndex(null);
   };
 
+  const handleImageLoad = () => {
+    setIsImageLoading(false);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStartX(e.touches[0].clientX);
+    setTouchEndX(null);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEndX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX || !touchEndX) return;
+    
+    const difference = touchStartX - touchEndX;
+    
+    if (Math.abs(difference) > 50) {
+      if (difference > 0) {
+        navigatePhoto("next");
+      } else {
+        navigatePhoto("prev");
+      }
+    }
+    
+    setTouchStartX(null);
+    setTouchEndX(null);
+  };
+
   return (
     <>
       <Head>
-        <title>Hood River, US | Water Views - AceHost</title>
+        <title>Pemberton Escape | 50 Acres | Wellness & Heli Retreat - AceHost</title>
         <meta
           name="description"
-          content="Beautiful views of Hood River in a Luxurious 4-floor apartment. Perfect location located 1 block away from downtown. Recently renovated with 5 bedrooms for up to 10 guests. Enjoy fresh air with sliding doors and bug screens."
+          content="Experience luxury in this award-winning 5-bedroom Scandinavian retreat set on 50 private acres with panoramic mountain views. Perfect for wellness retreats, heli-skiing, and private getaways with included chef and butler service."
         />
       </Head>
 
@@ -114,11 +141,12 @@ const HoodRiverLuxuryHome = () => {
 
         <main>
           <PropertyHeader 
-            title="Hood River Luxury Home"
+            title="Scandinavian Mountainside Retreat | Pemberton Meadows"
             guests={10}
-            bedrooms={4}
-            bathrooms={3.5}
-            priceRange="$800-$1,200 per night"
+            bedrooms={5}
+            bathrooms={5}
+            priceRange="$2,500-$3,800 per night"
+            airbnbLink="https://www.airbnb.ca/rooms/735842324489542740?guests=1&adults=1&s=67&unique_share_id=1d2ecc34-ba35-46eb-9ba0-71a08ed1bb10"
           />
 
           {/* Photo Grid */}
@@ -132,7 +160,7 @@ const HoodRiverLuxuryHome = () => {
                 >
                   <Image
                     src={photo}
-                    alt={`Hood River Luxury Home ${index + 1}`}
+                    alt={`Pemberton Meadows interior ${index + 1}`}
                     fill
                     sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     className="object-cover hover:scale-105 transition-transform duration-300"
@@ -160,7 +188,10 @@ const HoodRiverLuxuryHome = () => {
           {/* Property Description */}
           <div className="max-w-6xl mx-auto px-4" id="details">
             <p className="text-gray-800 mb-16 max-w-4xl">
-              Beautiful views of Hood River in a Luxurious 4-floor apartment. Perfect location located 1 block away from downtown. Home is recently renovated and includes 2 bidet toilets. Living room windows are slide doors, which include a bug screen, so you can open them for fresh air. Perfect for a cozy family getaway.
+              Looking for a remote getaway in a state-of-the-art home?
+              <br />
+              <br />
+              Welcome to Pemberton Meadows Escape. This 5-bed, 5-bath award-winning property was designed with the eye of a leading Japanese architect. At this estate, guests can experience 50 acres of surrounding private land and breathtaking panoramic views of the Pemberton Valley Mountain Range. This home provides total privacy in a tranquil setting – perfect for families or groups seeking luxury living in a peaceful, natural environment. Included in the bookings at Pemberton Meadows, guests can enjoy an enhanced experience with a private chef and butler. Our chefs provide a premium dining experience, using only fresh, locally sourced ingredients from Pemberton Valley farms.
             </p>
 
             {/* The Space Section */}
@@ -168,8 +199,8 @@ const HoodRiverLuxuryHome = () => {
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                 <div className="relative aspect-[4/3] mb-2">
                   <Image
-                    src={photos[12]}
-                    alt="Hood River Luxury Home Interior"
+                    src={photos[6]}
+                    alt="Pemberton Meadows Interior"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-300"
                   />
@@ -194,13 +225,47 @@ const HoodRiverLuxuryHome = () => {
                   <h2 className="text-2xl font-bold">The Space</h2>
                 </div>
                 <p className="text-gray-800 mb-6">
-                  Beautiful views of Hood River in a luxurious 4-floor apartment. Perfect location located 1 block away from downtown. Home is recently renovated and includes 2 bidet toilets. Living room windows are slide doors, which include a bug screen, so you can open them for fresh air. Perfect for a cozy family getaway.
+                  Pemberton Meadows has modernly furnished rooms, including a grand master bedroom, a bunk room with 4 single beds, and 3 additional bedrooms with King and Queen beds. This elegant property welcomes high-end tasteful furnishings and a sociable open plan living space. The floor to ceiling windows invite ample natural light, creating a welcoming ambience for ultimate relaxation.
                 </p>
                 <p className="text-gray-800 mb-6">
-                  Spanning across 4 floors, this contemporary property boasts 5 bedrooms, sleeping 10 guests with 7 comfortable beds and 2.5 bathrooms. The living room has sliding doors that let you enjoy the fresh air and stunning views of downtown/the Columbia River. amazing patio. This house is ideal for a family or group getaway, looking for a luxurious experience.
+                  Whether you're lounging by the cozy log fireplace, working out in the on-site gym or taking a soak in the hot tub, you will be spoiled by the 360-degree views of the valley and the surrounding mountains. Looking to get active in the great outdoors of British Columbia? Enjoy outdoor activities right on the doorstep of Pemberton Meadows, with an array of scenic hiking trails and natural hot springs. We are more than happy to direct you to our favorite outdoor activities!
                 </p>
-                <p className="text-gray-800">
-                  Enjoy comfort and modernity in this recently renovated home featuring new luxury furniture. The open-concept living and dining area boasts floor-to-ceiling windows, flooding the room with natural light. The living room includes sliding patio doors that not only provide natural light and beautiful views but also feature bug screens, allowing you to enjoy the fresh air while keeping bugs out.
+              </div>
+            </div>
+
+            {/* Bedroom Layout Section */}
+            <div className="flex flex-col md:flex-row mb-20">
+              <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
+                <div className="relative aspect-[4/3] mb-2">
+                  <Image
+                    src={photos[15]}
+                    alt="Pemberton Meadows Bedroom"
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </div>
+              <div className="md:w-1/2 order-2 md:order-1">
+                <div className="flex items-center mb-6">
+                  <div className="bg-black text-white p-4 rounded-full mr-4">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7 13C8.66 13 10 11.66 10 10C10 8.34 8.66 7 7 7C5.34 7 4 8.34 4 10C4 11.66 5.34 13 7 13ZM19 13C20.66 13 22 11.66 22 10C22 8.34 20.66 7 19 7C17.34 7 16 8.34 16 10C16 11.66 17.34 13 19 13ZM7 15C4.67 15 0 16.17 0 18.5V20H14V18.5C14 16.17 9.33 15 7 15ZM19 15C18.71 15 18.38 15.02 18.03 15.05C19.19 15.89 20 17.02 20 18.5V20H24V18.5C24 16.17 21.33 15 19 15Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                  <h2 className="text-2xl font-bold">Bedroom Layout</h2>
+                </div>
+
+                <p className="mb-6">
+                  Pemberton Meadows has modernly furnished rooms, including a grand master bedroom, a bunk room with 4 single beds, and 3 additional bedrooms with king and queen beds.
                 </p>
               </div>
             </div>
@@ -224,8 +289,11 @@ const HoodRiverLuxuryHome = () => {
                 </div>
                 <h2 className="text-2xl font-bold">Location</h2>
               </div>
+              <p className="text-gray-800 max-w-4xl mb-6">
+                This luxury escape is located near BC's infamous Lillooet River in the peaceful Pemberton Meadows neighborhood. Within walking distance from the front door, this property has a scenic viewpoint capturing the entirety of the Lillooet River – a perfect spot for taking photos.
+              </p>
               <p className="text-gray-800 max-w-4xl">
-                Hood River, Oregon, United States. It's a very prestigious neighborhood. Walls are soundproof so inside is very quiet. For getting around you can walk straight into downtown without a vehicle. "The event site" is just a 2-3 minute drive.
+                If you're looking to host a one-of-a-kind event, such as a wellness or heli-retreat, even just a simple change of scenery, Pemberton Meadows Escape provides a harmonious blend of both luxury living and outdoor pursuit.
               </p>
             </div>
           </div>
@@ -236,7 +304,7 @@ const HoodRiverLuxuryHome = () => {
           <div className="fixed inset-0 z-50 bg-black overflow-y-auto">
             <div className="sticky top-0 z-10 bg-black p-4 flex justify-between items-center">
               <h2 className="text-lg sm:text-xl text-white font-medium">
-                Hood River Luxury Home - All Photos
+                Pemberton Meadows - All Photos
               </h2>
               <button
                 onClick={closeAllPhotos}
@@ -256,7 +324,7 @@ const HoodRiverLuxuryHome = () => {
                     >
                       <Image
                         src={photo}
-                        alt={`Hood River Luxury Home ${index + 1}`}
+                        alt={`Pemberton Meadows ${index + 1}`}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         className="object-cover hover:scale-105 transition-transform duration-300"
@@ -275,6 +343,9 @@ const HoodRiverLuxuryHome = () => {
         {selectedPhotoIndex !== null && (
           <div 
             className="fixed inset-0 z-[60] bg-black flex items-center justify-center"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
           >
             <div className="absolute top-4 right-4 flex space-x-4">
               <button
@@ -303,7 +374,7 @@ const HoodRiverLuxuryHome = () => {
               <div className="relative w-full h-full">
                 <Image
                   src={photos[selectedPhotoIndex]}
-                  alt={`Hood River Home photo ${selectedPhotoIndex + 1}`}
+                  alt={`Property full view ${selectedPhotoIndex + 1}`}
                   fill
                   priority
                   className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
@@ -345,4 +416,4 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
-export default HoodRiverLuxuryHome;
+export default PembertonMeadowsRetreat;

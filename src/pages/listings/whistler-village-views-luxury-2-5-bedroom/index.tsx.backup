@@ -398,13 +398,23 @@ const WhistlerVillageViews = () => {
               <div className="relative w-full h-full">
                 <Image
                   src={photos[selectedPhotoIndex].src}
-                  alt={`Property full view ${selectedPhotoIndex + 1}`}
+                  alt={photos[selectedPhotoIndex].alt}
                   fill
                   priority
                   className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
                   sizes="100vw"
                   onLoadingComplete={handleImageLoad}
                   quality={90}
+                  loading="eager"
+                  className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
+                  sizes="100vw"
+                  onLoadingComplete={handleImageLoad}
+                  quality={85}
+                  loading="eager"
+                  className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
+                  sizes="100vw"
+                  onLoadingComplete={handleImageLoad}
+                  quality={85}
                   loading="eager"
                 />
               </div>

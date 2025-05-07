@@ -409,16 +409,6 @@ const TheNest = () => {
                   onLoadingComplete={handleImageLoad}
                   quality={85}
                   loading="eager"
-                  className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
-                  sizes="100vw"
-                  onLoadingComplete={handleImageLoad}
-                  quality={85}
-                  loading="eager"
-                  className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
-                  sizes="100vw"
-                  onLoadingComplete={handleImageLoad}
-                  quality={85}
-                  loading="eager"
                 />
               </div>
             </div>

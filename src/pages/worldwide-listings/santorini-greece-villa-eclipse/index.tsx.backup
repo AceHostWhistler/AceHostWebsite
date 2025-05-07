@@ -521,6 +521,10 @@ const SantoriniGreeceVillaEclipse = () => {
                   onLoadingComplete={handleImageLoad}
                   quality={85}
                   loading="eager"
+                  sizes="100vw"
+                  className="object-contain"
+                  loading="eager"
+                  onLoadingComplete={() => setIsImageLoading(false)}
                 />
                 {isImageLoading && (
                   <div className="absolute inset-0 flex items-center justify-center">

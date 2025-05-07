@@ -310,7 +310,7 @@ const PuntaMitaCasaJuntos = () => {
               <div className="relative w-full h-full">
                 <Image
                   src={photos[selectedPhotoIndex]}
-                  alt={`Punta Mita Casa Juntos photo ${selectedPhotoIndex + 1}`}
+                  alt={`Property full view ${selectedPhotoIndex + 1}`}
                   fill
                   priority
                   className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
@@ -318,6 +318,11 @@ const PuntaMitaCasaJuntos = () => {
                   onLoadingComplete={handleImageLoad}
                   quality={85}
                   loading="eager"
+                  priority
+                  className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
+                  sizes="100vw"
+                  onLoadingComplete={() => setIsImageLoading(false)}
+                  quality={85}
                 />
               </div>
             </div>

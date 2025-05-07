@@ -9,7 +9,7 @@ import PropertyHeader from "@/components/PropertyHeader";
 import Footer from "@/components/Footer";
 import { X } from "lucide-react";
 
-const HoodRiverLuxuryHome = () => {
+const SuperYachtThailand = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [isImageLoading, setIsImageLoading] = useState(false);
@@ -19,49 +19,52 @@ const HoodRiverLuxuryHome = () => {
 
   // Property photos
   const photos = [
-    "/photos/properties/hood-river-luxury-home/View 1.jpg",
-    "/photos/properties/hood-river-luxury-home/View 2.jpg",
-    "/photos/properties/hood-river-luxury-home/View 3.jpg",
-    "/photos/properties/hood-river-luxury-home/View 4.jpg",
-    "/photos/properties/hood-river-luxury-home/View 5.jpg",
-    "/photos/properties/hood-river-luxury-home/View 6.jpg",
-    "/photos/properties/hood-river-luxury-home/View 7.jpg",
-    "/photos/properties/hood-river-luxury-home/View 9.jpg",
-    "/photos/properties/hood-river-luxury-home/View 10.jpg",
-    "/photos/properties/hood-river-luxury-home/Exterior 1.jpg",
-    "/photos/properties/hood-river-luxury-home/Exterior 3sv.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 1.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 2.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 3.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 4.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 5.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 6.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 7.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 8.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 9.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 10.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 11.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 12.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 13b.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 14.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 15.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 16.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 17.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 18.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 19.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 20.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 21.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 22.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 23.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 24.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 25.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 26.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 27.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 28.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 29.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 30 - Garage.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 31 - Garage.jpg",
-    "/photos/properties/hood-river-luxury-home/Interior 32 - Garage.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Bow WEB-1.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Bow WEB-2.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Bow WEB-5.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Bow WEB-8.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Bow WEB-9.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Bridge WEB-2.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Corridor WEB-2.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Dining Area WEB-5.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Dining Area WEB-7.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Dining Area WEB-8.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Dining Area WEB-11.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Dining Area WEB-14.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Double Bedroom WEB-1.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Double Bedroom WEB-6.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Galry WEB-1.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Galry WEB-3.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Gym WEB-1.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Main Salon WEB-1.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Main Salon WEB-3.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Main Salon WEB-4.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Main Salon WEB-7.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Main Salon WEB-8.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Main Salon WEB-9.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Main Salon WEB-12.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Master Bedroom WEB-3.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Master Bedroom WEB-4.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Master Bedroom WEB-6.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Master Bedroom WEB-7.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Master Bedroom WEB-8.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Master Bedroom WEB-10.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Master Bedroom WEB-11.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Sun Deck WEB-1.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Sun Deck WEB-12.jpg",
+    "/photos/properties/Yacht Thailand Sea D/TV Room WEB-1.jpg",
+    "/photos/properties/Yacht Thailand Sea D/TV Room WEB-3.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Twin  Bedroom WEB-4.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Twin  Bedroom WEB-5.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Twin  Bedroom WEB-7.jpg",
+    "/photos/properties/Yacht Thailand Sea D/VIP  Bedroom-1.jpg",
+    "/photos/properties/Yacht Thailand Sea D/VIP  Bedroom-6.jpg",
+    "/photos/properties/Yacht Thailand Sea D/VIP  Bedroom-7.jpg",
+    "/photos/properties/Yacht Thailand Sea D/VIP  Bedroom-9.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Yacht_Sead_VIP Bedroom-3.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Yacht_Sead_VIP Bedroom-5.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Yacht_Sead_VIP Bedroom-7.jpg",
+    "/photos/properties/Yacht Thailand Sea D/Yacht_Sead_VIP Bedroom-9.jpg",
   ];
 
   const handlePhotoClick = (index: number) => {
@@ -102,10 +105,10 @@ const HoodRiverLuxuryHome = () => {
   return (
     <>
       <Head>
-        <title>Hood River, US | Water Views - AceHost</title>
+        <title>Super Yacht | Thailand / SE Asia - AceHost</title>
         <meta
           name="description"
-          content="Beautiful views of Hood River in a Luxurious 4-floor apartment. Perfect location located 1 block away from downtown. Recently renovated with 5 bedrooms for up to 10 guests. Enjoy fresh air with sliding doors and bug screens."
+          content="Experience luxury aboard the 130-ft Super Yacht in Thailand. This beautifully appointed motor yacht offers a VIP experience with an 8-member crew, wake boats, water activities, and 5-star service."
         />
       </Head>
 
@@ -114,11 +117,11 @@ const HoodRiverLuxuryHome = () => {
 
         <main>
           <PropertyHeader 
-            title="Hood River Luxury Home"
+            title="Super Yacht | Thailand / SE Asia"
             guests={10}
-            bedrooms={4}
-            bathrooms={3.5}
-            priceRange="$800-$1,200 per night"
+            bedrooms={5}
+            bathrooms={5}
+            priceRange="$11,000-$13,000 per night"
           />
 
           {/* Photo Grid */}
@@ -132,7 +135,7 @@ const HoodRiverLuxuryHome = () => {
                 >
                   <Image
                     src={photo}
-                    alt={`Hood River Luxury Home ${index + 1}`}
+                    alt={`Super Yacht Thailand ${index + 1}`}
                     fill
                     sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     className="object-cover hover:scale-105 transition-transform duration-300"
@@ -160,7 +163,13 @@ const HoodRiverLuxuryHome = () => {
           {/* Property Description */}
           <div className="max-w-6xl mx-auto px-4" id="details">
             <p className="text-gray-800 mb-16 max-w-4xl">
-              Beautiful views of Hood River in a Luxurious 4-floor apartment. Perfect location located 1 block away from downtown. Home is recently renovated and includes 2 bidet toilets. Living room windows are slide doors, which include a bug screen, so you can open them for fresh air. Perfect for a cozy family getaway.
+              The 130-ft beautifully appointed luxury Motor Yacht Sea D offers a
+              VIP experience in the waters of Phuket. Engineered in Italy, Motor
+              Yacht Sea D provides all-inclusive hospitality for 10 guests,
+              assuring luxurious comfort and entertainment. With an expansive
+              interior and exterior space, this superyacht welcomes guests with
+              an 8-member crew, professionally trained to deliver a 5-star
+              charter experience.
             </p>
 
             {/* The Space Section */}
@@ -168,8 +177,8 @@ const HoodRiverLuxuryHome = () => {
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                 <div className="relative aspect-[4/3] mb-2">
                   <Image
-                    src={photos[12]}
-                    alt="Hood River Luxury Home Interior"
+                    src={photos[0]}
+                    alt="Super Yacht Thailand - Bow"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-300"
                   />
@@ -194,49 +203,44 @@ const HoodRiverLuxuryHome = () => {
                   <h2 className="text-2xl font-bold">The Space</h2>
                 </div>
                 <p className="text-gray-800 mb-6">
-                  Beautiful views of Hood River in a luxurious 4-floor apartment. Perfect location located 1 block away from downtown. Home is recently renovated and includes 2 bidet toilets. Living room windows are slide doors, which include a bug screen, so you can open them for fresh air. Perfect for a cozy family getaway.
+                  The ultimate luxury experience awaits you aboard this 130-ft
+                  Super Yacht, a stunning vessel that includes two wake speed
+                  boats. Crafted in Italy, this superyacht for up to 10 guests
+                  offers an exclusive VIP experience, while offering numerous
+                  options to keep active daily.
                 </p>
                 <p className="text-gray-800 mb-6">
-                  Spanning across 4 floors, this contemporary property boasts 5 bedrooms, sleeping 10 guests with 7 comfortable beds and 2.5 bathrooms. The living room has sliding doors that let you enjoy the fresh air and stunning views of downtown/the Columbia River. amazing patio. This house is ideal for a family or group getaway, looking for a luxurious experience.
+                  Wake up at your own time to a meal of your choice and coffee
+                  made by our best chefs on board. With its expansive interior
+                  and exterior space, a professional 8-member crew dedicated to
+                  delivering a 5-star service, a luxurious master state room, a
+                  VIP state room, and 3 guest state rooms. The yacht also
+                  includes a fully equipped gym, tranquil massage room, and two
+                  large dining tables indoor and outdoor.
                 </p>
                 <p className="text-gray-800">
-                  Enjoy comfort and modernity in this recently renovated home featuring new luxury furniture. The open-concept living and dining area boasts floor-to-ceiling windows, flooding the room with natural light. The living room includes sliding patio doors that not only provide natural light and beautiful views but also feature bug screens, allowing you to enjoy the fresh air while keeping bugs out.
+                  Activities onboard: There are plenty activities on board. The
+                  boat offers wake-surfing with the choice of 2 wake boats and
+                  boat drivers, 3 e-foils, fishing, kayaks, paddle boards,
+                  etc... Explore the surroundings with our stand-up paddle
+                  boards and double kayaks, or dive into the crystal-clear
+                  waters with our snorkeling and scuba diving equipment. With
+                  more options such as bottom fishing and spearfishing,
+                  exploring nearby islands and discover hidden gems during our
+                  island-hopping excursions, your time on board will be full of
+                  pursuits if you choose to keep busy.
                 </p>
               </div>
-            </div>
-
-            {/* Location Section */}
-            <div className="mb-16">
-              <div className="flex items-center mb-6">
-                <div className="bg-black text-white p-4 rounded-full mr-4">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"
-                      fill="white"
-                    />
-                  </svg>
-                </div>
-                <h2 className="text-2xl font-bold">Location</h2>
-              </div>
-              <p className="text-gray-800 max-w-4xl">
-                Hood River, Oregon, United States. It's a very prestigious neighborhood. Walls are soundproof so inside is very quiet. For getting around you can walk straight into downtown without a vehicle. "The event site" is just a 2-3 minute drive.
-              </p>
             </div>
           </div>
         </main>
 
         {/* Photo Gallery Modal */}
         {showAllPhotos && (
-          <div className="fixed inset-0 z-50 bg-black overflow-y-auto">
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-90 overflow-y-auto">
             <div className="sticky top-0 z-10 bg-black p-4 flex justify-between items-center">
               <h2 className="text-lg sm:text-xl text-white font-medium">
-                Hood River Luxury Home - All Photos
+                Super Yacht Thailand - All Photos
               </h2>
               <button
                 onClick={closeAllPhotos}
@@ -256,9 +260,9 @@ const HoodRiverLuxuryHome = () => {
                     >
                       <Image
                         src={photo}
-                        alt={`Hood River Luxury Home ${index + 1}`}
+                        alt={`Super Yacht Thailand interior ${index + 1}`}
                         fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw"
                         className="object-cover hover:scale-105 transition-transform duration-300"
                         priority={index < 6}
                         loading={index < 6 ? "eager" : "lazy"}
@@ -275,6 +279,32 @@ const HoodRiverLuxuryHome = () => {
         {selectedPhotoIndex !== null && (
           <div 
             className="fixed inset-0 z-[60] bg-black flex items-center justify-center"
+            onTouchStart={() => {
+              setTouchStartX(null);
+              setTouchEndX(null);
+            }}
+            onTouchMove={(e) => {
+              if (touchStartX === null) {
+                setTouchStartX(e.touches[0].clientX);
+              }
+              setTouchEndX(e.touches[0].clientX);
+            }}
+            onTouchEnd={() => {
+              if (touchStartX === null || touchEndX === null) return;
+              
+              const difference = touchStartX - touchEndX;
+              
+              if (Math.abs(difference) > 50) {
+                if (difference > 0) {
+                  navigatePhoto("next");
+                } else {
+                  navigatePhoto("prev");
+                }
+              }
+              
+              setTouchStartX(null);
+              setTouchEndX(null);
+            }}
           >
             <div className="absolute top-4 right-4 flex space-x-4">
               <button
@@ -303,12 +333,18 @@ const HoodRiverLuxuryHome = () => {
               <div className="relative w-full h-full">
                 <Image
                   src={photos[selectedPhotoIndex]}
-                  alt={`Hood River Home photo ${selectedPhotoIndex + 1}`}
+                  alt={`Property full view ${selectedPhotoIndex + 1}`}
                   fill
                   priority
                   className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
                   sizes="100vw"
                   onLoadingComplete={handleImageLoad}
+                  quality={85}
+                  loading="eager"
+                  priority
+                  className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
+                  sizes="100vw"
+                  onLoadingComplete={() => setIsImageLoading(false)}
                   quality={85}
                   loading="eager"
                 />
@@ -345,4 +381,4 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
-export default HoodRiverLuxuryHome;
+export default SuperYachtThailand;

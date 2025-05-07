@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 import { X } from "lucide-react";
 import { FaBed, FaBath } from "react-icons/fa";
 
-const TwoCedarsKadenwood = () => {
+const MarquiseSkiInSkiOut = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [isImageLoading, setIsImageLoading] = useState(false);
@@ -18,82 +18,33 @@ const TwoCedarsKadenwood = () => {
   const [touchEndX, setTouchEndX] = useState<number | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // Property photos
-  type PropertyPhoto = string;
-  const photos: PropertyPhoto[] = [
-    "/photos/properties/Two Cedars New/OSA_AncientCW1002 Panorama.jpg",
-    "/photos/properties/Two Cedars New/02-2934 Ancient Cedars-02.jpg",
-    "/photos/properties/Two Cedars New/03-2934 Ancient Cedars-03.jpg",
-    "/photos/properties/Two Cedars New/04-2934 Ancient Cedars-04.jpg",
-    "/photos/properties/Two Cedars New/05-2934 Ancient Cedars-05.jpg",
-    "/photos/properties/Two Cedars New/06-2934 Ancient Cedars-06.jpg",
-    "/photos/properties/Two Cedars New/07-2934 Ancient Cedars-07.jpg",
-    "/photos/properties/Two Cedars New/11-2934 Ancient Cedars-11.jpg",
-    "/photos/properties/Two Cedars New/12-2934 Ancient Cedars-12.jpg",
-    "/photos/properties/Two Cedars New/13-2934 Ancient Cedars-13.jpg",
-    "/photos/properties/Two Cedars New/14-2934 Ancient Cedars-14.jpg",
-    "/photos/properties/Two Cedars New/15-2934 Ancient Cedars-15.jpg",
-    "/photos/properties/Two Cedars New/16-2934 Ancient Cedars-16.jpg",
-    "/photos/properties/Two Cedars New/17-2934 Ancient Cedars-17.jpg",
-    "/photos/properties/Two Cedars New/18-2934 Ancient Cedars-18.jpg",
-    "/photos/properties/Two Cedars New/20-2934 Ancient Cedars-20.jpg",
-    "/photos/properties/Two Cedars New/21-2934 Ancient Cedars-21.jpg",
-    "/photos/properties/Two Cedars New/24-2934 Ancient Cedars-24.jpg",
-    "/photos/properties/Two Cedars New/25-2934 Ancient Cedars-25.jpg",
-    "/photos/properties/Two Cedars New/26-2934 Ancient Cedars-26.jpg",
-    "/photos/properties/Two Cedars New/28-2934 Ancient Cedars-28.jpg",
-    "/photos/properties/Two Cedars New/30-2934 Ancient Cedars-30.jpg",
-    "/photos/properties/Two Cedars New/31-2934 Ancient Cedars-31.jpg",
-    "/photos/properties/Two Cedars New/32-2934 Ancient Cedars-32.jpg",
-    "/photos/properties/Two Cedars New/33-2934 Ancient Cedars-33.jpg",
-    "/photos/properties/Two Cedars New/34-2934 Ancient Cedars-34.jpg",
-    "/photos/properties/Two Cedars New/35-2934 Ancient Cedars-35.jpg",
-    "/photos/properties/Two Cedars New/36-2934 Ancient Cedars-36.jpg",
-    "/photos/properties/Two Cedars New/37-2934 Ancient Cedars-37.jpg",
-    "/photos/properties/Two Cedars New/38-2934 Ancient Cedars-38.jpg",
-    "/photos/properties/Two Cedars New/39-2934 Ancient Cedars-39.jpg",
-    "/photos/properties/Two Cedars New/41-2934 Ancient Cedars-41.jpg",
-    "/photos/properties/Two Cedars New/42-2934 Ancient Cedars-42.jpg",
-    "/photos/properties/Two Cedars New/43-2934 Ancient Cedars-43.jpg",
-    "/photos/properties/Two Cedars New/46-2934 Ancient Cedars-46.jpg",
-    "/photos/properties/Two Cedars New/48-2934 Ancient Cedars-48.jpg",
-    "/photos/properties/Two Cedars New/49-2934 Ancient Cedars-49.jpg",
-    "/photos/properties/Two Cedars New/51-2934 Ancient Cedars-51.jpg",
-    "/photos/properties/Two Cedars New/52-2934 Ancient Cedars-52.jpg",
-    "/photos/properties/Two Cedars New/OSA_AncientCW0864-.jpg",
-    "/photos/properties/Two Cedars New/OSA_AncientCW1129.jpg",
-    "/photos/properties/Two Cedars New/OSA_AncientCW1248.jpg",
-    "/photos/properties/Two Cedars New/OSA_AncientCW1437-Panorama.jpg",
+  // Property photos - adjust paths when photos are available
+  const photos = [
+    "/photos/properties/Marquise 2-bed/Marquise-1.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-2.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-3.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-4.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-5.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-6.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-7.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-8.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-9.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-10.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-11.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-12.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-13.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-14.jpg",
+    "/photos/properties/Marquise 2-bed/Marquise-15.jpg",
   ];
 
   const handlePhotoClick = (index: number) => {
-    setIsImageLoading(true);
+    setIsImageLoading(false);
     setSelectedPhotoIndex(index);
   };
 
   const handleImageLoad = () => {
     setIsImageLoading(false);
   };
-
-  // Handle keyboard navigation
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (selectedPhotoIndex !== null) {
-        if (e.key === 'ArrowLeft') {
-          navigatePhoto('prev');
-        } else if (e.key === 'ArrowRight') {
-          navigatePhoto('next');
-        } else if (e.key === 'Escape') {
-          closeFullScreenPhoto();
-        }
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [selectedPhotoIndex]);
 
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchStartX(e.touches[0].clientX);
@@ -150,10 +101,10 @@ const TwoCedarsKadenwood = () => {
   return (
     <>
       <Head>
-        <title>Two Cedars | Kadenwood | Private Butler - AceHost</title>
+        <title>Marquise 2-Bed Ski-in Ski-out - AceHost</title>
         <meta
           name="description"
-          content="Experience luxury at Two Cedars in Kadenwood. This ski-in/ski-out property features 7 bedrooms, private butler service, and stunning mountain views."
+          content="Experience luxury & prime location at this ski-in/ski-out condo in the Marquise. Located on the main floor with brand-new Puffy Royal King bed, Queen pull-out couch, and access to gym, hot tub, and heated pool."
         />
       </Head>
 
@@ -162,19 +113,19 @@ const TwoCedarsKadenwood = () => {
 
         <main>
           <PropertyHeader
-            title="Two Cedars | Kadenwood | Private Butler"
-            guests={17}
-            bedrooms={7}
-            beds={12}
-            bathrooms={8.5}
-            priceRange="$6,500-$9,500+ per night"
-            airbnbLink="https://www.airbnb.ca/rooms/666613336620375768?guests=1&adults=1&s=67&unique_share_id=0d8a1725-cb02-487a-a033-7cc2940692e4"
+            title="Marquise 2-Bed Ski-in Ski-out"
+            guests={4}
+            bedrooms={1}
+            beds={2}
+            bathrooms={1}
+            priceRange="Nightly Price Range: $160-$450"
+            airbnbLink="https://www.airbnb.ca/rooms/1370367404602078616?guests=1&adults=1&s=67&unique_share_id=eb381b39-e67d-44ea-9d7c-2de2e1b5fa20"
           />
 
           {/* Photo Grid */}
-          <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16">
+          <div className="max-w-7xl mx-auto px-4 mb-16">
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
-              {photos.slice(0, 28).map((photo, index) => (
+              {photos.slice(0, 8).map((photo, index) => (
                 <div
                   key={index}
                   className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
@@ -182,9 +133,9 @@ const TwoCedarsKadenwood = () => {
                 >
                   <Image
                     src={photo}
-                    alt={`Two Cedars interior ${index + 1}`}
+                    alt={`Marquise Ski-in Ski-out interior ${index + 1}`}
                     fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
+                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     className="object-cover hover:scale-105 transition-transform duration-300"
                     priority={index < 2}
                     loading={index < 2 ? "eager" : "lazy"}
@@ -195,7 +146,7 @@ const TwoCedarsKadenwood = () => {
                 </div>
               ))}
             </div>
-            {photos.length > 28 && (
+            {photos.length > 8 && (
               <div className="text-center mt-6">
                 <button
                   onClick={() => setShowAllPhotos(true)}
@@ -210,17 +161,14 @@ const TwoCedarsKadenwood = () => {
           {/* Property Description */}
           <div className="max-w-6xl mx-auto px-4" id="details">
             <p className="text-gray-800 mb-16 max-w-4xl">
-              Two Cedars is a luxurious 7-bedroom, 8.5-bathroom property located
-              in the prestigious Kadenwood neighborhood, Whistler's most
-              exclusive residential area. This stunning mountain retreat offers
-              unparalleled luxury, privacy, and breathtaking views of the
-              surrounding mountains and valleys.
-              <br />
-              <br />
-              With over 8,000 square feet of living space, this elegantly
-              designed home features soaring ceilings, floor-to-ceiling windows,
-              a gourmet kitchen, multiple fireplaces, a home theater, and a
-              private outdoor hot tub.
+              Experience luxury & prime location at this ski-in/ski-out condo in
+              the Marquise. Located on the main floor, this retreat features a
+              brand-new Puffy Royal King bed, a Queen pull-out couch, a bidet
+              toilet, and ski storage for easy gear access. Enjoy the gym, hot
+              tub, and heated pool after a day on the slopes. In winter, ski
+              right to Blackcomb gondola and back from your front door, and in
+              summer, walk to the village in under 15 minutes to explore
+              Whistler's best restaurants in the main Village.
             </p>
 
             {/* The Space Section */}
@@ -228,8 +176,8 @@ const TwoCedarsKadenwood = () => {
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                 <div className="relative aspect-[4/3] mb-2">
                   <Image
-                    src={photos[6]}
-                    alt="Two Cedars Interior"
+                    src={photos[0]}
+                    alt="Marquise Ski-in Ski-out Interior"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-300"
                   />
@@ -254,60 +202,88 @@ const TwoCedarsKadenwood = () => {
                   <h2 className="text-2xl font-bold">The Space</h2>
                 </div>
                 <p className="text-gray-800 mb-6">
-                  The property combines rustic mountain charm with modern
-                  luxury, creating an unforgettable Whistler experience. Located
-                  in Kadenwood, guests enjoy access to a private gondola that
-                  provides exclusive ski-in/ski-out access to Whistler Mountain.
+                  Welcome to your luxury ski-in/ski-out retreat at the Marquise,
+                  offering unbeatable access to Whistler's world-class
+                  slopes and vibrant village life. Whether you're here to
+                  ski fresh powder in winter or hike and bike through scenic
+                  trails in summer, this condo provides the perfect blend of
+                  comfort and convenience.
                 </p>
-                <div className="flex items-center space-x-6 mb-6">
-                  <div className="flex items-center">
-                    <FaBed className="text-gray-600 mr-2" size={20} />
-                    <span className="text-gray-800">7 Bedrooms</span>
-                  </div>
-                  <div className="flex items-center">
-                    <FaBath className="text-gray-600 mr-2" size={20} />
-                    <span className="text-gray-800">8.5 Bathrooms</span>
-                  </div>
-                </div>
+                <p className="text-gray-800 mb-6">
+                  <span className="font-medium">Bedroom Layout</span>
+                  <br />
+                  ✔ Master Suite: Sleep in absolute comfort on a brand-new Puffy
+                  Royal King mattress, designed for an exceptional night's
+                  rest.
+                  <br />
+                  <br />
+                  ✔ Living Room (Second Bedroom by Night): A Queen pull-out
+                  couch easily converts the living space into a second bedroom
+                  for extra guests.
+                  <br />
+                  <br />
+                  ✔ Luxury Comfort: A bidet toilet in the bathroom adds a touch
+                  of spa-like relaxation.
+                  <br />
+                  <br />✔ Ski Storage: Secure in-unit ski storage lets you keep
+                  gear out of your living space.
+                </p>
                 <p className="text-gray-800">
-                  Perfect for large groups or multiple families, Two Cedars
-                  offers the ultimate luxury getaway in Whistler's most
-                  coveted location.
+                  ✔ Year-Round Amenities: Unwind in the heated outdoor pool, hot
+                  tub, and gym after a day of adventure.
+                  <br />
+                  <br />
+                  ✔ Perfect Location: Ski directly to Blackcomb in winter, or
+                  enjoy a scenic 15-minute walk to Whistler Village in summer,
+                  with easy access to top dining, shopping, and outdoor
+                  activities.
+                  <br />
+                  <br />
+                  ✔ Convenient Parking: Plenty of paid parking is available in
+                  the building for easy access.
+                  <br />
+                  <br />
+                  With top-tier amenities and an unbeatable location, this condo
+                  is ideal for couples, families, and friends looking for a
+                  high-end Whistler experience in any season.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Photos Modal - Show all photos */}
+          {/* Photo Gallery Modal */}
           {showAllPhotos && (
-            <div className="fixed inset-0 bg-black bg-opacity-90 z-50 overflow-y-auto">
-              <div className="flex justify-between items-center p-4 sticky top-0 bg-black bg-opacity-75 z-10">
-                <h3 className="text-white text-xl font-medium">
-                  Two Cedars - {photos.length} photos
-                </h3>
+            <div className="fixed inset-0 z-50 bg-black overflow-y-auto">
+              <div className="sticky top-0 z-10 bg-black p-4 flex justify-between items-center">
+                <h2 className="text-lg sm:text-xl text-white font-medium">
+                  Marquise Ski-in Ski-out - All Photos
+                </h2>
                 <button
                   onClick={closeAllPhotos}
-                  className="text-white hover:text-gray-300"
+                  className="text-white hover:text-gray-300 bg-gray-900 px-4 py-2 rounded-full"
                 >
-                  <X size={24} />
+                  Close
                 </button>
               </div>
 
-              <div className="container mx-auto px-4 py-8">
+              <div className="max-w-7xl mx-auto py-6 px-4">
                 <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
                   {photos.map((photo, index) => (
-                    <div
-                      key={index}
-                      className="aspect-[4/3] relative cursor-pointer"
-                      onClick={() => handlePhotoClick(index)}
-                    >
-                      <Image
-                        src={photo}
-                        alt={`Two Cedars photo ${index + 1}`}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        className="object-cover hover:opacity-95 transition-opacity"
-                      />
+                    <div key={index} className="mb-6">
+                      <div
+                        className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer"
+                        onClick={() => handlePhotoClick(index)}
+                      >
+                        <Image
+                          src={photo}
+                          alt={`Marquise ${index + 1}`}
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          className="object-cover hover:scale-105 transition-transform duration-300"
+                          priority={index < 6}
+                          loading={index < 6 ? "eager" : "lazy"}
+                        />
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -315,7 +291,7 @@ const TwoCedarsKadenwood = () => {
             </div>
           )}
 
-          {/* Full Screen Photo View */}
+          {/* Full-screen Photo View */}
           {selectedPhotoIndex !== null && (
             <div 
               className="fixed inset-0 z-[60] bg-black flex items-center justify-center"
@@ -385,8 +361,6 @@ const TwoCedarsKadenwood = () => {
   );
 };
 
-export default TwoCedarsKadenwood;
-
 export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: {
@@ -394,3 +368,5 @@ export const getStaticProps: GetStaticProps = async (context) => {
     },
   };
 };
+
+export default MarquiseSkiInSkiOut;
