@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
@@ -7,9 +7,14 @@ import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import PropertyHeader from "@/components/PropertyHeader";
 import Footer from "@/components/Footer";
+import { X } from "lucide-react";
 
 const FalconBlueberryDrive = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
+  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
+  const [isImageLoading, setIsImageLoading] = useState(false);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const [touchEndX, setTouchEndX] = useState<number | null>(null);
 
   // Property photos
   const images = [
@@ -43,6 +48,87 @@ const FalconBlueberryDrive = () => {
     "/photos/properties/Falcon/Falcon Cr-25.jpg",
     "/photos/properties/Falcon/Falcon Cr-26.jpg"
   ];
+
+  const handlePhotoClick = (index: number) => {
+    setIsImageLoading(true);
+    setSelectedPhotoIndex(index);
+  };
+
+  const closeFullScreenPhoto = () => {
+    setSelectedPhotoIndex(null);
+  };
+
+  const handleImageLoad = () => {
+    setIsImageLoading(false);
+  };
+
+  const navigatePhoto = (direction: "prev" | "next") => {
+    if (selectedPhotoIndex === null) return;
+
+    setIsImageLoading(true);
+
+    if (direction === "prev") {
+      setSelectedPhotoIndex(
+        selectedPhotoIndex === 0 ? images.length - 1 : selectedPhotoIndex - 1
+      );
+    } else {
+      setSelectedPhotoIndex(
+        selectedPhotoIndex === images.length - 1 ? 0 : selectedPhotoIndex + 1
+      );
+    }
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStartX(e.touches[0].clientX);
+    setTouchEndX(null);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEndX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX || !touchEndX) return;
+    
+    const difference = touchStartX - touchEndX;
+    
+    if (Math.abs(difference) > 50) {
+      if (difference > 0) {
+        navigatePhoto("next");
+      } else {
+        navigatePhoto("prev");
+      }
+    }
+    
+    setTouchStartX(null);
+    setTouchEndX(null);
+  };
+
+  // Close full screen view when all photos modal is closed
+  const closeAllPhotos = () => {
+    setShowAllPhotos(false);
+    setSelectedPhotoIndex(null);
+  };
+
+  // Handle keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (selectedPhotoIndex !== null) {
+        if (e.key === 'ArrowLeft') {
+          navigatePhoto('prev');
+        } else if (e.key === 'ArrowRight') {
+          navigatePhoto('next');
+        } else if (e.key === 'Escape') {
+          closeFullScreenPhoto();
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [selectedPhotoIndex]);
 
   return (
     <>
@@ -85,7 +171,7 @@ const FalconBlueberryDrive = () => {
                 <div
                   key={index}
                   className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
-                  onClick={() => setShowAllPhotos(true)}
+                  onClick={() => handlePhotoClick(index)}
                 >
                   <Image
                     src={photo}
@@ -291,39 +377,108 @@ const FalconBlueberryDrive = () => {
 
         {/* Photo Gallery Modal */}
         {showAllPhotos && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-90 overflow-y-auto">
-            <div className="sticky top-0 z-10 bg-black bg-opacity-75 p-4 flex justify-between items-center">
-              <h2 className="text-white text-xl font-medium">
+          <div className="fixed inset-0 z-50 bg-black overflow-y-auto">
+            <div className="sticky top-0 z-10 bg-black p-4 flex justify-between items-center">
+              <h2 className="text-lg sm:text-xl text-white font-medium">
                 Falcon | Blueberry Drive - All Photos ({images.length})
               </h2>
               <button
-                onClick={() => setShowAllPhotos(false)}
+                onClick={closeAllPhotos}
                 className="text-white hover:text-gray-300 bg-gray-900 px-4 py-2 rounded-full"
               >
                 Close
               </button>
             </div>
 
-            <div className="container mx-auto py-8 px-4">
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">                {images.map((photo, index) => (
-                  <div
-                    key={index}
-                    className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden"
-                  >
-                    <Image
-                      src={photo}
-                      alt={`Falcon Blueberry Drive photo ${index + 1}`}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover hover:opacity-95 transition-opacity"
-                    />
-                    {/* Photo counter */}
-                    <div className="absolute bottom-2 right-2 bg-black bg-opacity-60 text-white text-xs px-2 py-1 rounded">
-                      {index + 1}/{images.length}
+            <div className="max-w-7xl mx-auto py-6 px-4">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+                {images.map((photo, index) => (
+                  <div key={index} className="mb-6">
+                    <div
+                      className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer"
+                      onClick={() => handlePhotoClick(index)}
+                    >
+                      <Image
+                        src={photo}
+                        alt={`Falcon Blueberry Drive photo ${index + 1}`}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover hover:scale-105 transition-transform duration-300"
+                        priority={index < 6}
+                        loading={index < 6 ? "eager" : "lazy"}
+                      />
+                    </div>
+                    <div className="mt-1 text-center">
+                      <span className="text-white text-xs">
+                        {index + 1} / {images.length}
+                      </span>
                     </div>
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        )}
+
+        {/* Full-screen Photo View */}
+        {selectedPhotoIndex !== null && (
+          <div 
+            className="fixed inset-0 z-[60] bg-black flex items-center justify-center"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
+            <div className="absolute top-4 right-4 flex space-x-4">
+              <button
+                onClick={closeFullScreenPhoto}
+                className="text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
+                aria-label="Close"
+              >
+                <X className="h-6 w-6" />
+              </button>
+            </div>
+
+            <button
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
+              onClick={() => navigatePhoto("prev")}
+              aria-label="Previous photo"
+            >
+              &larr;
+            </button>
+
+            <div className="relative w-full h-full max-w-6xl max-h-[80vh] mx-auto px-4">
+              {isImageLoading && (
+                <div className="absolute inset-0 flex items-center justify-center z-10">
+                  <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                </div>
+              )}
+              <div className="relative w-full h-full">
+                <Image
+                  src={images[selectedPhotoIndex]}
+                  alt={`Property full view ${selectedPhotoIndex + 1}`}
+                  fill
+                  priority
+                  className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
+                  sizes="100vw"
+                  onLoadingComplete={handleImageLoad}
+                  quality={85}
+                  loading="eager"
+                />
+              </div>
+            </div>
+
+            <button
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
+              onClick={() => navigatePhoto("next")}
+              aria-label="Next photo"
+            >
+              &rarr;
+            </button>
+
+            <div className="absolute bottom-4 left-0 right-0 text-center z-20">
+              <p className="text-white text-sm bg-black bg-opacity-50 inline-block px-4 py-2 rounded-full">
+                {selectedPhotoIndex + 1} / {images.length}
+              </p>
             </div>
           </div>
         )}

@@ -165,6 +165,7 @@ const CotswoldsUKSohoFarmHouse = () => {
             bathrooms={5}
             priceRange="£1,100-£1,500 per night"
             contactLink="/contact"
+            airbnbLink="https://www.airbnb.ca/rooms/1414129878809697902?guests=1&adults=1&s=67&unique_share_id=ba3bff7b-bc57-416c-bcd6-96b0943cfe51"
           />
 
           {/* Photo Grid */}
