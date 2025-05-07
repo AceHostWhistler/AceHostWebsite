@@ -699,6 +699,41 @@ export default function Properties() {
             holidayPrice: "Includes 2 Night Accommodation",
           },
           {
+            id: "villa-rosabella-mykonos",
+            name: "Villa Rosabella | Mykonos",
+            images: [
+              "/photos/properties/Villa Rosabella Mykonos/Villa Rosabella (1).jpg",
+              "/photos/properties/Villa Rosabella Mykonos/Villa Rosabella (10).jpg",
+              "/photos/properties/Villa Rosabella Mykonos/Villa Rosabella (11).jpg"
+            ],
+            guests: 16,
+            bedrooms: 8,
+            bathrooms: 8,
+            priceRange: "€3,500-€5,800 per night",
+            location: "Mykonos, Greece",
+            description: "Villa Rosabella is a world-class luxury retreat designed for UHNW guests seeking privacy, exclusivity, and unparalleled Aegean views. Perched on a cliffside overlooking the shimmering Aegean, this ultra-private estate seamlessly blends modern luxury with authentic Mykonian elegance, creating the ultimate high-end escape in Mykonos.",
+            features: [
+              "Private Infinity Pool",
+              "Direct Sea Access",
+              "Private Gym",
+              "Outdoor Dining & BBQ Area",
+              "Daily Housekeeping",
+              "Wine Cellar",
+              "Smart Home System",
+              "Concierge Services"
+            ],
+            highlights: [
+              "Unrivaled Sunset Views",
+              "Exclusive Private Pathway to Beach",
+              "Expansive Outdoor Living Areas",
+              "Absolute Privacy & Luxury"
+            ],
+            link: "/worldwide-listings/villa-rosabella-mykonos",
+            isSkiInSkiOut: false,
+            isPetFriendly: false,
+            country: "greece"
+          },
+          {
             id: "cotswolds-uk-soho-farm-house",
             name: "Cotswolds UK - Soho Farm House",
             images: [
@@ -733,151 +768,6 @@ export default function Properties() {
             isSkiInSkiOut: false,
             isPetFriendly: false,
             country: "uk"
-          },
-        ],
-      },
-      {
-        id: "worldwide",
-        title: "Worldwide Properties",
-        description:
-          "Introducing AceHost Global VIP Concierge Services & Villas We're thrilled to announce that AceHost now offers exclusive VIP concierge services and handpicked luxury properties across the globe. Whether you're dreaming of a beachfront estate, a serene countryside chateau, or a sleek modern villa for a group getaway, our team will source the perfect destination tailored to your vision.\nBelow is a curated selection of homes we currently work with—but our network extends far beyond. If you're planning your next vacation and looking for a large, private villa paired with personalized service, we're here to make it happen.\nThis offering is reserved for our top-tier VIP clients & repeat guests. Inquire today to see if you qualify.",
-        properties: [
-          {
-            id: "santorini-greece-villa-eclipse",
-            name: "Santorini Greece - Villa Eclipse",
-            images: [
-              "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(7 of 25).jpg",
-              "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(6 of 25).jpg", 
-              "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(16 of 25).jpg"
-            ],
-            guests: 10,
-            bedrooms: 5,
-            bathrooms: 5,
-            location: "Santorini, Greece",
-            description:
-              "Villa Eclipse is a luxury private villa in Santorini offering total privacy and breathtaking sea views. Located on a peaceful cliffside on the southwest coast of the island, it promises a tranquil retreat while remaining close to the island's best spots.",
-            features: [
-              "Private Infinity Pool",
-              "Sea Views",
-              "Outdoor Jacuzzi",
-              "Daily Breakfast",
-              "Concierge Services",
-              "Air Conditioning",
-              "Smart TVs",
-              "Five En-suite Bedrooms"
-            ],
-            highlights: [
-              "Breathtaking Sea Views",
-              "Private Infinity Pool",
-              "Luxury Cycladic Design",
-              "Five-Star Services"
-            ],
-            priceRange: "€1,300-€1,920 per night",
-          },
-          {
-            id: "villa-oineas-greece-mykonos",
-            name: "Villa Oineas - Greece Mykonos",
-            images: [
-              "/photos/properties/Oineas Villa - Greece Mykonos/VILLA OINEAS-06907.jpg",
-              "/photos/properties/Oineas Villa - Greece Mykonos/VILLA OINEAS-06621.jpg",
-              "/photos/properties/Oineas Villa - Greece Mykonos/VILLA OINEAS - 17.jpg"
-            ],
-            guests: 12,
-            bedrooms: 5,
-            bathrooms: 5,
-            priceRange: "€1,450-€2,550 per night",
-            location: "Mykonos, Greece",
-            description: "Villa Oineas is a newly built luxury estate in Santorini, nestled within 32 acres of private vineyards and designed to offer the ultimate blend of elegance, privacy, and premium living. With panoramic views of the island's southern coastline, this exclusive sanctuary is ideal for luxury holidays, destination weddings, and private VIP events.",
-            features: [
-              "Heated Seawater Infinity Pool",
-              "Private Tennis Court",
-              "Wine Cellar",
-              "Cinema",
-              "Daily Maid Service",
-              "Concierge Services",
-              "Smart TVs",
-              "Private Heliport"
-            ],
-            highlights: [
-              "32 Acres Private Estate",
-              "Panoramic Sea Views",
-              "Perfect for Events",
-              "Five-Star Amenities"
-            ],
-            link: "/worldwide-listings/villa-oineas-greece-mykonos",
-            isSkiInSkiOut: false,
-            isPetFriendly: false,
-            country: "greece"
-          },
-          {
-            id: "helios-estate-mykonos",
-            name: "Helios Estate - Mykonos",
-            images: [
-              "/photos/properties/Helios Estate - Mykonos/01.jpg",
-              "/photos/properties/Helios Estate - Mykonos/02.jpg",
-              "/photos/properties/Helios Estate - Mykonos/03.jpg"
-            ],
-            guests: 16,
-            bedrooms: 8,
-            bathrooms: 9,
-            priceRange: "€15,000-€26,000 per night",
-            location: "Mykonos, Greece",
-            description: "Helios Estate is a magnificent luxury property perched on a hillside in one of Mykonos' most exclusive areas. With 8 luxurious bedrooms, 9 bathrooms, two swimming pools, expansive outdoor living spaces, and breathtaking panoramic views of the Aegean Sea, this exceptional estate offers an unparalleled retreat for the most discerning travelers.",
-            features: [
-              "Two Infinity Swimming Pools",
-              "Private Tennis Court",
-              "Fitness Center",
-              "Spa & Wellness Area",
-              "Cinema Room",
-              "Wine Cellar",
-              "Private Chef Available",
-              "Concierge Services"
-            ],
-            highlights: [
-              "Panoramic Sea Views",
-              "Entertainment Areas",
-              "Luxury Accommodations",
-              "Premium Location"
-            ],
-            link: "/worldwide-listings/helios-estate-mykonos",
-            isSkiInSkiOut: false,
-            isPetFriendly: false,
-            country: "greece"
-          },
-          {
-            id: "villa-rosabella-mykonos",
-            name: "Villa Rosabella | Mykonos",
-            images: [
-              "/photos/properties/Villa Rosabella Mykonos/Villa Rosabella (1).jpg",
-              "/photos/properties/Villa Rosabella Mykonos/Villa Rosabella (10).jpg",
-              "/photos/properties/Villa Rosabella Mykonos/Villa Rosabella (11).jpg"
-            ],
-            guests: 16,
-            bedrooms: 8,
-            bathrooms: 8,
-            priceRange: "€3,500-€5,800 per night",
-            location: "Mykonos, Greece",
-            description: "Villa Rosabella is a world-class luxury retreat designed for UHNW guests seeking privacy, exclusivity, and unparalleled Aegean views. Perched on a cliffside overlooking the shimmering Aegean, this ultra-private estate seamlessly blends modern luxury with authentic Mykonian elegance, creating the ultimate high-end escape in Mykonos.",
-            features: [
-              "Private Infinity Pool",
-              "Direct Sea Access",
-              "Private Gym",
-              "Outdoor Dining & BBQ Area",
-              "Daily Housekeeping",
-              "Wine Cellar",
-              "Smart Home System",
-              "Concierge Services"
-            ],
-            highlights: [
-              "Unrivaled Sunset Views",
-              "Exclusive Private Pathway to Beach",
-              "Expansive Outdoor Living Areas",
-              "Absolute Privacy & Luxury"
-            ],
-            link: "/worldwide-listings/villa-rosabella-mykonos",
-            isSkiInSkiOut: false,
-            isPetFriendly: false,
-            country: "greece"
           },
           {
             id: "vancouver-house-corner",
@@ -1036,6 +926,152 @@ export default function Properties() {
               "Sauna",
             ],
             priceRange: "$1,500-$3,000/night",
+          },
+        ],
+      },
+      {
+        id: "worldwide",
+        title: "Worldwide Properties",
+        description:
+          "Introducing AceHost Global VIP Concierge Services & Villas We're thrilled to announce that AceHost now offers exclusive VIP concierge services and handpicked luxury properties across the globe. Whether you're dreaming of a beachfront estate, a serene countryside chateau, or a sleek modern villa for a group getaway, our team will source the perfect destination tailored to your vision.\nBelow is a curated selection of homes we currently work with—but our network extends far beyond. If you're planning your next vacation and looking for a large, private villa paired with personalized service, we're here to make it happen.\nThis offering is reserved for our top-tier VIP clients & repeat guests. Inquire today to see if you qualify.",
+        properties: [
+          {
+            id: "cotswolds-uk-soho-farm-house",
+            name: "Cotswolds UK - Soho Farm House",
+            images: [
+              "/photos/properties/Cotswolds UK - Soho Farm House/8596128-exterior09-800.jpg",
+              "/photos/properties/Cotswolds UK - Soho Farm House/224A5292.jpg",
+              "/photos/properties/Cotswolds UK - Soho Farm House/224A5307.jpg"
+            ],
+            guests: 14,
+            bedrooms: 8,
+            bathrooms: 5,
+            priceRange: "£1,100-£2,300 per night | 3 night minimum",
+            location: "Cotswolds, United Kingdom",
+            description: "Designer Stone Estate Near Soho Farmhouse – 8 Bedroom, Spa, Tennis Court, & Annex. Welcome to your countryside dream retreat—just 4 minutes by car (or a scenic 30-minute walk through a private trail) from the world-famous Soho Farmhouse. This beautifully renovated 8-bedroom, 5-bathroom stone estate offers over 320m² of luxurious living space across two dwellings, all set on a stunning and serene 2-acre property.",
+            features: [
+              "Private Tennis Court",
+              "Infrared Sauna",
+              "Hot Tub & Cold Plunge",
+              "Designer Kitchen with AGA Oven",
+              "Two Cozy Living Rooms",
+              "Electric Car Charger",
+              "Outdoor BBQ & Dining",
+              "Firepit"
+            ],
+            highlights: [
+              "Near Soho Farmhouse",
+              "320m² Luxury Living Space",
+              "Main House + Separate Annex",
+              "2-Acre Private Grounds"
+            ],
+            link: "/worldwide-listings/cotswolds-uk-soho-farm-house",
+            airbnbLink: "https://www.airbnb.ca/rooms/1414129878809697902?guests=1&adults=1&s=67&unique_share_id=ba3bff7b-bc57-416c-bcd6-96b0943cfe51",
+            isSkiInSkiOut: false,
+            isPetFriendly: false,
+            country: "uk"
+          },
+          {
+            id: "santorini-greece-villa-eclipse",
+            name: "Santorini Greece - Villa Eclipse",
+            images: [
+              "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(7 of 25).jpg",
+              "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(6 of 25).jpg", 
+              "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(16 of 25).jpg"
+            ],
+            guests: 10,
+            bedrooms: 5,
+            bathrooms: 5,
+            location: "Santorini, Greece",
+            description:
+              "Villa Eclipse is a luxury private villa in Santorini offering total privacy and breathtaking sea views. Located on a peaceful cliffside on the southwest coast of the island, it promises a tranquil retreat while remaining close to the island's best spots.",
+            features: [
+              "Private Infinity Pool",
+              "Sea Views",
+              "Outdoor Jacuzzi",
+              "Daily Breakfast",
+              "Concierge Services",
+              "Air Conditioning",
+              "Smart TVs",
+              "Five En-suite Bedrooms"
+            ],
+            highlights: [
+              "Breathtaking Sea Views",
+              "Private Infinity Pool",
+              "Luxury Cycladic Design",
+              "Five-Star Services"
+            ],
+            priceRange: "€1,300-€1,920 per night",
+          },
+          {
+            id: "villa-oineas-greece-mykonos",
+            name: "Villa Oineas - Greece Mykonos",
+            images: [
+              "/photos/properties/Oineas Villa - Greece Mykonos/VILLA OINEAS-06907.jpg",
+              "/photos/properties/Oineas Villa - Greece Mykonos/VILLA OINEAS-06621.jpg",
+              "/photos/properties/Oineas Villa - Greece Mykonos/VILLA OINEAS - 17.jpg"
+            ],
+            guests: 12,
+            bedrooms: 5,
+            bathrooms: 5,
+            priceRange: "€1,450-€2,550 per night",
+            location: "Mykonos, Greece",
+            description: "Villa Oineas is a newly built luxury estate in Santorini, nestled within 32 acres of private vineyards and designed to offer the ultimate blend of elegance, privacy, and premium living. With panoramic views of the island's southern coastline, this exclusive sanctuary is ideal for luxury holidays, destination weddings, and private VIP events.",
+            features: [
+              "Heated Seawater Infinity Pool",
+              "Private Tennis Court",
+              "Wine Cellar",
+              "Cinema",
+              "Daily Maid Service",
+              "Concierge Services",
+              "Smart TVs",
+              "Private Heliport"
+            ],
+            highlights: [
+              "32 Acres Private Estate",
+              "Panoramic Sea Views",
+              "Perfect for Events",
+              "Five-Star Amenities"
+            ],
+            link: "/worldwide-listings/villa-oineas-greece-mykonos",
+            isSkiInSkiOut: false,
+            isPetFriendly: false,
+            country: "greece"
+          },
+          {
+            id: "helios-estate-mykonos",
+            name: "Helios Estate - Mykonos",
+            images: [
+              "/photos/properties/Helios Estate - Mykonos/01.jpg",
+              "/photos/properties/Helios Estate - Mykonos/02.jpg",
+              "/photos/properties/Helios Estate - Mykonos/03.jpg"
+            ],
+            guests: 16,
+            bedrooms: 8,
+            bathrooms: 9,
+            priceRange: "€15,000-€26,000 per night",
+            location: "Mykonos, Greece",
+            description: "Helios Estate is a magnificent luxury property perched on a hillside in one of Mykonos' most exclusive areas. With 8 luxurious bedrooms, 9 bathrooms, two swimming pools, expansive outdoor living spaces, and breathtaking panoramic views of the Aegean Sea, this exceptional estate offers an unparalleled retreat for the most discerning travelers.",
+            features: [
+              "Two Infinity Swimming Pools",
+              "Private Tennis Court",
+              "Fitness Center",
+              "Spa & Wellness Area",
+              "Cinema Room",
+              "Wine Cellar",
+              "Private Chef Available",
+              "Concierge Services"
+            ],
+            highlights: [
+              "Panoramic Sea Views",
+              "Entertainment Areas",
+              "Luxury Accommodations",
+              "Premium Location"
+            ],
+            link: "/worldwide-listings/helios-estate-mykonos",
+            isSkiInSkiOut: false,
+            isPetFriendly: false,
+            country: "greece"
           },
         ],
       },

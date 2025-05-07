@@ -372,32 +372,48 @@ const WedgeMountainLodgeSpa = () => {
 
         {/* Photo Gallery Modal */}
         {showAllPhotos && (
-          <div className="fixed inset-0 bg-white z-50 overflow-y-auto">
-            <div className="sticky top-0 z-10 bg-white p-4 border-b flex justify-between items-center">
-              <h2 className="text-2xl font-bold">All Photos</h2>
+          <div className="fixed inset-0 z-50 bg-black overflow-y-auto">
+            <div className="sticky top-0 z-10 bg-black p-4 flex justify-between items-center">
+              <h2 className="text-lg sm:text-xl text-white font-medium">
+                Wedge Mountain Lodge & Spa - All Photos
+              </h2>
               <button
                 onClick={closeAllPhotos}
-                className="p-2 rounded-full hover:bg-gray-100"
+                className="text-white hover:text-gray-300 bg-gray-900 px-4 py-2 rounded-full"
+                aria-label="Close gallery"
               >
-                <X size={24} />
+                Close
               </button>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
-              {photos.map((photo, index) => (
-                <div
-                  key={index}
-                  className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
-                  onClick={() => handlePhotoClick(index)}
-                >
-                  <Image
-                    src={encodeImageUrl(photo)}
-                    alt={`Wedge Mountain Lodge & Spa ${index + 1}`}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              ))}
+            <div className="max-w-7xl mx-auto py-6 px-4">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {photos.map((photo, index) => (
+                  <div key={index} className="mb-6">
+                    <div
+                      className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer"
+                      onClick={() => handlePhotoClick(index)}
+                    >
+                      <Image
+                        src={encodeImageUrl(photo)}
+                        alt={`Wedge Mountain Lodge & Spa ${index + 1}`}
+                        fill
+                        sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw"
+                        className="object-cover hover:scale-105 transition-transform duration-300"
+                        priority={index < 4}
+                        loading={index < 8 ? "eager" : "lazy"}
+                        quality={index < 12 ? 85 : 75}
+                        placeholder="blur"
+                        blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzMiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="
+                      />
+                    </div>
+                    <div className="mt-1 text-center">
+                      <span className="text-white text-xs">
+                        {index + 1} / {photos.length}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         )}

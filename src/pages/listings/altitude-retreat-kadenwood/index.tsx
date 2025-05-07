@@ -442,7 +442,7 @@ const AltitudeRetreat = () => {
             </div>
 
             <div className="max-w-7xl mx-auto py-6 px-4">
-              <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {photos.map((photo, index) => (
                   <div key={index} className="mb-6">
                     <div
@@ -453,7 +453,7 @@ const AltitudeRetreat = () => {
                         src={photo}
                         alt={`Altitude Retreat ${index + 1}`}
                         fill
-                        sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw"
+                        sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw"
                         className="object-cover hover:scale-105 transition-transform duration-300"
                         priority={index < 4}
                         loading={index < 8 ? "eager" : "lazy"}
