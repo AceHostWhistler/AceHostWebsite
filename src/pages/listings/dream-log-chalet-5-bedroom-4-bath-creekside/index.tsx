@@ -18,10 +18,10 @@ const propertyInfo: PropertyInfo = {
   bedrooms: 5,
   beds: 7,
   bathrooms: 4,
-  priceRange: "$15,000+",
-  winterPriceRange: "$15,000+",
-  holidayPriceRange: "$15,000+",
-  minimumStay: "Long Term Monthly Rental Only",
+  priceRange: "Monthly Price Range: $15,000-$19,000",
+  winterPriceRange: "3-12 Month Minimum",
+  holidayPriceRange: "Monthly Rental Only",
+  minimumStay: "3-12 Month Rental Only",
   airbnbLink: "https://www.airbnb.com/rooms/your-listing-id",
   photos: [
     {
@@ -183,7 +183,7 @@ const DreamLogChalet = () => {
             guests={10}
             bedrooms={5}
             bathrooms={4}
-            priceRange="$1,200-$3,000 per night"
+            priceRange="Monthly Price Range: $15,000-$19,000"
             airbnbLink="https://www.airbnb.ca/rooms/20190966?guests=1&adults=1&s=67&unique_share_id=e84d8ef3-67d7-4a87-8fd4-9a7e0c82ebb9"
           />
 

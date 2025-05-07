@@ -120,10 +120,10 @@ const TheNest = () => {
         <main>
           <PropertyHeader 
             title="The Nest | Ski-in/Ski-out"
-            guests={8}
-            bedrooms={4}
-            bathrooms={3.5}
-            priceRange="$1,600-$2,600 per night"
+            guests={10}
+            bedrooms={5}
+            bathrooms={6}
+            priceRange="Monthly Price Range: $18,000-$29,000"
           />
 
           {/* Photo Grid */}

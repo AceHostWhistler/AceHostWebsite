@@ -113,7 +113,7 @@ const VancouverHouseCornerUnit = () => {
             bedrooms={2}
             beds={2}
             bathrooms={2}
-            priceRange="$400-$700 per night"
+            priceRange="$12,000 per month | 3 month minimum"
             airbnbLink="https://www.airbnb.ca/rooms/561767409786915919?guests=1&adults=1&s=67&unique_share_id=7a6e7b88-1a8b-4352-acca-56db762955cd"
           />
 

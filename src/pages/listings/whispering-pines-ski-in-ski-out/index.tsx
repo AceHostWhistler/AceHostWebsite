@@ -119,7 +119,7 @@ const WhisperingPines = () => {
   return (
     <>
       <Head>
-        <title>The Aspens | Luxe 2-Bed Ski in/Out | On Slopes - AceHost</title>
+        <title>The Aspens | 2-Bed Ski in/Out - AceHost</title>
         <meta
           name="description"
           content="Ultimate ski-in, ski-out in Aspens. Ground-level unit steps from hot tub/pool, Blackcomb Mountain, and ski lifts. Main & Upper Whistler Village within walking distance. Nearby biking trails, 2 golf courses, and Lost Lake."
@@ -131,7 +131,7 @@ const WhisperingPines = () => {
 
         <main>
           <PropertyHeader
-            title="The Aspens | Luxe 2-Bed Ski in/Out | On Slopes"
+            title="The Aspens | 2-Bed Ski in/Out"
             guests={4}
             bedrooms={2}
             beds={3}

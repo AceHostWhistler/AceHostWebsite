@@ -513,13 +513,13 @@ export default function Properties() {
               "Family-Friendly Layout",
               "Private Hot Tub",
             ],
-            priceRange: "6-12 Month Minimum (booked 2025)",
-            winterPrice: "90 Nights: $20,000 per month",
-            holidayPrice: "6-months Winter: $17,000 monthly | 12+ months: $14,000 monthly",
+            priceRange: "Monthly Price Range: $15,000-$19,000",
+            winterPrice: "3-12 Month Minimum",
+            holidayPrice: "Monthly Rental Only",
           },
           {
             id: "whispering-pines",
-            name: "The Aspens | 1 Bed | Ski-in/Ski-out",
+            name: "The Aspens | 2-Bed Ski in/Out",
             images: [
               "/photos/properties/The Aspens/4800-Spearhead-Drive-1.JPG",
             ],

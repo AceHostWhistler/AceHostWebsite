@@ -179,7 +179,7 @@ const SnowPine = () => {
             guests={12}
             bedrooms={4}
             bathrooms={4}
-            priceRange="$1,400-$2,800 per night"
+            priceRange="Monthly Price Range: $10,000-$12,000"
           />
 
           {/* Photo Grid */}
