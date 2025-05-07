@@ -360,7 +360,7 @@ export default function Properties() {
             guests: 15,
             bedrooms: 7,
             bathrooms: 3.5,
-            location: "whistler",
+            location: "Blueberry, Whistler Village",
             description:
               "Cozy chalet in an amazing location! Beautiful views of the mountain in the prestigious, quiet and family orientated Blueberry Hill. Perfect for a large group or family retreat in Whistler.",
             features: [
@@ -394,7 +394,7 @@ export default function Properties() {
             guests: 6,
             bedrooms: 3,
             bathrooms: 3.5,
-            location: "White Gold, Whistler",
+            location: "Creekside Village, Whistler",
             description:
               "This elegant alpine retreat in Whistler's White Gold neighborhood combines luxury with convenience. Just a short walk to the Village and lifts, this beautiful mountain home features high ceilings, a gourmet kitchen, and a private hot tub.",
             features: [
@@ -428,7 +428,7 @@ export default function Properties() {
             guests: 26,
             bedrooms: 10,
             bathrooms: 13,
-            location: "Stonebridge, Whistler",
+            location: "Wedgewoods, Whistler",
             description:
               "This spectacular mountain lodge in exclusive Stonebridge offers the ultimate in luxury and privacy. With 8,500 sq. ft. of living space, it features a private spa, home theater, and the option for private chef service.",
             features: [
@@ -462,7 +462,7 @@ export default function Properties() {
             guests: 8,
             bedrooms: 3,
             bathrooms: 3,
-            location: "Whistler Village, Whistler",
+            location: "Upper Whistler Village, Whistler",
             description:
               "This stylish and recently renovated 3-bedroom condo in Whistler Village combines convenient location with modern comfort. Tastefully decorated with a cozy mountain aesthetic and just minutes from the gondolas.",
             features: [
@@ -494,7 +494,7 @@ export default function Properties() {
             guests: 11,
             bedrooms: 5,
             bathrooms: 4,
-            location: "Creekside, Whistler",
+            location: "Bayshores, Whistler",
             description:
               "Authentic log cabin charm meets modern luxury in this beautiful 5-bedroom chalet in Whistler's Creekside area. Features vaulted ceilings, a stone fireplace, and convenient access to Creekside Village and lifts.",
             features: [
@@ -526,7 +526,7 @@ export default function Properties() {
             guests: 4,
             bedrooms: 2,
             bathrooms: 2,
-            location: "Horstman Estates, Whistler",
+            location: "Upper Village, Whistler",
             description:
               "Located in prestigious Horstman Estates on Blackcomb Mountain, this luxury ski-in/ski-out chalet offers direct access to the slopes and stunning views. Features include a private hot tub, vaulted ceilings, and elegant alpine design.",
             features: [
@@ -557,7 +557,7 @@ export default function Properties() {
             guests: 4,
             bedrooms: 1,
             bathrooms: 1,
-            location: "Blackcomb Base, Whistler",
+            location: "Upper Village, Whistler",
             description:
               "Enjoy true ski-in/ski-out convenience at this welcoming 2-bedroom condo in the desirable Marquise complex at Blackcomb Base. Features a private balcony, gas fireplace, and access to shared pool and hot tub.",
             features: [
@@ -589,7 +589,7 @@ export default function Properties() {
             guests: 10,
             bedrooms: 5,
             bathrooms: 6,
-            location: "Whistler, BC, Canada",
+            location: "Nordic, Whistler",
             description:
               "Perched like an eagle high upon the hillside of Whistler Benchlands with spectacular views, this exquisite contemporary chalet offers a luxury stay with a rare ski-in ski-out access to Whistler Resort, private hot tub, fire pit and games room.",
             features: [
@@ -615,7 +615,7 @@ export default function Properties() {
             guests: 4,
             bedrooms: 2,
             bathrooms: 2,
-            location: "Whistler, BC, Canada",
+            location: "Upper Village, Whistler",
             description:
               "Perfectly located apartment in the heart of Whistler's Blackcomb Upper Village, just steps from the lifts. This stylish 2-bedroom unit offers modern comforts with mountain convenience.",
             features: [
@@ -639,7 +639,7 @@ export default function Properties() {
             guests: 6,
             bedrooms: 2.5,
             bathrooms: 2,
-            location: "Village North, Whistler",
+            location: "Main Whistler Village",
             description:
               "This property is conveniently located for skiing, just a short walk from your front door! Perfect for families visiting Whistler, with spacious layout and views of Olympic Plaza and Blackcomb Mountain. Recently renovated with all the comforts of home.",
             features: [
