@@ -1697,6 +1697,9 @@ const ConciergeService = () => {
                         daily housekeeping, and exclusive mountain experiences
                         designed for luxury travelers.
                       </p>
+                      <p className="mt-3">
+                        AceHost can essentially help and book absolutely anything you need. No request is unreasonable, just ask!
+                      </p>
                     </div>
                   </div>
                 </div>
