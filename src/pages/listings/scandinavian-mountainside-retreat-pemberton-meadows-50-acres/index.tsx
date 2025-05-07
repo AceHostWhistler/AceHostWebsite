@@ -145,7 +145,7 @@ const PembertonMeadowsRetreat = () => {
             guests={10}
             bedrooms={5}
             bathrooms={5}
-            priceRange="$2,500-$3,800 per night"
+            priceRange="Pricing: $30,000-35,000 per event"
             airbnbLink="https://www.airbnb.ca/rooms/735842324489542740?guests=1&adults=1&s=67&unique_share_id=1d2ecc34-ba35-46eb-9ba0-71a08ed1bb10"
           />
 

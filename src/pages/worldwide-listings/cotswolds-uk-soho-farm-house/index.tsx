@@ -163,7 +163,7 @@ const CotswoldsUKSohoFarmHouse = () => {
             guests={14}
             bedrooms={8}
             bathrooms={5}
-            priceRange="£1,100-£1,500 per night"
+            priceRange="£1,100-£2,300 per night | 3 night minimum"
             contactLink="/contact"
             airbnbLink="https://www.airbnb.ca/rooms/1414129878809697902?guests=1&adults=1&s=67&unique_share_id=ba3bff7b-bc57-416c-bcd6-96b0943cfe51"
           />
@@ -373,7 +373,7 @@ const CotswoldsUKSohoFarmHouse = () => {
                   <tbody className="bg-white divide-y divide-gray-300">
                     <tr>
                       <td className="px-6 py-4 whitespace-nowrap border-r">Price Range</td>
-                      <td className="px-6 py-4 whitespace-nowrap">£1,100-£1,500 per night</td>
+                      <td className="px-6 py-4 whitespace-nowrap">£1,100-£2,300 per night</td>
                     </tr>
                     <tr>
                       <td className="px-6 py-4 whitespace-nowrap border-r">Minimum Stay</td>

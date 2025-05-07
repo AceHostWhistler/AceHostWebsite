@@ -602,7 +602,7 @@ const Home = () => {
       guests: 14,
       bedrooms: 8,
       bathrooms: 5,
-      priceRange: "£1,100-£1,500 per night",
+      priceRange: "£1,100-£2,300 per night | 3 night minimum",
       winterPrice: "",
       holidayPrice: "",
       location: "Cotswolds, United Kingdom",
@@ -1021,4 +1021,73 @@ const Home = () => {
                 </button>
                 <button
                   onClick={() => setActiveFilter("skiinout")}
-                  className={`
+                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "skiinout" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
+                >
+                  Ski In/Out
+                </button>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {filteredListings.map((property, index) => (
+                <div key={property.id} className="col-span-1">
+                  {renderPropertyCard(property, index)}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="py-24 bg-gray-50">
+          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl font-light mb-6 text-gray-900">
+              What Our Guests Say
+            </h2>
+            <Testimonials />
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-24 bg-gray-50">
+          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl font-light mb-6 text-gray-900">
+              Frequently Asked Questions
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {faqItems.map((faq, index) => (
+                <div key={index} className="col-span-1">
+                  <h3 className="text-2xl font-medium mb-4 text-gray-900">
+                    {faq.question}
+                  </h3>
+                  <p className="text-gray-600">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section className="py-24 bg-gray-50">
+          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl font-light mb-6 text-gray-900">
+              Contact Us
+            </h2>
+            <p className="text-base text-gray-700 mb-8">
+              Have a question or need assistance? We're here to help.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-block bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-colors text-base font-medium"
+            >
+              Get in Touch
+            </Link>
+          </div>
+        </section>
+      </div>
+
+      <Footer />
+    </>
+  );
+};
+
+export default Home;

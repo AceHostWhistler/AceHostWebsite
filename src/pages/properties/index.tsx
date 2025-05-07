@@ -43,6 +43,7 @@ interface PropertyFeature {
   isSkiInSkiOut?: boolean;
   link?: string;
   country?: string;
+  airbnbLink?: string;
 }
 
 interface PropertyCategory {
@@ -697,6 +698,42 @@ export default function Properties() {
             winterPrice: "Availability for Heli & Wellness Retreats coming soon",
             holidayPrice: "Includes 2 Night Accommodation",
           },
+          {
+            id: "cotswolds-uk-soho-farm-house",
+            name: "Cotswolds UK - Soho Farm House",
+            images: [
+              "/photos/properties/Cotswolds UK - Soho Farm House/8596128-exterior09-800.jpg",
+              "/photos/properties/Cotswolds UK - Soho Farm House/224A5292.jpg",
+              "/photos/properties/Cotswolds UK - Soho Farm House/224A5307.jpg"
+            ],
+            guests: 14,
+            bedrooms: 8,
+            bathrooms: 5,
+            priceRange: "£1,100-£2,300 per night | 3 night minimum",
+            location: "Cotswolds, United Kingdom",
+            description: "Designer Stone Estate Near Soho Farmhouse – 8 Bedroom, Spa, Tennis Court, & Annex. Welcome to your countryside dream retreat—just 4 minutes by car (or a scenic 30-minute walk through a private trail) from the world-famous Soho Farmhouse. This beautifully renovated 8-bedroom, 5-bathroom stone estate offers over 320m² of luxurious living space across two dwellings, all set on a stunning and serene 2-acre property.",
+            features: [
+              "Private Tennis Court",
+              "Infrared Sauna",
+              "Hot Tub & Cold Plunge",
+              "Designer Kitchen with AGA Oven",
+              "Two Cozy Living Rooms",
+              "Electric Car Charger",
+              "Outdoor BBQ & Dining",
+              "Firepit"
+            ],
+            highlights: [
+              "Near Soho Farmhouse",
+              "320m² Luxury Living Space",
+              "Main House + Separate Annex",
+              "2-Acre Private Grounds"
+            ],
+            link: "/worldwide-listings/cotswolds-uk-soho-farm-house",
+            airbnbLink: "https://www.airbnb.ca/rooms/1414129878809697902?guests=1&adults=1&s=67&unique_share_id=ba3bff7b-bc57-416c-bcd6-96b0943cfe51",
+            isSkiInSkiOut: false,
+            isPetFriendly: false,
+            country: "uk"
+          },
         ],
       },
       {
@@ -999,41 +1036,6 @@ export default function Properties() {
               "Sauna",
             ],
             priceRange: "$1,500-$3,000/night",
-          },
-          {
-            id: "cotswolds-uk-soho-farm-house",
-            name: "Cotswolds UK - Soho Farm House",
-            images: [
-              "/photos/properties/Cotswolds UK - Soho Farm House/8596128-exterior09-800.jpg",
-              "/photos/properties/Cotswolds UK - Soho Farm House/224A5292.jpg",
-              "/photos/properties/Cotswolds UK - Soho Farm House/224A5307.jpg"
-            ],
-            guests: 14,
-            bedrooms: 8,
-            bathrooms: 5,
-            priceRange: "£1,100-£1,500 per night",
-            location: "Cotswolds, United Kingdom",
-            description: "Designer Stone Estate Near Soho Farmhouse – 8 Bedroom, Spa, Tennis Court, & Annex. Welcome to your countryside dream retreat—just 4 minutes by car (or a scenic 30-minute walk through a private trail) from the world-famous Soho Farmhouse. This beautifully renovated 8-bedroom, 5-bathroom stone estate offers over 320m² of luxurious living space across two dwellings, all set on a stunning and serene 2-acre property.",
-            features: [
-              "Private Tennis Court",
-              "Infrared Sauna",
-              "Hot Tub & Cold Plunge",
-              "Designer Kitchen with AGA Oven",
-              "Two Cozy Living Rooms",
-              "Electric Car Charger",
-              "Outdoor BBQ & Dining",
-              "Firepit"
-            ],
-            highlights: [
-              "Near Soho Farmhouse",
-              "320m² Luxury Living Space",
-              "Main House + Separate Annex",
-              "2-Acre Private Grounds"
-            ],
-            link: "/worldwide-listings/cotswolds-uk-soho-farm-house",
-            isSkiInSkiOut: false,
-            isPetFriendly: false,
-            country: "uk"
           },
         ],
       },
