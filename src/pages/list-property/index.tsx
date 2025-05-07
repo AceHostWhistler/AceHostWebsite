@@ -58,6 +58,10 @@ const faqs: FAQItem[] = [
     answer: "Not at all. Many of our homeowners live abroad or elsewhere in Canada. We provide a fully hands-off experience—handling everything from guest communication and property maintenance to financial reporting. You'll always have full visibility into your home's performance through regular updates and transparent reporting.",
   },
   {
+    question: "I'm not a Canadian resident. Can AceHost still manage my Whistler property and help with NR6 filing?",
+    answer: "Yes, we regularly work with non-resident property owners and can assist with everything you need—including NR6 filing and tax compliance for rental income in Canada. We work closely with experienced accountants and can guide you through the process to ensure your withholding taxes are minimized and everything is CRA-compliant. Managing foreign-owned luxury properties is something we handle seamlessly.",
+  },
+  {
     question: "How do you screen guests to protect my luxury property?",
     answer: "We use a combination of platform-integrated verification tools and personal screening to ensure every guest is a good fit for your home. For high-value properties, we prioritize quality over quantity—often hosting families, executives, or well-known guests who are looking for a premium, respectful experience.",
   },
