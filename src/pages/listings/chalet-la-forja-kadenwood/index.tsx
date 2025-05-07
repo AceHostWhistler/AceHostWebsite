@@ -139,7 +139,7 @@ const ChaletLaForja = () => {
         <main>
           <PropertyHeader
             title="Chalet La Forja | Kadenwood | Private Butler"
-            guests={12}
+            guests={16}
             bedrooms={7.5}
             beds={15}
             bathrooms={8}

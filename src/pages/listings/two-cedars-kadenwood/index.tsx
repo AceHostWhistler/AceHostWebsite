@@ -167,7 +167,7 @@ const TwoCedarsKadenwood = () => {
             bedrooms={7}
             beds={12}
             bathrooms={8.5}
-            priceRange="$6,500-$9,500+ per night"
+            priceRange="$6,500-$9,500+ per night | Private Butler Included"
             airbnbLink="https://www.airbnb.ca/rooms/666613336620375768?guests=1&adults=1&s=67&unique_share_id=0d8a1725-cb02-487a-a033-7cc2940692e4"
           />
 
