@@ -430,7 +430,7 @@ const CotswoldsUKSohoFarmHouse = () => {
                   <X size={24} />
                 </button>
               </div>
-              <div className="container mx-auto p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              <div className="container mx-auto p-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {photos.map((photo, index) => (
                   <div
                     key={index}
@@ -536,9 +536,6 @@ const CotswoldsUKSohoFarmHouse = () => {
                   quality={85}
                   loading="eager"
                 />
-              </div>
-              <div className="absolute bottom-4 left-0 right-0 text-center text-white">
-                {selectedPhotoIndex + 1} / {photos.length}
               </div>
             </div>
           )}

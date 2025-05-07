@@ -808,14 +808,14 @@ export default function Properties() {
             images: [
               "/photos/properties/Villa Aegean Mykonos Greece/Header5-TRG_5803.jpg",
               "/photos/properties/Villa Aegean Mykonos Greece/Header2-TRG_5590.jpg",
-              "/photos/properties/Villa Aegean Mykonos Greece/Header2-TRG_5590.jpg",
+              "/photos/properties/Villa Aegean Mykonos Greece/Header2-TRG_5590.jpg"
             ],
             guests: 10,
             bedrooms: 5,
             bathrooms: 5,
+            priceRange: "$2,500-$5,000 per night",
             location: "Agios Lazaros, Mykonos, Greece",
-            description:
-              "Perched on a hillside in exclusive Agios Lazaros, Crystal Villa offers breathtaking views of the Aegean Sea and the famous Mykonos sunset. This architectural masterpiece combines traditional Cycladic design with modern luxury.",
+            description: "Perched on a hillside in exclusive Agios Lazaros, Crystal Villa offers breathtaking views of the Aegean Sea and the famous Mykonos sunset. This architectural masterpiece combines traditional Cycladic design with modern luxury.",
             features: [
               "Infinity Pool",
               "Panoramic Sea Views",
@@ -824,15 +824,19 @@ export default function Properties() {
               "Concierge Service",
               "Outdoor Dining Areas",
               "Alfresco Lounge",
-              "Close to Psarou Beach",
+              "Close to Psarou Beach"
             ],
             highlights: [
               "Stunning Aegean Views",
               "Infinity Pool",
               "Designer Interiors",
-              "Close to Top Beaches",
+              "Close to Top Beaches"
             ],
-            priceRange: "$2,500-$5,000 per night",
+            link: "/worldwide-listings/mykonos-crystal-villa",
+            contactLink: "/contact",
+            isPetFriendly: false,
+            isSkiInSkiOut: false,
+            country: "greece"
           },
           {
             id: "super-yacht-thailand",
@@ -840,15 +844,15 @@ export default function Properties() {
             images: [
               "/photos/properties/Yacht Thailand Sea D/Sun Deck WEB-12.jpg",
               "/photos/properties/Yacht Thailand Sea D/Bow WEB-1.jpg",
-              "/photos/properties/Yacht Thailand Sea D/Bow WEB-1.jpg",
+              "/photos/properties/Yacht Thailand Sea D/Bow WEB-1.jpg"
             ],
             guests: 10,
             bedrooms: 5,
             beds: 8,
-            bathrooms: 4,
+            bathrooms: 6,
+            priceRange: "Weekly Rate | 170,000 - 210,000 USD",
             location: "Phuket, Thailand",
-            description:
-              "Experience the height of luxury aboard our 100-foot super yacht in the stunning waters of Thailand. With a full crew including captain, chef, and stewards, explore the breathtaking islands and beaches of the Andaman Sea in complete comfort.",
+            description: "Experience the height of luxury aboard our 100-foot super yacht in the stunning waters of Thailand. With a full crew including captain, chef, and stewards, explore the breathtaking islands and beaches of the Andaman Sea in complete comfort.",
             features: [
               "Full Professional Crew",
               "Private Chef",
@@ -857,15 +861,19 @@ export default function Properties() {
               "Alfresco Dining",
               "Jacuzzi",
               "Stabilizers",
-              "Air Conditioning Throughout",
+              "Air Conditioning Throughout"
             ],
             highlights: [
               "Explore Thailand by Sea",
               "Full Professional Crew",
               "All-Inclusive Experience",
-              "Ultimate Luxury Adventure",
+              "Ultimate Luxury Adventure"
             ],
-            priceRange: "Weekly Rate | 170,000 - 210,000 USD",
+            link: "/worldwide-listings/super-yacht-thailand",
+            contactLink: "/contact",
+            isPetFriendly: false,
+            isSkiInSkiOut: false,
+            country: "thailand"
           },
           {
             id: "punta-mita---casa-juntos",
@@ -873,14 +881,14 @@ export default function Properties() {
             images: [
               "/photos/properties/Punta Mita/242608_2093 copy 2.jpg",
               "/photos/properties/Punta Mita/242608_2031 copy.jpg",
-              "/photos/properties/Punta Mita/242608_2031 copy.jpg",
+              "/photos/properties/Punta Mita/242608_2031 copy.jpg"
             ],
             guests: 12,
             bedrooms: 6,
             bathrooms: 6.5,
+            priceRange: "$3,000-$7,000 per night",
             location: "Punta Mita, Mexico",
-            description:
-              "Located within the exclusive Punta Mita resort community, Casa Juntos is a stunning beachfront villa offering panoramic Pacific Ocean views and direct beach access. With full staff including private chef, this luxury retreat provides the ultimate Mexican Riviera experience.",
+            description: "Located within the exclusive Punta Mita resort community, Casa Juntos is a stunning beachfront villa offering panoramic Pacific Ocean views and direct beach access. With full staff including private chef, this luxury retreat provides the ultimate Mexican Riviera experience.",
             features: [
               "Direct Beach Access",
               "Infinity Pool",
@@ -889,15 +897,19 @@ export default function Properties() {
               "Indoor/Outdoor Living",
               "Home Theater",
               "Fully Equipped Gym",
-              "Ocean-View Master Suite",
+              "Ocean-View Master Suite"
             ],
             highlights: [
               "Private Beachfront",
               "Full Staff with Chef",
               "Exclusive Resort Access",
-              "Spectacular Ocean Views",
+              "Spectacular Ocean Views"
             ],
-            priceRange: "$3,000-$7,000 per night",
+            link: "/worldwide-listings/punta-mita---casa-juntos",
+            contactLink: "/contact",
+            isPetFriendly: false,
+            isSkiInSkiOut: false,
+            country: "mexico"
           },
           {
             id: "hood-river-luxury-home",
@@ -905,28 +917,36 @@ export default function Properties() {
             images: [
               "/photos/properties/hood-river-luxury-home/Interior 3.jpg",
               "/photos/properties/hood-river-luxury-home/Exterior 1.jpg",
-              "/photos/properties/hood-river-luxury-home/Exterior 1.jpg",
+              "/photos/properties/hood-river-luxury-home/Exterior 1.jpg"
             ],
             guests: 4,
             bedrooms: 2,
             bathrooms: 2,
+            priceRange: "$1,500-$3,000 per night",
             location: "Hood River, Oregon",
-            description:
-              "This luxury home in Hood River, Oregon, offers breathtaking views of the Columbia River Gorge. Features include a private hot tub, sauna, and modern amenities.",
+            description: "This luxury home in Hood River, Oregon, offers breathtaking views of the Columbia River Gorge. Features include a private hot tub, sauna, and modern amenities.",
             features: [
               "Private Hot Tub",
               "Sauna",
               "Mountain Views",
               "Modern Amenities",
+              "Gourmet Kitchen",
+              "Outdoor Deck",
+              "High-End Finishes",
+              "Fireplace"
             ],
             highlights: [
               "Exclusive Location",
               "Luxury Design",
               "Private Hot Tub",
-              "Sauna",
+              "Sauna"
             ],
-            priceRange: "$1,500-$3,000/night",
-          },
+            link: "/worldwide-listings/hood-river-luxury-home",
+            contactLink: "/contact",
+            isPetFriendly: false,
+            isSkiInSkiOut: false,
+            country: "usa"
+          }
         ],
       },
       {
@@ -1002,6 +1022,8 @@ export default function Properties() {
               "Five-Star Services"
             ],
             priceRange: "€1,300-€1,920 per night",
+            link: "/worldwide-listings/santorini-greece-villa-eclipse",
+            country: "greece"
           },
           {
             id: "villa-oineas-greece-mykonos",
@@ -1073,6 +1095,186 @@ export default function Properties() {
             isPetFriendly: false,
             country: "greece"
           },
+          {
+            id: "villa-rosabella-mykonos",
+            name: "Villa Rosabella | Mykonos",
+            images: [
+              "/photos/properties/Villa Rosabella Mykonos/Villa Rosabella (1).jpg",
+              "/photos/properties/Villa Rosabella Mykonos/Villa Rosabella (10).jpg",
+              "/photos/properties/Villa Rosabella Mykonos/Villa Rosabella (11).jpg"
+            ],
+            guests: 16,
+            bedrooms: 8,
+            bathrooms: 8,
+            priceRange: "€3,500-€5,800 per night",
+            location: "Mykonos, Greece",
+            description: "Villa Rosabella is a world-class luxury retreat designed for UHNW guests seeking privacy, exclusivity, and unparalleled Aegean views. Perched on a cliffside overlooking the shimmering Aegean, this ultra-private estate seamlessly blends modern luxury with authentic Mykonian elegance, creating the ultimate high-end escape in Mykonos.",
+            features: [
+              "Private Infinity Pool",
+              "Direct Sea Access",
+              "Private Gym",
+              "Outdoor Dining & BBQ Area",
+              "Daily Housekeeping",
+              "Wine Cellar",
+              "Smart Home System",
+              "Concierge Services"
+            ],
+            highlights: [
+              "Unrivaled Sunset Views",
+              "Exclusive Private Pathway to Beach",
+              "Expansive Outdoor Living Areas",
+              "Absolute Privacy & Luxury"
+            ],
+            link: "/worldwide-listings/villa-rosabella-mykonos",
+            isSkiInSkiOut: false,
+            isPetFriendly: false,
+            country: "greece"
+          },
+          {
+            id: "mykonos-crystal-villa",
+            name: "Mykonos Crystal Villa | Infinity Pool | Sea Views",
+            images: [
+              "/photos/properties/Villa Aegean Mykonos Greece/Header5-TRG_5803.jpg",
+              "/photos/properties/Villa Aegean Mykonos Greece/Header2-TRG_5590.jpg",
+              "/photos/properties/Villa Aegean Mykonos Greece/Header2-TRG_5590.jpg"
+            ],
+            guests: 10,
+            bedrooms: 5,
+            bathrooms: 5,
+            priceRange: "$2,500-$5,000 per night",
+            location: "Agios Lazaros, Mykonos, Greece",
+            description: "Perched on a hillside in exclusive Agios Lazaros, Crystal Villa offers breathtaking views of the Aegean Sea and the famous Mykonos sunset. This architectural masterpiece combines traditional Cycladic design with modern luxury.",
+            features: [
+              "Infinity Pool",
+              "Panoramic Sea Views",
+              "Private Chef Available",
+              "Daily Housekeeping",
+              "Concierge Service",
+              "Outdoor Dining Areas",
+              "Alfresco Lounge",
+              "Close to Psarou Beach"
+            ],
+            highlights: [
+              "Stunning Aegean Views",
+              "Infinity Pool",
+              "Designer Interiors",
+              "Close to Top Beaches"
+            ],
+            link: "/worldwide-listings/mykonos-crystal-villa",
+            contactLink: "/contact",
+            isPetFriendly: false,
+            isSkiInSkiOut: false,
+            country: "greece"
+          },
+          {
+            id: "super-yacht-thailand",
+            name: "Super Yacht Thailand | Luxury Charter | Full Crew",
+            images: [
+              "/photos/properties/Yacht Thailand Sea D/Sun Deck WEB-12.jpg",
+              "/photos/properties/Yacht Thailand Sea D/Bow WEB-1.jpg",
+              "/photos/properties/Yacht Thailand Sea D/Bow WEB-1.jpg"
+            ],
+            guests: 10,
+            bedrooms: 5,
+            beds: 8,
+            bathrooms: 6,
+            priceRange: "Weekly Rate | 170,000 - 210,000 USD",
+            location: "Phuket, Thailand",
+            description: "Experience the height of luxury aboard our 100-foot super yacht in the stunning waters of Thailand. With a full crew including captain, chef, and stewards, explore the breathtaking islands and beaches of the Andaman Sea in complete comfort.",
+            features: [
+              "Full Professional Crew",
+              "Private Chef",
+              "Master Suite",
+              "Water Sports Equipment",
+              "Alfresco Dining",
+              "Jacuzzi",
+              "Stabilizers",
+              "Air Conditioning Throughout"
+            ],
+            highlights: [
+              "Explore Thailand by Sea",
+              "Full Professional Crew",
+              "All-Inclusive Experience",
+              "Ultimate Luxury Adventure"
+            ],
+            link: "/worldwide-listings/super-yacht-thailand",
+            contactLink: "/contact",
+            isPetFriendly: false,
+            isSkiInSkiOut: false,
+            country: "thailand"
+          },
+          {
+            id: "punta-mita---casa-juntos",
+            name: "Punta Mita - Casa Juntos | Beachfront | Full Staff",
+            images: [
+              "/photos/properties/Punta Mita/242608_2093 copy 2.jpg",
+              "/photos/properties/Punta Mita/242608_2031 copy.jpg",
+              "/photos/properties/Punta Mita/242608_2031 copy.jpg"
+            ],
+            guests: 12,
+            bedrooms: 6,
+            bathrooms: 6.5,
+            priceRange: "$3,000-$7,000 per night",
+            location: "Punta Mita, Mexico",
+            description: "Located within the exclusive Punta Mita resort community, Casa Juntos is a stunning beachfront villa offering panoramic Pacific Ocean views and direct beach access. With full staff including private chef, this luxury retreat provides the ultimate Mexican Riviera experience.",
+            features: [
+              "Direct Beach Access",
+              "Infinity Pool",
+              "Full Staff Including Chef",
+              "Golf Club Access",
+              "Indoor/Outdoor Living",
+              "Home Theater",
+              "Fully Equipped Gym",
+              "Ocean-View Master Suite"
+            ],
+            highlights: [
+              "Private Beachfront",
+              "Full Staff with Chef",
+              "Exclusive Resort Access",
+              "Spectacular Ocean Views"
+            ],
+            link: "/worldwide-listings/punta-mita---casa-juntos",
+            contactLink: "/contact",
+            isPetFriendly: false,
+            isSkiInSkiOut: false,
+            country: "mexico"
+          },
+          {
+            id: "hood-river-luxury-home",
+            name: "Hood River Luxury Home",
+            images: [
+              "/photos/properties/hood-river-luxury-home/Interior 3.jpg",
+              "/photos/properties/hood-river-luxury-home/Exterior 1.jpg",
+              "/photos/properties/hood-river-luxury-home/Exterior 1.jpg"
+            ],
+            guests: 4,
+            bedrooms: 2,
+            bathrooms: 2,
+            priceRange: "$1,500-$3,000 per night",
+            location: "Hood River, Oregon",
+            description: "This luxury home in Hood River, Oregon, offers breathtaking views of the Columbia River Gorge. Features include a private hot tub, sauna, and modern amenities.",
+            features: [
+              "Private Hot Tub",
+              "Sauna",
+              "Mountain Views",
+              "Modern Amenities",
+              "Gourmet Kitchen",
+              "Outdoor Deck",
+              "High-End Finishes",
+              "Fireplace"
+            ],
+            highlights: [
+              "Exclusive Location",
+              "Luxury Design",
+              "Private Hot Tub",
+              "Sauna"
+            ],
+            link: "/worldwide-listings/hood-river-luxury-home",
+            contactLink: "/contact",
+            isPetFriendly: false,
+            isSkiInSkiOut: false,
+            country: "usa"
+          }
         ],
       },
     ],
