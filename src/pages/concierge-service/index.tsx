@@ -1544,12 +1544,22 @@ const ConciergeService = () => {
                   >
                     <div className="p-6 pt-0 text-gray-600">
                       <p>
-                        The Heli Glacier Meal experience is one of our most
-                        requested activities, offering an unforgettable private
-                        chef prepared meal with stunning mountain views. In
-                        winter, our private ski instructor service is extremely
-                        popular, providing personalized instruction while
-                        avoiding lift lines.
+                        While our Heli Glacier Meal experience—a private chef-prepared meal atop a glacier with breathtaking views—is one of our most unique and talked-about offerings, the most frequently booked services tend to be the essentials that enhance daily comfort and convenience.
+                      </p>
+                      <p className="mt-3">
+                        Most of our guests use AceHost to arrange airport transfers, daily cleanings, and a combination of restaurant reservations and in-home private chef dinners. Many opt for daily breakfast prepared by a chef—one of our most popular offerings—allowing guests to wake up at their own pace to a fresh spread of hot dishes, pastries, and fruit.
+                      </p>
+                      <p className="mt-3">
+                        For activities, it's common for each trip to include one or two standout experiences, such as snowmobiling, ziplining, or the Vallea Lumina light walk. In the winter, private ski instructors are highly requested for their ability to provide tailored instruction while helping guests skip the lift lines.
+                      </p>
+                      <p className="mt-3">
+                        We also frequently coordinate last-minute transportation, as Whistler's local taxi system doesn't offer scheduling and can be unreliable—especially in peak season. Another popular service is ski rental delivery, which is booked by nearly all of our winter guests. It's a seamless process, and the delivery fee is included.
+                      </p>
+                      <p className="mt-3">
+                        And for our more adventurous travelers, heli-skiing remains a bucket-list favourite, with many of our groups including it as part of their winter escape.
+                      </p>
+                      <p className="mt-3">
+                        Whether it's the basics or something extraordinary, we're here to take care of it all.
                       </p>
                     </div>
                   </div>
