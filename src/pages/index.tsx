@@ -74,7 +74,7 @@ const Home = () => {
     return (
       <div
         key={property.id}
-        className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
+        className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow flex flex-col h-full"
       >
         <div className="relative h-64">
           <Link href={cardLink}>
@@ -123,7 +123,7 @@ const Home = () => {
             )}
           </div>
         </div>
-        <div className="p-6">
+        <div className="p-6 flex-grow flex flex-col">
           {/* Property details */}
           <div className="flex flex-wrap gap-2 mb-4">
             {property.guests && (
@@ -162,12 +162,12 @@ const Home = () => {
           </div>
 
           {/* Property name */}
-          <h3 className="text-xl font-medium mb-4 text-gray-900">
+          <h3 className="text-xl font-medium mb-4 text-gray-900 line-clamp-2 h-14">
             {property.name}
           </h3>
 
           {/* Pricing information */}
-          <div className="space-y-2 mb-6">
+          <div className="space-y-2 mb-6 min-h-[80px]">
             {property.priceRange && (
               <p className="text-gray-600">{property.priceRange}</p>
             )}
@@ -180,13 +180,15 @@ const Home = () => {
           </div>
 
           {/* View property link */}
-          <Link
-            href={cardLink}
-            className="inline-flex items-center text-gray-900 font-medium hover:text-gray-600 transition-colors"
-          >
-            <span>View Property</span>
-            <ArrowRight size={18} className="ml-2" />
-          </Link>
+          <div className="mt-auto">
+            <Link
+              href={cardLink}
+              className="inline-flex items-center text-gray-900 font-medium hover:text-gray-600 transition-colors"
+            >
+              <span>View Property</span>
+              <ArrowRight size={18} className="ml-2" />
+            </Link>
+          </div>
         </div>
       </div>
     );
