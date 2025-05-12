@@ -54,6 +54,7 @@ const Contact = () => {
     propertyInterest: "",
     guests: "",
     propertyAddress: "",
+    budget: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -135,6 +136,7 @@ const Contact = () => {
         propertyInterest: "",
         guests: "",
         propertyAddress: "",
+        budget: "",
       });
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -452,6 +454,26 @@ const Contact = () => {
                     placeholder="e.g., Altitude Retreat, or any 4-bedroom property"
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
                   />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="budget"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
+                    What is roughly your nightly budget? *
+                  </label>
+                  <input
+                    type="text"
+                    id="budget"
+                    name="budget"
+                    value={formData.budget}
+                    onChange={handleChange}
+                    required
+                    placeholder="Please specify currency CAD or USD."
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
+                  />
+                  <p className="text-sm text-gray-500 mt-1">Example: Our top properties average 7k-10k CAD nightly. Christmas/NY can range from 7000-23,000 nightly.</p>
                 </div>
                   </>
                 )}
