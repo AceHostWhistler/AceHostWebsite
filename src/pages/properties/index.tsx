@@ -485,6 +485,38 @@ export default function Properties() {
             priceRange: "$750-$2,200+ per night",
           },
           {
+            id: "bear-creek-5-bed",
+            name: "Bear Creek | 5-Bed | Creekside",
+            images: [
+              "/photos/properties/BearCreek 5-Bed/20250507_105617.jpg",
+              "/photos/properties/BearCreek 5-Bed/20250507_105719.jpg",
+              "/photos/properties/BearCreek 5-Bed/20250507_103518.jpg",
+            ],
+            guests: 10,
+            bedrooms: 5,
+            bathrooms: 4,
+            location: "Creekside, Whistler",
+            description:
+              "Beautifully Renovated & Fully Furnished 5 Bedroom, 4 Bathroom Home in Creekside, Whistler. Available from June 1 Until November 30, 2025.",
+            features: [
+              "Fully Furnished",
+              "Modern Kitchen",
+              "Washer & Dryer",
+              "Two Parking Spots",
+              "Quiet Neighborhood",
+              "Close to Gondola",
+              "Walk to Amenities",
+              "Luxury Finishes",
+            ],
+            highlights: [
+              "Peaceful Location",
+              "Newly Renovated",
+              "Spacious Layout",
+              "Walk to Creekside Gondola",
+            ],
+            priceRange: "$9,775 per month - 6 month minimum or $13,000 per month - 3 month minimum",
+          },
+          {
             id: "dream-log-chalet-5-bedroom-4-bath-creekside",
             name: "Dream Log Chalet | 5-Bed | 4-Bath | Creekside",
             images: [
@@ -919,10 +951,10 @@ export default function Properties() {
               "/photos/properties/hood-river-luxury-home/Exterior 1.jpg",
               "/photos/properties/hood-river-luxury-home/Exterior 1.jpg"
             ],
-            guests: 4,
-            bedrooms: 2,
-            bathrooms: 2,
-            priceRange: "$1,500-$3,000 per night",
+            guests: 10,
+            bedrooms: 4,
+            bathrooms: 3.5,
+            priceRange: "$800-$1,200 per night",
             location: "Hood River, Oregon",
             description: "This luxury home in Hood River, Oregon, offers breathtaking views of the Columbia River Gorge. Features include a private hot tub, sauna, and modern amenities.",
             features: [
@@ -1247,10 +1279,10 @@ export default function Properties() {
               "/photos/properties/hood-river-luxury-home/Exterior 1.jpg",
               "/photos/properties/hood-river-luxury-home/Exterior 1.jpg"
             ],
-            guests: 4,
-            bedrooms: 2,
-            bathrooms: 2,
-            priceRange: "$1,500-$3,000 per night",
+            guests: 10,
+            bedrooms: 4,
+            bathrooms: 3.5,
+            priceRange: "$800-$1,200 per night",
             location: "Hood River, Oregon",
             description: "This luxury home in Hood River, Oregon, offers breathtaking views of the Columbia River Gorge. Features include a private hot tub, sauna, and modern amenities.",
             features: [
@@ -1302,15 +1334,21 @@ export default function Properties() {
           const guestsMatch = property.guests >= filters.minGuests && property.guests <= filters.maxGuests;
           const petFriendlyMatch = !filters.petFriendly || property.isPetFriendly;
           const skiInSkiOutMatch = !filters.skiInSkiOut || property.isSkiInSkiOut;
-      const amenitiesMatch =
-        filters.amenities.length === 0 ||
-            filters.amenities.every(amenity => 
-              property.features.some(feature => 
-            feature.toLowerCase().includes(amenity.toLowerCase())
-          )
-        );
+          
+          // Location filtering - ensure properties with non-Whistler locations only appear in worldwide section
+          const locationMatch = 
+            (category.id === "whistler" && !property.country && property.location.includes("Whistler") || property.location === "whistler") ||
+            (category.id === "worldwide" && (property.country || !property.location.includes("Whistler") && property.location !== "whistler"));
+          
+          const amenitiesMatch =
+            filters.amenities.length === 0 ||
+                filters.amenities.every(amenity => 
+                  property.features.some(feature => 
+                feature.toLowerCase().includes(amenity.toLowerCase())
+              )
+            );
 
-          return bedroomsMatch && guestsMatch && petFriendlyMatch && skiInSkiOutMatch && amenitiesMatch;
+          return bedroomsMatch && guestsMatch && petFriendlyMatch && skiInSkiOutMatch && amenitiesMatch && locationMatch;
     });
 
     return { ...category, properties: filteredProperties };
