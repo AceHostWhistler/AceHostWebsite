@@ -176,9 +176,9 @@ const SnowPine = () => {
         <main>
           <PropertyHeader 
             title="Snow Pine | Creekside | Ski-in/Ski-out"
-            guests={12}
-            bedrooms={4}
-            bathrooms={4}
+            guests={6}
+            bedrooms={3}
+            bathrooms={3.5}
             priceRange="Monthly Price Range: $10,000-$12,000"
           />
 
