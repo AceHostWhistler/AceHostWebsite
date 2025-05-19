@@ -431,7 +431,7 @@ const Home = () => {
     },
     {
       id: "bear-creek-5-bed",
-      name: "Bear Creek | 5-Bed | Creekside",
+      name: "5-Bed | Creekside",
       image: "/photos/properties/BearCreek 5-Bed/20250507_105617.jpg",
       guests: 10,
       bedrooms: 5,

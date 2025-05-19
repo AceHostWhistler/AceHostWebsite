@@ -486,7 +486,7 @@ export default function Properties() {
           },
           {
             id: "bear-creek-5-bed",
-            name: "Bear Creek | 5-Bed | Creekside",
+            name: "5-Bed | Creekside",
             images: [
               "/photos/properties/BearCreek 5-Bed/20250507_105617.jpg",
               "/photos/properties/BearCreek 5-Bed/20250507_105719.jpg",

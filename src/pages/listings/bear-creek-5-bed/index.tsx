@@ -152,7 +152,7 @@ const BearCreek = () => {
   return (
     <>
       <Head>
-        <title>Bear Creek | 5-Bed | Creekside - AceHost</title>
+        <title>5-Bed | Creekside - AceHost</title>
         <meta
           name="description"
           content="Beautifully Renovated & Fully Furnished 5 Bedroom, 4 Bathroom Home in Creekside, Whistler. Available from June 1 Until November 30, 2025. Perfect for families or groups of up to 10 guests. Pricing: $9,775/month (6-month minimum) or $13,000/month (3-month minimum)."
@@ -163,7 +163,7 @@ const BearCreek = () => {
         <Navigation transparent={false} />
         <main>
           <PropertyHeader
-            title="Bear Creek | 5-Bed | Creekside"
+            title="5-Bed | Creekside"
             guests={10}
             bedrooms={5}
             beds={5}
