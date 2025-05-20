@@ -11,6 +11,14 @@ export interface Article {
 // All blog articles data with proper image paths
 export const allArticles: Article[] = [
   {
+    title: "Best Airbnb Property Management Company in Whistler",
+    category: "Property Management",
+    description: "Discover what makes AceHost the premier luxury Airbnb property management company in Whistler. Learn about our specialized services, VIP concierge offerings, and hands-off ownership experience.",
+    readTime: "12 min read",
+    link: "/post/best-airbnb-property-management-company-in-whistler",
+    coverImage: "/photos/post/luxury-property-management-investment-opportunities-in-whistler/hero.jpg",
+  },
+  {
     title: "Whistler's Best Luxury Airbnb Rental chalets. Where Large Luxury Vacation Homes Redefine Your Mountain Getaway",
     category: "Luxury Properties",
     description: "Discover Whistler's most exclusive luxury vacation rental homes, from ski-in/ski-out chalets to private butler service. Experience the ultimate mountain getaway with AceHost's premium properties.",
