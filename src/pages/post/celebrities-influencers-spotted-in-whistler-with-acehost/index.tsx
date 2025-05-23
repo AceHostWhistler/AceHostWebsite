@@ -274,6 +274,17 @@ const CelebritiesInfluencersBlog = () => {
                     <p className="text-gray-600">191K Instagram</p>
                   </div>
                 </div>
+
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden mb-8 max-w-2xl mx-auto">
+                  <Image 
+                    src="/photos/post/Blog Celebrities Spotted/65205c6674572904228e48cc_image008.jpg" 
+                    alt="Ayla Woodruff and LA influencers in Whistler"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+                
                 <p className="mb-0">
                   The LA crew was photographed conquering the slopes by day and enjoying Whistler's legendary nightlife at hotspots like Bearfoot Bistro and The Longhorn Saloon by night, all while calling our luxury Kadenwood neighborhood properties home.
                 </p>
