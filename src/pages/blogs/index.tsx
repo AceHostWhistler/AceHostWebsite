@@ -101,7 +101,7 @@ const blogPostsData: BlogPost[] = [
     category: "Property Management",
     readTime: "15 min read",
     heroImage:
-      "/photos/post/highlighting-the-importance-of-a-property-management-company-for-your-whistler-investment-home/hero.jpg",
+      "/photos/properties/Falcon/09-3595 Falcon Cres-09.jpg",
   },
   {
     slug: "discover-the-ultimate-ski-in-ski-out-luxury-chalet-homes-in-whistler-canada",

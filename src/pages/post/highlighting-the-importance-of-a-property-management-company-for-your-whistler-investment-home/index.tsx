@@ -21,8 +21,8 @@ const PropertyManagementBlog = () => {
           name="description"
           content="Discover why having a qualified property management company is essential for your Whistler investment home. Learn how AceHost Whistler can help manage your rental property, maximize income, and provide peace of mind."
         />
-        <meta property="og:image" content="https://acehost.ca/photos/post/highlighting-the-importance-of-a-property-management-company-for-your-whistler-investment-home/Hero.jpg" />
-        <meta property="twitter:image" content="https://acehost.ca/photos/post/highlighting-the-importance-of-a-property-management-company-for-your-whistler-investment-home/Hero.jpg" />
+        <meta property="og:image" content="https://acehost.ca/photos/properties/Falcon/09-3595 Falcon Cres-09.jpg" />
+        <meta property="twitter:image" content="https://acehost.ca/photos/properties/Falcon/09-3595 Falcon Cres-09.jpg" />
       </Head>
 
       <div className="min-h-screen bg-white">
@@ -65,10 +65,11 @@ const PropertyManagementBlog = () => {
           <div className="max-w-6xl mx-auto mb-16 px-4 sm:px-6">
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden shadow-xl">
               <Image
-                src="/photos/post/highlighting-the-importance-of-a-property-management-company-for-your-whistler-investment-home/Hero.jpg"
+                src="/photos/properties/Falcon/09-3595 Falcon Cres-09.jpg"
                 alt="Whistler luxury property management"
                 fill
                 className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 priority
               />
             </div>
