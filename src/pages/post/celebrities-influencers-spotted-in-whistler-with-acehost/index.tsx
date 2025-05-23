@@ -118,6 +118,7 @@ const CelebritiesInfluencersBlog = () => {
                       height={400}
                       className="object-contain"
                       style={{ width: "100%", height: "auto" }}
+                      priority={true}
                     />
                   </div>
                 </div>
@@ -159,8 +160,10 @@ const CelebritiesInfluencersBlog = () => {
                         <Image 
                           src="/photos/post/Blog Celebrities Spotted/670606b1d0dfd39e7ffac7c9_Screen Shot 2024-10-08 at 9.29.23 PM (1).png" 
                           alt="Justin Tse filming in Whistler"
-                          fill
-                          className="object-cover"
+                          width={400}
+                          height={500}
+                          className="object-cover rounded-lg"
+                          priority={true}
                         />
                       </div>
                     </div>
@@ -186,6 +189,7 @@ const CelebritiesInfluencersBlog = () => {
                           height={400}
                           className="object-contain rounded-lg"
                           style={{ width: "100%", height: "auto" }}
+                          priority={true}
                         />
                       </div>
                       <div className="mt-4">
@@ -226,6 +230,7 @@ const CelebritiesInfluencersBlog = () => {
                         height={400}
                         className="object-contain rounded-lg"
                         style={{ width: "100%", height: "auto" }}
+                        priority={true}
                       />
                     </div>
                     <div className="mt-4">
@@ -328,8 +333,10 @@ const CelebritiesInfluencersBlog = () => {
                         <Image 
                           src="/photos/post/Blog Celebrities Spotted/Screen Shot 2025-05-23 at 12.12.51 PM.png" 
                           alt="Fernanda Ramirez in Whistler"
-                          fill
-                          className="object-cover"
+                          width={400}
+                          height={500}
+                          className="object-cover rounded-lg"
+                          priority={true}
                         />
                       </div>
                     </div>
@@ -354,8 +361,10 @@ const CelebritiesInfluencersBlog = () => {
                         <Image 
                           src="/photos/homepage/ViewOurCollection.jpg" 
                           alt="Luxury property captured by drone"
-                          fill
-                          className="object-cover"
+                          width={400}
+                          height={300}
+                          className="object-cover rounded-lg"
+                          priority={true}
                         />
                       </div>
                     </div>
@@ -383,6 +392,7 @@ const CelebritiesInfluencersBlog = () => {
                         height={600}
                         className="object-contain rounded-lg mx-auto"
                         style={{ width: "auto", maxHeight: "500px" }}
+                        priority={true}
                       />
                     </div>
                     <div className="mt-4">
