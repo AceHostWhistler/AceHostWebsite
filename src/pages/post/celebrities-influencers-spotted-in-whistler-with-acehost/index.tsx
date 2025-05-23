@@ -109,12 +109,12 @@ const CelebritiesInfluencersBlog = () => {
                   </div>
                 </div>
 
-                <div className="relative aspect-video rounded-lg overflow-hidden mb-6">
+                <div className="relative aspect-[3/4] rounded-lg overflow-hidden mb-6 max-w-md mx-auto">
                   <Image
                     src="/photos/post/Blog Celebrities Spotted/65205b536bfe86e898fc902d_image002 (1).png"
                     alt="Riverdale cast enjoying Whistler"
                     fill
-                    className="object-cover"
+                    className="object-contain"
                     priority
                   />
                 </div>
