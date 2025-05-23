@@ -64,6 +64,7 @@ const CelebritiesInfluencersBlog = () => {
                 alt="Celebrities and influencers in Whistler"
                 fill
                 className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 priority
               />
             </div>
@@ -114,6 +115,7 @@ const CelebritiesInfluencersBlog = () => {
                     src="/photos/post/Blog Celebrities Spotted/65205b536bfe86e898fc902d_image002 (1).png"
                     alt="Riverdale cast enjoying Whistler"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-contain"
                     priority
                   />
@@ -157,6 +159,7 @@ const CelebritiesInfluencersBlog = () => {
                           src="/photos/post/Blog Celebrities Spotted/670606b1d0dfd39e7ffac7c9_Screen Shot 2024-10-08 at 9.29.23 PM (1).png" 
                           alt="Justin Tse filming in Whistler"
                           fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           className="object-cover"
                           priority
                         />
@@ -181,6 +184,7 @@ const CelebritiesInfluencersBlog = () => {
                           src="/photos/post/Blog Celebrities Spotted/651c937e64d308b5dbe3414f_image004 (1).png" 
                           alt="Tyler Hassman with PropertyGrams"
                           fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           className="object-cover"
                           priority
                         />
@@ -220,6 +224,7 @@ const CelebritiesInfluencersBlog = () => {
                         src="/photos/post/Blog Celebrities Spotted/652108333b9e3eff6f422bbb_image005 (1).png" 
                         alt="Francesca Farago in Whistler"
                         fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-cover"
                         priority
                       />
@@ -280,6 +285,7 @@ const CelebritiesInfluencersBlog = () => {
                     src="/photos/post/Blog Celebrities Spotted/65205c6674572904228e48cc_image008.jpg" 
                     alt="Ayla Woodruff and LA influencers in Whistler"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover"
                     priority
                   />
@@ -336,6 +342,7 @@ const CelebritiesInfluencersBlog = () => {
                           src="/photos/post/Blog Celebrities Spotted/Screen Shot 2025-05-23 at 12.12.51 PM.png" 
                           alt="Fernanda Ramirez in Whistler"
                           fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           className="object-cover"
                           priority
                         />
@@ -363,6 +370,7 @@ const CelebritiesInfluencersBlog = () => {
                           src="/photos/homepage/ViewOurCollection.jpg" 
                           alt="Luxury property captured by drone"
                           fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           className="object-cover"
                           priority
                         />
@@ -389,6 +397,7 @@ const CelebritiesInfluencersBlog = () => {
                         src="/photos/post/Blog Celebrities Spotted/670608551d414959a1ab18b2_IMG_4939.jpg" 
                         alt="Strawberry Milkmob in Whistler"
                         fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-cover"
                         priority
                       />
