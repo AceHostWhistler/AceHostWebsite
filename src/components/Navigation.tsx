@@ -81,10 +81,10 @@ const Navigation = ({
 
   const navLinks = [
     { text: "Home", url: "/" },
-    { text: "Luxury Properties For Rent", url: "/properties" },
-    { text: "VIP Concierge Services", url: "/concierge-service" },
-    { text: "Whistler Property Management", url: "/list-property" },
-    { text: "About AceHost", url: "/our-story" },
+    { text: "Luxury Rental Homes", url: "/properties" },
+    { text: "Concierge Services", url: "/concierge-service" },
+    { text: "Property Management", url: "/list-property" },
+    { text: "About", url: "/our-story" },
   ];
 
   return (
@@ -397,9 +397,9 @@ const Navigation = ({
 
               <Link
                 href="/contact"
-                className="ml-2 px-5 py-2 bg-black text-white rounded-md text-sm font-semibold hover:bg-gray-800 transition-colors"
+                className="ml-2 px-5 py-2 bg-black text-white rounded-md text-sm font-semibold hover:bg-gray-800 transition-colors whitespace-nowrap"
               >
-                <span>Contact Us</span>
+                Contact Us
               </Link>
             </div>
           </div>
@@ -534,9 +534,9 @@ const Navigation = ({
               <Link
                 href="/contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="flex items-center justify-center py-4 px-4 mt-4 text-center bg-black text-white rounded-md text-base font-medium"
+                className="flex items-center justify-center py-4 px-4 mt-4 text-center bg-black text-white rounded-md text-base font-medium whitespace-nowrap"
               >
-                <span>Contact Us</span>
+                Contact Us
               </Link>
             </div>
           </div>
