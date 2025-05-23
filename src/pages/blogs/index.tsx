@@ -25,6 +25,13 @@ interface BlogIndexProps {
 // In a production app, you'd extract metadata from the actual files
 const blogPostsData: BlogPost[] = [
   {
+    slug: "celebrities-influencers-spotted-in-whistler-with-acehost",
+    title: "Celebrities/Influencers Spotted in Whistler with AceHost",
+    category: "Celebrity Spotting",
+    readTime: "10 min read",
+    heroImage: "/photos/post/whistler-luxury-home-marketing-strategies/Hero.png"
+  },
+  {
     slug: "best-airbnb-property-management-company-in-whistler",
     title: "Best Airbnb Property Management Company in Whistler",
     category: "Property Management",

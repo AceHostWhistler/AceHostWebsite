@@ -11,6 +11,14 @@ export interface Article {
 // All blog articles data with proper image paths
 export const allArticles: Article[] = [
   {
+    title: "Celebrities/Influencers Spotted in Whistler with AceHost",
+    category: "Celebrity Spotting",
+    description: "Discover the A-listers and top influencers who've chosen AceHost for their Whistler getaways, from the Riverdale cast to adventure filmmakers and Olympic athletes.",
+    readTime: "10 min read",
+    link: "/post/celebrities-influencers-spotted-in-whistler-with-acehost",
+    coverImage: "/photos/post/whistler-luxury-home-marketing-strategies/Hero.png",
+  },
+  {
     title: "Best Airbnb Property Management Company in Whistler",
     category: "Property Management",
     description: "Discover what makes AceHost the premier luxury Airbnb property management company in Whistler. Learn about our specialized services, VIP concierge offerings, and hands-off ownership experience.",
