@@ -29,7 +29,7 @@ const blogPostsData: BlogPost[] = [
     title: "Celebrities/Influencers Spotted in Whistler with AceHost",
     category: "Celebrity Spotting",
     readTime: "10 min read",
-    heroImage: "/photos/post/whistler-luxury-home-marketing-strategies/Hero.png"
+    heroImage: "/photos/post/Blog Celebrities Spotted/65205b536bfe86e898fc902d_image002 (1).png"
   },
   {
     slug: "best-airbnb-property-management-company-in-whistler",
@@ -153,15 +153,6 @@ const blogPostsData: BlogPost[] = [
     readTime: "15 min read",
     heroImage:
       "/photos/post/10-reasons-why-you-must-visit-whistler-canada-for-your-next-winter-ski-vacation/Hero.jpg",
-  },
-  {
-    slug: "whistler-luxury-home-marketing-strategies",
-    title:
-      "Whistler Celebrity & Influencer Marketing in Whistler | Luxury Home Marketing Strategies",
-    category: "Travel and celebrity marketing",
-    readTime: "14 min read",
-    heroImage:
-      "/photos/post/whistler-luxury-home-marketing-strategies/Hero.png",
   },
   {
     slug: "whistler-luxury-vacation-haven",

@@ -20,8 +20,8 @@ const CelebritiesInfluencersBlog = () => {
           name="description"
           content="Discover the A-listers and top influencers who've chosen AceHost for their Whistler getaways. From the Riverdale cast to fashion icons and adventure filmmakers, see who's been spotted enjoying our luxury properties."
         />
-        <meta property="og:image" content="https://acehost.ca/photos/post/whistler-luxury-home-marketing-strategies/Hero.png" />
-        <meta property="twitter:image" content="https://acehost.ca/photos/post/whistler-luxury-home-marketing-strategies/Hero.png" />
+        <meta property="og:image" content="https://acehost.ca/photos/post/Blog Celebrities Spotted/65205b536bfe86e898fc902d_image002 (1).png" />
+        <meta property="twitter:image" content="https://acehost.ca/photos/post/Blog Celebrities Spotted/65205b536bfe86e898fc902d_image002 (1).png" />
       </Head>
 
       <div className="min-h-screen bg-white">
@@ -60,7 +60,7 @@ const CelebritiesInfluencersBlog = () => {
           <div className="max-w-6xl mx-auto mb-16 px-4 sm:px-6">
             <div className="relative aspect-[16/9] rounded-xl overflow-hidden shadow-xl">
               <Image
-                src="/photos/post/whistler-luxury-home-marketing-strategies/Hero.png"
+                src="/photos/post/Blog Celebrities Spotted/65205b536bfe86e898fc902d_image002 (1).png"
                 alt="Celebrities and influencers in Whistler"
                 fill
                 className="object-cover"
