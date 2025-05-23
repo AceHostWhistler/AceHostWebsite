@@ -111,7 +111,7 @@ const CelebritiesInfluencersBlog = () => {
 
                 <div className="relative aspect-video rounded-lg overflow-hidden mb-6">
                   <Image
-                    src="/photos/post/whistler-luxury-home-marketing-strategies/MarketingStrategyStars.jpg"
+                    src="/photos/post/Blog Celebrities Spotted/65205b536bfe86e898fc902d_image002 (1).png"
                     alt="Riverdale cast enjoying Whistler"
                     fill
                     className="object-cover"
@@ -143,11 +143,17 @@ const CelebritiesInfluencersBlog = () => {
                       <p className="text-gray-700 mt-4">
                         During his stay, Justin created breathtaking content featuring our luxury chalets and even joined one of our exclusive helicopter tours, giving his nearly one million followers a bird's-eye view of Whistler's majestic landscapes.
                       </p>
+                      <div className="mt-6">
+                        <a href="https://www.youtube.com/watch?v=cNHhE2B8Zeo&t=40s" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition-colors text-sm font-medium">
+                          <span>Watch Justin's Whistler Adventure</span>
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </a>
+                      </div>
                     </div>
                     <div className="md:w-1/3">
                       <div className="relative h-60 md:h-full w-full rounded-lg overflow-hidden">
                         <Image 
-                          src="/photos/post/whistler-luxury-home-marketing-strategies/Heliskiing.jpg" 
+                          src="/photos/post/Blog Celebrities Spotted/670606b1d0dfd39e7ffac7c9_Screen Shot 2024-10-08 at 9.29.23 PM (1).png" 
                           alt="Justin Tse filming in Whistler"
                           fill
                           className="object-cover"
@@ -168,6 +174,14 @@ const CelebritiesInfluencersBlog = () => {
                       <p className="text-gray-700">
                         The PropertyGrams team visited just before Christmas, capturing stunning footage of our most exclusive listings. Their high-quality home video tours have become a favorite resource for luxury travelers planning their Whistler escape.
                       </p>
+                      <div className="relative h-52 w-full rounded-lg overflow-hidden mt-4">
+                        <Image 
+                          src="/photos/post/Blog Celebrities Spotted/651c937e64d308b5dbe3414f_image004 (1).png" 
+                          alt="Tyler Hassman with PropertyGrams"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
                     </div>
                     <div>
                       <p className="font-bold mb-2">Luxury Listings</p>
@@ -189,17 +203,39 @@ const CelebritiesInfluencersBlog = () => {
                   <div>
                     <h3 className="text-xl font-bold mb-4">Francesca Farago & Jessi Sullivan</h3>
                     <p className="text-gray-700 mb-3"><span className="font-medium">6.2 Million + 406K Instagram Followers</span></p>
-                    <p className="text-gray-700">
+                    <p className="text-gray-700 mb-4">
                       Reality TV star Francesca Farago and lifestyle influencer Jessi Sullivan created waves with their Whistler content, including a viral reel that garnered over 1.5 million views. The duo showcased the perfect balance of luxury relaxation and winter adventure during their stay.
                     </p>
+                    <div className="relative h-52 w-full rounded-lg overflow-hidden mb-4">
+                      <Image 
+                        src="/photos/post/Blog Celebrities Spotted/652108333b9e3eff6f422bbb_image005 (1).png" 
+                        alt="Francesca Farago in Whistler"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div>
+                      <a href="https://www.instagram.com/reel/Cr4A3r0rmOM/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-500 text-white px-4 py-2 rounded-md hover:from-purple-700 hover:to-pink-600 transition-colors text-sm font-medium">
+                        <span>Watch Francesca's Viral Reel (1.5M+ Views)</span>
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </a>
+                    </div>
                   </div>
-                  <div className="relative h-64 rounded-lg overflow-hidden">
-                    <Image 
-                      src="/photos/properties/Wedge Mountain Lodge Spa/Wedge Mountain Lodge & Spa _ Great Room 9.jpg" 
-                      alt="Luxury living room where influencers stayed"
-                      fill
-                      className="object-cover"
-                    />
+                  <div>
+                    <h3 className="text-xl font-bold mb-4">Ari Kytsya</h3>
+                    <p className="text-gray-700 mb-3"><span className="font-medium">4.5 Million TikTok Followers</span></p>
+                    <p className="text-gray-700 mb-4">
+                      TikTok sensation Ari Kytsya brought her massive following to Whistler, documenting her AceHost experience with her signature vibrant style. Her content showcased the perfect blend of luxury accommodations and thrilling winter adventures.
+                    </p>
+                    <div className="relative h-52 w-full rounded-lg overflow-hidden mb-4 bg-gray-100 flex items-center justify-center">
+                      <p className="text-gray-500 italic">Ari enjoying Whistler's luxury</p>
+                    </div>
+                    <div>
+                      <a href="https://www.instagram.com/reel/DI-Xmc1pa_a/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-500 text-white px-4 py-2 rounded-md hover:from-purple-700 hover:to-pink-600 transition-colors text-sm font-medium">
+                        <span>Watch Ari's AceHost Reel</span>
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </a>
+                    </div>
                   </div>
                 </div>
 
@@ -246,9 +282,47 @@ const CelebritiesInfluencersBlog = () => {
                     Mattih: YouTube Phenomenon
                   </h3>
                   <p className="font-medium mb-2">1.31 Million YouTube Subscribers</p>
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-700 mb-4">
                     Popular YouTuber Matti showcased AceHost's luxury rentals with his signature style, creating content that captured both the epic outdoor adventures and cozy luxury of our properties. Watch this space for his return visit planned for his birthday celebration this December!
                   </p>
+                  <div className="mb-4">
+                    <a href="https://www.instagram.com/reel/CsRVLJDAdV5/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-500 text-white px-4 py-2 rounded-md hover:from-purple-700 hover:to-pink-600 transition-colors text-sm font-medium">
+                      <span>Check Out Matti's AceHost Reel</span>
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </a>
+                  </div>
+                </div>
+
+                <div className="mb-10">
+                  <h3 className="text-xl md:text-2xl font-bold mb-4">
+                    Fernanda Ramirez: Travel & Lifestyle Creator
+                  </h3>
+                  <div className="flex flex-col md:flex-row gap-6 mb-6">
+                    <div className="md:w-2/3">
+                      <p className="text-gray-700 mb-3">
+                        <span className="font-medium">1.51 Million YouTube Subscribers</span>
+                      </p>
+                      <p className="text-gray-700 mb-4">
+                        Travel and lifestyle creator Fernanda Ramirez documented her entire Whistler adventure with AceHost, giving her massive audience an in-depth look at the luxury accommodations and winter experiences that make Whistler special. Her video takes viewers through all the highlights of her stay, from cozy evenings by the fireplace to thrilling days on the mountain.
+                      </p>
+                      <div>
+                        <a href="https://www.youtube.com/watch?v=XDX8ocCu9Cw" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition-colors text-sm font-medium">
+                          <span>Watch Fernanda's Whistler Adventure</span>
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </a>
+                      </div>
+                    </div>
+                    <div className="md:w-1/3">
+                      <div className="relative h-60 md:h-full w-full rounded-lg overflow-hidden">
+                        <Image 
+                          src="/photos/post/Blog Celebrities Spotted/Screen Shot 2025-05-23 at 12.12.51 PM.png" 
+                          alt="Fernanda Ramirez in Whistler"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="mb-6">
@@ -287,9 +361,23 @@ const CelebritiesInfluencersBlog = () => {
                   <div>
                     <h3 className="text-xl font-bold mb-4">Strawberry Milkmob</h3>
                     <p className="text-gray-700 mb-2"><span className="font-medium">2.3 Million TikTok Followers</span></p>
-                    <p className="text-gray-700">
+                    <p className="text-gray-700 mb-4">
                       This viral TikTok sensation has made waves with their unique content and distinctive style. Their house tour of one of our premium properties gave followers an inside look at luxury Whistler living.
                     </p>
+                    <div className="relative h-52 w-full rounded-lg overflow-hidden mb-4">
+                      <Image 
+                        src="/photos/post/Blog Celebrities Spotted/670608551d414959a1ab18b2_IMG_4939.jpg" 
+                        alt="Strawberry Milkmob in Whistler"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div>
+                      <a href="https://www.tiktok.com/@strawberrymilkmob/video/7344517108136594693" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors text-sm font-medium">
+                        <span>Watch Strawberry Milkmob's House Tour</span>
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </a>
+                    </div>
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-4">Mark McMorris</h3>
