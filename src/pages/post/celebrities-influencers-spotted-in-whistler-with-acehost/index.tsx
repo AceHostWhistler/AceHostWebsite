@@ -109,18 +109,14 @@ const CelebritiesInfluencersBlog = () => {
                   </div>
                 </div>
 
-                <div className="flex justify-center mb-6">
-                  <div className="relative max-w-lg w-full" style={{ height: "auto" }}>
-                    <Image
-                      src="/photos/post/Blog Celebrities Spotted/65205b536bfe86e898fc902d_image002 (1).png"
-                      alt="Riverdale cast enjoying Whistler"
-                      width={600}
-                      height={400}
-                      className="object-contain"
-                      style={{ width: "100%", height: "auto" }}
-                      priority={true}
-                    />
-                  </div>
+                <div className="relative aspect-video rounded-lg overflow-hidden mb-6">
+                  <Image
+                    src="/photos/post/Blog Celebrities Spotted/65205b536bfe86e898fc902d_image002 (1).png"
+                    alt="Riverdale cast enjoying Whistler"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
                 
                 <p className="mb-0">
@@ -160,10 +156,9 @@ const CelebritiesInfluencersBlog = () => {
                         <Image 
                           src="/photos/post/Blog Celebrities Spotted/670606b1d0dfd39e7ffac7c9_Screen Shot 2024-10-08 at 9.29.23 PM (1).png" 
                           alt="Justin Tse filming in Whistler"
-                          width={400}
-                          height={500}
-                          className="object-cover rounded-lg"
-                          priority={true}
+                          fill
+                          className="object-cover"
+                          priority
                         />
                       </div>
                     </div>
@@ -181,15 +176,13 @@ const CelebritiesInfluencersBlog = () => {
                       <p className="text-gray-700 mb-4">
                         The PropertyGrams team visited just before Christmas, capturing stunning footage of our most exclusive listings. Their high-quality home video tours have become a favorite resource for luxury travelers planning their Whistler escape.
                       </p>
-                      <div className="relative w-full" style={{ height: "auto" }}>
+                      <div className="relative aspect-video rounded-lg overflow-hidden">
                         <Image 
                           src="/photos/post/Blog Celebrities Spotted/651c937e64d308b5dbe3414f_image004 (1).png" 
                           alt="Tyler Hassman with PropertyGrams"
-                          width={600}
-                          height={400}
-                          className="object-contain rounded-lg"
-                          style={{ width: "100%", height: "auto" }}
-                          priority={true}
+                          fill
+                          className="object-cover"
+                          priority
                         />
                       </div>
                       <div className="mt-4">
@@ -222,15 +215,13 @@ const CelebritiesInfluencersBlog = () => {
                     <p className="text-gray-700 mb-4">
                       Reality TV star Francesca Farago and lifestyle influencer Jessi Sullivan created waves with their Whistler content, including a viral reel that garnered over 1.5 million views. The duo showcased the perfect balance of luxury relaxation and winter adventure during their stay.
                     </p>
-                    <div className="relative w-full" style={{ height: "auto" }}>
+                    <div className="relative aspect-video rounded-lg overflow-hidden">
                       <Image 
                         src="/photos/post/Blog Celebrities Spotted/652108333b9e3eff6f422bbb_image005 (1).png" 
                         alt="Francesca Farago in Whistler"
-                        width={600}
-                        height={400}
-                        className="object-contain rounded-lg"
-                        style={{ width: "100%", height: "auto" }}
-                        priority={true}
+                        fill
+                        className="object-cover"
+                        priority
                       />
                     </div>
                     <div className="mt-4">
@@ -333,10 +324,9 @@ const CelebritiesInfluencersBlog = () => {
                         <Image 
                           src="/photos/post/Blog Celebrities Spotted/Screen Shot 2025-05-23 at 12.12.51 PM.png" 
                           alt="Fernanda Ramirez in Whistler"
-                          width={400}
-                          height={500}
-                          className="object-cover rounded-lg"
-                          priority={true}
+                          fill
+                          className="object-cover"
+                          priority
                         />
                       </div>
                     </div>
@@ -361,10 +351,9 @@ const CelebritiesInfluencersBlog = () => {
                         <Image 
                           src="/photos/homepage/ViewOurCollection.jpg" 
                           alt="Luxury property captured by drone"
-                          width={400}
-                          height={300}
-                          className="object-cover rounded-lg"
-                          priority={true}
+                          fill
+                          className="object-cover"
+                          priority
                         />
                       </div>
                     </div>
@@ -384,15 +373,13 @@ const CelebritiesInfluencersBlog = () => {
                     <p className="text-gray-700 mb-4">
                       This viral TikTok sensation has made waves with their unique content and distinctive style. Their house tour of one of our premium properties gave followers an inside look at luxury Whistler living.
                     </p>
-                    <div className="relative w-full" style={{ height: "auto", maxHeight: "500px" }}>
+                    <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
                       <Image 
                         src="/photos/post/Blog Celebrities Spotted/670608551d414959a1ab18b2_IMG_4939.jpg" 
                         alt="Strawberry Milkmob in Whistler"
-                        width={400}
-                        height={600}
-                        className="object-contain rounded-lg mx-auto"
-                        style={{ width: "auto", maxHeight: "500px" }}
-                        priority={true}
+                        fill
+                        className="object-cover"
+                        priority
                       />
                     </div>
                     <div className="mt-4">
