@@ -71,6 +71,9 @@ const Home = () => {
     const isContactLink = !!property.contactLink;
     const isAirbnbLink = !!property.airbnbLink;
     
+    // Special handling for Cotswolds property
+    const isCotswolds = property.id === "cotswolds-uk-soho-farm-house";
+    
     return (
       <div
         key={property.id}
@@ -78,18 +81,28 @@ const Home = () => {
       >
         <div className="relative h-64">
           <Link href={cardLink}>
-            <Image
-              src={property.image}
-              alt={`${property.title || property.name} - Luxury ${property.location === 'whistler' ? 'Whistler' : property.location === 'vancouver' ? 'Vancouver' : 'Worldwide'} vacation rental with ${property.bedrooms} bedroom${property.bedrooms !== 1 ? 's' : ''}, accommodating up to ${property.guests} guest${property.guests !== 1 ? 's' : ''}`}
-              fill
-              className="object-cover cursor-pointer"
-              sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-              loading={index < 6 ? "eager" : "lazy"}
-              quality={80}
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAEhAI/w5RW4AAAAABJRU5ErkJggg=="
-              priority={index < 3}
-            />
+            {isCotswolds ? (
+              <div className="w-full h-full">
+                <img
+                  src="/cotswolds.jpg"
+                  alt={`${property.title || property.name} - Luxury ${property.location === 'whistler' ? 'Whistler' : property.location === 'vancouver' ? 'Vancouver' : 'Worldwide'} vacation rental with ${property.bedrooms} bedroom${property.bedrooms !== 1 ? 's' : ''}, accommodating up to ${property.guests} guest${property.guests !== 1 ? 's' : ''}`}
+                  className="object-cover cursor-pointer w-full h-full"
+                />
+              </div>
+            ) : (
+              <Image
+                src={property.image}
+                alt={`${property.title || property.name} - Luxury ${property.location === 'whistler' ? 'Whistler' : property.location === 'vancouver' ? 'Vancouver' : 'Worldwide'} vacation rental with ${property.bedrooms} bedroom${property.bedrooms !== 1 ? 's' : ''}, accommodating up to ${property.guests} guest${property.guests !== 1 ? 's' : ''}`}
+                fill
+                className="object-cover cursor-pointer"
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                loading={index < 6 ? "eager" : "lazy"}
+                quality={80}
+                placeholder="blur"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAEhAI/w5RW4AAAAABJRU5ErkJggg=="
+                priority={index < 3}
+              />
+            )}
           </Link>
           {property.isPetFriendly && (
             <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 text-xs font-medium rounded-md z-10">
@@ -922,18 +935,16 @@ const Home = () => {
         <section className="relative bg-white pt-6 pb-0 md:py-6">
           <div className="flex flex-col md:flex-row w-full max-w-full mx-auto">
             <div className="md:w-[40%] lg:w-[40%] px-4 sm:px-6 lg:px-8 md:py-6">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
                 Luxury Vacation
                 <br />
                 Rental Properties in
                 <br />
-                Whistler Canada |<br />
-                Property
-                <br />
-                Management & VIP
-                <br />
-                Concierge Services
+                Whistler Canada
               </h1>
+              <p className="text-lg sm:text-xl text-gray-700 mb-6">
+                | Property Management & VIP Concierge Services
+              </p>
               <p className="text-base md:text-lg text-gray-700 mb-8 max-w-2xl">
                 AceHost is a leading Whistler luxury Airbnb property management
                 company. We proudly offer an array of magnificent vacation

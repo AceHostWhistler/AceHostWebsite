@@ -151,30 +151,10 @@ const ConciergeService = () => {
                   </h1>
                   <div className="space-y-6 text-gray-600 text-lg">
                     <p>
-                      When booking Luxury Accommodations with AceHost, we
-                      include VIP Concierge Services for your stay. Our
-                      Concierge team designs an all-in-one personalized holiday
-                      experience to ensure that every aspect of your vacation is
-                      taken care of. We don't just book your trip and send
-                      an itinerary - we go above and beyond to ensure your group
-                      gets the best tables, service, and time slots. From
-                      arrival to departure, we are at your service to plan and
-                      execute your concierge itinerary to make sure that your
-                      stay is memorable and seamless.
+                      When you book Luxury Accommodations with AceHost, VIP Concierge Services are included to elevate your stay. Our local team curates a personalized itinerary to ensure every detail is taken care of—from exclusive dining reservations to seamless logistics. We don't just send an itinerary; we secure top tables, prime time slots, and priority access to Whistler's best.
                     </p>
                     <p>
-                      Our concierge team is comprised of experienced locals with
-                      the best knowledge of Whistler and the surrounding areas.
-                      With our connections in town, we are able to get priority
-                      access to the best experiences that Whistler has to offer.
-                      Whether you need professional last-minute staffing,
-                      special requests or privileges at restaurants, insider
-                      local knowledge or advice, local secrets for finding the
-                      best powder, AceHost is committed to working around the
-                      clock to deliver the best luxury concierge service in
-                      Whistler. Although our concierge team can plan well ahead
-                      with given notice, we can always arrange for last minute
-                      requests or changes.
+                      With unmatched local knowledge and strong connections, our concierge team is available from arrival to departure for anything you need—last-minute staffing, special requests, or insider tips for untouched powder. Whether planning in advance or responding to same-day changes, we're here to deliver Whistler's top luxury concierge experience.
                     </p>
                   </div>
                   <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 pt-4">
