@@ -942,8 +942,8 @@ const Home = () => {
                 <br />
                 Whistler Canada
               </h1>
-              <p className="text-lg sm:text-xl text-gray-700 mb-6">
-                | Property Management & VIP Concierge Services
+              <p className="text-lg sm:text-xl text-gray-700 mb-6 font-bold">
+                Property Management & VIP Concierge Services
               </p>
               <p className="text-base md:text-lg text-gray-700 mb-8 max-w-2xl">
                 AceHost is a leading Whistler luxury Airbnb property management
