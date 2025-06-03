@@ -99,13 +99,7 @@ const CotswoldsUKSohoFarmHouse = () => {
     "/photos/properties/Cotswolds UK - Soho Farm House/224A5508.jpg",
     "/photos/properties/Cotswolds UK - Soho Farm House/224A5518.jpg",
     "/photos/properties/Cotswolds UK - Soho Farm House/224A5532.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5535.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/8596128-exterior08-800.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/8596128-exterior10-800.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/8596128-exterior18-800.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/8596128-exterior21-800.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/DJI_20250502143633_0658_D.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/DJI_20250502143723_0661_D.jpg"
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5535.jpg"
   ];
 
   const handlePhotoClick = (index: number) => {
@@ -195,15 +189,42 @@ const CotswoldsUKSohoFarmHouse = () => {
           {/* Photo Grid */}
           <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16" id="photos">
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
-              {photos.slice(0, 28).map((photo, index) => (
+              <div
+                className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
+                onClick={() => handlePhotoClick(0)}
+              >
+                <div className="w-full h-full">
+                  <img
+                    src="/cotswolds.jpg"
+                    alt="Cotswolds UK - Soho Farm House 1"
+                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </div>
+              {photos.slice(1, 4).map((photo, index) => (
                 <div
                   key={index}
                   className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
-                  onClick={() => handlePhotoClick(index)}
+                  onClick={() => handlePhotoClick(index + 1)}
+                >
+                  <div className="w-full h-full">
+                    <img
+                      src={index === 0 ? "/cotswolds2.jpg" : photo}
+                      alt={`Cotswolds UK - Soho Farm House ${index + 2}`}
+                      className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                </div>
+              ))}
+              {photos.slice(4, 28).map((photo, index) => (
+                <div
+                  key={index + 4}
+                  className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
+                  onClick={() => handlePhotoClick(index + 4)}
                 >
                   <Image
                     src={`${photo}?v=${Date.now()}`}
-                    alt={`Cotswolds UK - Soho Farm House ${index + 1}`}
+                    alt={`Cotswolds UK - Soho Farm House ${index + 5}`}
                     fill
                     sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     className="object-cover hover:scale-105 transition-transform duration-300"
@@ -296,11 +317,10 @@ const CotswoldsUKSohoFarmHouse = () => {
             <div className="flex flex-col md:flex-row gap-12">
               <div className="md:w-1/2">
                 <div className="relative aspect-[4/3] mb-4 rounded-xl overflow-hidden shadow-lg">
-                  <Image
-                    src={`${photos[4]}?v=${Date.now()}`}
+                  <img
+                    src="/cotswolds3.jpg"
                     alt="Cotswolds UK - Soho Farm House - Premium Amenities"
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-500"
+                    className="object-cover hover:scale-105 transition-transform duration-500 w-full h-full"
                   />
                 </div>
               </div>
