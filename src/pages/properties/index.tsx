@@ -769,7 +769,7 @@ export default function Properties() {
             id: "cotswolds-uk-soho-farm-house",
             name: "Cotswolds UK - Soho Farm House",
             images: [
-              "/photos/properties/Cotswolds UK - Soho Farm House/DJI_20250602090500_0519_D.jpg",
+              "/photos/properties/Cotswolds UK - Soho Farm House/DJI_20250602090500_0519_D.jpg?v=1",
               "/photos/properties/Cotswolds UK - Soho Farm House/224A5292.jpg",
               "/photos/properties/Cotswolds UK - Soho Farm House/224A5307.jpg"
             ],
@@ -991,7 +991,7 @@ export default function Properties() {
             id: "cotswolds-uk-soho-farm-house",
             name: "Cotswolds UK - Soho Farm House",
             images: [
-              "/photos/properties/Cotswolds UK - Soho Farm House/DJI_20250602090500_0519_D.jpg",
+              "/photos/properties/Cotswolds UK - Soho Farm House/DJI_20250602090500_0519_D.jpg?v=1",
               "/photos/properties/Cotswolds UK - Soho Farm House/224A5292.jpg",
               "/photos/properties/Cotswolds UK - Soho Farm House/224A5307.jpg"
             ],

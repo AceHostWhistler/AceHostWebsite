@@ -202,7 +202,7 @@ const CotswoldsUKSohoFarmHouse = () => {
                   onClick={() => handlePhotoClick(index)}
                 >
                   <Image
-                    src={photo}
+                    src={`${photo}?v=${Date.now()}`}
                     alt={`Cotswolds UK - Soho Farm House ${index + 1}`}
                     fill
                     sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
@@ -297,7 +297,7 @@ const CotswoldsUKSohoFarmHouse = () => {
               <div className="md:w-1/2">
                 <div className="relative aspect-[4/3] mb-4 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src={photos[4]}
+                    src={`${photos[4]}?v=${Date.now()}`}
                     alt="Cotswolds UK - Soho Farm House - Premium Amenities"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-500"
@@ -462,7 +462,7 @@ const CotswoldsUKSohoFarmHouse = () => {
                     onClick={() => handlePhotoClick(index)}
                   >
                     <Image
-                      src={photo}
+                      src={`${photo}?v=${Date.now()}`}
                       alt={`Cotswolds UK - Soho Farm House photo ${index + 1}`}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -550,7 +550,7 @@ const CotswoldsUKSohoFarmHouse = () => {
               </button>
               <div className="relative w-full h-[calc(100vh-120px)] max-w-6xl mx-auto">
                 <Image
-                  src={photos[selectedPhotoIndex]}
+                  src={`${photos[selectedPhotoIndex]}?v=${Date.now()}`}
                   alt={`Cotswolds UK - Soho Farm House photo ${selectedPhotoIndex + 1}`}
                   fill
                   priority
