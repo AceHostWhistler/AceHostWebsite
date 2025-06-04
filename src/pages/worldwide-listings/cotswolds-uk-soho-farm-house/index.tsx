@@ -178,7 +178,7 @@ const CotswoldsUKSohoFarmHouse = () => {
           {/* Header with Property Info */}
           <PropertyHeader
             title="Designer Stone Estate Near Soho Farmhouse | 8 Bedroom, Spa, Tennis Court, & Annex"
-            guests={14}
+            guests={15}
             bedrooms={8}
             bathrooms={5}
             priceRange="£1,100-£2,300 per night | 3 night minimum"

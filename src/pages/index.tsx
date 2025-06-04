@@ -630,8 +630,8 @@ const Home = () => {
     {
       id: "cotswolds-uk-soho-farm-house",
       name: "Cotswolds UK - Soho Farm House | Designer Stone Estate",
-      image: "/photos/properties/Cotswolds UK - Soho Farm House/DJI_20250602090500_0519_D.jpg?v=1",
-      guests: 14,
+      image: "/cotswolds.jpg",
+      guests: 15,
       bedrooms: 8,
       bathrooms: 5,
       priceRange: "£1,100-£2,300 per night | 3 night minimum",
