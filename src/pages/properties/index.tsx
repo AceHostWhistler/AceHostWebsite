@@ -1523,6 +1523,9 @@ export default function Properties() {
 
     const propertyUrl = getPropertyUrl(property);
 
+    // Special handling for Cotswolds property
+    const isCotswoldsProperty = property.id === "cotswolds-uk-soho-farm-house";
+
     // Mapping property IDs to Airbnb links
     const airbnbLinks: Record<string, string> = {
       "altitude-retreat":
@@ -1574,17 +1577,25 @@ export default function Properties() {
           
           <Link href={propertyUrl}>
             <div className="relative w-full h-full">
-              <Image
-              src={property.images[0]}
-                alt={`${property.name} - Luxury ${property.location === 'whistler' ? 'Whistler' : property.location === 'vancouver' ? 'Vancouver' : 'Worldwide'} vacation rental with ${property.bedrooms} bedrooms, accommodating up to ${property.guests} guests`}
-                className="object-cover"
-                fill
-                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                quality={80}
-                loading="lazy"
-                placeholder="blur"
-                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAEhAI/w5RW4AAAAABJRU5ErkJggg=="
-              />
+              {isCotswoldsProperty ? (
+                <img
+                  src="/cotswolds.jpg"
+                  alt={`${property.name} - Luxury ${property.location === 'whistler' ? 'Whistler' : property.location === 'vancouver' ? 'Vancouver' : 'Worldwide'} vacation rental with ${property.bedrooms} bedrooms, accommodating up to ${property.guests} guests`}
+                  className="object-cover w-full h-full"
+                />
+              ) : (
+                <Image
+                  src={property.images[0]}
+                  alt={`${property.name} - Luxury ${property.location === 'whistler' ? 'Whistler' : property.location === 'vancouver' ? 'Vancouver' : 'Worldwide'} vacation rental with ${property.bedrooms} bedrooms, accommodating up to ${property.guests} guests`}
+                  className="object-cover"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  quality={80}
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAEhAI/w5RW4AAAAABJRU5ErkJggg=="
+                />
+              )}
             </div>
           </Link>
 
