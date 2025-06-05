@@ -222,17 +222,10 @@ const CotswoldsUKSohoFarmHouse = () => {
                   className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
                   onClick={() => handlePhotoClick(index + 4)}
                 >
-                  <Image
-                    src={`${photo}?v=${Date.now()}`}
+                  <img
+                    src={photo}
                     alt={`Cotswolds UK - Soho Farm House ${index + 5}`}
-                    fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                    priority={index < 2}
-                    loading={index < 2 ? "eager" : "lazy"}
-                    quality={index < 4 ? 85 : 75}
-                    placeholder="blur"
-                    blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzMiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="
+                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               ))}
@@ -481,13 +474,10 @@ const CotswoldsUKSohoFarmHouse = () => {
                     className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer"
                     onClick={() => handlePhotoClick(index)}
                   >
-                    <Image
-                      src={`${photo}?v=${Date.now()}`}
+                    <img
+                      src={photo}
                       alt={`Cotswolds UK - Soho Farm House photo ${index + 1}`}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
-                      className="object-cover hover:scale-105 transition-transform duration-300"
-                      loading="lazy"
+                      className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                 ))}
@@ -569,16 +559,11 @@ const CotswoldsUKSohoFarmHouse = () => {
                 </svg>
               </button>
               <div className="relative w-full h-[calc(100vh-120px)] max-w-6xl mx-auto">
-                <Image
-                  src={`${photos[selectedPhotoIndex]}?v=${Date.now()}`}
+                <img
+                  src={photos[selectedPhotoIndex]}
                   alt={`Cotswolds UK - Soho Farm House photo ${selectedPhotoIndex + 1}`}
-                  fill
-                  priority
-                  className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
-                  sizes="100vw"
-                  onLoadingComplete={handleImageLoad}
-                  quality={85}
-                  loading="eager"
+                  className="object-contain w-full h-full"
+                  onLoad={handleImageLoad}
                 />
               </div>
             </div>
