@@ -16,17 +16,19 @@ const CotswoldsUKSohoFarmHouse = () => {
   const [touchEndX, setTouchEndX] = useState<number | null>(null);
 
   // Cache version for forcing new image downloads
-  const cacheVersion = "v2";
+  const cacheVersion = "v3";
 
-  // Property photos - using URL encoded paths for production compatibility
+  // Property photos - using direct root paths for main visible images
   const photos = [
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/DJI_20250602090500_0519_D.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/DJI_20250602090532_0522_D.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/DJI_20250602090653_0526_D.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/DJI_20250602090720_0527_D.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/DJI_20250602091050_0536_D.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/DJI_20250602091213_0541_D.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/DJI_20250602091239_0542_D.jpg?" + cacheVersion,
+    "/cotswolds_1.jpg?" + cacheVersion,
+    "/cotswolds_2.jpg?" + cacheVersion,
+    "/cotswolds_3.jpg?" + cacheVersion,
+    "/cotswolds_4.jpg?" + cacheVersion,
+    "/cotswolds_5.jpg?" + cacheVersion,
+    "/cotswolds_6.jpg?" + cacheVersion,
+    "/cotswolds_7.jpg?" + cacheVersion,
+    "/cotswolds_8.jpg?" + cacheVersion,
+    // The rest are less critical but still using URL encoding and cache busting
     "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A7821.jpg?" + cacheVersion,
     "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A7828.jpg?" + cacheVersion,
     "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A7830.jpg?" + cacheVersion,
@@ -48,60 +50,7 @@ const CotswoldsUKSohoFarmHouse = () => {
     "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5292.jpg?" + cacheVersion,
     "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5307.jpg?" + cacheVersion,
     "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5305.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5277.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5290.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5302.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5359.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5372.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5399.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5410.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5417.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5423.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5450.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5472.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5478.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5506.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5516.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5528.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/DJI_20250502143514_0652_D.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/DJI_20250502143734_0662_D.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/012A0878.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/012A0881.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5279.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5289.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5317.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5336.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5352.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5368.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5435.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5463.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/012A0872.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/012A0876.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5297.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5313.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5314.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5324.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5331.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5339.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5345.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5351.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5361.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5362.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5398.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5405.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5413.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5430.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5433.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5437.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5441.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5468.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5470.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5492.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5502.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5508.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5518.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5532.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5535.jpg?" + cacheVersion
+    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5277.jpg?" + cacheVersion
   ];
 
   const handlePhotoClick = (index: number) => {
@@ -197,7 +146,7 @@ const CotswoldsUKSohoFarmHouse = () => {
               >
                 <div className="w-full h-full">
                   <img
-                    src={`/cotswolds.jpg?${cacheVersion}`}
+                    src="/cotswolds_1.jpg"
                     alt="Cotswolds UK - Soho Farm House 1"
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
                     loading="eager"
@@ -212,7 +161,7 @@ const CotswoldsUKSohoFarmHouse = () => {
                 >
                   <div className="w-full h-full">
                     <img
-                      src={index === 0 ? `/cotswolds2.jpg?${cacheVersion}` : photo}
+                      src={photo}
                       alt={`Cotswolds UK - Soho Farm House ${index + 2}`}
                       className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
                       loading="eager"
@@ -220,7 +169,7 @@ const CotswoldsUKSohoFarmHouse = () => {
                   </div>
                 </div>
               ))}
-              {photos.slice(4, 28).map((photo, index) => (
+              {photos.slice(4, 8).map((photo, index) => (
                 <div
                   key={index + 4}
                   className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
@@ -235,7 +184,7 @@ const CotswoldsUKSohoFarmHouse = () => {
                 </div>
               ))}
             </div>
-            {photos.length > 28 && (
+            {photos.length > 8 && (
               <div className="text-center mt-6">
                 <button
                   onClick={() => setShowAllPhotos(true)}
@@ -316,7 +265,7 @@ const CotswoldsUKSohoFarmHouse = () => {
               <div className="md:w-1/2">
                 <div className="relative aspect-[4/3] mb-4 rounded-xl overflow-hidden shadow-lg">
                   <img
-                    src={`/cotswolds3.jpg?${cacheVersion}`}
+                    src="/cotswolds_3.jpg"
                     alt="Cotswolds UK - Soho Farm House - Premium Amenities"
                     className="object-cover hover:scale-105 transition-transform duration-500 w-full h-full"
                     loading="lazy"
