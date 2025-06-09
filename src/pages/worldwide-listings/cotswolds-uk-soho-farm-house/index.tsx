@@ -228,7 +228,7 @@ const CotswoldsUKSohoFarmHouse = () => {
   return (
     <>
       <Head>
-        <title>Designer Stone Estate Near Soho Farmhouse | Cotswolds UK - AceHost</title>
+        <title>Luxury Cotswolds Rental Estate Near Soho Farmhouse | 8 Bedrooms, Spa, Tennis Court, Cold Plunge, & Sauna - AceHost</title>
         <meta
           name="description"
           content="Experience luxury at this designer stone estate near Soho Farmhouse in the Cotswolds, UK. This exclusive 8-bedroom property offers spa facilities, a tennis court, and an annex house, all set on a stunning 2-acre property just minutes from Soho Farmhouse."
@@ -241,7 +241,7 @@ const CotswoldsUKSohoFarmHouse = () => {
         <main>
           {/* Header with Property Info */}
           <PropertyHeader
-            title="Designer Stone Estate Near Soho Farmhouse | 8 Bedroom, Spa, Tennis Court, & Annex"
+            title="Luxury Cotswolds Rental Estate Near Soho Farmhouse | 8 Bedrooms, Spa, Tennis Court, Cold Plunge, & Sauna"
             guests={15}
             bedrooms={8}
             bathrooms={5}
