@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -14,9 +14,10 @@ const CotswoldsUKSohoFarmHouse = () => {
   const [isImageLoading, setIsImageLoading] = useState(false);
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
   const [touchEndX, setTouchEndX] = useState<number | null>(null);
+  const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set([0, 1, 2, 3])); // Initially load first 4 images
 
   // Cache version for forcing new image downloads
-  const cacheVersion = "v3";
+  const cacheVersion = "v4";
 
   // Property photos - using direct root paths for main visible images
   const photos = [
@@ -106,9 +107,29 @@ const CotswoldsUKSohoFarmHouse = () => {
     "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5535.jpg?" + cacheVersion
   ];
 
+  // Get thumbnail path for a photo
+  const getThumbnailPath = (photoPath: string, index: number) => {
+    if (index < 8) {
+      // Use the direct thumb path for the first 8 images
+      return `/thumbnails/cotswolds_thumb_${index + 1}.jpg`;
+    }
+    return photoPath; // For other images, we don't have optimized thumbnails
+  };
+
   const handlePhotoClick = (index: number) => {
     setIsImageLoading(true);
     setSelectedPhotoIndex(index);
+    
+    // Preload the next few images when a photo is clicked
+    const nextIndices = [
+      (index + 1) % photos.length,
+      (index + 2) % photos.length,
+      (index + 3) % photos.length
+    ];
+    
+    const newLoadedImages = new Set(loadedImages);
+    nextIndices.forEach(idx => newLoadedImages.add(idx));
+    setLoadedImages(newLoadedImages);
   };
 
   const closeFullScreenPhoto = () => {
@@ -123,16 +144,24 @@ const CotswoldsUKSohoFarmHouse = () => {
     if (selectedPhotoIndex === null) return;
 
     setIsImageLoading(true);
-
+    
+    let newIndex;
     if (direction === "prev") {
-      setSelectedPhotoIndex(
-        selectedPhotoIndex === 0 ? photos.length - 1 : selectedPhotoIndex - 1
-      );
+      newIndex = selectedPhotoIndex === 0 ? photos.length - 1 : selectedPhotoIndex - 1;
     } else {
-      setSelectedPhotoIndex(
-        selectedPhotoIndex === photos.length - 1 ? 0 : selectedPhotoIndex + 1
-      );
+      newIndex = selectedPhotoIndex === photos.length - 1 ? 0 : selectedPhotoIndex + 1;
     }
+    
+    setSelectedPhotoIndex(newIndex);
+    
+    // Preload the next couple of images in the direction we're navigating
+    const nextIndices = direction === "next" 
+      ? [(newIndex + 1) % photos.length, (newIndex + 2) % photos.length]
+      : [(newIndex - 1 + photos.length) % photos.length, (newIndex - 2 + photos.length) % photos.length];
+    
+    const newLoadedImages = new Set(loadedImages);
+    nextIndices.forEach(idx => newLoadedImages.add(idx));
+    setLoadedImages(newLoadedImages);
   };
 
   // Close full screen view when all photos modal is closed
@@ -157,6 +186,29 @@ const CotswoldsUKSohoFarmHouse = () => {
     }
   };
 
+  // Load more images when scrolling in gallery view
+  const handleGalleryScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    if (!showAllPhotos) return;
+    
+    const container = e.currentTarget;
+    const scrollBottom = container.scrollTop + container.clientHeight;
+    const scrollThreshold = container.scrollHeight * 0.8; // Load more when 80% scrolled
+    
+    if (scrollBottom > scrollThreshold) {
+      // Find images that haven't been loaded yet
+      const allIndices = Array.from({ length: photos.length }, (_, i) => i);
+      const unloadedIndices = allIndices.filter(idx => !loadedImages.has(idx));
+      
+      // Load next batch of unloaded images (up to 10 more)
+      const nextBatch = unloadedIndices.slice(0, 10);
+      if (nextBatch.length > 0) {
+        const newLoadedImages = new Set(loadedImages);
+        nextBatch.forEach(idx => newLoadedImages.add(idx));
+        setLoadedImages(newLoadedImages);
+      }
+    }
+  };
+
   React.useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
     return () => {
@@ -164,6 +216,14 @@ const CotswoldsUKSohoFarmHouse = () => {
       document.body.style.overflow = "auto";
     };
   }, [showAllPhotos, selectedPhotoIndex]);
+
+  // Initialize with first 16 images loaded when gallery is opened
+  useEffect(() => {
+    if (showAllPhotos) {
+      const initialLoadIndices = Array.from({ length: Math.min(16, photos.length) }, (_, i) => i);
+      setLoadedImages(new Set(initialLoadIndices));
+    }
+  }, [showAllPhotos]);
 
   return (
     <>
@@ -203,6 +263,8 @@ const CotswoldsUKSohoFarmHouse = () => {
                     alt="Cotswolds UK - Soho Farm House 1"
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
                     loading="eager"
+                    width={640}
+                    height={480}
                   />
                 </div>
               </div>
@@ -214,10 +276,12 @@ const CotswoldsUKSohoFarmHouse = () => {
                 >
                   <div className="w-full h-full">
                     <img
-                      src={photo}
+                      src={getThumbnailPath(photo, index + 1)}
                       alt={`Cotswolds UK - Soho Farm House ${index + 2}`}
                       className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
                       loading="eager"
+                      width={640}
+                      height={480}
                     />
                   </div>
                 </div>
@@ -229,10 +293,12 @@ const CotswoldsUKSohoFarmHouse = () => {
                   onClick={() => handlePhotoClick(index + 4)}
                 >
                   <img
-                    src={photo}
+                    src={getThumbnailPath(photo, index + 4)}
                     alt={`Cotswolds UK - Soho Farm House ${index + 5}`}
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
                     loading="lazy"
+                    width={640}
+                    height={480}
                   />
                 </div>
               ))}
@@ -322,6 +388,8 @@ const CotswoldsUKSohoFarmHouse = () => {
                     alt="Cotswolds UK - Soho Farm House - Premium Amenities"
                     className="object-cover hover:scale-105 transition-transform duration-500 w-full h-full"
                     loading="lazy"
+                    width={640} 
+                    height={480}
                   />
                 </div>
               </div>
@@ -463,7 +531,7 @@ const CotswoldsUKSohoFarmHouse = () => {
 
           {/* All Photos Modal */}
           {showAllPhotos && (
-            <div className="fixed inset-0 bg-black z-50 overflow-y-auto">
+            <div className="fixed inset-0 bg-black z-50 overflow-y-auto" onScroll={handleGalleryScroll}>
               <div className="flex justify-between items-center p-4 sticky top-0 bg-black bg-opacity-75 z-10">
                 <h3 className="text-white font-medium">
                   Cotswolds UK - Soho Farm House | All Photos ({photos.length})
@@ -479,15 +547,23 @@ const CotswoldsUKSohoFarmHouse = () => {
                 {photos.map((photo, index) => (
                   <div
                     key={index}
-                    className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer"
+                    className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer bg-gray-800"
                     onClick={() => handlePhotoClick(index)}
                   >
-                    <img
-                      src={photo}
-                      alt={`Cotswolds UK - Soho Farm House photo ${index + 1}`}
-                      className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                      loading="lazy"
-                    />
+                    {loadedImages.has(index) ? (
+                      <img
+                        src={getThumbnailPath(photo, index)}
+                        alt={`Cotswolds UK - Soho Farm House photo ${index + 1}`}
+                        className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                        width={400}
+                        height={300}
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center">
+                        <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
@@ -568,13 +644,21 @@ const CotswoldsUKSohoFarmHouse = () => {
                 </svg>
               </button>
               <div className="relative w-full h-[calc(100vh-120px)] max-w-6xl mx-auto">
+                {isImageLoading && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                  </div>
+                )}
                 <img
-                  src={photos[selectedPhotoIndex]}
-                  alt={`Cotswolds UK - Soho Farm House photo ${selectedPhotoIndex + 1}`}
-                  className="object-contain w-full h-full"
+                  src={selectedPhotoIndex !== null ? photos[selectedPhotoIndex] : ''}
+                  alt={`Cotswolds UK - Soho Farm House photo ${selectedPhotoIndex !== null ? selectedPhotoIndex + 1 : ''}`}
+                  className={`object-contain w-full h-full transition-opacity duration-300 ${isImageLoading ? 'opacity-0' : 'opacity-100'}`}
                   onLoad={handleImageLoad}
                   loading="eager"
                 />
+              </div>
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm">
+                {selectedPhotoIndex !== null ? `${selectedPhotoIndex + 1} / ${photos.length}` : ''}
               </div>
             </div>
           )}
