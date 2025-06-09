@@ -15,9 +15,10 @@ const CotswoldsUKSohoFarmHouse = () => {
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
   const [touchEndX, setTouchEndX] = useState<number | null>(null);
   const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set([0, 1, 2, 3])); // Initially load first 4 images
+  const [loadingBatch, setLoadingBatch] = useState<number[]>([]);
 
   // Cache version for forcing new image downloads
-  const cacheVersion = "v4";
+  const cacheVersion = "v5";
 
   // Property photos - using direct root paths for main visible images
   const photos = [
@@ -111,9 +112,42 @@ const CotswoldsUKSohoFarmHouse = () => {
   const getThumbnailPath = (photoPath: string, index: number) => {
     if (index < 8) {
       // Use the direct thumb path for the first 8 images
-      return `/thumbnails/cotswolds_thumb_${index + 1}.jpg`;
+      return `/thumbnails/cotswolds_thumb_${index + 1}.jpg?${cacheVersion}`;
     }
-    return photoPath; // For other images, we don't have optimized thumbnails
+    
+    // For remaining images, use a minimal version to improve loading speed
+    const originalPath = photoPath.split('?')[0]; // Remove cache parameter
+    return `${originalPath}?${cacheVersion}&size=small`;
+  };
+
+  // Load images in batches to improve performance
+  const loadImageBatch = (startIndex: number, count: number) => {
+    const endIndex = Math.min(startIndex + count, photos.length);
+    const indices = Array.from({ length: endIndex - startIndex }, (_, i) => startIndex + i);
+    
+    // Only load images that haven't been loaded yet
+    const unloadedIndices = indices.filter(idx => !loadedImages.has(idx) && !loadingBatch.includes(idx));
+    
+    if (unloadedIndices.length === 0) return;
+    
+    // Mark these images as currently loading
+    setLoadingBatch(prev => [...prev, ...unloadedIndices]);
+    
+    // Stagger the image loading to prevent browser overload
+    unloadedIndices.forEach((idx, i) => {
+      setTimeout(() => {
+        const img = new Image();
+        img.onload = () => {
+          setLoadedImages(prev => {
+            const newSet = new Set(prev);
+            newSet.add(idx);
+            return newSet;
+          });
+          setLoadingBatch(prev => prev.filter(id => id !== idx));
+        };
+        img.src = getThumbnailPath(photos[idx], idx);
+      }, i * 150); // Stagger each image load by 150ms
+    });
   };
 
   const handlePhotoClick = (index: number) => {
@@ -127,9 +161,7 @@ const CotswoldsUKSohoFarmHouse = () => {
       (index + 3) % photos.length
     ];
     
-    const newLoadedImages = new Set(loadedImages);
-    nextIndices.forEach(idx => newLoadedImages.add(idx));
-    setLoadedImages(newLoadedImages);
+    loadImageBatch(index, 3);
   };
 
   const closeFullScreenPhoto = () => {
@@ -155,13 +187,19 @@ const CotswoldsUKSohoFarmHouse = () => {
     setSelectedPhotoIndex(newIndex);
     
     // Preload the next couple of images in the direction we're navigating
-    const nextIndices = direction === "next" 
-      ? [(newIndex + 1) % photos.length, (newIndex + 2) % photos.length]
-      : [(newIndex - 1 + photos.length) % photos.length, (newIndex - 2 + photos.length) % photos.length];
-    
-    const newLoadedImages = new Set(loadedImages);
-    nextIndices.forEach(idx => newLoadedImages.add(idx));
-    setLoadedImages(newLoadedImages);
+    if (direction === "next") {
+      loadImageBatch(newIndex, 2);
+    } else {
+      const prevIndices = [
+        (newIndex - 1 + photos.length) % photos.length,
+        (newIndex - 2 + photos.length) % photos.length
+      ];
+      prevIndices.forEach(idx => {
+        if (!loadedImages.has(idx) && !loadingBatch.includes(idx)) {
+          loadImageBatch(idx, 1);
+        }
+      });
+    }
   };
 
   // Close full screen view when all photos modal is closed
@@ -192,22 +230,31 @@ const CotswoldsUKSohoFarmHouse = () => {
     
     const container = e.currentTarget;
     const scrollBottom = container.scrollTop + container.clientHeight;
-    const scrollThreshold = container.scrollHeight * 0.8; // Load more when 80% scrolled
+    const scrollThreshold = container.scrollHeight * 0.7; // Load more when 70% scrolled
     
     if (scrollBottom > scrollThreshold) {
-      // Find images that haven't been loaded yet
-      const allIndices = Array.from({ length: photos.length }, (_, i) => i);
-      const unloadedIndices = allIndices.filter(idx => !loadedImages.has(idx));
+      // Load images in smaller batches for smoother performance
+      const nextBatchSize = 6;
+      const loadedCount = loadedImages.size;
       
-      // Load next batch of unloaded images (up to 10 more)
-      const nextBatch = unloadedIndices.slice(0, 10);
-      if (nextBatch.length > 0) {
-        const newLoadedImages = new Set(loadedImages);
-        nextBatch.forEach(idx => newLoadedImages.add(idx));
-        setLoadedImages(newLoadedImages);
+      if (loadedCount < photos.length) {
+        loadImageBatch(loadedCount, nextBatchSize);
       }
     }
   };
+
+  // Special loading for problem photos (9-25)
+  useEffect(() => {
+    if (showAllPhotos) {
+      // Load first visible batch immediately
+      loadImageBatch(0, 12);
+      
+      // Specifically target the problematic photos 9-25
+      setTimeout(() => {
+        loadImageBatch(8, 17); // Load photos 9-25 (indices 8-24)
+      }, 500);
+    }
+  }, [showAllPhotos]);
 
   React.useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
@@ -217,13 +264,22 @@ const CotswoldsUKSohoFarmHouse = () => {
     };
   }, [showAllPhotos, selectedPhotoIndex]);
 
-  // Initialize with first 16 images loaded when gallery is opened
+  // Preload critical images
   useEffect(() => {
-    if (showAllPhotos) {
-      const initialLoadIndices = Array.from({ length: Math.min(16, photos.length) }, (_, i) => i);
-      setLoadedImages(new Set(initialLoadIndices));
-    }
-  }, [showAllPhotos]);
+    // Preload the first 8 images on component mount
+    const preloadImages = [0, 1, 2, 3, 4, 5, 6, 7];
+    preloadImages.forEach(idx => {
+      const img = new Image();
+      img.onload = () => {
+        setLoadedImages(prev => {
+          const newSet = new Set(prev);
+          newSet.add(idx);
+          return newSet;
+        });
+      };
+      img.src = idx < 8 ? photos[idx] : getThumbnailPath(photos[idx], idx);
+    });
+  }, []);
 
   return (
     <>
@@ -233,6 +289,9 @@ const CotswoldsUKSohoFarmHouse = () => {
           name="description"
           content="Experience luxury at this designer stone estate near Soho Farmhouse in the Cotswolds, UK. This exclusive 8-bedroom property offers spa facilities, a tennis court, and an annex house, all set on a stunning 2-acre property just minutes from Soho Farmhouse."
         />
+        {/* Preload critical images */}
+        <link rel="preload" href="/cotswolds_1.jpg" as="image" />
+        <link rel="preload" href="/cotswolds_2.jpg" as="image" />
       </Head>
 
       <div className="min-h-screen bg-white">
@@ -257,7 +316,7 @@ const CotswoldsUKSohoFarmHouse = () => {
                 className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
                 onClick={() => handlePhotoClick(0)}
               >
-                <div className="w-full h-full">
+                <div className="w-full h-full bg-gray-200">
                   <img
                     src="/cotswolds_1.jpg"
                     alt="Cotswolds UK - Soho Farm House 1"
@@ -274,7 +333,7 @@ const CotswoldsUKSohoFarmHouse = () => {
                   className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
                   onClick={() => handlePhotoClick(index + 1)}
                 >
-                  <div className="w-full h-full">
+                  <div className="w-full h-full bg-gray-200">
                     <img
                       src={getThumbnailPath(photo, index + 1)}
                       alt={`Cotswolds UK - Soho Farm House ${index + 2}`}
@@ -292,14 +351,16 @@ const CotswoldsUKSohoFarmHouse = () => {
                   className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
                   onClick={() => handlePhotoClick(index + 4)}
                 >
-                  <img
-                    src={getThumbnailPath(photo, index + 4)}
-                    alt={`Cotswolds UK - Soho Farm House ${index + 5}`}
-                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
-                    width={640}
-                    height={480}
-                  />
+                  <div className="w-full h-full bg-gray-200">
+                    <img
+                      src={getThumbnailPath(photo, index + 4)}
+                      alt={`Cotswolds UK - Soho Farm House ${index + 5}`}
+                      className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                      width={640}
+                      height={480}
+                    />
+                  </div>
                 </div>
               ))}
             </div>
@@ -382,7 +443,7 @@ const CotswoldsUKSohoFarmHouse = () => {
           <div className="max-w-6xl mx-auto px-6 md:px-10 lg:px-8 mb-24">
             <div className="flex flex-col md:flex-row gap-12">
               <div className="md:w-1/2">
-                <div className="relative aspect-[4/3] mb-4 rounded-xl overflow-hidden shadow-lg">
+                <div className="relative aspect-[4/3] mb-4 rounded-xl overflow-hidden shadow-lg bg-gray-200">
                   <img
                     src="/cotswolds_3.jpg"
                     alt="Cotswolds UK - Soho Farm House - Premium Amenities"
@@ -550,7 +611,15 @@ const CotswoldsUKSohoFarmHouse = () => {
                     className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer bg-gray-800"
                     onClick={() => handlePhotoClick(index)}
                   >
-                    {loadedImages.has(index) ? (
+                    {/* Placeholder that's shown while loading */}
+                    {(!loadedImages.has(index) || loadingBatch.includes(index)) && (
+                      <div className="w-full h-full flex items-center justify-center">
+                        <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                      </div>
+                    )}
+                    
+                    {/* Only render image if it's loaded */}
+                    {loadedImages.has(index) && (
                       <img
                         src={getThumbnailPath(photo, index)}
                         alt={`Cotswolds UK - Soho Farm House photo ${index + 1}`}
@@ -559,10 +628,6 @@ const CotswoldsUKSohoFarmHouse = () => {
                         width={400}
                         height={300}
                       />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center">
-                        <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                      </div>
                     )}
                   </div>
                 ))}
@@ -649,13 +714,28 @@ const CotswoldsUKSohoFarmHouse = () => {
                     <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
                   </div>
                 )}
-                <img
-                  src={selectedPhotoIndex !== null ? photos[selectedPhotoIndex] : ''}
-                  alt={`Cotswolds UK - Soho Farm House photo ${selectedPhotoIndex !== null ? selectedPhotoIndex + 1 : ''}`}
-                  className={`object-contain w-full h-full transition-opacity duration-300 ${isImageLoading ? 'opacity-0' : 'opacity-100'}`}
-                  onLoad={handleImageLoad}
-                  loading="eager"
-                />
+                
+                {/* Show a low-quality version first for better UX */}
+                {selectedPhotoIndex !== null && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <img
+                      src={getThumbnailPath(photos[selectedPhotoIndex], selectedPhotoIndex)}
+                      alt={`Cotswolds UK - Soho Farm House photo ${selectedPhotoIndex + 1}`}
+                      className="object-contain w-full h-full opacity-50 blur-sm"
+                      loading="eager"
+                    />
+                  </div>
+                )}
+                
+                {selectedPhotoIndex !== null && (
+                  <img
+                    src={photos[selectedPhotoIndex]}
+                    alt={`Cotswolds UK - Soho Farm House photo ${selectedPhotoIndex + 1}`}
+                    className={`object-contain w-full h-full transition-opacity duration-300 ${isImageLoading ? 'opacity-0' : 'opacity-100'}`}
+                    onLoad={handleImageLoad}
+                    loading="eager"
+                  />
+                )}
               </div>
               <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm">
                 {selectedPhotoIndex !== null ? `${selectedPhotoIndex + 1} / ${photos.length}` : ''}
