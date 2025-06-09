@@ -14,154 +14,33 @@ const CotswoldsUKSohoFarmHouse = () => {
   const [isImageLoading, setIsImageLoading] = useState(false);
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
   const [touchEndX, setTouchEndX] = useState<number | null>(null);
-  const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set([0, 1, 2, 3])); // Initially load first 4 images
-  const [loadingBatch, setLoadingBatch] = useState<number[]>([]);
 
   // Cache version for forcing new image downloads
-  const cacheVersion = "v5";
+  const cacheVersion = "v6";
 
-  // Property photos - using direct root paths for main visible images
-  const photos = [
-    "/cotswolds_1.jpg?" + cacheVersion,
-    "/cotswolds_2.jpg?" + cacheVersion,
-    "/cotswolds_3.jpg?" + cacheVersion,
-    "/cotswolds_4.jpg?" + cacheVersion,
-    "/cotswolds_5.jpg?" + cacheVersion,
-    "/cotswolds_6.jpg?" + cacheVersion,
-    "/cotswolds_7.jpg?" + cacheVersion,
-    "/cotswolds_8.jpg?" + cacheVersion,
-    // The rest are using URL encoding and cache busting
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A7821.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A7828.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A7830.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A7831.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A7833.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A7838.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A7847.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A7850.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A7857.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A7863.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A7868.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/012A1323.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/012A1327.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/012A1330.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/012A1333.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/012A1337.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/012A1341.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/8596128-exterior09-800.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5292.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5307.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5305.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5277.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5290.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5302.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5359.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5372.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5399.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5410.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5417.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5423.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5450.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5472.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5478.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5506.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5516.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5528.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/DJI_20250502143514_0652_D.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/DJI_20250502143734_0662_D.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/012A0878.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/012A0881.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5279.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5289.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5317.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5336.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5352.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5368.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5435.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5463.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/012A0872.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/012A0876.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5297.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5313.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5314.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5324.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5331.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5339.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5345.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5351.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5361.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5362.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5398.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5405.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5413.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5430.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5433.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5437.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5441.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5468.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5470.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5492.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5502.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5508.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5518.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5532.jpg?" + cacheVersion,
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5535.jpg?" + cacheVersion
-  ];
-
-  // Get thumbnail path for a photo
-  const getThumbnailPath = (photoPath: string, index: number) => {
-    if (index < 8) {
-      // Use the direct thumb path for the first 8 images
-      return `/thumbnails/cotswolds_thumb_${index + 1}.jpg?${cacheVersion}`;
-    }
-    
-    // For remaining images, use a minimal version to improve loading speed
-    const originalPath = photoPath.split('?')[0]; // Remove cache parameter
-    return `${originalPath}?${cacheVersion}&size=small`;
-  };
-
-  // Load images in batches to improve performance
-  const loadImageBatch = (startIndex: number, count: number) => {
-    const endIndex = Math.min(startIndex + count, photos.length);
-    const indices = Array.from({ length: endIndex - startIndex }, (_, i) => startIndex + i);
-    
-    // Only load images that haven't been loaded yet
-    const unloadedIndices = indices.filter(idx => !loadedImages.has(idx) && !loadingBatch.includes(idx));
-    
-    if (unloadedIndices.length === 0) return;
-    
-    // Mark these images as currently loading
-    setLoadingBatch(prev => [...prev, ...unloadedIndices]);
-    
-    // Stagger the image loading to prevent browser overload
-    unloadedIndices.forEach((idx, i) => {
-      setTimeout(() => {
-        const img = new Image();
-        img.onload = () => {
-          setLoadedImages(prev => {
-            const newSet = new Set(prev);
-            newSet.add(idx);
-            return newSet;
-          });
-          setLoadingBatch(prev => prev.filter(id => id !== idx));
-        };
-        img.src = getThumbnailPath(photos[idx], idx);
-      }, i * 150); // Stagger each image load by 150ms
-    });
-  };
+  // Direct root paths for first 25 photos (much faster loading)
+  const firstPhotos = Array.from({ length: 25 }, (_, i) => `/cotswolds_${i + 1}.jpg?${cacheVersion}`);
+  
+  // Remaining photos with simplified paths
+  const remainingPhotos = [
+    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/8596128-exterior09-800.jpg",
+    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5292.jpg",
+    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5307.jpg",
+    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5305.jpg",
+    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5277.jpg",
+    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5290.jpg",
+    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5302.jpg",
+    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5359.jpg",
+    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5372.jpg",
+    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5399.jpg",
+  ].map(path => `${path}?${cacheVersion}`);
+  
+  // Combine all photos
+  const photos = [...firstPhotos, ...remainingPhotos];
 
   const handlePhotoClick = (index: number) => {
     setIsImageLoading(true);
     setSelectedPhotoIndex(index);
-    
-    // Preload the next few images when a photo is clicked
-    const nextIndices = [
-      (index + 1) % photos.length,
-      (index + 2) % photos.length,
-      (index + 3) % photos.length
-    ];
-    
-    loadImageBatch(index, 3);
   };
 
   const closeFullScreenPhoto = () => {
@@ -185,21 +64,6 @@ const CotswoldsUKSohoFarmHouse = () => {
     }
     
     setSelectedPhotoIndex(newIndex);
-    
-    // Preload the next couple of images in the direction we're navigating
-    if (direction === "next") {
-      loadImageBatch(newIndex, 2);
-    } else {
-      const prevIndices = [
-        (newIndex - 1 + photos.length) % photos.length,
-        (newIndex - 2 + photos.length) % photos.length
-      ];
-      prevIndices.forEach(idx => {
-        if (!loadedImages.has(idx) && !loadingBatch.includes(idx)) {
-          loadImageBatch(idx, 1);
-        }
-      });
-    }
   };
 
   // Close full screen view when all photos modal is closed
@@ -224,38 +88,7 @@ const CotswoldsUKSohoFarmHouse = () => {
     }
   };
 
-  // Load more images when scrolling in gallery view
-  const handleGalleryScroll = (e: React.UIEvent<HTMLDivElement>) => {
-    if (!showAllPhotos) return;
-    
-    const container = e.currentTarget;
-    const scrollBottom = container.scrollTop + container.clientHeight;
-    const scrollThreshold = container.scrollHeight * 0.7; // Load more when 70% scrolled
-    
-    if (scrollBottom > scrollThreshold) {
-      // Load images in smaller batches for smoother performance
-      const nextBatchSize = 6;
-      const loadedCount = loadedImages.size;
-      
-      if (loadedCount < photos.length) {
-        loadImageBatch(loadedCount, nextBatchSize);
-      }
-    }
-  };
-
-  // Special loading for problem photos (9-25)
-  useEffect(() => {
-    if (showAllPhotos) {
-      // Load first visible batch immediately
-      loadImageBatch(0, 12);
-      
-      // Specifically target the problematic photos 9-25
-      setTimeout(() => {
-        loadImageBatch(8, 17); // Load photos 9-25 (indices 8-24)
-      }, 500);
-    }
-  }, [showAllPhotos]);
-
+  // Event listeners for keyboard navigation
   React.useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
     return () => {
@@ -264,20 +97,11 @@ const CotswoldsUKSohoFarmHouse = () => {
     };
   }, [showAllPhotos, selectedPhotoIndex]);
 
-  // Preload critical images
+  // Preload the first 25 images for instant loading
   useEffect(() => {
-    // Preload the first 8 images on component mount
-    const preloadImages = [0, 1, 2, 3, 4, 5, 6, 7];
-    preloadImages.forEach(idx => {
+    firstPhotos.forEach(src => {
       const img = new Image();
-      img.onload = () => {
-        setLoadedImages(prev => {
-          const newSet = new Set(prev);
-          newSet.add(idx);
-          return newSet;
-        });
-      };
-      img.src = idx < 8 ? photos[idx] : getThumbnailPath(photos[idx], idx);
+      img.src = src;
     });
   }, []);
 
@@ -290,8 +114,9 @@ const CotswoldsUKSohoFarmHouse = () => {
           content="Experience luxury at this designer stone estate near Soho Farmhouse in the Cotswolds, UK. This exclusive 8-bedroom property offers spa facilities, a tennis court, and an annex house, all set on a stunning 2-acre property just minutes from Soho Farmhouse."
         />
         {/* Preload critical images */}
-        <link rel="preload" href="/cotswolds_1.jpg" as="image" />
-        <link rel="preload" href="/cotswolds_2.jpg" as="image" />
+        {firstPhotos.slice(0, 8).map((src, index) => (
+          <link key={index} rel="preload" href={src} as="image" />
+        ))}
       </Head>
 
       <div className="min-h-screen bg-white">
@@ -335,7 +160,7 @@ const CotswoldsUKSohoFarmHouse = () => {
                 >
                   <div className="w-full h-full bg-gray-200">
                     <img
-                      src={getThumbnailPath(photo, index + 1)}
+                      src={photo}
                       alt={`Cotswolds UK - Soho Farm House ${index + 2}`}
                       className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
                       loading="eager"
@@ -353,7 +178,7 @@ const CotswoldsUKSohoFarmHouse = () => {
                 >
                   <div className="w-full h-full bg-gray-200">
                     <img
-                      src={getThumbnailPath(photo, index + 4)}
+                      src={photo}
                       alt={`Cotswolds UK - Soho Farm House ${index + 5}`}
                       className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
                       loading="lazy"
@@ -590,9 +415,9 @@ const CotswoldsUKSohoFarmHouse = () => {
             </Link>
           </div>
 
-          {/* All Photos Modal */}
+          {/* All Photos Modal - Simplified */}
           {showAllPhotos && (
-            <div className="fixed inset-0 bg-black z-50 overflow-y-auto" onScroll={handleGalleryScroll}>
+            <div className="fixed inset-0 bg-black z-50 overflow-y-auto">
               <div className="flex justify-between items-center p-4 sticky top-0 bg-black bg-opacity-75 z-10">
                 <h3 className="text-white font-medium">
                   Cotswolds UK - Soho Farm House | All Photos ({photos.length})
@@ -611,24 +436,14 @@ const CotswoldsUKSohoFarmHouse = () => {
                     className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer bg-gray-800"
                     onClick={() => handlePhotoClick(index)}
                   >
-                    {/* Placeholder that's shown while loading */}
-                    {(!loadedImages.has(index) || loadingBatch.includes(index)) && (
-                      <div className="w-full h-full flex items-center justify-center">
-                        <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                      </div>
-                    )}
-                    
-                    {/* Only render image if it's loaded */}
-                    {loadedImages.has(index) && (
-                      <img
-                        src={getThumbnailPath(photo, index)}
-                        alt={`Cotswolds UK - Soho Farm House photo ${index + 1}`}
-                        className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                        loading="lazy"
-                        width={400}
-                        height={300}
-                      />
-                    )}
+                    <img
+                      src={photo}
+                      alt={`Cotswolds UK - Soho Farm House photo ${index + 1}`}
+                      className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                      loading={index < 25 ? "eager" : "lazy"}
+                      width={300}
+                      height={225}
+                    />
                   </div>
                 ))}
               </div>
@@ -714,28 +529,13 @@ const CotswoldsUKSohoFarmHouse = () => {
                     <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
                   </div>
                 )}
-                
-                {/* Show a low-quality version first for better UX */}
-                {selectedPhotoIndex !== null && (
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <img
-                      src={getThumbnailPath(photos[selectedPhotoIndex], selectedPhotoIndex)}
-                      alt={`Cotswolds UK - Soho Farm House photo ${selectedPhotoIndex + 1}`}
-                      className="object-contain w-full h-full opacity-50 blur-sm"
-                      loading="eager"
-                    />
-                  </div>
-                )}
-                
-                {selectedPhotoIndex !== null && (
-                  <img
-                    src={photos[selectedPhotoIndex]}
-                    alt={`Cotswolds UK - Soho Farm House photo ${selectedPhotoIndex + 1}`}
-                    className={`object-contain w-full h-full transition-opacity duration-300 ${isImageLoading ? 'opacity-0' : 'opacity-100'}`}
-                    onLoad={handleImageLoad}
-                    loading="eager"
-                  />
-                )}
+                <img
+                  src={selectedPhotoIndex !== null ? photos[selectedPhotoIndex] : ''}
+                  alt={`Cotswolds UK - Soho Farm House photo ${selectedPhotoIndex !== null ? selectedPhotoIndex + 1 : ''}`}
+                  className={`object-contain w-full h-full transition-opacity duration-300 ${isImageLoading ? 'opacity-0' : 'opacity-100'}`}
+                  onLoad={handleImageLoad}
+                  loading="eager"
+                />
               </div>
               <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm">
                 {selectedPhotoIndex !== null ? `${selectedPhotoIndex + 1} / ${photos.length}` : ''}
