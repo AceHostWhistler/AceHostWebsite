@@ -769,9 +769,9 @@ export default function Properties() {
             id: "cotswolds-uk-soho-farm-house",
             name: "Cotswolds UK - Soho Farm House",
             images: [
-              "/cotswolds.jpg",
-              "/photos/properties/Cotswolds UK - Soho Farm House/224A5292.jpg",
-              "/photos/properties/Cotswolds UK - Soho Farm House/224A5307.jpg"
+              "/high-quality/cotswolds_1.jpg",
+              "/high-quality/224A5292.jpg",
+              "/high-quality/224A5307.jpg"
             ],
             guests: 15,
             bedrooms: 8,
@@ -991,9 +991,9 @@ export default function Properties() {
             id: "cotswolds-uk-soho-farm-house",
             name: "Cotswolds UK - Soho Farm House",
             images: [
-              "/cotswolds.jpg",
-              "/photos/properties/Cotswolds UK - Soho Farm House/224A5292.jpg",
-              "/photos/properties/Cotswolds UK - Soho Farm House/224A5307.jpg"
+              "/high-quality/cotswolds_1.jpg",
+              "/high-quality/224A5292.jpg",
+              "/high-quality/224A5307.jpg"
             ],
             guests: 15,
             bedrooms: 8,
@@ -1579,7 +1579,7 @@ export default function Properties() {
             <div className="relative w-full h-full">
               {isCotswoldsProperty ? (
                 <img
-                  src="/cotswolds.jpg"
+                  src="/high-quality/cotswolds_1.jpg"
                   alt={`${property.name} - Luxury ${property.location === 'whistler' ? 'Whistler' : property.location === 'vancouver' ? 'Vancouver' : 'Worldwide'} vacation rental with ${property.bedrooms} bedrooms, accommodating up to ${property.guests} guests`}
                   className="object-cover w-full h-full"
                 />

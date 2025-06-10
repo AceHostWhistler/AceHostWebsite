@@ -14,29 +14,31 @@ const CotswoldsUKSohoFarmHouse = () => {
   const [isImageLoading, setIsImageLoading] = useState(false);
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
   const [touchEndX, setTouchEndX] = useState<number | null>(null);
+  const [imagesLoaded, setImagesLoaded] = useState(0);
+  const [totalImages] = useState(35); // Total number of images we want to preload
 
   // Cache version for forcing new image downloads
-  const cacheVersion = "v6";
+  const cacheVersion = "v8";
 
-  // Direct root paths for first 25 photos (much faster loading)
-  const firstPhotos = Array.from({ length: 25 }, (_, i) => `/cotswolds_${i + 1}.jpg?${cacheVersion}`);
+  // Use highly optimized images from the root directory for faster loading
+  const optimalPhotos = Array.from({ length: 25 }, (_, i) => `/high-quality/cotswolds_${i + 1}.jpg?${cacheVersion}`);
   
-  // Remaining photos with simplified paths
-  const remainingPhotos = [
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/8596128-exterior09-800.jpg",
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5292.jpg",
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5307.jpg",
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5305.jpg",
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5277.jpg",
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5290.jpg",
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5302.jpg",
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5359.jpg",
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5372.jpg",
-    "/photos/properties/Cotswolds%20UK%20-%20Soho%20Farm%20House/224A5399.jpg",
+  // Additional photos using optimized versions
+  const additionalPhotos = [
+    "/high-quality/8596128-exterior09-800.jpg",
+    "/high-quality/224A5292.jpg",
+    "/high-quality/224A5307.jpg",
+    "/high-quality/224A5305.jpg",
+    "/high-quality/224A5277.jpg",
+    "/high-quality/224A5290.jpg",
+    "/high-quality/224A5302.jpg",
+    "/high-quality/224A5359.jpg",
+    "/high-quality/224A5372.jpg",
+    "/high-quality/224A5399.jpg",
   ].map(path => `${path}?${cacheVersion}`);
   
   // Combine all photos
-  const photos = [...firstPhotos, ...remainingPhotos];
+  const photos = [...optimalPhotos, ...additionalPhotos];
 
   const handlePhotoClick = (index: number) => {
     setIsImageLoading(true);
@@ -49,6 +51,10 @@ const CotswoldsUKSohoFarmHouse = () => {
 
   const handleImageLoad = () => {
     setIsImageLoading(false);
+  };
+
+  const handlePreloadProgress = () => {
+    setImagesLoaded(prev => prev + 1);
   };
 
   const navigatePhoto = (direction: "prev" | "next") => {
@@ -97,12 +103,26 @@ const CotswoldsUKSohoFarmHouse = () => {
     };
   }, [showAllPhotos, selectedPhotoIndex]);
 
-  // Preload the first 25 images for instant loading
+  // Preload all images for faster gallery display
   useEffect(() => {
-    firstPhotos.forEach(src => {
-      const img = new Image();
-      img.src = src;
+    // Preload first 35 images
+    const preloadImages = photos.slice(0, 35).map(src => {
+      return new Promise<void>((resolve) => {
+        const img = new Image();
+        img.src = src;
+        img.onload = () => {
+          handlePreloadProgress();
+          resolve();
+        };
+        img.onerror = () => {
+          // Still count errors to avoid getting stuck
+          handlePreloadProgress();
+          resolve();
+        };
+      });
     });
+
+    Promise.all(preloadImages);
   }, []);
 
   return (
@@ -114,7 +134,7 @@ const CotswoldsUKSohoFarmHouse = () => {
           content="Experience luxury at this designer stone estate near Soho Farmhouse in the Cotswolds, UK. This exclusive 8-bedroom property offers spa facilities, a tennis court, and an annex house, all set on a stunning 2-acre property just minutes from Soho Farmhouse."
         />
         {/* Preload critical images */}
-        {firstPhotos.slice(0, 8).map((src, index) => (
+        {optimalPhotos.slice(0, 8).map((src, index) => (
           <link key={index} rel="preload" href={src} as="image" />
         ))}
       </Head>
@@ -134,8 +154,18 @@ const CotswoldsUKSohoFarmHouse = () => {
             airbnbLink="https://www.airbnb.ca/rooms/1414129878809697902?guests=1&adults=1&s=67&unique_share_id=ba3bff7b-bc57-416c-bcd6-96b0943cfe51"
           />
 
-          {/* Photo Grid */}
-          <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16" id="photos">
+          {/* Loading Indicator */}
+          {imagesLoaded < 15 && (
+            <div className="max-w-7xl mx-auto px-4 mb-10 text-center">
+              <div className="flex justify-center items-center mb-4">
+                <div className="w-8 h-8 border-4 border-gray-800 border-t-transparent rounded-full animate-spin"></div>
+              </div>
+              <p className="text-gray-600">Loading gallery ({Math.min(imagesLoaded, 15)}/15 images)...</p>
+            </div>
+          )}
+
+          {/* Photo Grid - Only show once essential images are loaded */}
+          <div className={`max-w-7xl mx-auto px-4 mb-10 sm:mb-16 ${imagesLoaded < 15 ? 'opacity-0' : 'opacity-100 transition-opacity duration-500'}`} id="photos">
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
               <div
                 className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
@@ -143,7 +173,7 @@ const CotswoldsUKSohoFarmHouse = () => {
               >
                 <div className="w-full h-full bg-gray-200">
                   <img
-                    src="/cotswolds_1.jpg"
+                    src={optimalPhotos[0]}
                     alt="Cotswolds UK - Soho Farm House 1"
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
                     loading="eager"
@@ -181,7 +211,7 @@ const CotswoldsUKSohoFarmHouse = () => {
                       src={photo}
                       alt={`Cotswolds UK - Soho Farm House ${index + 5}`}
                       className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                      loading="lazy"
+                      loading="eager"
                       width={640}
                       height={480}
                     />
@@ -270,7 +300,7 @@ const CotswoldsUKSohoFarmHouse = () => {
               <div className="md:w-1/2">
                 <div className="relative aspect-[4/3] mb-4 rounded-xl overflow-hidden shadow-lg bg-gray-200">
                   <img
-                    src="/cotswolds_3.jpg"
+                    src={optimalPhotos[2]}
                     alt="Cotswolds UK - Soho Farm House - Premium Amenities"
                     className="object-cover hover:scale-105 transition-transform duration-500 w-full h-full"
                     loading="lazy"
@@ -415,7 +445,7 @@ const CotswoldsUKSohoFarmHouse = () => {
             </Link>
           </div>
 
-          {/* All Photos Modal - Simplified */}
+          {/* All Photos Modal - Optimized and Simplified */}
           {showAllPhotos && (
             <div className="fixed inset-0 bg-black z-50 overflow-y-auto">
               <div className="flex justify-between items-center p-4 sticky top-0 bg-black bg-opacity-75 z-10">
@@ -440,7 +470,7 @@ const CotswoldsUKSohoFarmHouse = () => {
                       src={photo}
                       alt={`Cotswolds UK - Soho Farm House photo ${index + 1}`}
                       className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                      loading={index < 25 ? "eager" : "lazy"}
+                      loading={index < 16 ? "eager" : "lazy"}
                       width={300}
                       height={225}
                     />
