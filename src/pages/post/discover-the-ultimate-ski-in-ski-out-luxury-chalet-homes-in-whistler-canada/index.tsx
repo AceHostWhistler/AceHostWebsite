@@ -391,7 +391,7 @@ export default function BlogPost() {
               <p>
                 This extraordinary 10,000+ sq. ft. mansion in Kadenwood accommodates up to 
                 18 guests in the ultimate luxury. Featuring ski-in/ski-out access via the private 
-                Kadenwood gondola, Altitude Retreat offers 8 bedrooms, a fully equipped gym, 
+                Kadenwood gondola, Altitude Retreat offers 7 bedrooms, 5.5 bathrooms, a fully equipped gym, 
                 sauna, steam room, private theater, and multiple living spaces for entertaining. 
                 The property includes the services of a private butler to ensure a truly 
                 exceptional stay experience.

@@ -186,9 +186,9 @@ const AltitudeRetreat = () => {
           <PropertyHeader
             title="Altitude Retreat | Kadenwood | Private Butler"
             guests={18}
-            bedrooms={8}
-            beds={12}
-            bathrooms={8.5}
+            bedrooms={7}
+            beds={9}
+            bathrooms={5.5}
             priceRange="$7,000-11,000+ per night | Private Butler Included"
             airbnbLink="https://www.airbnb.ca/rooms/771060491470943213?guests=1&adults=1&s=67&unique_share_id=a8ff5a7a-4bda-4cc7-aaad-e99b178f3a5d"
           />
@@ -372,7 +372,7 @@ const AltitudeRetreat = () => {
                 </p>
                 <p className="mb-4">
                   <span className="font-medium">Total Sleeping Capacity:</span>{" "}
-                  18 (10 + 4 + 4) Sleeps 18, 7 bedrooms
+                  18 guests with 9 beds across 7 bedrooms
                 </p>
               </div>
             </div>
