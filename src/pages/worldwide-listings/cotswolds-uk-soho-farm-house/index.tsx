@@ -15,30 +15,19 @@ const CotswoldsUKSohoFarmHouse = () => {
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
   const [touchEndX, setTouchEndX] = useState<number | null>(null);
   const [imagesLoaded, setImagesLoaded] = useState(0);
-  const [totalImages] = useState(35); // Total number of images we want to preload
+  const [totalImages] = useState(82); // Total number of images we have
 
   // Cache version for forcing new image downloads
-  const cacheVersion = "v8";
+  const cacheVersion = "v9";
 
-  // Use highly optimized images from the root directory for faster loading
-  const optimalPhotos = Array.from({ length: 25 }, (_, i) => `/high-quality/cotswolds_${i + 1}.jpg?${cacheVersion}`);
+  // Generate all photo paths from the optimized cotswolds-all directory
+  const allPhotos = Array.from({ length: 82 }, (_, i) => `/high-quality/cotswolds-all/cotswolds-all-${i}.jpg?${cacheVersion}`);
   
-  // Additional photos using optimized versions
-  const additionalPhotos = [
-    "/high-quality/8596128-exterior09-800.jpg",
-    "/high-quality/224A5292.jpg",
-    "/high-quality/224A5307.jpg",
-    "/high-quality/224A5305.jpg",
-    "/high-quality/224A5277.jpg",
-    "/high-quality/224A5290.jpg",
-    "/high-quality/224A5302.jpg",
-    "/high-quality/224A5359.jpg",
-    "/high-quality/224A5372.jpg",
-    "/high-quality/224A5399.jpg",
-  ].map(path => `${path}?${cacheVersion}`);
+  // Use the first 25 optimized images as the main photos to keep the current setup
+  const optimalPhotos = allPhotos.slice(0, 25);
   
-  // Combine all photos
-  const photos = [...optimalPhotos, ...additionalPhotos];
+  // All photos now include all 82 images
+  const photos = allPhotos;
 
   const handlePhotoClick = (index: number) => {
     setIsImageLoading(true);
@@ -103,10 +92,10 @@ const CotswoldsUKSohoFarmHouse = () => {
     };
   }, [showAllPhotos, selectedPhotoIndex]);
 
-  // Preload all images for faster gallery display
+  // Preload important images for faster gallery display
   useEffect(() => {
-    // Preload first 35 images
-    const preloadImages = photos.slice(0, 35).map(src => {
+    // Preload first 16 images for initial display
+    const preloadImages = photos.slice(0, 16).map(src => {
       return new Promise<void>((resolve) => {
         const img = new Image();
         img.src = src;
@@ -155,17 +144,17 @@ const CotswoldsUKSohoFarmHouse = () => {
           />
 
           {/* Loading Indicator */}
-          {imagesLoaded < 15 && (
+          {imagesLoaded < 12 && (
             <div className="max-w-7xl mx-auto px-4 mb-10 text-center">
               <div className="flex justify-center items-center mb-4">
                 <div className="w-8 h-8 border-4 border-gray-800 border-t-transparent rounded-full animate-spin"></div>
               </div>
-              <p className="text-gray-600">Loading gallery ({Math.min(imagesLoaded, 15)}/15 images)...</p>
+              <p className="text-gray-600">Loading gallery ({Math.min(imagesLoaded, 12)}/12 images)...</p>
             </div>
           )}
 
           {/* Photo Grid - Only show once essential images are loaded */}
-          <div className={`max-w-7xl mx-auto px-4 mb-10 sm:mb-16 ${imagesLoaded < 15 ? 'opacity-0' : 'opacity-100 transition-opacity duration-500'}`} id="photos">
+          <div className={`max-w-7xl mx-auto px-4 mb-10 sm:mb-16 ${imagesLoaded < 12 ? 'opacity-0' : 'opacity-100 transition-opacity duration-500'}`} id="photos">
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
               <div
                 className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
@@ -470,7 +459,7 @@ const CotswoldsUKSohoFarmHouse = () => {
                       src={photo}
                       alt={`Cotswolds UK - Soho Farm House photo ${index + 1}`}
                       className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                      loading={index < 16 ? "eager" : "lazy"}
+                      loading={index < 20 ? "eager" : "lazy"}
                       width={300}
                       height={225}
                     />
