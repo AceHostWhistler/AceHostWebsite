@@ -23,11 +23,17 @@ const LuxeScandinaveRetreat = () => {
   // Generate all photo paths from the optimized scandinave directory
   const allPhotos = Array.from({ length: 28 }, (_, i) => `/high-quality/scandinave/scandinave-${i}.jpg?${cacheVersion}`);
   
+  // Reorder photos to make scandinave-7.jpg the first one
+  const reorderedPhotos = [
+    `/high-quality/scandinave/scandinave-7.jpg?${cacheVersion}`,
+    ...allPhotos.filter(photo => !photo.includes('scandinave-7.jpg'))
+  ];
+  
   // Use the first 12 optimized images as the main photos
-  const optimalPhotos = allPhotos.slice(0, 12);
+  const optimalPhotos = reorderedPhotos.slice(0, 12);
   
   // All photos include all 28 images
-  const photos = allPhotos;
+  const photos = reorderedPhotos;
 
   const handlePhotoClick = (index: number) => {
     setIsImageLoading(true);

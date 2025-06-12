@@ -1337,8 +1337,18 @@ export default function Properties() {
           
           // Location filtering - ensure properties with non-Whistler locations only appear in worldwide section
           const locationMatch = 
-            (category.id === "whistler" && !property.country && property.location.includes("Whistler") || property.location === "whistler") ||
-            (category.id === "worldwide" && (property.country || !property.location.includes("Whistler") && property.location !== "whistler"));
+            (category.id === "whistler" && (
+              !property.country && 
+              (property.location.includes("Whistler") || 
+               property.location.includes("Pemberton") || 
+               property.location === "whistler")
+            )) ||
+            (category.id === "worldwide" && (
+              property.country || 
+              (!property.location.includes("Whistler") && 
+               !property.location.includes("Pemberton") && 
+               property.location !== "whistler")
+            ));
           
           const amenitiesMatch =
             filters.amenities.length === 0 ||
