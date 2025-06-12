@@ -551,6 +551,23 @@ const Home = () => {
   
     // Worldwide Properties
     {
+      id: "luxe-5-bed-scandinave-retreat",
+      name: "Luxe 5-BED Scandinave Retreat | Walk to Slopes",
+      image: "/high-quality/scandinave/scandinave-0.jpg",
+      guests: 8,
+      bedrooms: 3,
+      beds: 5,
+      bathrooms: 3,
+      priceRange: "Contact for pricing",
+      winterPrice: "",
+      holidayPrice: "",
+      location: "whistler",
+      link: "/worldwide-listings/luxe-5-bed-scandinave-retreat",
+      airbnbLink: "https://www.airbnb.ca/rooms/1313847204355627326?guests=1&adults=1&s=67&unique_share_id=507dffd6-1f84-49a3-99eb-d10f493a65a6",
+      isPetFriendly: false,
+      isSkiInSkiOut: false,
+    },
+    {
       id: "santorini-greece-villa-eclipse",
       name: "Santorini Greece - Villa Eclipse",
       image: "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(7 of 25).jpg",
