@@ -18,14 +18,14 @@ const LuxeScandinaveRetreat = () => {
   const [totalImages] = useState(28); // Total number of images we have
 
   // Cache version for forcing new image downloads
-  const cacheVersion = "v1";
+  const cacheVersion = "v2";
 
-  // Generate all photo paths from the optimized scandinave directory
-  const allPhotos = Array.from({ length: 28 }, (_, i) => `/high-quality/scandinave/scandinave-${i}.jpg?${cacheVersion}`);
+  // Generate all photo paths from the optimized scandinave directory with fixed aspect ratio
+  const allPhotos = Array.from({ length: 28 }, (_, i) => `/high-quality/scandinave-fixed/scandinave-${i}.jpg?${cacheVersion}`);
   
   // Reorder photos to make scandinave-7.jpg the first one
   const reorderedPhotos = [
-    `/high-quality/scandinave/scandinave-7.jpg?${cacheVersion}`,
+    `/high-quality/scandinave-fixed/scandinave-7.jpg?${cacheVersion}`,
     ...allPhotos.filter(photo => !photo.includes('scandinave-7.jpg'))
   ];
   

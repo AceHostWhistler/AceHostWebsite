@@ -553,7 +553,7 @@ const Home = () => {
     {
       id: "luxe-5-bed-scandinave-retreat",
       name: "Luxe 5-BED Scandinave Retreat | Walk to Slopes",
-      image: "/high-quality/scandinave/scandinave-26.jpg",
+      image: "/high-quality/scandinave-fixed/scandinave-26.jpg",
       guests: 8,
       bedrooms: 3,
       beds: 5,

@@ -699,9 +699,9 @@ export default function Properties() {
             id: "luxe-5-bed-scandinave-retreat",
             name: "Luxe 5-BED Scandinave Retreat | Walk to Slopes",
             images: [
-              "/high-quality/scandinave/scandinave-26.jpg",
-              "/high-quality/scandinave/scandinave-0.jpg",
-              "/high-quality/scandinave/scandinave-1.jpg"
+              "/high-quality/scandinave-fixed/scandinave-26.jpg",
+              "/high-quality/scandinave-fixed/scandinave-0.jpg",
+              "/high-quality/scandinave-fixed/scandinave-1.jpg"
             ],
             guests: 8,
             bedrooms: 3,
