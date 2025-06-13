@@ -699,7 +699,7 @@ export default function Properties() {
             id: "luxe-5-bed-scandinave-retreat",
             name: "Luxe 5-BED Scandinave Retreat | Walk to Slopes",
             images: [
-              "/high-quality/scandinave/scandinave-7.jpg",
+              "/high-quality/scandinave/scandinave-26.jpg",
               "/high-quality/scandinave/scandinave-0.jpg",
               "/high-quality/scandinave/scandinave-1.jpg"
             ],
@@ -726,7 +726,9 @@ export default function Properties() {
               "Unique 6 Half-Level Design",
               "Family-Friendly Layout"
             ],
-            priceRange: "Contact for pricing",
+            priceRange: "$450-$1200+ per night Summer",
+            winterPrice: "$750-$1,600+ Nightly | Winter",
+            holidayPrice: "$2300-$3100+ Nightly | Christmas & NY",
             link: "/worldwide-listings/luxe-5-bed-scandinave-retreat",
             airbnbLink: "https://www.airbnb.ca/rooms/1313847204355627326?guests=1&adults=1&s=67&unique_share_id=507dffd6-1f84-49a3-99eb-d10f493a65a6",
             isPetFriendly: false,
