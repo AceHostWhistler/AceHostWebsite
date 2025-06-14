@@ -982,7 +982,7 @@ const Home = () => {
             <div className="mt-8 md:mt-0 md:w-[58%] lg:w-[58%] flex justify-center md:justify-normal md:items-center px-1 md:px-0 md:pr-4">
               <div className="w-[98%] md:w-[95%] overflow-hidden">
                 <iframe
-                  src="https://player.vimeo.com/video/905358272?title=0&byline=0&portrait=0&autoplay=0&loop=1&background=0"
+                  src="https://player.vimeo.com/video/1053582724?title=0&byline=0&portrait=0&autoplay=0&loop=1&background=0"
                   className="w-full aspect-video"
                   frameBorder="0"
                   allow="autoplay; fullscreen; picture-in-picture"
