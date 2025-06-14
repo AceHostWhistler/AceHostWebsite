@@ -20,8 +20,27 @@ const CotswoldsUKSohoFarmHouse = () => {
   // Cache version for forcing new image downloads
   const cacheVersion = "v9";
 
+  // Define the specific indices for the requested photo order
+  const photoOrder = [
+    74, // DJI_20250602090500_0519_D.jpg (1st)
+    75, // DJI_20250602090532_0522_D.jpg (2nd)
+    64, // 224A7831.jpg (3rd)
+    57, // 224A5518.jpg (4th)
+    62, // 224A7828.jpg (5th)
+    60, // 224A5535.jpg (6th)
+    20, // 224A5314.jpg (7th)
+    36, // 224A5405.jpg (8th)
+    28  // 224A5352.jpg (9th)
+  ];
+  
   // Generate all photo paths from the optimized cotswolds-all directory
-  const allPhotos = Array.from({ length: 82 }, (_, i) => `/high-quality/cotswolds-all/cotswolds-all-${i}.jpg?${cacheVersion}`);
+  const allPhotosBase = Array.from({ length: 82 }, (_, i) => `/high-quality/cotswolds-all/cotswolds-all-${i}.jpg?${cacheVersion}`);
+  
+  // Create a new array with the requested photos first, followed by the rest
+  const allPhotos = [
+    ...photoOrder.map(index => `/high-quality/cotswolds-all/cotswolds-all-${index}.jpg?${cacheVersion}`),
+    ...allPhotosBase.filter((_, i) => !photoOrder.includes(i))
+  ];
   
   // Use the first 25 optimized images as the main photos to keep the current setup
   const optimalPhotos = allPhotos.slice(0, 25);
