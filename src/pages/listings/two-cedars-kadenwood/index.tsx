@@ -175,7 +175,7 @@ const TwoCedarsKadenwood = () => {
           {/* Featured Video */}
           <div className="max-w-5xl mx-auto mb-10 sm:mb-16">
             <LazyVimeoPlayer 
-              videoId="922795080"
+              videoId="1053582724"
               title="Two Cedars Property Walkthrough"
               aspectRatio="video"
               className="rounded-lg shadow-lg"
