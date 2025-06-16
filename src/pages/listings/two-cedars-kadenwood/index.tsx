@@ -9,6 +9,7 @@ import PropertyHeader from "@/components/PropertyHeader";
 import Footer from "@/components/Footer";
 import { X } from "lucide-react";
 import { FaBed, FaBath } from "react-icons/fa";
+import LazyVimeoPlayer from "../../../components/LazyVimeoPlayer";
 
 const TwoCedarsKadenwood = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -170,6 +171,17 @@ const TwoCedarsKadenwood = () => {
             priceRange="$6,500-$9,500+ per night | Private Butler Included"
             airbnbLink="https://www.airbnb.ca/rooms/666613336620375768?guests=1&adults=1&s=67&unique_share_id=0d8a1725-cb02-487a-a033-7cc2940692e4"
           />
+
+          {/* Featured Video */}
+          <div className="max-w-5xl mx-auto mb-10 sm:mb-16">
+            <LazyVimeoPlayer 
+              videoId="922795080"
+              title="Two Cedars Property Walkthrough"
+              aspectRatio="video"
+              className="rounded-lg shadow-lg"
+              autoplay={false}
+            />
+          </div>
 
           {/* Photo Grid */}
           <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16">
