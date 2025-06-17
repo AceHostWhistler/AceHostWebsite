@@ -196,7 +196,7 @@ const AltitudeRetreat = () => {
           {/* Featured Video */}
           <div className="max-w-5xl mx-auto mb-10 sm:mb-16">
             <LazyVimeoPlayer 
-              videoId="905358272"
+              videoId="906479830"
               title="Altitude Retreat Property Walkthrough"
               aspectRatio="video"
               className="rounded-lg shadow-lg"
