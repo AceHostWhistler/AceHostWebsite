@@ -32,25 +32,60 @@ const CedarHof = () => {
     "/optimized/cedarhof/2932 Pool B NEW.jpg",
     "/optimized/cedarhof/2932 Pool C NEW.jpg",
     "/optimized/cedarhof/AC2932 Kitchen A.jpg",
-    "/photos/properties/Cedarhof Kadenwood/AC2932 Kitchen B.jpg",
+    "/optimized/cedarhof/AC2932 Kitchen B.jpg",
     "/optimized/cedarhof/AC2932 Dining.jpg",
-    "/photos/properties/Cedarhof Kadenwood/AC2932 Family Room.jpg",
+    "/optimized/cedarhof/AC2932 Family Room.jpg",
     "/optimized/cedarhof/AC2932 Wine Room A.jpg",
-    "/photos/properties/Cedarhof Kadenwood/AC2932 Wine and Poker Room.jpg",
+    "/optimized/cedarhof/AC2932 Wine and Poker Room.jpg",
     "/optimized/cedarhof/AC2932 Bedroom 1A.jpg",
-    "/photos/properties/Cedarhof Kadenwood/AC2932 Bedroom 2A.jpg",
-    "/photos/properties/Cedarhof Kadenwood/AC2932 Bedroom 3.jpg",
-    "/photos/properties/Cedarhof Kadenwood/AC2932 Bedroom 4.jpg",
-    "/photos/properties/Cedarhof Kadenwood/AC2932 Bedroom 5.jpg",
-    "/photos/properties/Cedarhof Kadenwood/AC2932 Bath 1A.jpg",
-    "/photos/properties/Cedarhof Kadenwood/AC2932 Bath 2A.jpg",
-    "/photos/properties/Cedarhof Kadenwood/AC2932 Gym.jpg",
-    "/photos/properties/Cedarhof Kadenwood/AC2932 Exterior Detail 1.jpg",
+    "/optimized/cedarhof/AC2932 Bedroom 2A.jpg",
+    "/optimized/cedarhof/AC2932 Bedroom 3.jpg",
+    "/optimized/cedarhof/AC2932 Bedroom 4.jpg",
+    "/optimized/cedarhof/AC2932 Bedroom 5.jpg",
+    "/optimized/cedarhof/AC2932 Bath 1A.jpg",
+    "/optimized/cedarhof/AC2932 Bath 2A.jpg",
+    "/optimized/cedarhof/AC2932 Gym.jpg",
+    "/optimized/cedarhof/AC2932 Exterior Detail 1.jpg",
     "/optimized/cedarhof/2932 Deck 1.jpg",
-    "/photos/properties/Cedarhof Kadenwood/2932 Deck 2.jpg",
-    "/photos/properties/Cedarhof Kadenwood/2932 Deck Dusk.jpg",
-    "/photos/properties/Cedarhof Kadenwood/2932 Exterior 1.jpg",
-    "/photos/properties/Cedarhof Kadenwood/2932 Exterior 2.jpg",
+    "/optimized/cedarhof/2932 Deck 2.jpg",
+    "/optimized/cedarhof/2932 Deck Dusk.jpg",
+    "/optimized/cedarhof/2932 Exterior 1.jpg",
+    "/optimized/cedarhof/2932 Exterior 2.jpg",
+    "/optimized/cedarhof/2932 Bedroom 1B NEW.jpg",
+    "/optimized/cedarhof/2932 Bedroom 1C NEW.jpg",
+    "/optimized/cedarhof/2932 Exterior 3.jpg",
+    "/optimized/cedarhof/2932 Exterior 4.jpg",
+    "/optimized/cedarhof/2932 Laundry Room.jpg",
+    "/optimized/cedarhof/2932 Living Night 2.jpg",
+    "/optimized/cedarhof/2932 Mudroom.jpg",
+    "/optimized/cedarhof/2932 Rear Exterior Night 1.jpg",
+    "/optimized/cedarhof/2932 Rear Exterior Night 2.jpg",
+    "/optimized/cedarhof/2932 Upper Hallway Night.jpg",
+    "/optimized/cedarhof/2932 View.jpg",
+    "/optimized/cedarhof/2932-Ancient-Cedars-02-MLS.jpg",
+    "/optimized/cedarhof/2932-Ancient-Cedars-03-MLS.jpg",
+    "/optimized/cedarhof/2932-Ancient-Cedars-05-MLS.jpg",
+    "/optimized/cedarhof/2932-Ancient-Cedars-07-MLS.jpg",
+    "/optimized/cedarhof/2932-Ancient-Cedars-08-MLS.jpg",
+    "/optimized/cedarhof/2932-Ancient-Cedars-09-MLS.jpg",
+    "/optimized/cedarhof/2932-Ancient-Cedars-10-MLS.jpg",
+    "/optimized/cedarhof/2932-Ancient-Cedars-11-MLS.jpg",
+    "/optimized/cedarhof/AC2932 Bath 1B.jpg",
+    "/optimized/cedarhof/AC2932 Bath 2B.jpg",
+    "/optimized/cedarhof/AC2932 Bath 4.jpg",
+    "/optimized/cedarhof/AC2932 Bath 5.jpg",
+    "/optimized/cedarhof/AC2932 Bedroom 1 Closet.jpg",
+    "/optimized/cedarhof/AC2932 Bedroom 1B.jpg",
+    "/optimized/cedarhof/AC2932 Bedroom 2B.jpg",
+    "/optimized/cedarhof/AC2932 Deck 1.jpg",
+    "/optimized/cedarhof/AC2932 Entry.jpg",
+    "/optimized/cedarhof/AC2932 Hallway.jpg",
+    "/optimized/cedarhof/AC2932 Hot Tub Pool A.jpg",
+    "/optimized/cedarhof/AC2932 Kitchen Family.jpg",
+    "/optimized/cedarhof/AC2932 Living A.jpg",
+    "/optimized/cedarhof/AC2932 Living B.jpg",
+    "/optimized/cedarhof/AC2932 Media Room A.jpg",
+    "/optimized/cedarhof/AC2932 Media Room Detail.jpg",
   ];
 
   const handlePhotoClick = (index: number) => {
@@ -140,7 +175,7 @@ const CedarHof = () => {
           {/* Photo Grid */}
           <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16" id="photos">
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
-              {photos.slice(0, 28).map((photo, index) => (
+              {photos.slice(0, 32).map((photo, index) => (
                 <div
                   key={index}
                   className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
@@ -161,16 +196,14 @@ const CedarHof = () => {
                 </div>
               ))}
             </div>
-            {photos.length > 28 && (
-              <div className="text-center mt-6">
-                <button
-                  onClick={() => setShowAllPhotos(true)}
-                  className="inline-flex items-center px-6 py-2 bg-black hover:bg-gray-900 text-white rounded-full text-sm font-medium"
-                >
-                  View all {photos.length} photos
-                </button>
-              </div>
-            )}
+            <div className="text-center mt-6">
+              <button
+                onClick={() => setShowAllPhotos(true)}
+                className="inline-flex items-center px-6 py-2 bg-black hover:bg-gray-900 text-white rounded-full text-sm font-medium"
+              >
+                View all {photos.length} photos
+              </button>
+            </div>
           </div>
 
           {/* Property Description */}
