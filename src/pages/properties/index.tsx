@@ -222,7 +222,7 @@ export default function Properties() {
           },
           {
             id: "slopeside-villa",
-            name: "Slope Slide Chalet | Kadenwood",
+            name: "Slope Side Chalet | Kadenwood",
             images: [
               "/photos/properties/Slopeside Kadenwood/01-2945 Slope Side 01.jpg",
               "/photos/properties/Slopeside Kadenwood/03-2945 Slope Side 03.jpg",
