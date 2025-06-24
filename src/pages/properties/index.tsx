@@ -326,9 +326,9 @@ export default function Properties() {
             id: "cedarhof-kadenwood",
             name: "Cedarhof | Kadenwood | Private Butler",
             images: [
-              "/photos/properties/Cedarhof Kadenwood/2932-Ancient-Cedars-01-MLS.jpg",
-              "/photos/properties/Cedarhof Kadenwood/2932 Living Night 1.jpg",
-              "/photos/properties/Cedarhof Kadenwood/2932 Bedroom 1A NEW.jpg",
+              "/optimized/cedarhof/2932-Ancient-Cedars-01-MLS.jpg",
+              "/optimized/cedarhof/2932 Living Night 1.jpg",
+              "/optimized/cedarhof/2932 Bedroom 1A NEW.jpg",
             ],
             guests: 14,
             bedrooms: 7,

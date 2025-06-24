@@ -320,7 +320,7 @@ const Home = () => {
     {
       id: "cedarhof-kadenwood",
       name: "Cedarhof | Kadenwood | Private Butler",
-      image: "/photos/properties/Cedarhof Kadenwood/2932-Ancient-Cedars-01-MLS.jpg",
+      image: "/optimized/cedarhof/2932-Ancient-Cedars-01-MLS.jpg",
       guests: 14,
       bedrooms: 7,
       beds: 6,
