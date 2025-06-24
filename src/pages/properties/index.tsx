@@ -323,6 +323,40 @@ export default function Properties() {
             isSkiInSkiOut: false,
           },
           {
+            id: "cedarhof-kadenwood",
+            name: "Cedarhof | Kadenwood | Private Butler",
+            images: [
+              "/photos/properties/Cedarhof Kadenwood/2932-Ancient-Cedars-01-MLS.jpg",
+              "/photos/properties/Cedarhof Kadenwood/2932 Living Night 1.jpg",
+              "/photos/properties/Cedarhof Kadenwood/2932 Bedroom 1A NEW.jpg",
+            ],
+            guests: 14,
+            bedrooms: 7,
+            bathrooms: 7,
+            location: "Kadenwood, Whistler",
+            description:
+              "Welcome to your dream escape in Kadenwood, Whistler's most exclusive ski-in/ski-out enclave. This luxury mountain retreat features a private gondola, heated pool, hot tub, and stunning views over Whistler Peak.",
+            features: [
+              "Private Butler Service",
+              "Heated Pool",
+              "Hot Tub",
+              "Private Gondola Access",
+              "Ski-in/Ski-out Access",
+              "Wine Cellar & Tasting Room",
+              "Elevator",
+              "Media Room",
+            ],
+            highlights: [
+              "Private Butler Included",
+              "Exclusive Kadenwood Location",
+              "Heated Pool & Hot Tub",
+              "Ski-in/Ski-out Access",
+            ],
+            priceRange: "$5,000-$6,500 per night Summer | $7,000-$9,000 per night Winter | $12,500-$16,500 per night Christmas & NY",
+            isPetFriendly: false,
+            isSkiInSkiOut: true,
+          },
+          {
             id: "ravens-nest",
             name: "Raven's Nest | Ski in Ski out | Views",
             images: [
