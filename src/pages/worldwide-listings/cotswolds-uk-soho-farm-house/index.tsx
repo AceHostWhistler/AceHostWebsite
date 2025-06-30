@@ -187,6 +187,7 @@ const CotswoldsUKSohoFarmHouse = () => {
                     loading="eager"
                     width={640}
                     height={480}
+                    style={{ aspectRatio: '4/3', objectFit: 'cover' }}
                   />
                 </div>
               </div>
@@ -204,6 +205,7 @@ const CotswoldsUKSohoFarmHouse = () => {
                       loading="eager"
                       width={640}
                       height={480}
+                      style={{ aspectRatio: '4/3', objectFit: 'cover' }}
                     />
                   </div>
                 </div>
@@ -222,6 +224,7 @@ const CotswoldsUKSohoFarmHouse = () => {
                       loading="eager"
                       width={640}
                       height={480}
+                      style={{ aspectRatio: '4/3', objectFit: 'cover' }}
                     />
                   </div>
                 </div>
@@ -467,21 +470,24 @@ const CotswoldsUKSohoFarmHouse = () => {
                   <X size={24} />
                 </button>
               </div>
-              <div className="container mx-auto p-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              <div className="container mx-auto px-2 sm:px-4 py-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
                 {photos.map((photo, index) => (
                   <div
                     key={index}
                     className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer bg-gray-800"
                     onClick={() => handlePhotoClick(index)}
                   >
-                    <img
-                      src={photo}
-                      alt={`Cotswolds UK - Soho Farm House photo ${index + 1}`}
-                      className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                      loading={index < 20 ? "eager" : "lazy"}
-                      width={300}
-                      height={225}
-                    />
+                    <div className="w-full h-full">
+                      <img
+                        src={photo}
+                        alt={`Cotswolds UK - Soho Farm House photo ${index + 1}`}
+                        className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                        loading={index < 20 ? "eager" : "lazy"}
+                        width={300}
+                        height={225}
+                        style={{ aspectRatio: '4/3', objectFit: 'cover' }}
+                      />
+                    </div>
                   </div>
                 ))}
               </div>
@@ -561,19 +567,28 @@ const CotswoldsUKSohoFarmHouse = () => {
                   <path d="M9 18l6-6-6-6" />
                 </svg>
               </button>
-              <div className="relative w-full h-[calc(100vh-120px)] max-w-6xl mx-auto">
+              <div className="relative w-full h-[calc(100vh-120px)] max-w-6xl mx-auto px-4">
                 {isImageLoading && (
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
                   </div>
                 )}
-                <img
-                  src={selectedPhotoIndex !== null ? photos[selectedPhotoIndex] : ''}
-                  alt={`Cotswolds UK - Soho Farm House photo ${selectedPhotoIndex !== null ? selectedPhotoIndex + 1 : ''}`}
-                  className={`object-contain w-full h-full transition-opacity duration-300 ${isImageLoading ? 'opacity-0' : 'opacity-100'}`}
-                  onLoad={handleImageLoad}
-                  loading="eager"
-                />
+                <div className="flex items-center justify-center h-full">
+                  <img
+                    src={selectedPhotoIndex !== null ? photos[selectedPhotoIndex] : ''}
+                    alt={`Cotswolds UK - Soho Farm House photo ${selectedPhotoIndex !== null ? selectedPhotoIndex + 1 : ''}`}
+                    className={`transition-opacity duration-300 ${isImageLoading ? 'opacity-0' : 'opacity-100'}`}
+                    onLoad={handleImageLoad}
+                    loading="eager"
+                    style={{ 
+                      maxHeight: '100%', 
+                      maxWidth: '100%', 
+                      width: 'auto',
+                      height: 'auto',
+                      objectFit: 'contain'
+                    }}
+                  />
+                </div>
               </div>
               <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm">
                 {selectedPhotoIndex !== null ? `${selectedPhotoIndex + 1} / ${photos.length}` : ''}
