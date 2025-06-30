@@ -1662,9 +1662,15 @@ export default function Properties() {
             <div className="relative w-full h-full">
               {isCotswoldsProperty ? (
                 <img
-                  src="/high-quality/cotswolds_1.jpg"
+                  src="/high-quality/cotswolds-all/cotswolds-all-74.jpg"
                   alt={`${property.name} - Luxury ${property.location === 'whistler' ? 'Whistler' : property.location === 'vancouver' ? 'Vancouver' : 'Worldwide'} vacation rental with ${property.bedrooms} bedrooms, accommodating up to ${property.guests} guests`}
                   className="object-cover w-full h-full"
+                  onError={(e) => {
+                    // Fallback to other images if this one fails
+                    const target = e.target as HTMLImageElement;
+                    target.onerror = null;
+                    target.src = "/optimized/cotswolds_1.jpg";
+                  }}
                 />
               ) : (
                 <Image
