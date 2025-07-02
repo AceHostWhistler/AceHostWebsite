@@ -842,9 +842,9 @@ export default function Properties() {
             id: "cotswolds-uk-soho-farm-house",
             name: "Cotswolds UK - Soho Farm House",
             images: [
-              "/high-quality/cotswolds_1.jpg",
-              "/high-quality/224A5292.jpg",
-              "/high-quality/224A5307.jpg"
+              "/photos/properties/Cotswolds UK - Soho Farm House/DJI_20250602090500_0519_D.jpg",
+              "/photos/properties/Cotswolds UK - Soho Farm House/224A5292.jpg",
+              "/photos/properties/Cotswolds UK - Soho Farm House/224A5307.jpg"
             ],
             guests: 15,
             bedrooms: 8,
@@ -1064,9 +1064,9 @@ export default function Properties() {
             id: "cotswolds-uk-soho-farm-house",
             name: "Cotswolds UK - Soho Farm House",
             images: [
-              "/high-quality/cotswolds_1.jpg",
-              "/high-quality/224A5292.jpg",
-              "/high-quality/224A5307.jpg"
+              "/photos/properties/Cotswolds UK - Soho Farm House/DJI_20250602090500_0519_D.jpg",
+              "/photos/properties/Cotswolds UK - Soho Farm House/224A5292.jpg",
+              "/photos/properties/Cotswolds UK - Soho Farm House/224A5307.jpg"
             ],
             guests: 15,
             bedrooms: 8,
@@ -1661,17 +1661,20 @@ export default function Properties() {
           <Link href={propertyUrl}>
             <div className="relative w-full h-full">
               {isCotswoldsProperty ? (
-                <img
-                  src="/high-quality/cotswolds-all/cotswolds-all-74.jpg"
-                  alt={`${property.name} - Luxury ${property.location === 'whistler' ? 'Whistler' : property.location === 'vancouver' ? 'Vancouver' : 'Worldwide'} vacation rental with ${property.bedrooms} bedrooms, accommodating up to ${property.guests} guests`}
-                  className="object-cover w-full h-full"
-                  onError={(e) => {
-                    // Fallback to other images if this one fails
-                    const target = e.target as HTMLImageElement;
-                    target.onerror = null;
-                    target.src = "/optimized/cotswolds_1.jpg";
-                  }}
-                />
+                <div className="relative w-full h-full">
+                  <img
+                    src="/photos/properties/Cotswolds UK - Soho Farm House/DJI_20250602090500_0519_D.jpg"
+                    alt={`${property.name} - Luxury ${property.location === 'whistler' ? 'Whistler' : property.location === 'vancouver' ? 'Vancouver' : 'Worldwide'} vacation rental with ${property.bedrooms} bedrooms, accommodating up to ${property.guests} guests`}
+                    className="object-cover w-full h-full"
+                    style={{ aspectRatio: '3/2', objectFit: 'cover' }}
+                    onError={(e) => {
+                      // Fallback to another image if this one fails
+                      const target = e.target as HTMLImageElement;
+                      target.onerror = null;
+                      target.src = "/photos/properties/Cotswolds UK - Soho Farm House/224A5292.jpg";
+                    }}
+                  />
+                </div>
               ) : (
                 <Image
                   src={property.images[0]}

@@ -20,33 +20,81 @@ const CotswoldsUKSohoFarmHouse = () => {
   // Cache version for forcing new image downloads
   const cacheVersion = "v9";
 
-  // Define the specific indices for the requested photo order
+  // Define photo paths using the original photos
   const photoOrder = [
-    74, // DJI_20250602090500_0519_D.jpg (1st)
-    75, // DJI_20250602090532_0522_D.jpg (2nd)
-    64, // 224A7831.jpg (3rd)
-    57, // 224A5518.jpg (4th)
-    62, // 224A7828.jpg (5th)
-    60, // 224A5535.jpg (6th)
-    20, // 224A5314.jpg (7th)
-    36, // 224A5405.jpg (8th)
-    28  // 224A5352.jpg (9th)
+    "/photos/properties/Cotswolds UK - Soho Farm House/DJI_20250602090500_0519_D.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/DJI_20250602090532_0522_D.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5292.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5518.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A7828.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5535.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5314.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5405.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5352.jpg"
   ];
   
-  // Generate all photo paths from the optimized cotswolds-all directory
-  const allPhotosBase = Array.from({ length: 82 }, (_, i) => `/high-quality/cotswolds-all/cotswolds-all-${i}.jpg?${cacheVersion}`);
-  
-  // Create a new array with the requested photos first, followed by the rest
+  // Read the directory to get all Cotswolds photos
   const allPhotos = [
-    ...photoOrder.map(index => `/high-quality/cotswolds-all/cotswolds-all-${index}.jpg?${cacheVersion}`),
-    ...allPhotosBase.filter((_, i) => !photoOrder.includes(i))
+    ...photoOrder,
+    "/photos/properties/Cotswolds UK - Soho Farm House/012A0872.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/012A0876.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/012A0878.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/012A0881.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/012A1323.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/012A1327.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/012A1330.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5277.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5279.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5289.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5290.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5297.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5302.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5305.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5307.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5313.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5317.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5324.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5331.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5336.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5339.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5345.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5351.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5359.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5361.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5362.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5368.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5372.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5398.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5399.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5410.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5413.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5417.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5423.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5430.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5433.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5435.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5437.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5441.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5450.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5463.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5468.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5470.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5472.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5478.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5492.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5502.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5506.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5508.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5516.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A5528.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A7831.jpg"
   ];
   
-  // Use the first 25 optimized images as the main photos to keep the current setup
-  const optimalPhotos = allPhotos.slice(0, 25);
+  // Use the first 25 photos as the optimal ones to display first
+  const optimalPhotos = photoOrder.length >= 25 ? photoOrder : [...photoOrder, ...allPhotos.slice(photoOrder.length, 25 - photoOrder.length)];
   
-  // All photos now include all 82 images
-  const photos = allPhotos;
+  // All photos for the gallery
+  const photos = allPhotos.slice(0, 50); // Limit to 50 photos to avoid performance issues
 
   const handlePhotoClick = (index: number) => {
     setIsImageLoading(true);
@@ -142,7 +190,7 @@ const CotswoldsUKSohoFarmHouse = () => {
           content="Experience luxury at this designer stone estate near Soho Farmhouse in the Cotswolds, UK. This exclusive 8-bedroom property offers spa facilities, a tennis court, and an annex house, all set on a stunning 2-acre property just minutes from Soho Farmhouse."
         />
         {/* Preload critical images */}
-        {optimalPhotos.slice(0, 8).map((src, index) => (
+        {photoOrder.slice(0, 3).map((src, index) => (
           <link key={index} rel="preload" href={src} as="image" />
         ))}
       </Head>
@@ -311,12 +359,13 @@ const CotswoldsUKSohoFarmHouse = () => {
               <div className="md:w-1/2">
                 <div className="relative aspect-[4/3] mb-4 rounded-xl overflow-hidden shadow-lg bg-gray-200">
                   <img
-                    src={optimalPhotos[2]}
+                    src="/photos/properties/Cotswolds UK - Soho Farm House/224A5292.jpg"
                     alt="Cotswolds UK - Soho Farm House - Premium Amenities"
                     className="object-cover hover:scale-105 transition-transform duration-500 w-full h-full"
                     loading="lazy"
                     width={640} 
                     height={480}
+                    style={{ aspectRatio: '4/3', objectFit: 'cover' }}
                   />
                 </div>
               </div>

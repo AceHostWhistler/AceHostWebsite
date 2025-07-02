@@ -84,14 +84,15 @@ const Home = () => {
             {isCotswolds ? (
               <div className="w-full h-full">
                 <img
-                  src="/high-quality/cotswolds-all/cotswolds-all-74.jpg"
+                  src="/photos/properties/Cotswolds UK - Soho Farm House/DJI_20250602090500_0519_D.jpg"
                   alt={`${property.title || property.name} - Luxury ${property.location === 'whistler' ? 'Whistler' : property.location === 'vancouver' ? 'Vancouver' : 'Worldwide'} vacation rental with ${property.bedrooms} bedroom${property.bedrooms !== 1 ? 's' : ''}, accommodating up to ${property.guests} guest${property.guests !== 1 ? 's' : ''}`}
                   className="object-cover cursor-pointer w-full h-full"
+                  style={{ aspectRatio: '3/2', objectFit: 'cover' }}
                   onError={(e) => {
                     // Fallback to other images if this one fails
                     const target = e.target as HTMLImageElement;
                     target.onerror = null;
-                    target.src = "/optimized/cotswolds_1.jpg";
+                    target.src = "/photos/properties/Cotswolds UK - Soho Farm House/224A5292.jpg";
                   }}
                 />
               </div>
@@ -669,7 +670,7 @@ const Home = () => {
     {
       id: "cotswolds-uk-soho-farm-house",
       name: "Cotswolds UK - Soho Farm House | Designer Stone Estate",
-      image: "/high-quality/cotswolds-all/cotswolds-all-74.jpg",
+      image: "/photos/properties/Cotswolds UK - Soho Farm House/DJI_20250602090500_0519_D.jpg",
       guests: 15,
       bedrooms: 8,
       bathrooms: 5,
