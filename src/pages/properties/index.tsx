@@ -292,7 +292,7 @@ export default function Properties() {
             id: "cedarhof-kadenwood",
             name: "Cedarhof | Kadenwood | Private Butler",
             images: [
-              "/optimized/cedarhof/2932-Ancient-Cedars-01-MLS.jpg",
+              "/optimized/cedarhof-new/cedarhof-cover.jpg",
               "/optimized/cedarhof/2932 Living Night 1.jpg",
               "/optimized/cedarhof/2932 Bedroom 1A NEW.jpg",
             ],

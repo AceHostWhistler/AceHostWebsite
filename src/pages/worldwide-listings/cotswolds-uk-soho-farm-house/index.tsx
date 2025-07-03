@@ -22,81 +22,25 @@ const CotswoldsUKSohoFarmHouse = () => {
 
   // Define photo paths using the optimized gallery images
   const photoOrder = [
-    "/optimized/cotswolds-gallery/photo-1.jpg", // Optimized cover photo
-    "/optimized/cotswolds-gallery/photo-2.jpg", // Optimized DJI_20250602090532_0522_D.jpg
-    "/optimized/cotswolds-gallery/photo-3.jpg", // Optimized 224A5292.jpg
-    "/optimized/cotswolds-gallery/photo-4.jpg", // Optimized 224A5518.jpg
-    "/optimized/cotswolds-gallery/photo-5.jpg", // Optimized 224A7828.jpg
-    "/optimized/cotswolds-gallery/photo-6.jpg", // Optimized 224A5535.jpg
-    "/optimized/cotswolds-gallery/photo-7.jpg", // Optimized 224A5314.jpg
-    "/optimized/cotswolds-gallery/photo-8.jpg", // Optimized 224A5405.jpg
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5352.jpg"
+    "/optimized/cotswolds-cover.jpg", // Optimized cover photo
+    "/optimized/cotswolds-all/cotswolds-all-11.jpg", // DJI_20250602090532_0522_D
+    "/optimized/cotswolds-all/cotswolds-all-23.jpg", // 224A5292
+    "/optimized/cotswolds-all/cotswolds-all-35.jpg", // 224A5518
+    "/optimized/cotswolds-all/cotswolds-all-4.jpg",  // 224A7828
+    "/optimized/cotswolds-all/cotswolds-all-21.jpg", // 224A5535
+    "/optimized/cotswolds-all/cotswolds-all-49.jpg", // 224A5314
+    "/optimized/cotswolds-all/cotswolds-all-74.jpg", // 224A5405
+    "/optimized/cotswolds-all/cotswolds-all-5.jpg"   // 224A5352
   ];
   
   // Read the directory to get all Cotswolds photos
   const allPhotos = [
     ...photoOrder,
-    "/optimized/cotswolds-gallery/photo-9.jpg",  // Optimized 224A5289.jpg
-    "/optimized/cotswolds-gallery/photo-10.jpg", // Optimized 224A5290.jpg
-    "/optimized/cotswolds-gallery/photo-11.jpg", // Optimized 224A5297.jpg
-    "/optimized/cotswolds-gallery/photo-12.jpg", // Optimized 224A5302.jpg
-    "/optimized/cotswolds-gallery/photo-13.jpg", // Optimized 224A5305.jpg
-    "/optimized/cotswolds-gallery/photo-14.jpg", // Optimized 012A0876.jpg
-    "/optimized/cotswolds-gallery/photo-15.jpg", // Optimized 012A0878.jpg
-    "/optimized/cotswolds-gallery/photo-16.jpg", // Optimized 012A0881.jpg
-    "/optimized/cotswolds-gallery/photo-17.jpg", // Optimized 224A5324.jpg
-    "/optimized/cotswolds-gallery/photo-18.jpg", // Optimized 224A5331.jpg
-    "/optimized/cotswolds-gallery/photo-19.jpg", // Optimized 224A5336.jpg
-    "/optimized/cotswolds-gallery/photo-20.jpg", // Optimized 224A5339.jpg
-    "/photos/properties/Cotswolds UK - Soho Farm House/012A0872.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/012A1323.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/012A1327.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/012A1330.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5277.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5279.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5289.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5290.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5297.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5302.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5305.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5307.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5313.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5317.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5324.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5331.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5336.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5339.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5345.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5351.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5359.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5361.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5362.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5368.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5372.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5398.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5399.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5410.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5413.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5417.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5423.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5430.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5433.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5435.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5437.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5441.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5450.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5463.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5468.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5470.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5472.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5478.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5492.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5502.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5506.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5508.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5516.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5528.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A7831.jpg"
+    // All other optimized photos (0 to 80)
+    ...Array.from({length: 81}, (_, i) => `/optimized/cotswolds-all/cotswolds-all-${i}.jpg`).filter(
+      // Filter out the photos that are already in photoOrder to avoid duplicates
+      (path) => !photoOrder.includes(path)
+    )
   ];
   
   // Use the first 25 photos as the optimal ones to display first
