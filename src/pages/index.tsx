@@ -84,7 +84,7 @@ const Home = () => {
             {isCotswolds ? (
               <div className="w-full h-full">
                 <img
-                  src="/photos/properties/Cotswolds UK - Soho Farm House/DJI_20250602090500_0519_D.jpg"
+                  src="/optimized/cotswolds-cover.jpg"
                   alt={`${property.title || property.name} - Luxury ${property.location === 'whistler' ? 'Whistler' : property.location === 'vancouver' ? 'Vancouver' : 'Worldwide'} vacation rental with ${property.bedrooms} bedroom${property.bedrooms !== 1 ? 's' : ''}, accommodating up to ${property.guests} guest${property.guests !== 1 ? 's' : ''}`}
                   className="object-cover cursor-pointer w-full h-full"
                   style={{ aspectRatio: '3/2', objectFit: 'cover' }}

@@ -1663,7 +1663,7 @@ export default function Properties() {
               {isCotswoldsProperty ? (
                 <div className="relative w-full h-full">
                   <img
-                    src="/photos/properties/Cotswolds UK - Soho Farm House/DJI_20250602090500_0519_D.jpg"
+                    src="/optimized/cotswolds-cover.jpg"
                     alt={`${property.name} - Luxury ${property.location === 'whistler' ? 'Whistler' : property.location === 'vancouver' ? 'Vancouver' : 'Worldwide'} vacation rental with ${property.bedrooms} bedrooms, accommodating up to ${property.guests} guests`}
                     className="object-cover w-full h-full"
                     style={{ aspectRatio: '3/2', objectFit: 'cover' }}

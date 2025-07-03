@@ -20,9 +20,9 @@ const CotswoldsUKSohoFarmHouse = () => {
   // Cache version for forcing new image downloads
   const cacheVersion = "v9";
 
-  // Define photo paths using the original photos
+  // Define photo paths using the optimized cover photo
   const photoOrder = [
-    "/photos/properties/Cotswolds UK - Soho Farm House/DJI_20250602090500_0519_D.jpg",
+    "/optimized/cotswolds-cover.jpg", // New optimized cover photo
     "/photos/properties/Cotswolds UK - Soho Farm House/DJI_20250602090532_0522_D.jpg",
     "/photos/properties/Cotswolds UK - Soho Farm House/224A5292.jpg",
     "/photos/properties/Cotswolds UK - Soho Farm House/224A5518.jpg",
@@ -359,7 +359,7 @@ const CotswoldsUKSohoFarmHouse = () => {
               <div className="md:w-1/2">
                 <div className="relative aspect-[4/3] mb-4 rounded-xl overflow-hidden shadow-lg bg-gray-200">
                   <img
-                    src="/photos/properties/Cotswolds UK - Soho Farm House/224A5292.jpg"
+                    src="/optimized/cotswolds-interior.jpg"
                     alt="Cotswolds UK - Soho Farm House - Premium Amenities"
                     className="object-cover hover:scale-105 transition-transform duration-500 w-full h-full"
                     loading="lazy"
