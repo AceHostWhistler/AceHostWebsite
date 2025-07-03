@@ -18,28 +18,37 @@ const CotswoldsUKSohoFarmHouse = () => {
   const [totalImages] = useState(82); // Total number of images we have
 
   // Cache version for forcing new image downloads
-  const cacheVersion = "v9";
+  const cacheVersion = "v10";
 
-  // Define photo paths using the optimized cover photo
+  // Define photo paths using the optimized gallery images
   const photoOrder = [
-    "/optimized/cotswolds-cover.jpg", // New optimized cover photo
-    "/photos/properties/Cotswolds UK - Soho Farm House/DJI_20250602090532_0522_D.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5292.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5518.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A7828.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5535.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5314.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/224A5405.jpg",
+    "/optimized/cotswolds-gallery/photo-1.jpg", // Optimized cover photo
+    "/optimized/cotswolds-gallery/photo-2.jpg", // Optimized DJI_20250602090532_0522_D.jpg
+    "/optimized/cotswolds-gallery/photo-3.jpg", // Optimized 224A5292.jpg
+    "/optimized/cotswolds-gallery/photo-4.jpg", // Optimized 224A5518.jpg
+    "/optimized/cotswolds-gallery/photo-5.jpg", // Optimized 224A7828.jpg
+    "/optimized/cotswolds-gallery/photo-6.jpg", // Optimized 224A5535.jpg
+    "/optimized/cotswolds-gallery/photo-7.jpg", // Optimized 224A5314.jpg
+    "/optimized/cotswolds-gallery/photo-8.jpg", // Optimized 224A5405.jpg
     "/photos/properties/Cotswolds UK - Soho Farm House/224A5352.jpg"
   ];
   
   // Read the directory to get all Cotswolds photos
   const allPhotos = [
     ...photoOrder,
+    "/optimized/cotswolds-gallery/photo-9.jpg",  // Optimized 224A5289.jpg
+    "/optimized/cotswolds-gallery/photo-10.jpg", // Optimized 224A5290.jpg
+    "/optimized/cotswolds-gallery/photo-11.jpg", // Optimized 224A5297.jpg
+    "/optimized/cotswolds-gallery/photo-12.jpg", // Optimized 224A5302.jpg
+    "/optimized/cotswolds-gallery/photo-13.jpg", // Optimized 224A5305.jpg
+    "/optimized/cotswolds-gallery/photo-14.jpg", // Optimized 012A0876.jpg
+    "/optimized/cotswolds-gallery/photo-15.jpg", // Optimized 012A0878.jpg
+    "/optimized/cotswolds-gallery/photo-16.jpg", // Optimized 012A0881.jpg
+    "/optimized/cotswolds-gallery/photo-17.jpg", // Optimized 224A5324.jpg
+    "/optimized/cotswolds-gallery/photo-18.jpg", // Optimized 224A5331.jpg
+    "/optimized/cotswolds-gallery/photo-19.jpg", // Optimized 224A5336.jpg
+    "/optimized/cotswolds-gallery/photo-20.jpg", // Optimized 224A5339.jpg
     "/photos/properties/Cotswolds UK - Soho Farm House/012A0872.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/012A0876.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/012A0878.jpg",
-    "/photos/properties/Cotswolds UK - Soho Farm House/012A0881.jpg",
     "/photos/properties/Cotswolds UK - Soho Farm House/012A1323.jpg",
     "/photos/properties/Cotswolds UK - Soho Farm House/012A1327.jpg",
     "/photos/properties/Cotswolds UK - Soho Farm House/012A1330.jpg",
@@ -159,18 +168,35 @@ const CotswoldsUKSohoFarmHouse = () => {
     };
   }, [showAllPhotos, selectedPhotoIndex]);
 
-  // Preload important images for faster gallery display
+  // Improved preloading for faster gallery display with error handling
   useEffect(() => {
-    // Preload first 16 images for initial display
-    const preloadImages = photos.slice(0, 16).map(src => {
+    // Preload first 20 optimized images for initial display
+    const preloadImages = photos.slice(0, 20).map(src => {
       return new Promise<void>((resolve) => {
         const img = new Image();
-        img.src = src;
+        
+        // Set image loading priority
+        img.loading = 'eager';
+        img.fetchPriority = 'high';
+        
+        // Add cache-busting parameter
+        img.src = `${src}?v=${cacheVersion}`;
+        
         img.onload = () => {
           handlePreloadProgress();
           resolve();
         };
+        
         img.onerror = () => {
+          console.error(`Failed to load image: ${src}`);
+          // If image fails to load, try a fallback
+          if (src.includes('/optimized/')) {
+            // Try loading from the original source as fallback
+            const fallbackSrc = src.replace('/optimized/cotswolds-gallery/', '/photos/properties/Cotswolds UK - Soho Farm House/');
+            console.log(`Trying fallback: ${fallbackSrc}`);
+            const fallbackImg = new Image();
+            fallbackImg.src = fallbackSrc;
+          }
           // Still count errors to avoid getting stuck
           handlePreloadProgress();
           resolve();
@@ -178,6 +204,7 @@ const CotswoldsUKSohoFarmHouse = () => {
       });
     });
 
+    // Process in batches for better performance
     Promise.all(preloadImages);
   }, []);
 
@@ -228,14 +255,22 @@ const CotswoldsUKSohoFarmHouse = () => {
                 onClick={() => handlePhotoClick(0)}
               >
                 <div className="w-full h-full bg-gray-200">
-                  <img
-                    src={optimalPhotos[0]}
+                                      <img
+                    src={`${optimalPhotos[0]}?v=${cacheVersion}`}
                     alt="Cotswolds UK - Soho Farm House 1"
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
                     loading="eager"
+                    fetchPriority="high"
                     width={640}
                     height={480}
                     style={{ aspectRatio: '4/3', objectFit: 'cover' }}
+                    onError={(e) => {
+                      // Fallback to the original image if optimized one fails
+                      const target = e.target as HTMLImageElement;
+                      target.onerror = null; // Prevent infinite error loops
+                      target.src = "/optimized/cotswolds-cover.jpg"; // Use already optimized cover as fallback
+                      console.log("Using fallback for image 1");
+                    }}
                   />
                 </div>
               </div>
@@ -247,13 +282,21 @@ const CotswoldsUKSohoFarmHouse = () => {
                 >
                   <div className="w-full h-full bg-gray-200">
                     <img
-                      src={photo}
+                      src={`${photo}?v=${cacheVersion}`}
                       alt={`Cotswolds UK - Soho Farm House ${index + 2}`}
                       className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
                       loading="eager"
                       width={640}
                       height={480}
                       style={{ aspectRatio: '4/3', objectFit: 'cover' }}
+                      onError={(e) => {
+                        // Fallback if optimized image fails to load
+                        const target = e.target as HTMLImageElement;
+                        target.onerror = null;
+                        // Use a generic fallback image that's known to work
+                        target.src = "/optimized/cotswolds-cover.jpg";
+                        console.log(`Using fallback for image ${index + 2}`);
+                      }}
                     />
                   </div>
                 </div>
@@ -266,13 +309,21 @@ const CotswoldsUKSohoFarmHouse = () => {
                 >
                   <div className="w-full h-full bg-gray-200">
                     <img
-                      src={photo}
+                      src={`${photo}?v=${cacheVersion}`}
                       alt={`Cotswolds UK - Soho Farm House ${index + 5}`}
                       className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
                       loading="eager"
                       width={640}
                       height={480}
                       style={{ aspectRatio: '4/3', objectFit: 'cover' }}
+                      onError={(e) => {
+                        // Fallback if optimized image fails to load
+                        const target = e.target as HTMLImageElement;
+                        target.onerror = null;
+                        // Use a generic fallback image that's known to work
+                        target.src = "/optimized/cotswolds-cover.jpg";
+                        console.log(`Using fallback for image ${index + 5}`);
+                      }}
                     />
                   </div>
                 </div>
@@ -520,7 +571,7 @@ const CotswoldsUKSohoFarmHouse = () => {
                 </button>
               </div>
               <div className="container mx-auto px-2 sm:px-4 py-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
-                {photos.map((photo, index) => (
+                {photos.slice(0, 30).map((photo, index) => (
                   <div
                     key={index}
                     className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer bg-gray-800"
@@ -528,13 +579,27 @@ const CotswoldsUKSohoFarmHouse = () => {
                   >
                     <div className="w-full h-full">
                       <img
-                        src={photo}
+                        src={index < 20 ? `${photo}?v=${cacheVersion}` : photo} 
                         alt={`Cotswolds UK - Soho Farm House photo ${index + 1}`}
                         className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
                         loading={index < 20 ? "eager" : "lazy"}
                         width={300}
                         height={225}
                         style={{ aspectRatio: '4/3', objectFit: 'cover' }}
+                        onError={(e) => {
+                          // Fallback if image fails to load
+                          const target = e.target as HTMLImageElement;
+                          target.onerror = null;
+                          // Use a working fallback image
+                          if (index < 20) {
+                            // For important images, use our optimized cover
+                            target.src = "/optimized/cotswolds-cover.jpg";
+                          } else {
+                            // For less important images, use whatever is available
+                            target.src = "/optimized/cotswolds-gallery/photo-1.jpg";
+                          }
+                          console.log(`Using fallback for modal image ${index + 1}`);
+                        }}
                       />
                     </div>
                   </div>
@@ -624,17 +689,37 @@ const CotswoldsUKSohoFarmHouse = () => {
                 )}
                 <div className="flex items-center justify-center h-full">
                   <img
-                    src={selectedPhotoIndex !== null ? photos[selectedPhotoIndex] : ''}
+                    src={selectedPhotoIndex !== null ? 
+                      (selectedPhotoIndex < 20 ? 
+                        `${photos[selectedPhotoIndex]}?v=${cacheVersion}` : 
+                        photos[selectedPhotoIndex]) 
+                      : ''}
                     alt={`Cotswolds UK - Soho Farm House photo ${selectedPhotoIndex !== null ? selectedPhotoIndex + 1 : ''}`}
                     className={`transition-opacity duration-300 ${isImageLoading ? 'opacity-0' : 'opacity-100'}`}
                     onLoad={handleImageLoad}
                     loading="eager"
+                    fetchPriority="high"
                     style={{ 
                       maxHeight: '100%', 
                       maxWidth: '100%', 
                       width: 'auto',
                       height: 'auto',
                       objectFit: 'contain'
+                    }}
+                    onError={(e) => {
+                      // Fallback for full-screen view if image fails to load
+                      const target = e.target as HTMLImageElement;
+                      target.onerror = null;
+                      
+                      // Try using the optimized version if available
+                      if (selectedPhotoIndex !== null && selectedPhotoIndex < 20) {
+                        target.src = `/optimized/cotswolds-gallery/photo-${selectedPhotoIndex + 1}.jpg`;
+                      } else {
+                        // Otherwise use a generic fallback
+                        target.src = "/optimized/cotswolds-cover.jpg";
+                      }
+                      console.log(`Using fallback for fullscreen image ${selectedPhotoIndex !== null ? selectedPhotoIndex + 1 : ''}`);
+                      handleImageLoad(); // Make sure we still remove the loading state
                     }}
                   />
                 </div>
