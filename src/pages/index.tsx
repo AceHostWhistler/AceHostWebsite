@@ -319,6 +319,7 @@ const Home = () => {
       holidayPrice: "$12,500-$16,500 Nightly | Christmas & NY",
       location: "whistler",
       link: "/listings/cedarhof-kadenwood",
+      airbnbLink: "https://www.airbnb.ca/rooms/1457520373019699712?guests=1&adults=1&s=67&unique_share_id=112eabb2-8f04-425c-99c0-b02ddb2135e5",
       isPetFriendly: false,
       isSkiInSkiOut: true,
     },

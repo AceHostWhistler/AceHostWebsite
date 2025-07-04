@@ -170,6 +170,7 @@ const CedarHof = () => {
             beds={6}
             bathrooms={7}
             priceRange="$5,000-$6,500 per night Summer | $7,000-$9,000 per night Winter | $12,500-$16,500 per night Christmas & NY"
+            airbnbLink="https://www.airbnb.ca/rooms/1457520373019699712?guests=1&adults=1&s=67&unique_share_id=112eabb2-8f04-425c-99c0-b02ddb2135e5"
           />
 
           {/* Photo Grid */}
