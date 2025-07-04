@@ -321,6 +321,7 @@ export default function Properties() {
             priceRange: "$5,000-$6,500 per night Summer | $7,000-$9,000 per night Winter | $12,500-$16,500 per night Christmas & NY",
             isPetFriendly: false,
             isSkiInSkiOut: true,
+            airbnbLink: "https://www.airbnb.ca/rooms/1457520373019699712?guests=1&adults=1&s=67&unique_share_id=112eabb2-8f04-425c-99c0-b02ddb2135e5",
           },
           {
             id: "heron-views-whistler",
@@ -1621,6 +1622,8 @@ export default function Properties() {
         "https://www.airbnb.ca/rooms/826226399590812184?guests=1&adults=1&s=67&unique_share_id=aab7fbd3-669a-461d-b913-c15cf257b4c0",
       "panoramic-estate":
         "https://www.airbnb.ca/rooms/1104637821836596397?guests=1&adults=1&s=67&unique_share_id=67164555-993c-40dc-b188-23ffe0755654",
+      "cedarhof-kadenwood":
+        "https://www.airbnb.ca/rooms/1457520373019699712?guests=1&adults=1&s=67&unique_share_id=112eabb2-8f04-425c-99c0-b02ddb2135e5",
       "heron-views-whistler":
         "https://www.airbnb.ca/rooms/1168163637007998550?guests=1&adults=1&s=67&unique_share_id=8227e964-920d-4bc0-8073-13043963151f",
       "ravens-nest":
