@@ -110,15 +110,37 @@ const CelebritiesInfluencersBlog = () => {
                   </div>
                 </div>
 
-                <div className="relative aspect-[3/4] rounded-lg overflow-hidden mb-6 max-w-md mx-auto">
-                  <Image
-                    src="/photos/post/Blog Celebrities Spotted/65205b536bfe86e898fc902d_image002 (1).png"
-                    alt="Riverdale cast enjoying Whistler"
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-contain"
-                    priority
-                  />
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                  <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
+                    <Image
+                      src="/photos/post/Blog Celebrities Spotted/65205b536bfe86e898fc902d_image002 (1).png"
+                      alt="Riverdale cast enjoying Whistler"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
+                  <div className="relative aspect-[9/16] rounded-lg overflow-hidden">
+                    <Image
+                      src="/photos/post/Blog Celebrities Spotted/instagram/madelame.jpg"
+                      alt="Madelaine Petsch at AceHost property in Whistler"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
+                  <div className="relative aspect-[9/16] rounded-lg overflow-hidden">
+                    <Image
+                      src="/photos/post/Blog Celebrities Spotted/instagram/camimendes.jpg"
+                      alt="Camila Mendes at AceHost property in Whistler"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
                 </div>
                 
                 <p className="mb-0">
