@@ -563,7 +563,7 @@ const CotswoldsUKSohoFarmHouse = () => {
                 </button>
               </div>
               <div className="container mx-auto px-2 sm:px-4 py-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
-                {photos.slice(0, 30).map((photo, index) => (
+                {photos.map((photo, index) => (
                   <div
                     key={index}
                     className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer bg-gray-800"
