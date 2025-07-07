@@ -47,7 +47,7 @@ const CotswoldsUKSohoFarmHouse = () => {
   const optimalPhotos = photoOrder.length >= 25 ? photoOrder : [...photoOrder, ...allPhotos.slice(photoOrder.length, 25 - photoOrder.length)];
   
   // All photos for the gallery
-  const photos = allPhotos.slice(0, 50); // Limit to 50 photos to avoid performance issues
+  const photos = allPhotos; // Use all optimized photos
 
   const handlePhotoClick = (index: number) => {
     setIsImageLoading(true);
@@ -287,9 +287,57 @@ const CotswoldsUKSohoFarmHouse = () => {
 
           {/* Property Description */}
           <div className="max-w-5xl mx-auto px-6 md:px-10 lg:px-8" id="details">
-            <p className="text-gray-800 mb-16 max-w-3xl mx-auto leading-relaxed text-lg">
+            <p className="text-gray-800 mb-8 max-w-3xl mx-auto leading-relaxed text-lg">
               Welcome to your countryside dream retreat—just 4 minutes by car (or a scenic 30-minute walk through a private trail) from the world-famous Soho Farmhouse. This beautifully renovated 8-bedroom, 5-bathroom stone estate offers over 320m² of luxurious living space across two dwellings, all set on a stunning and serene 2-acre property.
             </p>
+
+            {/* Added Photo Gallery in Description */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
+              <div className="aspect-[4/3] relative rounded-lg overflow-hidden shadow-md">
+                <img
+                  src="/optimized/cotswolds-description/aerial-1.jpg"
+                  alt="Aerial view of the Cotswolds estate"
+                  className="object-cover w-full h-full"
+                  loading="lazy"
+                  width={600}
+                  height={450}
+                  style={{ aspectRatio: '4/3', objectFit: 'cover' }}
+                />
+              </div>
+              <div className="aspect-[4/3] relative rounded-lg overflow-hidden shadow-md">
+                <img
+                  src="/optimized/cotswolds-description/aerial-2.jpg"
+                  alt="Aerial view of the property grounds"
+                  className="object-cover w-full h-full"
+                  loading="lazy"
+                  width={600}
+                  height={450}
+                  style={{ aspectRatio: '4/3', objectFit: 'cover' }}
+                />
+              </div>
+              <div className="aspect-[4/3] relative rounded-lg overflow-hidden shadow-md">
+                <img
+                  src="/optimized/cotswolds-description/interior-1.jpg"
+                  alt="Interior view of the Cotswolds estate"
+                  className="object-cover w-full h-full"
+                  loading="lazy"
+                  width={600}
+                  height={450}
+                  style={{ aspectRatio: '4/3', objectFit: 'cover' }}
+                />
+              </div>
+              <div className="aspect-[4/3] relative rounded-lg overflow-hidden shadow-md">
+                <img
+                  src="/optimized/cotswolds-description/interior-2.jpg"
+                  alt="Interior living space of the Cotswolds estate"
+                  className="object-cover w-full h-full"
+                  loading="lazy"
+                  width={600}
+                  height={450}
+                  style={{ aspectRatio: '4/3', objectFit: 'cover' }}
+                />
+              </div>
+            </div>
           </div>
           
           {/* Accommodation Section */}
