@@ -274,7 +274,7 @@ const ChaletLaForja = () => {
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
                 <div className="relative aspect-[4/3] mb-2">
                   <Image
-                    src={photos[15]}
+                    src="/photos/properties/Chalet La Forja/2950HeritagePeaks3Feb30.jpg"
                     alt="Chalet La Forja Bedroom"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-300"
@@ -373,20 +373,40 @@ const ChaletLaForja = () => {
                 </div>
                 <h2 className="text-2xl font-bold">Location</h2>
               </div>
-              <p className="text-gray-800 max-w-4xl mb-6">
-                The Kadenwood neighbourhood is perched on the south side of
-                Whistler Mountain, high above Whistler Creekside and is easily
-                accessible by road or 5 minutes by private gondola from the base
-                of Creekside. Kadenwood provides easy access to ski-in/ski-out
-                trails on the edge of an old-growth forest and offers astounding
-                Coastal Range views.
-              </p>
+              
+              <div className="flex flex-col md:flex-row gap-8 mb-6">
+                <div className="md:w-1/2">
+                  <p className="text-gray-800 mb-6">
+                    The Kadenwood neighbourhood is perched on the south side of
+                    Whistler Mountain, high above Whistler Creekside and is easily
+                    accessible by road or 5 minutes by private gondola from the base
+                    of Creekside. Kadenwood provides easy access to ski-in/ski-out
+                    trails on the edge of an old-growth forest and offers astounding
+                    Coastal Range views.
+                  </p>
+                  <p className="text-gray-800">
+                    Take the 5-minute gondola ride, a 5-minute drive, or a quick ski
+                    ride down will bring you to all the amenities in Creekside
+                    Village. Take advantage of some of Whistler's best
+                    restaurants and shops. Enjoy quality coffee and delicious breads
+                    and pastries at Rockit Coffee and Bred.
+                  </p>
+                </div>
+                <div className="md:w-1/2">
+                  <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
+                    <Image
+                      src="/photos/properties/Chalet La Forja/05-2950 Heritage Peaks Trail-05 2.jpg"
+                      alt="Chalet La Forja Location"
+                      fill
+                      className="object-cover hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
+                </div>
+              </div>
+              
               <p className="text-gray-800 max-w-4xl">
-                Take the 5-minute gondola ride, a 5-minute drive, or a quick ski
-                ride down will bring you to all the amenities in Creekside
-                Village. Take advantage of some of Whistler's best
-                restaurants and shops. Enjoy quality coffee and delicious breads
-                and pastries at Rockit Coffee and Bred. Red Door Bistro, Rimrock
+                Red Door Bistro, Rimrock
                 Cafe, Cure Lounge (my favorite), Creekbread, and Dusty's.
                 Enjoy Creekside's newest restaurant Mekong, this
                 fine-dining Thai restaurant and gorgeous patio is a local
