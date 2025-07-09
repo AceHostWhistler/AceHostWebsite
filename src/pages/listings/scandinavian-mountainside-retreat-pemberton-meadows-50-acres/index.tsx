@@ -20,6 +20,7 @@ const PembertonMeadowsRetreat = () => {
 
   // Property photos
   const photos = [
+    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KJ14319-Edit-2.jpg",
     "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/DJI_0202-Edit.jpg",
     "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/DJI_0195-Edit.jpg",
     "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/DJI_0096-Edit.jpg",
@@ -55,7 +56,6 @@ const PembertonMeadowsRetreat = () => {
     "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KJ20678-Edit.jpg",
     "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KJ20478-Edit.jpg",
     "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KJ20285-Edit.jpg",
-    "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KJ14319-Edit-2.jpg",
     "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KJ14205-Edit.jpg",
     "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KJ14105-Edit.jpg",
     "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KJ14090-Edit.jpg",
@@ -146,7 +146,7 @@ const PembertonMeadowsRetreat = () => {
             bedrooms={5}
             bathrooms={5}
             priceRange="Pricing: $30,000-35,000 per event"
-            airbnbLink="https://www.airbnb.ca/rooms/735842324489542740?guests=1&adults=1&s=67&unique_share_id=1d2ecc34-ba35-46eb-9ba0-71a08ed1bb10"
+            contactLink="/contact"
           />
 
           {/* Photo Grid */}
