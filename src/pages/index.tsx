@@ -574,7 +574,7 @@ const Home = () => {
     {
       id: "luxury-3-bed-stunning-views",
       name: "Luxury 3-Bed | Stunning Views",
-      image: "/photos/properties/Luxury 3-Bed | Stunning Views/04 - 20250707 A7M3 03 A1_07325.jpg",
+      image: "/optimized/luxury-3-bed-views/cover.jpg",
       guests: 6,
       bedrooms: 2.5,
       beds: 3,

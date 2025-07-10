@@ -1057,9 +1057,9 @@ export default function Properties() {
             id: "luxury-3-bed-stunning-views",
             name: "Luxury 3-Bed | Stunning Views",
             images: [
-              "/photos/properties/Luxury 3-Bed | Stunning Views/04 - 20250707 A7M3 03 A1_07325.jpg",
-              "/photos/properties/Luxury 3-Bed | Stunning Views/01 - 20250707 A7M3 03 A1_07650-Edit.jpg",
-              "/photos/properties/Luxury 3-Bed | Stunning Views/07 - 20250707 A7M3 03 A1_07364.jpg",
+              "/optimized/luxury-3-bed-views/cover.jpg",
+              "/optimized/luxury-3-bed-views/image-01.jpg",
+              "/optimized/luxury-3-bed-views/image-07.jpg",
             ],
             guests: 6,
             bedrooms: 2.5,
