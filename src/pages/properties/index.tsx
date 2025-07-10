@@ -1052,7 +1052,44 @@ export default function Properties() {
             isPetFriendly: false,
             isSkiInSkiOut: false,
             country: "usa"
-          }
+          },
+          {
+            id: "luxury-3-bed-stunning-views",
+            name: "Luxury 3-Bed | Stunning Views",
+            images: [
+              "/photos/properties/Luxury 3-Bed | Stunning Views/04 - 20250707 A7M3 03 A1_07325.jpg",
+              "/photos/properties/Luxury 3-Bed | Stunning Views/01 - 20250707 A7M3 03 A1_07650-Edit.jpg",
+              "/photos/properties/Luxury 3-Bed | Stunning Views/07 - 20250707 A7M3 03 A1_07364.jpg",
+            ],
+            guests: 6,
+            bedrooms: 2.5,
+            bathrooms: 2,
+            location: "Whistler Village, Whistler",
+            description:
+              "Contemporary 3 bed, 2 bath retreat with stunning views of Chateau Fairmont and mountains, steps from Whistler Village and slopes. Features hot tub, sauna, gym, pool, and more.",
+            features: [
+              "Hot Tub & Pool",
+              "Sauna",
+              "Fitness Center",
+              "Gas Fireplace",
+              "Fully Equipped Kitchen",
+              "Covered Parking",
+              "Gear Storage",
+              "Mountain Views",
+            ],
+            highlights: [
+              "Stunning Mountain Views",
+              "Steps from Whistler Village",
+              "Resort Amenities",
+              "Spacious 1,100 sq ft Condo",
+            ],
+            priceRange: "Nightly Price Range: $400-$1,150+",
+            winterPrice: "$650-$1000+ Nightly | Winter",
+            holidayPrice: "$1000-$1280+ Nightly | Christmas & NY",
+            isPetFriendly: false,
+            isSkiInSkiOut: false,
+            airbnbLink: "https://www.airbnb.ca/rooms/1461637483646115205?guests=1&adults=1&s=67&unique_share_id=9b6640b9-138d-4627-bea4-cb2155e32c72",
+          },
         ],
       },
       {
