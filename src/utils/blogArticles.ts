@@ -11,6 +11,14 @@ export interface Article {
 // All blog articles data with proper image paths
 export const allArticles: Article[] = [
   {
+    title: "Whistler's Cozy Escapes: Ultimate Guide to the Best Condo Rentals",
+    category: "Luxury Properties",
+    description: "Discover Whistler's most stylish and comfortable condo rentals, from ski-in/ski-out options to village-center gems. Find your perfect 1-3 bedroom mountain escape with breathtaking views and amazing amenities.",
+    readTime: "12 min read",
+    link: "/post/best-condo-rentals-in-whistler",
+    coverImage: "/photos/post/best-condo-rentals-in-whistler/hero.jpg",
+  },
+  {
     title: "Celebrities/Influencers Spotted in Whistler with AceHost",
     category: "Celebrity Spotting",
     description: "Discover the A-listers and top influencers who've chosen AceHost for their Whistler getaways, from the Riverdale cast to adventure filmmakers and Olympic athletes.",
