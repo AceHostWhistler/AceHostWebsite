@@ -11,7 +11,7 @@ export interface Article {
 // All blog articles data with proper image paths
 export const allArticles: Article[] = [
   {
-    title: "Whistler's Cozy Escapes: Ultimate Guide to the Best Condo Rentals",
+    title: "Ultimate Guide to the Best Condo Airbnb Rentals in Whistler | Ski in Ski out + Best Locations!",
     category: "Luxury Properties",
     description: "Discover Whistler's most stylish and comfortable condo rentals, from ski-in/ski-out options to village-center gems. Find your perfect 1-3 bedroom mountain escape with breathtaking views and amazing amenities.",
     readTime: "12 min read",

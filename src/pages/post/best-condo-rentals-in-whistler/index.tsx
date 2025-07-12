@@ -14,7 +14,7 @@ export default function BlogPost() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Whistler's Cozy Escapes: Ultimate Guide to the Best Condo Rentals",
+    "headline": "Ultimate Guide to the Best Condo Airbnb Rentals in Whistler | Ski in Ski out + Best Locations!",
     "image": "https://acehost.ca/photos/post/best-condo-rentals-in-whistler/hero.jpg",
     "datePublished": "2025-10-15T08:00:00+00:00",
     "dateModified": "2025-10-15T08:00:00+00:00", 
@@ -38,20 +38,21 @@ export default function BlogPost() {
     <>
       <Head>
         <title>
-          Whistler's Cozy Escapes: Ultimate Guide to the Best Condo Rentals | AceHost
+          Ultimate Guide to the Best Condo Airbnb Rentals in Whistler | Ski in Ski out + Best Locations!
         </title>
         <meta
           name="description"
           content="Discover Whistler's most stylish and comfortable condo rentals, from ski-in/ski-out options to village-center gems. Find your perfect 1-3 bedroom mountain escape with breathtaking views and amazing amenities."
         />
-        <meta property="og:title" content="Whistler's Cozy Escapes: Ultimate Guide to the Best Condo Rentals | AceHost" />
+        <meta property="og:title" content="Ultimate Guide to the Best Condo Airbnb Rentals in Whistler | Ski in Ski out + Best Locations!" />
         <meta property="og:description" content="Discover Whistler's most stylish and comfortable condo rentals, from ski-in/ski-out options to village-center gems. Find your perfect 1-3 bedroom mountain escape with breathtaking views and amazing amenities." />
         <meta property="og:image" content="https://acehost.ca/photos/post/best-condo-rentals-in-whistler/hero.jpg" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Whistler's Cozy Escapes: Ultimate Guide to the Best Condo Rentals | AceHost" />
+        <meta name="twitter:title" content="Ultimate Guide to the Best Condo Airbnb Rentals in Whistler | Ski in Ski out + Best Locations!" />
         <meta name="twitter:description" content="Discover Whistler's most stylish and comfortable condo rentals, from ski-in/ski-out options to village-center gems. Find your perfect 1-3 bedroom mountain escape with breathtaking views and amazing amenities." />
         <meta name="twitter:image" content="https://acehost.ca/photos/post/best-condo-rentals-in-whistler/hero.jpg" />
+        <meta name="keywords" content="Whistler condo rentals, Whistler Airbnb, ski in ski out Whistler, best Whistler condos, Whistler accommodation, Whistler vacation rental, luxury condo Whistler" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -68,7 +69,7 @@ export default function BlogPost() {
             {/* Blog Header */}
             <div className="mb-10">
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Whistler's Cozy Escapes: Ultimate Guide to the Best Condo Rentals
+                Ultimate Guide to the Best Condo Airbnb Rentals in Whistler | Ski in Ski out + Best Locations!
               </h1>
               <div className="flex items-center text-sm text-gray-600 mb-8">
                 <span className="mr-4">Published: {publishDate}</span>
