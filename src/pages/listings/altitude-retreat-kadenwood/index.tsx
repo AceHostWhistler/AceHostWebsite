@@ -22,15 +22,17 @@ const AltitudeRetreat = () => {
   // Property photos
   const photos = [
     "/photos/properties/Altitude New Photos Best/hero2.jpeg",
-    "/photos/properties/Altitude New Photos Best/altitude retreat-21.jpg",
+    "/photos/properties/Altitude New Photos Best/009-2919 Ancient Cedars-70.jpg",
+    "/photos/properties/Altitude New Photos Best/065-2919 Ancient Cedars 2024-52.jpg", 
     "/photos/properties/Altitude New Photos Best/altitude retreat-19.jpg",
+    "/photos/properties/Altitude New Photos Best/025-2919 Ancient Cedars 2024-12.jpg",
+    "/photos/properties/Altitude New Photos Best/altitude retreat-21.jpg",
     "/photos/properties/Altitude New Photos Best/altitude retreat-18.jpg",
     "/photos/properties/Altitude New Photos Best/altitude retreat-17.jpg",
     "/photos/properties/Altitude New Photos Best/altitude retreat-15.jpg",
     "/photos/properties/Altitude New Photos Best/altitude retreat-12.jpg",
     "/photos/properties/Altitude New Photos Best/altitude retreat-9.jpg",
     "/photos/properties/Altitude New Photos Best/066-2919 Ancient Cedars 2024-53.jpg",
-    "/photos/properties/Altitude New Photos Best/065-2919 Ancient Cedars 2024-52.jpg",
     "/photos/properties/Altitude New Photos Best/064-2919 Ancient Cedars 2024-51.jpg",
     "/photos/properties/Altitude New Photos Best/063-2919 Ancient Cedars 2024-50.jpg",
     "/photos/properties/Altitude New Photos Best/062-2919 Ancient Cedars 2024-49.jpg",
@@ -70,7 +72,6 @@ const AltitudeRetreat = () => {
     "/photos/properties/Altitude New Photos Best/028-2919 Ancient Cedars 2024-15.jpg",
     "/photos/properties/Altitude New Photos Best/027-2919 Ancient Cedars 2024-14.jpg",
     "/photos/properties/Altitude New Photos Best/026-2919 Ancient Cedars 2024-13.jpg",
-    "/photos/properties/Altitude New Photos Best/025-2919 Ancient Cedars 2024-12.jpg",
     "/photos/properties/Altitude New Photos Best/024-2919 Ancient Cedars 2024-11.jpg",
     "/photos/properties/Altitude New Photos Best/023-2919 Ancient Cedars 2024-10.jpg",
     "/photos/properties/Altitude New Photos Best/022-2919 Ancient Cedars 2024-09.jpg",
@@ -82,7 +83,6 @@ const AltitudeRetreat = () => {
     "/photos/properties/Altitude New Photos Best/014-2919 Ancient Cedars 2024-01.jpg",
     "/photos/properties/Altitude New Photos Best/013-2919 Ancient Cedars-74.jpg",
     "/photos/properties/Altitude New Photos Best/012-2919 Ancient Cedars-73.jpg",
-    "/photos/properties/Altitude New Photos Best/009-2919 Ancient Cedars-70.jpg",
     "/photos/properties/Altitude New Photos Best/008-2919 Ancient Cedars-69.jpg",
     "/photos/properties/Altitude New Photos Best/007-2919 Ancient Cedars-62.jpg",
     "/photos/properties/Altitude New Photos Best/005-2919 Ancient Cedars-67.jpg",
@@ -258,7 +258,7 @@ const AltitudeRetreat = () => {
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                 <div className="relative aspect-[4/3] mb-2">
                   <Image
-                    src={photos[3]}
+                    src={photos[2]}
                     alt="Altitude Retreat Interior"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-300"
@@ -312,7 +312,7 @@ const AltitudeRetreat = () => {
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
                 <div className="relative aspect-[4/3] mb-2">
                   <Image
-                    src={photos[12]}
+                    src={photos[3]}
                     alt="Altitude Retreat Bedroom"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-300"
