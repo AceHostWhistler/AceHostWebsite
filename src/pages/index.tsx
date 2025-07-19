@@ -1013,12 +1013,22 @@ const Home = () => {
                 ski chalets, and ask us how we can make your next stay
                 exceptional!
               </p>
-              <Link
-                href="/properties"
-                className="inline-block bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-colors text-base font-medium"
-              >
-                View Luxury Rental Properties
-              </Link>
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  href="/properties"
+                  className="inline-block bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-colors text-base font-medium"
+                >
+                  View Luxury Rental Properties
+                </Link>
+                <a
+                  href="https://calendly.com/acehost/acehost-booking"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-colors text-base font-medium"
+                >
+                  Book Now
+                </a>
+              </div>
             </div>
             <div className="mt-8 md:mt-0 md:w-[58%] lg:w-[58%] flex justify-center md:justify-normal md:items-center px-1 md:px-0 md:pr-4">
               <div className="w-[98%] md:w-[95%] overflow-hidden">

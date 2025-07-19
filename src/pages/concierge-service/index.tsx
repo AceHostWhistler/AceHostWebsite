@@ -1697,12 +1697,22 @@ const ConciergeService = () => {
                 Let us enhance your Whistler experience with our premium
                 concierge services.
               </p>
-              <Link
-                href="/contact"
-                className="inline-block bg-white text-black font-medium px-8 py-4 rounded-full border border-gray-200 hover:border-gray-400 shadow-sm hover:shadow transition duration-200 text-lg"
-              >
-                Contact Us
-              </Link>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-block bg-white text-black font-medium px-8 py-4 rounded-full border border-gray-200 hover:border-gray-400 shadow-sm hover:shadow transition duration-200 text-lg"
+                >
+                  Contact Us
+                </Link>
+                <a
+                  href="https://calendly.com/acehost/acehost-booking"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-black text-white font-medium px-8 py-4 rounded-full hover:bg-gray-800 shadow-sm hover:shadow transition duration-200 text-lg"
+                >
+                  Book Now
+                </a>
+              </div>
             </div>
           </section>
         </main>
