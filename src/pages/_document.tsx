@@ -112,6 +112,57 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+        
+        {/* Script to remove Calendly popups */}
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            (function() {
+              function removeCalendlyPopups() {
+                // Look for elements containing the text from the popup
+                const textStrings = [
+                  "BOOK NOW", 
+                  "Check availability & schedule", 
+                  "Ready to book your event?",
+                  "Schedule a Consultation",
+                  "info@reelroom.ca"
+                ];
+                
+                // Function to check if an element or its children contain any of the target texts
+                function containsAnyText(element) {
+                  if (!element) return false;
+                  
+                  // Check the element's text content
+                  const text = element.innerText || element.textContent;
+                  if (text) {
+                    const lowerText = text.toLowerCase();
+                    for (const searchText of textStrings) {
+                      if (lowerText.includes(searchText.toLowerCase())) {
+                        return true;
+                      }
+                    }
+                  }
+                  
+                  return false;
+                }
+                
+                // Find all fixed or absolute positioned elements that might be popups
+                const potentialPopups = document.querySelectorAll('div[style*="position: fixed"], div[style*="position:fixed"], div[style*="position: absolute"], div[style*="position:absolute"], .calendly-overlay, .calendly-popup, [class*="calendly"], [id*="calendly"]');
+                
+                potentialPopups.forEach(element => {
+                  // If the element or its children contain any of our target texts, remove it
+                  if (containsAnyText(element)) {
+                    element.parentNode.removeChild(element);
+                    console.log("Removed Calendly popup element");
+                  }
+                });
+              }
+
+              // Run on page load and periodically to catch any popups that appear later
+              setTimeout(removeCalendlyPopups, 1000);
+              setInterval(removeCalendlyPopups, 3000);
+            })();
+          `
+        }} />
       </body>
     </Html>
   );
