@@ -162,9 +162,9 @@ const WedgeMountainLodgeSpa = () => {
         <main>
           <PropertyHeader 
             title="Wedge Mountain Lodge & Spa"
-            guests={12}
-            bedrooms={5}
-            bathrooms={5.5}
+            guests={26}
+            bedrooms={10}
+            bathrooms={13}
             priceRange="$8,000-$11,500+ per night"
             airbnbLink="https://www.airbnb.ca/rooms/45767069?guests=1&adults=1&s=67&unique_share_id=59f05055-32fd-4e3d-acb4-3f8bb24f4b51"
           />
