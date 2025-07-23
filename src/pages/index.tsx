@@ -408,7 +408,7 @@ const Home = () => {
       location: "whistler",
       link: "/listings/the-nest-ski-in-ski-out",
       airbnbLink:
-        "https://www.airbnb.ca/rooms/763259660349118016?guests=1&adults=1&s=67&unique_share_id=d18218f6-da74-4763-a199-d5a1dc8c85ff&source_impression_id=p3_1744822209_P3U3_5CgXenHmYC6",
+        "https://www.airbnb.ca/rooms/763259660349118016?guests=1&adults=1&s=67&unique_share_id=b5240c14-ecb8-4f5a-9c3c-f3861874c7e0",
       isPetFriendly: true,
       isSkiInSkiOut: true,
     },
@@ -1013,22 +1013,12 @@ const Home = () => {
                 ski chalets, and ask us how we can make your next stay
                 exceptional!
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Link
-                  href="/properties"
-                  className="inline-block bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-colors text-base font-medium"
-                >
-                  View Luxury Rental Properties
-                </Link>
-                <a
-                  href="https://calendly.com/acehost/acehost-booking"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-colors text-base font-medium"
-                >
-                  Book Now
-                </a>
-              </div>
+              <Link
+                href="/properties"
+                className="inline-block bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-colors text-base font-medium"
+              >
+                View Luxury Rental Properties
+              </Link>
             </div>
             <div className="mt-8 md:mt-0 md:w-[58%] lg:w-[58%] flex justify-center md:justify-normal md:items-center px-1 md:px-0 md:pr-4">
               <div className="w-[98%] md:w-[95%] overflow-hidden">
