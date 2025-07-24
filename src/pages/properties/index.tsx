@@ -520,38 +520,6 @@ export default function Properties() {
             priceRange: "$750-$2,200+ per night",
           },
           {
-            id: "bear-creek-5-bed",
-            name: "5-Bed | Creekside",
-            images: [
-              "/photos/properties/BearCreek 5-Bed/20250507_105617.jpg",
-              "/photos/properties/BearCreek 5-Bed/20250507_105719.jpg",
-              "/photos/properties/BearCreek 5-Bed/20250507_103518.jpg",
-            ],
-            guests: 10,
-            bedrooms: 5,
-            bathrooms: 4,
-            location: "Creekside, Whistler",
-            description:
-              "Beautifully Renovated & Fully Furnished 5 Bedroom, 4 Bathroom Home in Creekside, Whistler. Available from June 1 Until November 30, 2025.",
-            features: [
-              "Fully Furnished",
-              "Modern Kitchen",
-              "Washer & Dryer",
-              "Two Parking Spots",
-              "Quiet Neighborhood",
-              "Close to Gondola",
-              "Walk to Amenities",
-              "Luxury Finishes",
-            ],
-            highlights: [
-              "Peaceful Location",
-              "Newly Renovated",
-              "Spacious Layout",
-              "Walk to Creekside Gondola",
-            ],
-            priceRange: "$9,775 per month - 6 month minimum or $13,000 per month - 3 month minimum",
-          },
-          {
             id: "dream-log-chalet-5-bedroom-4-bath-creekside",
             name: "Dream Log Chalet | 5-Bed | 4-Bath | Creekside",
             images: [

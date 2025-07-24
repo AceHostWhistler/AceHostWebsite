@@ -467,23 +467,6 @@ const Home = () => {
       isSkiInSkiOut: false,
     },
     {
-      id: "bear-creek-5-bed",
-      name: "5-Bed | Creekside",
-      image: "/photos/properties/BearCreek 5-Bed/20250507_105617.jpg",
-      guests: 10,
-      bedrooms: 5,
-      beds: 5,
-      bathrooms: 4,
-      priceRange: "$9,775 per month - 6 month minimum or $13,000 per month - 3 month minimum",
-      winterPrice: "Available June 1 Until November 30, 2025",
-      holidayPrice: "",
-      location: "whistler",
-      link: "/listings/bear-creek-5-bed",
-      contactLink: "/contact",
-      isPetFriendly: false,
-      isSkiInSkiOut: false,
-    },
-    {
       id: "dream-log-chalet",
       name: "Dream Log Chalet | 5-Bed | 4-Bath | Creekside",
       image:
