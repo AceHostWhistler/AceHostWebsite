@@ -6,6 +6,13 @@ import Card from "./Card";
 const Testimonials = () => {
   const testimonials = [
     {
+      name: "Mike Farquhar",
+      role: "Guest",
+      text: "We recently stayed at Chalet La Forja in Kadenwood with a group of 16 (12 adults and 4 kids), and while the house itself was absolutely incredible, what truly made our experience exceptional was the AceHost team. From the moment we booked, Max, Ben, and Emma provided outstanding support. They helped us plan every detail of our trip, including arranging private chef meals, tours, rental vehicles, and other special touches that made the entire stay seamless and stress-free. Their communication was prompt, helpful, and always professional. During our time in Whistler, they checked in regularly and were always available if we needed anything. Even after our trip, the follow-up and care they showed truly stood out. It's rare to find a property management company so committed to hospitality at this level. I wouldn't hesitate to work with AceHost again, and I'd highly recommend them to anyone looking for a smooth and elevated travel experience.",
+      date: "2 weeks ago",
+      hasImage: false,
+    },
+    {
       name: "Marissa Charles",
       role: "Guest",
       text: "We had an incredible experience staying at the home! Everything was coordinated perfectly. They got us extra gondola badges and stocked all our groceries and responded very quickly to our requests. I could not recommend the company and the house more highly!",
