@@ -340,7 +340,7 @@ const ConciergeService = () => {
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
                   <div className="relative h-56">
                     <Image
-                      src="/photos/homepage/concierge-service/AirportTransfers.jpg"
+                      src="/photos/homepage/concierge-service/SkiRentals.png"
                       alt="In-home Ski/Snowboard Delivery"
                       fill
                       className="object-cover"
@@ -361,6 +361,14 @@ const ConciergeService = () => {
                       ski goggles, available. The best part is the delivery
                       fee is included!
                     </p>
+                    <a 
+                      href="https://www.blacktieskis.com/portal/?portal_name=acehost"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block px-4 py-2 bg-black text-white font-medium rounded hover:bg-gray-800 transition-colors duration-200"
+                    >
+                      Discounted Link to Book Rentals
+                    </a>
                   </div>
                 </div>
 
@@ -421,12 +429,12 @@ const ConciergeService = () => {
                   </div>
                 </div>
 
-                {/* Ski, Snowboard & Mountain Bike Rentals */}
+                {/* Ski Gear On Mountain Rental */}
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
                   <div className="relative h-56">
                     <Image
                       src="/photos/homepage/concierge-service/SkiRentals.png"
-                      alt="Ski, Snowboard & Mountain Bike Rentals"
+                      alt="Ski Gear On Mountain Rental"
                       fill
                       className="object-cover"
                     />
@@ -436,16 +444,15 @@ const ConciergeService = () => {
                       <span className="service-icon">
                         <FaSkiing className="text-lg" />
                       </span>
-                      Ski, Snowboard & Mountain Bike Rentals
+                      Ski Gear On Mountain Rental
                     </h3>
                     <p className="text-gray-600 mb-4">
-                      Visiting Whistler Village? Stop by Spicy Sports
-                      Whistler's locations for ski & snowboard rentals in
-                      the winter and mountain bike rentals in the summer. With
-                      a location in both the main and upper village, Spicy
-                      Sports' expertise and professional staff will make
-                      sure your experience on the mountain is comfortable and
-                      safe.
+                      Visiting Whistler Village? Stop by Spicy Sports Whistler's
+                      locations for ski & snowboard rentals in the winter and
+                      mountain bike rentals in the summer. With a location in
+                      both the main and upper village, Spicy Sports' expertise
+                      and professional staff will make sure your experience on
+                      the mountain is comfortable and safe.
                     </p>
                   </div>
                 </div>
@@ -653,7 +660,7 @@ const ConciergeService = () => {
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
                   <div className="relative h-56">
                     <Image
-                      src="/photos/homepage/concierge-service/Dinningand Apres Ski.jpeg"
+                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 12.57.08 PM.png"
                       alt="Catered Meals"
                       fill
                       className="object-cover"
@@ -672,7 +679,30 @@ const ConciergeService = () => {
                   </div>
                 </div>
 
-                {/* In-Home Bartender */}
+                {/* Bearfoot Bistro Vodka Ice Room Experience */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/Dinningand Apres Ski.jpeg"
+                      alt="Bearfoot Bistro Vodka Ice Room Experience"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <FaSnowflake className="text-lg" />
+                      </span>
+                      Bearfoot Bistro Vodka Ice Room Experience
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      Experience the world's coldest vodka tasting in Canada's first sub-zero vodka room at the iconic Bearfoot Bistro. Don a provided Arctic parka and sample premium vodkas from around the world in this unique -32°C environment.
+                    </p>
+                  </div>
+                </div>
+
+                {/* In-Home Bartender/Mixologist */}
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
                   <div className="relative h-56">
                     <Image
