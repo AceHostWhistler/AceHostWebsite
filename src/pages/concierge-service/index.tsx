@@ -687,9 +687,6 @@ const ConciergeService = () => {
                       allowFullScreen={true}
                       title="Private Chef Experiences Whistler Video"
                     ></iframe>
-                    <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-10 pointer-events-none">
-                      <div className="w-16 h-16 border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
-                    </div>
                   </div>
                   <div className="p-1 bg-gray-50">
                     <h3 className="text-xs font-medium text-center text-gray-700">
