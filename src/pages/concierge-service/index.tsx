@@ -676,8 +676,8 @@ const ConciergeService = () => {
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
                   <div className="relative h-56">
                     <Image
-                      src="/photos/homepage/concierge-service/Bartender.jpg"
-                      alt="In-Home Bartender"
+                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 12.36.56 PM.png"
+                      alt="In-Home Bartender/Mixologist"
                       fill
                       className="object-cover"
                     />
@@ -687,7 +687,7 @@ const ConciergeService = () => {
                       <span className="service-icon">
                         <BiDrink className="text-lg" />
                       </span>
-                      In-Home Bartender
+                      In-Home Bartender/Mixologist
                     </h3>
                     <p className="text-gray-600 mb-4">
                       Elevate your gatherings with a professional bartender who will craft premium cocktails tailored to your preferences. Our bartenders can create signature drinks, organize wine tastings, or simply ensure everyone's glass stays full throughout the evening. This service pairs perfectly with our private chef offerings.
@@ -699,8 +699,8 @@ const ConciergeService = () => {
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
                   <div className="relative h-56">
                     <Image
-                      src="/photos/homepage/concierge-service/GroceryDelivery.webp"
-                      alt="Grocery Delivery"
+                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 12.37.46 PM.png"
+                      alt="Grocery Delivery/Pre Arrival Stock"
                       fill
                       className="object-cover"
                     />
@@ -710,7 +710,7 @@ const ConciergeService = () => {
                       <span className="service-icon">
                         <FaUtensils className="text-lg" />
                       </span>
-                      Grocery Delivery
+                      Grocery Delivery/Pre Arrival Stock
                     </h3>
                     <p className="text-gray-600 mb-4">
                       Arrive at your luxury accommodation to find the kitchen fully stocked with your favorite foods and beverages. Simply share your preferences and dietary requirements, and our team will handle the shopping and delivery. This service ensures you can start enjoying your vacation immediately without worrying about grocery shopping.
@@ -983,7 +983,7 @@ const ConciergeService = () => {
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
                   <div className="relative h-56">
                     <Image
-                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.59.20 AM.png"
+                      src="/photos/homepage/concierge-service/VIP_Airport_Transfer.png"
                       alt="VIP Airport Transfers"
                       fill
                       className="object-cover"
