@@ -429,34 +429,6 @@ const ConciergeService = () => {
                   </div>
                 </div>
 
-                {/* Ski Gear On Mountain Rental */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/SkiRentals.png"
-                      alt="Ski Gear On Mountain Rental"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <FaSkiing className="text-lg" />
-                      </span>
-                      Ski Gear On Mountain Rental
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Visiting Whistler Village? Stop by Spicy Sports Whistler's
-                      locations for ski & snowboard rentals in the winter and
-                      mountain bike rentals in the summer. With a location in
-                      both the main and upper village, Spicy Sports' expertise
-                      and professional staff will make sure your experience on
-                      the mountain is comfortable and safe.
-                    </p>
-                  </div>
-                </div>
-
                 {/* Heli Ice Cave Adventure */}
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
                   <div className="relative h-56">
