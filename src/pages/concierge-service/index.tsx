@@ -24,28 +24,31 @@ import {
   FaWineGlassAlt,
   FaCar,
   FaPlane,
+  FaMedal,
+  FaDog,
+  FaCamera,
+  FaVideo,
 } from "react-icons/fa";
 import { IoPaperPlaneOutline } from "react-icons/io5";
-import { BiSpa, BiDrink, BiHomeAlt } from "react-icons/bi";
+import { BiSpa, BiDrink, BiHomeAlt, BiInjection } from "react-icons/bi";
 import {
   GiDogHouse,
   GiMountainCave,
   GiCookingPot,
   GiFoodTruck,
   GiHouseKeys,
+  GiMountainRoad,
+  GiBabyBottle,
 } from "react-icons/gi";
 import {
   MdCleaningServices,
   MdSpa,
   MdChildCare,
   MdAirportShuttle,
+  MdTerrain,
 } from "react-icons/md";
 
 const ConciergeService = () => {
-  const mountainServicesRef = useRef<HTMLDivElement>(null);
-  const diningServicesRef = useRef<HTMLDivElement>(null);
-  const inhomeServicesRef = useRef<HTMLDivElement>(null);
-  const transportServicesRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
@@ -104,24 +107,6 @@ const ConciergeService = () => {
       }
     };
   }, [videoRef]);
-
-  const scrollServices = (
-    ref: React.RefObject<HTMLDivElement>,
-    direction: "left" | "right"
-  ) => {
-    if (!ref.current) return;
-
-    const scrollAmount = 320; // Width of a card plus margin
-    const currentScroll = ref.current.scrollLeft;
-
-    ref.current.scrollTo({
-      left:
-        direction === "left"
-          ? currentScroll - scrollAmount
-          : currentScroll + scrollAmount,
-      behavior: "smooth",
-    });
-  };
 
   const toggleFaq = (index: number) => {
     setExpandedFaq(expandedFaq === index ? null : index);
@@ -291,386 +276,317 @@ const ConciergeService = () => {
                 Mountain Activities
               </h2>
               <p className="text-lg text-gray-600 mb-8 max-w-3xl">
-                Experience the best of Whistler's mountain adventures with
-                our curated selection of premium activities, all bookable
-                through our concierge service.
+                Experience the best of Whistler's mountains with our exclusive
+                adventure offerings and VIP access.
               </p>
 
-              <div className="relative">
-                <div
-                  className="flex overflow-x-auto gap-6 pb-6 snap-x snap-mandatory hide-scrollbar md:px-0 px-4"
-                  ref={mountainServicesRef}
-                  style={{
-                    scrollSnapType: "x mandatory",
-                    scrollPaddingLeft: "1.5rem",
-                    scrollPaddingRight: "1.5rem",
-                    WebkitOverflowScrolling: "touch",
-                  }}
-                >
-                  {/* Private Ski Instructor */}
-                  <div
-                    className="min-w-[calc(33.333%-16px)] w-1/3 bg-white rounded-lg overflow-hidden flex-shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 carousel-card"
-                    style={{ scrollSnapAlign: "start" }}
-                  >
-                    <div className="relative h-56 card-image">
-                      <Image
-                        src="/photos/homepage/concierge-service/PrivateSkiInstructor.jpg"
-                        alt="Private Ski Instructor"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-5 card-content">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 card-title">
-                        <span className="service-icon">
-                          <FaSkiing className="text-lg" />
-                        </span>
-                        Private Ski Instructor
-                      </h3>
-                      <p className="text-gray-600 mb-4 card-description">
-                        Private ski lessons are an amazing way to receive
-                        customized learning experiences and of course, skip the
-                        lines! Arrange a private ski instructor for your group,
-                        available for all ages and levels. Private ski lessons
-                        can be booked for a half day (3 hours) or a full day (6
-                        hours), and can accommodate up to 6 people.
-                      </p>
-                      <p className="text-gray-600 mb-4">
-                        If time permits, our AceHost team would love to show you
-                        around the slopes, ski in ski outs, etc... We can show
-                        you our favourite runs to give you an authentic
-                        Whistler-Blackcomb experience.
-                      </p>
-                    </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {/* Private Ski Instructor */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/PrivateSkiInstructor.jpg"
+                      alt="Private Ski Instructor"
+                      fill
+                      className="object-cover"
+                    />
                   </div>
-
-                  {/* Whistler Heli-Skiing */}
-                  <div
-                    className="min-w-[calc(33.333%-16px)] w-1/3 bg-white rounded-lg overflow-hidden flex-shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 carousel-card"
-                    style={{ scrollSnapAlign: "start" }}
-                  >
-                    <div className="relative h-56 card-image">
-                      <Image
-                        src="/photos/homepage/concierge-service/WhistlerHeli.jpg"
-                        alt="Whistler Heli-Skiing"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-5 card-content">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 card-title">
-                        <span className="service-icon">
-                          <FaSkiing className="text-lg" />
-                        </span>
-                        Whistler Heli-Skiing
-                      </h3>
-                      <p className="text-gray-600 mb-4 card-description">
-                        Take your skiing experience to the next level by booking
-                        a heli-skiing trip through AceHost. We are partnered
-                        with local heli-skiing companies that provide
-                        first-class heli trips led by certified ski guides.
-                        Contact us to book your heli-skiing experience today.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Steak & Fondue Snowmobile Experience */}
-                  <div
-                    className="min-w-[calc(33.333%-16px)] w-1/3 bg-white rounded-lg overflow-hidden flex-shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 carousel-card"
-                    style={{ scrollSnapAlign: "start" }}
-                  >
-                    <div className="relative h-56 card-image">
-                      <Image
-                        src="/photos/homepage/concierge-service/SteakFondue.png"
-                        alt="Steak & Fondue Snowmobile Experience"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-5 card-content">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 card-title">
-                        <span className="service-icon">
-                          <FaSnowplow className="text-lg" />
-                        </span>
-                        Steak & Fondue Snowmobile Experience
-                      </h3>
-                      <p className="text-gray-600 mb-4 card-description">
-                        Book a snow mobile experience through AceHost and
-                        explore the mountain in style. This luxury concierge
-                        service offers a guided snowmobile tour through the
-                        beautiful landscapes of Whistler-Blackcomb.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Ski & Snowboard Rentals */}
-                  <div
-                    className="min-w-[calc(33.333%-16px)] w-1/3 bg-white rounded-lg overflow-hidden flex-shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 carousel-card"
-                    style={{ scrollSnapAlign: "start" }}
-                  >
-                    <div className="relative h-56 card-image">
-                      <Image
-                        src="/photos/homepage/concierge-service/SkiRentals.png"
-                        alt="Ski & Snowboard Rentals"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-5 card-content">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 card-title">
-                        <span className="service-icon">
-                          <FaSkiing className="text-lg" />
-                        </span>
-                        Ski & Snowboard Rentals | Black Tie
-                      </h3>
-                      <p className="text-gray-600 mb-4 card-description">
-                        Enjoy the convenience of ski/snowboard rentals and
-                        fittings with Black Tie's award-winning delivery
-                        service. AceHost arranges Black Tie rentals to come
-                        directly to your home between 7:30am-10pm with a
-                        selection boots, skis, snowboards, and poles. Black Tie
-                        rentals can also bring a selection of socks, gloves and
-                        ski goggles, available. The best part is the delivery
-                        fee is included!
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Heli Glacier Meal */}
-                  <div
-                    className="min-w-[calc(33.333%-16px)] w-1/3 bg-white rounded-lg overflow-hidden flex-shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 carousel-card"
-                    style={{ scrollSnapAlign: "start" }}
-                  >
-                    <div className="relative h-56 card-image">
-                      <Image
-                        src="/photos/homepage/concierge-service/HeliGlacier Meal.jpg"
-                        alt="Heli Glacier Meal"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-5 card-content">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 card-title">
-                        <span className="service-icon">
-                          <GiCookingPot className="text-lg" />
-                        </span>
-                        Heli Glacier Meal
-                      </h3>
-                      <p className="text-gray-600 mb-4 card-description">
-                        The Heli Glacier Meal is one of AceHost's most
-                        highly rated experiences. Enjoy a private chef prepared
-                        meal while taking in the stunning views of the local
-                        mountain ranges from a glacier. Our chefs and servers
-                        join the heli trips to serve meals and provide a
-                        first-rate dining experience. Contact us to get a quote
-                        for this experience.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Snowmobile Experience */}
-                  <div
-                    className="min-w-[calc(33.333%-16px)] w-1/3 bg-white rounded-lg overflow-hidden flex-shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 carousel-card"
-                    style={{ scrollSnapAlign: "start" }}
-                  >
-                    <div className="relative h-56 card-image">
-                      <Image
-                        src="/photos/homepage/concierge-service/Snowmobile Experience.png"
-                        alt="Snowmobile Experience"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-5 card-content">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 card-title">
-                        <span className="service-icon">
-                          <FaSnowplow className="text-lg" />
-                        </span>
-                        Snowmobile Experience
-                      </h3>
-                      <p className="text-gray-600 mb-4 card-description">
-                        For a regular snowmobile experience, AceHost can arrange
-                        a tour of the Blackcomb mountain for you and your group.
-                        The snowmobile experience offers a variety of levels,
-                        for beginners and adventurous riders, and anyone in
-                        between. Personalize your trip and choose from a range
-                        of scenic options.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Ski, Snowboard & Mountain Bike Rentals */}
-                  <div
-                    className="min-w-[calc(33.333%-16px)] w-1/3 bg-white rounded-lg overflow-hidden flex-shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 carousel-card"
-                    style={{ scrollSnapAlign: "start" }}
-                  >
-                    <div className="relative h-56 card-image">
-                      <Image
-                        src="/photos/homepage/concierge-service/SkiRentals.png"
-                        alt="Ski, Snowboard & Mountain Bike Rentals"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-5 card-content">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 card-title">
-                        <span className="service-icon">
-                          <FaSkiing className="text-lg" />
-                        </span>
-                        Ski, Snowboard & Mountain Bike Rentals
-                      </h3>
-                      <p className="text-gray-600 mb-4 card-description">
-                        Visiting Whistler Village? Stop by Spicy Sports
-                        Whistler's locations for ski & snowboard rentals in
-                        the winter and mountain bike rentals in the summer. With
-                        a location in both the main and upper village, Spicy
-                        Sports' expertise and professional staff will make
-                        sure your experience on the mountain is comfortable and
-                        safe.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Heli Ice Cave Adventure */}
-                  <div
-                    className="min-w-[calc(33.333%-16px)] w-1/3 bg-white rounded-lg overflow-hidden flex-shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 carousel-card"
-                    style={{ scrollSnapAlign: "start" }}
-                  >
-                    <div className="relative h-56 card-image">
-                      <Image
-                        src="/photos/homepage/concierge-service/HeliSki.jpeg"
-                        alt="Heli Ice Cave Adventure"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-5 card-content">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 card-title">
-                        <span className="service-icon">
-                          <GiMountainCave className="text-lg" />
-                        </span>
-                        Heli Ice Cave Adventure
-                      </h3>
-                      <p className="text-gray-600 mb-4 card-description">
-                        Take a journey through 12,000 - 20,000-year-old ice
-                        caves via a scenic helicopter ride through the local
-                        mountain range. Soaring over ancient glacier formations,
-                        guests can experience a guide-led tour inside ice
-                        tunnels and remote ice caves. Elevate your tour
-                        experience by adding Bearfoot Bistro's charcuterie
-                        and dessert platters. Contact us for ice cave adventure
-                        tour quote.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Dog Sledding */}
-                  <div
-                    className="min-w-[calc(33.333%-16px)] w-1/3 bg-white rounded-lg overflow-hidden flex-shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 carousel-card"
-                    style={{ scrollSnapAlign: "start" }}
-                  >
-                    <div className="relative h-56 card-image">
-                      <Image
-                        src="/photos/homepage/concierge-service/DogSled.jpg"
-                        alt="Dog Sledding"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-5 card-content">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 card-title">
-                        <span className="service-icon">
-                          <GiDogHouse className="text-lg" />
-                        </span>
-                        Dog Sledding
-                      </h3>
-                      <p className="text-gray-600 mb-4 card-description">
-                        Experience an authentic winter activity by booking a dog
-                        sled ride through the Callaghan Valley Old Growth
-                        Forests. This tour offers a ride through open and
-                        winding trails, suitable for families looking to get
-                        outdoors and soak in the beauty of local forests.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Zipline Tours */}
-                  <div
-                    className="min-w-[calc(33.333%-16px)] w-1/3 bg-white rounded-lg overflow-hidden flex-shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 carousel-card"
-                    style={{ scrollSnapAlign: "start" }}
-                  >
-                    <div className="relative h-56 card-image">
-                      <Image
-                        src="/photos/homepage/concierge-service/ZipLine.jpg"
-                        alt="Zipline Tours"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-5 card-content">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 card-title">
-                        <span className="service-icon">
-                          <FaMountain className="text-lg" />
-                        </span>
-                        Zipline Tours
-                      </h3>
-                      <p className="text-gray-600 mb-4 card-description">
-                        Experience a bird's-eye view of Whistler Mountain
-                        when you book a zip-line tour through AceHost. The
-                        panoramic views of Whistler can be seen from treetop
-                        suspension bridges and sky high viewing platforms. Enjoy
-                        this experience year-round experience. Contact us to
-                        book your zip-line tour today!
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Vallea Illumina */}
-                  <div
-                    className="min-w-[calc(33.333%-16px)] w-1/3 bg-white rounded-lg overflow-hidden flex-shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 carousel-card"
-                    style={{ scrollSnapAlign: "start" }}
-                  >
-                    <div className="relative h-56 card-image">
-                      <Image
-                        src="/photos/homepage/concierge-service/Valley.jpg"
-                        alt="Vallea Illumina"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-5 card-content">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 card-title">
-                        <span className="service-icon">
-                          <FaHiking className="text-lg" />
-                        </span>
-                        Vallea Illumina
-                      </h3>
-                      <p className="text-gray-600 mb-4 card-description">
-                        One of the most popular local activities, the Vallea
-                        Ilumina night walk is a must do when visiting Whistler.
-                        The 30-45 minute walk through an illuminated forest is a
-                        sight for sore eyes and fun for the whole family. Join
-                        an evening excursion and be enchanted by the stories
-                        about the legends of Whistler.
-                      </p>
-                    </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <FaSkiing className="text-lg" />
+                      </span>
+                      Private Ski Instructor
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      AceHost can help organize your private ski and snowboard
+                      lessons through our connections at Extremely Canadian
+                      Whistler. Our guides can help elevate your skill level,
+                      find hidden trails, and are familiar with the best spots on
+                      the mountain, especially during powder days. Guides can
+                      help you skip lines and meet at your convenience.
+                    </p>
                   </div>
                 </div>
 
-                <button
-                  className="absolute left-0 md:left-2 top-1/2 -translate-y-1/2 bg-white p-4 md:p-3 rounded-full shadow-lg z-10 hover:bg-gray-100 focus:outline-none"
-                  onClick={() => scrollServices(mountainServicesRef, "left")}
-                  aria-label="Scroll left"
-                >
-                  <IoIosArrowBack className="text-2xl md:text-xl text-gray-800" />
-                </button>
-                <button
-                  className="absolute right-0 md:right-2 top-1/2 -translate-y-1/2 bg-white p-4 md:p-3 rounded-full shadow-lg z-10 hover:bg-gray-100 focus:outline-none"
-                  onClick={() => scrollServices(mountainServicesRef, "right")}
-                  aria-label="Scroll right"
-                >
-                  <IoIosArrowForward className="text-2xl md:text-xl text-gray-800" />
-                </button>
+                {/* Ski or Ride with an Olympian */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.23.19 AM.png"
+                      alt="Ski or Ride with an Olympian"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <FaMedal className="text-lg" />
+                      </span>
+                      Ski or Ride with an Olympian
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      Experience the thrill of skiing or snowboarding alongside an Olympian with Snow
+                      School's exclusive program. Trace their lines, refine your technique, and hear
+                      inspiring stories firsthand. This unparalleled opportunity offers a unique blend of
+                      personalized instruction and insight from world-class athletes. Go one-on-one or
+                      make a group with up to four family or friends of similar ability - for one price.
+                    </p>
+                  </div>
+                </div>
+
+                {/* In-home Ski/Snowboard Delivery */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/AirportTransfers.jpg"
+                      alt="In-home Ski/Snowboard Delivery"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <FaSnowflake className="text-lg" />
+                      </span>
+                      In-home Ski/Snowboard Delivery
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      AceHost has partnered with Black Tie to deliver equipment
+                      directly to your home between 7:30am-10pm with a
+                      selection boots, skis, snowboards, and poles. Black Tie
+                      rentals can also bring a selection of socks, gloves and
+                      ski goggles, available. The best part is the delivery
+                      fee is included!
+                    </p>
+                  </div>
+                </div>
+
+                {/* Heli Glacier Meal */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/HeliGlacier Meal.jpg"
+                      alt="Heli Glacier Meal"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <GiCookingPot className="text-lg" />
+                      </span>
+                      Heli Glacier Meal
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      The Heli Glacier Meal is one of AceHost's most
+                      highly rated experiences. Enjoy a private chef prepared
+                      meal while taking in the stunning views of the local
+                      mountain ranges from a glacier. Our chefs and servers
+                      join the heli trips to serve meals and provide a
+                      first-rate dining experience. Contact us to get a quote
+                      for this experience.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Snowmobile Experience */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/Snowmobile Experience.png"
+                      alt="Snowmobile Experience"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <FaSnowplow className="text-lg" />
+                      </span>
+                      Snowmobile Experience
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      For a regular snowmobile experience, AceHost can arrange
+                      a tour of the Blackcomb mountain for you and your group.
+                      The snowmobile experience offers a variety of levels,
+                      for beginners and adventurous riders, and anyone in
+                      between. Personalize your trip and choose from a range
+                      of scenic options.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Ski, Snowboard & Mountain Bike Rentals */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/SkiRentals.png"
+                      alt="Ski, Snowboard & Mountain Bike Rentals"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <FaSkiing className="text-lg" />
+                      </span>
+                      Ski, Snowboard & Mountain Bike Rentals
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      Visiting Whistler Village? Stop by Spicy Sports
+                      Whistler's locations for ski & snowboard rentals in
+                      the winter and mountain bike rentals in the summer. With
+                      a location in both the main and upper village, Spicy
+                      Sports' expertise and professional staff will make
+                      sure your experience on the mountain is comfortable and
+                      safe.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Heli Ice Cave Adventure */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/HeliSki.jpeg"
+                      alt="Heli Ice Cave Adventure"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <GiMountainCave className="text-lg" />
+                      </span>
+                      Heli Ice Cave Adventure
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      Take a journey through 12,000 - 20,000-year-old ice
+                      caves via a scenic helicopter ride through the local
+                      mountain range. Soaring over ancient glacier formations,
+                      guests can experience a guide-led tour inside ice
+                      tunnels and remote ice caves. Elevate your tour
+                      experience by adding Bearfoot Bistro's charcuterie
+                      and dessert platters. Contact us for ice cave adventure
+                      tour quote.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Dog Sledding */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/DogSled.jpg"
+                      alt="Dog Sledding"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <GiDogHouse className="text-lg" />
+                      </span>
+                      Dog Sledding
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      Experience an authentic winter activity by booking a dog
+                      sled ride through the Callaghan Valley Old Growth
+                      Forests. This tour offers a ride through open and
+                      winding trails, suitable for families looking to get
+                      outdoors and soak in the beauty of local forests.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Zipline Tours */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/ZipLine.jpg"
+                      alt="Zipline Tours"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <FaMountain className="text-lg" />
+                      </span>
+                      Zipline Tours
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      Experience a bird's-eye view of Whistler Mountain
+                      when you book a zip-line tour through AceHost. The
+                      panoramic views of Whistler can be seen from treetop
+                      suspension bridges and sky high viewing platforms. Enjoy
+                      this experience year-round experience. Contact us to
+                      book your zip-line tour today!
+                    </p>
+                  </div>
+                </div>
+
+                {/* Vallea Illumina */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/Valley.jpg"
+                      alt="Vallea Illumina"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <FaHiking className="text-lg" />
+                      </span>
+                      Vallea Illumina
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      One of the most popular local activities, the Vallea
+                      Ilumina night walk is a must do when visiting Whistler.
+                      The 30-45 minute walk through an illuminated forest is a
+                      sight for sore eyes and fun for the whole family. Join
+                      an evening excursion and be enchanted by the stories
+                      about the legends of Whistler.
+                    </p>
+                  </div>
+                </div>
+                
+                {/* Crystal Hut Snowmobile Fondue Experience */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.21.24 AM.png"
+                      alt="Crystal Hut Snowmobile Fondue Experience"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <GiMountainRoad className="text-lg" />
+                      </span>
+                      Crystal Hut Snowmobile Fondue Experience
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      Suits adventurous beginner and intermediate riders. Drive
+                      your own snowmobile or share with a friend as you sweep
+                      across the forested trails of Blackcomb Mountain. Fondue experience when you get to the top!
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -686,527 +602,372 @@ const ConciergeService = () => {
                 offer, from private chefs to exclusive restaurant reservations.
               </p>
 
-              <div className="relative">
-                <div
-                  className="flex overflow-x-auto gap-6 pb-6 snap-x snap-mandatory hide-scrollbar md:px-0 px-4"
-                  ref={diningServicesRef}
-                  style={{
-                    scrollSnapType: "x mandatory",
-                    scrollPaddingLeft: "1.5rem",
-                    scrollPaddingRight: "1.5rem",
-                    WebkitOverflowScrolling: "touch",
-                  }}
-                >
-                  {/* Private Chef Service */}
-                  <div
-                    className="min-w-[calc(33.333%-16px)] w-1/3 bg-white rounded-lg overflow-hidden flex-shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 carousel-card"
-                    style={{ scrollSnapAlign: "start" }}
-                  >
-                    <div className="relative h-56 card-image">
-                      <Image
-                        src="/photos/homepage/concierge-service/PrivateChef.jpeg"
-                        alt="Private Chef Service"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-5 card-content">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 card-title">
-                        <span className="service-icon">
-                          <GiCookingPot className="text-lg" />
-                        </span>
-                        Private Chef Service
-                      </h3>
-                      <p className="text-gray-600 mb-4 card-description">
-                        Experience fine dining in the comfort of your
-                        accommodations when you book a personalized, private
-                        chef service through AceHost. Our partner chefs will
-                        prepare a custom menu to curate a dining experience that
-                        suits your preferences and dietary needs. Let us suggest
-                        a menu theme or simply let us know what you're
-                        craving - our chefs will make it happen!
-                      </p>
-                    </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {/* In-Home Private Chef */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/PrivateChef.jpeg"
+                      alt="In-Home Private Chef"
+                      fill
+                      className="object-cover"
+                    />
                   </div>
-
-                  {/* In-Home Private Bartender Service */}
-                  <div
-                    className="min-w-[calc(33.333%-16px)] w-1/3 bg-white rounded-lg overflow-hidden flex-shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 carousel-card"
-                    style={{ scrollSnapAlign: "start" }}
-                  >
-                    <div className="relative h-56 card-image">
-                      <Image
-                        src="/photos/homepage/concierge-service/Bartender.jpg"
-                        alt="In-Home Private Bartender Service"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-5 card-content">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 card-title">
-                        <span className="service-icon">
-                          <BiDrink className="text-lg" />
-                        </span>
-                        In-Home Private Bartender Service
-                      </h3>
-                      <p className="text-gray-600 mb-4 card-description">
-                        Enjoy the luxury of having a private bartender create
-                        custom cocktails for your special celebrations. Book a
-                        mixologist who specializes in crafting unique drinks
-                        suited to your preferences. Whether you're hosting
-                        a family dinner, a cocktail reception, or anything in
-                        between, our skilled bartenders add a touch of
-                        sophistication to any gathering.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Daily Butler & Host Service */}
-                  <div
-                    className="min-w-[calc(33.333%-16px)] w-1/3 bg-white rounded-lg overflow-hidden flex-shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 carousel-card"
-                    style={{ scrollSnapAlign: "start" }}
-                  >
-                    <div className="relative h-56 card-image">
-                      <Image
-                        src="/photos/homepage/concierge-service/Butler.jpg"
-                        alt="Daily Butler & Host Service"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-5 card-content">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 card-title">
-                        <span className="service-icon">
-                          <FaConciergeBell className="text-lg" />
-                        </span>
-                        Daily Butler & Host Service
-                      </h3>
-                      <p className="text-gray-600 mb-4 card-description">
-                        Breakfast service, meal preparation, and daily general
-                        assistance is available to our clients. Book a
-                        professional butler through AceHost and enjoy the
-                        convenience and luxury that comes with having dedicated
-                        staff to assist with your daily needs.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Dining and Après-ski */}
-                  <div
-                    className="min-w-[calc(33.333%-16px)] w-1/3 bg-white rounded-lg overflow-hidden flex-shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 carousel-card"
-                    style={{ scrollSnapAlign: "start" }}
-                  >
-                    <div className="relative h-56 card-image">
-                      <Image
-                        src="/photos/homepage/concierge-service/Dinningand Apres Ski.jpeg"
-                        alt="Dining and Après-ski"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-5 card-content">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 card-title">
-                        <span className="service-icon">
-                          <FaGlassCheers className="text-lg" />
-                        </span>
-                        Dining and Après-ski
-                      </h3>
-                      <p className="text-gray-600 mb-4 card-description">
-                        Explore the local après-ski and dining scene with
-                        recommendations from AceHost. After all, we are the
-                        experts! Our company partners with a variety of local
-                        restaurants and bars and can help you secure
-                        reservations at the best venues in town.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* VIP Restaurant Reservations */}
-                  <div
-                    className="min-w-[calc(33.333%-16px)] w-1/3 bg-white rounded-lg overflow-hidden flex-shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 carousel-card"
-                    style={{ scrollSnapAlign: "start" }}
-                  >
-                    <div className="relative h-56 card-image">
-                      <Image
-                        src="/photos/homepage/concierge-service/WhistlerRestarurants.png"
-                        alt="VIP Restaurant Reservations"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-5 card-content">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 card-title">
-                        <span className="service-icon">
-                          <FaUtensils className="text-lg" />
-                        </span>
-                        VIP Restaurant Reservations
-                      </h3>
-                      <p className="text-gray-600 mb-4 card-description">
-                        Are you looking to dine at Whistler's most coveted
-                        restaurants? AceHost has established relationships with
-                        many of the most exclusive restaurants in the area. We
-                        can help you secure reservations at sought-after
-                        establishments that might otherwise be fully booked. If
-                        you have a clear list of restaurants you'd like to
-                        visit during your stay, simply send us the list and
-                        we'll do our best to secure your reservations.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* AceHost TableScaping */}
-                  <div
-                    className="min-w-[calc(33.333%-16px)] w-1/3 bg-white rounded-lg overflow-hidden flex-shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 carousel-card"
-                    style={{ scrollSnapAlign: "start" }}
-                  >
-                    <div className="relative h-56 card-image">
-                      <Image
-                        src="/photos/homepage/concierge-service/Tabslescaping.jpeg"
-                        alt="AceHost TableScaping"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-5 card-content">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 card-title">
-                        <span className="service-icon">
-                          <FaUtensils className="text-lg" />
-                        </span>
-                        AceHost TableScaping
-                      </h3>
-                      <p className="text-gray-600 mb-4 card-description">
-                        Elevate your private dinner experience with
-                        AceHost's TableScaping services. Our dedicated team
-                        can design and set up a beautiful tablescape for special
-                        occasions. From elegant place settings to floral
-                        arrangements, our table decorations add a touch of
-                        luxury to any private dining experience. This service is
-                        highly recommended in combination with our private chef
-                        service.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Grocery Delivery */}
-                  <div
-                    className="min-w-[calc(33.333%-16px)] w-1/3 bg-white rounded-lg overflow-hidden flex-shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 carousel-card"
-                    style={{ scrollSnapAlign: "start" }}
-                  >
-                    <div className="relative h-56 card-image">
-                      <Image
-                        src="/photos/homepage/concierge-service/GroceryDelivery.webp"
-                        alt="Grocery Delivery"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-5 card-content">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 card-title">
-                        <span className="service-icon">
-                          <GiFoodTruck className="text-lg" />
-                        </span>
-                        Grocery Delivery
-                      </h3>
-                      <p className="text-gray-600 mb-4 card-description">
-                        AceHost offers pre-arrival grocery shopping services.
-                        Simply provide us with your grocery list, and we'll
-                        ensure that your kitchen is fully stocked upon your
-                        arrival. From fresh produce to your favorite snacks and
-                        beverages, we take care of the shopping so you can focus
-                        on enjoying your vacation.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Omakasi & Chef's Table Experience */}
-                  <div
-                    className="min-w-[calc(33.333%-16px)] w-1/3 bg-white rounded-lg overflow-hidden flex-shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 carousel-card"
-                    style={{ scrollSnapAlign: "start" }}
-                  >
-                    <div className="relative h-56 card-image">
-                      <Image
-                        src="/photos/homepage/concierge-service/OmakasiSushi.jpeg"
-                        alt="Omakasi & Chef's Table Experience"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-5 card-content">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 card-title">
-                        <span className="service-icon">
-                          <GiCookingPot className="text-lg" />
-                        </span>
-                        Omakasi & Chef's Table Experience
-                      </h3>
-                      <p className="text-gray-600 mb-4 card-description">
-                        Book through AceHost to arrange a custom meal service
-                        that features a chef's selected set of dishes. This
-                        is the ultimate way to elevate your dining experience.
-                        Our chef's table experience offers a multi-course
-                        meal tailored to your preferences, with each dish
-                        presented and explained by the chef.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Sommelier & Wine Pairing Service */}
-                  <div
-                    className="min-w-[calc(33.333%-16px)] w-1/3 bg-white rounded-lg overflow-hidden flex-shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 carousel-card"
-                    style={{ scrollSnapAlign: "start" }}
-                  >
-                    <div className="relative h-56 card-image">
-                      <Image
-                        src="/photos/homepage/concierge-service/SommelierWinePairings.webp"
-                        alt="Sommelier & Wine Pairing Service"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-5 card-content">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 card-title">
-                        <span className="service-icon">
-                          <FaWineGlassAlt className="text-lg" />
-                        </span>
-                        Sommelier & Wine Pairing Service
-                      </h3>
-                      <p className="text-gray-600 mb-4 card-description">
-                        Enhance your dining experience with a personalized wine
-                        pairing service. Our sommeliers can recommend the
-                        perfect wines to complement your meals, whether
-                        you're dining in or enjoying a meal prepared by our
-                        private chef. This service can also include wine
-                        tastings and educational sessions for those interested
-                        in learning more about fine wines.
-                      </p>
-                    </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <GiCookingPot className="text-lg" />
+                      </span>
+                      In-Home Private Chef
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      AceHost offers in-home private chef dining services. This is one of our most popular services and includes menu planning, grocery shopping, preparation, cooking and clean up afterward. The AceHost chef team will work with you to customize menus for a multi-course meal, brunch, dinner and everything in between.
+                    </p>
                   </div>
                 </div>
 
-                <button
-                  className="absolute left-0 md:left-2 top-1/2 -translate-y-1/2 bg-white p-4 md:p-3 rounded-full shadow-lg z-10 hover:bg-gray-100 focus:outline-none"
-                  onClick={() => scrollServices(diningServicesRef, "left")}
-                  aria-label="Scroll left"
-                >
-                  <IoIosArrowBack className="text-2xl md:text-xl text-gray-800" />
-                </button>
-                <button
-                  className="absolute right-0 md:right-2 top-1/2 -translate-y-1/2 bg-white p-4 md:p-3 rounded-full shadow-lg z-10 hover:bg-gray-100 focus:outline-none"
-                  onClick={() => scrollServices(diningServicesRef, "right")}
-                  aria-label="Scroll right"
-                >
-                  <IoIosArrowForward className="text-2xl md:text-xl text-gray-800" />
-                </button>
+                {/* Restaurant Reservations */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/WhistlerRestarurants.png"
+                      alt="Restaurant Reservations"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <FaCalendarCheck className="text-lg" />
+                      </span>
+                      Restaurant Reservations
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      AceHost can help secure your reservations for the hottest restaurants in Whistler. From acclaimed fine-dining establishments to local hidden gems, our concierge team has the connections to get you seated at the best tables, even during peak season when reservations are typically hard to get.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Catered Meals */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/Dinningand Apres Ski.jpeg"
+                      alt="Catered Meals"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <GiFoodTruck className="text-lg" />
+                      </span>
+                      Catered Meals
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      If you prefer a more casual dining experience without the full private chef service, our catered meal options are perfect. We'll arrange for gourmet prepared meals to be delivered to your accommodation, ready to heat and serve at your convenience. These meals are prepared by top local chefs using fresh, seasonal ingredients.
+                    </p>
+                  </div>
+                </div>
+
+                {/* In-Home Bartender */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/Bartender.jpg"
+                      alt="In-Home Bartender"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <BiDrink className="text-lg" />
+                      </span>
+                      In-Home Bartender
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      Elevate your gatherings with a professional bartender who will craft premium cocktails tailored to your preferences. Our bartenders can create signature drinks, organize wine tastings, or simply ensure everyone's glass stays full throughout the evening. This service pairs perfectly with our private chef offerings.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Grocery Delivery */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/GroceryDelivery.webp"
+                      alt="Grocery Delivery"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <FaUtensils className="text-lg" />
+                      </span>
+                      Grocery Delivery
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      Arrive at your luxury accommodation to find the kitchen fully stocked with your favorite foods and beverages. Simply share your preferences and dietary requirements, and our team will handle the shopping and delivery. This service ensures you can start enjoying your vacation immediately without worrying about grocery shopping.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Wine & Champagne Selection */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/SommelierWinePairings.webp"
+                      alt="Wine & Champagne Selection"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <FaWineGlassAlt className="text-lg" />
+                      </span>
+                      Wine & Champagne Selection
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      Let our wine specialists curate a selection of fine wines and champagnes for your stay. Whether you're looking for specific bottles, want recommendations to pair with meals, or wish to arrange a private tasting, our team can ensure your cellar is stocked with premium offerings that match your taste and occasion.
+                    </p>
+                  </div>
+                </div>
+
               </div>
             </div>
           </section>
 
-          {/* Additional In-Home Services Section */}
+          {/* Additional In-home Services - UPDATED TO GRID LAYOUT */}
           <section id="inhome" className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Additional In-Home Services
+                Additional In-home Services
               </h2>
+              <p className="text-lg text-gray-600 mb-8 max-w-3xl">
+                Enhance your stay with our premium in-home services designed to
+                bring luxury and comfort directly to your accommodation.
+              </p>
 
-              <div className="relative">
-                <div
-                  className="flex overflow-x-auto gap-6 pb-6 snap-x snap-mandatory hide-scrollbar md:px-0 px-4"
-                  ref={inhomeServicesRef}
-                  style={{
-                    scrollSnapType: "x mandatory",
-                    scrollPaddingLeft: "1.5rem",
-                    scrollPaddingRight: "1.5rem",
-                    WebkitOverflowScrolling: "touch",
-                  }}
-                >
-                  {/* In-House Massages */}
-                  <div
-                    className="min-w-[calc(33.333%-16px)] w-1/3 bg-white rounded-lg overflow-hidden flex-shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 carousel-card"
-                    style={{ scrollSnapAlign: "start" }}
-                  >
-                    <div className="relative h-56 card-image">
-                      <Image
-                        src="/photos/homepage/concierge-service/In-House Messages.jpg"
-                        alt="In-House Massages"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-5 card-content">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 card-title">
-                        <span className="service-icon">
-                          <FaSkiing className="mr-2" />
-                        </span>
-                        In-House Massages
-                      </h3>
-                      <p className="text-gray-600 mb-4 card-description">
-                        <span className="service-icon">
-                          <FaSnowflake className="mr-2 text-blue-500" />
-                        </span>
-                        Enjoy the comfort and convenience of a highly skilled
-                        masseuse from your luxury chalet. We are happy to
-                        arrange an in-home massage for guests staying with
-                        AceHost. Choose from a wide selection of relaxing, deep
-                        tissue or hot stone massages, with wonderful add-ons
-                        such as foot & hair treatments or exfoliating scrubs.
-                      </p>
-                    </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {/* In-Home Massage */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/In-House Messages.jpg"
+                      alt="In-Home Massage"
+                      fill
+                      className="object-cover"
+                    />
                   </div>
-
-                  {/* In-House Beauty & Wellness */}
-                  <div
-                    className="min-w-[calc(33.333%-16px)] w-1/3 bg-white rounded-lg overflow-hidden flex-shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 carousel-card"
-                    style={{ scrollSnapAlign: "start" }}
-                  >
-                    <div className="relative h-56 card-image">
-                      <Image
-                        src="/photos/homepage/concierge-service/In House Beauty and Wellness.jpg"
-                        alt="In-House Beauty & Wellness"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-5 card-content">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 card-title">
-                        <span className="service-icon">
-                          <FaSkiing className="mr-2" />
-                        </span>
-                        In-House Beauty & Wellness
-                      </h3>
-                      <p className="text-gray-600 mb-4 card-description">
-                        <span className="service-icon">
-                          <FaSnowflake className="mr-2 text-blue-500" />
-                        </span>
-                        At AceHost, we are committed to making your stay
-                        seamless, right from the comfort of your home. Our VIP
-                        concierge team can arrange a variety of beauty &
-                        wellness services including in-home acupuncture, yoga
-                        instructors, and hairdressers. Contact us to arrange
-                        your beauty & wellness services today.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Babysitting */}
-                  <div
-                    className="min-w-[calc(33.333%-16px)] w-1/3 bg-white rounded-lg overflow-hidden flex-shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 carousel-card"
-                    style={{ scrollSnapAlign: "start" }}
-                  >
-                    <div className="relative h-56 card-image">
-                      <Image
-                        src="/photos/homepage/concierge-service/BabySitting.jpg"
-                        alt="Babysitting"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-5 card-content">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 card-title">
-                        <span className="service-icon">
-                          <FaSkiing className="mr-2" />
-                        </span>
-                        Babysitting
-                      </h3>
-                      <p className="text-gray-600 mb-4 card-description">
-                        <span className="service-icon">
-                          <FaSnowflake className="mr-2 text-blue-500" />
-                        </span>
-                        The AceHost luxury concierge team is happy to arrange
-                        babysitting services during your stay our luxury
-                        properties. Upon request, we can coordinate a nanny
-                        based on guest preference. Our nannies have an active
-                        first aid certificate, CPR training and a criminal
-                        record check.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Daily Housekeeping */}
-                  <div
-                    className="min-w-[calc(33.333%-16px)] w-1/3 bg-white rounded-lg overflow-hidden flex-shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 carousel-card"
-                    style={{ scrollSnapAlign: "start" }}
-                  >
-                    <div className="relative h-56 card-image">
-                      <Image
-                        src="/photos/homepage/concierge-service/HouseKeeping.jpg"
-                        alt="Daily Housekeeping"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-5 card-content">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 card-title">
-                        <span className="service-icon">
-                          <FaSkiing className="mr-2" />
-                        </span>
-                        Daily Housekeeping
-                      </h3>
-                      <p className="text-gray-600 mb-4 card-description">
-                        <span className="service-icon">
-                          <FaSnowflake className="mr-2 text-blue-500" />
-                        </span>
-                        AceHost can arrange daily housekeeping at your luxury
-                        home upon request. Housekeeping services include the
-                        cleaning of common areas, bed-making, bathroom and
-                        kitchen cleaning, fresh towels, and garbage removal.
-                        Linen change is an additional charge.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Private Spa Services */}
-                  <div
-                    className="min-w-[calc(33.333%-16px)] w-1/3 bg-white rounded-lg overflow-hidden flex-shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 carousel-card"
-                    style={{ scrollSnapAlign: "start" }}
-                  >
-                    <div className="relative h-56 card-image">
-                      <Image
-                        src="/photos/homepage/concierge-service/In-House Messages.jpg"
-                        alt="Private Spa Services"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-5 card-content">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 card-title">
-                        <span className="service-icon">
-                          <FaSkiing className="mr-2" />
-                        </span>
-                        Private Spa Services
-                      </h3>
-                      <p className="text-gray-600 mb-4 card-description">
-                        <span className="service-icon">
-                          <FaSnowflake className="mr-2 text-blue-500" />
-                        </span>
-                        Transform your luxury accommodation into a private spa
-                        with our specialized wellness treatments. We can arrange
-                        for skilled professionals to provide a range of spa
-                        services including hot stone treatments, facials,
-                        aromatherapy sessions, and specialized massage therapy
-                        directly in your chalet.
-                      </p>
-                    </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <BiSpa className="text-lg" />
+                      </span>
+                      In-Home Massage
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      Book a relaxing massage in the comfort of your luxury
+                      accommodation. Our professional massage therapists offer a
+                      variety of techniques, from Swedish to deep tissue,
+                      tailored to your specific needs. This service is perfect
+                      after a long day on the slopes or hiking trails.
+                    </p>
                   </div>
                 </div>
 
-                <button
-                  className="absolute left-0 md:left-2 top-1/2 -translate-y-1/2 bg-white p-4 md:p-3 rounded-full shadow-lg z-10 hover:bg-gray-100 focus:outline-none"
-                  onClick={() => scrollServices(inhomeServicesRef, "left")}
-                  aria-label="Scroll left"
-                >
-                  <IoIosArrowBack className="text-2xl md:text-xl text-gray-800" />
-                </button>
-                <button
-                  className="absolute right-0 md:right-2 top-1/2 -translate-y-1/2 bg-white p-4 md:p-3 rounded-full shadow-lg z-10 hover:bg-gray-100 focus:outline-none"
-                  onClick={() => scrollServices(inhomeServicesRef, "right")}
-                  aria-label="Scroll right"
-                >
-                  <IoIosArrowForward className="text-2xl md:text-xl text-gray-800" />
-                </button>
+                {/* Yoga Instructor */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/In House Beauty and Wellness.jpg"
+                      alt="Yoga Instructor"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <MdSpa className="text-lg" />
+                      </span>
+                      Yoga Instructor
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      Start your day with a centering yoga session led by one of
+                      our expert instructors. Whether you prefer vinyasa flow,
+                      hatha, or restorative yoga, our instructors can customize
+                      the session to your group's skill level and preferences.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Private Butler/Host */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/Butler.jpg"
+                      alt="Private Butler/Host"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <FaConciergeBell className="text-lg" />
+                      </span>
+                      Private Butler/Host
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      Elevate your stay with a private butler or host who can
+                      manage all aspects of your in-home experience. From
+                      serving meals and mixing cocktails to keeping the fire lit
+                      and ensuring your home is always perfectly maintained,
+                      our professional staff provide discreet, top-tier service.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Daily Housekeeping */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/HouseKeeping.jpg"
+                      alt="Daily Housekeeping"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <MdCleaningServices className="text-lg" />
+                      </span>
+                      Daily Housekeeping
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      Keep your luxury accommodation pristine with our daily
+                      housekeeping service. Our professional team will refresh
+                      bathrooms, make beds, tidy common areas, and replenish
+                      amenities to ensure your space remains a perfect retreat
+                      throughout your stay.
+                    </p>
+                  </div>
+                </div>
+
+                {/* In-Home Hair & Beauty */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/In House Beauty and Wellness.jpg"
+                      alt="In-Home Hair & Beauty"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <MdSpa className="text-lg" />
+                      </span>
+                      In-Home Hair & Beauty
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      Prepare for a special evening or simply treat yourself
+                      with our in-home hair styling and beauty services. Our
+                      professional stylists and makeup artists bring the salon
+                      experience directly to you, ensuring you look and feel
+                      your best for any occasion.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Childcare Services */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/BabySitting.jpg"
+                      alt="Childcare Services"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <MdChildCare className="text-lg" />
+                      </span>
+                      Childcare Services
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      Enjoy some adult time while knowing your children are in
+                      good hands with our professional childcare providers. All
+                      our babysitters and nannies are experienced, background-checked,
+                      and trained in first aid, ensuring the highest level of
+                      care and fun for your little ones.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Dog Sitting */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.25.40 AM.png"
+                      alt="Dog Sitting"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <FaDog className="text-lg" />
+                      </span>
+                      Dog Sitting
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      Are you staying at a pet friendly home? If so, take advantage of our dog sitting services so you can enjoy activities or dinners in town, with peace of mind.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Baby & Child Rental Equipment */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.28.52 AM.png"
+                      alt="Baby & Child Rental Equipment"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <GiBabyBottle className="text-lg" />
+                      </span>
+                      Baby & Child Rental Equipment
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      Baby gates and child equipment rentals such as high chairs, cribs, etc. are available for your convenience.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
 
-          {/* VIP Transportation Section */}
+          {/* VIP Transportation - UPDATED TO GRID LAYOUT */}
           <section id="transport" className="py-16 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
@@ -1214,107 +975,275 @@ const ConciergeService = () => {
               </h2>
               <p className="text-lg text-gray-600 mb-8 max-w-3xl">
                 Travel in style and comfort with our premium transportation
-                services, from airport transfers to private chauffeurs.
+                services, from airport transfers to daily excursions.
               </p>
 
-              <div className="relative">
-                <div
-                  className="flex overflow-x-auto gap-6 pb-6 snap-x snap-mandatory hide-scrollbar md:px-0 px-4"
-                  ref={transportServicesRef}
-                  style={{
-                    scrollSnapType: "x mandatory",
-                    scrollPaddingLeft: "1.5rem",
-                    scrollPaddingRight: "1.5rem",
-                    WebkitOverflowScrolling: "touch",
-                  }}
-                >
-                  {/* Airport Transfers */}
-                  <div
-                    className="min-w-[calc(50%-12px)] w-1/2 bg-white rounded-lg overflow-hidden flex-shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 carousel-card"
-                    style={{ scrollSnapAlign: "start" }}
-                  >
-                    <div className="relative h-56 card-image">
-                      <Image
-                        src="/photos/homepage/concierge-service/AirportTransfers.jpg"
-                        alt="Airport Transfers"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-5 card-content">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 card-title">
-                        <span className="service-icon">
-                          <MdAirportShuttle className="text-lg" />
-                        </span>
-                        Airport Transfers
-                      </h3>
-                      <p className="text-gray-600 mb-4 card-description">
-                        We offer a hands-on experience from the moment you
-                        arrive at Vancouver International Airport. AceHost
-                        offers easy airport transfers with pre-booked Sprinter
-                        vans or limousines, depending on the needs of your
-                        group.
-                      </p>
-                      <p className="text-gray-600 mb-4">
-                        We have vehicle options for all group sizes including
-                        luggage. Contact us to get a quote for transfers to and
-                        from your luxury home in Whistler.
-                      </p>
-                    </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {/* Airport Transfers */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/AirportTransfers.jpg"
+                      alt="VIP Airport Transfers"
+                      fill
+                      className="object-cover"
+                    />
                   </div>
-
-                  {/* Private Drivers & Vehicle Rentals */}
-                  <div
-                    className="min-w-[calc(50%-12px)] w-1/2 bg-white rounded-lg overflow-hidden flex-shrink-0 shadow-sm hover:shadow-md transition-shadow duration-300 carousel-card"
-                    style={{ scrollSnapAlign: "start" }}
-                  >
-                    <div className="relative h-56 card-image">
-                      <Image
-                        src="/photos/homepage/concierge-service/PrivateDrivers.jpeg"
-                        alt="Private Drivers & Vehicle Rentals"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-5 card-content">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 card-title">
-                        <span className="service-icon">
-                          <FaCar className="text-lg" />
-                        </span>
-                        Private Drivers & Vehicle Rentals
-                      </h3>
-                      <p className="text-gray-600 mb-4 card-description">
-                        Our concierge service offers private drivers for your
-                        stay. Be chauffeured around Whistler in the comfort of a
-                        GMC Yukon, Escalade, or any vehicle for your group size
-                        and budget. We can arrange this for your arrival.
-                        Drivers can be arranged daily or for the full duration
-                        of your stay.
-                      </p>
-                      <p className="text-gray-600 mb-4">
-                        For the ultimate AceHost experience, reserve a private
-                        driver with our new 2024 Land Rover Defender 130. This
-                        luxury SUV can be pre-booked with a driver and can sit
-                        up to 7+1 driver.
-                      </p>
-                    </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <MdAirportShuttle className="text-lg" />
+                      </span>
+                      VIP Airport Transfers
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      Start and end your journey in comfort with our luxury
+                      airport transfer service. Our professional drivers will
+                      meet you at Vancouver International Airport and transport
+                      you directly to your accommodation in Whistler. Vehicles
+                      range from executive sedans to spacious SUVs and vans,
+                      depending on your group size.
+                    </p>
                   </div>
                 </div>
 
-                <button
-                  className="absolute left-0 md:left-2 top-1/2 -translate-y-1/2 bg-white p-4 md:p-3 rounded-full shadow-lg z-10 hover:bg-gray-100 focus:outline-none"
-                  onClick={() => scrollServices(transportServicesRef, "left")}
-                  aria-label="Scroll left"
-                >
-                  <IoIosArrowBack className="text-2xl md:text-xl text-gray-800" />
-                </button>
-                <button
-                  className="absolute right-0 md:right-2 top-1/2 -translate-y-1/2 bg-white p-4 md:p-3 rounded-full shadow-lg z-10 hover:bg-gray-100 focus:outline-none"
-                  onClick={() => scrollServices(transportServicesRef, "right")}
-                  aria-label="Scroll right"
-                >
-                  <IoIosArrowForward className="text-2xl md:text-xl text-gray-800" />
-                </button>
+                {/* Private Chauffeur */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/PrivateDrivers.jpeg"
+                      alt="Private Chauffeur"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <FaCar className="text-lg" />
+                      </span>
+                      Private Chauffeur
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      Enjoy the convenience of a dedicated chauffeur throughout
+                      your stay. Whether for restaurant visits, shopping trips,
+                      or excursions to nearby attractions, our professional
+                      drivers provide reliable, discreet service in luxury
+                      vehicles tailored to your group's needs.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Helicopter Transfers */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/WhistlerHeli.jpg"
+                      alt="Helicopter Transfers"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <FaPlane className="text-lg" />
+                      </span>
+                      Helicopter Transfers
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      For the ultimate arrival experience, choose our helicopter
+                      transfer service. Bypass traffic and enjoy breathtaking
+                      aerial views as you travel from Vancouver to Whistler in
+                      just 30 minutes. This service includes ground transport to
+                      and from the helipad, making your journey seamless.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Luxury Vehicle Rentals */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/AirportTransfers.jpg"
+                      alt="Luxury Vehicle Rentals"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <FaCar className="text-lg" />
+                      </span>
+                      Luxury Vehicle Rentals
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      For guests who prefer to drive themselves, we offer a
+                      selection of premium vehicles for rental. From high-end
+                      SUVs perfect for mountain driving to exotic sports cars
+                      for a special experience, we can arrange the perfect
+                      vehicle delivered directly to your accommodation.
+                    </p>
+                  </div>
+                </div>
+
+                {/* 12-15 seater Private Transportation Services */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 10.48.27 AM.png"
+                      alt="12-15 seater Private Transportation Services"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <FaShuttleVan className="text-lg" />
+                      </span>
+                      12-15 seater Private Transportation Services
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      Private 12-15 seater transportation in town, as well as to and from the airport. Getting around in town can be a challenge for a large group, especially in the busy winter season. Let us help you to get around town. We can work with an itinerary & schedule, as well as last minute rides if and when needed.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Jet-Van transportation */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 10.47.24 AM.png"
+                      alt="Jet-Van transportation"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <FaShuttleVan className="text-lg" />
+                      </span>
+                      Jet-Van transportation
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      Our most popular and most luxurious form of transportation to and from YVR. A Sprinter Van with a layout similar to a private jet. Enjoy maximum comfort and luxuries from the moment you step off the plane.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Private Jet & Commercial Flights */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.28.11 AM.png"
+                      alt="Private Jet & Commercial Flights"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <FaPlane className="text-lg" />
+                      </span>
+                      Private Jet & Commercial Flights
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      Please share your preferred flights and routes, and we can handle the booking for you to save you the hassle and get preferred rates.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Add any additional transportation services here */}
+
+              </div>
+            </div>
+          </section>
+
+          {/* Wellness & Media Services */}
+          <section id="wellness-media" className="py-16 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Wellness & Media Services
+              </h2>
+              <p className="text-lg text-gray-600 mb-8 max-w-3xl">
+                Enhance your vacation experience with our premium wellness treatments and professional media services.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {/* Private Photographer */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.30.14 AM.png"
+                      alt="Private Photographer"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <FaCamera className="text-lg" />
+                      </span>
+                      Private Photographer
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      Capture timeless family moments with our popular private photographer service! Whether it's a candid session or a beautifully staged family portrait, let our expert photographers ensure you leave with quality, professional photos of your entire family.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Professional Grade Video */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.30.44 AM.png"
+                      alt="Professional Grade Video"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <FaVideo className="text-lg" />
+                      </span>
+                      Professional Grade Video
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      Capture your vacation memories in a truly special way by hiring a professional videographer to film one or two of your busiest days. Relive those moments and cherish them forever with a personalized 60-90 second professionally shot and edited video that captures the highlights of your vacation.
+                      <br /><br />
+                      • The same videographer and editing team as the video on acehost.ca homepage.
+                    </p>
+                  </div>
+                </div>
+
+                {/* IV Drip Therapy */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.30.59 AM.png"
+                      alt="IV Drip Therapy"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <BiInjection className="text-lg" />
+                      </span>
+                      IV Drip Therapy
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      Rehydrate, recharge, and revitalize with IV therapy delivered to you. Elevate your wellness with our popular IV drip therapy sessions, tailored for ultimate comfort and rejuvenation. Choose from a wide range of options, including vitamin and immune boosts, NAD anti-aging, recovery drips, vitamin injections, and more.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
