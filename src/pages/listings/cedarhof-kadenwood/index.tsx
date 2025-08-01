@@ -259,7 +259,7 @@ const CedarHof = () => {
                   Whether you're here to relax, entertain, or explore this is mountain living at its finest.
                 </p>
                 <p className="text-gray-800">
-                  Enhancing your stay and included in the reservation, a private butler is available to serve meals, fine drinks, and barista-made coffee throughout the day. They'll set the scene—lighting the fireplace, prepping the hot tub, and tuning the music—ensuring your experience is as seamless as it is unforgettable.
+                  Enhancing your stay and included in the reservation, a private butler is available to serve meals, fine drinks, and barista-made coffee throughout the day. They'll set the scene, lighting the fireplace, prepping the hot tub, and tuning the music, ensuring your experience is as seamless as it is unforgettable.
                 </p>
               </div>
             </div>

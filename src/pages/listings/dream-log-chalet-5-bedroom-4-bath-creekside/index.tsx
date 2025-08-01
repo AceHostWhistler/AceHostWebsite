@@ -356,7 +356,7 @@ const DreamLogChalet = () => {
                   <p className="mb-1">• Laundry area with a washer and dryer</p>
                   <p className="mb-1">• Garage</p>
                   <p className="mb-4">
-                    • Bedroom 5 (private suite with ensuite bathroom)—Located on
+                    • Bedroom 5 (private suite with ensuite bathroom), Located on
                     the ground floor, this bedroom features a queen bed and has
                     a completely separate entrance to the home. It is perfect
                     for privacy for a family member wanting space from the main

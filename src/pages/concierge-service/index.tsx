@@ -151,10 +151,10 @@ const ConciergeService = () => {
                   </h1>
                   <div className="space-y-6 text-gray-600 text-lg">
                     <p>
-                      When you book Luxury Accommodations with AceHost, VIP Concierge Services are included to elevate your stay. Our local team curates a personalized itinerary to ensure every detail is taken care of—from exclusive dining reservations to seamless logistics. We don't just send an itinerary; we secure top tables, prime time slots, and priority access to Whistler's best.
+                      When you book Luxury Accommodations with AceHost, VIP Concierge Services are included to elevate your stay. Our local team curates a personalized itinerary to ensure every detail is taken care of, from exclusive dining reservations to seamless logistics. We don't just send an itinerary; we secure top tables, prime time slots, and priority access to Whistler's best.
                     </p>
                     <p>
-                      With unmatched local knowledge and strong connections, our concierge team is available from arrival to departure for anything you need—last-minute staffing, special requests, or insider tips for untouched powder. Whether planning in advance or responding to same-day changes, we're here to deliver Whistler's top luxury concierge experience.
+                      With unmatched local knowledge and strong connections, our concierge team is available from arrival to departure for anything you need, last-minute staffing, special requests, or insider tips for untouched powder. Whether planning in advance or responding to same-day changes, we're here to deliver Whistler's top luxury concierge experience.
                     </p>
                   </div>
                   <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 pt-4">
@@ -1524,16 +1524,16 @@ const ConciergeService = () => {
                   >
                     <div className="p-6 pt-0 text-gray-600">
                       <p>
-                        While our Heli Glacier Meal experience—a private chef-prepared meal atop a glacier with breathtaking views—is one of our most unique and talked-about offerings, the most frequently booked services tend to be the essentials that enhance daily comfort and convenience.
+                        While our Heli Glacier Meal experience, a private chef-prepared meal atop a glacier with breathtaking views, is one of our most unique and talked-about offerings, the most frequently booked services tend to be the essentials that enhance daily comfort and convenience.
                       </p>
                       <p className="mt-3">
-                        Most of our guests use AceHost to arrange airport transfers, daily cleanings, and a combination of restaurant reservations and in-home private chef dinners. Many opt for daily breakfast prepared by a chef—one of our most popular offerings—allowing guests to wake up at their own pace to a fresh spread of hot dishes, pastries, and fruit.
+                        Most of our guests use AceHost to arrange airport transfers, daily cleanings, and a combination of restaurant reservations and in-home private chef dinners. Many opt for daily breakfast prepared by a chef, one of our most popular offerings, allowing guests to wake up at their own pace to a fresh spread of hot dishes, pastries, and fruit.
                       </p>
                       <p className="mt-3">
                         For activities, it's common for each trip to include one or two standout experiences, such as snowmobiling, ziplining, or the Vallea Lumina light walk. In the winter, private ski instructors are highly requested for their ability to provide tailored instruction while helping guests skip the lift lines.
                       </p>
                       <p className="mt-3">
-                        We also frequently coordinate last-minute transportation, as Whistler's local taxi system doesn't offer scheduling and can be unreliable—especially in peak season. Another popular service is ski rental delivery, which is booked by nearly all of our winter guests. It's a seamless process, and the delivery fee is included.
+                        We also frequently coordinate last-minute transportation, as Whistler's local taxi system doesn't offer scheduling and can be unreliable, especially in peak season. Another popular service is ski rental delivery, which is booked by nearly all of our winter guests. It's a seamless process, and the delivery fee is included.
                       </p>
                       <p className="mt-3">
                         And for our more adventurous travelers, heli-skiing remains a bucket-list favourite, with many of our groups including it as part of their winter escape.
@@ -1697,22 +1697,12 @@ const ConciergeService = () => {
                 Let us enhance your Whistler experience with our premium
                 concierge services.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-block bg-white text-black font-medium px-8 py-4 rounded-full border border-gray-200 hover:border-gray-400 shadow-sm hover:shadow transition duration-200 text-lg"
-                >
-                  Contact Us
-                </Link>
-                <a
-                  href="https://calendly.com/acehost/acehost-booking"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-black text-white font-medium px-8 py-4 rounded-full hover:bg-gray-800 shadow-sm hover:shadow transition duration-200 text-lg"
-                >
-                  Book Now
-                </a>
-              </div>
+              <Link
+                href="/contact"
+                className="inline-block bg-white text-black font-medium px-8 py-4 rounded-full border border-gray-200 hover:border-gray-400 shadow-sm hover:shadow transition duration-200 text-lg"
+              >
+                Contact Us
+              </Link>
             </div>
           </section>
         </main>

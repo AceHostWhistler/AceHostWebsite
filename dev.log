@@ -1,0 +1,40 @@
+
+> handyman@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.3.1
+   - Local:        http://localhost:3000
+   - Network:      http://10.0.0.158:3000
+   - Environments: .env.local, .env
+
+ ✓ Starting...
+ ✓ Ready in 1139ms
+Browserslist: browsers data (caniuse-lite) is 8 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+ ○ Compiling / ...
+ ✓ Compiled / in 2000ms (533 modules)
+ ✓ Compiled in 193ms (533 modules)
+react-i18next:: useTranslation: You will need to pass in an i18next instance by using initReactI18next { code: 'NO_I18NEXT_INSTANCE' }
+Warning: React does not recognize the `fetchPriority` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `fetchpriority` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+    at link
+    at head
+    at Head (/Users/suba86/Documents/src/pages/_document.tsx:424:8)
+    at html
+    at Html (/Users/suba86/Documents/src/pages/_document.tsx:1157:7)
+    at Document
+ HEAD / 200 in 2855ms
+ ✓ Compiled in 736ms (325 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/suba86/Documents/GitHub/AceHostWebsite/.next/cache/webpack/client-development/2.pack.gz_' -> '/Users/suba86/Documents/GitHub/AceHostWebsite/.next/cache/webpack/client-development/2.pack.gz'
+ ✓ Compiled in 878ms (325 modules)
+ ✓ Compiled in 418ms (325 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/suba86/Documents/GitHub/AceHostWebsite/.next/cache/webpack/client-development/1.pack.gz_' -> '/Users/suba86/Documents/GitHub/AceHostWebsite/.next/cache/webpack/client-development/1.pack.gz'
+ ✓ Compiled in 563ms (387 modules)
+ ✓ Compiled in 132ms (325 modules)
+ ✓ Compiled in 120ms (325 modules)
+ ✓ Compiled in 195ms (325 modules)
+ ✓ Compiled in 366ms (325 modules)
+ ✓ Compiled in 1148ms (325 modules)
+ ✓ Compiled in 583ms (325 modules)
+ ✓ Compiled in 169ms (325 modules)
+ ✓ Compiled in 649ms (325 modules)

@@ -294,7 +294,7 @@ const Navigation = ({
                               </h4>
                               <p className="text-xs text-gray-600 leading-tight">
                                 In recent years, a different kind of traveler
-                                has made Whistler their go-to destination—one
+                                has made Whistler their go-to destination, one
                                 seeking not just the thrill of alpine sports.
                               </p>
                             </div>

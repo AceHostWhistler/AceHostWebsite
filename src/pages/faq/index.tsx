@@ -34,7 +34,7 @@ const FAQPage = () => {
         },
         {
           question: "What makes AceHost different from other Airbnb property management companies in Whistler?",
-          answer: "AceHost specializes exclusively in luxury vacation homes and high-end clientele. We don't just manage your listing—we elevate your property into a 5-star guest experience. Our white-glove service includes professional branding, curated guest experiences, luxury concierge services, and hands-on local support. With a strong reputation and global partnerships, we consistently outperform traditional property managers.",
+          answer: "AceHost specializes exclusively in luxury vacation homes and high-end clientele. We don't just manage your listing, we elevate your property into a 5-star guest experience. Our white-glove service includes professional branding, curated guest experiences, luxury concierge services, and hands-on local support. With a strong reputation and global partnerships, we consistently outperform traditional property managers.",
         },
       ],
     },
@@ -58,11 +58,11 @@ const FAQPage = () => {
         },
         {
           question: "Do I need to live in Whistler to rent out my home with AceHost?",
-          answer: "Not at all. Many of our homeowners live abroad or elsewhere in Canada. We provide a fully hands-off experience—handling everything from guest communication and property maintenance to financial reporting. You'll always have full visibility into your home's performance through regular updates and transparent reporting.",
+          answer: "Not at all. Many of our homeowners live abroad or elsewhere in Canada. We provide a fully hands-off experience, handling everything from guest communication and property maintenance to financial reporting. You'll always have full visibility into your home's performance through regular updates and transparent reporting.",
         },
         {
           question: "I'm not a Canadian resident. Can AceHost still manage my Whistler property and help with NR6 filing?",
-          answer: "Yes, we regularly work with non-resident property owners and can assist with everything you need—including NR6 filing and tax compliance for rental income in Canada. We work closely with experienced accountants and can guide you through the process to ensure your withholding taxes are minimized and everything is CRA-compliant. Managing foreign-owned luxury properties is something we handle seamlessly."
+          answer: "Yes, we regularly work with non-resident property owners and can assist with everything you need, including NR6 filing and tax compliance for rental income in Canada. We work closely with experienced accountants and can guide you through the process to ensure your withholding taxes are minimized and everything is CRA-compliant. Managing foreign-owned luxury properties is something we handle seamlessly."
         },
       ],
     },
@@ -87,7 +87,7 @@ const FAQPage = () => {
         },
         {
           question: "How do you screen guests to protect my luxury property?",
-          answer: "We use a combination of platform-integrated verification tools and personal screening to ensure every guest is a good fit for your home. For high-value properties, we prioritize quality over quantity—often hosting families, executives, or well-known guests who are looking for a premium, respectful experience.",
+          answer: "We use a combination of platform-integrated verification tools and personal screening to ensure every guest is a good fit for your home. For high-value properties, we prioritize quality over quantity, often hosting families, executives, or well-known guests who are looking for a premium, respectful experience.",
         },
       ],
     },
@@ -97,7 +97,7 @@ const FAQPage = () => {
           question:
             "Which activity tends to be the most frequently booked by our guests?",
           answer:
-            "While our Heli Glacier Meal experience—a private chef-prepared meal atop a glacier with breathtaking views—is one of our most unique and talked-about offerings, the most frequently booked services tend to be the essentials that enhance daily comfort and convenience.\n\nMost of our guests use AceHost to arrange airport transfers, daily cleanings, and a combination of restaurant reservations and in-home private chef dinners. Many opt for daily breakfast prepared by a chef—one of our most popular offerings—allowing guests to wake up at their own pace to a fresh spread of hot dishes, pastries, and fruit.\n\nFor activities, it's common for each trip to include one or two standout experiences, such as snowmobiling, ziplining, or the Vallea Lumina light walk. In the winter, private ski instructors are highly requested for their ability to provide tailored instruction while helping guests skip the lift lines.\n\nWe also frequently coordinate last-minute transportation, as Whistler's local taxi system doesn't offer scheduling and can be unreliable—especially in peak season. Another popular service is ski rental delivery, which is booked by nearly all of our winter guests. It's a seamless process, and the delivery fee is included.\n\nAnd for our more adventurous travelers, heli-skiing remains a bucket-list favourite, with many of our groups including it as part of their winter escape.\n\nWhether it's the basics or something extraordinary, we're here to take care of it all.",
+            "While our Heli Glacier Meal experience, a private chef-prepared meal atop a glacier with breathtaking views, is one of our most unique and talked-about offerings, the most frequently booked services tend to be the essentials that enhance daily comfort and convenience.\n\nMost of our guests use AceHost to arrange airport transfers, daily cleanings, and a combination of restaurant reservations and in-home private chef dinners. Many opt for daily breakfast prepared by a chef, one of our most popular offerings, allowing guests to wake up at their own pace to a fresh spread of hot dishes, pastries, and fruit.\n\nFor activities, it's common for each trip to include one or two standout experiences, such as snowmobiling, ziplining, or the Vallea Lumina light walk. In the winter, private ski instructors are highly requested for their ability to provide tailored instruction while helping guests skip the lift lines.\n\nWe also frequently coordinate last-minute transportation, as Whistler's local taxi system doesn't offer scheduling and can be unreliable, especially in peak season. Another popular service is ski rental delivery, which is booked by nearly all of our winter guests. It's a seamless process, and the delivery fee is included.\n\nAnd for our more adventurous travelers, heli-skiing remains a bucket-list favourite, with many of our groups including it as part of their winter escape.\n\nWhether it's the basics or something extraordinary, we're here to take care of it all.",
         },
         {
           question:
@@ -139,7 +139,7 @@ const FAQPage = () => {
         },
         {
           question: "What's involved in getting started with AceHost as my property manager?",
-          answer: "Getting started is easy. After an initial consultation and property walkthrough, we handle onboarding, photography, listings, and setup. Whether your home is already listed or new to the market, we tailor everything for maximum performance—and handle all guest logistics from day one.",
+          answer: "Getting started is easy. After an initial consultation and property walkthrough, we handle onboarding, photography, listings, and setup. Whether your home is already listed or new to the market, we tailor everything for maximum performance, and handle all guest logistics from day one.",
         },
       ],
     },
@@ -151,11 +151,11 @@ const FAQPage = () => {
         },
         {
           question: "Do you offer full-service Airbnb property management for luxury homes in Whistler?",
-          answer: "Yes—we provide full-service management specifically designed for high-end properties. From creating optimized listings and professional photography to guest screening, 24/7 support, and 5-star cleanings, we handle everything. Our team also offers concierge services, dynamic pricing, and direct booking strategies to ensure your home performs at the highest level.",
+          answer: "Yes, we provide full-service management specifically designed for high-end properties. From creating optimized listings and professional photography to guest screening, 24/7 support, and 5-star cleanings, we handle everything. Our team also offers concierge services, dynamic pricing, and direct booking strategies to ensure your home performs at the highest level.",
         },
         {
           question: "How does AceHost Whistler cater to VIP guests and luxury travelers?",
-          answer: "We go beyond just accommodations. AceHost provides curated experiences for elite guests—from private chefs and heli-skiing to luxury transportation and spa bookings. Every stay includes personalized trip planning and insider access to Whistler's best. We're trusted by celebrities, global travelers, and guests who expect a five-star experience, every time.",
+          answer: "We go beyond just accommodations. AceHost provides curated experiences for elite guests, from private chefs and heli-skiing to luxury transportation and spa bookings. Every stay includes personalized trip planning and insider access to Whistler's best. We're trusted by celebrities, global travelers, and guests who expect a five-star experience, every time.",
         },
         {
           question: "What's included in your Airbnb management fees for luxury properties?",

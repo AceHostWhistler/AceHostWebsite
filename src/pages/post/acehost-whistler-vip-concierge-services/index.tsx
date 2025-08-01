@@ -338,7 +338,7 @@ export default function BlogPost() {
               </h2>
 
               <p>
-                Whistler isn't just about dining and relaxation—it's
+                Whistler isn't just about dining and relaxation, it's
                 also an adventure paradise. AceHost can arrange thrilling
                 experiences like heli-skiing and guided snowmobile tours through
                 the breathtaking landscapes of Whistler-Blackcomb. We even offer
@@ -392,7 +392,7 @@ export default function BlogPost() {
                 arranged by AceHost. Relax with a massage from a highly skilled
                 masseuse, choose from a variety of beauty and wellness services,
                 or arrange for acupuncture, yoga instruction, or even a
-                hairdresser—all in the comfort of your luxury chalet. Our
+                hairdresser, all in the comfort of your luxury chalet. Our
                 commitment to VIP concierge services will deliver your self-care
                 routine directly to your luxury home.
               </p>
