@@ -674,6 +674,30 @@ const ConciergeService = () => {
                   </div>
                 </div>
 
+                {/* Private Chef Experiences Whistler Video */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative" style={{ height: "600px" }}>
+                    <iframe
+                      className="absolute inset-0 w-full h-full"
+                      src="https://www.instagram.com/reel/DGWaTL2Shk9/embed/?utm_source=ig_embed&utm_campaign=loading&hidecaption=1"
+                      frameBorder="0"
+                      scrolling="no"
+                      loading="lazy"
+                      allowTransparency={true}
+                      allowFullScreen={true}
+                      title="Private Chef Experiences Whistler Video"
+                    ></iframe>
+                    <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-10 pointer-events-none">
+                      <div className="w-16 h-16 border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
+                    </div>
+                  </div>
+                  <div className="p-1 bg-gray-50">
+                    <h3 className="text-xs font-medium text-center text-gray-700">
+                      Private Chef Experiences Whistler Video
+                    </h3>
+                  </div>
+                </div>
+
                 {/* In-Home Bartender/Mixologist */}
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
                   <div className="relative h-56">
