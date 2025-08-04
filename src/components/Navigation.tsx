@@ -32,9 +32,27 @@ const Navigation = ({
   const [showResourcesDropdown, setShowResourcesDropdown] = useState(false);
   const [showMobileResourcesDropdown, setShowMobileResourcesDropdown] =
     useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const resourcesRef = useRef<HTMLDivElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const { t } = useTranslation("common");
+
+  // Handle scroll events for sticky header
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   // Handle body scroll when mobile menu is open
   useEffect(() => {
@@ -90,15 +108,19 @@ const Navigation = ({
   return (
     <nav
       className={`${
-        transparent ? "bg-transparent" : "bg-white"
-      } shadow-md relative z-40`}
+        transparent && !isScrolled ? "bg-transparent" : "bg-white"
+      } sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? "shadow-lg backdrop-blur-sm bg-white/90" 
+          : "shadow-md"
+      }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className={`flex items-center justify-between ${isScrolled ? 'h-16' : 'h-20'} transition-all duration-300`}>
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0">
-              <div className="w-40 h-16 relative">
+              <div className={`relative ${isScrolled ? 'w-36 h-14' : 'w-40 h-16'} transition-all duration-300`}>
                 <Image
                   src="/logo.png"
                   alt="AceHost Logo"
@@ -426,13 +448,18 @@ const Navigation = ({
       {isMenuOpen && (
         <>
           <div
-            className="fixed inset-0 bg-black bg-opacity-50 z-30"
+            className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={() => setIsMenuOpen(false)}
             aria-hidden="true"
           />
           <div
             ref={mobileMenuRef}
-            className="lg:hidden fixed top-20 left-0 right-0 bottom-0 bg-white shadow-lg z-40 overflow-y-auto max-h-[calc(100vh-5rem)]"
+            className={`fixed left-0 right-0 bottom-0 bg-white shadow-lg z-40 overflow-y-auto max-h-[calc(100vh-5rem)] transform transition-transform duration-300 lg:hidden ${
+              isMenuOpen ? "translate-x-0" : "-translate-x-full"
+            }`}
+            style={{
+              top: isScrolled ? "64px" : "80px", // Height of the navigation bar (16px or 20px * 4)
+            }}
           >
             <div className="px-4 py-6 space-y-4">
               {navLinks.map((link, index) => (
