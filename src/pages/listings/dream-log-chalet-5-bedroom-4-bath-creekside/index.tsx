@@ -22,7 +22,6 @@ const propertyInfo: PropertyInfo = {
   winterPriceRange: "3-12 Month Minimum",
   holidayPriceRange: "Monthly Rental Only",
   minimumStay: "3-12 Month Rental Only",
-  airbnbLink: "https://www.airbnb.com/rooms/your-listing-id",
   photos: [
     {
       src: "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00620.jpg",

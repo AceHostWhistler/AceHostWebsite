@@ -193,14 +193,16 @@ export const PropertyLayout: React.FC<PropertyLayoutProps> = ({ propertyInfo }) 
                   <p className="text-sm text-gray-600">Minimum stay: {propertyInfo.minimumStay}</p>
                 </div>
 
-                <Link
-                  href={propertyInfo.airbnbLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full text-center px-4 py-2 bg-[#FF5A5F] text-white rounded hover:bg-[#FF385F] transition-colors"
-                >
-                  Book on Airbnb
-                </Link>
+                {propertyInfo.airbnbLink && (
+                  <Link
+                    href={propertyInfo.airbnbLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full text-center px-4 py-2 bg-[#FF5A5F] text-white rounded hover:bg-[#FF385F] transition-colors"
+                  >
+                    Book on Airbnb
+                  </Link>
+                )}
               </div>
             </div>
           </div>

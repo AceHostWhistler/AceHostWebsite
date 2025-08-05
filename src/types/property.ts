@@ -40,7 +40,7 @@ export interface PropertyInfo {
   winterPriceRange: string;
   holidayPriceRange: string;
   minimumStay: string;
-  airbnbLink: string;
+  airbnbLink?: string;
   photos: PropertyPhoto[];
   spaceDetails: SpaceDetails;
   bedroomLayout: BedroomLayout;
