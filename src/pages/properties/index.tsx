@@ -217,7 +217,7 @@ export default function Properties() {
               "Hot Tub with Mountain Views",
               "Luxury Design",
             ],
-            priceRange: "$7,000-11,000+ per night | Private Butler Included",
+            priceRange: "$7,000-11,000+ per night | Private Butler Included | Christmas & NY (Booked for holidays 2025)",
             isSkiInSkiOut: true,
           },
           {
@@ -250,7 +250,7 @@ export default function Properties() {
               "Ski-in/Ski-out Access",
               "Mountain Views",
             ],
-            priceRange: "$2,600-$6,000 per night",
+            priceRange: "$2,600-$6,000 per night | Christmas & NY (Booked for holidays 2025)",
             isSkiInSkiOut: true,
             isPetFriendly: true,
           },

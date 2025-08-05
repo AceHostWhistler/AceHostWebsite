@@ -262,7 +262,7 @@ const Home = () => {
       bathrooms: 8,
       priceRange: "$7,000-11,000+ per night | Private Butler Included",
       winterPrice: "$8500-$11,000+ Nightly | Winter",
-      holidayPrice: "$16,000-$21,000+ Nightly | Christmas & NY",
+      holidayPrice: "$16,000-$21,000+ Nightly | Christmas & NY (Booked for holidays 2025)",
       location: "whistler",
       link: "/listings/chalet-la-forja-kadenwood",
       airbnbLink:
@@ -280,7 +280,7 @@ const Home = () => {
       bathrooms: 7.5,
       priceRange: "$2,600-$6,000 per night",
       winterPrice: "$4,500-$6,500+ Nightly | Winter",
-      holidayPrice: "$10,000+ Nightly | Christmas & NY",
+      holidayPrice: "$10,000+ Nightly | Christmas & NY (Booked for holidays 2025)",
       location: "whistler",
       link: "/listings/slopeside-villa-kadenwood",
       airbnbLink:
