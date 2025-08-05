@@ -183,7 +183,6 @@ const DreamLogChalet = () => {
             bedrooms={5}
             bathrooms={4}
             priceRange="Monthly Price Range: $15,000-$19,000"
-            airbnbLink="https://www.airbnb.ca/rooms/20190966?guests=1&adults=1&s=67&unique_share_id=e84d8ef3-67d7-4a87-8fd4-9a7e0c82ebb9"
           />
 
           {/* Photo Grid */}
