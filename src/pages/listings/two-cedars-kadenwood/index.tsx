@@ -18,10 +18,11 @@ const TwoCedarsKadenwood = () => {
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
   const [touchEndX, setTouchEndX] = useState<number | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-
+  
   // Property photos
   type PropertyPhoto = string;
   const photos: PropertyPhoto[] = [
+    "/photos/properties/Two Cedars New/OSA_AncientCW1248.jpg",
     "/photos/properties/Two Cedars New/OSA_AncientCW1002 Panorama.jpg",
     "/photos/properties/Two Cedars New/02-2934 Ancient Cedars-02.jpg",
     "/photos/properties/Two Cedars New/03-2934 Ancient Cedars-03.jpg",
@@ -63,7 +64,6 @@ const TwoCedarsKadenwood = () => {
     "/photos/properties/Two Cedars New/52-2934 Ancient Cedars-52.jpg",
     "/photos/properties/Two Cedars New/OSA_AncientCW0864-.jpg",
     "/photos/properties/Two Cedars New/OSA_AncientCW1129.jpg",
-    "/photos/properties/Two Cedars New/OSA_AncientCW1248.jpg",
     "/photos/properties/Two Cedars New/OSA_AncientCW1437-Panorama.jpg",
   ];
 
@@ -171,8 +171,6 @@ const TwoCedarsKadenwood = () => {
             priceRange="$6,500-$9,500+ per night | Private Butler Included"
             airbnbLink="https://www.airbnb.ca/rooms/666613336620375768?guests=1&adults=1&s=67&unique_share_id=0d8a1725-cb02-487a-a033-7cc2940692e4"
           />
-
-
 
           {/* Photo Grid */}
           <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16">
@@ -372,6 +370,57 @@ const TwoCedarsKadenwood = () => {
                       className="object-cover hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Property Video Tour Section */}
+            <div className="mb-20">
+              <div className="flex items-center mb-6">
+                <div className="bg-black text-white p-4 rounded-full mr-4">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                <h2 className="text-2xl font-bold">Experience Two Cedars</h2>
+              </div>
+              
+              <div className="flex flex-col md:flex-row gap-8 mb-6">
+                <div className="md:w-1/2">
+                  <p className="text-gray-800 mb-6">
+                    Take a virtual tour of this stunning property with our video showcase. Experience the elegance and luxury of Two Cedars Kadenwood, from its breathtaking mountain views to its meticulously designed interior spaces.
+                  </p>
+                  <p className="text-gray-800 mb-6">
+                    The video highlights the property's exceptional features including the spacious living areas, gourmet kitchen, private bedrooms, and outdoor spaces - all designed to provide the ultimate luxury Whistler experience. See firsthand why Two Cedars is one of Whistler's most prestigious vacation properties.
+                  </p>
+                </div>
+                <div className="md:w-1/2 flex justify-center">
+                  <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-shadow duration-300" style={{ width: '340px' }}>
+                    <div className="relative" style={{ height: "600px" }}>
+                      <iframe
+                        className="absolute inset-0 w-full h-full"
+                        src="https://www.instagram.com/reel/C0slAOvLmII/embed/captioned/"
+                        frameBorder="0"
+                        scrolling="no"
+                        allowTransparency={true}
+                        allowFullScreen={true}
+                      ></iframe>
+                    </div>
+                    <div className="p-1 bg-gray-50">
+                      <h3 className="text-xs font-medium text-center text-gray-700">
+                        Two Cedars Luxury Estate Video Tour
+                      </h3>
+                    </div>
                   </div>
                 </div>
               </div>
