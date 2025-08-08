@@ -121,6 +121,42 @@ export default function Properties() {
           "Discover our luxury chalets and condos in Whistler, perfect for an unforgettable mountain getaway with world-class ski in ski out access, prime locations near Whistler Village & Creekside, and fully stocked amenities.",
         properties: [
           {
+            id: "whistler-village-penthouse",
+            name: "Whistler Village | Penthouse | 4-Bed",
+            images: [
+              "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-7.jpg",
+            ],
+            guests: 7,
+            bedrooms: 2,
+            bathrooms: 2,
+            location: "Whistler Village",
+            description:
+              "Penthouse with private hot tub steps from Whistler Blackcomb gondola. Step out your door into Whistler's finest amenities. Located at the base of Whistler mountain, you are in the heart of iconic Whistler Village. This space was designed to gather family and friends. Pop champagne in the hot tub, roast marshmallows on the fire, and enjoy the mountain view.",
+            features: [
+              "Private Hot Tub",
+              "Ski-in/Ski-out Access",
+              "Air Conditioning",
+              "FREE Parking",
+              "High Ceilings",
+              "Log Beams",
+              "Fireplace",
+              "Mountain Views",
+              "Fully Equipped Kitchen",
+            ],
+            highlights: [
+              "Heart of Whistler Village",
+              "Private Hot Tub",
+              "Steps from Gondola",
+              "FREE Parking",
+            ],
+            priceRange: "$450-$1,700 per night",
+            winterPrice: "$650-$1,700 Nightly | Winter",
+            holidayPrice: "$2,000-$2,700 Nightly | Christmas & NY",
+            link: "/listings/whistler-village-penthouse",
+            isPetFriendly: false,
+            isSkiInSkiOut: true,
+          },
+          {
             id: "altitude-retreat",
             name: "Altitude Retreat | Kadenwood | Private Butler",
             images: [

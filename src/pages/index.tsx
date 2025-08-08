@@ -217,6 +217,22 @@ const Home = () => {
   // Define all property listings
   const allListings = [
     {
+      id: "whistler-village-penthouse",
+      name: "Whistler Village | Penthouse | 4-Bed",
+      image: "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-7.jpg",
+      guests: 7,
+      bedrooms: 2,
+      beds: 4,
+      bathrooms: 2,
+      priceRange: "$450-$1,700 per night",
+      winterPrice: "$650-$1,700 Nightly | Winter",
+      holidayPrice: "$2,000-$2,700 Nightly | Christmas & NY",
+      location: "whistler",
+      link: "/listings/whistler-village-penthouse",
+      isPetFriendly: false,
+      isSkiInSkiOut: true,
+    },
+    {
       id: "altitude-retreat",
       name: "Altitude Retreat | Kadenwood | Private Butler",
       image: "/photos/properties/Altitude New Photos Best/hero2.jpeg",
