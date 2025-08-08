@@ -153,6 +153,7 @@ export default function Properties() {
             winterPrice: "$650-$1,700 Nightly | Winter",
             holidayPrice: "$2,000-$2,700 Nightly | Christmas & NY",
             link: "/listings/whistler-village-penthouse",
+            airbnbLink: "https://www.airbnb.ca/rooms/1471251206220643818?guests=1&adults=1&s=67&unique_share_id=0ec28644-49fa-4b63-9276-7e5f5c6a1153",
             isPetFriendly: false,
             isSkiInSkiOut: true,
           },
