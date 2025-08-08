@@ -1688,9 +1688,12 @@ export default function Properties() {
         "https://www.airbnb.ca/rooms/1370367404602078616?guests=1&adults=1&s=67&unique_share_id=eb381b39-e67d-44ea-9d7c-2de2e1b5fa20",
       "ski-in-ski-out-walk-to-lifts-2-bed":
         "https://www.airbnb.ca/rooms/1015303987589924725?guests=1&adults=1&s=67&unique_share_id=5e912eb5-5445-4797-81ec-df21817dd143",
+      "whistler-village-penthouse":
+        "https://www.airbnb.ca/rooms/1471251206220643818?guests=1&adults=1&s=67&unique_share_id=0ec28644-49fa-4b63-9276-7e5f5c6a1153",
     };
 
-    const airbnbLink = airbnbLinks[property.id];
+    // Use the airbnbLink from the hardcoded list, or fall back to the property's airbnbLink field if it exists
+    const airbnbLink = airbnbLinks[property.id] || property.airbnbLink;
 
     // Special handling for properties that should link to contact page
     const shouldLinkToContact = property.id === "scandinavian-mountainside-retreat-pemberton-meadows-50-acres";
