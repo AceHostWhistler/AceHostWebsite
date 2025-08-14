@@ -166,7 +166,7 @@ export default function BlogPost() {
                 />
               </div>
               <p>
-                Modern alpine luxury at its best. This magnificent 10,000 sq.ft. mansion in Kadenwood accommodates up to 18 guests with 7 bedrooms and 5.5 bathrooms. Think glass walls overlooking the forest, a private hot tub under the stars, a fully-equipped gym, sauna, and ski/board mud room. Located just a stone's throw away from the exclusive Kadenwood residence-only gondola, this property features a private butler service and is surrounded by trees for maximum solitude. It's perfect for holiday gatherings and snowy reunions.
+                Modern alpine luxury at its best. This magnificent 10,000 sq.ft. mansion in Kadenwood accommodates up to 18 guests with 7 bedrooms and 5.5 bathrooms. Think glass walls overlooking the forest, a private hot tub under the stars, an equipped gym, sauna, and ski/board mud room. Located just a stone's throw away from the exclusive Kadenwood residence-only gondola, this property features a private butler service and is surrounded by trees for maximum solitude. It's perfect for holiday gatherings and snowy reunions.
               </p>
               <div className="mt-6 mb-8">
                 <Link

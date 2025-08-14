@@ -312,7 +312,7 @@ const LuxuryChristmasRentals = () => {
                     bathroom. With 12 beds in total, this home offers the perfect
                     stay for a large group of family or friends, combining an
                     open-plan living space with bedroom privacy. Amenities at Two
-                    Cedars include a large home theatre, a fully-equipped gym, an
+                    Cedars include a large home theatre, an equipped gym, an
                     outdoor & indoor hot tub, an infrared sauna, and foosball table.
                   </p>
                 </div>

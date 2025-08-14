@@ -379,7 +379,7 @@ const AltitudeRetreat = () => {
                 </p>
                 <p className="mb-4">
                   Two large master bedrooms with king beds and ensuite bathrooms
-                  Lower Level also contains a fully-equipped gym and sauna.
+                  Lower Level also contains an equipped gym and sauna.
                 </p>
                 <p className="mb-4">
                   <span className="font-medium">Total Sleeping Capacity:</span>{" "}

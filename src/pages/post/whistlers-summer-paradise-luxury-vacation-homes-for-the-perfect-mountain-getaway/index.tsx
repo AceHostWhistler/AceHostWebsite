@@ -172,7 +172,7 @@ export default function BlogPost() {
                 While Altitude Retreat is renowned as a winter destination, its summer appeal is equally spectacular. This magnificent 10,000 sq.ft. mansion in Kadenwood offers unparalleled luxury with its glass walls providing panoramic views of the forest and mountains in their summer splendor. The property's expansive outdoor spaces, including a private hot tub and multiple decks, are perfect for enjoying the mild summer temperatures and spectacular sunsets.
               </p>
               <p>
-                Summer guests will appreciate the property's proximity to Whistler's valley trail network, perfect for hiking and biking adventures. After a day of exploration, unwind in the private sauna, work out in the fully-equipped gym, or relax with a private chef-prepared dinner on the deck while enjoying the long summer evenings. The property's private butler service ensures every need is met, allowing guests to fully immerse themselves in Whistler's summer magic.
+                Summer guests will appreciate the property's proximity to Whistler's valley trail network, perfect for hiking and biking adventures. After a day of exploration, unwind in the private sauna, work out in the equipped gym, or relax with a private chef-prepared dinner on the deck while enjoying the long summer evenings. The property's private butler service ensures every need is met, allowing guests to fully immerse themselves in Whistler's summer magic.
               </p>
               <div className="mt-6 mb-8">
                 <Link
