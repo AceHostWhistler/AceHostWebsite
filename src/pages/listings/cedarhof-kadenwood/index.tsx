@@ -19,33 +19,33 @@ const CedarHof = () => {
 
   // Property photos - in specific order as requested with optimized versions
   const photos = [
-    "/optimized/cedarhof/2932-Ancient-Cedars-01-MLS.jpg",
+    "/optimized/cedarhof/01 - 20250707 A7M3 04 A1_07890.jpg",
     "/optimized/cedarhof/2932 Living Night 1.jpg",
     "/optimized/cedarhof/2932 Bedroom 1A NEW.jpg",
     "/optimized/cedarhof/2932 Living A NEW.jpg",
     "/optimized/cedarhof/2932-Ancient-Cedars-04-MLS.jpg",
     "/optimized/cedarhof/2932-Ancient-Cedars-06-MLS.jpg",
-    "/optimized/cedarhof/AC2932 Living Dining.jpg",
-    "/optimized/cedarhof/AC2932 Media Room B.jpg",
-    "/optimized/cedarhof/AC2932 Hot Tub Pool B.jpg",
+    "/optimized/cedarhof/07 - 20250707 A7M3 04 A1_07786.jpg", // Living Dining
+    "/optimized/cedarhof/08 - 20250707 A7M3 04 A1_07794.jpg", // Media Room B
+    "/optimized/cedarhof/09 - 20250707 A7M3 04 A1_07812.jpg", // Hot Tub Pool B
     "/optimized/cedarhof/2932 Pool A NEW.jpg",
     "/optimized/cedarhof/2932 Pool B NEW.jpg",
     "/optimized/cedarhof/2932 Pool C NEW.jpg",
-    "/optimized/cedarhof/AC2932 Kitchen A.jpg",
-    "/optimized/cedarhof/AC2932 Kitchen B.jpg",
-    "/optimized/cedarhof/AC2932 Dining.jpg",
-    "/optimized/cedarhof/AC2932 Family Room.jpg",
-    "/optimized/cedarhof/AC2932 Wine Room A.jpg",
-    "/optimized/cedarhof/AC2932 Wine and Poker Room.jpg",
-    "/optimized/cedarhof/AC2932 Bedroom 1A.jpg",
-    "/optimized/cedarhof/AC2932 Bedroom 2A.jpg",
-    "/optimized/cedarhof/AC2932 Bedroom 3.jpg",
-    "/optimized/cedarhof/AC2932 Bedroom 4.jpg",
-    "/optimized/cedarhof/AC2932 Bedroom 5.jpg",
-    "/optimized/cedarhof/AC2932 Bath 1A.jpg",
-    "/optimized/cedarhof/AC2932 Bath 2A.jpg",
-    "/optimized/cedarhof/AC2932 Gym.jpg",
-    "/optimized/cedarhof/AC2932 Exterior Detail 1.jpg",
+    "/optimized/cedarhof/13 - 20250707 A7M3 04 A1_07958.jpg", // Kitchen A
+    "/optimized/cedarhof/14 - 20250707 A7M3 04 A1_07977.jpg", // Kitchen B
+    "/optimized/cedarhof/15 - 20250707 A7M3 04 A1_08013.jpg", // Dining
+    "/optimized/cedarhof/16 - 20250707 A7M3 04 A1_07901.jpg", // Family Room
+    "/optimized/cedarhof/17 - 20250707 A7M3 04 A1_07910.jpg", // Wine Room
+    "/optimized/cedarhof/18 - 20250707 A7M3 04 A1_07927.jpg", // Wine and Poker Room
+    "/optimized/cedarhof/19 - 20250707 A7M3 04 A1_07936.jpg", // Bedroom 1A
+    "/optimized/cedarhof/20 - 20250707 A7M3 04 A1_07945.jpg", // Bedroom 2A
+    "/optimized/cedarhof/21 - 20250707 A7M3 04 A1_08020.jpg", // Bedroom 3
+    "/optimized/cedarhof/22 - 20250707 A7M3 04 A1_08025.jpg", // Bedroom 4
+    "/optimized/cedarhof/23 - 20250707 A7M3 04 A1_08032.jpg", // Bedroom 5
+    "/optimized/cedarhof/24 - 20250707 A7M3 04 A1_08037.jpg", // Bath 1A
+    "/optimized/cedarhof/25 - 20250707 A7M3 04 A1_08048.jpg", // Bath 2A
+    "/optimized/cedarhof/26 - 20250707 A7M3 04 A1_08054.jpg", // Gym
+    "/optimized/cedarhof/27 - 20250707 A7M3 04 A1_08069.jpg", // Exterior Detail
     "/optimized/cedarhof/2932 Deck 1.jpg",
     "/optimized/cedarhof/2932 Deck 2.jpg",
     "/optimized/cedarhof/2932 Deck Dusk.jpg",
@@ -62,30 +62,25 @@ const CedarHof = () => {
     "/optimized/cedarhof/2932 Rear Exterior Night 2.jpg",
     "/optimized/cedarhof/2932 Upper Hallway Night.jpg",
     "/optimized/cedarhof/2932 View.jpg",
-    "/optimized/cedarhof/2932-Ancient-Cedars-02-MLS.jpg",
-    "/optimized/cedarhof/2932-Ancient-Cedars-03-MLS.jpg",
-    "/optimized/cedarhof/2932-Ancient-Cedars-05-MLS.jpg",
-    "/optimized/cedarhof/2932-Ancient-Cedars-07-MLS.jpg",
-    "/optimized/cedarhof/2932-Ancient-Cedars-08-MLS.jpg",
+    "/optimized/cedarhof/02 - 20250707 A7M3 04 A1_08227.jpg", // Ancient Cedars 02
+    "/optimized/cedarhof/03 - 20250707 A7M3 04 A1_07893.jpg", // Ancient Cedars 03
+    "/optimized/cedarhof/04 - 20250707 A7M3 04 A1_07734.jpg", // Ancient Cedars 05
+    "/optimized/cedarhof/05 - 20250707 A7M3 04 A1_07755.jpg", // Ancient Cedars 07
+    "/optimized/cedarhof/06 - 20250707 A7M3 04 A1_07762.jpg", // Ancient Cedars 08
     "/optimized/cedarhof/2932-Ancient-Cedars-09-MLS.jpg",
     "/optimized/cedarhof/2932-Ancient-Cedars-10-MLS.jpg",
     "/optimized/cedarhof/2932-Ancient-Cedars-11-MLS.jpg",
-    "/optimized/cedarhof/AC2932 Bath 1B.jpg",
-    "/optimized/cedarhof/AC2932 Bath 2B.jpg",
-    "/optimized/cedarhof/AC2932 Bath 4.jpg",
-    "/optimized/cedarhof/AC2932 Bath 5.jpg",
-    "/optimized/cedarhof/AC2932 Bedroom 1 Closet.jpg",
-    "/optimized/cedarhof/AC2932 Bedroom 1B.jpg",
-    "/optimized/cedarhof/AC2932 Bedroom 2B.jpg",
-    "/optimized/cedarhof/AC2932 Deck 1.jpg",
-    "/optimized/cedarhof/AC2932 Entry.jpg",
-    "/optimized/cedarhof/AC2932 Hallway.jpg",
-    "/optimized/cedarhof/AC2932 Hot Tub Pool A.jpg",
-    "/optimized/cedarhof/AC2932 Kitchen Family.jpg",
-    "/optimized/cedarhof/AC2932 Living A.jpg",
-    "/optimized/cedarhof/AC2932 Living B.jpg",
-    "/optimized/cedarhof/AC2932 Media Room A.jpg",
-    "/optimized/cedarhof/AC2932 Media Room Detail.jpg",
+    "/optimized/cedarhof/28 - 20250707 A7M3 04 A1_08074.jpg", // Bath 1B
+    "/optimized/cedarhof/29 - 20250707 A7M3 04 A1_08081.jpg", // Bath 2B
+    "/optimized/cedarhof/30 - 20250707 A7M3 04 A1_08117.jpg", // Bath 4
+    "/optimized/cedarhof/31 - 20250707 A7M3 04 A1_08127.jpg", // Bath 5
+    "/optimized/cedarhof/32 - 20250707 A7M3 04 A1_08142.jpg", // Bedroom 1 Closet
+    "/optimized/cedarhof/33 - 20250707 A7M3 04 A1_08152.jpg", // Bedroom 1B
+    "/optimized/cedarhof/34 - 20250707 A7M3 04 A1_08182-Edit.jpg", // Bedroom 2B
+    "/optimized/cedarhof/35 - 20250707 A7M3 04 A1_08217.jpg", // Deck 1
+    "/optimized/cedarhof/36 - 20250707 A7M3 04 A1_07669.jpg", // Entry
+    "/optimized/cedarhof/37 - 20250707 A7M3 04 A1_07689-Edit.jpg", // Hallway
+    "/optimized/cedarhof/38 - 20250707 A7M3 04 A1_07724.jpg", // Hot Tub Pool A
   ];
 
   const handlePhotoClick = (index: number) => {
