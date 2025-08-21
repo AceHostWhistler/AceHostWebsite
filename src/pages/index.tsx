@@ -245,7 +245,7 @@ const Home = () => {
       bathrooms: 8.5,
       priceRange: "$6,500-$9,500+ per night | Private Butler Included",
       winterPrice: "$8,500-$10,000+ Nightly | Winter",
-      holidayPrice: "$17,500-$21,000+ Nightly | Christmas & NY",
+      holidayPrice: "$17,500-$21,000+ Nightly | Christmas & NY (Booked for NY Dec 27 start date)",
       location: "whistler",
       link: "/listings/two-cedars-kadenwood",
       airbnbLink:
@@ -299,7 +299,7 @@ const Home = () => {
       bathrooms: 7,
       priceRange: "$5,800-$9,000+ per night",
       winterPrice: "$8,500-$10,000+ | Winter",
-      holidayPrice: "$16,000+ Nightly | Christmas & NY",
+      holidayPrice: "$16,000+ Nightly | Christmas & NY (Booked for NY Dec 30 start date)",
       location: "whistler",
       link: "/listings/panoramic-estate-kadenwood",
       airbnbLink:
@@ -388,7 +388,7 @@ const Home = () => {
       bathrooms: 3.5,
       priceRange: "Nightly Price Range: $1,300-$3,500+",
       winterPrice: "$2,000-$3,500+ Nightly | Winter",
-      holidayPrice: "$4,000-$7,200+ Nightly | Christmas & NY",
+      holidayPrice: "$4,000-$7,200+ Nightly | Christmas (Booked for Christmas Dec 27 end date)",
       location: "whistler",
       link: "/listings/falcon-blueberry-drive",
       airbnbLink: "",
