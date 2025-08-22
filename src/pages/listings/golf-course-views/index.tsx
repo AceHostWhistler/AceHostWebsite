@@ -17,7 +17,7 @@ const GolfCourseViews = () => {
 
   // Property photos
   const photos = [
-    // Main featured photos
+    // Main featured photos - keep these first for best display
     "/photos/properties/Muirfield Golf Course/10 - 20250820 A7M4 01 A1_00222.jpg",
     "/photos/properties/Muirfield Golf Course/03 - 20250820 A7M4 01 A1_00186.jpg",
     "/photos/properties/Muirfield Golf Course/05 - 20250820 A7M4 01 A1_00202.jpg",
@@ -30,6 +30,39 @@ const GolfCourseViews = () => {
     "/photos/properties/Muirfield Golf Course/09 - 20250820 A7M4 01 A1_00217.jpg",
     "/photos/properties/Muirfield Golf Course/11 - 20250820 A7M4 01 A1_00232.jpg",
     "/photos/properties/Muirfield Golf Course/12 - 20250820 A7M4 01 A1_00088.jpg",
+    "/photos/properties/Muirfield Golf Course/13 - 20250820 A7M4 01 A1_00096.jpg",
+    "/photos/properties/Muirfield Golf Course/14 - 20250820 A7M4 01 A1_00103.jpg",
+    "/photos/properties/Muirfield Golf Course/15 - 20250820 A7M4 01 A1_00110.jpg",
+    "/photos/properties/Muirfield Golf Course/16 - 20250820 A7M4 01 A1_00121.jpg",
+    "/photos/properties/Muirfield Golf Course/17 - 20250820 A7M4 01 A1_00131-Edit.jpg",
+    "/photos/properties/Muirfield Golf Course/18 - 20250820 A7M4 01 A1_00297.jpg",
+    "/photos/properties/Muirfield Golf Course/19 - 20250820 A7M4 01 A1_00309.jpg",
+    "/photos/properties/Muirfield Golf Course/20 - 20250820 A7M4 01 A1_00056.jpg",
+    "/photos/properties/Muirfield Golf Course/21 - 20250820 A7M4 01 A1_00063.jpg",
+    "/photos/properties/Muirfield Golf Course/22 - 20250820 A7M4 01 A1_00071.jpg",
+    "/photos/properties/Muirfield Golf Course/23 - 20250820 A7M4 01 A1_00077.jpg",
+    "/photos/properties/Muirfield Golf Course/24 - 20250820 A7M4 01 A1_00329.jpg",
+    "/photos/properties/Muirfield Golf Course/25 - 20250820 A7M4 01 A1_00336.jpg",
+    "/photos/properties/Muirfield Golf Course/26 - 20250820 A7M4 01 A1_00343.jpg",
+    "/photos/properties/Muirfield Golf Course/27 - 20250820 A7M4 01 A1_00350.jpg",
+    "/photos/properties/Muirfield Golf Course/28 - 20250820 A7M4 01 A1_00359.jpg",
+    "/photos/properties/Muirfield Golf Course/29 - 20250820 A7M4 01 A1_00383.jpg",
+    "/photos/properties/Muirfield Golf Course/30 - 20250820 A7M4 01 A1_00389.jpg",
+    "/photos/properties/Muirfield Golf Course/31 - 20250820 A7M4 01 A1_00395.jpg",
+    "/photos/properties/Muirfield Golf Course/32 - 20250820 A7M4 01 A1_00402.jpg",
+    "/photos/properties/Muirfield Golf Course/33 - 20250820 A7M4 01 A1_00409.jpg",
+    "/photos/properties/Muirfield Golf Course/34 - 20250820 A7M4 01 A1_00415.jpg",
+    "/photos/properties/Muirfield Golf Course/35 - 20250820 A7M4 01 A1_00421.jpg",
+    "/photos/properties/Muirfield Golf Course/36 - 20250820 A7M4 01 A1_00428.jpg",
+    "/photos/properties/Muirfield Golf Course/37 - 20250820 A7M4 01 A1_00434.jpg",
+    "/photos/properties/Muirfield Golf Course/38 - 20250820 A7M4 01 A1_00443.jpg",
+    "/photos/properties/Muirfield Golf Course/39 - 20250820 A7M4 01 A1_00448.jpg",
+    "/photos/properties/Muirfield Golf Course/40 - 20250820 A7M4 01 A1_00454.jpg",
+    "/photos/properties/Muirfield Golf Course/41 - 20250820 A7M4 01 A1_00461.jpg",
+    "/photos/properties/Muirfield Golf Course/42 - 20250820 A7M4 01 A1_00468.jpg",
+    "/photos/properties/Muirfield Golf Course/43 - 20250820 MM4P 01 0011.jpg",
+    "/photos/properties/Muirfield Golf Course/44 - 20250820 MM4P 01 0016.jpg",
+    "/photos/properties/Muirfield Golf Course/45 - 20250820 A7M4 01 A1_00521.jpg",
   ];
 
   const handlePhotoClick = (index: number) => {
@@ -89,7 +122,7 @@ const GolfCourseViews = () => {
           {/* Photo Grid */}
           <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16" id="photos">
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
-              {photos.slice(0, 12).map((photo, index) => (
+              {photos.slice(0, 20).map((photo, index) => (
                 <div
                   key={index}
                   className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
@@ -106,7 +139,7 @@ const GolfCourseViews = () => {
                 </div>
               ))}
             </div>
-            {photos.length > 12 && (
+            {photos.length > 20 && (
               <div className="text-center mt-6">
                 <button
                   onClick={() => setShowAllPhotos(true)}
