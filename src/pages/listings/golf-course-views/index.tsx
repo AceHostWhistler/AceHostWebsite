@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
@@ -21,7 +21,6 @@ const GolfCourseViews = () => {
   const [isImageLoading, setIsImageLoading] = useState(false);
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
   const [touchEndX, setTouchEndX] = useState<number | null>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
 
   // Property photos
   const photos = [
@@ -79,10 +78,6 @@ const GolfCourseViews = () => {
 
   const closeFullScreenPhoto = () => {
     setSelectedPhotoIndex(null);
-  };
-
-  const handleImageLoad = () => {
-    setIsImageLoading(false);
   };
 
   const navigatePhoto = (direction: "prev" | "next") => {
@@ -294,8 +289,8 @@ const GolfCourseViews = () => {
           {selectedPhotoIndex !== null && (
             <div 
               className="fixed inset-0 z-[60] bg-black flex items-center justify-center"
-              onTouchStart={() => {
-                setTouchStartX(null);
+              onTouchStart={(e) => {
+                setTouchStartX(e.touches[0].clientX);
                 setTouchEndX(null);
               }}
               onTouchMove={(e) => {
