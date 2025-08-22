@@ -123,7 +123,7 @@ const GolfCourseViews = () => {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [selectedPhotoIndex]);
+  }, [selectedPhotoIndex, navigatePhoto, closeFullScreenPhoto]);
 
   return (
     <>
