@@ -15,9 +15,8 @@ const GolfCourseViews = () => {
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [isImageLoading, setIsImageLoading] = useState(false);
 
-  // Property photos
-  const photos = [
-    // Main featured photos - keep these first for best display
+  // Featured photos - optimized for initial load
+  const featuredPhotos = [
     "/photos/properties/Muirfield Golf Course/10 - 20250820 A7M4 01 A1_00222.jpg",
     "/photos/properties/Muirfield Golf Course/03 - 20250820 A7M4 01 A1_00186.jpg",
     "/photos/properties/Muirfield Golf Course/05 - 20250820 A7M4 01 A1_00202.jpg",
@@ -30,6 +29,11 @@ const GolfCourseViews = () => {
     "/photos/properties/Muirfield Golf Course/09 - 20250820 A7M4 01 A1_00217.jpg",
     "/photos/properties/Muirfield Golf Course/11 - 20250820 A7M4 01 A1_00232.jpg",
     "/photos/properties/Muirfield Golf Course/12 - 20250820 A7M4 01 A1_00088.jpg",
+  ];
+  
+  // All property photos - loaded on demand
+  const allPhotos = [
+    ...featuredPhotos,
     "/photos/properties/Muirfield Golf Course/13 - 20250820 A7M4 01 A1_00096.jpg",
     "/photos/properties/Muirfield Golf Course/14 - 20250820 A7M4 01 A1_00103.jpg",
     "/photos/properties/Muirfield Golf Course/15 - 20250820 A7M4 01 A1_00110.jpg",
@@ -64,6 +68,9 @@ const GolfCourseViews = () => {
     "/photos/properties/Muirfield Golf Course/44 - 20250820 MM4P 01 0016.jpg",
     "/photos/properties/Muirfield Golf Course/45 - 20250820 A7M4 01 A1_00521.jpg",
   ];
+  
+  // Use featuredPhotos for initial display, allPhotos for the full gallery
+  const photos = featuredPhotos;
 
   const handlePhotoClick = (index: number) => {
     setSelectedPhotoIndex(index);
@@ -77,14 +84,18 @@ const GolfCourseViews = () => {
     if (selectedPhotoIndex === null) return;
 
     setIsImageLoading(true);
+    
+    // Use the correct photo array based on which view is active
+    const currentPhotos = showAllPhotos ? allPhotos : photos;
+    const totalPhotos = currentPhotos.length;
 
     if (direction === "prev") {
       setSelectedPhotoIndex(
-        selectedPhotoIndex === 0 ? photos.length - 1 : selectedPhotoIndex - 1
+        selectedPhotoIndex === 0 ? totalPhotos - 1 : selectedPhotoIndex - 1
       );
     } else {
       setSelectedPhotoIndex(
-        selectedPhotoIndex === photos.length - 1 ? 0 : selectedPhotoIndex + 1
+        selectedPhotoIndex === totalPhotos - 1 ? 0 : selectedPhotoIndex + 1
       );
     }
   };
@@ -139,16 +150,14 @@ const GolfCourseViews = () => {
                 </div>
               ))}
             </div>
-            {photos.length > 20 && (
-              <div className="text-center mt-6">
-                <button
-                  onClick={() => setShowAllPhotos(true)}
-                  className="inline-flex items-center px-6 py-2 bg-black hover:bg-gray-900 text-white rounded-full text-sm font-medium"
-                >
-                  View all {photos.length} photos
-                </button>
-              </div>
-            )}
+            <div className="text-center mt-6">
+              <button
+                onClick={() => setShowAllPhotos(true)}
+                className="inline-flex items-center px-6 py-2 bg-black hover:bg-gray-900 text-white rounded-full text-sm font-medium"
+              >
+                View all {allPhotos.length} photos
+              </button>
+            </div>
           </div>
 
           {/* Property Description */}
@@ -247,7 +256,7 @@ const GolfCourseViews = () => {
             <div className="fixed inset-0 bg-black bg-opacity-90 z-50 overflow-y-auto">
               <div className="flex justify-between items-center p-4 sticky top-0 bg-black bg-opacity-75 z-10">
                 <h3 className="text-white text-xl font-medium">
-                  Golf Course Views - {photos.length} photos
+                  Golf Course Views - {allPhotos.length} photos
                 </h3>
                 <button
                   onClick={closeAllPhotos}
@@ -259,7 +268,7 @@ const GolfCourseViews = () => {
 
               <div className="container mx-auto px-4 py-8">
                 <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
-                  {photos.map((photo, index) => (
+                  {allPhotos.map((photo, index) => (
                     <div
                       key={index}
                       className="aspect-[4/3] relative cursor-pointer"
@@ -311,7 +320,7 @@ const GolfCourseViews = () => {
                 )}
                 <div className="relative w-full h-full">
                   <Image
-                    src={photos[selectedPhotoIndex]}
+                    src={showAllPhotos ? allPhotos[selectedPhotoIndex] : photos[selectedPhotoIndex]}
                     alt={`Property full view ${selectedPhotoIndex + 1}`}
                     fill
                     className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
@@ -338,7 +347,7 @@ const GolfCourseViews = () => {
 
               <div className="absolute bottom-4 left-0 right-0 text-center z-20">
                 <p className="text-white text-sm bg-black bg-opacity-50 inline-block px-4 py-2 rounded-full">
-                  {selectedPhotoIndex + 1} / {photos.length}
+                  {selectedPhotoIndex + 1} / {showAllPhotos ? allPhotos.length : photos.length}
                 </p>
               </div>
             </div>
