@@ -358,6 +358,43 @@ export default function Properties() {
             isSkiInSkiOut: false,
           },
           {
+            id: "golf-course-views",
+            name: "Golf Course Views | Luxury 4-bed Whistler Village",
+            images: [
+              "/photos/properties/Muirfield Golf Course/10 - 20250820 A7M4 01 A1_00222.jpg",
+              "/photos/properties/Muirfield Golf Course/03 - 20250820 A7M4 01 A1_00186.jpg",
+              "/photos/properties/Muirfield Golf Course/05 - 20250820 A7M4 01 A1_00202.jpg",
+            ],
+            guests: 9,
+            bedrooms: 4,
+            bathrooms: 3.5,
+            location: "Nicklaus North, Whistler",
+            description:
+              "This cozy, standalone chalet sits right on Nicklaus North Golf Course with stunning views of Hole 14. Enjoy a private hot tub, media room, wood-burning fireplace, and chef's kitchen. Just a short drive to Whistler Village and the ski lifts, plus being north of the village helps you skip the city traffic after skiing.",
+            features: [
+              "Golf Course Views",
+              "Private Hot Tub",
+              "Wood-burning Fireplace",
+              "Chef's Kitchen",
+              "Media Room",
+              "Parking for 5-6 Cars",
+              "Spacious Deck",
+              "BBQ Area",
+            ],
+            highlights: [
+              "On Nicklaus North Golf Course",
+              "Private Hot Tub",
+              "Media Room",
+              "7-9 Min Drive to Village",
+            ],
+            priceRange: "$750-1500 per night Summer",
+            winterPrice: "$1200-2000 Nightly | Winter",
+            holidayPrice: "$3500-5000 Nightly | Christmas & NY",
+            isPetFriendly: false,
+            isSkiInSkiOut: false,
+            airbnbLink: "https://www.airbnb.ca/rooms/1493522257280258231?guests=1&adults=1&s=67&unique_share_id=d98beea7-9f12-4195-8af6-52e4aa1a94cd",
+          },
+          {
             id: "ravens-nest",
             name: "Raven's Nest | Ski in Ski out | Views",
             images: [
