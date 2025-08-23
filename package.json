@@ -2,13 +2,9 @@
   "name": "handyman",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": ">=18.17.0",
-    "npm": ">=9.6.7"
-  },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/generate-sitemap.js && next build",
     "start": "next start",
     "lint": "next lint",
     "generate-sitemap": "node scripts/generate-sitemap.js"
