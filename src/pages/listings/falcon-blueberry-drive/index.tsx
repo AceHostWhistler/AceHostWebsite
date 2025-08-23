@@ -343,6 +343,84 @@ const FalconBlueberryDrive = () => {
               </div>
             </div>
 
+            {/* Exterior Views Section */}
+            <div className="flex flex-col md:flex-row mb-20">
+              <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
+                <div className="relative aspect-[4/3] mb-2">
+                  <Image
+                    src="/photos/properties/Falcon/17-3595 Falcon Cres-17.jpg"
+                    alt="Falcon Blueberry Drive Exterior"
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </div>
+              <div className="md:w-1/2">
+                <div className="flex items-center mb-6">
+                  <div className="bg-black text-white p-4 rounded-full mr-4">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                  <h2 className="text-2xl font-bold">Exterior Views</h2>
+                </div>
+                <p className="text-gray-800">
+                  Nestled in the prestigious Blueberry Hill neighborhood, this beautiful chalet offers stunning mountain views and a peaceful setting. The spacious exterior features a generous deck perfect for outdoor dining and entertaining.
+                </p>
+                <p className="text-gray-800 mt-4">
+                  Enjoy the natural surroundings and mountain air from the comfort of your private outdoor space. The property's location offers the perfect balance of tranquility and convenience, with easy access to all that Whistler has to offer.
+                </p>
+              </div>
+            </div>
+
+            {/* Living Space Section */}
+            <div className="flex flex-col md:flex-row mb-20">
+              <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
+                <div className="relative aspect-[4/3] mb-2">
+                  <Image
+                    src="/photos/properties/Falcon/Falcon Cr-14.jpg"
+                    alt="Falcon Blueberry Drive Living Space"
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </div>
+              <div className="md:w-1/2 order-2 md:order-1">
+                <div className="flex items-center mb-6">
+                  <div className="bg-black text-white p-4 rounded-full mr-4">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M20 4v16H4V4h16m2-2H2v20h20V2zM18 6h-7v4h7V6zm-9 0H6v12h3V6zm9 6h-7v6h7v-6z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                  <h2 className="text-2xl font-bold">Living Space</h2>
+                </div>
+                <p className="text-gray-800">
+                  The inviting interior features an open-concept design with plenty of natural light. The spacious living area is perfect for gathering with family and friends, with comfortable furnishings and a warm, welcoming atmosphere.
+                </p>
+                <p className="text-gray-800 mt-4">
+                  High ceilings and large windows create a sense of space and connection to the beautiful mountain surroundings. The wood-burning fireplace serves as a cozy focal point, perfect for relaxing after a day of outdoor adventures.
+                </p>
+              </div>
+            </div>
+
             {/* Location Section */}
             <div className="mb-16">
               <div className="flex items-center mb-6">
