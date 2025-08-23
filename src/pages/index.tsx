@@ -354,7 +354,7 @@ const Home = () => {
       winterPrice: "$1200-2000 Nightly | Winter",
       holidayPrice: "$3500-5000 Nightly | Christmas & NY",
       location: "whistler",
-      link: "/listings/golf-course-views",
+      link: "/listings/golf-course-views-luxury-4-bed-whistler-village",
       airbnbLink:
         "https://www.airbnb.ca/rooms/1493522257280258231?guests=1&adults=1&s=67&unique_share_id=d98beea7-9f12-4195-8af6-52e4aa1a94cd",
       isPetFriendly: false,
