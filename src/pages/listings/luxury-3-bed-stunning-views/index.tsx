@@ -119,7 +119,9 @@ const LuxuryThreeBedProperty = () => {
             bedrooms={2.5}
             beds={3}
             bathrooms={2}
-            priceRange="$650-$1,280+ per night"
+            priceRange="Nightly Price Range: $400-$1,150+"
+            winterPrice="$650-$1000+ Nightly | Winter"
+            holidayPrice="$1000-$1280+ Nightly | Christmas & NY"
             airbnbLink="https://www.airbnb.ca/rooms/1461637483646115205?guests=1&adults=1&s=67&unique_share_id=9b6640b9-138d-4627-bea4-cb2155e32c72"
           />
 

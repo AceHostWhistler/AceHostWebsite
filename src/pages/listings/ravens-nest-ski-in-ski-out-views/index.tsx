@@ -146,6 +146,8 @@ const RavensNest = () => {
             bedrooms={3}
             bathrooms={3}
             priceRange="$2,000-$3,500 per night"
+            winterPrice=""
+            holidayPrice="$2,300-$4,000 Nightly | Christmas & NY"
             airbnbLink="https://www.airbnb.ca/rooms/1300258964918876012?guests=1&adults=1&s=67&unique_share_id=41b635e9-00a9-441c-a134-056b2b3814ac"
           />
 

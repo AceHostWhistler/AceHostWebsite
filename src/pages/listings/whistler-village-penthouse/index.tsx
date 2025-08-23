@@ -120,7 +120,9 @@ const WhistlerVillagePenthouse = () => {
             guests={7}
             bedrooms={2}
             bathrooms={2}
-            priceRange="$450-$1,700 per night"
+            priceRange="Nightly Price Range: $450-$1,700"
+            winterPrice="$700-$1,100+ Nightly | Winter"
+            holidayPrice="$1,300-$1,700+ Nightly | Christmas & NY"
             airbnbLink="https://www.airbnb.ca/rooms/1471251206220643818?guests=1&adults=1&s=67&unique_share_id=0ec28644-49fa-4b63-9276-7e5f5c6a1153"
           />
 

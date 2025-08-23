@@ -189,7 +189,9 @@ const WhistlerVillageViews = () => {
             guests={6}
             bedrooms={2.5}
             bathrooms={2}
-            priceRange="$1,000-$2,100 per night"
+            priceRange="Nightly Price Range: $400-$1,150+"
+            winterPrice="$600-$900+ Nightly | Winter"
+            holidayPrice="$900-$1,150+ Nightly | Christmas & NY"
           />
 
           {/* Photo Grid */}

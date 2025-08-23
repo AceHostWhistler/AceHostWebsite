@@ -143,7 +143,9 @@ const LuxeCozyWhistlerVillage = () => {
             bedrooms={3}
             beds={4}
             bathrooms={3}
-            priceRange="$400-$1,700+ per night"
+            priceRange="$750-$2,200+ per night"
+            winterPrice="$750-$1,500+ Nightly | Winter"
+            holidayPrice="$1,800-$2,200+ Nightly | Christmas & NY"
             airbnbLink="https://www.airbnb.ca/rooms/1249285355870765792?guests=1&adults=1&s=67&unique_share_id=dcc074b1-0fe5-477a-bc67-701bc6736b13"
             contactLink="/contact"
           />

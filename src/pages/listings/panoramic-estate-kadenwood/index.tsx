@@ -167,6 +167,8 @@ const PanoramicEstate = () => {
             bedrooms={8}
             bathrooms={7}
             priceRange="$5,800-$9,000+ per night"
+            winterPrice="$8,500-$10,000+ | Winter"
+            holidayPrice="$16,000+ Nightly | Christmas & NY (Booked for NY Dec 30 start date)"
             airbnbLink="https://www.airbnb.ca/rooms/1104637821836596397?guests=1&adults=1&s=67&unique_share_id=67164555-993c-40dc-b188-23ffe0755654"
           />
 

@@ -178,6 +178,8 @@ const HeronViewsWhistlerVillage = () => {
             bedrooms={5}
             bathrooms={5.5}
             priceRange="$1,200-$3,500 per night"
+            winterPrice=""
+            holidayPrice="$4,000-$6,800+ Nightly | Christmas & NY"
             airbnbLink="https://www.airbnb.ca/rooms/1168163637007998550?guests=1&adults=1&s=67&unique_share_id=8227e964-920d-4bc0-8073-13043963151f"
           />
 
