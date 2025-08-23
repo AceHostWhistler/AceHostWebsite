@@ -441,7 +441,7 @@ const Home = () => {
       bathrooms: 3.5,
       priceRange: "Monthly Price Range: $10,000-$12,000",
       winterPrice: "90 night minimum",
-      holidayPrice: "$30,000 - 3 months | $40,000 - 4 months",
+      holidayPrice: "$30,000 - 3 months | $40,000 - 4 months (Booked until September 1st, 2026)",
       location: "whistler",
       link: "/listings/snow-pine",
       airbnbLink:
@@ -485,24 +485,7 @@ const Home = () => {
       isPetFriendly: false,
       isSkiInSkiOut: false,
     },
-    {
-      id: "dream-log-chalet",
-      name: "Dream Log Chalet | 5-Bed | 4-Bath | Creekside",
-      image:
-        "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00333.jpg",
-      guests: 11,
-      bedrooms: 5,
-      beds: 5,
-      bathrooms: 4,
-      priceRange: "6-12 Month Minimum (booked 2025)",
-      winterPrice: "90 Nights: $20,000 per month",
-      holidayPrice: "6-months Winter: $17,000 monthly | 12+ months: $14,000 monthly",
-      location: "whistler",
-      link: "/listings/dream-log-chalet-5-bedroom-4-bath-creekside",
-      contactLink: "/contact",
-      isPetFriendly: false,
-      isSkiInSkiOut: false,
-    },
+
     {
       id: "whispering-pines",
       name: "The Aspens | 2-Bed Ski in/Out",
