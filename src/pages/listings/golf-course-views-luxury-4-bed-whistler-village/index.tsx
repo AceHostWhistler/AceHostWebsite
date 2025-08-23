@@ -19,7 +19,7 @@ const GolfCourseViews = () => {
   // Property photos - using a smaller subset initially to reduce load
   const images = [
     // Main featured photo - use this as the cover image
-    "/photos/properties/Muirfield Golf Course/10 - 20250820 A7M4 01 A1_00222.jpg",
+    "/photos/properties/Muirfield Golf Course/44 - 20250820 MM4P 01 0016.jpg",
     "/photos/properties/Muirfield Golf Course/01 - 20250820 A7M4 01 A1_00497-Edit.jpg",
     "/photos/properties/Muirfield Golf Course/03 - 20250820 A7M4 01 A1_00186.jpg",
     "/photos/properties/Muirfield Golf Course/05 - 20250820 A7M4 01 A1_00202.jpg",
@@ -273,6 +273,45 @@ const GolfCourseViews = () => {
                 <p className="mt-6 font-medium">Registration details</p>
                 <p className="mb-1">Municipal registration number: 00015211</p>
                 <p className="mb-4">Provincial registration number: PM264215843</p>
+              </div>
+            </div>
+
+            {/* Exterior Views Section */}
+            <div className="flex flex-col md:flex-row mb-20">
+              <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
+                <div className="relative aspect-[4/3] mb-2">
+                  <Image
+                    src="/photos/properties/Muirfield Golf Course/44 - 20250820 MM4P 01 0016.jpg"
+                    alt="Golf Course Views Exterior"
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </div>
+              <div className="md:w-1/2">
+                <div className="flex items-center mb-6">
+                  <div className="bg-black text-white p-4 rounded-full mr-4">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                  <h2 className="text-2xl font-bold">Exterior Views</h2>
+                </div>
+                <p className="text-gray-800">
+                  Enjoy stunning views of the surrounding mountains and golf course from this beautiful property. The chalet's exterior showcases classic mountain architecture with modern touches, perfectly complementing the natural surroundings.
+                </p>
+                <p className="text-gray-800 mt-4">
+                  The property offers ample outdoor space for relaxation and entertainment, with easy access to the golf course and nearby trails. In summer, the lush green surroundings create a peaceful retreat, while winter brings a magical snowy landscape just minutes from Whistler's world-class skiing.
+                </p>
               </div>
             </div>
 
