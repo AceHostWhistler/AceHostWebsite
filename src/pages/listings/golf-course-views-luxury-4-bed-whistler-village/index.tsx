@@ -16,53 +16,23 @@ const GolfCourseViews = () => {
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
   const [touchEndX, setTouchEndX] = useState<number | null>(null);
 
-  // Property photos
+  // Property photos - using a smaller subset initially to reduce load
   const images = [
     // Main featured photo - use this as the cover image
     "/photos/properties/Muirfield Golf Course/10 - 20250820 A7M4 01 A1_00222.jpg",
     "/photos/properties/Muirfield Golf Course/01 - 20250820 A7M4 01 A1_00497-Edit.jpg",
-    "/photos/properties/Muirfield Golf Course/02 - 20250820 A7M4 01 A1_00179.jpg",
     "/photos/properties/Muirfield Golf Course/03 - 20250820 A7M4 01 A1_00186.jpg",
-    "/photos/properties/Muirfield Golf Course/04 - 20250820 A7M4 01 A1_00192.jpg",
     "/photos/properties/Muirfield Golf Course/05 - 20250820 A7M4 01 A1_00202.jpg",
-    "/photos/properties/Muirfield Golf Course/06 - 20250820 A7M4 01 A1_00209.jpg",
     "/photos/properties/Muirfield Golf Course/07 - 20250820 A7M4 01 A1_00138.jpg",
-    "/photos/properties/Muirfield Golf Course/08 - 20250820 A7M4 01 A1_00171.jpg",
-    "/photos/properties/Muirfield Golf Course/09 - 20250820 A7M4 01 A1_00217.jpg",
-    "/photos/properties/Muirfield Golf Course/11 - 20250820 A7M4 01 A1_00232.jpg",
-    "/photos/properties/Muirfield Golf Course/12 - 20250820 A7M4 01 A1_00088.jpg",
     "/photos/properties/Muirfield Golf Course/13 - 20250820 A7M4 01 A1_00096.jpg",
-    "/photos/properties/Muirfield Golf Course/14 - 20250820 A7M4 01 A1_00103.jpg",
     "/photos/properties/Muirfield Golf Course/15 - 20250820 A7M4 01 A1_00110.jpg",
-    "/photos/properties/Muirfield Golf Course/16 - 20250820 A7M4 01 A1_00121.jpg",
     "/photos/properties/Muirfield Golf Course/17 - 20250820 A7M4 01 A1_00131-Edit.jpg",
-    "/photos/properties/Muirfield Golf Course/18 - 20250820 A7M4 01 A1_00297.jpg",
-    "/photos/properties/Muirfield Golf Course/19 - 20250820 A7M4 01 A1_00309.jpg",
     "/photos/properties/Muirfield Golf Course/20 - 20250820 A7M4 01 A1_00056.jpg",
-    "/photos/properties/Muirfield Golf Course/21 - 20250820 A7M4 01 A1_00063.jpg",
-    "/photos/properties/Muirfield Golf Course/22 - 20250820 A7M4 01 A1_00071.jpg",
-    "/photos/properties/Muirfield Golf Course/23 - 20250820 A7M4 01 A1_00077.jpg",
-    "/photos/properties/Muirfield Golf Course/24 - 20250820 A7M4 01 A1_00329.jpg",
     "/photos/properties/Muirfield Golf Course/25 - 20250820 A7M4 01 A1_00336.jpg",
-    "/photos/properties/Muirfield Golf Course/26 - 20250820 A7M4 01 A1_00343.jpg",
-    "/photos/properties/Muirfield Golf Course/27 - 20250820 A7M4 01 A1_00350.jpg",
-    "/photos/properties/Muirfield Golf Course/28 - 20250820 A7M4 01 A1_00359.jpg",
-    "/photos/properties/Muirfield Golf Course/29 - 20250820 A7M4 01 A1_00383.jpg",
     "/photos/properties/Muirfield Golf Course/30 - 20250820 A7M4 01 A1_00389.jpg",
-    "/photos/properties/Muirfield Golf Course/31 - 20250820 A7M4 01 A1_00395.jpg",
-    "/photos/properties/Muirfield Golf Course/32 - 20250820 A7M4 01 A1_00402.jpg",
-    "/photos/properties/Muirfield Golf Course/33 - 20250820 A7M4 01 A1_00409.jpg",
-    "/photos/properties/Muirfield Golf Course/34 - 20250820 A7M4 01 A1_00415.jpg",
     "/photos/properties/Muirfield Golf Course/35 - 20250820 A7M4 01 A1_00421.jpg",
-    "/photos/properties/Muirfield Golf Course/36 - 20250820 A7M4 01 A1_00428.jpg",
-    "/photos/properties/Muirfield Golf Course/37 - 20250820 A7M4 01 A1_00434.jpg",
-    "/photos/properties/Muirfield Golf Course/38 - 20250820 A7M4 01 A1_00443.jpg",
-    "/photos/properties/Muirfield Golf Course/39 - 20250820 A7M4 01 A1_00448.jpg",
     "/photos/properties/Muirfield Golf Course/40 - 20250820 A7M4 01 A1_00454.jpg",
-    "/photos/properties/Muirfield Golf Course/41 - 20250820 A7M4 01 A1_00461.jpg",
-    "/photos/properties/Muirfield Golf Course/42 - 20250820 A7M4 01 A1_00468.jpg",
     "/photos/properties/Muirfield Golf Course/43 - 20250820 MM4P 01 0011.jpg",
-    "/photos/properties/Muirfield Golf Course/44 - 20250820 MM4P 01 0016.jpg",
     "/photos/properties/Muirfield Golf Course/45 - 20250820 A7M4 01 A1_00521.jpg"
   ];
 
@@ -185,7 +155,7 @@ const GolfCourseViews = () => {
           {/* Photo Grid */}
           <div className="max-w-7xl mx-auto px-4 mb-16">
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">              
-              {images.slice(0, 28).map((photo, index) => (
+              {images.map((photo, index) => (
                 <div
                   key={index}
                   className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
@@ -200,21 +170,10 @@ const GolfCourseViews = () => {
                     priority={index < 2}
                     loading={index < 2 ? "eager" : "lazy"}
                     quality={index < 4 ? 85 : 75}
-                    placeholder="blur"
-                    blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzMiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="                  />
+                  />
                 </div>
               ))}
             </div>
-            {images.length > 28 && (
-              <div className="text-center mt-6">
-                <button
-                  onClick={() => setShowAllPhotos(true)}
-                  className="inline-flex items-center px-6 py-2 bg-black hover:bg-gray-900 text-white rounded-full text-sm font-medium"
-                >
-                  View all {images.length} photos
-                </button>
-              </div>
-            )}
           </div>
 
           {/* Property Description */}
@@ -264,9 +223,6 @@ const GolfCourseViews = () => {
                 <p className="text-gray-800 mt-4">
                   In winter, you're just a quick 7-9-minute drive to the heart of Whistler Village and the ski lifts. Staying north of the village means you can avoid the Vancouver city day trip traffic congestion, making your ski days a lot more convenient.
                 </p>
-                <p className="text-gray-800 mt-4">
-                  There's parking for 5–6 cars in the driveway (garage fits 1, but with limited access). Whether it's a summer golf getaway or a winter ski holiday, this home offers unbeatable comfort, views, and convenience in all seasons.
-                </p>
               </div>
             </div>
 
@@ -275,7 +231,7 @@ const GolfCourseViews = () => {
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
                 <div className="relative aspect-[4/3] mb-2">
                   <Image
-                    src="/photos/properties/Muirfield Golf Course/13 - 20250820 A7M4 01 A1_00096.jpg"
+                    src={images[5]}
                     alt="Golf Course Views Bedroom"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-300"
@@ -345,51 +301,6 @@ const GolfCourseViews = () => {
             </div>
           </div>
         </main>
-
-        {/* Photo Gallery Modal */}
-        {showAllPhotos && (
-          <div className="fixed inset-0 z-50 bg-black overflow-y-auto">
-            <div className="sticky top-0 z-10 bg-black p-4 flex justify-between items-center">
-              <h2 className="text-lg sm:text-xl text-white font-medium">
-                Golf Course Views - All Photos ({images.length})
-              </h2>
-              <button
-                onClick={closeAllPhotos}
-                className="text-white hover:text-gray-300 bg-gray-900 px-4 py-2 rounded-full"
-              >
-                Close
-              </button>
-            </div>
-
-            <div className="max-w-7xl mx-auto py-6 px-4">
-              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
-                {images.map((photo, index) => (
-                  <div key={index} className="mb-6">
-                    <div
-                      className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer"
-                      onClick={() => handlePhotoClick(index)}
-                    >
-                      <Image
-                        src={photo}
-                        alt={`Golf Course Views photo ${index + 1}`}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        className="object-cover hover:scale-105 transition-transform duration-300"
-                        priority={index < 6}
-                        loading={index < 6 ? "eager" : "lazy"}
-                      />
-                    </div>
-                    <div className="mt-1 text-center">
-                      <span className="text-white text-xs">
-                        {index + 1} / {images.length}
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
 
         {/* Full-screen Photo View */}
         {selectedPhotoIndex !== null && (
