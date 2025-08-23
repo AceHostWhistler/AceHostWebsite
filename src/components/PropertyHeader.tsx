@@ -9,6 +9,8 @@ interface PropertyHeaderProps {
   beds?: number | string;
   bathrooms: number | string;
   priceRange: string;
+  winterPrice?: string;
+  holidayPrice?: string;
   airbnbLink?: string;
   contactLink?: string;
 }
@@ -20,6 +22,8 @@ const PropertyHeader: React.FC<PropertyHeaderProps> = ({
   beds,
   bathrooms,
   priceRange,
+  winterPrice,
+  holidayPrice,
   airbnbLink,
   contactLink,
 }) => {
@@ -52,6 +56,16 @@ const PropertyHeader: React.FC<PropertyHeaderProps> = ({
         <div className="bg-gray-200 text-gray-900 px-4 py-2 rounded-md">
           <span>{priceRange}</span>
         </div>
+        {winterPrice && (
+          <div className="bg-gray-200 text-gray-900 px-4 py-2 rounded-md">
+            <span>{winterPrice}</span>
+          </div>
+        )}
+        {holidayPrice && (
+          <div className="bg-gray-200 text-gray-900 px-4 py-2 rounded-md">
+            <span>{holidayPrice}</span>
+          </div>
+        )}
       </div>
 
       {/* Action Buttons */}
