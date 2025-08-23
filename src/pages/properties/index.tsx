@@ -39,6 +39,8 @@ interface PropertyFeature {
   sqm?: number;
   highlights?: string[];
   priceRange?: string;
+  winterPrice?: string;
+  holidayPrice?: string;
   isPetFriendly?: boolean;
   isSkiInSkiOut?: boolean;
   link?: string;
@@ -151,6 +153,8 @@ export default function Properties() {
               "Ski-In/Ski-Out Access",
             ],
             priceRange: "$7,500-$10,000+ per night | Private Butler Included",
+            winterPrice: "$8,000-$10,000+ Nightly | Winter",
+            holidayPrice: "$14,500-$19,000 Nightly | Christmas & NY",
             isSkiInSkiOut: true,
           },
           {
@@ -183,7 +187,9 @@ export default function Properties() {
               "Private Hot Tub",
               "Ski-in/Ski-out Access",
             ],
-            priceRange: "$6,500-$9,500+ per night | Private Butler Included | Christmas & NY (Booked for NY Dec 27 start date)",
+            priceRange: "$6,500-$9,500+ per night | Private Butler Included",
+            winterPrice: "$8,500-$10,000+ Nightly | Winter",
+            holidayPrice: "$17,500-$21,000+ Nightly | Christmas & NY (Booked for NY Dec 27 start date)",
             isPetFriendly: true,
             isSkiInSkiOut: true,
           },
@@ -217,7 +223,9 @@ export default function Properties() {
               "Hot Tub with Mountain Views",
               "Luxury Design",
             ],
-            priceRange: "$7,000-11,000+ per night | Private Butler Included | Christmas & NY (Booked for holidays 2025)",
+            priceRange: "$7,000-11,000+ per night | Private Butler Included",
+            winterPrice: "$8500-$11,000+ Nightly | Winter",
+            holidayPrice: "$16,000-$21,000+ Nightly | Christmas & NY (Booked for holidays 2025)",
             isSkiInSkiOut: true,
           },
           {
@@ -250,7 +258,9 @@ export default function Properties() {
               "Ski-in/Ski-out Access",
               "Mountain Views",
             ],
-            priceRange: "$2,600-$6,000 per night | Christmas & NY (Booked for holidays 2025)",
+            priceRange: "$2,600-$6,000 per night",
+            winterPrice: "$4,500-$6,500+ Nightly | Winter",
+            holidayPrice: "$10,000+ Nightly | Christmas & NY (Booked for holidays 2025)",
             isSkiInSkiOut: true,
             isPetFriendly: true,
           },
@@ -284,7 +294,9 @@ export default function Properties() {
               "Ski-in/Ski-out Access",
               "Ultimate Luxury Experience",
             ],
-            priceRange: "$5,800-$9,000+ per night | Christmas & NY (Booked for NY Dec 30 start date)",
+            priceRange: "$5,800-$9,000+ per night",
+            winterPrice: "$8,500-$10,000+ | Winter",
+            holidayPrice: "$16,000+ Nightly | Christmas & NY (Booked for NY Dec 30 start date)",
             isSkiInSkiOut: true,
             isPetFriendly: false,
           },
@@ -318,7 +330,9 @@ export default function Properties() {
               "Heated Pool & Hot Tub",
               "Ski-in/Ski-out Access",
             ],
-            priceRange: "$5,000-$6,500 per night Summer | $7,000-$9,000 per night Winter | $12,500-$16,500 per night Christmas & NY",
+            priceRange: "$5,000-$6,500 per night Summer",
+            winterPrice: "$7,000-$9,000 Nightly | Winter",
+            holidayPrice: "$12,500-$16,500 Nightly | Christmas & NY",
             isPetFriendly: false,
             isSkiInSkiOut: true,
             airbnbLink: "https://www.airbnb.ca/rooms/1457520373019699712?guests=1&adults=1&s=67&unique_share_id=112eabb2-8f04-425c-99c0-b02ddb2135e5",
@@ -354,6 +368,8 @@ export default function Properties() {
               "Recently Renovated",
             ],
             priceRange: "$1,200-$3,500 per night",
+            winterPrice: "",
+            holidayPrice: "$4,000-$6,800+ Nightly | Christmas & NY",
             isPetFriendly: false,
             isSkiInSkiOut: false,
           },
@@ -420,6 +436,8 @@ export default function Properties() {
               "Smart TV",
             ],
             priceRange: "$2,000-$3,500 per night",
+            winterPrice: "",
+            holidayPrice: "$2,300-$4,000 Nightly | Christmas & NY",
             isSkiInSkiOut: true,
             isPetFriendly: false,
           },
@@ -451,9 +469,9 @@ export default function Properties() {
               "Beautiful Mountain Views",
               "15-Minute Walk to Village",
             ],
-            priceRange: "Nightly Price Range: $1,300-$3,500+ | Christmas (Booked for Christmas Dec 27 end date)",
+            priceRange: "Nightly Price Range: $1,300-$3,500+",
             winterPrice: "$2,000-$3,500+ Nightly | Winter",
-            holidayPrice: "$4,000-$7,200+ Nightly | Christmas & NY",
+            holidayPrice: "$4,000-$7,200+ Nightly | Christmas (Booked for Christmas Dec 27 end date)",
             isPetFriendly: false,
             isSkiInSkiOut: false,
           },
@@ -488,6 +506,8 @@ export default function Properties() {
               "Quiet Neighborhood",
             ],
             priceRange: "Monthly Price Range: $10,000-$12,000",
+            winterPrice: "90 night minimum",
+            holidayPrice: "$30,000 - 3 months | $40,000 - 4 months",
             isSkiInSkiOut: true,
             isPetFriendly: true,
           },
@@ -556,6 +576,8 @@ export default function Properties() {
               "Fully Equipped Kitchen",
             ],
             priceRange: "$750-$2,200+ per night",
+            winterPrice: "$750-$1,500+ Nightly | Winter",
+            holidayPrice: "$1,800-$2,200+ Nightly | Christmas & NY",
           },
           {
             id: "dream-log-chalet-5-bedroom-4-bath-creekside",
@@ -587,9 +609,9 @@ export default function Properties() {
               "Family-Friendly Layout",
               "Private Hot Tub",
             ],
-            priceRange: "Monthly Price Range: $15,000-$19,000",
-            winterPrice: "3-12 Month Minimum",
-            holidayPrice: "Monthly Rental Only",
+            priceRange: "6-12 Month Minimum (booked 2025)",
+            winterPrice: "90 Nights: $20,000 per month",
+            holidayPrice: "6-months Winter: $17,000 monthly | 12+ months: $14,000 monthly",
           },
           {
             id: "whispering-pines",
@@ -620,6 +642,8 @@ export default function Properties() {
               "Luxury Alpine Design",
             ],
             priceRange: "Nightly Price Range: $350-$1,300",
+            winterPrice: "",
+            holidayPrice: "",
             isSkiInSkiOut: true,
           },
           {
@@ -651,6 +675,8 @@ export default function Properties() {
               "Cozy Mountain Retreat",
             ],
             priceRange: "Nightly Price Range: $160-450",
+            winterPrice: "",
+            holidayPrice: "",
             isPetFriendly: true,
             isSkiInSkiOut: true,
           },
@@ -699,7 +725,9 @@ export default function Properties() {
               "Outdoor swimming pool",
             ],
             highlights: [],
-            priceRange: "$350-$1,050 Nightly",
+            priceRange: "Nightly Price Range: $350-$1,050",
+            winterPrice: "",
+            holidayPrice: "",
             link: "/listings/ski-in-ski-out-walk-to-lifts-2-bed",
             isSkiInSkiOut: true,
             isPetFriendly: false,
@@ -732,7 +760,9 @@ export default function Properties() {
               "Mountain Views",
               "Recently Renovated"
             ],
-            priceRange: "$400-$1,150+ Nightly",
+            priceRange: "Nightly Price Range: $400-$1,150+",
+            winterPrice: "$600-$900+ Nightly | Winter",
+            holidayPrice: "$900-$1,150+ Nightly | Christmas & NY",
             isPetFriendly: false,
             isSkiInSkiOut: false,
           },
@@ -1837,9 +1867,17 @@ export default function Properties() {
           </p>
 
           {/* Price range */}
-          {property.priceRange && (
-            <p className="text-gray-900 font-medium mb-4">{property.priceRange}</p>
-          )}
+          <div className="space-y-2 mb-4">
+            {property.priceRange && (
+              <p className="text-gray-600">{property.priceRange}</p>
+            )}
+            {property.winterPrice && (
+              <p className="text-gray-600">{property.winterPrice}</p>
+            )}
+            {property.holidayPrice && (
+              <p className="text-gray-600">{property.holidayPrice}</p>
+            )}
+          </div>
 
           {/* View property link */}
           <Link
