@@ -1,7 +1,15 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": ".next",
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "framework": "nextjs"
-} 
+  "functions": {
+    "src/pages/api/**/*.ts": {
+      "maxDuration": 30
+    }
+  },
+  "images": {
+    "unoptimized": false,
+    "minimumCacheTTL": 31536000
+  },
+  "outputFileTracing": false,
+  "github": {
+    "silent": true
+  }
+}

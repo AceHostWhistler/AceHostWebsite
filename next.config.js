@@ -4,6 +4,24 @@ const { i18n } = require('./next-i18next.config');
 const nextConfig = {
   reactStrictMode: true,
   // swcMinify is no longer needed in Next.js 15
+  experimental: {
+    optimizePackageImports: ['lucide-react', 'react-icons'],
+  },
+  // Optimize bundle size
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  // Reduce build time
+  typescript: {
+    // Dangerously allow production builds to successfully complete even if
+    // your project has TypeScript errors.
+    ignoreBuildErrors: false,
+  },
+  eslint: {
+    // Warning: This allows production builds to successfully complete even if
+    // your project has ESLint errors.
+    ignoreDuringBuilds: false,
+  },
   i18n: {
     ...i18n,
     localeDetection: false
@@ -64,16 +82,14 @@ const nextConfig = {
   images: {
     // Enable image optimization for better performance
     unoptimized: false,
-    // Remove deprecated domains config
-    // domains: ['acehost.ca', 'acehost.vercel.app', 'img.youtube.com'],
     // Set reasonable device sizes for responsive images
-    deviceSizes: [320, 480, 640, 750, 828, 1080, 1200, 1920, 2048],
+    deviceSizes: [320, 480, 640, 750, 828, 1080, 1200, 1920],
     // Set image sizes for the Image component
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    // Configure image formats
-    formats: ['image/webp', 'image/avif'],
-    // Enable content-aware image resizing
-    minimumCacheTTL: 60,
+    imageSizes: [16, 32, 48, 64, 96, 128, 256],
+    // Configure image formats - prioritize WebP for smaller sizes
+    formats: ['image/webp'],
+    // Increase cache time for better performance
+    minimumCacheTTL: 31536000, // 1 year
     // Configure remote patterns
     remotePatterns: [
       {

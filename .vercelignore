@@ -1,29 +1,37 @@
-# Dependencies
-node_modules
+# Ignore large image files during build (>10MB)
+public/high-quality/
+public/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/
+public/temp/
+public/cotswolds*.jpg
+public/optimized/012A*.jpg
+public/optimized/224A*.jpg
+public/optimized/DJI*.jpg
+public/optimized/cotswolds*.jpg
 
-# Build output
-.next
-out
+# Large property photos that should be served via CDN
+public/photos/properties/Altitude*
+public/photos/properties/Cotswolds*
+public/photos/properties/Wedge*
+public/photos/properties/Two*
+public/photos/properties/Slopeside*
+
+# Development files
+.env.local
+.env.development
+.env.test
 
 # Logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Local env files
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Vercel
-.vercel
-
 # Cache
-.cache
-.npm
+.next/
+.vercel/
 
-# Temporary files
-*~
-*.swp
-*.bak 
+# Scripts and helpers
+push_changes.sh
+push_falcon_photos.sh
+FALCON_PHOTOS_README.md
+optimize-build.js
