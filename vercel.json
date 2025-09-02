@@ -3,12 +3,5 @@
     "src/pages/api/**/*.ts": {
       "maxDuration": 30
     }
-  },
-  "images": {
-    "unoptimized": false,
-    "minimumCacheTTL": 31536000
-  },
-  "github": {
-    "silent": true
   }
 }
