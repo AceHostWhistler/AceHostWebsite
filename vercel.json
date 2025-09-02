@@ -8,7 +8,6 @@
     "unoptimized": false,
     "minimumCacheTTL": 31536000
   },
-  "outputFileTracing": false,
   "github": {
     "silent": true
   }
