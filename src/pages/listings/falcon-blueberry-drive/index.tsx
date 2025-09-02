@@ -16,37 +16,56 @@ const FalconBlueberryDrive = () => {
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
   const [touchEndX, setTouchEndX] = useState<number | null>(null);
 
-  // Property photos
+  // Property photos - updated with new photos
   const images = [
     // Main featured photo - use this as the cover image
-    "/photos/properties/Falcon/15-3595 Falcon Cres-15-.jpg",
-    // Original naming format
-    "/photos/properties/Falcon/09-3595 Falcon Cres-09.jpg",
-    "/photos/properties/Falcon/10-3595 Falcon Cres-10.jpg",
-    "/photos/properties/Falcon/11-3595 Falcon Cres-11.jpg",
-    "/photos/properties/Falcon/12-3595 Falcon Cres-12.jpg",
-    "/photos/properties/Falcon/13-3595 Falcon Cres-13.jpg",
-    "/photos/properties/Falcon/14-3595 Falcon Cres-14.jpg",
-    "/photos/properties/Falcon/15-3595 Falcon Cres-15.jpg",
-    "/photos/properties/Falcon/16-3595 Falcon Cres-16.jpg",
-    "/photos/properties/Falcon/17-3595 Falcon Cres-17.jpg",
-    "/photos/properties/Falcon/18-3595 Falcon Cres-18.jpg",
-    "/photos/properties/Falcon/19-3595 Falcon Cres-19.jpg",
-    "/photos/properties/Falcon/20-3595 Falcon Cres-20.jpg",
-    "/photos/properties/Falcon/23-3595 Falcon Cres-23.jpg",
-    // Alternative naming format 
-    "/photos/properties/Falcon/Falcon Cr-12.jpg",
-    "/photos/properties/Falcon/Falcon Cr-13.jpg",
-    "/photos/properties/Falcon/Falcon Cr-14.jpg",
-    "/photos/properties/Falcon/Falcon Cr-15.jpg",
-    "/photos/properties/Falcon/Falcon Cr-16.jpg",
-    "/photos/properties/Falcon/Falcon Cr-17.jpg",
-    "/photos/properties/Falcon/Falcon Cr-18.jpg",
-    "/photos/properties/Falcon/Falcon Cr-19.jpg",
-    "/photos/properties/Falcon/Falcon Cr-22.jpg",
-    "/photos/properties/Falcon/Falcon Cr-24.jpg",
-    "/photos/properties/Falcon/Falcon Cr-25.jpg",
-    "/photos/properties/Falcon/Falcon Cr-26.jpg"
+    "/photos/properties/Falcon/03 - 20250827 A7M4 01 DSC00224-Edit.jpg",
+    "/photos/properties/Falcon/01 - 20250827 A7M4 01 DSC00509-Edit.jpg",
+    "/photos/properties/Falcon/02 - 20250827 A7M4 01 DSC00524.jpg",
+    "/photos/properties/Falcon/04 - 20250827 A7M4 01 DSC00234.jpg",
+    "/photos/properties/Falcon/05 - 20250827 A7M4 01 DSC00243.jpg",
+    "/photos/properties/Falcon/06 - 20250827 A7M4 01 DSC00253.jpg",
+    "/photos/properties/Falcon/07 - 20250827 A7M4 01 DSC00268.jpg",
+    "/photos/properties/Falcon/08 - 20250827 A7M4 01 DSC00273.jpg",
+    "/photos/properties/Falcon/09 - 20250827 A7M4 01 DSC00278.jpg",
+    "/photos/properties/Falcon/10 - 20250827 A7M4 01 DSC00283.jpg",
+    "/photos/properties/Falcon/11 - 20250827 A7M4 01 DSC00288.jpg",
+    "/photos/properties/Falcon/12 - 20250827 A7M4 01 DSC00304-Edit.jpg",
+    "/photos/properties/Falcon/13 - 20250827 A7M4 01 DSC00313.jpg",
+    "/photos/properties/Falcon/14 - 20250827 A7M4 01 DSC00320.jpg",
+    "/photos/properties/Falcon/15 - 20250827 A7M4 01 DSC00330-Edit.jpg",
+    "/photos/properties/Falcon/16 - 20250827 A7M4 01 DSC00340.jpg",
+    "/photos/properties/Falcon/17 - 20250827 A7M4 01 DSC00355.jpg",
+    "/photos/properties/Falcon/18 - 20250827 A7M4 01 DSC00529.jpg",
+    "/photos/properties/Falcon/19 - 20250827 A7M4 01 DSC00349.jpg",
+    "/photos/properties/Falcon/20 - 20250827 A7M4 01 DSC00194-Edit.jpg",
+    "/photos/properties/Falcon/21 - 20250827 A7M4 01 DSC00203.jpg",
+    "/photos/properties/Falcon/22 - 20250827 A7M4 01 DSC00212.jpg",
+    "/photos/properties/Falcon/23 - 20250827 A7M4 01 DSC00219.jpg",
+    "/photos/properties/Falcon/24 - 20250827 A7M4 01 DSC00623.jpg",
+    "/photos/properties/Falcon/25 - 20250827 A7M4 01 DSC00469-Edit.jpg",
+    "/photos/properties/Falcon/26 - 20250827 A7M4 01 DSC00369.jpg",
+    "/photos/properties/Falcon/27 - 20250827 A7M4 01 DSC00378.jpg",
+    "/photos/properties/Falcon/28 - 20250827 A7M4 01 DSC00392.jpg",
+    "/photos/properties/Falcon/29 - 20250827 A7M4 01 DSC00404.jpg",
+    "/photos/properties/Falcon/30 - 20250827 A7M4 01 DSC00412.jpg",
+    "/photos/properties/Falcon/31 - 20250827 A7M4 01 DSC00418.jpg",
+    "/photos/properties/Falcon/32 - 20250827 A7M4 01 DSC00425.jpg",
+    "/photos/properties/Falcon/33 - 20250827 A7M4 01 DSC00440.jpg",
+    "/photos/properties/Falcon/34 - 20250827 A7M4 01 DSC00448.jpg",
+    "/photos/properties/Falcon/35 - 20250827 A7M4 01 DSC00478.jpg",
+    "/photos/properties/Falcon/36 - 20250827 A7M4 01 DSC00484.jpg",
+    "/photos/properties/Falcon/37 - 20250827 A7M4 01 DSC00490.jpg",
+    "/photos/properties/Falcon/38 - 20250827 A7M4 01 DSC00496.jpg",
+    "/photos/properties/Falcon/39 - 20250827 A7M4 01 DSC00538.jpg",
+    "/photos/properties/Falcon/40 - 20250827 A7M4 01 DSC00545.jpg",
+    "/photos/properties/Falcon/41 - 20250827 A7M4 01 DSC00553.jpg",
+    "/photos/properties/Falcon/42 - 20250827 A7M4 01 DSC00560.jpg",
+    "/photos/properties/Falcon/43 - 20250827 A7M4 01 DSC00571.jpg",
+    "/photos/properties/Falcon/44 - 20250827 A7M4 01 DSC00589.jpg",
+    "/photos/properties/Falcon/45 - 20250827 A7M4 01 DSC00604.jpg",
+    "/photos/properties/Falcon/46 - 20250827 A7M4 01 DSC00610.jpg",
+    "/photos/properties/Falcon/47 - 20250827 A7M4 01 DSC00617.jpg"
   ];
 
   const handlePhotoClick = (index: number) => {
@@ -269,7 +288,7 @@ const FalconBlueberryDrive = () => {
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
                 <div className="relative aspect-[4/3] mb-2">
                   <Image
-                    src="/photos/properties/Falcon/13-3595 Falcon Cres-13.jpg"
+                    src="/photos/properties/Falcon/13 - 20250827 A7M4 01 DSC00313.jpg"
                     alt="Falcon Blueberry Drive Bedroom"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-300"
@@ -350,7 +369,7 @@ const FalconBlueberryDrive = () => {
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                 <div className="relative aspect-[4/3] mb-2">
                   <Image
-                    src="/photos/properties/Falcon/17-3595 Falcon Cres-17.jpg"
+                    src="/photos/properties/Falcon/03 - 20250827 A7M4 01 DSC00224-Edit.jpg"
                     alt="Falcon Blueberry Drive Exterior"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-300"
@@ -389,7 +408,7 @@ const FalconBlueberryDrive = () => {
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
                 <div className="relative aspect-[4/3] mb-2">
                   <Image
-                    src="/photos/properties/Falcon/Falcon Cr-14.jpg"
+                    src="/photos/properties/Falcon/06 - 20250827 A7M4 01 DSC00253.jpg"
                     alt="Falcon Blueberry Drive Living Space"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-300"
