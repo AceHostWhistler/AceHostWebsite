@@ -32,3 +32,4 @@ git push origin main
 
 ## Verification
 After pushing, you should be able to see the new photos in the GitHub repository under `public/photos/properties/Falcon/`
+
