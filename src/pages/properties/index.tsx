@@ -123,41 +123,6 @@ export default function Properties() {
           "Discover our luxury chalets and condos in Whistler, perfect for an unforgettable mountain getaway with world-class ski in ski out access, prime locations near Whistler Village & Creekside, and fully stocked amenities.",
         properties: [
           {
-            id: "altitude-retreat",
-            name: "Altitude Retreat | Kadenwood | Private Butler",
-            images: [
-              "/photos/properties/Altitude New Photos Best/hero2.jpeg",
-              "/photos/properties/Altitude New Photos Best/Altitude-1.jpg",
-              "/photos/properties/Altitude New Photos Best/Altitude-2.jpg",
-            ],
-            guests: 18,
-            bedrooms: 7,
-            bathrooms: 5.5,
-            location: "Kadenwood, Whistler",
-            description:
-              "Altitude Retreat is situated in the most prestigious ski-in ski-out neighbourhood in Whistler. Located just a stone's throw away from the exclusive Kadenwood residence only gondola makes this property the perfect location for your Whistler vacation! This well equipped property features everything you need for an indulgent stay.",
-            features: [
-              "Private Butler Service",
-              "Luxury In-Home Gym",
-              "Hot Tub",
-              "Sauna",
-              "Ski-In/Ski-Out Access",
-              "Mountain Views",
-              "10,000 sq.ft Interior",
-              "Private Forest Setting",
-            ],
-            highlights: [
-              "Private Butler Included",
-              "Exclusive Kadenwood Location",
-              "7 Luxury Bedrooms",
-              "Ski-In/Ski-Out Access",
-            ],
-            priceRange: "$7,500-$10,000+ per night | Private Butler Included",
-            winterPrice: "$8,000-$10,000+ Nightly | Winter",
-            holidayPrice: "$14,500-$19,000 Nightly | Christmas & NY",
-            isSkiInSkiOut: true,
-          },
-          {
             id: "two-cedars",
             name: "Two Cedars | Kadenwood | Private Butler",
             images: [
@@ -336,6 +301,41 @@ export default function Properties() {
             isPetFriendly: false,
             isSkiInSkiOut: true,
             airbnbLink: "https://www.airbnb.ca/rooms/1457520373019699712?guests=1&adults=1&s=67&unique_share_id=112eabb2-8f04-425c-99c0-b02ddb2135e5",
+          },
+          {
+            id: "altitude-retreat",
+            name: "Altitude Retreat | Kadenwood | Private Butler",
+            images: [
+              "/photos/properties/Altitude New Photos Best/hero2.jpeg",
+              "/photos/properties/Altitude New Photos Best/Altitude-1.jpg",
+              "/photos/properties/Altitude New Photos Best/Altitude-2.jpg",
+            ],
+            guests: 18,
+            bedrooms: 7,
+            bathrooms: 5.5,
+            location: "Kadenwood, Whistler",
+            description:
+              "Altitude Retreat is situated in the most prestigious ski-in ski-out neighbourhood in Whistler. Located just a stone's throw away from the exclusive Kadenwood residence only gondola makes this property the perfect location for your Whistler vacation! This well equipped property features everything you need for an indulgent stay.",
+            features: [
+              "Private Butler Service",
+              "Luxury In-Home Gym",
+              "Hot Tub",
+              "Sauna",
+              "Ski-In/Ski-Out Access",
+              "Mountain Views",
+              "10,000 sq.ft Interior",
+              "Private Forest Setting",
+            ],
+            highlights: [
+              "Private Butler Included",
+              "Exclusive Kadenwood Location",
+              "7 Luxury Bedrooms",
+              "Ski-In/Ski-Out Access",
+            ],
+            priceRange: "$7,500-$10,000+ per night | Private Butler Included",
+            winterPrice: "$8,000-$10,000+ Nightly | Winter",
+            holidayPrice: "$14,500-$19,000 Nightly | Christmas & NY",
+            isSkiInSkiOut: true,
           },
           {
             id: "heron-views-whistler",

@@ -216,25 +216,6 @@ const Home = () => {
 
   // Define all property listings
   const allListings = [
-
-    {
-      id: "altitude-retreat",
-      name: "Altitude Retreat | Kadenwood | Private Butler",
-      image: "/photos/properties/Altitude New Photos Best/hero2.jpeg",
-      guests: 18,
-      bedrooms: 7,
-      beds: 9,
-      bathrooms: 5.5,
-      priceRange: "$7,500-$10,000+ per night | Private Butler Included",
-      winterPrice: "$8,000-$10,000+ Nightly | Winter",
-      holidayPrice: "$14,500-$19,000 Nightly | Christmas & NY",
-      location: "whistler",
-      link: "/listings/altitude-retreat-kadenwood",
-      airbnbLink:
-        "https://www.airbnb.ca/rooms/771060491470943213?guests=1&adults=1&s=67&unique_share_id=a8ff5a7a-4bda-4cc7-aaad-e99b178f3a5d",
-      isPetFriendly: false,
-      isSkiInSkiOut: true,
-    },
     {
       id: "two-cedars",
       name: "Two Cedars | Kadenwood | Private Butler",
@@ -359,6 +340,24 @@ const Home = () => {
         "https://www.airbnb.ca/rooms/1493522257280258231?guests=1&adults=1&s=67&unique_share_id=d98beea7-9f12-4195-8af6-52e4aa1a94cd",
       isPetFriendly: false,
       isSkiInSkiOut: false,
+    },
+    {
+      id: "altitude-retreat",
+      name: "Altitude Retreat | Kadenwood | Private Butler",
+      image: "/photos/properties/Altitude New Photos Best/hero2.jpeg",
+      guests: 18,
+      bedrooms: 7,
+      beds: 9,
+      bathrooms: 5.5,
+      priceRange: "$7,500-$10,000+ per night | Private Butler Included",
+      winterPrice: "$8,000-$10,000+ Nightly | Winter",
+      holidayPrice: "$14,500-$19,000 Nightly | Christmas & NY",
+      location: "whistler",
+      link: "/listings/altitude-retreat-kadenwood",
+      airbnbLink:
+        "https://www.airbnb.ca/rooms/771060491470943213?guests=1&adults=1&s=67&unique_share_id=a8ff5a7a-4bda-4cc7-aaad-e99b178f3a5d",
+      isPetFriendly: false,
+      isSkiInSkiOut: true,
     },
     {
       id: "scandinavian-mountainside-retreat-pemberton-meadows-50-acres",

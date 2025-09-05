@@ -94,44 +94,90 @@ const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
 
-  const reviewsToShow = {
-    mobile: 1,
-    tablet: 2,
-    desktop: 3,
-  };
+  // Get current number of items to show based on screen size
+  const [currentReviewsToShow, setCurrentReviewsToShow] = useState(1);
+
+  useEffect(() => {
+    const updateReviewsToShow = () => {
+      const width = window.innerWidth;
+      if (width >= 1024) {
+        setCurrentReviewsToShow(3); // Desktop
+      } else if (width >= 768) {
+        setCurrentReviewsToShow(2); // Tablet
+      } else {
+        setCurrentReviewsToShow(1); // Mobile
+      }
+    };
+
+    updateReviewsToShow();
+    window.addEventListener('resize', updateReviewsToShow);
+    return () => window.removeEventListener('resize', updateReviewsToShow);
+  }, []);
 
   const handleNext = useCallback(() => {
     if (isAnimating) return;
     
     setIsAnimating(true);
     setCurrentIndex((prevIndex) => {
-      const nextIndex = prevIndex + 1;
-      return nextIndex >= testimonials.length - (reviewsToShow.desktop - 1)
+      const nextIndex = prevIndex + currentReviewsToShow;
+      return nextIndex >= testimonials.length
         ? 0
         : nextIndex;
     });
     
     setTimeout(() => {
       setIsAnimating(false);
-    }, 700);
-  }, [testimonials.length, isAnimating]);
+    }, 500);
+  }, [testimonials.length, isAnimating, currentReviewsToShow]);
 
   const handlePrev = useCallback(() => {
     if (isAnimating) return;
     
     setIsAnimating(true);
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0
-        ? testimonials.length - reviewsToShow.desktop
-        : prevIndex - 1
-    );
+    setCurrentIndex((prevIndex) => {
+      if (prevIndex === 0) {
+        // Go to the last set of reviews
+        const lastIndex = Math.floor((testimonials.length - 1) / currentReviewsToShow) * currentReviewsToShow;
+        return lastIndex;
+      }
+      return Math.max(0, prevIndex - currentReviewsToShow);
+    });
     setIsAutoPlaying(false);
     
     setTimeout(() => {
       setIsAnimating(false);
-    }, 700);
-  }, [testimonials.length, isAnimating]);
+    }, 500);
+  }, [testimonials.length, isAnimating, currentReviewsToShow]);
+
+  // Touch handlers for mobile swipe
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+    setIsAutoPlaying(false);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      handleNext();
+    } else if (isRightSwipe) {
+      handlePrev();
+    }
+    
+    setTouchStart(0);
+    setTouchEnd(0);
+  };
 
   useEffect(() => {
     if (!isAutoPlaying) return;
@@ -158,12 +204,17 @@ const Testimonials = () => {
 
         {/* Reviews Carousel */}
         <div className="relative">
-          <div className="overflow-hidden">
+          <div 
+            className="overflow-hidden"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
             <div
-              className="flex transition-transform duration-700 ease-out"
+              className="flex transition-transform duration-500 ease-out"
               style={{
                 transform: `translateX(-${
-                  currentIndex * (100 / reviewsToShow.desktop)
+                  currentIndex * (100 / currentReviewsToShow)
                 }%)`,
               }}
             >
@@ -216,29 +267,30 @@ const Testimonials = () => {
 
           {/* Navigation Dots */}
           <div className="flex justify-center mt-10 space-x-3">
-            {[...Array(testimonials.length - 2)].map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => {
-                  setCurrentIndex(idx);
-                  setIsAutoPlaying(false);
-                }}
-                className={`p-3 flex items-center justify-center ${
-                  currentIndex === idx
-                    ? "min-w-[44px] min-h-[44px]"
-                    : "min-w-[44px] min-h-[44px]"
-                }`}
-                aria-label={`Go to slide ${idx + 1}`}
-              >
-                <span 
-                  className={`rounded-full transition-all duration-300 ${
-                    currentIndex === idx
-                      ? "bg-gray-800 w-6 h-3"
-                      : "bg-gray-300 hover:bg-gray-400 w-3 h-3"
-                  }`}
-                ></span>
-              </button>
-            ))}
+            {[...Array(Math.ceil(testimonials.length / currentReviewsToShow))].map((_, idx) => {
+              const slideIndex = idx * currentReviewsToShow;
+              const isActive = Math.floor(currentIndex / currentReviewsToShow) === idx;
+              
+              return (
+                <button
+                  key={idx}
+                  onClick={() => {
+                    setCurrentIndex(slideIndex);
+                    setIsAutoPlaying(false);
+                  }}
+                  className="p-3 flex items-center justify-center min-w-[44px] min-h-[44px]"
+                  aria-label={`Go to slide ${idx + 1}`}
+                >
+                  <span 
+                    className={`rounded-full transition-all duration-300 ${
+                      isActive
+                        ? "bg-gray-800 w-6 h-3"
+                        : "bg-gray-300 hover:bg-gray-400 w-3 h-3"
+                    }`}
+                  ></span>
+                </button>
+              );
+            })}
           </div>
 
           {/* Navigation Buttons */}
