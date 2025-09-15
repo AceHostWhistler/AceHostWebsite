@@ -212,12 +212,56 @@ const TwoCedarsKadenwood = () => {
 
           {/* Property Description */}
           <div className="max-w-6xl mx-auto px-4" id="details">
-            <p className="text-gray-800 mb-16 max-w-4xl">
+            <p className="text-gray-800 mb-8 max-w-4xl">
               Welcome to Two Cedars. Designed by the architects at OpenSpace, this state-of-the-art property welcomes 17 guests to the prestigious Kadenwood neighborhood in Whistler. This luxury property features ski-in ski-out access and quick access to the private Kadenwood Gondola offering service to the base of Creekside Village.
-              <br />
-              <br />
+            </p>
+            <p className="text-gray-800 mb-16 max-w-4xl">
               At AceHost, we are dedicated to providing a five-star experience, and to enhance your stay, we include a complimentary butler every day.
             </p>
+
+            {/* Instagram Reel Video - Centered and Larger */}
+            <div className="flex justify-center mb-16">
+              <div className="w-full max-w-lg">
+                <div className="rounded-xl overflow-hidden shadow-2xl bg-white">
+                  <div className="flex flex-col h-full">
+                    <div className="p-6 border-b bg-gradient-to-r from-gray-50 to-white">
+                      <h3 className="text-xl font-bold text-center text-gray-900">
+                        Two Cedars Walk Through
+                      </h3>
+                    </div>
+
+                    <div
+                      className="aspect-w-9 aspect-h-16 relative"
+                      style={{ minHeight: "690px" }}
+                    >
+                      <div className="absolute inset-0 w-full h-full">
+                        <iframe
+                          className="absolute inset-0 w-full h-full"
+                          src="https://www.instagram.com/reel/C0slAOvLmII/embed/?utm_source=ig_embed&utm_campaign=loading&hidecaption=1"
+                          frameBorder="0"
+                          scrolling="no"
+                          loading="lazy"
+                          allowTransparency={true}
+                          allowFullScreen={true}
+                          title="Two Cedars Walk Through Video"
+                        ></iframe>
+                      </div>
+                    </div>
+
+                    <div className="p-4 border-t bg-gradient-to-r from-gray-50 to-white">
+                      <a
+                        href="https://www.instagram.com/reel/C0slAOvLmII/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                        className="text-blue-600 text-sm font-medium block text-center hover:text-blue-800 transition-colors"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        View more on Instagram
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             {/* The Space Section */}
             <div className="flex flex-col md:flex-row mb-20">

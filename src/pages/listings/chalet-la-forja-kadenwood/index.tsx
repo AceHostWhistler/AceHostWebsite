@@ -60,6 +60,22 @@ const ChaletLaForja = () => {
     "/photos/properties/Chalet La Forja/2950HeritagePeaks3Feb32.jpg",
     "/photos/properties/Chalet La Forja/2950HeritagePeaks3Feb33.jpg",
     "/photos/properties/Chalet La Forja/2950HeritagePeaks3Feb45.jpg",
+    "/photos/properties/Chalet La Forja/05-2950 Heritage Peaks Trail-05 2.jpg",
+    "/photos/properties/Chalet La Forja/09-2950 Heritage Peaks Trail-09 2.jpg",
+    "/photos/properties/Chalet La Forja/10-2950 Heritage Peaks Trail-10 2.jpg",
+    "/photos/properties/Chalet La Forja/13-2950 Heritage Peaks Trail-13 2.jpg",
+    "/photos/properties/Chalet La Forja/16-2950 Heritage Peaks Trail-16 2.jpg",
+    "/photos/properties/Chalet La Forja/20-2950 Heritage Peaks Trail-20 2.jpg",
+    "/photos/properties/Chalet La Forja/26-2950 Heritage Peaks Trail-26 2.jpg",
+    "/photos/properties/Chalet La Forja/2950 Heritage Peaks Trail 4 Large 2.png",
+    "/photos/properties/Chalet La Forja/2950HeritagePeaks3Feb22 2.jpg",
+    "/photos/properties/Chalet La Forja/2950HeritagePeaks3Feb29 2.jpg",
+    "/photos/properties/Chalet La Forja/2950HeritagePeaks3Feb30 2.jpg",
+    "/photos/properties/Chalet La Forja/2950HeritagePeaks3Feb32 2.jpg",
+    "/photos/properties/Chalet La Forja/2950HeritagePeaks3Feb45 2.jpg",
+    "/photos/properties/Chalet La Forja/Forja-3 copy.jpg",
+    "/photos/properties/Chalet La Forja/IMG_1414.JPG",
+    "/photos/properties/Chalet La Forja/IMG_1414 2.JPG",
   ];
 
   const handlePhotoClick = (index: number) => {
