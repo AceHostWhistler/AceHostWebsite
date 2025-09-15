@@ -76,6 +76,9 @@ const ChaletLaForja = () => {
     "/photos/properties/Chalet La Forja/Forja-3 copy.jpg",
     "/photos/properties/Chalet La Forja/IMG_1414.JPG",
     "/photos/properties/Chalet La Forja/IMG_1414 2.JPG",
+    "/photos/properties/Chalet La Forja/La Forja 01.jpg",
+    "/photos/properties/Chalet La Forja/La Forja 02.jpg",
+    "/photos/properties/Chalet La Forja/La Forja 03.jpg",
   ];
 
   const handlePhotoClick = (index: number) => {

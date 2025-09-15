@@ -29,10 +29,10 @@ const teamMembers: TeamMember[] = [
     imagePath: "/photos/homepage/about/Max.jpg",
   },
   {
-    name: "Sally Fewson",
-    role: "Executive Assistant / Lead Property Manager",
-    bio: "I'm Sally, I was born and grew up in Surrey in the UK. The mountains and skiing brought me to Whistler in 2019 and I haven't looked back since! I have spent the past several years working for UHNW individuals in service, housekeeping, kitchens, and personal assistant roles on super yachts and private residences. As a result, I am incredibly detail-orientated with high standards and always strive to provide the best guest experience possible that will exceed 5 star hotels.\n\nWhistler has sucked me in and has since been unable to spit me out. I spend my time enjoying everything this town has to offer. Mountain biking, skiing, hiking, running, and like Ben, I love road tripping and exploring what else BC has to offer. I aim to ensure that your property is kept to the highest standard possible, attend to all guest needs, and make sure they have an incredible stay that will leave them wanting more. No ask is too big or small!",
-    imagePath: "/photos/homepage/about/Sally.jpeg",
+    name: "Emma Curto",
+    role: "Lead Property Manager",
+    bio: "Hi, I'm Emma! I'm originally from Ancaster, Ontario, and I moved to Whistler in the spring of 2019. From the moment I arrived, I knew this place was special and would become my forever home. Spring is one of my favourite seasons here because you can snowboard in a T-shirt, play a full 18 holes of golf, and even go for a hike all in the same day if you're up for it!\n\nWith over ten years of experience in luxury customer service and retail, I've had the privilege of working in many parts of Whistler. This has allowed me to build meaningful connections with the incredible local community that makes this town so unique.\n\nOutside of work, you'll often find me hiking in the alpine or snowboarding with friends. I'm also passionate about travel and have explored destinations such as Italy, Spain, Hawaii, and New Zealand. My experiences have ranged from tent camping in Hana, Hawaii to enjoying five-star accommodations in the mountains of Banff, Alberta. These journeys have shown me how much thoughtful details can shape lasting memories.\n\nWhat I love most about my work is creating genuine relationships and hearing from guests about how much they enjoyed their time in Whistler. I take pride in ensuring your experience with AceHost is seamless, personalized, and truly memorable. I can't wait to welcome you to Whistler!",
+    imagePath: "/photos/homepage/about/Emma.jpg",
   },
 ];
 
