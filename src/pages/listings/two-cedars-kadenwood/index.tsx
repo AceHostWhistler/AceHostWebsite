@@ -219,9 +219,9 @@ const TwoCedarsKadenwood = () => {
               At AceHost, we are dedicated to providing a five-star experience, and to enhance your stay, we include a complimentary butler every day.
             </p>
 
-            {/* Instagram Reel Video - Centered and Larger */}
+            {/* Instagram Reel Video - Centered and Smaller */}
             <div className="flex justify-center mb-16">
-              <div className="w-full max-w-lg">
+              <div className="w-full max-w-sm">
                 <div className="rounded-xl overflow-hidden shadow-2xl bg-white">
                   <div className="flex flex-col h-full">
                     <div className="p-6 border-b bg-gradient-to-r from-gray-50 to-white">
@@ -232,17 +232,18 @@ const TwoCedarsKadenwood = () => {
 
                     <div
                       className="aspect-w-9 aspect-h-16 relative"
-                      style={{ minHeight: "690px" }}
+                      style={{ minHeight: "480px" }}
                     >
                       <div className="absolute inset-0 w-full h-full">
                         <iframe
                           className="absolute inset-0 w-full h-full"
-                          src="https://www.instagram.com/reel/C0slAOvLmII/embed/?utm_source=ig_embed&utm_campaign=loading&hidecaption=1"
+                          src="https://www.instagram.com/reel/C0slAOvLmII/embed/?utm_source=ig_embed&utm_campaign=loading&hidecaption=1&utm_medium=embed&autoplay=false"
                           frameBorder="0"
                           scrolling="no"
                           loading="lazy"
-                          allowTransparency={true}
                           allowFullScreen={true}
+                          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                          referrerPolicy="strict-origin-when-cross-origin"
                           title="Two Cedars Walk Through Video"
                         ></iframe>
                       </div>

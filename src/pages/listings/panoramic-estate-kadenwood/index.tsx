@@ -244,12 +244,13 @@ const PanoramicEstate = () => {
                       <div className="absolute inset-0 w-full h-full">
                         <iframe
                           className="absolute inset-0 w-full h-full"
-                          src="https://www.instagram.com/reel/DOoXPbrj_UV/embed/?utm_source=ig_embed&utm_campaign=loading&hidecaption=1"
+                          src="https://www.instagram.com/reel/DOoXPbrj_UV/embed/?utm_source=ig_embed&utm_campaign=loading&hidecaption=1&utm_medium=embed&autoplay=false"
                           frameBorder="0"
                           scrolling="no"
                           loading="lazy"
-                          allowTransparency={true}
                           allowFullScreen={true}
+                          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                          referrerPolicy="strict-origin-when-cross-origin"
                           title="Panoramic Estate Walk Through Video"
                         ></iframe>
                       </div>
