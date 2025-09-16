@@ -442,33 +442,14 @@ const TwoCedarsKadenwood = () => {
                 <h2 className="text-2xl font-bold">Experience Two Cedars</h2>
               </div>
               
-              <div className="flex flex-col md:flex-row gap-8 mb-6">
-                <div className="md:w-1/2">
+              <div className="mb-6">
+                <div>
                   <p className="text-gray-800 mb-6">
                     Take a virtual tour of this stunning property with our video showcase. Experience the elegance and luxury of Two Cedars Kadenwood, from its breathtaking mountain views to its meticulously designed interior spaces.
                   </p>
                   <p className="text-gray-800 mb-6">
                     The video highlights the property's exceptional features including the spacious living areas, gourmet kitchen, private bedrooms, and outdoor spaces - all designed to provide the ultimate luxury Whistler experience. See firsthand why Two Cedars is one of Whistler's most prestigious vacation properties.
                   </p>
-                </div>
-                <div className="md:w-1/2 flex justify-center">
-                  <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-shadow duration-300" style={{ width: '340px' }}>
-                    <div className="relative" style={{ height: "600px" }}>
-                      <iframe
-                        className="absolute inset-0 w-full h-full"
-                        src="https://www.instagram.com/reel/C0slAOvLmII/embed/captioned/"
-                        frameBorder="0"
-                        scrolling="no"
-                        allowTransparency={true}
-                        allowFullScreen={true}
-                      ></iframe>
-                    </div>
-                    <div className="p-1 bg-gray-50">
-                      <h3 className="text-xs font-medium text-center text-gray-700">
-                        Two Cedars Luxury Estate Video Tour
-                      </h3>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
