@@ -10,30 +10,6 @@ export default function BlogPost() {
   const publishDate = "January 16, 2025";
   const currentArticleLink = "/post/new-acehost-luxury-airbnb-highlight-best-4-bedroom-whistler-golf-course-views";
 
-  // Related articles
-  const relatedArticles = [
-    {
-      title: "Whistler's Crown Jewels: Where Luxury Rental Homes Redefine the Mountain Getaway",
-      slug: "whistlers-crown-jewels-where-luxury-rental-homes-redefine-the-mountain-getaway",
-      category: "Luxury Properties",
-      readTime: "15 min read",
-      description: "Explore Whistler's most exclusive luxury vacation rental homes and discover what makes them truly exceptional."
-    },
-    {
-      title: "Top 7 of the Most Luxury Vacation Rental Homes in Whistler for Christmas & New Year's",
-      slug: "top-7-of-the-most-luxury-vacation-rental-homes-in-whistler-for-christmas-new-years",
-      category: "Holiday Rentals",
-      readTime: "12 min read",
-      description: "Discover the most luxurious properties in Whistler available for your Christmas and New Year's celebrations."
-    },
-    {
-      title: "Discover the Ultimate Ski-in/Ski-out Luxury Chalet Homes in Whistler Canada",
-      slug: "discover-the-ultimate-ski-in-ski-out-luxury-chalet-homes-in-whistler-canada",
-      category: "Ski Properties",
-      readTime: "18 min read",
-      description: "Experience the convenience and luxury of ski-in/ski-out properties in Whistler's most prestigious locations."
-    },
-  ];
 
   return (
     <>
@@ -323,7 +299,7 @@ export default function BlogPost() {
           </div>
 
           {/* Related Articles */}
-          <BlogRelatedArticles articles={relatedArticles} currentArticle={currentArticleLink} />
+          <BlogRelatedArticles currentArticleLink={currentArticleLink} />
         </main>
 
         <Footer />
