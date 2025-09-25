@@ -95,7 +95,7 @@ export default function BlogPost() {
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/Muirfield Golf Course/living-room-view.jpg"
+                  src="/photos/properties/Muirfield Golf Course/03 - 20250820 A7M4 01 A1_00186.jpg"
                   alt="Luxury living room with golf course views"
                   fill
                   className="object-cover"
@@ -104,12 +104,97 @@ export default function BlogPost() {
               </div>
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/Muirfield Golf Course/kitchen-dining.jpg"
+                  src="/photos/properties/Muirfield Golf Course/08 - 20250820 A7M4 01 A1_00171.jpg"
                   alt="Chef's kitchen and dining area"
                   fill
                   className="object-cover"
                   quality={85}
                 />
+              </div>
+            </div>
+
+            {/* Additional Property Photos */}
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Experience Luxury Indoor & Outdoor Living</h2>
+              
+              {/* Large Kitchen and Dining */}
+              <div className="mb-8">
+                <div className="relative h-80 rounded-lg overflow-hidden mb-4">
+                  <Image
+                    src="/photos/properties/Muirfield Golf Course/16 - 20250820 A7M4 01 A1_00121.jpg"
+                    alt="Large kitchen and dining area"
+                    fill
+                    className="object-cover"
+                    quality={85}
+                  />
+                </div>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  The expansive kitchen and dining area provides the perfect space for family gatherings and memorable meals. With top-of-the-line appliances and ample seating, it's designed for both intimate dinners and larger celebrations.
+                </p>
+              </div>
+
+              {/* Master Bedroom */}
+              <div className="mb-8">
+                <div className="relative h-80 rounded-lg overflow-hidden mb-4">
+                  <Image
+                    src="/photos/properties/Muirfield Golf Course/24 - 20250820 A7M4 01 A1_00329.jpg"
+                    alt="Master bedroom with mountain views"
+                    fill
+                    className="object-cover"
+                    quality={85}
+                  />
+                </div>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  The master bedroom offers a serene retreat with stunning views and luxurious furnishings. Wake up to breathtaking mountain vistas and enjoy the peaceful ambiance that makes every morning special.
+                </p>
+              </div>
+
+              {/* Hot Tub and Outdoor Areas */}
+              <div className="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                  <div className="relative h-80 rounded-lg overflow-hidden mb-4">
+                    <Image
+                      src="/photos/properties/Muirfield Golf Course/10 - 20250820 A7M4 01 A1_00222.jpg"
+                      alt="Hot tub with outdoor dining and stunning views"
+                      fill
+                      className="object-cover"
+                      quality={85}
+                    />
+                  </div>
+                  <p className="text-gray-700">
+                    Relax in the private hot tub while enjoying outdoor dining with breathtaking mountain and golf course views. The perfect setting for evening relaxation after a day of adventure.
+                  </p>
+                </div>
+                <div>
+                  <div className="relative h-80 rounded-lg overflow-hidden mb-4">
+                    <Image
+                      src="/photos/properties/Muirfield Golf Course/11 - 20250820 A7M4 01 A1_00232.jpg"
+                      alt="Hot tub with panoramic views"
+                      fill
+                      className="object-cover"
+                      quality={85}
+                    />
+                  </div>
+                  <p className="text-gray-700">
+                    The hot tub offers panoramic views of the surrounding landscape, providing the ultimate relaxation experience in Whistler's stunning natural setting.
+                  </p>
+                </div>
+              </div>
+
+              {/* Golf Course Views */}
+              <div className="mb-8">
+                <div className="relative h-80 rounded-lg overflow-hidden mb-4">
+                  <Image
+                    src="/photos/properties/Muirfield Golf Course/43 - 20250820 MM4P 01 0011.jpg"
+                    alt="Golf course views - stunning in both summer and winter"
+                    fill
+                    className="object-cover"
+                    quality={85}
+                  />
+                </div>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  The golf course views are stunning year-round. In summer, enjoy the lush green fairways and watching golfers play through. In winter, the snow-covered landscape transforms into a magical wonderland where you can build snow forts and snowmen right in your backyard, creating unforgettable family memories.
+                </p>
               </div>
             </div>
 
@@ -119,24 +204,24 @@ export default function BlogPost() {
               
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">🏌️ Prime Golf Course Location</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Prime Golf Course Location</h3>
                   <p className="text-gray-700 mb-6">
                     Positioned directly on Hole 14 of the world-renowned Nicklaus North Golf Course, you'll wake up to breathtaking fairway views and watch golfers play through from your private backyard. The location offers the perfect blend of tranquility and recreation.
                   </p>
 
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">🍳 Chef's Kitchen & Spacious Layout</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Chef's Kitchen & Spacious Layout</h3>
                   <p className="text-gray-700 mb-6">
                     The heart of this home is the fully equipped chef's kitchen, perfect for preparing memorable meals. The open-concept design flows seamlessly into a spacious dining area that seats 10, plus a cozy breakfast nook for intimate morning coffees.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">🔥 Cozy Mountain Ambiance</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Cozy Mountain Ambiance</h3>
                   <p className="text-gray-700 mb-6">
                     Natural wood and stone textures create an authentic mountain atmosphere, while the wood-burning fireplace provides the perfect gathering spot for evening conversations and s'mores after a day on the slopes or course.
                   </p>
 
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">🎬 Entertainment & Relaxation</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Entertainment & Relaxation</h3>
                   <p className="text-gray-700 mb-6">
                     A separate media room ensures movie nights are memorable, while the private hot tub offers the perfect way to unwind after adventure-filled days. Every detail has been thoughtfully designed for your comfort.
                   </p>
@@ -187,7 +272,7 @@ export default function BlogPost() {
               
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">💰 Fairly Priced Luxury</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Fairly Priced Luxury</h3>
                   <div className="space-y-3 mb-6">
                     <div className="flex justify-between items-center py-2 border-b border-gray-200">
                       <span className="text-gray-700">Summer Rate:</span>
@@ -208,7 +293,7 @@ export default function BlogPost() {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">🎄 Holiday Availability</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Holiday Availability</h3>
                   <div className="bg-white rounded-lg p-6 border border-gray-200">
                     <div className="flex items-center space-x-3 mb-4">
                       <div className="w-3 h-3 bg-green-500 rounded-full"></div>
