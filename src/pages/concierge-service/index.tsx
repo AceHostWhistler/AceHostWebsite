@@ -161,8 +161,8 @@ const ConciergeService = () => {
                     </div>
 
                     <div
-                      className="aspect-w-9 aspect-h-16 relative"
-                      style={{ minHeight: "500px" }}
+                      className="relative w-full"
+                      style={{ paddingTop: "177.78%", maxHeight: "400px" }}
                     >
                       <div className="absolute inset-0 w-full h-full">
                         <iframe
