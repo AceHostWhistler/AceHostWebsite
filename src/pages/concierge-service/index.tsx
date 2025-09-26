@@ -162,7 +162,7 @@ const ConciergeService = () => {
 
                     <div
                       className="relative w-full"
-                      style={{ paddingTop: "177.78%", maxHeight: "400px" }}
+                      style={{ paddingTop: "177.78%", maxHeight: "260px" }}
                     >
                       <div className="absolute inset-0 w-full h-full">
                         <iframe
