@@ -152,17 +152,17 @@ const ConciergeService = () => {
                 </div>
 
                 {/* Video Player (Vimeo Embed) */}
-                <div className="rounded-lg overflow-hidden shadow-lg bg-white">
+                <div className="rounded-lg overflow-hidden shadow-lg bg-white w-3/4 mx-auto">
                   <div className="flex flex-col h-full">
-                    <div className="p-4 border-b">
-                      <h3 className="text-xl font-semibold">
+                    <div className="p-8 border-b">
+                      <h3 className="text-3xl font-bold text-center">
                         The AceHost Concierge Reel
                       </h3>
                     </div>
 
                     <div
                       className="relative w-full"
-                      style={{ paddingTop: "177.78%", maxHeight: "260px" }}
+                      style={{ paddingTop: "177.78%", height: "478px" }}
                     >
                       <div className="absolute inset-0 w-full h-full">
                         <iframe
@@ -194,7 +194,7 @@ const ConciergeService = () => {
                         </div>
                         <FaRegBookmark className="text-2xl" />
                       </div>
-                      <p className="font-medium mb-2">278 likes</p>
+                      <p className="font-medium mb-2">331 likes</p>
                     </div>
                   </div>
                 </div>
@@ -608,23 +608,29 @@ const ConciergeService = () => {
                 </div>
 
                 {/* Private Chef Experiences Whistler Video */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative" style={{ height: "600px" }}>
+                <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                  <div className="p-4 border-b bg-gradient-to-r from-gray-50 to-white">
+                    <h3 className="text-lg font-bold text-center text-gray-900">
+                      Private Chef Experiences Whistler
+                    </h3>
+                  </div>
+                  <div className="relative" style={{ height: "500px" }}>
                     <iframe
                       className="absolute inset-0 w-full h-full"
-                      src="https://www.instagram.com/reel/DGWaTL2Shk9/embed/?utm_source=ig_embed&utm_campaign=loading&hidecaption=1"
+                      src="https://www.instagram.com/reel/DGWaTL2Shk9/embed/?utm_source=ig_embed&utm_campaign=loading&hidecaption=1&utm_medium=embed&autoplay=false"
                       frameBorder="0"
                       scrolling="no"
                       loading="lazy"
-                      allowTransparency={true}
                       allowFullScreen={true}
+                      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
                       title="Private Chef Experiences Whistler Video"
                     ></iframe>
                   </div>
-                  <div className="p-1 bg-gray-50">
-                    <h3 className="text-xs font-medium text-center text-gray-700">
-                      Private Chef Experiences Whistler Video
-                    </h3>
+                  <div className="p-4 border-t bg-gradient-to-r from-gray-50 to-white">
+                    <p className="text-sm text-center text-gray-600 font-medium">
+                      Experience culinary excellence in your luxury accommodation
+                    </p>
                   </div>
                 </div>
 
