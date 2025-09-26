@@ -617,13 +617,12 @@ const ConciergeService = () => {
                   <div className="relative" style={{ height: "500px" }}>
                     <iframe
                       className="absolute inset-0 w-full h-full"
-                      src="https://www.instagram.com/reel/DGWaTL2Shk9/embed/?utm_source=ig_embed&utm_campaign=loading&hidecaption=1&utm_medium=embed&autoplay=false"
+                      src="https://www.instagram.com/reel/DGWaTL2Shk9/embed/?utm_source=ig_embed&utm_campaign=loading"
                       frameBorder="0"
                       scrolling="no"
                       loading="lazy"
                       allowFullScreen={true}
-                      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
+                      sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
                       title="Private Chef Experiences Whistler Video"
                     ></iframe>
                   </div>
