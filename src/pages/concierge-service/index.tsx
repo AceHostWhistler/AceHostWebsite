@@ -28,6 +28,7 @@ import {
   FaDog,
   FaCamera,
   FaVideo,
+  FaTicketAlt,
 } from "react-icons/fa";
 import { IoPaperPlaneOutline } from "react-icons/io5";
 import { BiSpa, BiDrink, BiHomeAlt, BiInjection } from "react-icons/bi";
@@ -238,6 +239,29 @@ const ConciergeService = () => {
                       find hidden trails, and are familiar with the best spots on
                       the mountain, especially during powder days. Guides can
                       help you skip lines and meet at your convenience.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Ski Lift Pass Delivery */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/texture/Screenshot 2025-09-26 at 10.07.32 AM.png"
+                      alt="Ski Lift Pass Delivery"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <FaTicketAlt className="text-lg" />
+                      </span>
+                      Ski Lift Pass Delivery
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      With all AceHost bookings, guests enjoy the added convenience of having their ski passes delivered right to their rental home. No more waiting in long lines, showing IDs, or filling out forms when you'd rather be enjoying the mountains. Instead, your passes are ready and waiting for you upon arrival, so you can wake up and head straight to the slopes stress-free. And best of all, we provide this service at absolutely no extra cost.
                     </p>
                   </div>
                 </div>
