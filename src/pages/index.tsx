@@ -985,6 +985,7 @@ const Home = () => {
           media="(min-width: 768px)" 
           fetchPriority="high"
         />
+        <script src="https://player.vimeo.com/api/player.js" async></script>
       </Head>
 
       <div className="min-h-screen bg-white text-gray-900 overflow-x-hidden max-w-full">
@@ -1024,12 +1025,13 @@ const Home = () => {
             <div className="mt-8 md:mt-0 md:w-[58%] lg:w-[58%] flex justify-center md:justify-normal md:items-center px-1 md:px-0 md:pr-4">
               <div className="w-[98%] md:w-[95%] overflow-hidden">
                 <iframe
-                  src="https://player.vimeo.com/video/1053582724?title=0&byline=0&portrait=0&autoplay=0&loop=1&background=0"
+                  src="https://player.vimeo.com/video/1122267050?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&autoplay=0&loop=1&background=0"
                   className="w-full aspect-video"
                   frameBorder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
                   allowFullScreen
-                  title="AceHost Whistler Concierge Experience"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  title="The AceHost Whistler Vacation Experience"
                   loading="lazy"
                   style={{ display: 'block' }}
                 ></iframe>
