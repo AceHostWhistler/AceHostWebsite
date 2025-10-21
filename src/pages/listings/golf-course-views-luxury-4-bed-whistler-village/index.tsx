@@ -209,11 +209,51 @@ const GolfCourseViews = () => {
 
           {/* Property Description */}
           <div className="max-w-6xl mx-auto px-4" id="details">
-            <p className="text-gray-800 mb-16 max-w-4xl">
+            <p className="text-gray-800 mb-8 max-w-4xl">
               This cozy, standalone chalet sits right on Nicklaus North Golf Course with stunning views of Hole 14. 
               Enjoy a private hot tub, media room, wood-burning fireplace, and chef's kitchen. Just a short drive to 
               Whistler Village and the ski lifts, plus being north of the village helps you skip the city traffic after skiing.
             </p>
+
+            {/* Instagram Reel Video - Centered and Larger */}
+            <div className="flex justify-center mb-16">
+              <div className="w-full max-w-lg">
+                <div className="rounded-xl overflow-hidden shadow-2xl bg-white">
+                  <div className="flex flex-col h-full">
+                    <div className="p-6 border-b bg-gradient-to-r from-gray-50 to-white">
+                      <h3 className="text-xl font-bold text-center text-gray-900">
+                        Muirfield Golf Course Views Walkthrough Video
+                      </h3>
+                    </div>
+
+                    <div
+                      className="aspect-w-9 aspect-h-16 relative"
+                      style={{ minHeight: "690px" }}
+                    >
+                      <div className="absolute inset-0 w-full h-full">
+                        <iframe
+                          className="absolute inset-0 w-full h-full"
+                          src="https://www.instagram.com/reel/DQCt3vQAR-3/embed/?utm_source=ig_embed&utm_campaign=loading&hidecaption=1&utm_medium=embed&autoplay=false"
+                          frameBorder="0"
+                          scrolling="no"
+                          loading="lazy"
+                          allowFullScreen={true}
+                          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                          referrerPolicy="strict-origin-when-cross-origin"
+                          title="Muirfield Golf Course Views Walkthrough Video"
+                        ></iframe>
+                      </div>
+                    </div>
+
+                    <div className="p-4 bg-gradient-to-r from-gray-50 to-white border-t">
+                      <p className="text-sm text-gray-600 text-center">
+                        Take a virtual tour of this stunning golf course property
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             {/* The Space Section */}
             <div className="flex flex-col md:flex-row mb-20">
