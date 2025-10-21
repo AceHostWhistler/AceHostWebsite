@@ -812,6 +812,43 @@ export default function Properties() {
             isSkiInSkiOut: true,
           },
           {
+            id: "cozy-lakefront-whistler-condo",
+            name: "Cozy Lakefront Whistler Condo | Mountain View",
+            images: [
+              "/photos/properties/Nick North 2-Bed/01 - 20251006 A7M4 03 A1_03279-Edit.jpg",
+              "/photos/properties/Nick North 2-Bed/02 - 20251006 A7M4 03 A1_03248-Edit-Edit.jpg",
+              "/photos/properties/Nick North 2-Bed/03 - 20251006 A7M4 03 A1_03258-Edit.jpg"
+            ],
+            guests: 4,
+            bedrooms: 2,
+            bathrooms: 2,
+            location: "Nicklaus North, Whistler",
+            description:
+              "Stylish Whistler Condo at prestigious Nicklaus North with breathtaking views! Top floor 1000 sqft 2BR/2BA with vaulted ceilings. Just updated with modern décor. Each bedroom with lakefront and mountain views. Front door access to cross country skiing, mountain bike trails, walks around the lakefront, 5-star restaurant Table 19 (with Whistler's best fondue and happy hour), and world class golf course. Your suite is only a 7 minute drive to Whistler Village!",
+            features: [
+              "Golf Course Views",
+              "Lakefront Views",
+              "Private Patio (200 sqft)",
+              "Underground Parking",
+              "High-Speed WiFi (300mbps)",
+              "Smart TV & Bose Speaker",
+              "Washer & Dryer",
+              "Fully Equipped Kitchen"
+            ],
+            highlights: [
+              "Nicklaus North Golf Course Location",
+              "Lakefront & Mountain Views",
+              "7 Minutes to Whistler Village",
+              "Top Floor with Vaulted Ceilings"
+            ],
+            priceRange: "$250-800 per night Summer",
+            winterPrice: "$500-1300 Nightly | Winter",
+            holidayPrice: "$1400-1800 Nightly | Christmas & NY",
+            link: "/listings/cozy-lakefront-whistler-condo-mountain-view",
+            isPetFriendly: false,
+            isSkiInSkiOut: false,
+          },
+          {
             id: "scandinavian-mountainside-retreat-pemberton-meadows-50-acres",
             name: "Pemberton Escape | 50 Acres | Wellness & Heli Retreat",
             images: [
