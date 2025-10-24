@@ -819,12 +819,12 @@ export default function Properties() {
               "/photos/properties/Nick North 2-Bed/02 - 20251006 A7M4 03 A1_03248-Edit-Edit.jpg",
               "/photos/properties/Nick North 2-Bed/03 - 20251006 A7M4 03 A1_03258-Edit.jpg"
             ],
-            guests: 4,
+            guests: 7,
             bedrooms: 2,
             bathrooms: 2,
             location: "Nicklaus North, Whistler",
             description:
-              "Stylish Whistler Condo at prestigious Nicklaus North with breathtaking views! Top floor 1000 sqft 2BR/2BA with vaulted ceilings. Just updated with modern décor. Each bedroom with lakefront and mountain views. Front door access to cross country skiing, mountain bike trails, walks around the lakefront, 5-star restaurant Table 19 (with Whistler's best fondue and happy hour), and world class golf course. Your suite is only a 7 minute drive to Whistler Village!",
+              "Stylish top-floor 2 BDR/2BA + pull out living room bed, located at the prestigious Nicklaus North Golf Course. Recently updated with modern décor, high ceilings, and stunning lake and mountain views from every room. Step outside to enjoy cross-country skiing, biking, and lakeside walks, or dine at Table 19, known for Whistler's best fondue, happy hour, lunch & dinner. In summer, golf steps from your door, all just a 7-minute drive to Whistler Village!",
             features: [
               "Golf Course Views",
               "Lakefront Views",
@@ -845,6 +845,7 @@ export default function Properties() {
             winterPrice: "$500-1300 Nightly | Winter",
             holidayPrice: "$1400-1800 Nightly | Christmas & NY",
             link: "/listings/cozy-lakefront-whistler-condo-mountain-view",
+            airbnbLink: "https://www.airbnb.ca/rooms/1305524887656641858?guests=1&adults=1&s=67&unique_share_id=23663c37-e33a-445b-a53c-6f927f30d084",
             isPetFriendly: false,
             isSkiInSkiOut: false,
           },
@@ -1762,6 +1763,8 @@ export default function Properties() {
         "https://www.airbnb.ca/rooms/1015303987589924725?guests=1&adults=1&s=67&unique_share_id=5e912eb5-5445-4797-81ec-df21817dd143",
       "whistler-village-penthouse":
         "https://www.airbnb.ca/rooms/1471251206220643818?guests=1&adults=1&s=67&unique_share_id=0ec28644-49fa-4b63-9276-7e5f5c6a1153",
+      "cozy-lakefront-whistler-condo":
+        "https://www.airbnb.ca/rooms/1305524887656641858?guests=1&adults=1&s=67&unique_share_id=23663c37-e33a-445b-a53c-6f927f30d084",
     };
 
     // Use the airbnbLink from the hardcoded list, or fall back to the property's airbnbLink field if it exists

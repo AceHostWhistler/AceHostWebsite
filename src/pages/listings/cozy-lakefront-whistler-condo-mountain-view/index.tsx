@@ -147,13 +147,14 @@ const CozyLakefrontCondo = () => {
         <main>
           <PropertyHeader
             title="Cozy Lakefront Whistler Condo | Mountain View"
-            guests={4}
+            guests={7}
             bedrooms={2}
-            beds={3}
+            beds={5}
             bathrooms={2}
             priceRange="$250-800 per night Summer"
             winterPrice="$500-1300 Nightly | Winter"
             holidayPrice="$1400-1800 Nightly | Christmas & NY"
+            airbnbLink="https://www.airbnb.ca/rooms/1305524887656641858?guests=1&adults=1&s=67&unique_share_id=23663c37-e33a-445b-a53c-6f927f30d084"
           />
 
           <div className="text-center mb-16">
@@ -190,7 +191,10 @@ const CozyLakefrontCondo = () => {
           {/* Property Description */}
           <div className="max-w-6xl mx-auto px-4" id="details">
             <p className="text-gray-800 mb-16 max-w-4xl">
-              Stylish Whistler Condo at prestigious Nicklaus North with breathtaking views! Top floor 1000 sqft 2BR/2BA with vaulted ceilings. Just updated with modern décor. Each bedroom with lakefront and mountain views. Front door access to cross country skiing, mountain bike trails, walks around the lakefront, 5-star restaurant Table 19 (with Whistler's best fondue and happy hour), and world class golf course. Your suite is only a 7 minute drive to Whistler Village!
+              Stylish top-floor 2 BDR/2BA + pull out living room bed, located at the prestigious Nicklaus North Golf Course. Recently updated with modern décor, high ceilings, and stunning lake and mountain views from every room.
+            </p>
+            <p className="text-gray-800 mb-16 max-w-4xl">
+              Step outside to enjoy cross-country skiing, biking, and lakeside walks, or dine at Table 19, known for Whistler's best fondue, happy hour, lunch & dinner. In summer, golf steps from your door, all just a 7-minute drive to Whistler Village!
             </p>
 
             {/* The Space Section */}
@@ -365,8 +369,8 @@ const CozyLakefrontCondo = () => {
                     />
                   </svg>
                 </div>
-                <h2 className="text-2xl font-bold">Guest Access & Important Notes</h2>
-              </div>
+                  <h2 className="text-2xl font-bold">Guest Access & Important Notes</h2>
+                </div>
               
               <div className="space-y-6 max-w-4xl">
                 <div>
@@ -377,13 +381,10 @@ const CozyLakefrontCondo = () => {
                 </div>
 
                 <div>
-                  <h3 className="font-medium text-lg mb-2">Important Notes</h3>
-                  <p className="text-gray-800 mb-2">• Smoking/drugs in unit or in the common areas of the building are NOT allowed.</p>
-                  <p className="text-gray-800 mb-2">• Pets are NOT allowed.</p>
-                  <p className="text-gray-800 mb-2">• Airbnb noise monitor is installed in the unit.</p>
-                  <p className="text-gray-800 mb-4">• All-out parties and binge-drinking types of events are NOT allowed. I live in a nice building with quiet neighbors and would like to keep it that way.</p>
-                  
-                  <p className="text-gray-800 font-medium">NOTE: There is an Airbnb Noise Monitor installed in the unit. This unit is not for partying.</p>
+                  <h3 className="font-medium text-lg mb-2">Rules</h3>
+                  <p className="text-gray-800 mb-2">No smoking.</p>
+                  <p className="text-gray-800 mb-2">No pets.</p>
+                  <p className="text-gray-800">No parties.</p>
                 </div>
 
                 <div>
