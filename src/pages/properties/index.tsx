@@ -812,6 +812,45 @@ export default function Properties() {
             isSkiInSkiOut: true,
           },
           {
+            id: "glaciers-reach",
+            name: "Glaciers Reach | Heart of Whistler Village",
+            images: [
+              "/photos/properties/Glaciers Reach/01 - 20251021 MM4P 01 0021.jpg",
+              "/photos/properties/Glaciers Reach/02 - 20251021 A7M4 01 A1_05399.jpg",
+              "/photos/properties/Glaciers Reach/07 - 20251021 A7M4 01 A1_05210.jpg"
+            ],
+            guests: 5,
+            bedrooms: 3,
+            bathrooms: 2,
+            location: "Whistler Village",
+            description:
+              "Stay in the heart of Whistler Village in this rare three-bedroom townhouse that sleeps 5+ guests. Just steps from restaurants, shops, ski lifts, and the Whistler Racquet & Pickleball Club, this two-level retreat offers the perfect mix of comfort and location. After a day on the slopes or trails, unwind in your private hot tub or explore the shared pool and gym. With modern interiors and mountain charm, this home offers the ideal Whistler getaway year-round.",
+            features: [
+              "Private Hot Tub",
+              "Heated Outdoor Pool",
+              "Fitness Center",
+              "Underground Parking",
+              "Central Village Location",
+              "Fully Equipped Kitchen",
+              "Fireplace",
+              "Private Patio",
+              "Two-Level Townhouse"
+            ],
+            highlights: [
+              "Heart of Whistler Village",
+              "Private Hot Tub",
+              "Steps from Restaurants & Shops",
+              "Close to Ski Lifts"
+            ],
+            priceRange: "$250-600 per night Summer",
+            winterPrice: "$500-1200 Nightly | Winter",
+            holidayPrice: "$1200-1500 Nightly | Christmas & NY",
+            link: "/listings/glaciers-reach-whistler-village",
+            airbnbLink: "https://www.airbnb.ca/rooms/1539363076080108525?guests=1&adults=1&s=67&unique_share_id=e234c7cf-b23b-4ce3-9c53-7dde85033c3b",
+            isPetFriendly: false,
+            isSkiInSkiOut: false,
+          },
+          {
             id: "cozy-lakefront-whistler-condo",
             name: "Cozy Lakefront Whistler Condo | Mountain View",
             images: [
@@ -1765,6 +1804,8 @@ export default function Properties() {
         "https://www.airbnb.ca/rooms/1471251206220643818?guests=1&adults=1&s=67&unique_share_id=0ec28644-49fa-4b63-9276-7e5f5c6a1153",
       "cozy-lakefront-whistler-condo":
         "https://www.airbnb.ca/rooms/1305524887656641858?guests=1&adults=1&s=67&unique_share_id=23663c37-e33a-445b-a53c-6f927f30d084",
+      "glaciers-reach":
+        "https://www.airbnb.ca/rooms/1539363076080108525?guests=1&adults=1&s=67&unique_share_id=e234c7cf-b23b-4ce3-9c53-7dde85033c3b",
     };
 
     // Use the airbnbLink from the hardcoded list, or fall back to the property's airbnbLink field if it exists
