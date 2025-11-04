@@ -318,8 +318,7 @@ const Home = () => {
       holidayPrice: "$14,500-$19,000 Nightly | Christmas & NY",
       location: "whistler",
       link: "/listings/altitude-retreat-kadenwood",
-      airbnbLink:
-        "https://www.airbnb.ca/rooms/771060491470943213?guests=1&adults=1&s=67&unique_share_id=a8ff5a7a-4bda-4cc7-aaad-e99b178f3a5d",
+      contactLink: "/contact",
       isPetFriendly: false,
       isSkiInSkiOut: true,
     },

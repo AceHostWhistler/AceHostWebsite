@@ -316,6 +316,7 @@ export default function Properties() {
             location: "Kadenwood, Whistler",
             description:
               "Altitude Retreat is situated in the most prestigious ski-in ski-out neighbourhood in Whistler. Located just a stone's throw away from the exclusive Kadenwood residence only gondola makes this property the perfect location for your Whistler vacation! This well equipped property features everything you need for an indulgent stay.",
+            contactLink: "/contact",
             features: [
               "Private Butler Service",
               "Luxury In-Home Gym",
@@ -1768,8 +1769,6 @@ export default function Properties() {
 
     // Mapping property IDs to Airbnb links
     const airbnbLinks: Record<string, string> = {
-      "altitude-retreat":
-        "https://www.airbnb.ca/rooms/771060491470943213?guests=1&adults=1&s=67&unique_share_id=a8ff5a7a-4bda-4cc7-aaad-e99b178f3a5d",
       "chalet-la-forja":
         "https://www.airbnb.ca/rooms/52655503?guests=1&adults=1&s=67&unique_share_id=f1bb5c2c-51f9-4a82-9aa4-670fb8caa71d",
       "two-cedars":
