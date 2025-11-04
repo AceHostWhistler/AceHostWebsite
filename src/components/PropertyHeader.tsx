@@ -13,6 +13,7 @@ interface PropertyHeaderProps {
   holidayPrice?: string;
   airbnbLink?: string;
   contactLink?: string;
+  contactText?: string;
 }
 
 const PropertyHeader: React.FC<PropertyHeaderProps> = ({
@@ -26,6 +27,7 @@ const PropertyHeader: React.FC<PropertyHeaderProps> = ({
   holidayPrice,
   airbnbLink,
   contactLink,
+  contactText = 'Contact Us',
 }) => {
   return (
     <div className="max-w-7xl mx-auto px-4 pt-8">
@@ -96,7 +98,7 @@ const PropertyHeader: React.FC<PropertyHeaderProps> = ({
             href={contactLink}
             className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors"
           >
-            Contact Us
+            {contactText}
           </Link>
         ) : (
           <Link
