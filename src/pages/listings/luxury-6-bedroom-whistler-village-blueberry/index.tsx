@@ -189,11 +189,11 @@ const Luxury6BedroomWhistlerVillageBlueberry = () => {
           {/* Property Description */}
           <div className="max-w-6xl mx-auto px-4" id="details">
             <p className="text-gray-800 mb-16 max-w-4xl">
-              Experience Whistler luxury in this newly renovated 6-bedroom, 3-bath Ravencrest condo in prestigious Blueberry Hill.
+              Welcome to this luxurious 6-bedroom, 3-bath Ravencrest condo in Whistler's exclusive Blueberry neighbourhood.
               <br /><br />
-              Sleeping 15+ guests across 10 beds, it features Restoration Hardware and Rove Concepts furnishings, Puffy luxury mattresses, and forest views.
+              Newly renovated and designed with Restoration Hardware and Rove Concepts furnishings, it sleeps 14+ with 10 premium Puffy beds. Enjoy forest views, ski and bike storage, EV parking, and a new BBQ.
               <br /><br />
-              Enjoy ski and bike storage, EV charging, and a new BBQ. Just a 3-4 minute drive or quick taxi ride to Whistler Village, ski lifts, lakes, and top restaurants in one of Whistler's quietest and most sought-after areas.
+              Just a 3-4 minute drive or short taxi ride to Whistler Village, slopes, and lakes, offering tranquility and convenience in one.
             </p>
 
             {/* The Space Section */}
@@ -229,8 +229,9 @@ const Luxury6BedroomWhistlerVillageBlueberry = () => {
                     <h2 className="text-2xl font-bold">The Space</h2>
                   </div>
                   <p className="text-gray-800 mb-6">
-                    This newly renovated luxury condo blends alpine charm with modern comfort. Designed for gatherings, it features a large open living area with a fireplace, Restoration Hardware and Rove Concepts furnishings, and floor-to-ceiling forest views.
-                    A fully equipped kitchen with brand-new fridge, oven, and BBQ provides ample space for group meals. The dining table comfortably seats large groups.
+                    Step into a bright and inviting alpine-inspired retreat where every detail has been curated for relaxation and style. The open-concept living room features a cozy fireplace, plush seating, and large windows framing lush forest views. The fully equipped kitchen is ideal for group dining, complete with a brand-new fridge, oven, and BBQ, plus all the cookware you need for family meals or après-ski dinners.
+                    <br /><br />
+                    Across multiple levels, the home offers ample space for gathering and privacy, making it ideal for multi-family getaways or larger groups wanting a true Whistler experience.
                   </p>
                   <div className="flex items-center space-x-6 mb-6">
                     <div className="flex items-center">
@@ -242,9 +243,6 @@ const Luxury6BedroomWhistlerVillageBlueberry = () => {
                       <span className="text-gray-800">3 Bathrooms</span>
                     </div>
                   </div>
-                  <p className="text-gray-800">
-                    With 6 bedrooms, 3 bathrooms, and 10 beds, the home comfortably sleeps 14+ guests (ideal for 8-10, with room for more). Every bedroom includes a luxury Puffy mattress, firm yet cloud-like for a perfect sleep after skiing or hiking.
-                  </p>
                 </div>
               </div>
               
@@ -280,14 +278,14 @@ const Luxury6BedroomWhistlerVillageBlueberry = () => {
               </div>
             </div>
 
-            {/* Bed Layout Section */}
+            {/* Sleeping Arrangements Section */}
             <div className="mb-20">
-              <h2 className="text-2xl font-bold mb-6">Bed Layout</h2>
+              <h2 className="text-2xl font-bold mb-6">Sleeping Arrangements</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-xl font-semibold mb-4">Lower Level:</h3>
                   <ul className="list-disc pl-5 space-y-2">
-                    <li>Primary Bedroom: King bed, ensuite bathroom with tub and shower, Smart TV</li>
+                    <li>Primary Bedroom: King bed, ensuite with shower/tub combo, Smart TV</li>
                     <li>Bedroom 2: King bed</li>
                   </ul>
                   <div className="mt-6 relative aspect-[4/3]">
@@ -303,12 +301,12 @@ const Luxury6BedroomWhistlerVillageBlueberry = () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-4">Upper Level:</h3>
                   <ul className="list-disc pl-5 space-y-2">
-                    <li>Bedroom 3: Two Queen beds, large office desk, and forest views</li>
+                    <li>Bedroom 3: Two Queen beds, large office desk with forest views, perfect for remote work</li>
                     <li>Bedroom 4: King bed with TV</li>
                     <li>Bedroom 5: King bed</li>
-                    <li>Bedroom 6: Two single bunk beds (adult-friendly but ideal for kids)</li>
+                    <li>Bedroom 6: Two single bunk beds (adult-friendly but perfect for kids)</li>
                   </ul>
-                  <p className="mt-4 text-gray-800">All three bathrooms are full bathrooms with showers and tubs.</p>
+                  <p className="mt-4 text-gray-800">Each of the three full bathrooms includes both a shower and a bathtub, providing convenience and comfort for large groups.</p>
                   <div className="mt-6 relative aspect-[4/3]">
                     <Image
                       src={photos[37]}
@@ -350,18 +348,46 @@ const Luxury6BedroomWhistlerVillageBlueberry = () => {
               </div>
             </div>
 
+            {/* Location Section */}
+            <div className="mb-20">
+              <h2 className="text-2xl font-bold mb-6">Location</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="md:col-span-2">
+                  <p className="text-gray-800">
+                    Set in the prestigious Blueberry Hill neighbourhood, this home combines tranquility and proximity. You're just a few minutes from both Whistler Village and Creekside, while surrounded by nature and scenic trails. The Valley Trail and Whistler Golf Course Loop are right at your doorstep, perfect for morning walks or bike rides in summer.
+                    <br /><br />
+                    In winter, the slopes are a quick drive away, and you'll appreciate coming home to your peaceful retreat away from the busy village. Alta Lake is within walking distance for paddle boarding, picnics, or ice skating, depending on the season.
+                  </p>
+                </div>
+                <div className="md:col-span-1">
+                  <div className="relative aspect-[3/4] h-full">
+                    <Image
+                      src={photos[52]}
+                      alt="Whistler area view"
+                      width={1920}
+                      height={1080}
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Additional Features Section */}
             <div className="mb-20">
               <h2 className="text-2xl font-bold mb-6">Additional Features</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                   <ul className="list-disc pl-5 space-y-2 max-w-4xl">
-                    <li>Ski and bike storage, no need to bring gear inside the condo</li>
+                    <li>Fully renovated luxury condo with Restoration Hardware and Rove Concepts furnishings</li>
+                    <li>10 beds / 6 bedrooms / 3 full bathrooms</li>
+                    <li>Puffy luxury mattresses throughout</li>
+                    <li>Ski and bike storage included—no need to bring gear inside the unit</li>
                     <li>Brand-new BBQ, fridge, and stove/oven</li>
-                    <li>Washer and dryer in unit</li>
                     <li>High-speed Wi-Fi and Smart TVs</li>
-                    <li>Spacious forest-view balcony</li>
-                    <li>Access to beautiful Valley Trails and Blueberry golf-course loop right from the property</li>
+                    <li>Washer and dryer in unit</li>
+                    <li>Forest-view balcony for morning coffee or evening wine</li>
+                    <li>Steps to Valley Trail and golf course loop</li>
                   </ul>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
@@ -393,6 +419,8 @@ const Luxury6BedroomWhistlerVillageBlueberry = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="md:col-span-2">
                   <p className="text-gray-800">
+                    Guests have full access to the entire home, including private parking, bike and ski storage, and building amenities. The condo offers privacy and serenity while still being close to everything Whistler has to offer.
+                    <br /><br />
                     This home is perfect for families, groups, or corporate getaways seeking refined comfort near the mountains. Guests love the quiet setting, the easy access to the Village, and the attention to every detail, from high-end furniture to the luxurious mattresses and EV parking.
                     <br /><br />
                     Stay here to experience the best of Whistler: peace, privacy, and proximity, all in one beautifully designed Blueberry Hill retreat.
