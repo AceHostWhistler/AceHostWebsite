@@ -830,7 +830,7 @@ const Home = () => {
       priceRange: "$500-1500 per night Summer",
       winterPrice: "$500-1500 Nightly | Winter",
       holidayPrice: "$2200-2500+ Nightly | Christmas & NY",
-      location: "Squamish, BC",
+      location: "whistler",
       link: "/listings/squamish-retreat-with-the-best-view",
       airbnbLink: "https://www.airbnb.ca/rooms/1047983607752975484?guests=1&adults=1&s=67&unique_share_id=1e623ba5-133a-4c05-b1c9-4ac721a40a6d",
       isPetFriendly: false,

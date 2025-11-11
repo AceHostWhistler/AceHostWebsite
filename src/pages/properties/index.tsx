@@ -1648,12 +1648,14 @@ export default function Properties() {
               !property.country && 
               (property.location.includes("Whistler") || 
                property.location.includes("Pemberton") || 
+               property.location.includes("Squamish") || 
                property.location === "whistler")
             )) ||
             (category.id === "worldwide" && (
               property.country || 
               (!property.location.includes("Whistler") && 
                !property.location.includes("Pemberton") && 
+               !property.location.includes("Squamish") && 
                property.location !== "whistler")
             ));
           
