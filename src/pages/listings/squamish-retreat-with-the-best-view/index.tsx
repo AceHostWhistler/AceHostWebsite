@@ -18,7 +18,7 @@ const SquamishRetreatWithTheBestView = () => {
   const [touchEndX, setTouchEndX] = useState<number | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // Property photos - limited to 20 for now
+  // Property photos - all photos from the Squamish folder
   const photos = [
     // Main featured photos (keep these at the top)
     "/photos/properties/Squamish/16 - 20251104 A7M4 01 A1_06655.jpg",
@@ -41,6 +41,53 @@ const SquamishRetreatWithTheBestView = () => {
     "/photos/properties/Squamish/19 - 20251104 A7M4 01 A1_06530.jpg",
     "/photos/properties/Squamish/20 - 20251104 A7M4 01 A1_06840.jpg",
     "/photos/properties/Squamish/21 - 20251104 A7M4 01 A1_06848.jpg",
+    "/photos/properties/Squamish/22 - 20251104 A7M4 01 A1_06882.jpg",
+    "/photos/properties/Squamish/23 - 20251104 A7M4 01 A1_06540.jpg",
+    "/photos/properties/Squamish/24 - 20251104 A7M4 01 A1_06474.jpg",
+    "/photos/properties/Squamish/25 - 20251104 A7M4 01 A1_06558.jpg",
+    "/photos/properties/Squamish/26 - 20251104 A7M4 01 A1_06670.jpg",
+    "/photos/properties/Squamish/27 - 20251104 A7M4 01 A1_06681.jpg",
+    "/photos/properties/Squamish/28 - 20251104 A7M4 01 A1_06687.jpg",
+    "/photos/properties/Squamish/29 - 20251104 A7M4 01 A1_06912.jpg",
+    "/photos/properties/Squamish/30 - 20251104 A7M4 01 A1_06694-Edit.jpg",
+    "/photos/properties/Squamish/31 - 20251104 A7M4 01 A1_06564.jpg",
+    "/photos/properties/Squamish/32 - 20251104 A7M4 01 A1_06571.jpg",
+    "/photos/properties/Squamish/33 - 20251104 A7M4 01 A1_06579.jpg",
+    "/photos/properties/Squamish/34 - 20251104 A7M4 01 A1_06585.jpg",
+    "/photos/properties/Squamish/35 - 20251104 A7M4 01 A1_06600.jpg",
+    "/photos/properties/Squamish/36 - 20251104 A7M4 01 A1_06833.jpg",
+    "/photos/properties/Squamish/37 - 20251104 A7M4 03 A1_07404.jpg",
+    "/photos/properties/Squamish/38 - 20251104 A7M4 01 A1_06714.jpg",
+    "/photos/properties/Squamish/39 - 20251104 A7M4 01 A1_06732.jpg",
+    "/photos/properties/Squamish/40 - 20251104 A7M4 01 A1_06738.jpg",
+    "/photos/properties/Squamish/41 - 20251104 A7M4 03 A1_07462.jpg",
+    "/photos/properties/Squamish/42 - 20251104 A7M4 01 A1_06745.jpg",
+    "/photos/properties/Squamish/43 - 20251104 A7M4 01 A1_06754.jpg",
+    "/photos/properties/Squamish/44 - 20251104 A7M4 01 A1_06760.jpg",
+    "/photos/properties/Squamish/45 - 20251104 A7M4 01 A1_06767.jpg",
+    "/photos/properties/Squamish/46 - 20251104 A7M4 01 A1_06773.jpg",
+    "/photos/properties/Squamish/47 - 20251104 A7M4 01 A1_06779.jpg",
+    "/photos/properties/Squamish/48 - 20251104 A7M4 01 A1_06785-Edit.jpg",
+    "/photos/properties/Squamish/49 - 20251104 A7M4 01 A1_06796.jpg",
+    "/photos/properties/Squamish/50 - 20251104 A7M4 01 A1_06803.jpg",
+    "/photos/properties/Squamish/51 - 20251104 A7M4 01 A1_06808.jpg",
+    "/photos/properties/Squamish/53 - 20251104 A7M4 01 A1_06818.jpg",
+    "/photos/properties/Squamish/54 - 20251104 A7M4 01 A1_06823.jpg",
+    "/photos/properties/Squamish/55 - 20251104 A7M4 03 A1_07391.jpg",
+    "/photos/properties/Squamish/56 - 20251104 A7M4 03 A1_07420.jpg",
+    "/photos/properties/Squamish/57 - 20251104 A7M4 03 A1_07443.jpg",
+    "/photos/properties/Squamish/59 - 20251104 A7M4 03 A1_07365.jpg",
+    "/photos/properties/Squamish/60 - 20251104 MM4P 01 0012-Edit.jpg",
+    "/photos/properties/Squamish/62 - 20251104 MM4P 01 0046-Edit.jpg",
+    "/photos/properties/Squamish/64 - 20251104 MM4P 01 0056.jpg",
+    "/photos/properties/Squamish/65 - 20251104 MM4P 01 0061.jpg",
+    "/photos/properties/Squamish/66 - 20251104 MM4P 01 0071.jpg",
+    "/photos/properties/Squamish/67 - 20251104 MM4P 01 0091.jpg",
+    "/photos/properties/Squamish/68 - 20251104 MM4P 01 0096.jpg",
+    "/photos/properties/Squamish/69 - 20251104 MM4P 01 0106.jpg",
+    "/photos/properties/Squamish/70 - 20251104 MM4P 01 0111.jpg",
+    "/photos/properties/Squamish/71 - 20251104 MM4P 01 0116.jpg",
+    "/photos/properties/Squamish/72 - 20251104 MM4P 01 0126.jpg",
   ];
 
   const handlePhotoClick = (index: number) => {
