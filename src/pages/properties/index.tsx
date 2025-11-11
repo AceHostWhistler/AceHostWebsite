@@ -928,44 +928,6 @@ export default function Properties() {
             isSkiInSkiOut: false,
           },
           {
-            id: "squamish-retreat",
-            name: "Squamish Retreat With The Best View!",
-            images: [
-              "/photos/properties/Squamish/16 - 20251104 A7M4 01 A1_06655.jpg",
-              "/photos/properties/Squamish/01 - 20251104 A7M4 01 A1_06919-Edit.jpg",
-              "/photos/properties/Squamish/02 - 20251104 MM4P 01 0036-Edit.jpg"
-            ],
-            guests: 8,
-            bedrooms: 3,
-            bathrooms: 3,
-            location: "Squamish, BC",
-            description:
-              "Stylish Squamish house with breathtaking views! Your house is a 3000 sqft 3BR/3BA located in the heart of Squamish, BC. Squamish is home to legendary hikes, mountain biking, and skiing with Whistler only a quick 45-min drive away. New-ish house with a ski/mountain bike mud room, sauna, games room, free parking, dedicated workspace and multiple patios looking towards the mountains make the house unique and perfect for a work trip or vacation with family or friends.",
-            features: [
-              "3000 sqft Living Space",
-              "Sauna",
-              "Games Room",
-              "Mountain Views",
-              "Ski/Mountain Bike Storage",
-              "Free Parking",
-              "Dedicated Workspace",
-              "Multiple Patios"
-            ],
-            highlights: [
-              "Breathtaking Mountain Views",
-              "Newly Finished Kitchen",
-              "High-End Mattresses",
-              "Ultra High Speed Fibre Optic WIFI (300mbps)"
-            ],
-            priceRange: "$500-1500 per night Summer",
-            winterPrice: "$500-1500 Nightly | Winter",
-            holidayPrice: "$2200-2500+ Nightly | Christmas & NY",
-            link: "/listings/squamish-retreat-with-the-best-view",
-            airbnbLink: "https://www.airbnb.ca/rooms/1047983607752975484?guests=1&adults=1&s=67&unique_share_id=1e623ba5-133a-4c05-b1c9-4ac721a40a6d",
-            isPetFriendly: false,
-            isSkiInSkiOut: false,
-          },
-          {
             id: "scandinavian-mountainside-retreat-pemberton-meadows-50-acres",
             name: "Pemberton Escape | 50 Acres | Wellness & Heli Retreat",
             images: [
@@ -1285,6 +1247,44 @@ export default function Properties() {
             isPetFriendly: false,
             isSkiInSkiOut: false,
             airbnbLink: "https://www.airbnb.ca/rooms/1461637483646115205?guests=1&adults=1&s=67&unique_share_id=9b6640b9-138d-4627-bea4-cb2155e32c72",
+          },
+          {
+            id: "squamish-retreat",
+            name: "Squamish Retreat With The Best View!",
+            images: [
+              "/photos/properties/Squamish/16 - 20251104 A7M4 01 A1_06655.jpg",
+              "/photos/properties/Squamish/01 - 20251104 A7M4 01 A1_06919-Edit.jpg",
+              "/photos/properties/Squamish/02 - 20251104 MM4P 01 0036-Edit.jpg"
+            ],
+            guests: 8,
+            bedrooms: 3,
+            bathrooms: 3,
+            location: "Squamish, BC",
+            description:
+              "Stylish Squamish house with breathtaking views! Your house is a 3000 sqft 3BR/3BA located in the heart of Squamish, BC. Squamish is home to legendary hikes, mountain biking, and skiing with Whistler only a quick 45-min drive away. New-ish house with a ski/mountain bike mud room, sauna, games room, free parking, dedicated workspace and multiple patios looking towards the mountains make the house unique and perfect for a work trip or vacation with family or friends.",
+            features: [
+              "3000 sqft Living Space",
+              "Sauna",
+              "Games Room",
+              "Mountain Views",
+              "Ski/Mountain Bike Storage",
+              "Free Parking",
+              "Dedicated Workspace",
+              "Multiple Patios"
+            ],
+            highlights: [
+              "Breathtaking Mountain Views",
+              "Newly Finished Kitchen",
+              "High-End Mattresses",
+              "Ultra High Speed Fibre Optic WIFI (300mbps)"
+            ],
+            priceRange: "$500-1500 per night Summer",
+            winterPrice: "$500-1500 Nightly | Winter",
+            holidayPrice: "$2200-2500+ Nightly | Christmas & NY",
+            link: "/listings/squamish-retreat-with-the-best-view",
+            airbnbLink: "https://www.airbnb.ca/rooms/1047983607752975484?guests=1&adults=1&s=67&unique_share_id=1e623ba5-133a-4c05-b1c9-4ac721a40a6d",
+            isPetFriendly: false,
+            isSkiInSkiOut: false,
           },
         ],
       },
