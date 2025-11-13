@@ -323,53 +323,27 @@ const Luxury6BedroomWhistlerVillageBlueberry = () => {
             {/* Parking & Transportation Section */}
             <div className="mb-20">
               <h2 className="text-2xl font-bold mb-6">Parking & Transportation</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="md:col-span-2">
-                  <ul className="list-disc pl-5 space-y-2 max-w-4xl">
-                    <li>1 guaranteed extra-large private parking spot (fits vehicles 6'6" and under)</li>
-                    <li>EV charger included, one of the few in the building</li>
-                    <li>1 visitor spot available first-come, first-serve (busier on winter/holiday weekends, usually more available during summer or shoulder seasons). There are 10 visitor spots on a first-come, first-serve basis, with permission to use any of 1 of the 10 at a given time.</li>
-                    <li>VIP taxi reservation code provided for priority service in Whistler, rare and convenient for evenings out</li>
-                    <li>Roughly a 4-minute taxi ride to the Village</li>
-                    <li>Recommended: arrive in one large vehicle, shuttle, or bus. Extra vehicles can park nearby if required.</li>
-                  </ul>
-                </div>
-                <div className="md:col-span-1">
-                  <div className="relative aspect-[3/4] h-full">
-                    <Image
-                      src={photos[51]}
-                      alt="View of Whistler Village"
-                      width={1920}
-                      height={1080}
-                      className="w-full h-full object-cover rounded-lg"
-                    />
-                  </div>
-                </div>
+              <div>
+                <ul className="list-disc pl-5 space-y-2 max-w-4xl">
+                  <li>1 guaranteed extra-large private parking spot (fits vehicles 6'6" and under)</li>
+                  <li>EV charger included, one of the few in the building</li>
+                  <li>1 visitor spot available first-come, first-serve (busier on winter/holiday weekends, usually more available during summer or shoulder seasons). There are 10 visitor spots on a first-come, first-serve basis, with permission to use any of 1 of the 10 at a given time.</li>
+                  <li>VIP taxi reservation code provided for priority service in Whistler, rare and convenient for evenings out</li>
+                  <li>Roughly a 4-minute taxi ride to the Village</li>
+                  <li>Recommended: arrive in one large vehicle, shuttle, or bus. Extra vehicles can park nearby if required.</li>
+                </ul>
               </div>
             </div>
 
             {/* Location Section */}
             <div className="mb-20">
               <h2 className="text-2xl font-bold mb-6">Location</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="md:col-span-2">
-                  <p className="text-gray-800">
-                    Set in the prestigious Blueberry Hill neighbourhood, this home combines tranquility and proximity. You're just a few minutes from both Whistler Village and Creekside, while surrounded by nature and scenic trails. The Valley Trail and Whistler Golf Course Loop are right at your doorstep, perfect for morning walks or bike rides in summer.
-                    <br /><br />
-                    In winter, the slopes are a quick drive away, and you'll appreciate coming home to your peaceful retreat away from the busy village. Alta Lake is within walking distance for paddle boarding, picnics, or ice skating, depending on the season.
-                  </p>
-                </div>
-                <div className="md:col-span-1">
-                  <div className="relative aspect-[3/4] h-full">
-                    <Image
-                      src={photos[52]}
-                      alt="Whistler area view"
-                      width={1920}
-                      height={1080}
-                      className="w-full h-full object-cover rounded-lg"
-                    />
-                  </div>
-                </div>
+              <div>
+                <p className="text-gray-800">
+                  Set in the prestigious Blueberry Hill neighbourhood, this home combines tranquility and proximity. You're just a few minutes from both Whistler Village and Creekside, while surrounded by nature and scenic trails. The Valley Trail and Whistler Golf Course Loop are right at your doorstep, perfect for morning walks or bike rides in summer.
+                  <br /><br />
+                  In winter, the slopes are a quick drive away, and you'll appreciate coming home to your peaceful retreat away from the busy village. Alta Lake is within walking distance for paddle boarding, picnics, or ice skating, depending on the season.
+                </p>
               </div>
             </div>
 
