@@ -707,7 +707,7 @@ export default function Properties() {
             highlights: [],
             priceRange: "Monthly Price Range: $18,000-$29,000",
             winterPrice: "90+ day minimum",
-            holidayPrice: "$29,000 Monthly | Winter (Booked until June 15, 2025)",
+            holidayPrice: "$29,000 Monthly | Winter",
             link: "/listings/the-nest-ski-in-ski-out",
             isPetFriendly: true,
             isSkiInSkiOut: true,

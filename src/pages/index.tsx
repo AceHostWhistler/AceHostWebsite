@@ -438,7 +438,7 @@ const Home = () => {
       bathrooms: 5,
       priceRange: "Monthly Price Range: $18,000-$29,000",
       winterPrice: "90+ day minimum",
-      holidayPrice: "$29,000 Monthly | Winter (Booked until June 15, 2025)",
+      holidayPrice: "$29,000 Monthly | Winter",
       location: "whistler",
       link: "/listings/the-nest-ski-in-ski-out",
       airbnbLink:
