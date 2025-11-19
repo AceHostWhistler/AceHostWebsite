@@ -332,7 +332,7 @@ const Home = () => {
       bathrooms: 6,
       priceRange: "$1,200-$3,500 per night",
       winterPrice: "",
-      holidayPrice: "$4,000-$6,800+ Nightly | Christmas & NY",
+      holidayPrice: "$4,000-$6,800+ Nightly | Christmas & NY (Booked for Christmas & NYE weeks)",
       location: "whistler",
       link: "/listings/heron-views-whistler-village",
       airbnbLink:
@@ -421,7 +421,7 @@ const Home = () => {
       bathrooms: 3.5,
       priceRange: "Nightly Price Range: $1,300-$3,500+",
       winterPrice: "$2,000-$3,500+ Nightly | Winter",
-      holidayPrice: "$4,000-$7,200+ Nightly | Christmas (Booked for Christmas Dec 27 end date)",
+      holidayPrice: "$4,000-$7,200+ Nightly | Christmas (Booked for Christmas & NYE weeks)",
       location: "whistler",
       link: "/listings/falcon-blueberry-drive",
       airbnbLink: "",
