@@ -190,7 +190,7 @@ export default function Properties() {
             ],
             priceRange: "$7,000-11,000+ per night | Private Butler Included",
             winterPrice: "$8500-$11,000+ Nightly | Winter",
-            holidayPrice: "$16,000-$21,000+ Nightly | Christmas & NY (Booked for holidays 2025)",
+            holidayPrice: "$16,000-$21,000+ Nightly | Christmas & NY",
             isSkiInSkiOut: true,
           },
           {
