@@ -1286,6 +1286,44 @@ export default function Properties() {
             isPetFriendly: false,
             isSkiInSkiOut: false,
           },
+          {
+            id: "rare-3-bedroom-whistler-village",
+            name: "Rare 3-bedroom | Whistler Village | Walk to Hill",
+            images: [
+              "/photos/properties/John 3-bed Granite Court/03 - 20251125 A7M4 01 A1_01852.jpg",
+              "/photos/properties/John 3-bed Granite Court/01 - 20251125 A7M4 01 A1_02152.jpg",
+              "/photos/properties/John 3-bed Granite Court/02 - 20251125 A7M4 01 A1_02202.jpg"
+            ],
+            guests: 8,
+            bedrooms: 3,
+            bathrooms: 3,
+            location: "Whistler Village, Whistler",
+            description:
+              "A rare gem in the heart of Whistler Village! This 3-bedroom chalet-style retreat offers two oversized wraparound balconies with breathtaking mountain views, your own private hot tub (the only one in the entire complex), and 2 guaranteed underground parking spots. Spread across two spacious floors, you'll enjoy the cozy charm of a log chalet paired with modern luxury furnishings, a fireplace, and unbeatable convenience, all just steps from restaurants, lifts, and shops.",
+            features: [
+              "Private Hot Tub",
+              "Two Wraparound Balconies",
+              "Mountain Views",
+              "2 Guaranteed Parking Spots",
+              "Indoor Fireplace",
+              "Two Spacious Floors",
+              "Modern Luxury Furnishings",
+              "Steps from Lifts & Shops"
+            ],
+            highlights: [
+              "Heart of Whistler Village",
+              "Only Private Hot Tub in Complex",
+              "Chalet-Style Retreat",
+              "Walk to Everything"
+            ],
+            priceRange: "$400-900 per night Summer",
+            winterPrice: "$650-1450 Nightly | Winter",
+            holidayPrice: "$1600-2200 Nightly | Christmas & NY",
+            link: "/listings/rare-3-bedroom-whistler-village-walk-to-hill",
+            airbnbLink: "https://www.airbnb.ca/rooms/1565322561889624431?guests=1&adults=1&s=67&unique_share_id=bcb85131-d1b0-4d39-9975-7580fd94a5d9",
+            isPetFriendly: false,
+            isSkiInSkiOut: false,
+          },
         ],
       },
       {

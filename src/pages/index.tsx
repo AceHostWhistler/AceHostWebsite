@@ -836,6 +836,23 @@ const Home = () => {
       isPetFriendly: false,
       isSkiInSkiOut: false,
     },
+    {
+      id: "rare-3-bedroom-whistler-village",
+      name: "Rare 3-bedroom | Whistler Village | Walk to Hill",
+      image: "/photos/properties/John 3-bed Granite Court/03 - 20251125 A7M4 01 A1_01852.jpg",
+      guests: 8,
+      bedrooms: 3,
+      beds: 2,
+      bathrooms: 3,
+      priceRange: "$400-900 per night Summer",
+      winterPrice: "$650-1450 Nightly | Winter",
+      holidayPrice: "$1600-2200 Nightly | Christmas & NY",
+      location: "whistler",
+      link: "/listings/rare-3-bedroom-whistler-village-walk-to-hill",
+      airbnbLink: "https://www.airbnb.ca/rooms/1565322561889624431?guests=1&adults=1&s=67&unique_share_id=bcb85131-d1b0-4d39-9975-7580fd94a5d9",
+      isPetFriendly: false,
+      isSkiInSkiOut: false,
+    },
     
   ];
 
