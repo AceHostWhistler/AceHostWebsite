@@ -71,13 +71,26 @@ const OurStory = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <div className="relative bg-gray-900 text-white">
-        <div className="relative max-w-7xl mx-auto px-4 py-24 sm:py-32">
+      <div className="relative h-[500px] text-white">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/thumbnails/20241125 A7M3 02 A1_05791-Edit.jpg"
+            alt="Whistler Mountain View"
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 py-24 sm:py-32 h-full flex items-center">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-shadow-lg">
               Our Story
             </h1>
-            <p className="text-xl text-gray-200 mb-8">
+            <p className="text-xl text-white mb-8 text-shadow-md">
               Dedicated to providing exceptional luxury vacation rental
               experiences in Whistler since 2018.
             </p>
@@ -121,10 +134,11 @@ const OurStory = () => {
             </div>
             <div className="relative h-[500px] rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/photos/homepage/WhistlerVacationRental.jpg"
-                alt="AceHost Team"
+                src="/thumbnails/20241125 A7M3 02 A1_05891.jpg"
+                alt="Whistler Mountain View"
                 fill
                 className="object-cover"
+                priority
               />
             </div>
           </div>
