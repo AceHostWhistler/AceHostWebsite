@@ -392,7 +392,7 @@ const ListProperty = () => {
               {/* Stats */}
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="bg-white shadow-sm p-4 rounded-xl">
-                  <div className="text-3xl font-bold text-black">4.96</div>
+                  <div className="text-3xl font-bold text-black">4.92</div>
                   <div className="flex mt-1 mb-1">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
@@ -401,7 +401,7 @@ const ListProperty = () => {
                   <div className="text-sm text-gray-600">Overall Rating</div>
                 </div>
                 <div className="bg-white shadow-sm p-4 rounded-xl">
-                  <div className="text-3xl font-bold text-black">305+</div>
+                  <div className="text-3xl font-bold text-black">492</div>
                   <div className="text-sm text-gray-600">Reviews</div>
                 </div>
               </div>
@@ -421,7 +421,7 @@ const ListProperty = () => {
               <div className="relative mb-6">
                 <div className="relative">
                   <Image 
-                    src="/texture/Screen_Shot_2025-04-18_at_2.26.04_PM-removebg-preview.png" 
+                    src="/texture/airbnb-profile-stats.png" 
                     alt="AceHost Airbnb Superhost Profile" 
                     width={600} 
                     height={400}
