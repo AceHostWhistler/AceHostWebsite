@@ -421,7 +421,7 @@ const ListProperty = () => {
               <div className="relative mb-6">
                 <div className="relative">
                   <Image 
-                    src="/texture/airbnb-profile-stats.png" 
+                    src="/Screenshot 2025-12-06 at 12.56.07 PM.png" 
                     alt="AceHost Airbnb Superhost Profile" 
                     width={600} 
                     height={400}
