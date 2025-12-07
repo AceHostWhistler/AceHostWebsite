@@ -418,17 +418,7 @@ const ListProperty = () => {
             </div>
             <div className="lg:w-1/2">
               {/* Airbnb Profile Screenshot */}
-              <div className="relative mb-6">
-                <div className="relative">
-                  <Image 
-                    src="/Screenshot 2025-12-06 at 12.56.07 PM.png" 
-                    alt="AceHost Airbnb Superhost Profile" 
-                    width={600} 
-                    height={400}
-                    className="w-full object-contain"
-                  />
-                </div>
-              </div>
+              {/* Removed problematic image */}
 
               <div className="space-y-3">
                 {/* Real Reviews */}
