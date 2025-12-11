@@ -348,6 +348,15 @@ const ConciergeService = () => {
                 
                 <ConciergeCard
                   index={3}
+                  icon={<FaCalendarCheck className="text-lg" />}
+                  title="Restaurant Reservations"
+                  description="AceHost can help secure your reservations for the hottest restaurants in Whistler. From acclaimed fine-dining establishments to local hidden gems, our concierge team has the connections to get you seated at the best tables, even during peak season when reservations are typically hard to get."
+                  imageSrc="/photos/homepage/concierge-service/WhistlerRestarurants.png"
+                  imageAlt="Restaurant Reservations"
+                />
+
+                <ConciergeCard
+                  index={4}
                   icon={<FaTicketAlt className="text-lg" />}
                   title="Ski Lift Pass Delivery"
                   description="With all AceHost bookings, guests enjoy the added convenience of having their ski passes delivered right to their rental home. No more waiting in long lines, showing IDs, or filling out forms when you'd rather be enjoying the mountains. Instead, your passes are ready and waiting for you upon arrival, so you can wake up and head straight to the slopes stress-free. And best of all, we provide this service at absolutely no extra cost."
@@ -356,7 +365,7 @@ const ConciergeService = () => {
                 />
 
                 <ConciergeCard
-                  index={4}
+                  index={5}
                   icon={<FaMedal className="text-lg" />}
                   title="Ski or Ride with an Olympian"
                   description="Experience the thrill of skiing or snowboarding alongside an Olympian with Snow School's exclusive program. Trace their lines, refine your technique, and hear inspiring stories firsthand. This unparalleled opportunity offers a unique blend of personalized instruction and insight from world-class athletes. Go one-on-one or make a group with up to four family or friends of similar ability - for one price."
@@ -406,6 +415,15 @@ const ConciergeService = () => {
 
                 <ConciergeCard
                   index={9}
+                  icon={<MdAirportShuttle className="text-lg" />}
+                  title="VIP Airport Transfers"
+                  description="Start and end your journey in comfort with our luxury airport transfer service. Our professional drivers will meet you at Vancouver International Airport and transport you directly to your accommodation in Whistler. Vehicles range from executive sedans to spacious SUVs and vans, depending on your group size."
+                  imageSrc="/photos/homepage/concierge-service/VIP_Airport_Transfer.png"
+                  imageAlt="VIP Airport Transfers"
+                />
+
+                <ConciergeCard
+                  index={10}
                   icon={<GiDogHouse className="text-lg" />}
                   title="Dog Sledding"
                   description="Experience an authentic winter activity by booking a dog sled ride through the Callaghan Valley Old Growth Forests. This tour offers a ride through open and winding trails, suitable for families looking to get outdoors and soak in the beauty of local forests."
@@ -414,7 +432,34 @@ const ConciergeService = () => {
                 />
 
                 <ConciergeCard
-                  index={10}
+                  index={11}
+                  icon={<BiDrink className="text-lg" />}
+                  title="In-Home Bartender/Mixologist"
+                  description="Elevate your gatherings with a professional bartender who will craft premium cocktails tailored to your preferences. Our bartenders can create signature drinks, organize wine tastings, or simply ensure everyone's glass stays full throughout the evening. This service pairs perfectly with our private chef offerings."
+                  imageSrc="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 12.36.56 PM.png"
+                  imageAlt="In-Home Bartender/Mixologist"
+                />
+
+                <ConciergeCard
+                  index={12}
+                  icon={<FaUtensils className="text-lg" />}
+                  title="Grocery Delivery/Pre Arrival Stock"
+                  description="Arrive at your luxury accommodation to find the kitchen fully stocked with your favorite foods and beverages. Simply share your preferences and dietary requirements, and our team will handle the shopping and delivery. This service ensures you can start enjoying your vacation immediately without worrying about grocery shopping."
+                  imageSrc="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 12.37.46 PM.png"
+                  imageAlt="Grocery Delivery/Pre Arrival Stock"
+                />
+
+                <ConciergeCard
+                  index={13}
+                  icon={<BiSpa className="text-lg" />}
+                  title="In-Home Massage"
+                  description="Book a relaxing massage in the comfort of your luxury accommodation. Our professional massage therapists offer a variety of techniques, from Swedish to deep tissue, tailored to your specific needs. This service is perfect after a long day on the slopes or hiking trails."
+                  imageSrc="/photos/homepage/concierge-service/In-House Messages.jpg"
+                  imageAlt="In-Home Massage"
+                />
+
+                <ConciergeCard
+                  index={14}
                   icon={<FaMountain className="text-lg" />}
                   title="Zipline Tours"
                   description="Experience a bird's-eye view of Whistler Mountain when you book a zip-line tour through AceHost. The panoramic views of Whistler can be seen from treetop suspension bridges and sky high viewing platforms. Enjoy this experience year-round experience. Contact us to book your zip-line tour today!"
@@ -439,14 +484,6 @@ const ConciergeService = () => {
                   imageSrc="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.21.24 AM.png"
                   imageAlt="Crystal Hut Snowmobile Fondue Experience"
                 />
-                <ConciergeCard
-                  index={13}
-                  icon={<FaCalendarCheck className="text-lg" />}
-                  title="Restaurant Reservations"
-                  description="AceHost can help secure your reservations for the hottest restaurants in Whistler. From acclaimed fine-dining establishments to local hidden gems, our concierge team has the connections to get you seated at the best tables, even during peak season when reservations are typically hard to get."
-                  imageSrc="/photos/homepage/concierge-service/WhistlerRestarurants.png"
-                  imageAlt="Restaurant Reservations"
-                />
 
                 <ConciergeCard
                   index={14}
@@ -467,508 +504,154 @@ const ConciergeService = () => {
                 />
 
 
-                {/* In-Home Bartender/Mixologist */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 12.36.56 PM.png"
-                      alt="In-Home Bartender/Mixologist"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <BiDrink className="text-lg" />
-                      </span>
-                      In-Home Bartender/Mixologist
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Elevate your gatherings with a professional bartender who will craft premium cocktails tailored to your preferences. Our bartenders can create signature drinks, organize wine tastings, or simply ensure everyone's glass stays full throughout the evening. This service pairs perfectly with our private chef offerings.
-                    </p>
-                  </div>
-                </div>
 
-                {/* Grocery Delivery */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 12.37.46 PM.png"
-                      alt="Grocery Delivery/Pre Arrival Stock"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <FaUtensils className="text-lg" />
-                      </span>
-                      Grocery Delivery/Pre Arrival Stock
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Arrive at your luxury accommodation to find the kitchen fully stocked with your favorite foods and beverages. Simply share your preferences and dietary requirements, and our team will handle the shopping and delivery. This service ensures you can start enjoying your vacation immediately without worrying about grocery shopping.
-                    </p>
-                  </div>
-                </div>
 
-                {/* Wine & Champagne Selection */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/SommelierWinePairings.webp"
-                      alt="Wine & Champagne Selection"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <FaWineGlassAlt className="text-lg" />
-                      </span>
-                      Wine & Champagne Selection
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Let our wine specialists curate a selection of fine wines and champagnes for your stay. Whether you're looking for specific bottles, want recommendations to pair with meals, or wish to arrange a private tasting, our team can ensure your cellar is stocked with premium offerings that match your taste and occasion.
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={20}
+                  icon={<FaWineGlassAlt className="text-lg" />}
+                  title="Wine & Champagne Selection"
+                  description="Let our wine specialists curate a selection of fine wines and champagnes for your stay. Whether you're looking for specific bottles, want recommendations to pair with meals, or wish to arrange a private tasting, our team can ensure your cellar is stocked with premium offerings that match your taste and occasion."
+                  imageSrc="/photos/homepage/concierge-service/SommelierWinePairings.webp"
+                  imageAlt="Wine & Champagne Selection"
+                />
 
-                {/* In-Home Massage */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/In-House Messages.jpg"
-                      alt="In-Home Massage"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <BiSpa className="text-lg" />
-                      </span>
-                      In-Home Massage
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Book a relaxing massage in the comfort of your luxury
-                      accommodation. Our professional massage therapists offer a
-                      variety of techniques, from Swedish to deep tissue,
-                      tailored to your specific needs. This service is perfect
-                      after a long day on the slopes or hiking trails.
-                    </p>
-                  </div>
-                </div>
 
-                {/* Yoga Instructor */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/In House Beauty and Wellness.jpg"
-                      alt="Yoga Instructor"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <MdSpa className="text-lg" />
-                      </span>
-                      Yoga Instructor
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Start your day with a centering yoga session led by one of
-                      our expert instructors. Whether you prefer vinyasa flow,
-                      hatha, or restorative yoga, our instructors can customize
-                      the session to your group's skill level and preferences.
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={21}
+                  icon={<MdSpa className="text-lg" />}
+                  title="Yoga Instructor"
+                  description="Start your day with a centering yoga session led by one of our expert instructors. Whether you prefer vinyasa flow, hatha, or restorative yoga, our instructors can customize the session to your group's skill level and preferences."
+                  imageSrc="/photos/homepage/concierge-service/In House Beauty and Wellness.jpg"
+                  imageAlt="Yoga Instructor"
+                />
 
-                {/* Private Butler/Host */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/Butler.jpg"
-                      alt="Private Butler/Host"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <FaConciergeBell className="text-lg" />
-                      </span>
-                      Private Butler/Host
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Elevate your stay with a private butler or host who can
-                      manage all aspects of your in-home experience. From
-                      serving meals and mixing cocktails to keeping the fire lit
-                      and ensuring your home is always perfectly maintained,
-                      our professional staff provide discreet, top-tier service.
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={22}
+                  icon={<FaConciergeBell className="text-lg" />}
+                  title="Private Butler/Host"
+                  description="Elevate your stay with a private butler or host who can manage all aspects of your in-home experience. From serving meals and mixing cocktails to keeping the fire lit and ensuring your home is always perfectly maintained, our professional staff provide discreet, top-tier service."
+                  imageSrc="/photos/homepage/concierge-service/Butler.jpg"
+                  imageAlt="Private Butler/Host"
+                />
 
-                {/* Daily Housekeeping */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/HouseKeeping.jpg"
-                      alt="Daily Housekeeping"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <MdCleaningServices className="text-lg" />
-                      </span>
-                      Daily Housekeeping
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Keep your luxury accommodation pristine with our daily
-                      housekeeping service. Our professional team will refresh
-                      bathrooms, make beds, tidy common areas, and replenish
-                      amenities to ensure your space remains a perfect retreat
-                      throughout your stay.
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={23}
+                  icon={<MdCleaningServices className="text-lg" />}
+                  title="Daily Housekeeping"
+                  description="Keep your luxury accommodation pristine with our daily housekeeping service. Our professional team will refresh bathrooms, make beds, tidy common areas, and replenish amenities to ensure your space remains a perfect retreat throughout your stay."
+                  imageSrc="/photos/homepage/concierge-service/HouseKeeping.jpg"
+                  imageAlt="Daily Housekeeping"
+                />
 
-                {/* In-Home Hair & Beauty */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/In House Beauty and Wellness.jpg"
-                      alt="In-Home Hair & Beauty"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <MdSpa className="text-lg" />
-                      </span>
-                      In-Home Hair & Beauty
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Prepare for a special evening or simply treat yourself
-                      with our in-home hair styling and beauty services. Our
-                      professional stylists and makeup artists bring the salon
-                      experience directly to you, ensuring you look and feel
-                      your best for any occasion.
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={24}
+                  icon={<MdSpa className="text-lg" />}
+                  title="In-Home Hair & Beauty"
+                  description="Prepare for a special evening or simply treat yourself with our in-home hair styling and beauty services. Our professional stylists and makeup artists bring the salon experience directly to you, ensuring you look and feel your best for any occasion."
+                  imageSrc="/photos/homepage/concierge-service/In House Beauty and Wellness.jpg"
+                  imageAlt="In-Home Hair & Beauty"
+                />
 
-                {/* Childcare Services */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/BabySitting.jpg"
-                      alt="Childcare Services"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <MdChildCare className="text-lg" />
-                      </span>
-                      Childcare Services
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Enjoy some adult time while knowing your children are in
-                      good hands with our professional childcare providers. All
-                      our babysitters and nannies are experienced, background-checked,
-                      and trained in first aid, ensuring the highest level of
-                      care and fun for your little ones.
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={25}
+                  icon={<MdChildCare className="text-lg" />}
+                  title="Childcare Services"
+                  description="Enjoy some adult time while knowing your children are in good hands with our professional childcare providers. All our babysitters and nannies are experienced, background-checked, and trained in first aid, ensuring the highest level of care and fun for your little ones."
+                  imageSrc="/photos/homepage/concierge-service/BabySitting.jpg"
+                  imageAlt="Childcare Services"
+                />
 
-                {/* Dog Sitting */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.25.40 AM.png"
-                      alt="Dog Sitting"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <FaDog className="text-lg" />
-                      </span>
-                      Dog Sitting
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Are you staying at a pet friendly home? If so, take advantage of our dog sitting services so you can enjoy activities or dinners in town, with peace of mind.
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={26}
+                  icon={<FaDog className="text-lg" />}
+                  title="Dog Sitting"
+                  description="Are you staying at a pet friendly home? If so, take advantage of our dog sitting services so you can enjoy activities or dinners in town, with peace of mind."
+                  imageSrc="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.25.40 AM.png"
+                  imageAlt="Dog Sitting"
+                />
 
-                {/* Baby & Child Rental Equipment */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.28.52 AM.png"
-                      alt="Baby & Child Rental Equipment"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <GiBabyBottle className="text-lg" />
-                      </span>
-                      Baby & Child Rental Equipment
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Baby gates and child equipment rentals such as high chairs, cribs, etc. are available for your convenience.
-                    </p>
-                  </div>
-                </div>
-                {/* Airport Transfers */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/VIP_Airport_Transfer.png"
-                      alt="VIP Airport Transfers"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <MdAirportShuttle className="text-lg" />
-                      </span>
-                      VIP Airport Transfers
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Start and end your journey in comfort with our luxury
-                      airport transfer service. Our professional drivers will
-                      meet you at Vancouver International Airport and transport
-                      you directly to your accommodation in Whistler. Vehicles
-                      range from executive sedans to spacious SUVs and vans,
-                      depending on your group size.
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={27}
+                  icon={<GiBabyBottle className="text-lg" />}
+                  title="Baby & Child Rental Equipment"
+                  description="Baby gates and child equipment rentals such as high chairs, cribs, etc. are available for your convenience."
+                  imageSrc="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.28.52 AM.png"
+                  imageAlt="Baby & Child Rental Equipment"
+                />
 
-                {/* Private Chauffeur */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/PrivateDrivers.jpeg"
-                      alt="Private Chauffeur"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <FaCar className="text-lg" />
-                      </span>
-                      Private Chauffeur
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Enjoy the convenience of a dedicated chauffeur throughout
-                      your stay. Whether for restaurant visits, shopping trips,
-                      or excursions to nearby attractions, our professional
-                      drivers provide reliable, discreet service in luxury
-                      vehicles tailored to your group's needs.
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={29}
+                  icon={<FaCar className="text-lg" />}
+                  title="Private Chauffeur"
+                  description="Enjoy the convenience of a dedicated chauffeur throughout your stay. Whether for restaurant visits, shopping trips, or excursions to nearby attractions, our professional drivers provide reliable, discreet service in luxury vehicles tailored to your group's needs."
+                  imageSrc="/photos/homepage/concierge-service/PrivateDrivers.jpeg"
+                  imageAlt="Private Chauffeur"
+                />
 
-                {/* Helicopter Transfers */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/WhistlerHeli.jpg"
-                      alt="Helicopter Transfers"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <FaPlane className="text-lg" />
-                      </span>
-                      Helicopter Transfers
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      For the ultimate arrival experience, choose our helicopter
-                      transfer service. Bypass traffic and enjoy breathtaking
-                      aerial views as you travel from Vancouver to Whistler in
-                      just 30 minutes. This service includes ground transport to
-                      and from the helipad, making your journey seamless.
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={30}
+                  icon={<FaPlane className="text-lg" />}
+                  title="Helicopter Transfers"
+                  description="For the ultimate arrival experience, choose our helicopter transfer service. Bypass traffic and enjoy breathtaking aerial views as you travel from Vancouver to Whistler in just 30 minutes. This service includes ground transport to and from the helipad, making your journey seamless."
+                  imageSrc="/photos/homepage/concierge-service/WhistlerHeli.jpg"
+                  imageAlt="Helicopter Transfers"
+                />
 
-                {/* Luxury Vehicle Rentals */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/AirportTransfers.jpg"
-                      alt="Luxury Vehicle Rentals"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <FaCar className="text-lg" />
-                      </span>
-                      Luxury Vehicle Rentals
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      For guests who prefer to drive themselves, we offer a
-                      selection of premium vehicles for rental. From high-end
-                      SUVs perfect for mountain driving to exotic sports cars
-                      for a special experience, we can arrange the perfect
-                      vehicle delivered directly to your accommodation.
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={31}
+                  icon={<FaCar className="text-lg" />}
+                  title="Luxury Vehicle Rentals"
+                  description="For guests who prefer to drive themselves, we offer a selection of premium vehicles for rental. From high-end SUVs perfect for mountain driving to exotic sports cars for a special experience, we can arrange the perfect vehicle delivered directly to your accommodation."
+                  imageSrc="/photos/homepage/concierge-service/AirportTransfers.jpg"
+                  imageAlt="Luxury Vehicle Rentals"
+                />
 
-                {/* 12-15 seater Private Transportation Services */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 10.48.27 AM.png"
-                      alt="12-15 seater Private Transportation Services"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <FaShuttleVan className="text-lg" />
-                      </span>
-                      12-15 seater Private Transportation Services
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Private 12-15 seater transportation in town, as well as to and from the airport. Getting around in town can be a challenge for a large group, especially in the busy winter season. Let us help you to get around town. We can work with an itinerary & schedule, as well as last minute rides if and when needed.
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={32}
+                  icon={<FaShuttleVan className="text-lg" />}
+                  title="12-15 seater Private Transportation Services"
+                  description="Private 12-15 seater transportation in town, as well as to and from the airport. Getting around in town can be a challenge for a large group, especially in the busy winter season. Let us help you to get around town. We can work with an itinerary & schedule, as well as last minute rides if and when needed."
+                  imageSrc="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 10.48.27 AM.png"
+                  imageAlt="12-15 seater Private Transportation Services"
+                />
 
-                {/* Private Jet & Commercial Flights */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.28.11 AM.png"
-                      alt="Private Jet & Commercial Flights"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <FaPlane className="text-lg" />
-                      </span>
-                      Private Jet & Commercial Flights
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Please share your preferred flights and routes, and we can handle the booking for you to save you the hassle and get preferred rates.
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={33}
+                  icon={<FaPlane className="text-lg" />}
+                  title="Private Jet & Commercial Flights"
+                  description="Please share your preferred flights and routes, and we can handle the booking for you to save you the hassle and get preferred rates."
+                  imageSrc="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.28.11 AM.png"
+                  imageAlt="Private Jet & Commercial Flights"
+                />
 
                 {/* Add any additional transportation services here */}
 
-                {/* Private Photographer */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.30.14 AM.png"
-                      alt="Private Photographer"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <FaCamera className="text-lg" />
-                      </span>
-                      Private Photographer
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Capture timeless family moments with our popular private photographer service! Whether it's a candid session or a beautifully staged family portrait, let our expert photographers ensure you leave with quality, professional photos of your entire family.
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={35}
+                  icon={<FaCamera className="text-lg" />}
+                  title="Private Photographer"
+                  description="Capture timeless family moments with our popular private photographer service! Whether it's a candid session or a beautifully staged family portrait, let our expert photographers ensure you leave with quality, professional photos of your entire family."
+                  imageSrc="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.30.14 AM.png"
+                  imageAlt="Private Photographer"
+                />
 
-                {/* Professional Grade Video */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.30.44 AM.png"
-                      alt="Professional Grade Video"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <FaVideo className="text-lg" />
-                      </span>
-                      Professional Grade Video
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Capture your vacation memories in a truly special way by hiring a professional videographer to film one or two of your busiest days. Relive those moments and cherish them forever with a personalized 60-90 second professionally shot and edited video that captures the highlights of your vacation.
-                      <br /><br />
-                      • The same videographer and editing team as the video on acehost.ca homepage.
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={36}
+                  icon={<FaVideo className="text-lg" />}
+                  title="Professional Grade Video"
+                  description="Capture your vacation memories in a truly special way by hiring a professional videographer to film one or two of your busiest days. Relive those moments and cherish them forever with a personalized 60-90 second professionally shot and edited video that captures the highlights of your vacation.\n\n• The same videographer and editing team as the video on acehost.ca homepage."
+                  imageSrc="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.30.44 AM.png"
+                  imageAlt="Professional Grade Video"
+                />
 
-                {/* IV Drip Therapy */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.30.59 AM.png"
-                      alt="IV Drip Therapy"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <BiInjection className="text-lg" />
-                      </span>
-                      IV Drip Therapy
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Rehydrate, recharge, and revitalize with IV therapy delivered to you. Elevate your wellness with our popular IV drip therapy sessions, tailored for ultimate comfort and rejuvenation. Choose from a wide range of options, including vitamin and immune boosts, NAD anti-aging, recovery drips, vitamin injections, and more.
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={37}
+                  icon={<BiInjection className="text-lg" />}
+                  title="IV Drip Therapy"
+                  description="Rehydrate, recharge, and revitalize with IV therapy delivered to you. Elevate your wellness with our popular IV drip therapy sessions, tailored for ultimate comfort and rejuvenation. Choose from a wide range of options, including vitamin and immune boosts, NAD anti-aging, recovery drips, vitamin injections, and more."
+                  imageSrc="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.30.59 AM.png"
+                  imageAlt="IV Drip Therapy"
+                />
               </div>
             </div>
           </section>
