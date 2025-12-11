@@ -114,42 +114,8 @@ const ConciergeService = () => {
                     </p>
                   </div>
                   <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 pt-4">
-                    Explore the Different Services We Offer
+                    Explore Our Concierge Services
                   </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
-                    <a
-                      href="#mountain"
-                      className="block px-6 py-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 text-center"
-                    >
-                      <span className="text-lg font-medium text-gray-900">
-                        On the Mountain
-                      </span>
-                    </a>
-                    <a
-                      href="#dining"
-                      className="block px-6 py-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 text-center"
-                    >
-                      <span className="text-lg font-medium text-gray-900">
-                        Dining and Hosting
-                      </span>
-                    </a>
-                    <a
-                      href="#inhome"
-                      className="block px-6 py-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 text-center"
-                    >
-                      <span className="text-lg font-medium text-gray-900">
-                        Additional In-home Services
-                      </span>
-                    </a>
-                    <a
-                      href="#transport"
-                      className="block px-6 py-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 text-center"
-                    >
-                      <span className="text-lg font-medium text-gray-900">
-                        VIP Transportation
-                      </span>
-                    </a>
-                  </div>
                 </div>
 
                 {/* Video Player (Vimeo Embed) */}
@@ -203,15 +169,14 @@ const ConciergeService = () => {
             </div>
           </div>
 
-          {/* Mountain Activities */}
-          <section id="mountain" className="py-16 bg-gray-50">
+          {/* All Concierge Services */}
+          <section id="services" className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Mountain Activities
+                Our Concierge Services
               </h2>
               <p className="text-lg text-gray-600 mb-8 max-w-3xl">
-                Experience the best of Whistler's mountains with our exclusive
-                adventure offerings and VIP access.
+                Experience the best of Whistler with our exclusive services and VIP access.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -523,22 +488,6 @@ const ConciergeService = () => {
                     </p>
                   </div>
                 </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Dining Experiences */}
-          <section id="dining" className="py-16 bg-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Whistler Dining Experiences
-              </h2>
-              <p className="text-lg text-gray-600 mb-8 max-w-3xl">
-                Indulge in the finest culinary experiences Whistler has to
-                offer, from private chefs to exclusive restaurant reservations.
-              </p>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {/* In-Home Private Chef */}
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
                   <div className="relative h-56">
@@ -701,22 +650,6 @@ const ConciergeService = () => {
                   </div>
                 </div>
 
-              </div>
-            </div>
-          </section>
-
-          {/* Additional In-home Services - UPDATED TO GRID LAYOUT */}
-          <section id="inhome" className="py-16 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Additional In-home Services
-              </h2>
-              <p className="text-lg text-gray-600 mb-8 max-w-3xl">
-                Enhance your stay with our premium in-home services designed to
-                bring luxury and comfort directly to your accommodation.
-              </p>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {/* In-Home Massage */}
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
                   <div className="relative h-56">
@@ -923,22 +856,6 @@ const ConciergeService = () => {
                     </p>
                   </div>
                 </div>
-              </div>
-            </div>
-          </section>
-
-          {/* VIP Transportation - UPDATED TO GRID LAYOUT */}
-          <section id="transport" className="py-16 bg-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                VIP Transportation
-              </h2>
-              <p className="text-lg text-gray-600 mb-8 max-w-3xl">
-                Travel in style and comfort with our premium transportation
-                services, from airport transfers to daily excursions.
-              </p>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {/* Airport Transfers */}
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
                   <div className="relative h-56">
@@ -1119,21 +1036,6 @@ const ConciergeService = () => {
 
                 {/* Add any additional transportation services here */}
 
-              </div>
-            </div>
-          </section>
-
-          {/* Wellness & Media Services */}
-          <section id="wellness-media" className="py-16 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Wellness & Media Services
-              </h2>
-              <p className="text-lg text-gray-600 mb-8 max-w-3xl">
-                Enhance your vacation experience with our premium wellness treatments and professional media services.
-              </p>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {/* Private Photographer */}
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
                   <div className="relative h-56">
