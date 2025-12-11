@@ -212,7 +212,7 @@ const ConciergeService = () => {
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
                   <div className="relative h-56">
                     <Image
-                      src="/texture/ski-pass-delivery.png"
+                      src="/thumbnails/Screenshot 2025-12-10 at 7.15.00 PM.png"
                       alt="Ski Lift Pass Delivery"
                       fill
                       className="object-cover"
