@@ -360,7 +360,7 @@ const ConciergeService = () => {
                   icon={<FaTicketAlt className="text-lg" />}
                   title="Ski Lift Pass Delivery"
                   description="With all AceHost bookings, guests enjoy the added convenience of having their ski passes delivered right to their rental home. No more waiting in long lines, showing IDs, or filling out forms when you'd rather be enjoying the mountains. Instead, your passes are ready and waiting for you upon arrival, so you can wake up and head straight to the slopes stress-free. And best of all, we provide this service at absolutely no extra cost."
-                  imageSrc="/photos/homepage/concierge-service/ski-pass-delivery.png"
+                  imageSrc="/texture/ski-pass-delivery.png"
                   imageAlt="Ski Lift Pass Delivery"
                 />
 
