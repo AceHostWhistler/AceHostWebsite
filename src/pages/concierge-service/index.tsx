@@ -351,7 +351,7 @@ const ConciergeService = () => {
                   icon={<FaTicketAlt className="text-lg" />}
                   title="Ski Lift Pass Delivery"
                   description="With all AceHost bookings, guests enjoy the added convenience of having their ski passes delivered right to their rental home. No more waiting in long lines, showing IDs, or filling out forms when you'd rather be enjoying the mountains. Instead, your passes are ready and waiting for you upon arrival, so you can wake up and head straight to the slopes stress-free. And best of all, we provide this service at absolutely no extra cost."
-                  imageSrc="/thumbnails/Screenshot 2025-12-10 at 7.15.00 PM.png"
+                  imageSrc="/photos/homepage/concierge-service/ski-pass-delivery.png"
                   imageAlt="Ski Lift Pass Delivery"
                 />
 
@@ -404,181 +404,67 @@ const ConciergeService = () => {
                   imageAlt="Heli Ice Cave Adventure"
                 />
 
-                {/* Dog Sledding */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/DogSled.jpg"
-                      alt="Dog Sledding"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <GiDogHouse className="text-lg" />
-                      </span>
-                      Dog Sledding
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Experience an authentic winter activity by booking a dog
-                      sled ride through the Callaghan Valley Old Growth
-                      Forests. This tour offers a ride through open and
-                      winding trails, suitable for families looking to get
-                      outdoors and soak in the beauty of local forests.
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={9}
+                  icon={<GiDogHouse className="text-lg" />}
+                  title="Dog Sledding"
+                  description="Experience an authentic winter activity by booking a dog sled ride through the Callaghan Valley Old Growth Forests. This tour offers a ride through open and winding trails, suitable for families looking to get outdoors and soak in the beauty of local forests."
+                  imageSrc="/photos/homepage/concierge-service/DogSled.jpg"
+                  imageAlt="Dog Sledding"
+                />
 
-                {/* Zipline Tours */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/ZipLine.jpg"
-                      alt="Zipline Tours"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <FaMountain className="text-lg" />
-                      </span>
-                      Zipline Tours
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Experience a bird's-eye view of Whistler Mountain
-                      when you book a zip-line tour through AceHost. The
-                      panoramic views of Whistler can be seen from treetop
-                      suspension bridges and sky high viewing platforms. Enjoy
-                      this experience year-round experience. Contact us to
-                      book your zip-line tour today!
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={10}
+                  icon={<FaMountain className="text-lg" />}
+                  title="Zipline Tours"
+                  description="Experience a bird's-eye view of Whistler Mountain when you book a zip-line tour through AceHost. The panoramic views of Whistler can be seen from treetop suspension bridges and sky high viewing platforms. Enjoy this experience year-round experience. Contact us to book your zip-line tour today!"
+                  imageSrc="/photos/homepage/concierge-service/ZipLine.jpg"
+                  imageAlt="Zipline Tours"
+                />
 
-                {/* Vallea Illumina */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/Valley.jpg"
-                      alt="Vallea Illumina"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <FaHiking className="text-lg" />
-                      </span>
-                      Vallea Illumina
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      One of the most popular local activities, the Vallea
-                      Ilumina night walk is a must do when visiting Whistler.
-                      The 30-45 minute walk through an illuminated forest is a
-                      sight for sore eyes and fun for the whole family. Join
-                      an evening excursion and be enchanted by the stories
-                      about the legends of Whistler.
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={11}
+                  icon={<FaHiking className="text-lg" />}
+                  title="Vallea Illumina"
+                  description="One of the most popular local activities, the Vallea Ilumina night walk is a must do when visiting Whistler. The 30-45 minute walk through an illuminated forest is a sight for sore eyes and fun for the whole family. Join an evening excursion and be enchanted by the stories about the legends of Whistler."
+                  imageSrc="/photos/homepage/concierge-service/Valley.jpg"
+                  imageAlt="Vallea Illumina"
+                />
                 
-                {/* Crystal Hut Snowmobile Fondue Experience */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.21.24 AM.png"
-                      alt="Crystal Hut Snowmobile Fondue Experience"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <GiMountainRoad className="text-lg" />
-                      </span>
-                      Crystal Hut Snowmobile Fondue Experience
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Suits adventurous beginner and intermediate riders. Drive
-                      your own snowmobile or share with a friend as you sweep
-                      across the forested trails of Blackcomb Mountain. Fondue experience when you get to the top!
-                    </p>
-                  </div>
-                </div>
-                {/* Restaurant Reservations */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/WhistlerRestarurants.png"
-                      alt="Restaurant Reservations"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <FaCalendarCheck className="text-lg" />
-                      </span>
-                      Restaurant Reservations
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      AceHost can help secure your reservations for the hottest restaurants in Whistler. From acclaimed fine-dining establishments to local hidden gems, our concierge team has the connections to get you seated at the best tables, even during peak season when reservations are typically hard to get.
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={12}
+                  icon={<GiMountainRoad className="text-lg" />}
+                  title="Crystal Hut Snowmobile Fondue Experience"
+                  description="Suits adventurous beginner and intermediate riders. Drive your own snowmobile or share with a friend as you sweep across the forested trails of Blackcomb Mountain. Fondue experience when you get to the top!"
+                  imageSrc="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.21.24 AM.png"
+                  imageAlt="Crystal Hut Snowmobile Fondue Experience"
+                />
+                <ConciergeCard
+                  index={13}
+                  icon={<FaCalendarCheck className="text-lg" />}
+                  title="Restaurant Reservations"
+                  description="AceHost can help secure your reservations for the hottest restaurants in Whistler. From acclaimed fine-dining establishments to local hidden gems, our concierge team has the connections to get you seated at the best tables, even during peak season when reservations are typically hard to get."
+                  imageSrc="/photos/homepage/concierge-service/WhistlerRestarurants.png"
+                  imageAlt="Restaurant Reservations"
+                />
 
-                {/* Catered Meals */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 12.57.08 PM.png"
-                      alt="Catered Meals"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <GiFoodTruck className="text-lg" />
-                      </span>
-                      Catered Meals
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      If you prefer a more casual dining experience without the full private chef service, our catered meal options are perfect. We'll arrange for gourmet prepared meals to be delivered to your accommodation, ready to heat and serve at your convenience. These meals are prepared by top local chefs using fresh, seasonal ingredients.
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={14}
+                  icon={<GiFoodTruck className="text-lg" />}
+                  title="Catered Meals"
+                  description="If you prefer a more casual dining experience without the full private chef service, our catered meal options are perfect. We'll arrange for gourmet prepared meals to be delivered to your accommodation, ready to heat and serve at your convenience. These meals are prepared by top local chefs using fresh, seasonal ingredients."
+                  imageSrc="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 12.57.08 PM.png"
+                  imageAlt="Catered Meals"
+                />
 
-                {/* Bearfoot Bistro Vodka Ice Room Experience */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/Dinningand Apres Ski.jpeg"
-                      alt="Bearfoot Bistro Vodka Ice Room Experience"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <FaSnowflake className="text-lg" />
-                      </span>
-                      Bearfoot Bistro Vodka Ice Room Experience
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Experience the world's coldest vodka tasting in Canada's first sub-zero vodka room at the iconic Bearfoot Bistro. Don a provided Arctic parka and sample premium vodkas from around the world in this unique -32°C environment.
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={15}
+                  icon={<FaSnowflake className="text-lg" />}
+                  title="Bearfoot Bistro Vodka Ice Room Experience"
+                  description="Experience the world's coldest vodka tasting in Canada's first sub-zero vodka room at the iconic Bearfoot Bistro. Don a provided Arctic parka and sample premium vodkas from around the world in this unique -32°C environment."
+                  imageSrc="/photos/homepage/concierge-service/Dinningand Apres Ski.jpeg"
+                  imageAlt="Bearfoot Bistro Vodka Ice Room Experience"
+                />
 
 
                 {/* In-Home Bartender/Mixologist */}
