@@ -231,6 +231,29 @@ const ConciergeService = () => {
                   </div>
                 </div>
 
+                {/* In-Home Private Chef */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/PrivateChef.jpeg"
+                      alt="In-Home Private Chef"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <GiCookingPot className="text-lg" />
+                      </span>
+                      In-Home Private Chef
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      AceHost offers in-home private chef dining services. This is one of our most popular services and includes menu planning, grocery shopping, preparation, cooking and clean up afterward. The AceHost chef team will work with you to customize menus for a multi-course meal, brunch, dinner and everything in between.
+                    </p>
+                  </div>
+                </div>
+                
                 {/* Ski Lift Pass Delivery */}
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
                   <div className="relative h-56">
@@ -511,29 +534,6 @@ const ConciergeService = () => {
                     </p>
                   </div>
                 </div>
-                {/* In-Home Private Chef */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/PrivateChef.jpeg"
-                      alt="In-Home Private Chef"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <GiCookingPot className="text-lg" />
-                      </span>
-                      In-Home Private Chef
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      AceHost offers in-home private chef dining services. This is one of our most popular services and includes menu planning, grocery shopping, preparation, cooking and clean up afterward. The AceHost chef team will work with you to customize menus for a multi-course meal, brunch, dinner and everything in between.
-                    </p>
-                  </div>
-                </div>
-
                 {/* Restaurant Reservations */}
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
                   <div className="relative h-56">
