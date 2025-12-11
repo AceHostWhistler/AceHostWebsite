@@ -179,7 +179,31 @@ const ConciergeService = () => {
                 Experience the best of Whistler with our exclusive services and VIP access.
               </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{/* Private Ski Instructor */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {/* Jet-Van transportation */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative h-56">
+                    <Image
+                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 10.47.24 AM.png"
+                      alt="Jet-Van transportation"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <span className="service-icon">
+                        <FaShuttleVan className="text-lg" />
+                      </span>
+                      Jet-Van transportation
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      Our most popular and most luxurious form of transportation to and from YVR. A Sprinter Van with a layout similar to a private jet. Enjoy maximum comfort and luxuries from the moment you step off the plane.
+                    </p>
+                  </div>
+                </div>
+                
+                {/* Private Ski Instructor */}
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
                   <div className="relative h-56">
                     <Image
@@ -211,7 +235,7 @@ const ConciergeService = () => {
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
                   <div className="relative h-56">
                     <Image
-                      src="/texture/ski-pass-delivery.png"
+                      src="/thumbnails/Screenshot 2025-12-10 at 7.15.00 PM.png"
                       alt="Ski Lift Pass Delivery"
                       fill
                       className="object-cover"
@@ -983,29 +1007,6 @@ const ConciergeService = () => {
                     </h3>
                     <p className="text-gray-600 mb-4">
                       Private 12-15 seater transportation in town, as well as to and from the airport. Getting around in town can be a challenge for a large group, especially in the busy winter season. Let us help you to get around town. We can work with an itinerary & schedule, as well as last minute rides if and when needed.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Jet-Van transportation */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 10.47.24 AM.png"
-                      alt="Jet-Van transportation"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <FaShuttleVan className="text-lg" />
-                      </span>
-                      Jet-Van transportation
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Our most popular and most luxurious form of transportation to and from YVR. A Sprinter Van with a layout similar to a private jet. Enjoy maximum comfort and luxuries from the moment you step off the plane.
                     </p>
                   </div>
                 </div>
