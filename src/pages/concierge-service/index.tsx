@@ -1105,7 +1105,88 @@ const ConciergeService = () => {
                     </p>
                   </div>
                 </div>
-              </div></div>
+              </div>
+            </div>
+          </section>
+
+          {/* FAQ Section */}
+          <section className="py-16 bg-gray-50">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-lg text-gray-600 mb-12 text-center max-w-2xl mx-auto">
+                Everything you need to know about our concierge services in
+                Whistler.
+              </p>
+
+              <div className="space-y-4">
+                {/* FAQ 1 */}
+                <div
+                  className={`border rounded-xl overflow-hidden transition-all duration-300 ${
+                    expandedFaq === 0 ? "shadow-md" : "shadow-sm"
+                  }`}
+                >
+                  <button
+                    onClick={() => toggleFaq(0)}
+                    className="w-full flex justify-between items-center p-6 text-left focus:outline-none"
+                  >
+                    <h3 className="text-lg font-medium text-gray-900">
+                      What are the advantages of using AceHost concierge
+                      service?
+                    </h3>
+                    <span className="ml-6 flex-shrink-0">
+                      {expandedFaq === 0 ? (
+                        <svg
+                          className="h-6 w-6 text-gray-500"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M5 15l7-7 7 7"
+                          />
+                        </svg>
+                      ) : (
+                        <svg
+                          className="h-6 w-6 text-gray-500"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      )}
+                    </span>
+                  </button>
+                  <div
+                    className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                      expandedFaq === 0
+                        ? "max-h-96 opacity-100"
+                        : "max-h-0 opacity-0"
+                    }`}
+                  >
+                    <div className="p-6 pt-0 text-gray-600">
+                      <p>
+                        AceHost offers personalized, all-in-one concierge
+                        services that take care of every aspect of your
+                        vacation. With our local connections and expertise, we
+                        can secure priority access to the best experiences in
+                        Whistler. Our team goes above and beyond to ensure you
+                        get the best tables, service, and time slots, making
+                        your stay memorable and seamless.
+                      </p>
+                    </div>
                   </div>
                 </div>
 
