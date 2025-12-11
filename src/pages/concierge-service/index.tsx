@@ -6,7 +6,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack, IoIosArrowForward, IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import {
   FaRegHeart,
   FaRegComment,
@@ -51,6 +51,19 @@ import {
 
 const ConciergeService = () => {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
+  const [expandedCards, setExpandedCards] = useState<Set<number>>(new Set());
+
+  const toggleCardExpansion = (index: number) => {
+    setExpandedCards(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(index)) {
+        newSet.delete(index);
+      } else {
+        newSet.add(index);
+      }
+      return newSet;
+    });
+  };
 
   useEffect(() => {
     // Add responsive classes to all carousel items
@@ -73,13 +86,139 @@ const ConciergeService = () => {
       });
     };
 
+    // Add styles for the card animations
+    const style = document.createElement('style');
+    style.innerHTML = `
+      .card-text-container {
+        overflow: hidden;
+        transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .show-more-button {
+        color: #000;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        margin-top: 0.5rem;
+        cursor: pointer;
+        transition: opacity 0.2s ease;
+        background: none;
+        border: none;
+        padding: 0;
+        font: inherit;
+        outline: inherit;
+      }
+      
+      .show-more-button:hover {
+        opacity: 0.7;
+      }
+      
+      .show-more-button svg {
+        margin-left: 0.25rem;
+        transition: transform 0.3s ease;
+      }
+      
+      .show-more-button.expanded svg {
+        transform: rotate(180deg);
+      }
+    `;
+    document.head.appendChild(style);
+
     // Call the function after component mount
     addResponsiveClasses();
+    
+    // Clean up
+    return () => {
+      document.head.removeChild(style);
+    };
   }, []);
 
 
   const toggleFaq = (index: number) => {
     setExpandedFaq(expandedFaq === index ? null : index);
+  };
+
+  // Helper function to get the first sentence of a text
+  const getFirstSentence = (text: string) => {
+    const match = text.match(/^(.*?[.!?])\s/);
+    if (match && match[1]) {
+      return match[1] + "...";
+    }
+    // If no sentence end is found, return first 80 characters
+    return text.length > 80 ? text.substring(0, 80) + "..." : text;
+  };
+
+  // Concierge Card Component
+  const ConciergeCard = ({ 
+    index, 
+    icon, 
+    title, 
+    description, 
+    imageSrc, 
+    imageAlt,
+    link = null 
+  }: { 
+    index: number, 
+    icon: JSX.Element, 
+    title: string, 
+    description: string, 
+    imageSrc: string, 
+    imageAlt: string,
+    link?: { url: string, text: string } | null
+  }) => {
+    const isExpanded = expandedCards.has(index);
+    const truncatedText = getFirstSentence(description);
+    
+    return (
+      <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+        <div className="relative h-56">
+          <Image
+            src={imageSrc}
+            alt={imageAlt}
+            fill
+            className="object-cover"
+            priority={index < 6} // Prioritize loading first 6 images
+          />
+        </div>
+        <div className="p-5">
+          <h3 className="text-xl font-bold text-gray-900 mb-2">
+            <span className="service-icon mr-2 inline-flex items-center justify-center">
+              {icon}
+            </span>
+            {title}
+          </h3>
+          <div className="card-text-container text-gray-600" style={{ 
+            maxHeight: isExpanded ? '1000px' : '80px',
+            position: 'relative'
+          }}>
+            <p className="mb-2">
+              {description}
+            </p>
+            {link && isExpanded && (
+              <a 
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-4 py-2 mt-3 bg-black text-white font-medium rounded hover:bg-gray-800 transition-colors duration-200"
+              >
+                {link.text}
+              </a>
+            )}
+            {!isExpanded && (
+              <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-white to-transparent"></div>
+            )}
+          </div>
+          <button 
+            onClick={() => toggleCardExpansion(index)}
+            className={`show-more-button ${isExpanded ? 'expanded' : ''}`}
+            aria-expanded={isExpanded}
+          >
+            <span>{isExpanded ? 'Show less' : 'Show more'}</span>
+            <IoIosArrowDown className="ml-1" />
+          </button>
+        </div>
+      </div>
+    );
   };
 
   return (
@@ -180,252 +319,90 @@ const ConciergeService = () => {
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {/* Jet-Van transportation */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 10.47.24 AM.png"
-                      alt="Jet-Van transportation"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <FaShuttleVan className="text-lg" />
-                      </span>
-                      Jet-Van transportation
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Our most popular and most luxurious form of transportation to and from YVR. A Sprinter Van with a layout similar to a private jet. Enjoy maximum comfort and luxuries from the moment you step off the plane.
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={0}
+                  icon={<FaShuttleVan className="text-lg" />}
+                  title="Jet-Van transportation"
+                  description="Our most popular and most luxurious form of transportation to and from YVR. A Sprinter Van with a layout similar to a private jet. Enjoy maximum comfort and luxuries from the moment you step off the plane."
+                  imageSrc="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 10.47.24 AM.png"
+                  imageAlt="Jet-Van transportation"
+                />
                 
-                {/* Private Ski Instructor */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/PrivateSkiInstructor.jpg"
-                      alt="Private Ski Instructor"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <FaSkiing className="text-lg" />
-                      </span>
-                      Private Ski Instructor
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      AceHost can help organize your private ski and snowboard
-                      lessons through our connections at Extremely Canadian
-                      Whistler. Our guides can help elevate your skill level,
-                      find hidden trails, and are familiar with the best spots on
-                      the mountain, especially during powder days. Guides can
-                      help you skip lines and meet at your convenience.
-                    </p>
-                  </div>
-                </div>
-
-                {/* In-Home Private Chef */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/PrivateChef.jpeg"
-                      alt="In-Home Private Chef"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <GiCookingPot className="text-lg" />
-                      </span>
-                      In-Home Private Chef
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      AceHost offers in-home private chef dining services. This is one of our most popular services and includes menu planning, grocery shopping, preparation, cooking and clean up afterward. The AceHost chef team will work with you to customize menus for a multi-course meal, brunch, dinner and everything in between.
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={1}
+                  icon={<FaSkiing className="text-lg" />}
+                  title="Private Ski Instructor"
+                  description="AceHost can help organize your private ski and snowboard lessons through our connections at Extremely Canadian Whistler. Our guides can help elevate your skill level, find hidden trails, and are familiar with the best spots on the mountain, especially during powder days. Guides can help you skip lines and meet at your convenience."
+                  imageSrc="/photos/homepage/concierge-service/PrivateSkiInstructor.jpg"
+                  imageAlt="Private Ski Instructor"
+                />
                 
-                {/* Ski Lift Pass Delivery */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/thumbnails/Screenshot 2025-12-10 at 7.15.00 PM.png"
-                      alt="Ski Lift Pass Delivery"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <FaTicketAlt className="text-lg" />
-                      </span>
-                      Ski Lift Pass Delivery
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      With all AceHost bookings, guests enjoy the added convenience of having their ski passes delivered right to their rental home. No more waiting in long lines, showing IDs, or filling out forms when you'd rather be enjoying the mountains. Instead, your passes are ready and waiting for you upon arrival, so you can wake up and head straight to the slopes stress-free. And best of all, we provide this service at absolutely no extra cost.
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={2}
+                  icon={<GiCookingPot className="text-lg" />}
+                  title="In-Home Private Chef"
+                  description="AceHost offers in-home private chef dining services. This is one of our most popular services and includes menu planning, grocery shopping, preparation, cooking and clean up afterward. The AceHost chef team will work with you to customize menus for a multi-course meal, brunch, dinner and everything in between."
+                  imageSrc="/photos/homepage/concierge-service/PrivateChef.jpeg"
+                  imageAlt="In-Home Private Chef"
+                />
+                
+                <ConciergeCard
+                  index={3}
+                  icon={<FaTicketAlt className="text-lg" />}
+                  title="Ski Lift Pass Delivery"
+                  description="With all AceHost bookings, guests enjoy the added convenience of having their ski passes delivered right to their rental home. No more waiting in long lines, showing IDs, or filling out forms when you'd rather be enjoying the mountains. Instead, your passes are ready and waiting for you upon arrival, so you can wake up and head straight to the slopes stress-free. And best of all, we provide this service at absolutely no extra cost."
+                  imageSrc="/thumbnails/Screenshot 2025-12-10 at 7.15.00 PM.png"
+                  imageAlt="Ski Lift Pass Delivery"
+                />
 
-                {/* Ski or Ride with an Olympian */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.23.19 AM.png"
-                      alt="Ski or Ride with an Olympian"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <FaMedal className="text-lg" />
-                      </span>
-                      Ski or Ride with an Olympian
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Experience the thrill of skiing or snowboarding alongside an Olympian with Snow
-                      School's exclusive program. Trace their lines, refine your technique, and hear
-                      inspiring stories firsthand. This unparalleled opportunity offers a unique blend of
-                      personalized instruction and insight from world-class athletes. Go one-on-one or
-                      make a group with up to four family or friends of similar ability - for one price.
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={4}
+                  icon={<FaMedal className="text-lg" />}
+                  title="Ski or Ride with an Olympian"
+                  description="Experience the thrill of skiing or snowboarding alongside an Olympian with Snow School's exclusive program. Trace their lines, refine your technique, and hear inspiring stories firsthand. This unparalleled opportunity offers a unique blend of personalized instruction and insight from world-class athletes. Go one-on-one or make a group with up to four family or friends of similar ability - for one price."
+                  imageSrc="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.23.19 AM.png"
+                  imageAlt="Ski or Ride with an Olympian"
+                />
 
-                {/* In-home Ski/Snowboard Delivery */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/SkiRentals.png"
-                      alt="In-home Ski/Snowboard Delivery"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <FaSnowflake className="text-lg" />
-                      </span>
-                      In-home Ski/Snowboard Delivery
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      AceHost has partnered with Black Tie to deliver equipment
-                      directly to your home between 7:30am-10pm with a
-                      selection boots, skis, snowboards, and poles. Black Tie
-                      rentals can also bring a selection of socks, gloves and
-                      ski goggles, available. The best part is the delivery
-                      fee is included!
-                    </p>
-                    <a 
-                      href="https://www.blacktieskis.com/portal/?portal_name=acehost"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block px-4 py-2 bg-black text-white font-medium rounded hover:bg-gray-800 transition-colors duration-200"
-                    >
-                      Discounted Link to Book Rentals
-                    </a>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={5}
+                  icon={<FaSnowflake className="text-lg" />}
+                  title="In-home Ski/Snowboard Delivery"
+                  description="AceHost has partnered with Black Tie to deliver equipment directly to your home between 7:30am-10pm with a selection boots, skis, snowboards, and poles. Black Tie rentals can also bring a selection of socks, gloves and ski goggles, available. The best part is the delivery fee is included!"
+                  imageSrc="/photos/homepage/concierge-service/SkiRentals.png"
+                  imageAlt="In-home Ski/Snowboard Delivery"
+                  link={{
+                    url: "https://www.blacktieskis.com/portal/?portal_name=acehost",
+                    text: "Discounted Link to Book Rentals"
+                  }}
+                />
 
-                {/* Heli Glacier Meal */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/HeliGlacier Meal.jpg"
-                      alt="Heli Glacier Meal"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <GiCookingPot className="text-lg" />
-                      </span>
-                      Heli Glacier Meal
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      The Heli Glacier Meal is one of AceHost's most
-                      highly rated experiences. Enjoy a private chef prepared
-                      meal while taking in the stunning views of the local
-                      mountain ranges from a glacier. Our chefs and servers
-                      join the heli trips to serve meals and provide a
-                      first-rate dining experience. Contact us to get a quote
-                      for this experience.
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={6}
+                  icon={<GiCookingPot className="text-lg" />}
+                  title="Heli Glacier Meal"
+                  description="The Heli Glacier Meal is one of AceHost's most highly rated experiences. Enjoy a private chef prepared meal while taking in the stunning views of the local mountain ranges from a glacier. Our chefs and servers join the heli trips to serve meals and provide a first-rate dining experience. Contact us to get a quote for this experience."
+                  imageSrc="/photos/homepage/concierge-service/HeliGlacier Meal.jpg"
+                  imageAlt="Heli Glacier Meal"
+                />
 
-                {/* Snowmobile Experience */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/Snowmobile Experience.png"
-                      alt="Snowmobile Experience"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <FaSnowplow className="text-lg" />
-                      </span>
-                      Snowmobile Experience
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      For a regular snowmobile experience, AceHost can arrange
-                      a tour of the Blackcomb mountain for you and your group.
-                      The snowmobile experience offers a variety of levels,
-                      for beginners and adventurous riders, and anyone in
-                      between. Personalize your trip and choose from a range
-                      of scenic options.
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={7}
+                  icon={<FaSnowplow className="text-lg" />}
+                  title="Snowmobile Experience"
+                  description="For a regular snowmobile experience, AceHost can arrange a tour of the Blackcomb mountain for you and your group. The snowmobile experience offers a variety of levels, for beginners and adventurous riders, and anyone in between. Personalize your trip and choose from a range of scenic options."
+                  imageSrc="/photos/homepage/concierge-service/Snowmobile Experience.png"
+                  imageAlt="Snowmobile Experience"
+                />
 
-                {/* Heli Ice Cave Adventure */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-56">
-                    <Image
-                      src="/photos/homepage/concierge-service/HeliSki.jpeg"
-                      alt="Heli Ice Cave Adventure"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      <span className="service-icon">
-                        <GiMountainCave className="text-lg" />
-                      </span>
-                      Heli Ice Cave Adventure
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Take a journey through 12,000 - 20,000-year-old ice
-                      caves via a scenic helicopter ride through the local
-                      mountain range. Soaring over ancient glacier formations,
-                      guests can experience a guide-led tour inside ice
-                      tunnels and remote ice caves. Elevate your tour
-                      experience by adding Bearfoot Bistro's charcuterie
-                      and dessert platters. Contact us for ice cave adventure
-                      tour quote.
-                    </p>
-                  </div>
-                </div>
+                <ConciergeCard
+                  index={8}
+                  icon={<GiMountainCave className="text-lg" />}
+                  title="Heli Ice Cave Adventure"
+                  description="Take a journey through 12,000 - 20,000-year-old ice caves via a scenic helicopter ride through the local mountain range. Soaring over ancient glacier formations, guests can experience a guide-led tour inside ice tunnels and remote ice caves. Elevate your tour experience by adding Bearfoot Bistro's charcuterie and dessert platters. Contact us for ice cave adventure tour quote."
+                  imageSrc="/photos/homepage/concierge-service/HeliSki.jpeg"
+                  imageAlt="Heli Ice Cave Adventure"
+                />
 
                 {/* Dog Sledding */}
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
