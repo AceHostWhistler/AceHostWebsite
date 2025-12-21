@@ -30,9 +30,9 @@ interface PropertyFeature {
   id: string;
   name: string;
   images: string[];
-  guests: number;
-  bedrooms: number;
-  bathrooms: number;
+  guests: number | string;
+  bedrooms: number | null;
+  bathrooms: number | null;
   description: string;
   features: string[];
   location: string;
@@ -46,6 +46,8 @@ interface PropertyFeature {
   link?: string;
   country?: string;
   airbnbLink?: string;
+  contactLink?: string;
+  beds?: number | null;
 }
 
 interface PropertyCategory {
@@ -85,7 +87,7 @@ export default function Properties() {
           image: string;
           description: string;
           accommodationCategory: string;
-          numberOfRooms: number;
+          numberOfRooms: number | null;
           amenityFeature: Array<{
             "@type": string;
             name: string;
@@ -1324,6 +1326,43 @@ export default function Properties() {
             isPetFriendly: false,
             isSkiInSkiOut: false,
           },
+          {
+            id: "hotel-booking-assistance",
+            name: "Hotel Booking Assistance & Concierge Services | Four Seasons, Fairmont, The Westin",
+            images: [
+              "/thumbnails/Four Seasons Resort and Residences Whistler_885.webp",
+              "/thumbnails/Fairmont Image.webp",
+              "/thumbnails/The-Westin-Resort-And-Spa-small_0006_Westin-Whistler-7-660x440.webp",
+            ],
+            guests: "2-25+",
+            bedrooms: null,
+            bathrooms: null,
+            location: "Whistler",
+            description:
+              "Expert hotel booking assistance with exclusive perks and optional concierge services. Access priority reservations, room upgrades, dining credits, and more at no extra cost. Our local partnerships with premium hotels ensure you get the best possible experience.",
+            features: [
+              "Priority Room Upgrades",
+              "Dining Credits",
+              "Early/Late Checkout",
+              "Included Breakfast",
+              "VIP Status",
+              "Optional Concierge",
+              "Restaurant Reservations",
+              "Transportation Services",
+            ],
+            highlights: [
+              "No Extra Cost for Booking",
+              "Exclusive Hotel Perks",
+              "Optional Premium Concierge",
+              "Local Expert Assistance",
+            ],
+            priceRange: "Subject to request, 5-night minimum stays, 2+ bedrooms",
+            winterPrice: "$150 USD per hour concierge services",
+            holidayPrice: "No charge for booking, only for optional concierge services",
+            isPetFriendly: false,
+            isSkiInSkiOut: false,
+            link: "/listings/hotel-booking-assistance"
+          },
         ],
       },
       {
@@ -1651,7 +1690,7 @@ export default function Properties() {
             isPetFriendly: false,
             isSkiInSkiOut: false,
             country: "usa"
-          }
+          },
         ],
       },
     ],
@@ -1675,8 +1714,8 @@ export default function Properties() {
       .map(category => {
     const filteredProperties = category.properties.filter((property) => {
           // Apply all filters
-          const bedroomsMatch = property.bedrooms >= filters.minBedrooms && property.bedrooms <= filters.maxBedrooms;
-          const guestsMatch = property.guests >= filters.minGuests && property.guests <= filters.maxGuests;
+          const bedroomsMatch = property.bedrooms === null || (typeof property.bedrooms === 'number' && property.bedrooms >= filters.minBedrooms && property.bedrooms <= filters.maxBedrooms);
+          const guestsMatch = typeof property.guests === 'string' || (typeof property.guests === 'number' && property.guests >= filters.minGuests && property.guests <= filters.maxGuests);
           const petFriendlyMatch = !filters.petFriendly || property.isPetFriendly;
           const skiInSkiOutMatch = !filters.skiInSkiOut || property.isSkiInSkiOut;
           
@@ -2019,7 +2058,7 @@ export default function Properties() {
           </div>
 
           {/* Property name */}
-          <h3 className="text-xl font-medium mb-2 text-gray-900 line-clamp-2">
+          <h3 className={`text-xl font-medium mb-2 text-gray-900 ${property.id === "hotel-booking-assistance" ? "" : "line-clamp-2"}`}>
             {property.name}
           </h3>
 

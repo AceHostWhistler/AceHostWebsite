@@ -182,7 +182,7 @@ const Home = () => {
           </div>
 
           {/* Property name */}
-          <h3 className="text-xl font-medium mb-4 text-gray-900 line-clamp-2 h-14">
+          <h3 className={`text-xl font-medium mb-4 text-gray-900 ${property.id === "hotel-booking-assistance" ? "" : "line-clamp-2"} ${property.id === "hotel-booking-assistance" ? "h-auto" : "h-14"}`}>
             {property.name}
           </h3>
 
@@ -853,7 +853,23 @@ const Home = () => {
       isPetFriendly: false,
       isSkiInSkiOut: false,
     },
-    
+    {
+      id: "hotel-booking-assistance",
+      name: "Hotel Booking Assistance & Concierge Services | Four Seasons, Fairmont, The Westin",
+      image: "/thumbnails/Four Seasons Resort and Residences Whistler_885.webp",
+      guests: "2-25+",
+      bedrooms: null,
+      beds: null,
+      bathrooms: null,
+      priceRange: "Subject to request, 5-night minimum stays, 2+ bedrooms",
+      winterPrice: "$150 USD per hour concierge services",
+      holidayPrice: "No charge for booking, only for optional concierge services",
+      location: "whistler",
+      link: "/listings/hotel-booking-assistance",
+      contactLink: "/contact",
+      isPetFriendly: false,
+      isSkiInSkiOut: false,
+    }
   ];
 
   // Update filtering logic to match properties page
