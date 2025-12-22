@@ -106,13 +106,16 @@ const HotelBookingAssistance = () => {
                   If you'd like additional assistance during your stay, our premium concierge services are available:
                 </p>
                 <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                  <li><strong>$150 USD per hour</strong> for optional concierge services</li>
+                  <li><strong>$200 USD per hour</strong> for optional concierge services</li>
                   <li>Priority restaurant reservations in Whistler's finest establishments</li>
                   <li>Curated in-town experiences and activity bookings</li>
                   <li>Grocery delivery to your room prior to checking in</li>
                   <li>Transportation arrangements from Vancouver International Airport (YVR)</li>
                   <li>And much more to enhance your stay!</li>
                 </ul>
+                <p className="mt-4 text-gray-700">
+                  A full itinerary typically costs around <strong>4-8+ hours</strong> depending on what you need. Let us know what you need and we can send a ballpark estimate.
+                </p>
                 <p className="mt-4 text-gray-700 font-medium">
                   Remember: There is no charge for our booking assistance - you only pay for optional concierge services if you choose to use them after booking.
                 </p>
