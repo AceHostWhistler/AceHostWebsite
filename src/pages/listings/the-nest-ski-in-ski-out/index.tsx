@@ -256,7 +256,7 @@ const TheNest = () => {
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
                 <div className="relative aspect-[4/3] mb-2">
                   <Image
-                    src={photos[15]}
+                    src="/photos/properties/Wolverine Crescent/31 - 20251220 A7M4 01 A1_00918.jpg"
                     alt="The Nest Bedroom"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-300"
@@ -367,6 +367,42 @@ const TheNest = () => {
                 restaurants Rim Rock, Red door, Creekbread and Nita Lake lodge
                 located in Creekside. This is the ideal home for your holiday!
               </p>
+            </div>
+            
+            {/* Exterior View Section */}
+            <div className="flex flex-col md:flex-row mb-20">
+              <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
+                <div className="relative aspect-[4/3] mb-2">
+                  <Image
+                    src="/photos/properties/Wolverine Crescent/66 - 20251220 A7M4 01 A1_00781.jpg"
+                    alt="The Nest Exterior"
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </div>
+              <div className="md:w-1/2">
+                <div className="flex items-center mb-6">
+                  <div className="bg-black text-white p-4 rounded-full mr-4">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                  <h2 className="text-2xl font-bold">Exterior Features</h2>
+                </div>
+                <p className="text-gray-800 mb-6">
+                  The Nest offers beautiful outdoor spaces for you to enjoy. Relax on the spacious deck with mountain views, perfect for morning coffee or evening drinks. The private hot tub is ideally positioned for soaking while enjoying the alpine scenery. During winter, experience true ski-in/ski-out convenience, while summer offers easy access to hiking and biking trails.
+                </p>
+              </div>
             </div>
           </div>
         </main>
