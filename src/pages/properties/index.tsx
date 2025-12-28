@@ -692,7 +692,7 @@ export default function Properties() {
             id: "the-nest",
             name: "The Nest | Ski in-Ski out",
             images: [
-              "/photos/properties/Wolverine Crescent/06-2627 Wolverine-06.jpg",
+              "/photos/properties/Wolverine Crescent/01 - 20251220 A7M4 01 A1_01116-Edit.jpg",
             ],
             guests: 10,
             bedrooms: 5,

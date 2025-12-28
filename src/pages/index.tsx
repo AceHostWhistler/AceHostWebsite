@@ -431,7 +431,7 @@ const Home = () => {
     {
       id: "the-nest",
       name: "The Nest | Ski in Ski out",
-      image: "/photos/properties/Wolverine Crescent/06-2627 Wolverine-06.jpg",
+      image: "/photos/properties/Wolverine Crescent/01 - 20251220 A7M4 01 A1_01116-Edit.jpg",
       guests: 10,
       bedrooms: 5,
       beds: 6,

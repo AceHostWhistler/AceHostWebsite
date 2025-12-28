@@ -18,29 +18,73 @@ const TheNest = () => {
 
   // Property photos
   const photos = [
-    "/photos/properties/Wolverine Crescent/01-2627 Wolverine-01.jpg",
-    "/photos/properties/Wolverine Crescent/02-2627 Wolverine-02.jpg",
-    "/photos/properties/Wolverine Crescent/03-2627 Wolverine-03.jpg",
-    "/photos/properties/Wolverine Crescent/04-2627 Wolverine-04.jpg",
-    "/photos/properties/Wolverine Crescent/05-2627 Wolverine-05.jpg",
-    "/photos/properties/Wolverine Crescent/06-2627 Wolverine-06.jpg",
-    "/photos/properties/Wolverine Crescent/07-2627 Wolverine-07.jpg",
-    "/photos/properties/Wolverine Crescent/08-2627 Wolverine-08.jpg",
-    "/photos/properties/Wolverine Crescent/09-2627 Wolverine-09.jpg",
-    "/photos/properties/Wolverine Crescent/10-2627 Wolverine-10.jpg",
-    "/photos/properties/Wolverine Crescent/11-2627 Wolverine-11.jpg",
-    "/photos/properties/Wolverine Crescent/12-2627 Wolverine-12.jpg",
-    "/photos/properties/Wolverine Crescent/13-2627 Wolverine-13.jpg",
-    "/photos/properties/Wolverine Crescent/14-2627 Wolverine-14.jpg",
-    "/photos/properties/Wolverine Crescent/15-2627 Wolverine-15.jpg",
-    "/photos/properties/Wolverine Crescent/16-2627 Wolverine-16.jpg",
-    "/photos/properties/Wolverine Crescent/17-2627 Wolverine-17.jpg",
-    "/photos/properties/Wolverine Crescent/18-2627 Wolverine-18.jpg",
-    "/photos/properties/Wolverine Crescent/19-2627 Wolverine-19.jpg",
-    "/photos/properties/Wolverine Crescent/20-2627 Wolverine-20.jpg",
-    "/photos/properties/Wolverine Crescent/21-2627 Wolverine-21.jpg",
-    "/photos/properties/Wolverine Crescent/22-2627 Wolverine-22.jpg",
-    "/photos/properties/Wolverine Crescent/23-2627 Wolverine-23.jpg",
+    "/photos/properties/Wolverine Crescent/01 - 20251220 A7M4 01 A1_01116-Edit.jpg",
+    "/photos/properties/Wolverine Crescent/02 - 20251220 A7M4 01 A1_00533.jpg",
+    "/photos/properties/Wolverine Crescent/03 - 20251220 A7M4 01 A1_00543-Edit.jpg",
+    "/photos/properties/Wolverine Crescent/04 - 20251220 A7M4 01 A1_00561-Edit.jpg",
+    "/photos/properties/Wolverine Crescent/05 - 20251220 A7M4 01 A1_00581.jpg",
+    "/photos/properties/Wolverine Crescent/06 - 20251220 A7M4 01 A1_00590-Edit.jpg",
+    "/photos/properties/Wolverine Crescent/07 - 20251220 A7M4 01 A1_00605-Edit.jpg",
+    "/photos/properties/Wolverine Crescent/08 - 20251220 A7M4 01 A1_00630-Edit.jpg",
+    "/photos/properties/Wolverine Crescent/09 - 20251220 A7M4 01 A1_00640-Edit.jpg",
+    "/photos/properties/Wolverine Crescent/10 - 20251220 A7M4 01 A1_00656-Edit.jpg",
+    "/photos/properties/Wolverine Crescent/11 - 20251220 A7M4 01 A1_01200.jpg",
+    "/photos/properties/Wolverine Crescent/12 - 20251220 A7M4 01 A1_00671-Edit.jpg",
+    "/photos/properties/Wolverine Crescent/13 - 20251220 A7M4 01 A1_00679-Edit.jpg",
+    "/photos/properties/Wolverine Crescent/14 - 20251220 A7M4 01 A1_00686-Edit.jpg",
+    "/photos/properties/Wolverine Crescent/15 - 20251220 A7M4 01 A1_00698-Edit.jpg",
+    "/photos/properties/Wolverine Crescent/16 - 20251220 A7M4 01 A1_01218.jpg",
+    "/photos/properties/Wolverine Crescent/17 - 20251220 A7M4 01 A1_00712-Edit.jpg",
+    "/photos/properties/Wolverine Crescent/18 - 20251220 A7M4 01 A1_00721-Edit.jpg",
+    "/photos/properties/Wolverine Crescent/19 - 20251220 A7M4 01 A1_00726-Edit.jpg",
+    "/photos/properties/Wolverine Crescent/20 - 20251220 A7M4 01 A1_00751.jpg",
+    "/photos/properties/Wolverine Crescent/21 - 20251220 A7M4 01 A1_00731-Edit.jpg",
+    "/photos/properties/Wolverine Crescent/22 - 20251220 A7M4 01 A1_00786.jpg",
+    "/photos/properties/Wolverine Crescent/23 - 20251220 A7M4 01 A1_00798.jpg",
+    "/photos/properties/Wolverine Crescent/24 - 20251220 A7M4 01 A1_00811.jpg",
+    "/photos/properties/Wolverine Crescent/25 - 20251220 A7M4 01 A1_00817.jpg",
+    "/photos/properties/Wolverine Crescent/26 - 20251220 A7M4 01 A1_00874.jpg",
+    "/photos/properties/Wolverine Crescent/27 - 20251220 A7M4 01 A1_00881.jpg",
+    "/photos/properties/Wolverine Crescent/28 - 20251220 A7M4 01 A1_00892.jpg",
+    "/photos/properties/Wolverine Crescent/29 - 20251220 A7M4 01 A1_00899.jpg",
+    "/photos/properties/Wolverine Crescent/30 - 20251220 A7M4 01 A1_00913.jpg",
+    "/photos/properties/Wolverine Crescent/31 - 20251220 A7M4 01 A1_00918.jpg",
+    "/photos/properties/Wolverine Crescent/32 - 20251220 A7M4 01 A1_00929.jpg",
+    "/photos/properties/Wolverine Crescent/33 - 20251220 A7M4 01 A1_00937.jpg",
+    "/photos/properties/Wolverine Crescent/34 - 20251220 A7M4 01 A1_00954.jpg",
+    "/photos/properties/Wolverine Crescent/35 - 20251220 A7M4 01 A1_00943.jpg",
+    "/photos/properties/Wolverine Crescent/36 - 20251220 A7M4 01 A1_00962.jpg",
+    "/photos/properties/Wolverine Crescent/37 - 20251220 A7M4 01 A1_00968.jpg",
+    "/photos/properties/Wolverine Crescent/38 - 20251220 A7M4 01 A1_00832.jpg",
+    "/photos/properties/Wolverine Crescent/39 - 20251220 A7M4 01 A1_00838.jpg",
+    "/photos/properties/Wolverine Crescent/40 - 20251220 A7M4 01 A1_00844.jpg",
+    "/photos/properties/Wolverine Crescent/41 - 20251220 A7M4 01 A1_00862.jpg",
+    "/photos/properties/Wolverine Crescent/42 - 20251220 A7M4 01 A1_00868.jpg",
+    "/photos/properties/Wolverine Crescent/43 - 20251220 A7M4 01 A1_00980.jpg",
+    "/photos/properties/Wolverine Crescent/44 - 20251220 A7M4 01 A1_00986.jpg",
+    "/photos/properties/Wolverine Crescent/45 - 20251220 A7M4 01 A1_00992.jpg",
+    "/photos/properties/Wolverine Crescent/46 - 20251220 A7M4 01 A1_00999.jpg",
+    "/photos/properties/Wolverine Crescent/47 - 20251220 A7M4 01 A1_01011.jpg",
+    "/photos/properties/Wolverine Crescent/48 - 20251220 A7M4 01 A1_01017.jpg",
+    "/photos/properties/Wolverine Crescent/49 - 20251220 A7M4 01 A1_01194.jpg",
+    "/photos/properties/Wolverine Crescent/50 - 20251220 A7M4 01 A1_01188.jpg",
+    "/photos/properties/Wolverine Crescent/51 - 20251220 A7M4 01 A1_01158.jpg",
+    "/photos/properties/Wolverine Crescent/52 - 20251220 A7M4 01 A1_01045.jpg",
+    "/photos/properties/Wolverine Crescent/53 - 20251220 A7M4 01 A1_01064.jpg",
+    "/photos/properties/Wolverine Crescent/54 - 20251220 A7M4 01 A1_01076.jpg",
+    "/photos/properties/Wolverine Crescent/55 - 20251220 A7M4 01 A1_01090.jpg",
+    "/photos/properties/Wolverine Crescent/56 - 20251220 A7M4 01 A1_01083.jpg",
+    "/photos/properties/Wolverine Crescent/57 - 20251220 A7M4 01 A1_01152.jpg",
+    "/photos/properties/Wolverine Crescent/58 - 20251220 A7M4 01 A1_01146.jpg",
+    "/photos/properties/Wolverine Crescent/59 - 20251220 A7M4 01 A1_01140.jpg",
+    "/photos/properties/Wolverine Crescent/60 - 20251220 A7M4 01 A1_01134.jpg",
+    "/photos/properties/Wolverine Crescent/61 - 20251220 A7M4 01 A1_01167.jpg",
+    "/photos/properties/Wolverine Crescent/62 - 20251220 A7M4 01 A1_01182.jpg",
+    "/photos/properties/Wolverine Crescent/63 - 20251220 A7M4 01 A1_01210.jpg",
+    "/photos/properties/Wolverine Crescent/64 - 20251220 A7M4 01 A1_01128-Edit.jpg",
+    "/photos/properties/Wolverine Crescent/65 - 20251220 A7M4 01 A1_01129.jpg",
+    "/photos/properties/Wolverine Crescent/66 - 20251220 A7M4 01 A1_00781.jpg",
+    "/photos/properties/Wolverine Crescent/67 - 20251220 MM4P 01 0096.jpg",
   ];
 
   const handlePhotoClick = (index: number) => {
@@ -172,7 +216,7 @@ const TheNest = () => {
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                 <div className="relative aspect-[4/3] mb-2">
                   <Image
-                    src={photos[2]}
+                    src={photos[4]}
                     alt="The Nest Interior"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-300"
@@ -212,7 +256,7 @@ const TheNest = () => {
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
                 <div className="relative aspect-[4/3] mb-2">
                   <Image
-                    src={photos[8]}
+                    src={photos[15]}
                     alt="The Nest Bedroom"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-300"
