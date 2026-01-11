@@ -97,15 +97,11 @@ const Home = () => {
                 />
               </div>
             ) : (
-              <Image
+              <img
                 src={property.image}
                 alt={`${property.title || property.name} - Luxury ${property.location === 'whistler' ? 'Whistler' : property.location === 'vancouver' ? 'Vancouver' : 'Worldwide'} vacation rental with ${property.bedrooms} bedroom${property.bedrooms !== 1 ? 's' : ''}, accommodating up to ${property.guests} guest${property.guests !== 1 ? 's' : ''}`}
-                fill
-                className="object-cover cursor-pointer"
-                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                className="w-full h-full object-cover cursor-pointer"
                 loading={index < 6 ? "eager" : "lazy"}
-                quality={80}
-                priority={index < 3}
               />
             )}
           </Link>

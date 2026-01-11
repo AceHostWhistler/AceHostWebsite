@@ -157,15 +157,11 @@ const WhistlerVillagePenthouse = () => {
                   className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
                   onClick={() => handlePhotoClick(index)}
                 >
-                  <Image
+                  <img
                     src={photo}
                     alt={`Whistler Village Penthouse interior ${index + 1}`}
-                    fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                    priority={index < 2}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                     loading={index < 2 ? "eager" : "lazy"}
-                    quality={index < 4 ? 85 : 75}
                   />
                 </div>
               ))}
@@ -198,11 +194,10 @@ const WhistlerVillagePenthouse = () => {
             <div className="flex flex-col md:flex-row mb-20">
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                 <div className="relative aspect-[4/3] mb-2">
-                  <Image
+                  <img
                     src={photos[1]}
                     alt="Whistler Village Penthouse Interior"
-                    fill
-                    className="object-cover rounded-lg"
+                    className="w-full h-full object-cover rounded-lg"
                   />
                 </div>
               </div>
@@ -348,15 +343,11 @@ const WhistlerVillagePenthouse = () => {
                       className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer"
                       onClick={() => handlePhotoClick(index)}
                     >
-                      <Image
+                      <img
                         src={photo}
                         alt={`Whistler Village Penthouse ${index + 1}`}
-                        fill
-                        sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw"
-                        className="object-cover hover:scale-105 transition-transform duration-300"
-                        priority={index < 4}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                         loading={index < 8 ? "eager" : "lazy"}
-                        quality={index < 12 ? 85 : 75}
                       />
                     </div>
                     <div className="mt-1 text-center">
@@ -404,15 +395,11 @@ const WhistlerVillagePenthouse = () => {
                 </div>
               )}
               <div className="relative w-full h-full">
-                <Image
+                <img
                   src={photos[selectedPhotoIndex]}
                   alt={`Whistler Village Penthouse full view ${selectedPhotoIndex + 1}`}
-                  fill
-                  priority
-                  className={`object-contain transition-opacity duration-300 ${isImageLoading ? 'opacity-0' : 'opacity-100'}`}
-                  sizes="100vw"
-                  onLoadingComplete={handleImageLoad}
-                  quality={85}
+                  className={`w-full h-full object-contain transition-opacity duration-300 ${isImageLoading ? 'opacity-0' : 'opacity-100'}`}
+                  onLoad={handleImageLoad}
                   loading="eager"
                 />
               </div>
