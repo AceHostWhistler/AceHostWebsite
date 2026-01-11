@@ -217,6 +217,23 @@ const Home = () => {
   // Define all property listings
   const allListings = [
     {
+      id: "whistler-village-penthouse-3-bdr",
+      name: "Whistler Village PentHouse | 3 BDR | Walk to Ski",
+      image: "/photos/properties/303-Tyndall Lodge/02 - 20260107 A7M4 01 A1_03433.jpg",
+      guests: 7,
+      bedrooms: 3,
+      beds: 4,
+      bathrooms: 2,
+      priceRange: "$500-1200 in summer",
+      winterPrice: "$750-1500 in winter",
+      holidayPrice: "$2500-3500+ for Christmas/NYE",
+      location: "whistler",
+      link: "/listings/whistler-village-penthouse-3-bdr-walk-to-ski",
+      airbnbLink: "https://www.airbnb.ca/rooms/1595039212030139605?guests=1&adults=1&s=67&unique_share_id=dc75c08b-e1ae-46ae-8b17-0587b742fa45",
+      isPetFriendly: false,
+      isSkiInSkiOut: false,
+    },
+    {
       id: "two-cedars",
       name: "Two Cedars | Kadenwood | Private Butler",
       image: "/photos/properties/Two Cedars New/OSA_AncientCW1248.jpg",

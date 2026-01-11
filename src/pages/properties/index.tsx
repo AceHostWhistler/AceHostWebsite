@@ -1289,6 +1289,45 @@ export default function Properties() {
             isSkiInSkiOut: false,
           },
           {
+            id: "whistler-village-penthouse-3-bdr",
+            name: "Whistler Village PentHouse | 3 BDR | Walk to Ski",
+            images: [
+              "/photos/properties/303-Tyndall Lodge/02 - 20260107 A7M4 01 A1_03433.jpg",
+              "/photos/properties/303-Tyndall Lodge/01 - 20260107 A7M4 01 A1_03798.jpg",
+              "/photos/properties/303-Tyndall Lodge/03 - 20260107 A7M4 01 A1_03441.jpg"
+            ],
+            guests: 7,
+            bedrooms: 3,
+            bathrooms: 2,
+            beds: 4,
+            location: "Whistler Village, Whistler",
+            description:
+              "Welcome to Penthouse unit, in the iconic Tyndall Lodge building in the heart of Whistler Village. This bright and spacious unit sits right in the centre of Whistler Village, steps from the famous Olympic Rings and only a short walk to both Whistler and Blackcomb gondolas.",
+            features: [
+              "Penthouse Unit",
+              "High Ceilings",
+              "Fully Equipped Kitchen",
+              "Free Underground Parking",
+              "Central Village Location",
+              "Walk to Gondolas",
+              "Loft Bedroom with Bunkbeds",
+              "Spacious Living Area"
+            ],
+            highlights: [
+              "Heart of Whistler Village",
+              "Short Walk to Gondolas",
+              "Penthouse with High Ceilings",
+              "Free Underground Parking"
+            ],
+            priceRange: "$500-1200 per night Summer",
+            winterPrice: "$750-1500 Nightly | Winter",
+            holidayPrice: "$2500-3500+ Nightly | Christmas & NY",
+            link: "/listings/whistler-village-penthouse-3-bdr-walk-to-ski",
+            airbnbLink: "https://www.airbnb.ca/rooms/1595039212030139605?guests=1&adults=1&s=67&unique_share_id=dc75c08b-e1ae-46ae-8b17-0587b742fa45",
+            isPetFriendly: false,
+            isSkiInSkiOut: false,
+          },
+          {
             id: "rare-3-bedroom-whistler-village",
             name: "Rare 3-bedroom | Whistler Village | Walk to Hill",
             images: [
