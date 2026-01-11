@@ -21,23 +21,23 @@ const WhistlerVillagePenthouse = () => {
     "/photos/properties/303-Tyndall Lodge/02 - 20260107 A7M4 01 A1_03433.jpg",
     "/photos/properties/303-Tyndall Lodge/01 - 20260107 A7M4 01 A1_03798.jpg",
     "/photos/properties/303-Tyndall Lodge/03 - 20260107 A7M4 01 A1_03441.jpg",
-    "/photos/properties/303-Tyndall Lodge/04 - 20260107 A7M4 01 A1_03450.jpg",
-    "/photos/properties/303-Tyndall Lodge/05 - 20260107 A7M4 01 A1_03456.jpg",
-    "/photos/properties/303-Tyndall Lodge/06 - 20260107 A7M4 01 A1_03462.jpg",
-    "/photos/properties/303-Tyndall Lodge/07 - 20260107 A7M4 01 A1_03469.jpg",
-    "/photos/properties/303-Tyndall Lodge/08 - 20260107 A7M4 01 A1_03477.jpg",
-    "/photos/properties/303-Tyndall Lodge/09 - 20260107 A7M4 01 A1_03486.jpg",
-    "/photos/properties/303-Tyndall Lodge/10 - 20260107 A7M4 01 A1_03492.jpg",
-    "/photos/properties/303-Tyndall Lodge/11 - 20260107 A7M4 01 A1_03498.jpg",
-    "/photos/properties/303-Tyndall Lodge/12 - 20260107 A7M4 01 A1_03505.jpg",
-    "/photos/properties/303-Tyndall Lodge/13 - 20260107 A7M4 01 A1_03511.jpg",
-    "/photos/properties/303-Tyndall Lodge/14 - 20260107 A7M4 01 A1_03517.jpg",
-    "/photos/properties/303-Tyndall Lodge/15 - 20260107 A7M4 01 A1_03523.jpg",
-    "/photos/properties/303-Tyndall Lodge/16 - 20260107 A7M4 01 A1_03529.jpg",
-    "/photos/properties/303-Tyndall Lodge/17 - 20260107 A7M4 01 A1_03535.jpg",
-    "/photos/properties/303-Tyndall Lodge/18 - 20260107 A7M4 01 A1_03541.jpg",
-    "/photos/properties/303-Tyndall Lodge/19 - 20260107 A7M4 01 A1_03547.jpg",
-    "/photos/properties/303-Tyndall Lodge/20 - 20260107 A7M4 01 A1_03553.jpg"
+    "/photos/properties/303-Tyndall Lodge/04 - 20260107 A7M4 01 A1_03447.jpg",
+    "/photos/properties/303-Tyndall Lodge/05 - 20260107 A7M4 01 A1_03570.jpg",
+    "/photos/properties/303-Tyndall Lodge/06 - 20260107 A7M4 01 A1_03580.jpg",
+    "/photos/properties/303-Tyndall Lodge/07 - 20260107 A7M4 01 A1_03598.jpg",
+    "/photos/properties/303-Tyndall Lodge/08 - 20260107 A7M4 01 A1_03560-Edit.jpg",
+    "/photos/properties/303-Tyndall Lodge/09 - 20260107 A7M4 01 A1_03565.jpg",
+    "/photos/properties/303-Tyndall Lodge/10 - 20260107 A7M4 01 A1_03609.jpg",
+    "/photos/properties/303-Tyndall Lodge/11 - 20260107 A7M4 01 A1_03462.jpg",
+    "/photos/properties/303-Tyndall Lodge/12 - 20260107 A7M4 01 A1_03470.jpg",
+    "/photos/properties/303-Tyndall Lodge/13 - 20260107 A7M4 01 A1_03477.jpg",
+    "/photos/properties/303-Tyndall Lodge/14 - 20260107 A7M4 01 A1_03486.jpg",
+    "/photos/properties/303-Tyndall Lodge/15 - 20260107 A7M4 01 A1_03835.jpg",
+    "/photos/properties/303-Tyndall Lodge/17 - 20260107 A7M4 01 A1_03623.jpg",
+    "/photos/properties/303-Tyndall Lodge/18 - 20260107 A7M4 01 A1_03456.jpg",
+    "/photos/properties/303-Tyndall Lodge/19 - 20260107 A7M4 01 A1_03523.jpg",
+    "/photos/properties/303-Tyndall Lodge/20 - 20260107 A7M4 01 A1_03503.jpg",
+    "/photos/properties/303-Tyndall Lodge/21 - 20260107 A7M4 01 A1_03705.jpg"
   ];
 
   // Photo navigation functions
@@ -166,8 +166,6 @@ const WhistlerVillagePenthouse = () => {
                     priority={index < 2}
                     loading={index < 2 ? "eager" : "lazy"}
                     quality={index < 4 ? 85 : 75}
-                    placeholder="blur"
-                    blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzMiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="
                   />
                 </div>
               ))}
@@ -359,8 +357,6 @@ const WhistlerVillagePenthouse = () => {
                         priority={index < 4}
                         loading={index < 8 ? "eager" : "lazy"}
                         quality={index < 12 ? 85 : 75}
-                        placeholder="blur"
-                        blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzMiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="
                       />
                     </div>
                     <div className="mt-1 text-center">
