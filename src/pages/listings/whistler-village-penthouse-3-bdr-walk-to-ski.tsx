@@ -18,26 +18,26 @@ const WhistlerVillagePenthouse = () => {
 
   // Property photos
   const photos = [
-    "/photos/properties/303-Tyndall Lodge/02 - 20260107 A7M4 01 A1_03433.jpg",
-    "/photos/properties/303-Tyndall Lodge/01 - 20260107 A7M4 01 A1_03798.jpg",
-    "/photos/properties/303-Tyndall Lodge/03 - 20260107 A7M4 01 A1_03441.jpg",
-    "/photos/properties/303-Tyndall Lodge/04 - 20260107 A7M4 01 A1_03447.jpg",
-    "/photos/properties/303-Tyndall Lodge/05 - 20260107 A7M4 01 A1_03570.jpg",
-    "/photos/properties/303-Tyndall Lodge/06 - 20260107 A7M4 01 A1_03580.jpg",
-    "/photos/properties/303-Tyndall Lodge/07 - 20260107 A7M4 01 A1_03598.jpg",
-    "/photos/properties/303-Tyndall Lodge/08 - 20260107 A7M4 01 A1_03560-Edit.jpg",
-    "/photos/properties/303-Tyndall Lodge/09 - 20260107 A7M4 01 A1_03565.jpg",
-    "/photos/properties/303-Tyndall Lodge/10 - 20260107 A7M4 01 A1_03609.jpg",
-    "/photos/properties/303-Tyndall Lodge/11 - 20260107 A7M4 01 A1_03462.jpg",
-    "/photos/properties/303-Tyndall Lodge/12 - 20260107 A7M4 01 A1_03470.jpg",
-    "/photos/properties/303-Tyndall Lodge/13 - 20260107 A7M4 01 A1_03477.jpg",
-    "/photos/properties/303-Tyndall Lodge/14 - 20260107 A7M4 01 A1_03486.jpg",
-    "/photos/properties/303-Tyndall Lodge/15 - 20260107 A7M4 01 A1_03835.jpg",
-    "/photos/properties/303-Tyndall Lodge/17 - 20260107 A7M4 01 A1_03623.jpg",
-    "/photos/properties/303-Tyndall Lodge/18 - 20260107 A7M4 01 A1_03456.jpg",
-    "/photos/properties/303-Tyndall Lodge/19 - 20260107 A7M4 01 A1_03523.jpg",
-    "/photos/properties/303-Tyndall Lodge/20 - 20260107 A7M4 01 A1_03503.jpg",
-    "/photos/properties/303-Tyndall Lodge/21 - 20260107 A7M4 01 A1_03705.jpg"
+    "/optimized/303-Tyndall-Lodge/cover.jpg",
+    "/optimized/303-Tyndall-Lodge/01---20260107-A7M4-01-A1_03798.jpg",
+    "/optimized/303-Tyndall-Lodge/03---20260107-A7M4-01-A1_03441.jpg",
+    "/optimized/303-Tyndall-Lodge/04---20260107-A7M4-01-A1_03447.jpg",
+    "/optimized/303-Tyndall-Lodge/05---20260107-A7M4-01-A1_03570.jpg",
+    "/optimized/303-Tyndall-Lodge/06---20260107-A7M4-01-A1_03580.jpg",
+    "/optimized/303-Tyndall-Lodge/07---20260107-A7M4-01-A1_03598.jpg",
+    "/optimized/303-Tyndall-Lodge/08---20260107-A7M4-01-A1_03560-Edit.jpg",
+    "/optimized/303-Tyndall-Lodge/09---20260107-A7M4-01-A1_03565.jpg",
+    "/optimized/303-Tyndall-Lodge/10---20260107-A7M4-01-A1_03609.jpg",
+    "/optimized/303-Tyndall-Lodge/11---20260107-A7M4-01-A1_03462.jpg",
+    "/optimized/303-Tyndall-Lodge/12---20260107-A7M4-01-A1_03470.jpg",
+    "/optimized/303-Tyndall-Lodge/13---20260107-A7M4-01-A1_03477.jpg",
+    "/optimized/303-Tyndall-Lodge/14---20260107-A7M4-01-A1_03486.jpg",
+    "/optimized/303-Tyndall-Lodge/15---20260107-A7M4-01-A1_03835.jpg",
+    "/optimized/303-Tyndall-Lodge/17---20260107-A7M4-01-A1_03623.jpg",
+    "/optimized/303-Tyndall-Lodge/18---20260107-A7M4-01-A1_03456.jpg",
+    "/optimized/303-Tyndall-Lodge/19---20260107-A7M4-01-A1_03523.jpg",
+    "/optimized/303-Tyndall-Lodge/20---20260107-A7M4-01-A1_03503.jpg",
+    "/optimized/303-Tyndall-Lodge/21---20260107-A7M4-01-A1_03705.jpg"
   ];
 
   // Photo navigation functions

@@ -1292,9 +1292,9 @@ export default function Properties() {
             id: "whistler-village-penthouse-3-bdr",
             name: "Whistler Village PentHouse | 3 BDR | Walk to Ski",
             images: [
-              "/photos/properties/303-Tyndall Lodge/02 - 20260107 A7M4 01 A1_03433.jpg",
-              "/photos/properties/303-Tyndall Lodge/01 - 20260107 A7M4 01 A1_03798.jpg",
-              "/photos/properties/303-Tyndall Lodge/03 - 20260107 A7M4 01 A1_03441.jpg"
+              "/optimized/303-Tyndall-Lodge/cover.jpg",
+              "/optimized/303-Tyndall-Lodge/01---20260107-A7M4-01-A1_03798.jpg",
+              "/optimized/303-Tyndall-Lodge/03---20260107-A7M4-01-A1_03441.jpg"
             ],
             guests: 7,
             bedrooms: 3,
