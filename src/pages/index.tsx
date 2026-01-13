@@ -833,10 +833,10 @@ const Home = () => {
     {
       id: "whistler-village-penthouse-3-bdr",
       name: "Whistler Village PentHouse | 3 BDR | Walk to Ski",
-      image: "/optimized/303-Tyndall-Lodge/cover.jpg",
-      guests: 7,
+      image: "/optimized/303-Tyndall-Lodge/new-cover.jpg",
+      guests: 8,
       bedrooms: 3,
-      beds: 4,
+      beds: 5,
       bathrooms: 2,
       priceRange: "$500-1200 in summer",
       winterPrice: "$750-1500 in winter",

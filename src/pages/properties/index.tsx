@@ -1292,14 +1292,14 @@ export default function Properties() {
             id: "whistler-village-penthouse-3-bdr",
             name: "Whistler Village PentHouse | 3 BDR | Walk to Ski",
             images: [
-              "/optimized/303-Tyndall-Lodge/cover.jpg",
+              "/optimized/303-Tyndall-Lodge/new-cover.jpg",
               "/optimized/303-Tyndall-Lodge/01---20260107-A7M4-01-A1_03798.jpg",
               "/optimized/303-Tyndall-Lodge/03---20260107-A7M4-01-A1_03441.jpg"
             ],
-            guests: 7,
+            guests: 8,
             bedrooms: 3,
             bathrooms: 2,
-            beds: 4,
+            beds: 5,
             location: "Whistler Village, Whistler",
             description:
               "Welcome to Penthouse unit, in the iconic Tyndall Lodge building in the heart of Whistler Village. This bright and spacious unit sits right in the centre of Whistler Village, steps from the famous Olympic Rings and only a short walk to both Whistler and Blackcomb gondolas.",

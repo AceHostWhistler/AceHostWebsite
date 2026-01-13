@@ -18,7 +18,7 @@ const WhistlerVillagePenthouse = () => {
 
   // Property photos
   const photos = [
-    "/optimized/303-Tyndall-Lodge/cover.jpg",
+    "/optimized/303-Tyndall-Lodge/new-cover.jpg",
     "/optimized/303-Tyndall-Lodge/01---20260107-A7M4-01-A1_03798.jpg",
     "/optimized/303-Tyndall-Lodge/02---20260107-A7M4-01-A1_03433.jpg",
     "/optimized/303-Tyndall-Lodge/03---20260107-A7M4-01-A1_03441.jpg",
@@ -153,9 +153,9 @@ const WhistlerVillagePenthouse = () => {
         <main>
           <PropertyHeader
             title="Whistler Village PentHouse | 3 BDR | Walk to Ski"
-            guests={7}
+            guests={8}
             bedrooms={3}
-            beds={4}
+            beds={5}
             bathrooms={2}
             priceRange="$500-1200 per night in summer. $750-1500 in winter. $2500-3500+ for Christmas/NYE."
             airbnbLink="https://www.airbnb.ca/rooms/1595039212030139605?guests=1&adults=1&s=67&unique_share_id=dc75c08b-e1ae-46ae-8b17-0587b742fa45"
@@ -198,7 +198,7 @@ const WhistlerVillagePenthouse = () => {
               <br /><br />
               This bright and spacious unit sits right in the centre of Whistler Village, steps from the famous Olympic Rings and only a short walk to both Whistler and Blackcomb gondolas.
               <br /><br />
-              Hosting up to 7 guests comfortably, the home features three sleeping areas, 4 beds, and two full bathrooms.
+              Hosting up to 8 guests comfortably, the home features three sleeping areas, 5 beds, and two full bathrooms.
               <br /><br />
               Location and layout doesn't get any better than this!
             </p>
@@ -233,16 +233,16 @@ const WhistlerVillagePenthouse = () => {
                   <h2 className="text-2xl font-bold">The Space</h2>
                 </div>
                 <p className="text-gray-800 mb-6">
-                  Hosting up to 7 guests comfortably, the home features 4 sleeping areas, 4 beds, and 2 full bathrooms. One of the highlights is the unique loft bedroom with bunkbeds, tall ceilings and a cozy chalet feel that kids and extra guests absolutely love. The main bedrooms are warm and inviting with plenty of natural light, making it the perfect place to unwind after a full day outdoors.
+                  Hosting up to 8 guests comfortably, the home features 4 sleeping areas, 5 beds (+ 1 futon sofa bed with extra linens/sheets), and 2 full bathrooms. One of the highlights is the unique loft bedroom with bunkbeds, tall ceilings and a cozy chalet feel that kids and extra guests absolutely love. The main bedrooms are warm and inviting with plenty of natural light, making it the perfect place to unwind after a full day outdoors.
                   <br /><br />
                   Enjoy a fully equipped kitchen for home-cooked dinners, a spacious living room for evening hangouts and movie nights, and complimentary parking included with your stay. This is the ideal base for families, friends or small groups looking to enjoy Whistler with comfort, style and convenience.
                   <br /><br />
                   Ski in Ski out Access: No need to enter a vehicle to access the slopes, though the condo is about an 8-10 minute walk to and from the slopes.
                 </p>
                 <ul className="list-disc pl-5 space-y-2 text-gray-800 mb-6">
-                  <li>Sleeps up to 7 guests</li>
-                  <li>Three sleeping areas: two full bedrooms and a loft bedroom with bunkbeds</li>
-                  <li>4 beds</li>
+                  <li>Sleeps up to 8 guests</li>
+                  <li>3 sleeping areas: two full bedrooms and a loft bedroom with bunkbeds. There is also a pullout futon in the living room, for those looking for an extra space to sleep.</li>
+                  <li>5 beds</li>
                   <li>Two full bathrooms</li>
                   <li>Penthouse unit with high ceilings and great natural light</li>
                   <li>Unique loft layout that adds a fun and memorable touch</li>
