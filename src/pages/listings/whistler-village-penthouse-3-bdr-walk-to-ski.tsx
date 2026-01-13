@@ -20,6 +20,7 @@ const WhistlerVillagePenthouse = () => {
   const photos = [
     "/optimized/303-Tyndall-Lodge/cover.jpg",
     "/optimized/303-Tyndall-Lodge/01---20260107-A7M4-01-A1_03798.jpg",
+    "/optimized/303-Tyndall-Lodge/02---20260107-A7M4-01-A1_03433.jpg",
     "/optimized/303-Tyndall-Lodge/03---20260107-A7M4-01-A1_03441.jpg",
     "/optimized/303-Tyndall-Lodge/04---20260107-A7M4-01-A1_03447.jpg",
     "/optimized/303-Tyndall-Lodge/05---20260107-A7M4-01-A1_03570.jpg",
@@ -37,7 +38,19 @@ const WhistlerVillagePenthouse = () => {
     "/optimized/303-Tyndall-Lodge/18---20260107-A7M4-01-A1_03456.jpg",
     "/optimized/303-Tyndall-Lodge/19---20260107-A7M4-01-A1_03523.jpg",
     "/optimized/303-Tyndall-Lodge/20---20260107-A7M4-01-A1_03503.jpg",
-    "/optimized/303-Tyndall-Lodge/21---20260107-A7M4-01-A1_03705.jpg"
+    "/optimized/303-Tyndall-Lodge/21---20260107-A7M4-01-A1_03705.jpg",
+    "/optimized/303-Tyndall-Lodge/23---20260107-A7M4-01-A1_03848.jpg",
+    "/optimized/303-Tyndall-Lodge/24---20260107-A7M4-01-A1_03548.jpg",
+    "/optimized/303-Tyndall-Lodge/25---20260107-A7M4-01-A1_03529.jpg",
+    "/optimized/303-Tyndall-Lodge/26---20260107-A7M4-01-A1_03539.jpg",
+    "/optimized/303-Tyndall-Lodge/27---20260107-A7M4-01-A1_03671.jpg",
+    "/optimized/303-Tyndall-Lodge/30---20260107-A7M4-01-A1_03697.jpg",
+    "/optimized/303-Tyndall-Lodge/31---20260107-A7M4-01-A1_03643.jpg",
+    "/optimized/303-Tyndall-Lodge/32---20260107-A7M4-01-A1_03635.jpg",
+    "/optimized/303-Tyndall-Lodge/33---20260107-A7M4-01-A1_03652.jpg",
+    "/optimized/303-Tyndall-Lodge/34---20260107-A7M4-01-A1_03661-Edit.jpg",
+    "/optimized/303-Tyndall-Lodge/35---20260107-A7M4-01-A1_03666-Edit.jpg",
+    "/optimized/303-Tyndall-Lodge/36---20260107-A7M4-01-A1_03832.jpg"
   ];
 
   // Photo navigation functions
