@@ -243,11 +243,11 @@ const AltitudeRetreat = () => {
             {/* The Space Section */}
             <div className="flex flex-col md:flex-row mb-20">
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
-                <div className="relative aspect-[4/3] mb-2">
+                <div className="relative aspect-[3/4] mb-2">
                   <img
                     src="/photos/properties/Altitude New Photos Best/tall1.jpg"
                     alt="Altitude Retreat Interior"
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>
@@ -296,11 +296,11 @@ const AltitudeRetreat = () => {
             {/* Bedroom Layout Section */}
             <div className="flex flex-col md:flex-row mb-20">
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
-                <div className="relative aspect-[4/3] mb-2">
+                <div className="relative aspect-[3/4] mb-2">
                   <img
                     src="/photos/properties/Altitude New Photos Best/tall2.jpg"
                     alt="Altitude Retreat Bedroom"
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>
@@ -392,11 +392,11 @@ const AltitudeRetreat = () => {
                 </div>
                 <h2 className="text-2xl font-bold">Location</h2>
               </div>
-              <div className="relative aspect-[4/3] mb-6 max-w-3xl">
+              <div className="relative aspect-[3/4] mb-6 max-w-xl">
                 <img
                   src="/photos/properties/Altitude New Photos Best/tall3.jpg"
                   alt="Altitude Retreat Location"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <p className="text-gray-800 max-w-4xl mb-6">
