@@ -206,17 +206,11 @@ const AltitudeRetreat = () => {
                   className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
                   onClick={() => handlePhotoClick(index)}
                 >
-                  <Image
+                  <img
                     src={photo}
                     alt={`Altitude Retreat interior ${index + 1}`}
-                    fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                    priority={index < 2}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                     loading={index < 2 ? "eager" : "lazy"}
-                    quality={index < 4 ? 85 : 75}
-                    placeholder="blur"
-                    blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzMiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="
                   />
                 </div>
               ))}
@@ -250,11 +244,10 @@ const AltitudeRetreat = () => {
             <div className="flex flex-col md:flex-row mb-20">
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                 <div className="relative aspect-[4/3] mb-2">
-                  <Image
+                  <img
                     src="/photos/properties/Altitude New Photos Best/tall1.jpg"
                     alt="Altitude Retreat Interior"
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>
@@ -304,11 +297,10 @@ const AltitudeRetreat = () => {
             <div className="flex flex-col md:flex-row mb-20">
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
                 <div className="relative aspect-[4/3] mb-2">
-                  <Image
+                  <img
                     src="/photos/properties/Altitude New Photos Best/tall2.jpg"
                     alt="Altitude Retreat Bedroom"
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>
@@ -401,11 +393,10 @@ const AltitudeRetreat = () => {
                 <h2 className="text-2xl font-bold">Location</h2>
               </div>
               <div className="relative aspect-[4/3] mb-6 max-w-3xl">
-                <Image
+                <img
                   src="/photos/properties/Altitude New Photos Best/tall3.jpg"
                   alt="Altitude Retreat Location"
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <p className="text-gray-800 max-w-4xl mb-6">
@@ -461,17 +452,11 @@ const AltitudeRetreat = () => {
                       className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer"
                       onClick={() => handlePhotoClick(index)}
                     >
-                      <Image
+                      <img
                         src={photo}
                         alt={`Altitude Retreat ${index + 1}`}
-                        fill
-                        sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw"
-                        className="object-cover hover:scale-105 transition-transform duration-300"
-                        priority={index < 4}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                         loading={index < 8 ? "eager" : "lazy"}
-                        quality={index < 12 ? 85 : 75}
-                        placeholder="blur"
-                        blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzMiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="
                       />
                     </div>
                   </div>
@@ -514,15 +499,11 @@ const AltitudeRetreat = () => {
                 </div>
               )}
               <div className="relative w-full h-full">
-                <Image
+                <img
                   src={photos[selectedPhotoIndex]}
                   alt={`Property full view ${selectedPhotoIndex + 1}`}
-                  fill
-                  priority
-                  className={`object-contain transition-opacity duration-300 ${isImageLoading ? 'opacity-0' : 'opacity-100'}`}
-                  sizes="100vw"
-                  onLoadingComplete={handleImageLoad}
-                  quality={85}
+                  className={`w-full h-full object-contain transition-opacity duration-300 ${isImageLoading ? 'opacity-0' : 'opacity-100'}`}
+                  onLoad={handleImageLoad}
                   loading="eager"
                 />
               </div>
