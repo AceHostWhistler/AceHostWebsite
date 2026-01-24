@@ -21,74 +21,64 @@ const AltitudeRetreat = () => {
 
   // Property photos
   const photos = [
-    "/photos/properties/Altitude New Photos Best/hero2.jpeg",
-    "/photos/properties/Altitude New Photos Best/009-2919 Ancient Cedars-70.jpg",
-    "/photos/properties/Altitude New Photos Best/065-2919 Ancient Cedars 2024-52.jpg", 
-    "/photos/properties/Altitude New Photos Best/altitude retreat-19.jpg",
-    "/photos/properties/Altitude New Photos Best/025-2919 Ancient Cedars 2024-12.jpg",
-    "/photos/properties/Altitude New Photos Best/altitude retreat-21.jpg",
-    "/photos/properties/Altitude New Photos Best/altitude retreat-18.jpg",
-    "/photos/properties/Altitude New Photos Best/altitude retreat-17.jpg",
-    "/photos/properties/Altitude New Photos Best/altitude retreat-15.jpg",
-    "/photos/properties/Altitude New Photos Best/altitude retreat-12.jpg",
-    "/photos/properties/Altitude New Photos Best/altitude retreat-9.jpg",
-    "/photos/properties/Altitude New Photos Best/066-2919 Ancient Cedars 2024-53.jpg",
-    "/photos/properties/Altitude New Photos Best/064-2919 Ancient Cedars 2024-51.jpg",
-    "/photos/properties/Altitude New Photos Best/063-2919 Ancient Cedars 2024-50.jpg",
-    "/photos/properties/Altitude New Photos Best/062-2919 Ancient Cedars 2024-49.jpg",
-    "/photos/properties/Altitude New Photos Best/061-2919 Ancient Cedars 2024-48.jpg",
-    "/photos/properties/Altitude New Photos Best/060-2919 Ancient Cedars 2024-47.jpg",
-    "/photos/properties/Altitude New Photos Best/059-2919 Ancient Cedars 2024-46.jpg",
-    "/photos/properties/Altitude New Photos Best/058-2919 Ancient Cedars 2024-45.jpg",
-    "/photos/properties/Altitude New Photos Best/057-2919 Ancient Cedars 2024-44.jpg",
-    "/photos/properties/Altitude New Photos Best/056-2919 Ancient Cedars 2024-43.jpg",
-    "/photos/properties/Altitude New Photos Best/055-2919 Ancient Cedars 2024-42.jpg",
-    "/photos/properties/Altitude New Photos Best/054-2919 Ancient Cedars 2024-41.jpg",
-    "/photos/properties/Altitude New Photos Best/053-2919 Ancient Cedars 2024-40.jpg",
-    "/photos/properties/Altitude New Photos Best/052-2919 Ancient Cedars 2024-39.jpg",
-    "/photos/properties/Altitude New Photos Best/051-2919 Ancient Cedars 2024-38.jpg",
-    "/photos/properties/Altitude New Photos Best/050-2919 Ancient Cedars 2024-37.jpg",
-    "/photos/properties/Altitude New Photos Best/049-2919 Ancient Cedars 2024-36.jpg",
-    "/photos/properties/Altitude New Photos Best/048-2919 Ancient Cedars 2024-35.jpg",
-    "/photos/properties/Altitude New Photos Best/047-2919 Ancient Cedars 2024-34.jpg",
-    "/photos/properties/Altitude New Photos Best/046-2919 Ancient Cedars 2024-33.jpg",
-    "/photos/properties/Altitude New Photos Best/045-2919 Ancient Cedars 2024-32.jpg",
-    "/photos/properties/Altitude New Photos Best/044-2919 Ancient Cedars 2024-31.jpg",
-    "/photos/properties/Altitude New Photos Best/043-2919 Ancient Cedars 2024-30.jpg",
-    "/photos/properties/Altitude New Photos Best/042-2919 Ancient Cedars 2024-29.jpg",
-    "/photos/properties/Altitude New Photos Best/041-2919 Ancient Cedars 2024-28.jpg",
-    "/photos/properties/Altitude New Photos Best/040-2919 Ancient Cedars 2024-27.jpg",
-    "/photos/properties/Altitude New Photos Best/039-2919 Ancient Cedars 2024-26.jpg",
-    "/photos/properties/Altitude New Photos Best/038-2919 Ancient Cedars 2024-25.jpg",
-    "/photos/properties/Altitude New Photos Best/037-2919 Ancient Cedars 2024-24.jpg",
-    "/photos/properties/Altitude New Photos Best/036-2919 Ancient Cedars 2024-23.jpg",
-    "/photos/properties/Altitude New Photos Best/035-2919 Ancient Cedars 2024-22.jpg",
-    "/photos/properties/Altitude New Photos Best/034-2919 Ancient Cedars 2024-21.jpg",
-    "/photos/properties/Altitude New Photos Best/033-2919 Ancient Cedars 2024-20.jpg",
-    "/photos/properties/Altitude New Photos Best/032-2919 Ancient Cedars 2024-19.jpg",
-    "/photos/properties/Altitude New Photos Best/031-2919 Ancient Cedars 2024-18.jpg",
-    "/photos/properties/Altitude New Photos Best/030-2919 Ancient Cedars 2024-17.jpg",
-    "/photos/properties/Altitude New Photos Best/029-2919 Ancient Cedars 2024-16.jpg",
-    "/photos/properties/Altitude New Photos Best/028-2919 Ancient Cedars 2024-15.jpg",
-    "/photos/properties/Altitude New Photos Best/027-2919 Ancient Cedars 2024-14.jpg",
-    "/photos/properties/Altitude New Photos Best/026-2919 Ancient Cedars 2024-13.jpg",
-    "/photos/properties/Altitude New Photos Best/024-2919 Ancient Cedars 2024-11.jpg",
-    "/photos/properties/Altitude New Photos Best/023-2919 Ancient Cedars 2024-10.jpg",
-    "/photos/properties/Altitude New Photos Best/022-2919 Ancient Cedars 2024-09.jpg",
-    "/photos/properties/Altitude New Photos Best/021-2919 Ancient Cedars 2024-08.jpg",
-    "/photos/properties/Altitude New Photos Best/018-2919 Ancient Cedars 2024-05.jpg",
-    "/photos/properties/Altitude New Photos Best/017-2919 Ancient Cedars 2024-04.jpg",
-    "/photos/properties/Altitude New Photos Best/016-2919 Ancient Cedars 2024-03.jpg",
-    "/photos/properties/Altitude New Photos Best/015-2919 Ancient Cedars 2024-02.jpg",
-    "/photos/properties/Altitude New Photos Best/014-2919 Ancient Cedars 2024-01.jpg",
-    "/photos/properties/Altitude New Photos Best/013-2919 Ancient Cedars-74.jpg",
-    "/photos/properties/Altitude New Photos Best/012-2919 Ancient Cedars-73.jpg",
-    "/photos/properties/Altitude New Photos Best/008-2919 Ancient Cedars-69.jpg",
-    "/photos/properties/Altitude New Photos Best/007-2919 Ancient Cedars-62.jpg",
-    "/photos/properties/Altitude New Photos Best/005-2919 Ancient Cedars-67.jpg",
-    "/photos/properties/Altitude New Photos Best/003-2919 Ancient Cedars-65.jpg",
-    "/photos/properties/Altitude New Photos Best/002-2919 Ancient Cedars-64.jpg",
-    "/photos/properties/Altitude New Photos Best/001-2919 Ancient Cedars-63.jpg",
+    "/photos/properties/Altitude New Photos Best/5.jpg",
+    "/photos/properties/Altitude New Photos Best/1.jpg",
+    "/photos/properties/Altitude New Photos Best/2.jpg",
+    "/photos/properties/Altitude New Photos Best/3.jpg",
+    "/photos/properties/Altitude New Photos Best/4.jpg",
+    "/photos/properties/Altitude New Photos Best/6.jpg",
+    "/photos/properties/Altitude New Photos Best/7.jpg",
+    "/photos/properties/Altitude New Photos Best/8.jpg",
+    "/photos/properties/Altitude New Photos Best/9.jpg",
+    "/photos/properties/Altitude New Photos Best/10.jpg",
+    "/photos/properties/Altitude New Photos Best/11.jpg",
+    "/photos/properties/Altitude New Photos Best/12.jpg",
+    "/photos/properties/Altitude New Photos Best/13.jpg",
+    "/photos/properties/Altitude New Photos Best/14.jpg",
+    "/photos/properties/Altitude New Photos Best/15.jpg",
+    "/photos/properties/Altitude New Photos Best/16.jpg",
+    "/photos/properties/Altitude New Photos Best/18.jpg",
+    "/photos/properties/Altitude New Photos Best/19.jpg",
+    "/photos/properties/Altitude New Photos Best/21.jpg",
+    "/photos/properties/Altitude New Photos Best/22.jpg",
+    "/photos/properties/Altitude New Photos Best/23.jpg",
+    "/photos/properties/Altitude New Photos Best/24.jpg",
+    "/photos/properties/Altitude New Photos Best/25.jpg",
+    "/photos/properties/Altitude New Photos Best/26.jpg",
+    "/photos/properties/Altitude New Photos Best/27.jpg",
+    "/photos/properties/Altitude New Photos Best/28.jpg",
+    "/photos/properties/Altitude New Photos Best/29.jpg",
+    "/photos/properties/Altitude New Photos Best/30.jpg",
+    "/photos/properties/Altitude New Photos Best/31.jpg",
+    "/photos/properties/Altitude New Photos Best/32.jpg",
+    "/photos/properties/Altitude New Photos Best/33.jpg",
+    "/photos/properties/Altitude New Photos Best/34.jpg",
+    "/photos/properties/Altitude New Photos Best/35.jpg",
+    "/photos/properties/Altitude New Photos Best/36.jpg",
+    "/photos/properties/Altitude New Photos Best/37.jpg",
+    "/photos/properties/Altitude New Photos Best/38.jpg",
+    "/photos/properties/Altitude New Photos Best/39.jpg",
+    "/photos/properties/Altitude New Photos Best/40.jpg",
+    "/photos/properties/Altitude New Photos Best/41.jpg",
+    "/photos/properties/Altitude New Photos Best/42.jpg",
+    "/photos/properties/Altitude New Photos Best/43.jpg",
+    "/photos/properties/Altitude New Photos Best/44.jpg",
+    "/photos/properties/Altitude New Photos Best/45.jpg",
+    "/photos/properties/Altitude New Photos Best/46.jpg",
+    "/photos/properties/Altitude New Photos Best/47.jpg",
+    "/photos/properties/Altitude New Photos Best/48.jpg",
+    "/photos/properties/Altitude New Photos Best/49.jpg",
+    "/photos/properties/Altitude New Photos Best/50.jpg",
+    "/photos/properties/Altitude New Photos Best/51.jpg",
+    "/photos/properties/Altitude New Photos Best/52.jpg",
+    "/photos/properties/Altitude New Photos Best/53.jpg",
+    "/photos/properties/Altitude New Photos Best/54.jpg",
+    "/photos/properties/Altitude New Photos Best/christmas1.jpg",
+    "/photos/properties/Altitude New Photos Best/christmas2.JPEG",
+    "/photos/properties/Altitude New Photos Best/christmas3.jpg",
+    "/photos/properties/Altitude New Photos Best/christmas4.jpg",
+    "/photos/properties/Altitude New Photos Best/christmas5.jpg",
+    "/photos/properties/Altitude New Photos Best/christmas night.jpeg"
   ];
 
   const handlePhotoClick = (index: number) => {
@@ -261,7 +251,7 @@ const AltitudeRetreat = () => {
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                 <div className="relative aspect-[4/3] mb-2">
                   <Image
-                    src={photos[2]}
+                    src="/photos/properties/Altitude New Photos Best/tall1.jpg"
                     alt="Altitude Retreat Interior"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-300"
@@ -315,7 +305,7 @@ const AltitudeRetreat = () => {
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
                 <div className="relative aspect-[4/3] mb-2">
                   <Image
-                    src={photos[3]}
+                    src="/photos/properties/Altitude New Photos Best/tall2.jpg"
                     alt="Altitude Retreat Bedroom"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-300"
@@ -409,6 +399,14 @@ const AltitudeRetreat = () => {
                   </svg>
                 </div>
                 <h2 className="text-2xl font-bold">Location</h2>
+              </div>
+              <div className="relative aspect-[4/3] mb-6 max-w-3xl">
+                <Image
+                  src="/photos/properties/Altitude New Photos Best/tall3.jpg"
+                  alt="Altitude Retreat Location"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                />
               </div>
               <p className="text-gray-800 max-w-4xl mb-6">
                 Extraordinary retreat located on a private park-like setting
