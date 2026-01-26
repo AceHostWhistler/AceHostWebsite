@@ -249,7 +249,7 @@ const Home = () => {
     {
       id: "altitude-retreat",
       name: "Altitude Retreat | Kadenwood | Private Butler",
-      image: "/photos/properties/Altitude New Photos Best/5.jpg",
+      image: "/photos/properties/Altitude New Photos Best/1.jpg",
       guests: 18,
       bedrooms: 7,
       beds: 9,

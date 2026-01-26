@@ -199,7 +199,7 @@ export default function Properties() {
             id: "altitude-retreat",
             name: "Altitude Retreat | Kadenwood | Private Butler",
             images: [
-              "/photos/properties/Altitude New Photos Best/5.jpg",
+              "/photos/properties/Altitude New Photos Best/1.jpg",
               "/photos/properties/Altitude New Photos Best/1.jpg",
               "/photos/properties/Altitude New Photos Best/2.jpg",
               "/photos/properties/Altitude New Photos Best/3.jpg",
