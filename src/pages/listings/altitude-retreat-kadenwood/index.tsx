@@ -21,17 +21,15 @@ const AltitudeRetreat = () => {
 
   // Property photos
   const photos = [
-    "/photos/properties/Altitude New Photos Best/5.jpg",
     "/photos/properties/Altitude New Photos Best/1.jpg",
     "/photos/properties/Altitude New Photos Best/2.jpg",
     "/photos/properties/Altitude New Photos Best/3.jpg",
     "/photos/properties/Altitude New Photos Best/4.jpg",
+    "/photos/properties/Altitude New Photos Best/5.jpg",
     "/photos/properties/Altitude New Photos Best/6.jpg",
     "/photos/properties/Altitude New Photos Best/7.jpg",
     "/photos/properties/Altitude New Photos Best/8.jpg",
-    "/photos/properties/Altitude New Photos Best/9.jpg",
     "/photos/properties/Altitude New Photos Best/10.jpg",
-    "/photos/properties/Altitude New Photos Best/11.jpg",
     "/photos/properties/Altitude New Photos Best/12.jpg",
     "/photos/properties/Altitude New Photos Best/13.jpg",
     "/photos/properties/Altitude New Photos Best/14.jpg",
@@ -44,9 +42,7 @@ const AltitudeRetreat = () => {
     "/photos/properties/Altitude New Photos Best/23.jpg",
     "/photos/properties/Altitude New Photos Best/24.jpg",
     "/photos/properties/Altitude New Photos Best/25.jpg",
-    "/photos/properties/Altitude New Photos Best/26.jpg",
     "/photos/properties/Altitude New Photos Best/27.jpg",
-    "/photos/properties/Altitude New Photos Best/28.jpg",
     "/photos/properties/Altitude New Photos Best/29.jpg",
     "/photos/properties/Altitude New Photos Best/30.jpg",
     "/photos/properties/Altitude New Photos Best/31.jpg",
@@ -62,9 +58,7 @@ const AltitudeRetreat = () => {
     "/photos/properties/Altitude New Photos Best/41.jpg",
     "/photos/properties/Altitude New Photos Best/42.jpg",
     "/photos/properties/Altitude New Photos Best/43.jpg",
-    "/photos/properties/Altitude New Photos Best/44.jpg",
     "/photos/properties/Altitude New Photos Best/45.jpg",
-    "/photos/properties/Altitude New Photos Best/46.jpg",
     "/photos/properties/Altitude New Photos Best/47.jpg",
     "/photos/properties/Altitude New Photos Best/48.jpg",
     "/photos/properties/Altitude New Photos Best/49.jpg",
@@ -77,8 +71,7 @@ const AltitudeRetreat = () => {
     "/photos/properties/Altitude New Photos Best/christmas2.JPEG",
     "/photos/properties/Altitude New Photos Best/christmas3.jpg",
     "/photos/properties/Altitude New Photos Best/christmas4.jpg",
-    "/photos/properties/Altitude New Photos Best/christmas5.jpg",
-    "/photos/properties/Altitude New Photos Best/christmas night.jpeg"
+    "/photos/properties/Altitude New Photos Best/christmas5.jpg"
   ];
 
   const handlePhotoClick = (index: number) => {
