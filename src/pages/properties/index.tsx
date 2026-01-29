@@ -1354,6 +1354,45 @@ export default function Properties() {
             isSkiInSkiOut: false,
           },
           {
+            id: "northlands-walk-to-village-slopes-luxury-4-bed",
+            name: "Northlands Walk to village/slopes | Luxury 4-bed",
+            images: [
+              "/photos/properties/Northlands Symphony 29/01 - 20251128 A7M4 02 A1_02882_.jpg",
+              "/photos/properties/Northlands Symphony 29/02 - 20251128 A7M4 02 A1_02752.jpg",
+              "/photos/properties/Northlands Symphony 29/03 - 20251128 A7M4 02 A1_02760.jpg"
+            ],
+            guests: 6,
+            bedrooms: 2,
+            bathrooms: 2,
+            beds: 4,
+            location: "Whistler Village, Whistler",
+            description:
+              "Welcome to this beautifully located townhome-style condo in the Symphony Building, right in the heart of Whistler Village. This unique 3-level home offers a private entrance from the outside and sits next to the Whistler Racquet & Pickleball Club, with restaurants, shops, and village amenities all around you.",
+            features: [
+              "Private Exterior Entrance",
+              "Three-Level Townhome Layout",
+              "Primary Bedroom with Ensuite",
+              "Free Underground Parking",
+              "Fully Equipped Kitchen",
+              "Cozy Living Area",
+              "Walk to Slopes (12-15 min)",
+              "Next to Racquet & Pickleball Club"
+            ],
+            highlights: [
+              "Heart of Whistler Village",
+              "Private Townhome Feel",
+              "Grocery Store Across Street",
+              "Walk to Slopes & Amenities"
+            ],
+            priceRange: "$500-1200 per night Summer",
+            winterPrice: "$750-1500 Nightly | Winter",
+            holidayPrice: "$2500-3500+ Nightly | Christmas & NY",
+            link: "/listings/northlands-walk-to-village-slopes-luxury-4-bed",
+            airbnbLink: "https://www.airbnb.ca/rooms/1566952897757488737?guests=1&adults=1&s=67&unique_share_id=70d8a9c5-be29-49cb-a1de-03c1e0ec667b",
+            isPetFriendly: false,
+            isSkiInSkiOut: false,
+          },
+          {
             id: "rare-3-bedroom-whistler-village",
             name: "Rare 3-bedroom | Whistler Village | Walk to Hill",
             images: [
