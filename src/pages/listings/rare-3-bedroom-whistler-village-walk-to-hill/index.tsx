@@ -143,11 +143,11 @@ const Rare3BedroomWhistlerVillageWalkToHill = () => {
             title="Rare 3-bedroom | Whistler Village | Walk to Hill"
             guests={8}
             bedrooms={3}
-            beds={2}
+            beds={4}
             bathrooms={3}
-            priceRange="$400-900 per night Summer"
-            winterPrice="$650-1450 Nightly | Winter"
-            holidayPrice="$1600-2200 Nightly | Christmas & NY"
+            priceRange="$450-1450 per night Summer"
+            winterPrice="$750-1600 Nightly | Winter"
+            holidayPrice="$2000-3400 Nightly | Christmas & NY"
             airbnbLink="https://www.airbnb.ca/rooms/1565322561889624431?guests=1&adults=1&s=67&unique_share_id=bcb85131-d1b0-4d39-9975-7580fd94a5d9"
           />
 
