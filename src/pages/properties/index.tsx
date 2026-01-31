@@ -1363,15 +1363,15 @@ export default function Properties() {
             ],
             guests: 6,
             bedrooms: 2,
-            bathrooms: 2,
+            bathrooms: 3,
             beds: 4,
             location: "Whistler Village, Whistler",
             description:
-              "Welcome to this beautifully located townhome-style condo in the Symphony Building, right in the heart of Whistler Village. This unique 3-level home offers a private entrance from the outside and sits next to the Whistler Racquet & Pickleball Club, with restaurants, shops, and village amenities all around you.",
+              "Welcome to this beautifully located townhome-style condo in the Symphony Building, right in the heart of Whistler Village. This unique 3-level home offers a private entrance from the outside, 3 full bathrooms, and sits next to the Whistler Racquet & Pickleball Club, with restaurants, shops, and village amenities all around you.",
             features: [
               "Private Exterior Entrance",
               "Three-Level Townhome Layout",
-              "Primary Bedroom with Ensuite",
+              "3 Full Bathrooms",
               "Free Underground Parking",
               "Fully Equipped Kitchen",
               "Cozy Living Area",

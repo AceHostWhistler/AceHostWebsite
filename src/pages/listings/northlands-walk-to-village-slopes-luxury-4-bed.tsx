@@ -128,7 +128,7 @@ const NorthlandsProperty = () => {
             guests={6}
             bedrooms={2}
             beds={4}
-            bathrooms={2}
+            bathrooms={3}
             priceRange="$500-1200 in summer"
             winterPrice="$750-1500 in winter"
             holidayPrice="$2500-3500+ for Christmas/NYE"
@@ -169,8 +169,11 @@ const NorthlandsProperty = () => {
           <div className="max-w-6xl mx-auto px-4" id="details">
             <p className="text-gray-800 mb-16 max-w-4xl">
               Welcome to this beautifully located townhome-style condo in the Symphony Building, right in the heart of Whistler Village.
+              <br /><br />
               This unique 3-level home offers a private entrance from the outside and sits next to the Whistler Racquet & Pickleball Club, with restaurants, shops, and village amenities all around you.
-              The slopes are an easy 12 - 15 minute walk away, and the main village grocery store, Fresh St. Market, is directly across the street.
+              <br /><br />
+              The slopes are an easy 12-15 minute walk away, and the main village grocery store, Fresh St. Market, is directly across the street.
+              <br /><br />
               Perfect location, comfort, and layout for vacation!
             </p>
 
@@ -204,10 +207,11 @@ const NorthlandsProperty = () => {
                   <h2 className="text-2xl font-bold">The Space</h2>
                 </div>
                 <p className="text-gray-800 mb-6">
-                  Hosting up to 6 guests, the home is thoughtfully designed across three levels, creating a comfortable and functional layout for families, couples, and small groups. The primary bedroom features a king bed and a private ensuite bathroom, offering a peaceful retreat. The second bedroom includes two single Murphy beds, making it perfect for kids or friends. The living room offers a pullout sofa bed for additional sleeping space.
+                  Hosting up to 6 guests in 2 full bedrooms with ensuite private bathrooms, the home is thoughtfully designed across three levels, creating a comfortable and functional layout for families, couples, and small groups.
+                  The primary bedroom features a king bed and a private ensuite bathroom. The second bedroom includes two single Murphy beds, also with its own full ensuite bathroom, making it perfect for kids or friends. The living room offers a pullout sofa bed for additional sleeping space if needed, with a full bathroom as well.
                 </p>
                 <p className="text-gray-800 mb-6">
-                  Enjoy a fully equipped kitchen for home-cooked meals, a cozy living area for relaxing after a day on the mountain, and two full bathrooms for added convenience. The private exterior entrance gives the home a true townhome feel, while the multi-level layout creates natural separation between sleeping and living spaces.
+                  Enjoy a fully equipped kitchen for home-cooked meals, a cozy living area for relaxing after a day on the mountain, and three full bathrooms for added convenience. The private exterior entrance gives the home a true townhome feel, while the multi-level layout creates natural separation between sleeping and living spaces.
                 </p>
                 <p className="text-gray-800 mb-6">
                   Free underground parking for one vehicle is included, with additional paid parking available nearby for extra cars.
@@ -253,7 +257,7 @@ const NorthlandsProperty = () => {
                   <li>2 bedrooms + 1 pullout sofa bed in living room. 4 beds total, in 2 full bedrooms.</li>
                   <li>Primary bedroom with king bed and ensuite bathroom</li>
                   <li>Second bedroom with two single Murphy beds</li>
-                  <li>2 full bathrooms total</li>
+                  <li>3 full bathrooms total. Rare find in a 2 bedroom!</li>
                   <li>Unique three-level townhome layout</li>
                   <li>Private exterior entrance</li>
                   <li>Fully equipped kitchen</li>
@@ -297,8 +301,17 @@ const NorthlandsProperty = () => {
               <p className="text-gray-800 max-w-4xl mb-6">
                 You are right in the centre of Whistler Village. The Symphony Building offers one of the most convenient village locations, with dining, shopping, cafés, and entertainment all within walking distance. Fresh St. Market is across the street for groceries and essentials, and the Racquet & Pickleball Club is next door for fitness and recreation.
               </p>
-              <p className="text-gray-800 max-w-4xl">
+              <p className="text-gray-800 max-w-4xl mb-6">
                 Walk to the slopes in 12 to 15 minutes, explore the village on foot, enjoy après-ski, boutique shopping, spas, lakes, and trails without ever needing a car. This location is ideal for guests looking for central access, walkability, and a true village experience.
+              </p>
+              <p className="text-gray-800 max-w-4xl mb-6">
+                <strong>Guest access</strong><br />
+                Private exterior entrance with secure code access. Entry instructions and access code will be sent one day prior to arrival.
+              </p>
+              <p className="text-gray-800 max-w-4xl">
+                <strong>Registration details</strong><br />
+                Municipal registration number: 00015534<br />
+                Provincial registration number: PM817047827
               </p>
               <p className="text-gray-800 max-w-4xl mt-6">
                 <strong>Guest access:</strong><br />

@@ -854,7 +854,7 @@ const Home = () => {
       guests: 6,
       bedrooms: 2,
       beds: 4,
-      bathrooms: 2,
+      bathrooms: 3,
       priceRange: "$500-1200 in summer",
       winterPrice: "$750-1500 in winter",
       holidayPrice: "$2500-3500+ for Christmas/NYE",
