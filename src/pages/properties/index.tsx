@@ -479,6 +479,45 @@ export default function Properties() {
             isSkiInSkiOut: false,
           },
           {
+            id: "rare-3-bedroom-whistler-village",
+            name: "Rare 3-bedroom | Whistler Village | Walk to Hill",
+            images: [
+              "/photos/properties/John 3-bed Granite Court/03 - 20251125 A7M4 01 A1_01852.jpg",
+              "/photos/properties/John 3-bed Granite Court/01 - 20251125 A7M4 01 A1_02152.jpg",
+              "/photos/properties/John 3-bed Granite Court/02 - 20251125 A7M4 01 A1_02202.jpg"
+            ],
+            guests: 8,
+            bedrooms: 3,
+            bathrooms: 3,
+            beds: 4,
+            location: "Whistler Village, Whistler",
+            description:
+              "A rare gem in the heart of Whistler Village! This 3-bedroom chalet-style retreat offers two oversized wraparound balconies with breathtaking mountain views, your own private hot tub (the only one in the entire complex), and 2 guaranteed underground parking spots. Spread across two spacious floors, you'll enjoy the cozy charm of a log chalet paired with modern luxury furnishings, a fireplace, and unbeatable convenience, all just steps from restaurants, lifts, and shops.",
+            features: [
+              "Private Hot Tub",
+              "Two Wraparound Balconies",
+              "Mountain Views",
+              "2 Guaranteed Parking Spots",
+              "Indoor Fireplace",
+              "Two Spacious Floors",
+              "Modern Luxury Furnishings",
+              "Steps from Lifts & Shops"
+            ],
+            highlights: [
+              "Heart of Whistler Village",
+              "Only Private Hot Tub in Complex",
+              "Chalet-Style Retreat",
+              "Walk to Everything"
+            ],
+            priceRange: "$450-1450 per night Summer",
+            winterPrice: "$750-1600 Nightly | Winter",
+            holidayPrice: "$2000-3400 Nightly | Christmas & NY",
+            link: "/listings/rare-3-bedroom-whistler-village-walk-to-hill",
+            airbnbLink: "https://www.airbnb.ca/rooms/1565322561889624431?guests=1&adults=1&s=67&unique_share_id=bcb85131-d1b0-4d39-9975-7580fd94a5d9",
+            isPetFriendly: false,
+            isSkiInSkiOut: false,
+          },
+          {
             id: "ravens-nest",
             name: "Raven's Nest | Ski in Ski out | Views",
             images: [
@@ -1389,44 +1428,6 @@ export default function Properties() {
             holidayPrice: "$2500-3500+ Nightly | Christmas & NY",
             link: "/listings/northlands-walk-to-village-slopes-luxury-4-bed",
             airbnbLink: "https://www.airbnb.ca/rooms/1566952897757488737?guests=1&adults=1&s=67&unique_share_id=70d8a9c5-be29-49cb-a1de-03c1e0ec667b",
-            isPetFriendly: false,
-            isSkiInSkiOut: false,
-          },
-          {
-            id: "rare-3-bedroom-whistler-village",
-            name: "Rare 3-bedroom | Whistler Village | Walk to Hill",
-            images: [
-              "/photos/properties/John 3-bed Granite Court/03 - 20251125 A7M4 01 A1_01852.jpg",
-              "/photos/properties/John 3-bed Granite Court/01 - 20251125 A7M4 01 A1_02152.jpg",
-              "/photos/properties/John 3-bed Granite Court/02 - 20251125 A7M4 01 A1_02202.jpg"
-            ],
-            guests: 8,
-            bedrooms: 3,
-            bathrooms: 3,
-            location: "Whistler Village, Whistler",
-            description:
-              "A rare gem in the heart of Whistler Village! This 3-bedroom chalet-style retreat offers two oversized wraparound balconies with breathtaking mountain views, your own private hot tub (the only one in the entire complex), and 2 guaranteed underground parking spots. Spread across two spacious floors, you'll enjoy the cozy charm of a log chalet paired with modern luxury furnishings, a fireplace, and unbeatable convenience, all just steps from restaurants, lifts, and shops.",
-            features: [
-              "Private Hot Tub",
-              "Two Wraparound Balconies",
-              "Mountain Views",
-              "2 Guaranteed Parking Spots",
-              "Indoor Fireplace",
-              "Two Spacious Floors",
-              "Modern Luxury Furnishings",
-              "Steps from Lifts & Shops"
-            ],
-            highlights: [
-              "Heart of Whistler Village",
-              "Only Private Hot Tub in Complex",
-              "Chalet-Style Retreat",
-              "Walk to Everything"
-            ],
-            priceRange: "$400-900 per night Summer",
-            winterPrice: "$650-1450 Nightly | Winter",
-            holidayPrice: "$1600-2200 Nightly | Christmas & NY",
-            link: "/listings/rare-3-bedroom-whistler-village-walk-to-hill",
-            airbnbLink: "https://www.airbnb.ca/rooms/1565322561889624431?guests=1&adults=1&s=67&unique_share_id=bcb85131-d1b0-4d39-9975-7580fd94a5d9",
             isPetFriendly: false,
             isSkiInSkiOut: false,
           },
