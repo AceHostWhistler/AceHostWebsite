@@ -18,7 +18,15 @@ const LuxuryKadenwoodProperty = () => {
 
   // Property photos
   const photos = [
-    "/optimized/2919-Heritage/cover.jpg",
+    "/photos/properties/2919 Heritage/20200414_132416jpg.jpg",
+    "/photos/properties/2919 Heritage/20230104_204323jpg.jpg",
+    "/photos/properties/2919 Heritage/20230104_204324jpg.jpg",
+    "/photos/properties/2919 Heritage/20230104_204327jpg.jpg",
+    "/photos/properties/2919 Heritage/20230104_204328jpg.jpg",
+    "/photos/properties/2919 Heritage/20230104_204342jpg.jpg",
+    "/photos/properties/2919 Heritage/20230104_204343jpg.jpg",
+    "/photos/properties/2919 Heritage/20230104_204357jpg.jpg",
+    "/photos/properties/2919 Heritage/20230104_204401jpg.jpg",
     "/optimized/2919-Heritage/2919HeritagePeaks01.jpg",
     "/optimized/2919-Heritage/2919HeritagePeaks06.jpg",
     "/optimized/2919-Heritage/2919HeritagePeaks07.jpg",

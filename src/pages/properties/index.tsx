@@ -333,7 +333,7 @@ export default function Properties() {
             id: "luxury-ski-in-ski-out-7-bedroom-kadenwood",
             name: "Luxury Ski in Ski out | 7 Bedroom | Kadenwood",
             images: [
-              "/optimized/2919-Heritage/cover.jpg",
+              "/photos/properties/2919 Heritage/20200414_132416jpg.jpg",
               "/optimized/2919-Heritage/2919HeritagePeaks01.jpg",
               "/optimized/2919-Heritage/2919HeritagePeaks06.jpg",
             ],

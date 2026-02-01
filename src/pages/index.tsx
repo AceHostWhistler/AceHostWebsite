@@ -302,7 +302,7 @@ const Home = () => {
     {
       id: "luxury-ski-in-ski-out-7-bedroom-kadenwood",
       name: "Luxury Ski in Ski out | 7 Bedroom | Kadenwood",
-      image: "/optimized/2919-Heritage/cover.jpg",
+      image: "/photos/properties/2919 Heritage/20200414_132416jpg.jpg",
       guests: 16,
       bedrooms: 7,
       beds: 8,
