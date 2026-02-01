@@ -163,7 +163,7 @@ const LuxuryKadenwoodProperty = () => {
   return (
     <>
       <Head>
-        <title>Luxury Ski in Ski out | 7 Bedroom | Kadenwood - AceHost</title>
+        <title>The Mountaintop at Kadenwood | Ski in Ski out - AceHost</title>
         <meta
           name="description"
           content="Located in Whistler's most prestigious true ski-in ski-out neighbourhood, Kadenwood, this 7-bedroom, 7.5-bath retreat offers 6200 square feet of refined mountain living with chef's kitchen, hot tub, fire pits, and more."
@@ -175,7 +175,7 @@ const LuxuryKadenwoodProperty = () => {
 
         <main>
           <PropertyHeader
-            title="Luxury Ski in Ski out | 7 Bedroom | Kadenwood"
+            title="The Mountaintop at Kadenwood | Ski in Ski out"
             guests={16}
             bedrooms={7}
             beds={8}
@@ -433,7 +433,7 @@ const LuxuryKadenwoodProperty = () => {
           <div className="fixed inset-0 z-50 bg-black overflow-y-auto">
             <div className="sticky top-0 z-10 bg-black p-4 flex justify-between items-center">
               <h2 className="text-lg sm:text-xl text-white font-medium">
-                Luxury Ski in Ski out | 7 Bedroom | Kadenwood - All Photos
+                The Mountaintop at Kadenwood | Ski in Ski out - All Photos
               </h2>
               <button
                 onClick={closeAllPhotos}
