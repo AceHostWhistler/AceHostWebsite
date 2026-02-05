@@ -217,9 +217,9 @@ const LuxuryKadenwoodProperty = () => {
           {/* Property Description */}
           <div className="max-w-6xl mx-auto px-4" id="details">
             <p className="text-gray-800 mb-16 max-w-4xl">
-              Located in Whistler's most prestigious true ski-in ski-out neighbourhood, Kadenwood, this 8-bedroom, 7.5-bath retreat offers 6200 square feet of refined mountain living.
+              Located in the most prestigious true ski-in ski-out neighbourhood, Kadenwood, this home offers 6200 square feet of refined mountain living, with the best views in all of Whistler!
               <br /><br />
-              The open-concept main level features a renovated chef's kitchen with Wolf, Subzero & Miele appliances, quartz countertops, generous prep space and a separate prep kitchen, perfect for entertaining. Enjoy a hot tub, fire pits, ping pong table, wet bar, steam room, and two 90-inch TVs for the ultimate year-round Whistler escape.
+              The open-concept main level features a chef's kitchen with Wolf, Subzero & Miele appliances, quartz countertops, generous prep space & a separate prep kitchen, perfect for entertaining. Enjoy a hot tub, fire pits, ping pong table, wet bar, steam room, and two 90-inch TVs for the ultimate year-round Whistler escape.
             </p>
 
             {/* The Space Section */}
@@ -253,22 +253,41 @@ const LuxuryKadenwoodProperty = () => {
                 </div>
                 <p className="text-gray-800 mb-6">
                   Sleeping Arrangements & Layout:
+                  <br /><br />
                   Designed for comfort, privacy and flexibility, the home is thoughtfully laid out across multiple levels, making it ideal for families, groups and multi-generational stays. Each bedroom offers beautiful mountain views, and several feature private ensuite bathrooms or deck access. The mix of primary suites, queen rooms and bunk accommodations ensures everyone has their own space while still feeling connected.
                   <br /><br />
-                  Main Level
-                  • Large den and study with queen Murphy bed
+                  <strong>Top Floor-</strong>
+                  <br />
+                  -1 murphy queen size bed in office space
+                  <br />
+                  -1 powder bathroom
                   <br /><br />
-                  Middle Level
-                  • Primary Bedroom: King bed, mountain views, ensuite bathroom with deep soaking tub and separate shower
-                  • Second Primary Bedroom: King bed, mountain views, ensuite bathroom with dual vanity and shower
-                  • Bedroom 2: Queen bed, mountain views, deck access, ensuite bathroom with shower over deep tub
-                  • Bedroom 3: Queen bed, mountain views, deck access
+                  <strong>Main Floor-</strong>
+                  <br />
+                  -1 detached bathroom, 1 shower, 1 sink
+                  <br />
+                  -Master Bedroom 1: 1 King bed, ensuite, 1 bath, 1 shower, 2 sinks
+                  <br />
+                  -Bedroom 2: Queen size bed, no ensuite, no closet, 1 dresser
+                  <br />
+                  -Bedroom 3: 1 King bed, ensuite, 1 shower, 2 sink
+                  <br />
+                  -Bedroom 4: 1 King bed, ensuite, 1 shower, 1 sink
+                  <br />
+                  -Laundry, 1 washer, 1 dryer
                   <br /><br />
-                  Lower Level
-                  • Bedroom 4: King bed, shared Jack and Jill bathroom with Bedroom 5
-                  • Bedroom 5: Queen-over-queen bunk beds, mountain views, shared Jack and Jill bathroom with Bedroom 4
+                  <strong>Lower Floor-</strong>
+                  <br />
+                  -Steam shower, 2 sink bathroom
+                  <br />
+                  -Bedroom 5: 1 queen bed, ensuite, 2 sink, 1 shower
+                  <br />
+                  -Bedroom 6: 2 queen bunk beds, shared ensuite
+                  <br />
+                  *Bedroom 5 & Bedroom 6 share/connected bathrooms
                   <br /><br />
-                  Outdoor Amenities
+                  <strong>Outdoor Amenities</strong>
+                  <br />
                   After a day on the slopes or trails, relax in the outdoor hot tub or unwind in the brand new wood barrel sauna, perfectly positioned for alpine après moments.
                 </p>
               </div>
@@ -326,7 +345,7 @@ const LuxuryKadenwoodProperty = () => {
                     />
                   </svg>
                 </div>
-                <h2 className="text-2xl font-bold">Concierge Services</h2>
+                <h2 className="text-2xl font-bold">***Concierge Services***</h2>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                 <div className="relative aspect-[4/3]">
@@ -342,6 +361,32 @@ const LuxuryKadenwoodProperty = () => {
                   </p>
                 </div>
               </div>
+            </div>
+
+            {/* Optional Private Chalet Host/Butler Section */}
+            <div className="mb-16">
+              <div className="flex items-center mb-6">
+                <div className="bg-black text-white p-4 rounded-full mr-4">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 5C13.66 5 15 6.34 15 8C15 9.66 13.66 11 12 11C10.34 11 9 9.66 9 8C9 6.34 10.34 5 12 5ZM12 19.2C9.5 19.2 7.29 17.92 6 15.98C6.03 13.99 10 12.9 12 12.9C13.99 12.9 17.97 13.99 18 15.98C16.71 17.92 14.5 19.2 12 19.2Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                <h2 className="text-2xl font-bold">Optional Addition | Private Chalet Host/Butler</h2>
+              </div>
+              <p className="text-gray-800 max-w-4xl">
+                Optional but highly recommended, a daily butler/chalet host to help make your stay more comfortable. They do not live in the home, rather come in the morning and evening for an average of 10 hours daily. Helping clean up around the kitchen/dining tables, your own personal barista in the mornings, and if a chef is arranged, they can act as a fine dining server for a plated meal experience. Familiar with the home for any quick questions so you can focus on enjoying yourself!
+                <br /><br />
+                <strong>-Cost 330 USD daily.</strong>
+              </p>
             </div>
 
             {/* Additional Features Section */}
