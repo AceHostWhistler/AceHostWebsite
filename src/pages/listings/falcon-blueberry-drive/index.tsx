@@ -65,7 +65,11 @@ const FalconBlueberryDrive = () => {
     "/photos/properties/Falcon/44 - 20250827 A7M4 01 DSC00589.jpg",
     "/photos/properties/Falcon/45 - 20250827 A7M4 01 DSC00604.jpg",
     "/photos/properties/Falcon/46 - 20250827 A7M4 01 DSC00610.jpg",
-    "/photos/properties/Falcon/47 - 20250827 A7M4 01 DSC00617.jpg"
+    "/photos/properties/Falcon/47 - 20250827 A7M4 01 DSC00617.jpg",
+    "/photos/properties/Falcon/08f43813-5a36-4e54-bbf8-bbc9cab0631e.avif",
+    "/photos/properties/Falcon/2c945711-d8e5-424e-98ca-eee71c27061f.avif",
+    "/photos/properties/Falcon/44406c5e-85ca-4dd1-a6c7-c1dab050fee7.avif",
+    "/photos/properties/Falcon/e8fb5764-5b68-4330-a1a5-59886001d775.avif"
   ];
 
   const handlePhotoClick = (index: number) => {
