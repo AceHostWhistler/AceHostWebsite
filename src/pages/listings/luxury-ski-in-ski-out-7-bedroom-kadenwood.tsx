@@ -18,6 +18,11 @@ const LuxuryKadenwoodProperty = () => {
 
   // Property photos
   const photos = [
+    // New photos added
+    "/photos/properties/2919 Heritage/02 - 20260301 MM4P 01 DJI_20260301181105_0776_D.jpg",
+    "/photos/properties/2919 Heritage/01 - 20260301 MM4P 01 DJI_20260301111158_0401_D-Edit.jpg",
+    "/photos/properties/2919 Heritage/03 - 20260301 MM4P 01 DJI_20260301181209_0786_D.jpg",
+    "/photos/properties/2919 Heritage/04 - 20260301 MM4P 01 DJI_20260301181237_0791_D.jpg",
     "/photos/properties/2919 Heritage/20200414_132416jpg.jpg",
     "/photos/properties/2919 Heritage/20230104_204323jpg.jpg",
     "/photos/properties/2919 Heritage/20230104_204324jpg.jpg",

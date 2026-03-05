@@ -261,6 +261,10 @@ export default function Properties() {
             id: "luxury-ski-in-ski-out-7-bedroom-kadenwood",
             name: "The Mountaintop at Kadenwood | Ski in Ski out",
             images: [
+              "/photos/properties/2919 Heritage/02 - 20260301 MM4P 01 DJI_20260301181105_0776_D.jpg",
+              "/photos/properties/2919 Heritage/01 - 20260301 MM4P 01 DJI_20260301111158_0401_D-Edit.jpg",
+              "/photos/properties/2919 Heritage/03 - 20260301 MM4P 01 DJI_20260301181209_0786_D.jpg",
+              "/photos/properties/2919 Heritage/04 - 20260301 MM4P 01 DJI_20260301181237_0791_D.jpg",
               "/photos/properties/2919 Heritage/20200414_132416jpg.jpg",
               "/optimized/2919-Heritage/2919HeritagePeaks01.jpg",
               "/optimized/2919-Heritage/2919HeritagePeaks06.jpg",

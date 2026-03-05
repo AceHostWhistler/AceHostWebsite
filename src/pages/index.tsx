@@ -266,7 +266,7 @@ const Home = () => {
     {
       id: "luxury-ski-in-ski-out-7-bedroom-kadenwood",
       name: "The Mountaintop at Kadenwood | Ski in Ski out",
-      image: "/photos/properties/2919 Heritage/20200414_132416jpg.jpg",
+      image: "/photos/properties/2919 Heritage/02 - 20260301 MM4P 01 DJI_20260301181105_0776_D.jpg",
       guests: 16,
       bedrooms: 7,
       beds: 8,
