@@ -16,7 +16,7 @@ const LuxuryKadenwoodProperty = () => {
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
   const [touchEndX, setTouchEndX] = useState<number | null>(null);
 
-  // Property photos - updated with all new photos
+  // Property photos - updated with all current photos
   const photos = [
     // Cover photo first
     "/photos/properties/2919 Heritage/02 - 20260301 MM4P 01 DJI_20260301181105_0776_D-Edit-AI Generative Fill.jpg",
@@ -26,27 +26,26 @@ const LuxuryKadenwoodProperty = () => {
     "/photos/properties/2919 Heritage/05 - 20260301 A7M4 01 A1_01862-Edit.jpg",
     "/photos/properties/2919 Heritage/07 - 20260301 A7M4 01 A1_01879.jpg",
     "/photos/properties/2919 Heritage/08 - 20260301 A7M4 01 A1_01630.jpg",
-    "/photos/properties/2919 Heritage/09 - 20260301 A7M4 01 A1_01777.jpg",
-    "/photos/properties/2919 Heritage/10 - 20260301 A7M4 01 A1_01834.jpg",
-    "/photos/properties/2919 Heritage/11 - 20260301 A7M4 01 A1_02026.jpg",
-    "/photos/properties/2919 Heritage/12 - 20260301 A7M4 01 A1_01974.jpg",
-    "/photos/properties/2919 Heritage/13 - 20260301 A7M4 01 A1_02004.jpg",
+    "/photos/properties/2919 Heritage/09 - 20260301 A7M4 01 A1_01777-Edit.jpg",
+    "/photos/properties/2919 Heritage/10 - 20260301 A7M4 01 A1_01834-Edit.jpg",
+    "/photos/properties/2919 Heritage/11 - 20260301 A7M4 01 A1_02026-Edit.jpg",
+    "/photos/properties/2919 Heritage/13 - 20260301 A7M4 01 A1_02004-Edit.jpg",
     "/photos/properties/2919 Heritage/14 - 20260301 A7M4 01 A1_01957.jpg",
-    "/photos/properties/2919 Heritage/15 - 20260301 A7M4 01 A1_02045-Edit.jpg",
+    "/photos/properties/2919 Heritage/16 - 20260301 A7M4 01 A1_02045-Edit-Edit.jpg",
     "/photos/properties/2919 Heritage/17 - 20260301 A7M4 01 A1_01471.jpg",
     "/photos/properties/2919 Heritage/18 - 20260301 A7M4 01 A1_01946.jpg",
     "/photos/properties/2919 Heritage/19 - 20260301 A7M4 01 A1_01596.jpg",
     "/photos/properties/2919 Heritage/24 - 20260301 A7M4 01 A1_01497.jpg",
-    "/photos/properties/2919 Heritage/25 - 20260301 A7M4 01 A1_01685.jpg",
+    "/photos/properties/2919 Heritage/25 - 20260301 A7M4 01 A1_01685-Edit.jpg",
     "/photos/properties/2919 Heritage/27 - 20260301 A7M4 01 A1_01700-Edit.jpg",
-    "/photos/properties/2919 Heritage/31 - 20260301 A7M4 01 A1_01788.jpg",
+    "/photos/properties/2919 Heritage/28 - 20260301 A7M4 01 A1_01743-Edit.jpg",
+    "/photos/properties/2919 Heritage/31 - 20260301 A7M4 01 A1_01788-Edit.jpg",
     "/photos/properties/2919 Heritage/32 - 20260301 A7M4 01 A1_01800.jpg",
     "/photos/properties/2919 Heritage/33 - 20260301 A7M4 01 A1_01848.jpg",
-    "/photos/properties/2919 Heritage/34 - 20260301 A7M4 01 A1_01823.jpg",
+    "/photos/properties/2919 Heritage/34 - 20260301 A7M4 01 A1_01823-Edit.jpg",
     "/photos/properties/2919 Heritage/38 - 20260301 A7M4 01 A1_02799-Edit.jpg",
     "/photos/properties/2919 Heritage/39 - 20260301 A7M4 01 A1_02804.jpg",
-    "/photos/properties/2919 Heritage/40 - 20260301 A7M4 01 A1_02063-Edit.jpg",
-    "/photos/properties/2919 Heritage/41 - 20260301 A7M4 01 A1_02081.jpg",
+    "/photos/properties/2919 Heritage/40 - 20260301 A7M4 01 A1_02063-Edit-Edit.jpg",
     "/photos/properties/2919 Heritage/44 - 20260301 A7M4 01 A1_02278.jpg",
     "/photos/properties/2919 Heritage/45 - 20260301 A7M4 01 A1_02301.jpg",
     "/photos/properties/2919 Heritage/47 - 20260301 A7M4 01 A1_02319.jpg",
@@ -95,9 +94,11 @@ const LuxuryKadenwoodProperty = () => {
     "/photos/properties/2919 Heritage/97 - 20260301 A7M4 01 A1_02102-Edit.jpg",
     "/photos/properties/2919 Heritage/98 - 20260301 A7M4 01 A1_02127.jpg",
     "/photos/properties/2919 Heritage/99 - 20260301 MM4P 01 DJI_20260301110846_0368_D-Edit.jpg",
-    "/photos/properties/2919 Heritage/102 - 20260301 MM4P 01 DJI_20260301103237_0123_D.jpg",
     "/photos/properties/2919 Heritage/104 - 20260301 MM4P 01 DJI_20260301104740_0208_D.jpg",
     "/photos/properties/2919 Heritage/106 - 20260301 MM4P 01 DJI_20260301110628_0353_D.jpg",
+    "/photos/properties/2919 Heritage/20200414_132416jpg.jpg",
+    "/photos/properties/2919 Heritage/20230104_204342jpg.jpg",
+    "/photos/properties/2919 Heritage/20230104_204343jpg.jpg",
   ];
 
   // Photo navigation functions
