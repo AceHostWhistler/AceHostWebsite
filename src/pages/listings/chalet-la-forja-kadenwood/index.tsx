@@ -191,11 +191,11 @@ const ChaletLaForja = () => {
                     src={photo}
                     alt={`Chalet La Forja interior ${index + 1}`}
                     fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    sizes="(max-width: 640px) 45vw, (max-width: 768px) 45vw, (max-width: 1024px) 30vw, 20vw"
                     className="object-cover hover:scale-105 transition-transform duration-300"
                     priority={index < 2}
                     loading={index < 2 ? "eager" : "lazy"}
-                    quality={index < 4 ? 85 : 75}
+                    quality={index < 4 ? 80 : 70}
                     placeholder="blur"
                     blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzMiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="
                   />
@@ -482,10 +482,10 @@ const ChaletLaForja = () => {
                         src={photo}
                         alt={`Chalet La Forja ${index + 1}`}
                         fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 45vw, 30vw"
                         className="object-cover hover:scale-105 transition-transform duration-300"
-                        priority={index < 6}
-                        loading={index < 6 ? "eager" : "lazy"}
+                        priority={index < 4}
+                        loading={index < 4 ? "eager" : "lazy"}
                       />
                     </div>
                   </div>
@@ -521,7 +521,7 @@ const ChaletLaForja = () => {
               &larr;
             </button>
 
-            <div className="relative w-full h-full max-w-6xl max-h-[80vh] mx-auto px-4">
+            <div className="relative w-full h-full max-w-5xl max-h-[75vh] mx-auto px-4">
               {isImageLoading && (
                 <div className="absolute inset-0 flex items-center justify-center z-10">
                   <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
@@ -534,9 +534,9 @@ const ChaletLaForja = () => {
                   fill
                   priority
                   className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
-                  sizes="100vw"
+                  sizes="80vw"
                   onLoadingComplete={handleImageLoad}
-                  quality={85}
+                  quality={75}
                   loading="eager"
                 />
               </div>
