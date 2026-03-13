@@ -66,6 +66,10 @@ const FalconBlueberryDrive = () => {
     "/photos/properties/Falcon/45 - 20250827 A7M4 01 DSC00604.jpg",
     "/photos/properties/Falcon/46 - 20250827 A7M4 01 DSC00610.jpg",
     "/photos/properties/Falcon/47 - 20250827 A7M4 01 DSC00617.jpg",
+    "/photos/properties/Falcon/Falcon Cres.jpg",
+    "/photos/properties/Falcon/Falcon Cres-2.jpg",
+    "/photos/properties/Falcon/Falcon Cres-3.jpg",
+    "/photos/properties/Falcon/Falcon Cres-5.jpg",
     "/photos/properties/Falcon/08f43813-5a36-4e54-bbf8-bbc9cab0631e.avif",
     "/photos/properties/Falcon/2c945711-d8e5-424e-98ca-eee71c27061f.avif",
     "/photos/properties/Falcon/44406c5e-85ca-4dd1-a6c7-c1dab050fee7.avif",
@@ -229,8 +233,11 @@ const FalconBlueberryDrive = () => {
             <p className="text-gray-800 mb-16 max-w-4xl">
               Cozy chalet in an amazing location! Beautiful views of the
               mountain in the prestigious, quiet and family orientated Blueberry
-              Hill. Perfect for a large group or one family. 25 minute walk to
-              the village through the most beautiful trails or catch the local
+              Hill. Perfect for a large group or one family.{" "}
+              <strong>
+                ***New Outdoor Wood Barrel Sauna & Hot tub for ultimate relaxation!*** Easy to use, and a great way to relax after a long day.
+              </strong>{" "}
+              25 minute walk to the village through the most beautiful trails or catch the local
               bus just two steps away from the front door, which comes by every
               15 minutes.
             </p>
