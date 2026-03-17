@@ -40,7 +40,7 @@ const Testimonials = () => {
             />
           </div>
           <div className="ml-4">
-            <h3 className="font-serif text-lg">{review.name}</h3>
+            <h3 className="font-display font-extralight text-lg">{review.name}</h3>
             <p className="text-blue-200/90 text-sm">{review.role}</p>
           </div>
         </div>
@@ -59,7 +59,7 @@ const Testimonials = () => {
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-serif text-center mb-4">
+        <h2 className="text-3xl md:text-4xl font-display font-extralight text-center mb-4 tracking-wide-luxury uppercase">
           What Our Clients Say
         </h2>
         <p className="text-slate-600 text-center max-w-2xl mx-auto mb-12">

@@ -28,7 +28,7 @@ const LuxuryChristmasRentals = () => {
       "name": "AceHost Whistler",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://acehost.ca/logo.png"
+        "url": "https://acehost.ca/logonobackrgound.png"
       }
     },
     "description": "Discover Whistler's most luxurious vacation rental homes for your Christmas and New Year's escape. From ski-in/ski-out chalets to stunning mountain retreats, find the perfect property for an unforgettable holiday."

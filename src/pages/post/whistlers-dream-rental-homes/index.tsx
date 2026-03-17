@@ -28,7 +28,7 @@ export default function BlogPost() {
       "name": "AceHost Whistler",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://acehost.ca/logo.png"
+        "url": "https://acehost.ca/logonobackrgound.png"
       }
     },
     "description": "Explore Whistler's most exclusive luxury vacation rentals, from ski-in/ski-out chalets to stunning village properties. Discover what makes these 5 properties the ultimate mountain getaway."

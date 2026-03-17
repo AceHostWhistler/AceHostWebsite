@@ -194,7 +194,7 @@ const Testimonials = () => {
       <div className="max-w-6xl mx-auto relative">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-5 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-display font-extralight text-charcoal-dark mb-5 tracking-wide-luxury uppercase">
             Guest Experiences
           </h2>
           <p className="text-lg text-gray-500 max-w-2xl mx-auto">

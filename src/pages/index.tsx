@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { ArrowRight, Instagram, Youtube } from "lucide-react";
+import { ArrowRight, Instagram, Youtube, Mail } from "lucide-react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import HomePageLayout from "@/components/HomePageLayout";
+import HeroVideoPlayer from "@/components/HeroVideoPlayer";
 import Testimonials from "@/components/Testimonials";
+import FAQAccordion from "@/components/FAQAccordion";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
@@ -25,7 +26,7 @@ const Home = () => {
     description:
       "Luxury Vacation Rental Properties in Whistler Canada | Property Management & VIP Concierge Services",
     url: "https://acehost.ca",
-    logo: "https://acehost.ca/logo.png",
+    logo: "https://acehost.ca/logonobackrgound.png",
     address: {
       "@type": "PostalAddress",
       streetAddress: "4308 Main Street",
@@ -75,10 +76,10 @@ const Home = () => {
     const isCotswolds = property.id === "cotswolds-uk-soho-farm-house";
     
     return (
-      <div
-        key={property.id}
-        className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow flex flex-col h-full"
-      >
+        <div
+          key={property.id}
+          className="bg-cream-50 rounded-none overflow-hidden border border-cream-300/50 hover:border-charcoal/10 transition-all flex flex-col h-full"
+        >
         <div className="relative h-64">
           <Link href={cardLink}>
             {isCotswolds ? (
@@ -106,7 +107,7 @@ const Home = () => {
             )}
           </Link>
           {property.isPetFriendly && (
-            <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 text-xs font-medium rounded-md z-10">
+            <div className="absolute top-4 left-4 bg-charcoal text-cream px-3 py-1 text-xs font-normal tracking-luxury uppercase z-10">
               Pet Friendly
             </div>
           )}
@@ -141,7 +142,7 @@ const Home = () => {
           {/* Property details */}
           <div className="flex flex-wrap gap-2 mb-4">
             {property.guests && (
-              <span className="bg-gray-900 text-white px-3 py-1 text-sm font-medium rounded-md">
+              <span className="bg-charcoal text-cream px-3 py-1 text-sm font-normal tracking-wide">
                 {property.guests}{" "}
                 {typeof property.guests === "number" && property.guests === 1
                   ? "Guest"
@@ -149,7 +150,7 @@ const Home = () => {
               </span>
             )}
             {property.bedrooms && (
-              <span className="bg-gray-200 text-gray-900 px-3 py-1 text-sm font-medium rounded-md">
+              <span className="bg-cream-200/80 text-charcoal px-3 py-1 text-sm font-normal">
                 {property.bedrooms}{" "}
                 {typeof property.bedrooms === "number" && property.bedrooms === 1
                   ? "Bedroom"
@@ -157,7 +158,7 @@ const Home = () => {
               </span>
             )}
             {property.beds && (
-              <span className="bg-gray-200 text-gray-900 px-3 py-1 text-sm font-medium rounded-md">
+              <span className="bg-cream-200/80 text-charcoal px-3 py-1 text-sm font-normal">
                 {property.beds}{" "}
                 {typeof property.beds === "number" && property.beds === 1
                   ? "Bed"
@@ -165,7 +166,7 @@ const Home = () => {
               </span>
             )}
             {property.bathrooms && (
-              <span className="bg-gray-200 text-gray-900 px-3 py-1 text-sm font-medium rounded-md">
+              <span className="bg-cream-200/80 text-charcoal px-3 py-1 text-sm font-normal">
                 {property.bathrooms}{" "}
                 {typeof property.bathrooms === "number" &&
                 property.bathrooms === 1
@@ -176,20 +177,20 @@ const Home = () => {
           </div>
 
           {/* Property name */}
-          <h3 className={`text-xl font-medium mb-4 text-gray-900 ${property.id === "hotel-booking-assistance" ? "" : "line-clamp-2"} ${property.id === "hotel-booking-assistance" ? "h-auto" : "h-14"}`}>
+          <h3 className={`text-xl font-display font-extralight mb-4 text-charcoal-dark tracking-wide-luxury ${property.id === "hotel-booking-assistance" ? "" : "line-clamp-2"} ${property.id === "hotel-booking-assistance" ? "h-auto" : "h-14"}`}>
             {property.name}
           </h3>
 
           {/* Pricing information */}
           <div className="space-y-2 mb-6 min-h-[80px]">
             {property.priceRange && (
-              <p className="text-gray-600">{property.priceRange}</p>
+              <p className="text-charcoal-muted font-normal">{property.priceRange}</p>
             )}
             {property.winterPrice && (
-              <p className="text-gray-600">{property.winterPrice}</p>
+              <p className="text-charcoal-muted text-sm">{property.winterPrice}</p>
             )}
             {property.holidayPrice && (
-              <p className="text-gray-600">{property.holidayPrice}</p>
+              <p className="text-charcoal-muted text-sm">{property.holidayPrice}</p>
             )}
           </div>
 
@@ -197,7 +198,7 @@ const Home = () => {
           <div className="mt-auto">
             <Link
               href={cardLink}
-              className="inline-flex items-center text-gray-900 font-medium hover:text-gray-600 transition-colors"
+              className="inline-flex items-center text-charcoal font-normal tracking-luxury uppercase text-sm hover:text-charcoal-light transition-colors"
             >
               <span>View Property</span>
               <ArrowRight size={18} className="ml-2" />
@@ -1020,7 +1021,7 @@ const Home = () => {
               "@type": "Organization",
               "name": "AceHost Whistler",
               "url": "https://acehost.ca",
-              "logo": "https://acehost.ca/logo.png",
+              "logo": "https://acehost.ca/logonobackrgound.png",
               "sameAs": [
                 "https://www.instagram.com/acehost_whistler/",
                 "https://www.youtube.com/@acehost_Whistler/videos"
@@ -1098,7 +1099,7 @@ const Home = () => {
         />
 
         {/* Optimize core web vitals */}
-        <link rel="preload" href="/logo.png" as="image" />
+        <link rel="preload" href="/logonobackrgound.png" as="image" />
         <link 
           rel="preload" 
           href="/photos/homepage/WhistlerVacationRental.jpg" 
@@ -1113,199 +1114,207 @@ const Home = () => {
           media="(min-width: 768px)" 
           fetchPriority="high"
         />
-        <script src="https://player.vimeo.com/api/player.js" async></script>
       </Head>
 
-      <div className="min-h-screen bg-white text-gray-900 overflow-x-hidden max-w-full">
-        <Navigation transparent={false} />
+      <HomePageLayout>
+        <div className="overflow-x-hidden max-w-full">
+          {/* Hero Video - Full width, custom controls */}
+          <HeroVideoPlayer />
 
-        {/* Hero Section */}
-        <section className="relative bg-white pt-6 pb-0 md:py-6">
-          <div className="flex flex-col md:flex-row w-full max-w-full mx-auto">
-            <div className="md:w-[40%] lg:w-[40%] px-4 sm:px-6 lg:px-8 md:py-6">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
-                Luxury Vacation
-                <br />
-                Rental Properties in
-                <br />
-                Whistler Canada
+          {/* Content Section Below Hero - Ivory Homes style */}
+          <section className="relative bg-cream py-20 md:py-28">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+              <h1 className="text-3xl md:text-4xl lg:text-[2.75rem] font-display font-extralight text-charcoal-dark mb-6 leading-tight tracking-magazine uppercase text-center max-w-3xl mx-auto">
+                Temporary rental of luxury chalets and homes
               </h1>
-              <p className="text-lg sm:text-xl text-gray-700 mb-6 font-bold">
-                Property Management & VIP Concierge Services
+              <p className="text-base md:text-lg text-charcoal-muted mb-8 max-w-2xl mx-auto font-light leading-relaxed text-center">
+                We specialize in the short-term rental of luxury properties in Whistler.
+                A curated selection of secluded retreats in the most exclusive mountain
+                enclaves—where alpine elegance meets intimate luxury. Each sanctuary
+                is meticulously maintained for discerning guests who seek an
+                extraordinary escape beyond the ordinary.
               </p>
-              <p className="text-base md:text-lg text-gray-700 mb-8 max-w-2xl">
-                AceHost is a leading Whistler luxury Airbnb property management
-                company. We proudly offer an array of magnificent vacation
-                rental homes in Whistler, British Columbia. Offering a seamless
-                experience for property owners looking to rent out their homes
-                and earn, while offering guests the perfect vacation in a
-                luxurious property. Explore our exclusive collection of luxury
-                ski chalets, and ask us how we can make your next stay
-                exceptional!
-              </p>
-              <Link
-                href="/properties"
-                className="inline-block bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-colors text-base font-medium"
-              >
-                View Luxury Rental Properties
-              </Link>
-            </div>
-            <div className="mt-8 md:mt-0 md:w-[58%] lg:w-[58%] flex justify-center md:justify-normal md:items-center px-1 md:px-0 md:pr-4">
-              <div className="w-[98%] md:w-[95%] overflow-hidden">
-                <iframe
-                  src="https://player.vimeo.com/video/1122267050?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&autoplay=0&loop=1&background=0"
-                  className="w-full aspect-video"
-                  frameBorder="0"
-                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                  allowFullScreen
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  title="The AceHost Whistler Vacation Experience"
-                  loading="lazy"
-                  style={{ display: 'block' }}
-                ></iframe>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Services Section */}
-        <section className="py-20 bg-white">
-          <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 sm:px-6 lg:px-8">
-            {sections.map((section, index) => (
-              <div key={index} className="bg-white p-8 rounded-lg shadow-lg">
-                <div className="mb-6 h-48 relative overflow-hidden rounded-lg">
-                  <Link href={index === 0 ? "/properties" : index === 1 ? "/list-property" : "/concierge-service"}>
-                    <div className="relative w-full h-full">
-                      <Image
-                        src={section.image}
-                        alt={section.title}
-                        fill
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 400px"
-                        className="object-cover cursor-pointer"
-                        priority={index === 0}
-                        quality={85}
-                        loading={index === 0 ? "eager" : "lazy"}
-                        placeholder="blur"
-                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAEhAI/w5RW4AAAAABJRU5ErkJggg=="
-                      />
-                    </div>
-                  </Link>
-                </div>
-                <h3 className="text-2xl font-medium mb-4 text-gray-900">
-                  {section.title}
-                </h3>
-                <p className="text-gray-600 mb-6">{section.description}</p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                 <Link
-                  href={index === 0 ? "/properties" : index === 1 ? "/list-property" : "/concierge-service"}
-                  className="inline-block text-gray-900 font-medium border-b-2 border-gray-900 hover:border-gray-600 hover:text-gray-600 transition-colors"
+                  href="/properties"
+                  className="inline-block bg-charcoal text-cream px-10 py-4 hover:bg-charcoal-light transition-colors text-sm font-normal tracking-luxury uppercase"
                 >
-                  {section.linkText}
+                  Explore Our Collection
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 text-charcoal font-normal tracking-luxury uppercase text-sm border-b border-charcoal hover:border-charcoal-light hover:text-charcoal-light transition-colors"
+                >
+                  <Mail className="w-4 h-4" strokeWidth={1.5} />
+                  Contact
                 </Link>
               </div>
-            ))}
-          </div>
-        </section>
+            </div>
+          </section>
 
-        {/* Featured Properties */}
-        <section className="py-24 bg-gray-50">
-          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="mb-16 text-center">
-              <h2 className="text-4xl font-light mb-6 text-gray-900">
-                View Our Full Collection Of Luxury Vacation Rental Properties
+          {/* Intro Section - Discover our portfolio */}
+          <section className="py-16 md:py-24 bg-cream-50">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              <h2 className="text-3xl md:text-4xl font-display font-extralight text-charcoal-dark mb-4 tracking-wide-luxury uppercase">
+                Where the mountains hold their secrets
               </h2>
-              {/* Property Filters - match properties page style */}
-              <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto mb-12">
+              <p className="text-xl md:text-2xl font-display font-light text-charcoal-muted mb-2 tracking-luxury uppercase">
+                Discover
+              </p>
+              <p className="text-lg text-charcoal-muted font-light max-w-2xl mx-auto">
+                our portfolio of refined retreats in Whistler&apos;s most coveted
+                enclaves—Kadenwood, Blueberry, the Village—each chosen for those
+                who appreciate the extraordinary.
+              </p>
+            </div>
+          </section>
+
+          {/* Services Section - Luxury magazine editorial style */}
+          <section className="py-28 md:py-36 bg-cream">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-3xl md:text-4xl font-display font-extralight text-charcoal-dark tracking-magazine uppercase text-center mb-20">
+                Our Services
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-16 lg:gap-24">
+                {sections.map((section, index) => (
+                  <article key={index} className="group">
+                    <Link href={index === 0 ? "/properties" : index === 1 ? "/list-property" : "/concierge-service"} className="block">
+                      <div className="aspect-[3/4] relative overflow-hidden mb-8">
+                        <Image
+                          src={section.image}
+                          alt={section.title}
+                          fill
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+                          className="object-cover transition-transform duration-700 group-hover:scale-105"
+                          priority={index === 0}
+                          quality={90}
+                          loading={index === 0 ? "eager" : "lazy"}
+                          placeholder="blur"
+                          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAEhAI/w5RW4AAAAABJRU5ErkJggg=="
+                        />
+                      </div>
+                    </Link>
+                    <h3 className="text-xl md:text-2xl font-display font-extralight mb-5 text-charcoal-dark tracking-magazine uppercase">
+                      {section.title}
+                    </h3>
+                    <p className="text-charcoal-muted text-[15px] md:text-base font-light leading-[1.8] mb-8">
+                      {section.description}
+                    </p>
+                    <Link
+                      href={index === 0 ? "/properties" : index === 1 ? "/list-property" : "/concierge-service"}
+                      className="inline-flex items-center gap-2 font-display font-extralight text-charcoal-dark tracking-magazine uppercase text-sm border-b border-charcoal/40 pb-0.5 hover:border-charcoal transition-colors"
+                    >
+                      {section.linkText}
+                      <ArrowRight className="w-3 h-3" strokeWidth={1.5} />
+                    </Link>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Featured Properties - Our highlights style */}
+          <section className="py-24 md:py-32 bg-cream-200">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="mb-20 text-center">
+                <h2 className="text-3xl md:text-4xl font-display font-extralight mb-8 text-charcoal-dark tracking-wide-luxury uppercase">
+                  Our Highlights
+                </h2>
+                {/* Property Filters */}
+                <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto mb-16">
                 <button
                   onClick={() => setActiveFilter("all")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "all" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
+                  className={`px-8 py-3 text-sm font-normal tracking-luxury uppercase transition-all duration-300 ${activeFilter === "all" ? "bg-charcoal text-cream" : "bg-cream-50 text-charcoal border border-cream-300 hover:border-charcoal/20"}`}
                 >
                   All Properties
                 </button>
                 <button
                   onClick={() => setActiveFilter("whistler")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "whistler" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
+                  className={`px-8 py-3 text-sm font-normal tracking-luxury uppercase transition-all duration-300 ${activeFilter === "whistler" ? "bg-charcoal text-cream" : "bg-cream-50 text-charcoal border border-cream-300 hover:border-charcoal/20"}`}
                 >
                   Whistler
                 </button>
                 <button
                   onClick={() => setActiveFilter("worldwide")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "worldwide" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
+                  className={`px-8 py-3 text-sm font-normal tracking-luxury uppercase transition-all duration-300 ${activeFilter === "worldwide" ? "bg-charcoal text-cream" : "bg-cream-50 text-charcoal border border-cream-300 hover:border-charcoal/20"}`}
                 >
                   Worldwide
                 </button>
                 <button
                   onClick={() => setActiveFilter("pets")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "pets" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
+                  className={`px-8 py-3 text-sm font-normal tracking-luxury uppercase transition-all duration-300 ${activeFilter === "pets" ? "bg-charcoal text-cream" : "bg-cream-50 text-charcoal border border-cream-300 hover:border-charcoal/20"}`}
                 >
                   Pet Friendly
                 </button>
                 <button
                   onClick={() => setActiveFilter("skiinout")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "skiinout" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
+                  className={`px-8 py-3 text-sm font-normal tracking-luxury uppercase transition-all duration-300 ${activeFilter === "skiinout" ? "bg-charcoal text-cream" : "bg-cream-50 text-charcoal border border-cream-300 hover:border-charcoal/20"}`}
                 >
                   Ski In/Out
                 </button>
               </div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12">
+                {filteredListings.map((property, index) => (
+                  <div key={property.id} className="col-span-1">
+                    {renderPropertyCard(property, index)}
+                  </div>
+                ))}
+              </div>
+              <div className="mt-16 text-center">
+                <Link
+                  href="/properties"
+                  className="inline-block bg-charcoal text-cream px-12 py-4 hover:bg-charcoal-light transition-colors text-sm font-normal tracking-luxury uppercase"
+                >
+                  See More
+                </Link>
+              </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {filteredListings.map((property, index) => (
-                <div key={property.id} className="col-span-1">
-                  {renderPropertyCard(property, index)}
-                </div>
-              ))}
+          </section>
+
+          {/* Testimonials Section */}
+          <section className="py-24 md:py-32 bg-cream-200">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-3xl md:text-4xl font-display font-extralight mb-12 text-charcoal-dark tracking-wide-luxury uppercase">
+                What Our Guests Say
+              </h2>
+              <Testimonials />
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Testimonials Section */}
-        <section className="py-24 bg-gray-50">
-          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-light mb-6 text-gray-900">
-              What Our Guests Say
-            </h2>
-            <Testimonials />
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="py-24 bg-gray-50">
-          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-light mb-6 text-gray-900">
-              Frequently Asked Questions
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {faqItems.map((faq, index) => (
-                <div key={index} className="col-span-1">
-                  <h3 className="text-2xl font-medium mb-4 text-gray-900">
-                    {faq.question}
-                  </h3>
-                  <p className="text-gray-600">{faq.answer}</p>
-                </div>
-              ))}
+          {/* FAQ Section - Accordion style */}
+          <section className="py-24 md:py-32 bg-cream">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-3xl md:text-4xl font-display font-extralight mb-16 text-charcoal-dark tracking-wide-luxury uppercase text-center">
+                Frequently Asked Questions
+              </h2>
+              <FAQAccordion
+                items={faqItems}
+                expandedIndex={expandedFaq}
+                onToggle={(i) => setExpandedFaq(i === -1 ? null : i)}
+              />
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Contact Section */}
-        <section className="py-24 bg-gray-50">
-          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-light mb-6 text-gray-900">
-              Contact Us
-            </h2>
-            <p className="text-base text-gray-700 mb-8">
-              Have a question or need assistance? We're here to help.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-block bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-colors text-base font-medium"
-            >
-              Get in Touch
-            </Link>
-          </div>
-        </section>
-      </div>
-
-      <Footer />
+          {/* Contact Section */}
+          <section className="py-24 md:py-32 bg-cream-200">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-3xl md:text-4xl font-display font-extralight mb-6 text-charcoal-dark tracking-wide-luxury uppercase">
+                Contact Us
+              </h2>
+              <p className="text-base text-charcoal-muted mb-10 font-light max-w-xl">
+                Have a question or need assistance? We're here to help.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-block bg-charcoal text-cream px-10 py-4 hover:bg-charcoal-light transition-colors text-sm font-normal tracking-luxury uppercase"
+              >
+                Get in Touch
+              </Link>
+            </div>
+          </section>
+        </div>
+      </HomePageLayout>
     </>
   );
 };

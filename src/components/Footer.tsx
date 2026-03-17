@@ -7,7 +7,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-white border-t border-gray-100 py-16">
+    <footer className="bg-cream border-t border-cream-300 py-16">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
           {/* Branding and Description */}
@@ -15,7 +15,7 @@ const Footer = () => {
             <Link href="/" className="inline-block mb-6">
               <div className="relative w-48 h-16">
                 <Image
-                  src="/logo.png"
+                  src="/logonobackrgound.png"
                   alt="AceHost Logo"
                   fill
                   className="object-contain object-left"
@@ -23,7 +23,7 @@ const Footer = () => {
                 />
               </div>
             </Link>
-            <p className="text-gray-600 mb-8 pr-4">
+            <p className="text-charcoal-muted font-light mb-8 pr-4">
               AceHost is a leading Whistler luxury property management company
               offering magnificent vacation rental homes in Whistler, British
               Columbia.
@@ -33,7 +33,7 @@ const Footer = () => {
                 href="https://www.instagram.com/acehost_whistler/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-gray-800 transition-colors"
+                className="text-charcoal-muted hover:text-charcoal transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram size={24} />
@@ -42,7 +42,7 @@ const Footer = () => {
                 href="https://www.youtube.com/@acehost_Whistler/videos"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-gray-800 transition-colors"
+                className="text-charcoal-muted hover:text-charcoal transition-colors"
                 aria-label="Youtube"
               >
                 <Youtube size={24} />
@@ -52,14 +52,14 @@ const Footer = () => {
 
           {/* Properties Column */}
           <div className="col-span-1">
-            <h3 className="text-lg font-semibold text-gray-900 mb-6">
+            <h3 className="text-lg font-display font-extralight text-charcoal-dark mb-6 tracking-wide-luxury uppercase">
               Properties
             </h3>
             <ul className="space-y-4">
               <li>
                 <Link
                   href="/concierge-service"
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                  className="text-charcoal-muted font-light hover:text-charcoal transition-colors"
                 >
                   Concierge Services
                 </Link>
@@ -67,7 +67,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/properties"
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                  className="text-charcoal-muted font-light hover:text-charcoal transition-colors"
                 >
                   Luxury Properties
                 </Link>
@@ -75,7 +75,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/list-property"
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                  className="text-charcoal-muted font-light hover:text-charcoal transition-colors"
                 >
                   Property Management
                 </Link>
@@ -85,14 +85,14 @@ const Footer = () => {
 
           {/* Resources Column */}
           <div className="col-span-1">
-            <h3 className="text-lg font-semibold text-gray-900 mb-6">
+            <h3 className="text-lg font-display font-extralight text-charcoal-dark mb-6 tracking-wide-luxury uppercase">
               Resources
             </h3>
             <ul className="space-y-4">
               <li>
                 <Link
                   href="/blogs"
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                  className="text-charcoal-muted font-light hover:text-charcoal transition-colors"
                 >
                   Blog
                 </Link>
@@ -100,7 +100,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/faq"
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                  className="text-charcoal-muted font-light hover:text-charcoal transition-colors"
                 >
                   FAQ's
                 </Link>
@@ -108,7 +108,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/our-story"
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                  className="text-charcoal-muted font-light hover:text-charcoal transition-colors"
                 >
                   Our Story
                 </Link>
@@ -116,7 +116,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/contact"
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                  className="text-charcoal-muted font-light hover:text-charcoal transition-colors"
                 >
                   Contact
                 </Link>
@@ -126,14 +126,14 @@ const Footer = () => {
 
           {/* Social Column */}
           <div className="col-span-1">
-            <h3 className="text-lg font-semibold text-gray-900 mb-6">Social</h3>
+            <h3 className="text-lg font-display font-extralight text-charcoal-dark mb-6 tracking-wide-luxury uppercase">Social</h3>
             <ul className="space-y-4">
               <li>
                 <a
                   href="https://www.instagram.com/acehost_whistler/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                  className="text-charcoal-muted font-light hover:text-charcoal transition-colors"
                 >
                   Instagram
                 </a>
@@ -143,7 +143,7 @@ const Footer = () => {
                   href="https://www.youtube.com/@acehost_Whistler/videos"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                  className="text-charcoal-muted font-light hover:text-charcoal transition-colors"
                 >
                   Youtube
                 </a>
@@ -152,12 +152,12 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-gray-100 text-center">
-          <p className="text-gray-500 flex items-center justify-center">
+        <div className="mt-16 pt-8 border-t border-cream-300 text-center">
+          <p className="text-charcoal-muted font-light flex items-center justify-center">
             © {currentYear}
             <span className="inline-block mx-2 relative w-24 h-8">
               <Image
-                src="/logo.png"
+                src="/logonobackrgound.png"
                 alt="AceHost Logo"
                 fill
                 className="object-contain"

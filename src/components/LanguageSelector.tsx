@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import { useEffect, useState } from "react";
-import { Globe } from "lucide-react";
 
 const LanguageSelector = () => {
   const router = useRouter();
@@ -32,21 +31,20 @@ const LanguageSelector = () => {
     e.stopPropagation();
   };
 
+  const displayText = languages.map((l) => l.code.toUpperCase()).join(" | ");
+
   return (
     <div className="relative" onClick={handleDropdownClick}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center py-2 px-4 text-gray-800 hover:text-gray-600 focus:outline-none"
+        className="flex items-center py-1 text-charcoal-muted hover:text-charcoal focus:outline-none font-sans font-light tracking-luxury uppercase text-xs"
         aria-label={t("language_selector.language")}
       >
-        <Globe className="w-5 h-5 mr-1" />
-        <span className="hidden md:inline ml-1">
-          {t("language_selector.language")}
-        </span>
+        {displayText}
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50">
+        <div className="absolute right-0 mt-2 w-48 bg-cream-50 border border-cream-300 shadow-lg z-50 py-2">
           <div className="py-1">
             {languages.map((language) => (
               <button

@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["node", "react", "react-dom", "formidable", "nodemailer", "prop-types", "hoist-non-react-statics", "json5", "node-fetch"],
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,

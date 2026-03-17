@@ -69,7 +69,7 @@ const ComparisonSection = () => {
     provider: {
       "@type": "Organization",
       name: "Riviera Yachts",
-      image: "/logo.png",
+      image: "/logonobackrgound.png",
     },
     areaServed: {
       "@type": "Place",

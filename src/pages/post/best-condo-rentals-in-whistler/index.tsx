@@ -28,7 +28,7 @@ export default function BlogPost() {
       "name": "AceHost Whistler",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://acehost.ca/logo.png"
+        "url": "https://acehost.ca/logonobackrgound.png"
       }
     },
     "description": "Discover Whistler's most stylish and comfortable condo rentals, from ski-in/ski-out options to village-center gems. Find your perfect 1-3 bedroom mountain escape with breathtaking views and amazing amenities."
