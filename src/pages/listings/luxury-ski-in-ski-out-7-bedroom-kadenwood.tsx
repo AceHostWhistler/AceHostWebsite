@@ -8,6 +8,7 @@ import Navigation from "@/components/Navigation";
 import PropertyHeader from "@/components/PropertyHeader";
 import Footer from "@/components/Footer";
 import { X } from "lucide-react";
+import LazyVimeoPlayer from "../../components/LazyVimeoPlayer";
 
 const LuxuryKadenwoodProperty = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -208,6 +209,17 @@ const LuxuryKadenwoodProperty = () => {
             priceRange="$6,500-$9,000+ per night. $8,000-$10,000+ in winter. $14,900-$19,000 for Christmas/NYE."
             airbnbLink="https://www.airbnb.ca/rooms/1599369454342102375?guests=1&adults=1&s=67&unique_share_id=07a4f082-1dec-4a06-bf97-05638b3b71ef"
           />
+
+          {/* Featured Video */}
+          <div className="max-w-5xl mx-auto mb-10 sm:mb-16">
+            <LazyVimeoPlayer 
+              videoId="1174594797"
+              title="2919 Heritage Peaks Trail - Mountaintop Kadenwood - AceHost"
+              aspectRatio="video"
+              className="rounded-lg shadow-lg"
+              autoplay={false}
+            />
+          </div>
 
           {/* Photo Grid */}
           <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16">
