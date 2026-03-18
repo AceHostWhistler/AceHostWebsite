@@ -264,7 +264,7 @@ const LuxuryKadenwoodProperty = () => {
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                 <div className="relative aspect-[4/3] mb-2">
                   <img
-                    src="/optimized/2919-Heritage/description-1.jpg"
+                    src="/photos/properties/2919 Heritage/99 - 20260301 MM4P 01 DJI_20260301110846_0368_D-Edit.jpg"
                     alt="Luxury Kadenwood Property Interior"
                     className="w-full h-full object-cover rounded-lg"
                   />
