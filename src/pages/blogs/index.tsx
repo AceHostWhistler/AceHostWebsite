@@ -25,6 +25,15 @@ interface BlogIndexProps {
 // In a production app, you'd extract metadata from the actual files
 const blogPostsData: BlogPost[] = [
   {
+    slug: "self-managing-vs-hiring-a-whistler-property-manager-what-owners-need-to-know",
+    title:
+      "Self-Managing vs Hiring a Whistler Property Manager, What Owners Need to Know | AceHost",
+    category: "Property Management",
+    readTime: "12 min read",
+    heroImage:
+      "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05891.jpg",
+  },
+  {
     slug: "best-luxury-airbnb-ski-in-ski-out-vacation-rentals-in-whistler-for-large-groups",
     title:
       "Best Luxury Airbnb Ski in Ski out Vacation Rentals in Whistler for Large Groups | AceHost",

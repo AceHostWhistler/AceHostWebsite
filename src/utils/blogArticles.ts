@@ -12,6 +12,17 @@ export interface Article {
 export const allArticles: Article[] = [
   {
     title:
+      "Self-Managing vs Hiring a Whistler Property Manager, What Owners Need to Know | AceHost",
+    category: "Property Management",
+    description:
+      "Trying to decide between self-managing your Whistler vacation rental or hiring a property manager? Here is what owners need to know about time, revenue, guest experience, and peace of mind.",
+    readTime: "12 min read",
+    link: "/post/self-managing-vs-hiring-a-whistler-property-manager-what-owners-need-to-know",
+    coverImage:
+      "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05891.jpg",
+  },
+  {
+    title:
       "Best Luxury Airbnb Ski in Ski out Vacation Rentals in Whistler for Large Groups | AceHost",
     category: "Luxury Properties, Group Travel",
     description:
