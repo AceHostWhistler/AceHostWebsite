@@ -11,6 +11,16 @@ export interface Article {
 // All blog articles data with proper image paths
 export const allArticles: Article[] = [
   {
+    title:
+      "Best Luxury Airbnb Ski in Ski out Vacation Rentals in Whistler for Large Groups | AceHost",
+    category: "Luxury Properties, Group Travel",
+    description:
+      "Looking for the best luxury Airbnb ski in ski out vacation rentals in Whistler for a large group? Explore spacious Whistler homes with hot tubs, big kitchens, ski access, and concierge services from AceHost.",
+    readTime: "16 min read",
+    link: "/post/best-luxury-airbnb-ski-in-ski-out-vacation-rentals-in-whistler-for-large-groups",
+    coverImage: "/photos/properties/Two Cedars New/OSA_AncientCW1002 Panorama.jpg",
+  },
+  {
     title: "Ultimate Guide to the Best Condo Airbnb Rentals in Whistler | Ski in Ski out + Best Locations!",
     category: "Luxury Properties",
     description: "Discover Whistler's most stylish and comfortable condo rentals, from ski-in/ski-out options to village-center gems. Find your perfect 1-3 bedroom mountain escape with breathtaking views and amazing amenities.",

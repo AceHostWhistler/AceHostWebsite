@@ -25,6 +25,14 @@ interface BlogIndexProps {
 // In a production app, you'd extract metadata from the actual files
 const blogPostsData: BlogPost[] = [
   {
+    slug: "best-luxury-airbnb-ski-in-ski-out-vacation-rentals-in-whistler-for-large-groups",
+    title:
+      "Best Luxury Airbnb Ski in Ski out Vacation Rentals in Whistler for Large Groups | AceHost",
+    category: "Luxury Properties, Group Travel",
+    readTime: "16 min read",
+    heroImage: "/photos/properties/Two Cedars New/OSA_AncientCW1002 Panorama.jpg",
+  },
+  {
     slug: "new-acehost-luxury-airbnb-highlight-best-4-bedroom-whistler-golf-course-views",
     title: "New AceHost Luxury Airbnb Highlight | The Best 4 Bedroom You Can Find in All of Whistler, Located on the Golf Course with Stunning Views!",
     category: "Property Highlight",
