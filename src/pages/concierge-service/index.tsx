@@ -399,7 +399,7 @@ const ConciergeService = () => {
                   index={7}
                   icon={<FaSnowplow className="text-lg" />}
                   title="Snowmobile Experience"
-                  description="For a regular snowmobile experience, AceHost can arrange a tour of the Blackcomb mountain for you and your group. The snowmobile experience offers a variety of levels, for beginners and adventurous riders, and anyone in between. Personalize your trip and choose from a range of scenic options."
+                  description="For a classic Whistler snowmobile experience, AceHost can set you up with a guided ride through Blackcomb's alpine terrain. Whether you're a first-timer or looking to push things a bit further, there are options for every level. Expect wide open trails & incredible viewpoints. A chance to tailor the experience to your group, from relaxed scenic cruising to more adventurous routes."
                   imageSrc="/photos/homepage/concierge-service/Snowmobile Experience.png"
                   imageAlt="Snowmobile Experience"
                 />
