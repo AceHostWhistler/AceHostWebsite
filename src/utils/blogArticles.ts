@@ -12,6 +12,17 @@ export interface Article {
 export const allArticles: Article[] = [
   {
     title:
+      "Is Owning a Vacation Rental in Whistler Worth It in 2026? How Much Can a Luxury Whistler Rental Actually Make? | AceHost",
+    category: "Property Investment, Whistler",
+    description:
+      "Thinking about buying a vacation rental in Whistler? Why the market still looks strong, what separates a good investment home from a weak one, and a simple example of what leverage can look like in 2026.",
+    readTime: "15 min read",
+    link: "/post/is-owning-a-vacation-rental-in-whistler-worth-it-2026",
+    coverImage:
+      "/photos/properties/303-Tyndall Lodge/01 - 20260107 A7M4 01 A1_03798.jpg",
+  },
+  {
+    title:
       "The Best Time to Visit Whistler for Luxury Travelers, Winter, Summer, Christmas, or Shoulder Season? | AceHost",
     category: "Luxury Travel, Whistler",
     description:

@@ -25,6 +25,15 @@ interface BlogIndexProps {
 // In a production app, you'd extract metadata from the actual files
 const blogPostsData: BlogPost[] = [
   {
+    slug: "is-owning-a-vacation-rental-in-whistler-worth-it-2026",
+    title:
+      "Is Owning a Vacation Rental in Whistler Worth It in 2026? How Much Can a Luxury Whistler Rental Actually Make? | AceHost",
+    category: "Property Investment, Whistler",
+    readTime: "15 min read",
+    heroImage:
+      "/photos/properties/303-Tyndall Lodge/01 - 20260107 A7M4 01 A1_03798.jpg",
+  },
+  {
     slug: "best-time-to-visit-whistler-for-luxury-travelers",
     title:
       "The Best Time to Visit Whistler for Luxury Travelers, Winter, Summer, Christmas, or Shoulder Season? | AceHost",
