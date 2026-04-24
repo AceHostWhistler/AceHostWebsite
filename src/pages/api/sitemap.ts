@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-import { allArticles, Article } from '../../utils/blogArticles';
+import { getBlogPostSlugsWithLastMod } from '../../lib/getBlogPostSlugsFromFilesystem';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // Set appropriate headers
@@ -9,7 +9,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.setHeader('Cache-Control', 'public, max-age=86400, s-maxage=86400'); // 24 hour cache
 
   // Get current date in YYYY-MM-DD format
-  const today = new Date().toISOString().split('T')[0];
+  const today = new Date().toISOString().split('T')[0]!;
+  const postEntries = getBlogPostSlugsWithLastMod();
   
   // Start building the sitemap XML
   let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -24,7 +25,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     <loc>https://acehost.ca/blogs</loc>
     <lastmod>${today}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://acehost.ca/properties</loc>
@@ -57,17 +58,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     <priority>0.7</priority>
   </url>`;
 
-  // Add blog articles
-  allArticles.forEach((article: Article) => {
-    // Extract the slug from the link
-    const slug = article.link.split('/').pop();
-    
+  // All blog posts from filesystem (keeps sitemap in sync with published routes; critical for Google)
+  postEntries.forEach(({ slug, lastmod }) => {
     sitemap += `
   <url>
     <loc>https://acehost.ca/post/${slug}</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
   </url>`;
   });
 

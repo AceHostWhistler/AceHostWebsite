@@ -43,6 +43,15 @@ const blogPostsData: BlogPost[] = [
       "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05891.jpg",
   },
   {
+    slug: "behind-the-curtain-at-acehost-sustainable-luxury-property-management-in-whistler-bc",
+    title:
+      "Behind the Curtain at AceHost: Sustainable Luxury Property Management in Whistler, BC",
+    category: "Property Management, Sustainability",
+    readTime: "5 min read",
+    heroImage:
+      "/photos/post/luxury-property-management-investment-opportunities-in-whistler/hero.jpg",
+  },
+  {
     slug: "best-luxury-airbnb-ski-in-ski-out-vacation-rentals-in-whistler-for-large-groups",
     title:
       "Best Luxury Airbnb Ski in Ski out Vacation Rentals in Whistler for Large Groups | AceHost",
@@ -258,16 +267,66 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 };
 
+const BLOGS_URL = "https://acehost.ca/blogs";
+const BLOGS_DESC =
+  "Explore the AceHost blog for insights on luxury accommodations in Whistler, property management tips, seasonal ski reports, and exclusive travel experiences.";
+
 const BlogIndex = ({ blogPosts }: BlogIndexProps) => {
+  const listStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": "https://acehost.ca/blogs#blog-itemlist",
+    name: "AceHost Whistler blog",
+    numberOfItems: blogPosts.length,
+    itemListElement: blogPosts.map((post, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: post.title,
+      url: `https://acehost.ca/post/${post.slug}`,
+    })),
+  };
+  const pageStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "The AceHost Blog | Luxury Whistler Vacation Rentals & Tips",
+    url: BLOGS_URL,
+    description: BLOGS_DESC,
+    isPartOf: {
+      "@type": "WebSite",
+      name: "AceHost Whistler",
+      url: "https://acehost.ca",
+    },
+    mainEntity: { "@id": `${BLOGS_URL}#blog-itemlist` },
+  };
+
   return (
     <>
       <Head>
         <title>
           The AceHost Blog | Luxury Whistler Vacation Rentals & Tips
         </title>
+        <meta name="description" content={BLOGS_DESC} />
+        <link rel="canonical" href={BLOGS_URL} />
         <meta
-          name="description"
-          content="Explore the AceHost blog for insights on luxury accommodations in Whistler, property management tips, seasonal ski reports, and exclusive travel experiences."
+          name="robots"
+          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="The AceHost Blog | Luxury Whistler Vacation Rentals & Tips"
+        />
+        <meta property="og:description" content={BLOGS_DESC} />
+        <meta property="og:url" content={BLOGS_URL} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [pageStructuredData, listStructuredData],
+            }),
+          }}
         />
       </Head>
 
@@ -280,10 +339,13 @@ const BlogIndex = ({ blogPosts }: BlogIndexProps) => {
               The AceHost Blog
             </h1>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-              {blogPosts.map((post, index) => (
+            <div
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+              id="blog-itemlist"
+            >
+              {blogPosts.map((post) => (
                 <div
-                  key={index}
+                  key={post.slug}
                   className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300"
                 >
                   <Link href={`/post/${post.slug}`} className="block">

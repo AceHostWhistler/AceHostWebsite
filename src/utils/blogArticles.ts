@@ -169,7 +169,67 @@ export const allArticles: Article[] = [
     readTime: "20 min read",
     link: "/post/whistlers-luxury-rental-escapes",
     coverImage: "/photos/post/whistlers-luxury-rental-escapes/hero.jpg",
-  }
+  },
+  {
+    title:
+      "10 Reasons Why You Must Visit Whistler Canada For Your Next Winter Ski Vacation",
+    category: "Tourism",
+    description:
+      "From world-class skiing to summer adventures, discover why Whistler should top your travel list.",
+    readTime: "15 min read",
+    link: "/post/10-reasons-why-you-must-visit-whistler-canada-for-your-next-winter-ski-vacation",
+    coverImage:
+      "/photos/post/10-reasons-why-you-must-visit-whistler-canada-for-your-next-winter-ski-vacation/Hero.jpg",
+  },
+  {
+    title: "Whistler: Luxury Vacation Haven | 20 reasons to visit Whistler",
+    category: "Travel and Destination Guides",
+    description:
+      "A destination guide to Whistler: luxury travel, top experiences, and why the mountains keep guests coming back.",
+    readTime: "10 min read",
+    link: "/post/whistler-luxury-vacation-haven",
+    coverImage: "/photos/post/whistler-luxury-vacation-haven/hero.jpeg",
+  },
+  {
+    title: "Luxury Property Management & Investment Opportunities in Whistler",
+    category: "Property Management",
+    description:
+      "Explore investment opportunities and professional management for luxury Whistler vacation homes.",
+    readTime: "13 min read",
+    link: "/post/luxury-property-management-investment-opportunities-in-whistler",
+    coverImage:
+      "/photos/post/luxury-property-management-investment-opportunities-in-whistler/hero.jpg",
+  },
+  {
+    title:
+      "New AceHost Luxury Airbnb Highlight | The Best 4 Bedroom You Can Find in All of Whistler, Located on the Golf Course with Stunning Views!",
+    category: "Property Highlight",
+    description: "A standout four-bedroom Whistler home on the golf course with premium views and amenities.",
+    readTime: "8 min read",
+    link: "/post/new-acehost-luxury-airbnb-highlight-best-4-bedroom-whistler-golf-course-views",
+    coverImage:
+      "/photos/properties/Muirfield Golf Course/01 - 20250820 A7M4 01 A1_00497-Edit.jpg",
+  },
+  {
+    title: "Whistler's Summer Paradise: Luxury Vacation Homes for the Perfect Mountain Getaway",
+    category: "Luxury Properties, Summer Travel",
+    description: "Make the most of Whistler in summer: lakes, golf, trails, and luxury homes.",
+    readTime: "15 min read",
+    link: "/post/whistlers-summer-paradise-luxury-vacation-homes-for-the-perfect-mountain-getaway",
+    coverImage:
+      "/photos/post/whistlers-summer-paradise-luxury-vacation-homes-for-the-perfect-mountain-getaway/hero.jpg",
+  },
+  {
+    title:
+      "Behind the Curtain at AceHost: Sustainable Luxury Property Management in Whistler, BC",
+    category: "Property Management, Sustainability",
+    description:
+      "How AceHost balances sustainability with luxury in Whistler property management and guest experience.",
+    readTime: "5 min read",
+    link: "/post/behind-the-curtain-at-acehost-sustainable-luxury-property-management-in-whistler-bc",
+    coverImage:
+      "/photos/post/luxury-property-management-investment-opportunities-in-whistler/hero.jpg",
+  },
 ];
 
 // Function to get related articles excluding the current one
