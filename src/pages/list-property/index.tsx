@@ -334,6 +334,28 @@ const ListProperty = () => {
         </div>
       </div>
 
+      <section
+        className="bg-white border-b border-gray-100 py-12 sm:py-14"
+        aria-label="Whistler property investment guide"
+      >
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-xl border border-gray-200 bg-gray-50 p-6 sm:p-8">
+            <p className="text-gray-800 text-base sm:text-lg leading-relaxed mb-5">
+              For a more detailed breakdown on investing in a property in
+              Whistler, or renting your own home out, have a look at the math
+              behind renting &amp; investing in Whistler. We are happy to help
+              find you the perfect Whistler rental property investment!
+            </p>
+            <Link
+              href="/post/is-owning-a-vacation-rental-in-whistler-worth-it-2026"
+              className="inline-flex items-center justify-center rounded-lg bg-black px-6 py-3.5 text-base font-semibold text-white transition-colors hover:bg-gray-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2"
+            >
+              Whistler property investment &amp; listing
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Core Values/Features - Clean cards with icons */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
