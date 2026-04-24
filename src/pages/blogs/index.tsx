@@ -30,7 +30,8 @@ const blogPostsData: BlogPost[] = [
       "The Best Time to Visit Whistler for Luxury Travelers, Winter, Summer, Christmas, or Shoulder Season? | AceHost",
     category: "Luxury Travel, Whistler",
     readTime: "14 min read",
-    heroImage: "/Screenshot 2026-04-23 at 5.17.22\u202fPM.png",
+    heroImage:
+      "/photos/properties/2919 Heritage/20230104_204342jpg.jpg",
   },
   {
     slug: "self-managing-vs-hiring-a-whistler-property-manager-what-owners-need-to-know",

@@ -12,7 +12,8 @@ const IMG_SNOW = "/Screenshot 2026-04-23 at 5.17.22\u202fPM.png";
 const IMG_RESTAURANT = "/Screenshot 2026-04-23 at 5.17.44\u202fPM.png";
 const IMG_SUMMER_VILLAGE = "/Screenshot 2026-04-23 at 5.18.12\u202fPM.png";
 
-const HERO = IMG_SNOW;
+const HERO =
+  "/photos/properties/2919 Heritage/20230104_204342jpg.jpg";
 const HERO_URL = new URL(HERO, "https://acehost.ca").href;
 const PUBLISH_DATE = "April 24, 2026";
 const ISO_MOD = "2026-04-24T12:00:00-07:00";
@@ -91,7 +92,7 @@ export default function BlogPost() {
               <div className="relative w-full aspect-[16/9] mb-8 rounded-xl overflow-hidden">
                 <Image
                   src={HERO}
-                  alt="Whistler Blackcomb snow and winter mountain conditions"
+                  alt="Luxury ski-in ski-out home in Whistler Kadenwood at dusk"
                   fill
                   className="object-cover"
                   priority
@@ -155,6 +156,14 @@ export default function BlogPost() {
                     className="object-cover"
                   />
                 </div>
+              </div>
+              <div className="relative aspect-[16/10] my-8 rounded-xl overflow-hidden not-prose">
+                <Image
+                  src={IMG_SNOW}
+                  alt="Whistler Blackcomb snow and winter mountain conditions"
+                  fill
+                  className="object-cover"
+                />
               </div>
 
               <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">

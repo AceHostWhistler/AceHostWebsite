@@ -18,7 +18,8 @@ export const allArticles: Article[] = [
       "Wondering when to visit Whistler? From Christmas magic and peak powder to sunny March ski days, bluebird April laps, summer patios, and shoulder-season dining specials, here's the best time to visit Whistler for luxury travelers.",
     readTime: "14 min read",
     link: "/post/best-time-to-visit-whistler-for-luxury-travelers",
-    coverImage: "/Screenshot 2026-04-23 at 5.17.22\u202fPM.png",
+    coverImage:
+      "/photos/properties/2919 Heritage/20230104_204342jpg.jpg",
   },
   {
     title:
