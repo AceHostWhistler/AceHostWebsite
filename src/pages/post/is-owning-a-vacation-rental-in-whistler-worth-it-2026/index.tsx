@@ -99,7 +99,31 @@ export default function BlogPost() {
                 </span>
                 <span>15 min read</span>
               </div>
-              <div className="relative w-full aspect-[16/9] mb-8 rounded-xl overflow-hidden">
+            </div>
+
+            <div className="prose prose-lg max-w-none">
+              <p className="text-xl text-gray-800 leading-relaxed">
+                Whistler has long been one of those destinations people dream
+                about before they ever get here.
+              </p>
+
+              <div className="not-prose my-8 rounded-xl border border-gray-200 bg-gray-50 p-6 sm:p-8">
+                <p className="text-gray-800 text-base sm:text-lg leading-relaxed mb-5">
+                  For a more detailed breakdown on investing in a property in
+                  Whistler, or renting your own home out, have a look at the
+                  math behind renting &amp; investing in Whistler. We are happy
+                  to help find you the perfect Whistler rental property
+                  investment!
+                </p>
+                <Link
+                  href="/list-property"
+                  className="inline-flex items-center justify-center rounded-lg bg-black px-6 py-3.5 text-base font-semibold text-white transition-colors hover:bg-gray-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2"
+                >
+                  Whistler property investment &amp; listing
+                </Link>
+              </div>
+
+              <div className="not-prose relative w-full aspect-[16/9] mb-8 rounded-xl overflow-hidden max-w-full">
                 <Image
                   src={COVER_IMAGE}
                   alt="Luxury Whistler home at Tyndall Lodge"
@@ -109,13 +133,6 @@ export default function BlogPost() {
                   sizes="(max-width: 1024px) 100vw, 896px"
                 />
               </div>
-            </div>
-
-            <div className="prose prose-lg max-w-none">
-              <p className="text-xl text-gray-800 leading-relaxed">
-                Whistler has long been one of those destinations people dream
-                about before they ever get here.
-              </p>
               <p>
                 It is a bucket-list trip for skiers, families, and luxury
                 travelers from all over the world. That alone matters when you
