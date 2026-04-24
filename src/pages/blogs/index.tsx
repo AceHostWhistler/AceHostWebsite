@@ -25,6 +25,14 @@ interface BlogIndexProps {
 // In a production app, you'd extract metadata from the actual files
 const blogPostsData: BlogPost[] = [
   {
+    slug: "best-time-to-visit-whistler-for-luxury-travelers",
+    title:
+      "The Best Time to Visit Whistler for Luxury Travelers, Winter, Summer, Christmas, or Shoulder Season? | AceHost",
+    category: "Luxury Travel, Whistler",
+    readTime: "14 min read",
+    heroImage: "/Screenshot 2026-04-23 at 5.17.22\u202fPM.png",
+  },
+  {
     slug: "self-managing-vs-hiring-a-whistler-property-manager-what-owners-need-to-know",
     title:
       "Self-Managing vs Hiring a Whistler Property Manager, What Owners Need to Know | AceHost",
