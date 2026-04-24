@@ -401,7 +401,7 @@ const ListProperty = () => {
                   <div className="text-sm text-gray-600">Overall Rating</div>
                 </div>
                 <div className="bg-white shadow-sm p-4 rounded-xl">
-                  <div className="text-3xl font-bold text-black">492</div>
+                  <div className="text-3xl font-bold text-black">750</div>
                   <div className="text-sm text-gray-600">Reviews</div>
                 </div>
               </div>
