@@ -340,150 +340,199 @@ const CotswoldsUKSohoFarmHouse = () => {
             </div>
           </div>
           
-          {/* Accommodation Section */}
+          {/* Amenities & Bedroom Layout */}
           <div className="max-w-6xl mx-auto px-6 md:px-10 lg:px-8 mb-24">
-            <div className="mb-16 text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Accommodation Details</h2>
+            <div className="mb-14 text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Amenities & Features</h2>
               <p className="text-gray-700 max-w-3xl mx-auto">
-                Designed for the most discerning guests, this property combines rustic charm with modern luxury to create an unforgettable Cotswolds experience.
+                Premium interior comfort, countryside outdoor living, and a dedicated wellness setup designed for extended luxury stays.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              <div className="bg-gray-50 rounded-xl p-8 md:p-10">
-                <h3 className="text-2xl font-bold mb-6">Main House (6 bedrooms) (280m²)</h3>
-                <p className="text-gray-700 mb-6">
-                  The heart of the estate features six thoughtfully designed bedrooms and four elegant bathrooms, perfect for families, groups, or special gatherings. Bedroom configurations include:
-                </p>
-                <ul className="list-disc pl-5 space-y-2 mb-6 text-gray-700">
-                  <li>1 Emperor King</li>
-                  <li>2 Super Kings</li>
-                  <li>1 King</li>
-                  <li>1 Double</li>
-                  <li>1 Single</li>
-                </ul>
-                <p className="text-gray-700 mb-6">
-                  Two of the bedrooms have spa-like ensuite bathrooms, while the other bedrooms share a large bathroom with a separate tub and walk-in shower. There's also a charming powder room on the main floor.
-                </p>
-                <p className="text-gray-700">
-                  Enjoy two cozy living rooms (ideal for lounging or movie nights), two dedicated office spaces for remote work, and a gorgeous Devol designer kitchen complete with an iconic AGA oven, two fridges, and a brand-new washer/dryer.
-                </p>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+              {[
+                {
+                  title: "Interior",
+                  image: "/optimized/cotswolds-all/cotswolds-all-23.jpg",
+                  items: [
+                    "Devol designer kitchen with iconic AGA oven",
+                    "Spacious living and dining areas",
+                    "Luxury linens and towels",
+                    "En-suite bathrooms with premium fixtures",
+                    "Two dedicated office spaces",
+                  ],
+                },
+                {
+                  title: "Outdoor",
+                  image: "/optimized/cotswolds-all/cotswolds-all-11.jpg",
+                  items: [
+                    "Private tennis court with new surface",
+                    "Outdoor seating and dining areas",
+                    "Charming private pond",
+                    "Bocce ball and horseshoes",
+                    "Outdoor firepit",
+                  ],
+                },
+                {
+                  title: "Wellness",
+                  image: "/optimized/cotswolds-all/cotswolds-all-74.jpg",
+                  items: [
+                    "Infrared sauna",
+                    "Private hot tub",
+                    "Refreshing cold plunge pool",
+                    "Welcome package upon arrival",
+                    "Concierge services",
+                  ],
+                },
+              ].map((amenity) => (
+                <div key={amenity.title} className="bg-white rounded-xl shadow-md overflow-hidden">
+                  <div className="relative h-44 bg-gray-200">
+                    <img
+                      src={amenity.image}
+                      alt={`${amenity.title} - Cotswolds Estate`}
+                      className="object-cover w-full h-full"
+                      loading="lazy"
+                      width={420}
+                      height={280}
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-2xl font-semibold text-[#3F5F2A] mb-4">{amenity.title}</h3>
+                    <ul className="space-y-2 text-gray-700">
+                      {amenity.items.map((item) => (
+                        <li key={item}>✓ {item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
 
-              <div className="bg-gray-50 rounded-xl p-8 md:p-10">
-                <h3 className="text-2xl font-bold mb-6">Annex House (2 bedrooms) (40m²)</h3>
-                <p className="text-gray-700 mb-6">
-                  Tucked away behind the newly surfaced private tennis court, the annex is a peaceful escape of its own. It features:
-                </p>
-                <ul className="list-disc pl-5 space-y-2 mb-6 text-gray-700">
-                  <li>1 King bedroom</li>
-                  <li>1 bedroom with either two singles or a king configuration</li>
-                  <li>1 full bathroom</li>
-                  <li>A compact kitchenette—perfect for early risers or night owls who want their own space</li>
-                </ul>
-                <h3 className="text-2xl font-bold mb-6 mt-8">Wellness & Outdoor Living</h3>
-                <p className="text-gray-700 mb-6">
-                  The grounds are where the magic truly unfolds. Indulge in your own private outdoor spa, featuring:
-                </p>
-                <ul className="list-disc pl-5 space-y-2 mb-6 text-gray-700">
-                  <li>An infrared sauna</li>
-                  <li>A bubbling hot tub</li>
-                  <li>A refreshing cold plunge pool</li>
-                </ul>
-                <p className="text-gray-700">
-                  Stroll past the little barn and you'll find a charming private pond—perfect for morning coffee or sunset wine. Challenge your group to a round of bocce ball or horseshoes, or simply unwind by the outdoor firepit under the stars.
-                </p>
+            <div className="mb-12 text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Bedrooms</h2>
+            </div>
+
+            <div className="mb-10">
+              <h3 className="text-2xl font-bold mb-3">Main House (280m²)</h3>
+              <p className="text-gray-700 mb-6">
+                The heart of the estate features six thoughtfully designed bedrooms and four elegant bathrooms, perfect for families, groups, or special gatherings. Two of the bedrooms have spa-like ensuite bathrooms, while the other bedrooms share a large bathroom with a separate tub and walk-in shower. There is also a charming powder room on the main floor.
+              </p>
+              <p className="text-gray-700 mb-8">
+                Enjoy two cozy living rooms (ideal for lounging or movie nights), two dedicated office spaces for remote work, and a gorgeous Devol designer kitchen complete with an iconic AGA oven, two fridges, and a brand-new washer/dryer.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                {[
+                  {
+                    title: "Bedroom 1",
+                    type: "Emperor King",
+                    features: "Ensuite bathroom with spa amenities, luxurious linens",
+                    location: "Main House - Master Suite",
+                    image: "/photos/properties/Cotswolds UK - Soho Farm House/224A5405.jpg",
+                  },
+                  {
+                    title: "Bedroom 2",
+                    type: "Super King",
+                    features: "Ensuite bathroom, premium bedding",
+                    location: "Main House",
+                    image: "/photos/properties/Cotswolds UK - Soho Farm House/224A5410.jpg",
+                  },
+                  {
+                    title: "Bedroom 3",
+                    type: "Super King",
+                    features: "Shared bathroom access, countryside views",
+                    location: "Main House",
+                    image: "/photos/properties/Cotswolds UK - Soho Farm House/224A5417.jpg",
+                  },
+                  {
+                    title: "Bedroom 4",
+                    type: "King",
+                    features: "Shared bathroom access, cozy retreat",
+                    location: "Main House",
+                    image: "/photos/properties/Cotswolds UK - Soho Farm House/224A5423.jpg",
+                  },
+                  {
+                    title: "Bedroom 5",
+                    type: "Double",
+                    features: "Shared bathroom access, charming space",
+                    location: "Main House",
+                    image: "/photos/properties/Cotswolds UK - Soho Farm House/224A5430.jpg",
+                  },
+                  {
+                    title: "Bedroom 6",
+                    type: "Single",
+                    features: "Shared bathroom access, perfect for one person",
+                    location: "Main House (main floor no stairs)",
+                    image: "/photos/properties/Cotswolds UK - Soho Farm House/224A5359.jpg",
+                  },
+                ].map((bedroom) => (
+                  <div key={bedroom.title} className="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div className="relative h-44 bg-gray-200">
+                      <img
+                        src={bedroom.image}
+                        alt={`${bedroom.title} - Cotswolds Estate`}
+                        className="object-cover w-full h-full"
+                        loading="lazy"
+                        width={420}
+                        height={280}
+                        style={{ objectFit: "cover" }}
+                      />
+                    </div>
+                    <div className="p-5">
+                      <h4 className="text-3xl font-medium text-[#3F5F2A] mb-2">{bedroom.title}</h4>
+                      <p className="text-gray-800 mb-1"><span className="font-semibold">Type:</span> {bedroom.type}</p>
+                      <p className="text-gray-800 mb-2"><span className="font-semibold">Features:</span> {bedroom.features}</p>
+                      <p className="text-gray-500 italic text-sm">{bedroom.location}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-          </div>
 
-          <div className="max-w-6xl mx-auto px-6 md:px-10 lg:px-8 mb-24">
-            <div className="flex flex-col md:flex-row gap-12">
-              <div className="md:w-1/2">
-                <div className="relative aspect-[4/3] mb-4 rounded-xl overflow-hidden shadow-lg bg-gray-200">
-                  <img
-                    src="/optimized/cotswolds-interior.jpg"
-                    alt="Cotswolds UK - Soho Farm House - Premium Amenities"
-                    className="object-cover hover:scale-105 transition-transform duration-500 w-full h-full"
-                    loading="lazy"
-                    width={640} 
-                    height={480}
-                    style={{ aspectRatio: '4/3', objectFit: 'cover' }}
-                  />
-                </div>
-              </div>
-              <div className="md:w-1/2">
-                <div className="flex items-center mb-6">
-                  <div className="bg-black text-white p-4 rounded-full mr-4">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M13 4.06871V2H11V4.06871C7.38128 4.56343 4.56343 7.38128 4.06871 11H2V13H4.06871C4.56343 16.6187 7.38128 19.4366 11 19.9313V22H13V19.9313C16.6187 19.4366 19.4366 16.6187 19.9313 13H22V11H19.9313C19.4366 7.38128 16.6187 4.56343 13 4.06871ZM12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18Z"
-                        fill="white"
+            <div className="mb-10">
+              <h3 className="text-2xl font-bold mb-3">Annex House (40m²)</h3>
+              <p className="text-gray-700 mb-8">
+                Tucked away behind the newly surfaced private tennis court, the annex is a peaceful escape of its own. It features a full bathroom and a compact kitchenette, perfect for early risers or night owls who want their own space.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {[
+                  {
+                    title: "Bedroom 7",
+                    type: "King",
+                    features: "Private bathroom access, secluded retreat",
+                    location: "Annex House",
+                    image: "/photos/properties/Cotswolds UK - Soho Farm House/224A7863.jpg",
+                  },
+                  {
+                    title: "Bedroom 8",
+                    type: "Flexible (Two Singles or King)",
+                    features: "Shared bathroom in annex, adaptable configuration",
+                    location: "Annex House",
+                    image: "/photos/properties/Cotswolds UK - Soho Farm House/224A7847.jpg",
+                  },
+                ].map((bedroom) => (
+                  <div key={bedroom.title} className="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div className="relative h-44 bg-gray-200">
+                      <img
+                        src={bedroom.image}
+                        alt={`${bedroom.title} - Cotswolds Estate`}
+                        className="object-cover w-full h-full"
+                        loading="lazy"
+                        width={420}
+                        height={280}
+                        style={{ objectFit: "cover" }}
                       />
-                      <path
-                        d="M12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8Z"
-                        fill="white"
-                      />
-                    </svg>
+                    </div>
+                    <div className="p-5">
+                      <h4 className="text-3xl font-medium text-[#3F5F2A] mb-2">{bedroom.title}</h4>
+                      <p className="text-gray-800 mb-1"><span className="font-semibold">Type:</span> {bedroom.type}</p>
+                      <p className="text-gray-800 mb-2"><span className="font-semibold">Features:</span> {bedroom.features}</p>
+                      <p className="text-gray-500 italic text-sm">{bedroom.location}</p>
+                    </div>
                   </div>
-                  <h2 className="text-2xl font-bold">Additional Amenities</h2>
-                </div>
-                <ul className="space-y-4 text-gray-700">
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-black mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                    </svg>
-                    <span>Electric car charger</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-black mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                    </svg>
-                    <span>Parking for up to 6 cars</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-black mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                    </svg>
-                    <span>Extendable indoor dining table (seats 8, extends to 14)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-black mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                    </svg>
-                    <span>2 fireplaces (1 gas, 1 wood-burning)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-black mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                    </svg>
-                    <span>Outdoor dining area and BBQ</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-black mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                    </svg>
-                    <span>Private tennis court (New photos coming soon as court has recently been completely renovated and redone to pro standards)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-black mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                    </svg>
-                    <span>Outdoor wellness area with sauna, hot tub and cold plunge</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-black mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                    </svg>
-                    <span>Private 2-acre grounds with pond</span>
-                  </li>
-                </ul>
+                ))}
               </div>
             </div>
           </div>
