@@ -353,7 +353,7 @@ const CotswoldsUKSohoFarmHouse = () => {
               {[
                 {
                   title: "Interior",
-                  image: "/optimized/cotswolds-all/cotswolds-all-23.jpg",
+                  image: "/photos/properties/Cotswolds UK - Soho Farm House/224A5313.jpg",
                   items: [
                     "Devol designer kitchen with iconic AGA oven",
                     "Spacious living and dining areas",
@@ -375,7 +375,7 @@ const CotswoldsUKSohoFarmHouse = () => {
                 },
                 {
                   title: "Wellness",
-                  image: "/optimized/cotswolds-all/cotswolds-all-74.jpg",
+                  image: "/photos/properties/Cotswolds UK - Soho Farm House/012A1323.jpg",
                   items: [
                     "Infrared sauna",
                     "Private hot tub",
