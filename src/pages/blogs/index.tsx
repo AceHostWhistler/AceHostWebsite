@@ -159,7 +159,7 @@ const blogPostsData: BlogPost[] = [
     category: "Property Management",
     readTime: "15 min read",
     heroImage:
-      "/photos/properties/Falcon/03 - 20250827 A7M4 01 DSC00224-Edit.jpg",
+      "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05424.jpg",
   },
   {
     slug: "discover-the-ultimate-ski-in-ski-out-luxury-chalet-homes-in-whistler-canada",

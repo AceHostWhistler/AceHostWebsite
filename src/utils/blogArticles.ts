@@ -139,7 +139,8 @@ export const allArticles: Article[] = [
     description: "Why professional property management matters for Whistler vacation homes",
     readTime: "15 min read",
     link: "/post/highlighting-the-importance-of-a-property-management-company-for-your-whistler-investment-home",
-    coverImage: "/photos/post/highlighting-the-importance-of-a-property-management-company-for-your-whistler-investment-home/Hero.jpg",
+    coverImage:
+      "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05424.jpg",
   },
   {
     title: "Discover the Ultimate Ski-in Ski-out Luxury Chalet Homes in Whistler, Canada",
