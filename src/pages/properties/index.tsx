@@ -1866,40 +1866,43 @@ export default function Properties() {
     );
 
     structuredData.numberOfItems = allProperties.length;
-    structuredData.itemListElement = allProperties.map((property, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      item: {
-        "@type": "Accommodation",
-        name: property.name,
-        image: property.images[0],
-        description: property.description,
-        accommodationCategory: "Vacation Rental",
-        numberOfRooms: property.bedrooms,
-        amenityFeature: property.features.map((feature) => ({
-          "@type": "LocationFeatureSpecification",
-          name: feature,
-        })),
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: property.location,
+    structuredData.itemListElement = allProperties.map((property, index) => {
+      const propertyUrl = property.link
+        ? `https://acehost.ca${property.link}`
+        : `https://acehost.ca/listings/${property.id}`;
+
+      return {
+        "@type": "ListItem",
+        position: index + 1,
+        item: {
+          "@type": "Accommodation",
+          name: property.name,
+          image: property.images[0],
+          description: property.description,
+          accommodationCategory: "Vacation Rental",
+          numberOfRooms: property.bedrooms,
+          amenityFeature: property.features.map((feature) => ({
+            "@type": "LocationFeatureSpecification",
+            name: feature,
+          })),
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: property.location,
+          },
+          offers: {
+            "@type": "Offer",
+            priceCurrency: "CAD",
+            priceValidUntil: new Date(
+              new Date().setFullYear(new Date().getFullYear() + 1)
+            )
+              .toISOString()
+              .split("T")[0],
+            url: propertyUrl,
+            availability: "https://schema.org/InStock",
+          },
         },
-        // Add offers for each property
-        offers: {
-          "@type": "Offer",
-          priceCurrency: "CAD",
-          priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
-          url: `/listings/${property.id}`,
-          availability: "https://schema.org/InStock"
-        },
-        // Add aggregate rating (generic positive rating)
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: 4.8,
-          reviewCount: 15
-        }
-      },
-    }));
+      };
+    });
   }, [displayProperties, structuredData, propertyCategories]);
 
   // Add/remove amenity filter
@@ -2088,25 +2091,24 @@ export default function Properties() {
             <div className="relative w-full h-full">
               {isCotswoldsProperty ? (
                 <div className="relative w-full h-full">
-                  <img
+                  <Image
                     src="/optimized/cotswolds-cover.jpg"
                     alt={`${property.name} - Luxury ${property.location === 'whistler' ? 'Whistler' : property.location === 'vancouver' ? 'Vancouver' : 'Worldwide'} vacation rental with ${property.bedrooms} bedrooms, accommodating up to ${property.guests} guests`}
+                    fill
                     className="object-cover w-full h-full"
-                    style={{ aspectRatio: '3/2', objectFit: 'cover' }}
-                    onError={(e) => {
-                      // Fallback to another image if this one fails
-                      const target = e.target as HTMLImageElement;
-                      target.onerror = null;
-                      target.src = "/photos/properties/Cotswolds UK - Soho Farm House/224A5292.jpg";
-                    }}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    quality={85}
                   />
                 </div>
               ) : (
-                <img
+                <Image
                   src={property.images[0]}
                   alt={`${property.name} - Luxury ${property.location === 'whistler' ? 'Whistler' : property.location === 'vancouver' ? 'Vancouver' : 'Worldwide'} vacation rental with ${property.bedrooms} bedrooms, accommodating up to ${property.guests} guests`}
+                  fill
                   className="w-full h-full object-cover"
                   loading="lazy"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  quality={80}
                 />
               )}
             </div>

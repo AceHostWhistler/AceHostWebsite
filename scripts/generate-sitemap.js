@@ -14,9 +14,17 @@ const EXCLUDED_PATHS = [
   '500.tsx',
   '_error.tsx',
 ];
-
-// Get current date in YYYY-MM-DD format
-const currentDate = new Date().toISOString().split('T')[0];
+const EXCLUDED_ROUTES = new Set([
+  '/upload',
+  '/services',
+  '/services/drywall',
+  '/services/flooring',
+  '/services/kitchen-bath',
+  '/services/mold',
+  '/services/structural-drying',
+  '/about',
+  '/blog',
+]);
 
 // Function to recursively get all pages
 function getAllPages() {
@@ -25,34 +33,50 @@ function getAllPages() {
   
   // Filter out excluded paths and process the valid ones
   return files
-    .filter(file => !EXCLUDED_PATHS.some(excluded => file.startsWith(excluded)))
-    .map(file => {
+    .filter((file) => !EXCLUDED_PATHS.some((excluded) => file.startsWith(excluded)))
+    .map((file) => {
       // Replace index files with directory path
       const url = file
         .replace(/\.(tsx|jsx|ts|js)$/, '')
         .replace(/\/index$/, '');
       
       // Create URL path with leading slash
-      return url === 'index' ? '/' : `/${url}`;
-    });
+      const route = url === 'index' ? '/' : `/${url}`;
+      const absolutePath = path.join(PAGES_DIR, file);
+      const lastmod = fs.statSync(absolutePath).mtime.toISOString().split('T')[0];
+
+      return { route, lastmod };
+    })
+    .filter(({ route }) => !EXCLUDED_ROUTES.has(route))
+    .filter(({ route }) => !route.includes('.backup'));
 }
 
 // Generate a single URL entry for the sitemap
-function generateUrlEntry(path, priority = 0.8) {
-  const url = path === '/' ? SITE_URL : `${SITE_URL}${path}`;
+function generateUrlEntry(route, lastmod, priority = 0.8, changefreq = 'weekly') {
+  const url = route === '/' ? SITE_URL : `${SITE_URL}${route}`;
   
   // Set higher priority for home page and key sections
   let finalPriority = priority;
-  if (path === '/') {
+  let finalChangefreq = changefreq;
+  if (route === '/') {
     finalPriority = 1.0;
-  } else if (path.includes('/post/')) {
+    finalChangefreq = 'weekly';
+  } else if (route.includes('/post/')) {
     finalPriority = 0.7;
+    finalChangefreq = 'weekly';
+  } else if (
+    route.includes('/listings/') ||
+    route.includes('/worldwide-listings/') ||
+    route.includes('/vancouver-listings/')
+  ) {
+    finalPriority = 0.8;
+    finalChangefreq = 'monthly';
   }
 
   return `  <url>
     <loc>${url}</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>${finalChangefreq}</changefreq>
     <priority>${finalPriority}</priority>
   </url>`;
 }
@@ -63,7 +87,7 @@ function generateSitemap() {
   
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => generateUrlEntry(page)).join('\n')}
+${pages.map((page) => generateUrlEntry(page.route, page.lastmod)).join('\n')}
 </urlset>`;
 
   fs.writeFileSync(OUTPUT_PATH, sitemap);

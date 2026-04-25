@@ -8,21 +8,22 @@ const nextConfig = {
     ...i18n,
     localeDetection: false
   },
-  // Configure sitemap generation
-  async rewrites() {
-    return [
-      {
-        source: '/sitemap.xml',
-        destination: '/api/sitemap',
-      },
-    ];
-  },
   // Add redirects for broken links or SEO improvements
   async redirects() {
     return [
       {
         source: '/luxury-rentals',
         destination: '/properties',
+        permanent: true,
+      },
+      {
+        source: '/blog',
+        destination: '/blogs',
+        permanent: true,
+      },
+      {
+        source: '/about',
+        destination: '/our-story',
         permanent: true,
       },
     ];
@@ -56,6 +57,24 @@ const nextConfig = {
           {
             key: 'Strict-Transport-Security',
             value: 'max-age=63072000; includeSubDomains; preload',
+          },
+        ],
+      },
+      {
+        source: '/upload',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex, nofollow',
+          },
+        ],
+      },
+      {
+        source: '/services/:path*',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex, nofollow',
           },
         ],
       },

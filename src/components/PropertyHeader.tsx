@@ -1,6 +1,8 @@
 import React from 'react';
 import { Users, Bed, Bath } from 'lucide-react';
 import Link from 'next/link';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 interface PropertyHeaderProps {
   title: string;
@@ -29,87 +31,205 @@ const PropertyHeader: React.FC<PropertyHeaderProps> = ({
   contactLink,
   contactText = 'Contact Us',
 }) => {
-  return (
-    <div className="max-w-7xl mx-auto px-4 pt-8">
-      <h1 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-8">
-        {title}
-      </h1>
+  const router = useRouter();
+  const [cleanPath] = (router.asPath || '/').split('?');
+  const canonicalPath = cleanPath.endsWith('/') && cleanPath !== '/' ? cleanPath.slice(0, -1) : cleanPath;
+  const canonicalUrl = `https://acehost.ca${canonicalPath}`;
+  const toNumber = (value: number | string | undefined): number | undefined => {
+    if (value === undefined) return undefined;
+    if (typeof value === 'number') return value;
+    const match = String(value).match(/\d+(\.\d+)?/);
+    return match ? Number(match[0]) : undefined;
+  };
+  const guestCount = toNumber(guests);
+  const bedroomCount = toNumber(bedrooms);
+  const bedCount = toNumber(beds);
+  const bathroomCount = toNumber(bathrooms);
 
-      {/* Property Stats */}
-      <div className="flex flex-wrap justify-center gap-4 mb-8">
-        <div className="bg-gray-900 text-white px-4 py-2 rounded-md flex items-center gap-2">
-          <Users size={20} />
-          <span>{guests} Guests</span>
-        </div>
-        <div className="bg-gray-200 text-gray-900 px-4 py-2 rounded-md flex items-center gap-2">
-          <Bed size={20} />
-          <span>{bedrooms} Bedrooms</span>
-        </div>
-        {beds && (
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://acehost.ca/',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Luxury Rental Homes',
+        item: 'https://acehost.ca/properties',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: title,
+        item: canonicalUrl,
+      },
+    ],
+  };
+
+  const vacationRentalSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'VacationRental',
+    name: title,
+    url: canonicalUrl,
+    description: `${title} vacation rental in Whistler, British Columbia.`,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Whistler',
+      addressRegion: 'BC',
+      addressCountry: 'CA',
+    },
+    numberOfRooms: bedroomCount,
+    occupancy: guestCount
+      ? {
+          '@type': 'QuantitativeValue',
+          value: guestCount,
+        }
+      : undefined,
+    amenityFeature: [
+      {
+        '@type': 'LocationFeatureSpecification',
+        name: 'Ski access',
+        value: title.toLowerCase().includes('ski'),
+      },
+    ],
+    makesOffer: {
+      '@type': 'Offer',
+      url: canonicalUrl,
+      priceCurrency: 'CAD',
+      availability: 'https://schema.org/InStock',
+    },
+  };
+
+  const additionalPropertySchema = {
+    '@context': 'https://schema.org',
+    '@type': 'PropertyValue',
+    name: 'Vacation rental details',
+    valueReference: {
+      '@type': 'DefinedTermSet',
+      name: 'Accommodation specs',
+    },
+    value: JSON.stringify({
+      guests: guestCount,
+      bedrooms: bedroomCount,
+      beds: bedCount,
+      bathrooms: bathroomCount,
+      pricing: {
+        standard: priceRange,
+        winter: winterPrice,
+        holiday: holidayPrice,
+      },
+    }),
+  };
+
+  return (
+    <>
+      <Head>
+        <link rel="up" href="https://acehost.ca/properties" />
+        <link rel="bookmark" href={canonicalUrl} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(vacationRentalSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(additionalPropertySchema) }}
+        />
+      </Head>
+      <nav aria-label="Breadcrumb" className="sr-only">
+        <Link href="/">Home</Link>
+        <Link href="/properties">Luxury Rental Homes</Link>
+        <Link href={canonicalPath || '/'}>{title}</Link>
+      </nav>
+      <div className="max-w-7xl mx-auto px-4 pt-8">
+        <h1 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-8">
+          {title}
+        </h1>
+
+        {/* Property Stats */}
+        <div className="flex flex-wrap justify-center gap-4 mb-8">
+          <div className="bg-gray-900 text-white px-4 py-2 rounded-md flex items-center gap-2">
+            <Users size={20} />
+            <span>{guests} Guests</span>
+          </div>
           <div className="bg-gray-200 text-gray-900 px-4 py-2 rounded-md flex items-center gap-2">
             <Bed size={20} />
-            <span>{beds} Beds</span>
+            <span>{bedrooms} Bedrooms</span>
           </div>
-        )}
-        <div className="bg-gray-200 text-gray-900 px-4 py-2 rounded-md flex items-center gap-2">
-          <Bath size={20} />
-          <span>{bathrooms} Bathrooms</span>
-        </div>
-        <div className="bg-gray-200 text-gray-900 px-4 py-2 rounded-md">
-          <span>{priceRange}</span>
-        </div>
-        {winterPrice && (
+          {beds && (
+            <div className="bg-gray-200 text-gray-900 px-4 py-2 rounded-md flex items-center gap-2">
+              <Bed size={20} />
+              <span>{beds} Beds</span>
+            </div>
+          )}
+          <div className="bg-gray-200 text-gray-900 px-4 py-2 rounded-md flex items-center gap-2">
+            <Bath size={20} />
+            <span>{bathrooms} Bathrooms</span>
+          </div>
           <div className="bg-gray-200 text-gray-900 px-4 py-2 rounded-md">
-            <span>{winterPrice}</span>
+            <span>{priceRange}</span>
           </div>
-        )}
-        {holidayPrice && (
-          <div className="bg-gray-200 text-gray-900 px-4 py-2 rounded-md">
-            <span>{holidayPrice}</span>
-          </div>
-        )}
-      </div>
+          {winterPrice && (
+            <div className="bg-gray-200 text-gray-900 px-4 py-2 rounded-md">
+              <span>{winterPrice}</span>
+            </div>
+          )}
+          {holidayPrice && (
+            <div className="bg-gray-200 text-gray-900 px-4 py-2 rounded-md">
+              <span>{holidayPrice}</span>
+            </div>
+          )}
+        </div>
 
-      {/* Action Buttons */}
-      <div className="flex flex-wrap justify-center gap-4 mb-12">
-        <button
-          onClick={() => document.getElementById('photos')?.scrollIntoView({ behavior: 'smooth' })}
-          className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors"
-        >
-          More Photos
-        </button>
-        <Link
-          href="#details"
-          className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors"
-        >
-          Details
-        </Link>
-        {airbnbLink ? (
-          <a
-            href={airbnbLink}
-            target="_blank"
-            rel="noopener noreferrer"
+        {/* Action Buttons */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <button
+            onClick={() => document.getElementById('photos')?.scrollIntoView({ behavior: 'smooth' })}
             className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors"
           >
-            Book on Airbnb
-          </a>
-        ) : contactLink ? (
+            More Photos
+          </button>
           <Link
-            href={contactLink}
+            href="#details"
             className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors"
           >
-            {contactText}
+            Details
           </Link>
-        ) : (
-          <Link
-            href="/contact"
-            className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors"
-          >
-            Book Now
-          </Link>
-        )}
+          {airbnbLink ? (
+            <a
+              href={airbnbLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors"
+            >
+              Book on Airbnb
+            </a>
+          ) : contactLink ? (
+            <Link
+              href={contactLink}
+              className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors"
+            >
+              {contactText}
+            </Link>
+          ) : (
+            <Link
+              href="/contact"
+              className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors"
+            >
+              Book Now
+            </Link>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
