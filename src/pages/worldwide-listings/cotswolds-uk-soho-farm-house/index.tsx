@@ -596,14 +596,14 @@ const CotswoldsUKSohoFarmHouse = () => {
                     type: "King",
                     features: "Private bathroom access, secluded retreat",
                     location: "Annex House",
-                    image: "/photos/properties/Cotswolds UK - Soho Farm House/224A7863.jpg",
+                    image: "/photos/properties/Cotswolds UK - Soho Farm House/224A7847.jpg",
                   },
                   {
                     title: "Bedroom 8",
                     type: "Flexible (Two Singles or King)",
                     features: "Shared bathroom in annex, adaptable configuration",
                     location: "Annex House",
-                    image: "/photos/properties/Cotswolds UK - Soho Farm House/224A7847.jpg",
+                    image: "/photos/properties/Cotswolds UK - Soho Farm House/224A7863.jpg",
                   },
                 ].map((bedroom) => (
                   <div key={bedroom.title} className="bg-white rounded-xl shadow-md overflow-hidden">
