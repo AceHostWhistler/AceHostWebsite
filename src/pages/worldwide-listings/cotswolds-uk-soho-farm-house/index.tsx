@@ -287,11 +287,104 @@ const CotswoldsUKSohoFarmHouse = () => {
 
           {/* Property Description */}
           <div className="max-w-5xl mx-auto px-6 md:px-10 lg:px-8" id="details">
-            <p className="text-gray-800 mb-8 max-w-3xl mx-auto leading-relaxed text-lg">
-              Welcome to your countryside dream retreat—just 4 minutes by car (or a scenic 30-minute walk through a private trail) from the world-famous Soho Farmhouse. This beautifully renovated 8-bedroom, 5-bathroom stone estate offers over 320m² of luxurious living space across two dwellings, all set on a stunning and serene 2-acre property.
-            </p>
+            <div className="text-gray-800 space-y-6 leading-relaxed text-base md:text-lg">
+              <p>
+                Escape to a stunning estate near Soho Farmhouse, offering a luxurious retreat with an outdoor spa, private tennis court, and cozy annex. This beautiful house is spread across several acres, features 8 bedrooms, a gourmet kitchen, multiple living areas, and 5 bathrooms. Enjoy the hot tub, sauna, and outdoor fire pit.
+              </p>
+              <p>
+                Perfect for families or groups seeking a peaceful Cotswolds getaway in a prestigious, rural setting.
+              </p>
 
-            {/* Added Photo Gallery in Description */}
+              <h3 className="text-2xl font-bold text-gray-900 pt-2">The space</h3>
+              <p>
+                <strong>Main House (6 Bedrooms):</strong> Step inside the heart of the estate, featuring six beautifully appointed bedrooms designed for comfort and relaxation:
+              </p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li><strong>Emperor King Bedroom:</strong> A luxurious retreat with a spacious Emperor-size bed.</li>
+                <li><strong>Super King Bedroom:</strong> Offers a supremely comfortable Super King-size bed.</li>
+                <li><strong>Super King Bedroom:</strong> Another haven with a Super King-size bed.</li>
+                <li><strong>Double Bedroom:</strong> Features a cozy double bed.</li>
+                <li><strong>Double Bedroom:</strong> Another inviting room with a double bed.</li>
+                <li><strong>Single Bedroom:</strong> A comfortable single bed.</li>
+              </ul>
+
+              <p>
+                Two bedrooms boast spa-like ensuite bathrooms, while the remaining bedrooms share a large bathroom complete with a separate tub and a walk-in shower. A charming powder room is also conveniently located on the main floor.
+              </p>
+              <p>
+                Enjoy two inviting living rooms, perfect for unwinding or enjoying movie nights. There are also two dedicated office spaces for remote work. The gorgeous Devol designer kitchen is a chef&apos;s dream, equipped with an iconic AGA oven, a Bosch electric oven and stove, two refrigerators, and a brand-new washer and separate dryer.
+              </p>
+
+              <p>
+                <strong>Annex House (2 Bedrooms):</strong> Discover a private sanctuary in the Annex, nestled behind the tennis court. It features:
+              </p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li><strong>King Bedroom:</strong> A comfortable room with a King-size bed.</li>
+                <li><strong>Flexible Bedroom:</strong> Can be configured with either two single beds or a King-size bed.</li>
+                <li><strong>Full Bathroom:</strong> A well-appointed full bathroom.</li>
+                <li><strong>Kitchenette:</strong> A compact kitchenette, ideal for preparing light meals and snacks.</li>
+              </ul>
+
+              <p>
+                <strong>Wellness &amp; Outdoor Living:</strong> Experience pure relaxation with our outdoor spa area, offering:
+              </p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li><strong>Sauna:</strong> A traditional sauna for a rejuvenating experience.</li>
+                <li><strong>Hot Tub:</strong> Unwind in the hot tub under the open sky.</li>
+                <li><strong>Cold Plunge Pool:</strong> Refresh yourself with a plunge into the cold pool.</li>
+              </ul>
+
+              <p>
+                Enjoy outdoor activities like bocce ball or horseshoes, or simply relax by the outdoor fire pit under the stars.
+              </p>
+
+              <p><strong>Additional Amenities:</strong></p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Electric car charger</li>
+                <li>Parking for up to 6 vehicles.</li>
+                <li>Extendable indoor dining table (seats 8, extends to 12)</li>
+                <li>2 indoor fireplaces (1 gas, 1 wood-burning)</li>
+                <li>Outdoor dining area and BBQ (available from April 1 to October 30).</li>
+              </ul>
+
+              <p>
+                This is not just a house, it&apos;s an experience. A rare blend of country charm and modern luxury, all within striking distance of Soho Farmhouse and the Cotswolds&apos; best.
+              </p>
+
+              <p>
+                <em>*Aesop Toiletries, known for their high-end, plant-based formulations and elegant design, are thoughtfully placed in every bedroom, adding a touch of luxury to your stay.</em>
+              </p>
+              <p>
+                <em>*Full high speed wifi in the main 6-bedroom house and also the Annex!</em>
+              </p>
+              <p>
+                <em>*Cooling fan located in every bedroom and also living spaces, though typically the Cotswolds is cooler at night time compared to London and not needed.</em>
+              </p>
+              <p>
+                <em>BBQ available from April 1 to October 30. BBQ not available in winter.</em>
+              </p>
+              <p>
+                <em>*New Pool: Heated 10ft pool will be available for rentals prior to June 27th, 2026! Located near the outdoor sauna &amp; hot tub, with 6 luxurious sun beds.*</em>
+              </p>
+
+              <p>
+                <strong>Important pet rule:</strong> We welcome a maximum of 2 dogs. Subject to a pet fee, automatically adjusted on the listing when toggled.
+              </p>
+
+              <h3 className="text-2xl font-bold text-gray-900 pt-2">Guest access</h3>
+              <p>
+                No loud noise or use of spa or tennis court after 10 pm, or before 8 am, neighbours need to sleep :)
+              </p>
+              <p>
+                <strong>***For Elderly, our annex is step free, located right next to the main home and tennis court, and has 2 full bedrooms, 1 bathroom with a shower.***</strong> A great option for those looking for step free.
+              </p>
+
+              <h3 className="text-2xl font-bold text-gray-900 pt-2">Other things to note</h3>
+              <p>
+                Perfect getaway for a family or group of 6 to 12 people total, with the option to sleep up to 15.
+              </p>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
               <div className="aspect-[4/3] relative rounded-lg overflow-hidden shadow-md">
                 <img
@@ -537,64 +630,19 @@ const CotswoldsUKSohoFarmHouse = () => {
             </div>
           </div>
 
-          {/* Pricing and Terms Section */}
-          <div className="max-w-5xl mx-auto px-6 md:px-10 lg:px-8 mb-24 bg-gray-50 rounded-xl p-10">
-            <h2 className="text-2xl font-bold mb-8 text-center">Pricing and Terms</h2>
-            
-            <div className="mb-12">
-              <h3 className="text-xl font-semibold mb-6">Rates</h3>
-              <div className="overflow-x-auto">
-                <table className="min-w-full border border-gray-300 rounded-lg shadow-sm">
-                  <thead>
-                    <tr className="bg-gray-100">
-                      <th className="px-6 py-4 text-left text-sm font-medium text-gray-700 uppercase tracking-wider border-b">Rate</th>
-                      <th className="px-6 py-4 text-left text-sm font-medium text-gray-700 uppercase tracking-wider border-b">Details</th>
-                    </tr>
-                  </thead>
-                  <tbody className="bg-white divide-y divide-gray-300">
-                    <tr>
-                      <td className="px-6 py-4 whitespace-nowrap border-r">Price Range</td>
-                      <td className="px-6 py-4 whitespace-nowrap">£1,100-£2,300 per night</td>
-                    </tr>
-                    <tr>
-                      <td className="px-6 py-4 whitespace-nowrap border-r">Minimum Stay</td>
-                      <td className="px-6 py-4 whitespace-nowrap">3 nights</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            
-            <div className="mb-12">
-              <h3 className="text-xl font-semibold mb-4">Payment Policy</h3>
-              <ul className="list-disc pl-8 space-y-3 text-gray-800 leading-relaxed">
-                <li>To secure a reservation, 50% of the rental amount is required at the time of booking.</li>
-                <li>The remaining 50% must be paid 60 days before check-in.</li>
-                <li>For bookings made 60 days or less before check-in, the full rental amount (100%) must be paid.</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Cancellation Policy</h3>
-              <ul className="list-disc pl-8 space-y-3 text-gray-800 leading-relaxed">
-                <li>Cancellations more than 60 days before arrival: 50% refund of the total reservation price</li>
-                <li>Cancellations within 60 days of arrival: No refund</li>
-                <li>Early departures or no-shows: No refund</li>
-              </ul>
-            </div>
-          </div>
-
           <div className="max-w-4xl mx-auto px-6 md:px-10 lg:px-8 text-center mb-24">
             <h2 className="text-2xl sm:text-3xl font-bold mb-6">Experience countryside luxury at its finest</h2>
             <p className="text-gray-700 max-w-3xl mx-auto mb-8 leading-relaxed text-lg">
               This is not just a house—it's an experience. A rare blend of country charm and modern luxury, all within striking distance of Soho Farmhouse and the Cotswolds' best attractions. Perfect for family gatherings, corporate retreats, or special celebrations.
             </p>
-            <Link
-              href="/contact"
+            <a
+              href="https://www.airbnb.ca/rooms/1414129878809697902?guests=1&adults=1&s=67&unique_share_id=0320b241-9a00-4a0a-948a-a02d664a98f3"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block px-8 py-4 bg-black hover:bg-gray-900 text-white rounded-md font-medium text-lg transition-colors"
             >
               Contact Us to Book
-            </Link>
+            </a>
           </div>
 
           {/* All Photos Modal - Optimized and Simplified */}
