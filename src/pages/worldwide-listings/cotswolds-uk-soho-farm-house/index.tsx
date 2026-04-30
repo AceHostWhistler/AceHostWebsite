@@ -342,7 +342,7 @@ const CotswoldsUKSohoFarmHouse = () => {
               <ul className="list-disc pl-6 space-y-2">
                 <li>Electric car charger</li>
                 <li>Parking for up to 6 vehicles.</li>
-                <li>Extendable indoor dining table (seats 8, extends to 12)</li>
+                <li>Extendable indoor dining table (seats 10, extends to 14)</li>
                 <li>2 indoor fireplaces (1 gas, 1 wood-burning)</li>
                 <li>Outdoor dining area and BBQ (available from April 1 to October 30).</li>
               </ul>

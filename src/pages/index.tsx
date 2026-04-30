@@ -900,11 +900,91 @@ const Home = () => {
     }
   ];
 
+  const townhomeIds = new Set([
+    "ravens-nest",
+    "snow-pine",
+    "rare-3-bedroom-whistler-village",
+    "luxe-cozy-3-bed-whistler-village",
+    "luxe-5-bed-scandinave-retreat",
+    "glaciers-reach",
+    "northlands-walk-to-village-slopes-luxury-4-bed",
+  ]);
+
+  const condoIds = new Set([
+    "whispering-pines",
+    "marquise-2-bed",
+    "ski-in-ski-out-walk-to-lifts-2-bed",
+    "whistler-village-views-luxury-2-5-bedroom",
+    "luxury-3-bed-stunning-views",
+    "cozy-lakefront-whistler-condo",
+    "whistler-village-penthouse",
+    "whistler-village-penthouse-3-bdr",
+  ]);
+
+  const homeIds = new Set([
+    "two-cedars",
+    "chalet-la-forja",
+    "altitude-retreat",
+    "luxury-ski-in-ski-out-7-bedroom-kadenwood",
+    "panoramic-estate",
+    "slopeside-villa",
+    "heron-views-whistler",
+    "luxury-6-bedroom-blueberry",
+    "golf-course-views",
+    "falcon-blueberry-drive",
+    "wedge-mountain-lodge",
+    "squamish-retreat",
+    "hood-river-luxury-home",
+    "cotswolds-uk-soho-farm-house",
+    "mykonos-crystal-villa",
+    "villa-oineas-greece-mykonos",
+    "helios-estate-mykonos",
+    "villa-rosabella-mykonos",
+    "punta-mita---casa-juntos",
+  ]);
+
+  const getPropertyType = (listing: any): "home" | "townhome" | "condo" => {
+    const id = listing.id as string;
+    const name = String(listing.name || "").toLowerCase();
+
+    if (townhomeIds.has(id)) return "townhome";
+    if (condoIds.has(id)) return "condo";
+    if (homeIds.has(id)) return "home";
+    if (name.includes("townhome")) return "townhome";
+    if (name.includes("condo") || name.includes("penthouse")) return "condo";
+    if (
+      name.includes("chalet") ||
+      name.includes("estate") ||
+      name.includes("villa") ||
+      name.includes("house") ||
+      name.includes("home")
+    ) {
+      return "home";
+    }
+    return "home";
+  };
+
+  const isWorldwideListing = (listing: any): boolean => {
+    const location = String(listing.location || "").toLowerCase();
+    return (
+      listing.location !== "whistler" &&
+      !location.includes("whistler") &&
+      !location.includes("pemberton") &&
+      !location.includes("squamish")
+    );
+  };
+
   // Update filtering logic to match properties page
   const filteredListings = allListings.filter((listing) => {
     if (activeFilter === "all") return true;
     if (activeFilter === "pets") return listing.isPetFriendly === true;
     if (activeFilter === "skiinout") return listing.isSkiInSkiOut === true;
+    if (activeFilter === "homes")
+      return !isWorldwideListing(listing) && getPropertyType(listing) === "home";
+    if (activeFilter === "townhomes")
+      return !isWorldwideListing(listing) && getPropertyType(listing) === "townhome";
+    if (activeFilter === "condos")
+      return !isWorldwideListing(listing) && getPropertyType(listing) === "condo";
     if (activeFilter === "whistler") return listing.location === "whistler";
     if (activeFilter === "worldwide") return listing.location !== "whistler";
     return listing.location === activeFilter;
@@ -1228,10 +1308,22 @@ const Home = () => {
                   Whistler
                 </button>
                 <button
-                  onClick={() => setActiveFilter("worldwide")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "worldwide" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
+                  onClick={() => setActiveFilter("homes")}
+                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "homes" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
                 >
-                  Worldwide
+                  Homes
+                </button>
+                <button
+                  onClick={() => setActiveFilter("townhomes")}
+                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "townhomes" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
+                >
+                  Townhomes
+                </button>
+                <button
+                  onClick={() => setActiveFilter("condos")}
+                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "condos" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
+                >
+                  Condos
                 </button>
                 <button
                   onClick={() => setActiveFilter("pets")}
@@ -1244,6 +1336,12 @@ const Home = () => {
                   className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "skiinout" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
                 >
                   Ski In/Out
+                </button>
+                <button
+                  onClick={() => setActiveFilter("worldwide")}
+                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "worldwide" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
+                >
+                  Worldwide
                 </button>
               </div>
             </div>

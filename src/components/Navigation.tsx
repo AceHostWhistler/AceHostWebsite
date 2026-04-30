@@ -29,10 +29,14 @@ const Navigation = ({
 }: NavigationProps) => {
   const { push } = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showRentalsDropdown, setShowRentalsDropdown] = useState(false);
   const [showResourcesDropdown, setShowResourcesDropdown] = useState(false);
+  const [showMobileRentalsDropdown, setShowMobileRentalsDropdown] =
+    useState(false);
   const [showMobileResourcesDropdown, setShowMobileResourcesDropdown] =
     useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const rentalsRef = useRef<HTMLDivElement>(null);
   const resourcesRef = useRef<HTMLDivElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const { t } = useTranslation("common");
@@ -70,6 +74,13 @@ const Navigation = ({
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (
+        rentalsRef.current &&
+        !rentalsRef.current.contains(event.target as Node)
+      ) {
+        setShowRentalsDropdown(false);
+      }
+
+      if (
         resourcesRef.current &&
         !resourcesRef.current.contains(event.target as Node)
       ) {
@@ -90,7 +101,7 @@ const Navigation = ({
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [resourcesRef, mobileMenuRef]);
+  }, [rentalsRef, resourcesRef, mobileMenuRef]);
 
   const resourcesDropdownItems = [
     { text: "All Blogs", url: "/blogs" },
@@ -103,6 +114,17 @@ const Navigation = ({
     { text: "Concierge Services", url: "/concierge-service" },
     { text: "Property Management", url: "/list-property" },
     { text: "About", url: "/our-story" },
+  ];
+
+  const rentalFilterLinks = [
+    { text: "All Properties", url: "/properties?category=all" },
+    { text: "Whistler", url: "/properties?category=whistler" },
+    { text: "Homes", url: "/properties?category=homes" },
+    { text: "Townhomes", url: "/properties?category=townhomes" },
+    { text: "Condos", url: "/properties?category=condos" },
+    { text: "Pet Friendly", url: "/properties?category=pets" },
+    { text: "Ski in Ski out", url: "/properties?category=skiinout" },
+    { text: "Worldwide", url: "/properties?category=worldwide" },
   ];
 
   return (
@@ -135,22 +157,57 @@ const Navigation = ({
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center">
             <div className="flex items-center space-x-2">
-              {navLinks.map((link, index) => (
-                <Link
-                  key={index}
-                  href={link.url}
-                  className={`px-4 py-2 rounded-md text-sm font-semibold relative ${
-                    currentPage === link.url
-                      ? "text-black border-b-2 border-black"
-                      : "text-gray-700 hover:text-black transition-colors duration-300 group"
-                  }`}
-                >
-                  {link.text}
-                  {currentPage !== link.url && (
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black group-hover:w-full transition-all duration-300 ease-in-out"></span>
-                  )}
-                </Link>
-              ))}
+              {navLinks.map((link, index) =>
+                link.url === "/properties" ? (
+                  <div key={index} className="relative" ref={rentalsRef}>
+                    <button
+                      onMouseEnter={() => setShowRentalsDropdown(true)}
+                      onClick={() => setShowRentalsDropdown(!showRentalsDropdown)}
+                      className={`px-4 py-2 rounded-md text-sm font-semibold flex items-center relative ${
+                        currentPage === link.url
+                          ? "text-black border-b-2 border-black"
+                          : "text-gray-700 hover:text-black transition-colors duration-300 group"
+                      }`}
+                    >
+                      {link.text}
+                      <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
+                      {currentPage !== link.url && (
+                        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black group-hover:w-full transition-all duration-300 ease-in-out"></span>
+                      )}
+                    </button>
+
+                    {showRentalsDropdown && (
+                      <div className="absolute top-full left-0 mt-2 w-72 bg-white shadow-lg border border-gray-100 rounded-md py-2 z-50">
+                        {rentalFilterLinks.map((item) => (
+                          <Link
+                            key={item.text}
+                            href={item.url}
+                            onClick={() => setShowRentalsDropdown(false)}
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-black"
+                          >
+                            {item.text}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    key={index}
+                    href={link.url}
+                    className={`px-4 py-2 rounded-md text-sm font-semibold relative ${
+                      currentPage === link.url
+                        ? "text-black border-b-2 border-black"
+                        : "text-gray-700 hover:text-black transition-colors duration-300 group"
+                    }`}
+                  >
+                    {link.text}
+                    {currentPage !== link.url && (
+                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black group-hover:w-full transition-all duration-300 ease-in-out"></span>
+                    )}
+                  </Link>
+                )
+              )}
 
               {/* Resources Dropdown */}
               <div className="relative" ref={resourcesRef}>
@@ -462,20 +519,61 @@ const Navigation = ({
             }}
           >
             <div className="px-4 py-6 space-y-4">
-              {navLinks.map((link, index) => (
-                <Link
-                  key={index}
-                  href={link.url}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`flex items-center py-3 px-4 rounded-md text-base ${
-                    currentPage === link.url
-                      ? "bg-gray-100 text-black font-semibold"
-                      : "text-gray-700 hover:text-black hover:bg-gray-50 transition-all"
-                  }`}
-                >
-                  {link.text}
-                </Link>
-              ))}
+              {navLinks.map((link, index) =>
+                link.url === "/properties" ? (
+                  <div key={index} className="rounded-md overflow-hidden">
+                    <button
+                      onClick={() =>
+                        setShowMobileRentalsDropdown(!showMobileRentalsDropdown)
+                      }
+                      className={`flex justify-between items-center w-full py-3 px-4 rounded-md text-base ${
+                        currentPage === link.url
+                          ? "bg-gray-100 text-black font-semibold"
+                          : "text-gray-700 hover:text-black hover:bg-gray-50 transition-all"
+                      }`}
+                    >
+                      <span>{link.text}</span>
+                      <ChevronDown
+                        className={`h-5 w-5 transition-transform ${
+                          showMobileRentalsDropdown ? "transform rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+
+                    {showMobileRentalsDropdown && (
+                      <div className="mt-1 ml-4 pl-4 border-l-2 border-gray-100 space-y-1">
+                        {rentalFilterLinks.map((item) => (
+                          <Link
+                            key={item.text}
+                            href={item.url}
+                            onClick={() => {
+                              setShowMobileRentalsDropdown(false);
+                              setIsMenuOpen(false);
+                            }}
+                            className="flex items-center py-2.5 px-4 text-base text-gray-600 hover:text-black rounded-md"
+                          >
+                            <ChevronRight className="h-4 w-4 mr-2" />
+                            {item.text}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    key={index}
+                    href={link.url}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`flex items-center py-3 px-4 rounded-md text-base ${
+                      currentPage === link.url
+                        ? "bg-gray-100 text-black font-semibold"
+                        : "text-gray-700 hover:text-black hover:bg-gray-50 transition-all"
+                    }`}
+                  >
+                    {link.text}
+                  </Link>
+                )
+              )}
 
               {/* Resources Dropdown Mobile */}
               <div className="rounded-md overflow-hidden">

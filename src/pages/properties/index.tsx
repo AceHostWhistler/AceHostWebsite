@@ -12,7 +12,6 @@ import {
   ArrowRight,
   X,
   Filter,
-  CheckCircle,
   Coffee,
   Wifi,
   Car,
@@ -55,6 +54,71 @@ interface PropertyCategory {
   title: string;
   description?: string;
   properties: PropertyFeature[];
+}
+
+const TOWNHOME_IDS = new Set([
+  "ravens-nest",
+  "snow-pine",
+  "rare-3-bedroom-whistler-village",
+  "luxe-cozy-3-bed-whistler-village",
+  "luxe-5-bed-scandinave-retreat",
+  "glaciers-reach",
+  "northlands-walk-to-village-slopes-luxury-4-bed",
+]);
+
+const CONDO_IDS = new Set([
+  "whispering-pines",
+  "marquise-2-bed",
+  "ski-in-ski-out-walk-to-lifts-2-bed",
+  "whistler-village-views-luxury-2-5-bedroom",
+  "luxury-3-bed-stunning-views",
+  "cozy-lakefront-whistler-condo",
+  "whistler-village-penthouse",
+  "whistler-village-penthouse-3-bdr",
+  "blackcomb-greens",
+]);
+
+const HOME_IDS = new Set([
+  "two-cedars",
+  "chalet-la-forja",
+  "altitude-retreat",
+  "luxury-ski-in-ski-out-7-bedroom-kadenwood",
+  "panoramic-estate",
+  "slopeside-villa",
+  "heron-views-whistler",
+  "luxury-6-bedroom-blueberry",
+  "golf-course-views",
+  "falcon-blueberry-drive",
+  "wedge-mountain-lodge-spa",
+  "squamish-retreat",
+  "hood-river-luxury-home",
+  "cotswolds-uk-soho-farm-house",
+  "mykonos-crystal-villa",
+  "villa-oineas-greece-mykonos",
+  "helios-estate-mykonos",
+  "villa-rosabella-mykonos",
+  "punta-mita---casa-juntos",
+]);
+
+function getPropertyType(property: PropertyFeature): "home" | "townhome" | "condo" {
+  const id = property.id;
+  const name = property.name.toLowerCase();
+
+  if (TOWNHOME_IDS.has(id)) return "townhome";
+  if (CONDO_IDS.has(id)) return "condo";
+  if (HOME_IDS.has(id)) return "home";
+  if (name.includes("townhome")) return "townhome";
+  if (name.includes("condo") || name.includes("penthouse")) return "condo";
+  if (
+    name.includes("chalet") ||
+    name.includes("estate") ||
+    name.includes("villa") ||
+    name.includes("house") ||
+    name.includes("home")
+  ) {
+    return "home";
+  }
+  return "home";
 }
 
 export default function Properties() {
@@ -1817,18 +1881,46 @@ export default function Properties() {
 
   // Filter the properties for display
   const displayProperties = useMemo(() => {
-    return propertyCategories
-      .filter(category => activeCategory === "all" || category.id === activeCategory)
-      .map(category => {
+    const broadCategory = ["townhomes", "condos", "homes", "pets", "skiinout"].includes(activeCategory);
+    const baseCategories = broadCategory
+      ? propertyCategories
+      : propertyCategories.filter(
+          (category) => activeCategory === "all" || category.id === activeCategory
+        );
+
+    return baseCategories.map((category) => {
     const filteredProperties = category.properties.filter((property) => {
           // Apply all filters
           const bedroomsMatch = property.bedrooms === null || (typeof property.bedrooms === 'number' && property.bedrooms >= filters.minBedrooms && property.bedrooms <= filters.maxBedrooms);
           const guestsMatch = typeof property.guests === 'string' || (typeof property.guests === 'number' && property.guests >= filters.minGuests && property.guests <= filters.maxGuests);
           const petFriendlyMatch = !filters.petFriendly || property.isPetFriendly;
           const skiInSkiOutMatch = !filters.skiInSkiOut || property.isSkiInSkiOut;
+          const propertyLocation = property.location.toLowerCase();
+          const isWorldwideProperty =
+            !!property.country ||
+            (!propertyLocation.includes("whistler") &&
+              !propertyLocation.includes("pemberton") &&
+              !propertyLocation.includes("squamish") &&
+              property.location !== "whistler");
+          const propertyType = getPropertyType(property);
+          const quickCategoryMatch =
+            activeCategory === "pets"
+              ? property.isPetFriendly
+              : activeCategory === "skiinout"
+              ? property.isSkiInSkiOut
+              : true;
+          const typeMatch =
+            activeCategory === "townhomes"
+              ? !isWorldwideProperty && propertyType === "townhome"
+              : activeCategory === "condos"
+              ? !isWorldwideProperty && propertyType === "condo"
+              : activeCategory === "homes"
+              ? !isWorldwideProperty && propertyType === "home"
+              : true;
           
           // Location filtering - ensure properties with non-Whistler locations only appear in worldwide section
           const locationMatch = 
+            broadCategory ||
             (category.id === "whistler" && (
               !property.country && 
               (property.location.includes("Whistler") || 
@@ -1852,7 +1944,7 @@ export default function Properties() {
               )
             );
 
-          return bedroomsMatch && guestsMatch && petFriendlyMatch && skiInSkiOutMatch && amenitiesMatch && locationMatch;
+          return bedroomsMatch && guestsMatch && petFriendlyMatch && skiInSkiOutMatch && amenitiesMatch && locationMatch && typeMatch && quickCategoryMatch;
     });
 
     return { ...category, properties: filteredProperties };
@@ -2320,6 +2412,56 @@ export default function Properties() {
                   Whistler
                 </button>
                 <button
+                  onClick={() => setActiveCategory("homes")}
+                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                    activeCategory === "homes"
+                      ? "bg-black text-white shadow-md"
+                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
+                  }`}
+                >
+                  Homes
+                </button>
+                <button
+                  onClick={() => setActiveCategory("townhomes")}
+                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                    activeCategory === "townhomes"
+                      ? "bg-black text-white shadow-md"
+                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
+                  }`}
+                >
+                  Townhomes
+                </button>
+                <button
+                  onClick={() => setActiveCategory("condos")}
+                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                    activeCategory === "condos"
+                      ? "bg-black text-white shadow-md"
+                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
+                  }`}
+                >
+                  Condos
+                </button>
+                <button
+                  onClick={() => setActiveCategory("pets")}
+                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                    activeCategory === "pets"
+                      ? "bg-black text-white shadow-md"
+                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
+                  }`}
+                >
+                  Pet Friendly
+                </button>
+                <button
+                  onClick={() => setActiveCategory("skiinout")}
+                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                    activeCategory === "skiinout"
+                      ? "bg-black text-white shadow-md"
+                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
+                  }`}
+                >
+                  Ski in Ski out
+                </button>
+                <button
                   onClick={() => setActiveCategory("worldwide")}
                   className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                     activeCategory === "worldwide"
@@ -2328,40 +2470,6 @@ export default function Properties() {
                   }`}
                 >
                   Worldwide
-                </button>
-                <button
-                  onClick={() => {
-                    // Toggle pet-friendly filter
-                    setFilters(prev => ({
-                      ...prev,
-                      petFriendly: !prev.petFriendly
-                    }));
-                  }}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                    filters.petFriendly
-                      ? "bg-blue-600 text-white shadow-md"
-                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
-                  }`}
-                >
-                  {filters.petFriendly && <CheckCircle className="w-4 h-4 mr-1.5 inline" />}
-                  Pet Friendly
-                </button>
-                <button
-                  onClick={() => {
-                    // Toggle ski-in/ski-out filter
-                    setFilters(prev => ({
-                      ...prev,
-                      skiInSkiOut: !prev.skiInSkiOut
-                    }));
-                  }}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                    filters.skiInSkiOut
-                      ? "bg-blue-600 text-white shadow-md"
-                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
-                  }`}
-                >
-                  {filters.skiInSkiOut && <CheckCircle className="w-4 h-4 mr-1.5 inline" />}
-                  Ski in Ski out
                 </button>
               </div>
             </div>
