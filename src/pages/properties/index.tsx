@@ -257,6 +257,7 @@ export default function Properties() {
             priceRange: "$7,000-11,000+ per night | Private Butler Included",
             winterPrice: "$8500-$11,000+ Nightly | Winter",
             holidayPrice: "$16,000-$21,000+ Nightly | Christmas & NY",
+            isPetFriendly: true,
             isSkiInSkiOut: true,
           },
           {
@@ -645,7 +646,7 @@ export default function Properties() {
             priceRange: "Nightly Price Range: $1,300-$3,500+",
             winterPrice: "$2,000-$3,500+ Nightly | Winter",
             holidayPrice: "$4,000-$7,200+ Nightly | Christmas",
-            isPetFriendly: false,
+            isPetFriendly: true,
             isSkiInSkiOut: false,
           },
           {
@@ -1456,7 +1457,7 @@ export default function Properties() {
             holidayPrice: "$2500-3500+ Nightly | Christmas & NY",
             link: "/listings/whistler-village-penthouse-3-bdr-walk-to-ski",
             airbnbLink: "https://www.airbnb.ca/rooms/1595039212030139605?guests=1&adults=1&s=67&unique_share_id=dc75c08b-e1ae-46ae-8b17-0587b742fa45",
-            isPetFriendly: false,
+            isPetFriendly: true,
             isSkiInSkiOut: false,
           },
           {

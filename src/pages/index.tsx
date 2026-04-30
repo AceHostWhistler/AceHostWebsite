@@ -243,7 +243,7 @@ const Home = () => {
       link: "/listings/chalet-la-forja-kadenwood",
       airbnbLink:
         "https://www.airbnb.ca/rooms/52655503?guests=1&adults=1&s=67&unique_share_id=f1bb5c2c-51f9-4a82-9aa4-670fb8caa71d",
-      isPetFriendly: false,
+      isPetFriendly: true,
       isSkiInSkiOut: true,
     },
     {
@@ -436,7 +436,7 @@ const Home = () => {
       location: "whistler",
       link: "/listings/falcon-blueberry-drive",
       airbnbLink: "",
-      isPetFriendly: false,
+      isPetFriendly: true,
       isSkiInSkiOut: false,
     },
     {
@@ -861,7 +861,7 @@ const Home = () => {
       location: "whistler",
       link: "/listings/whistler-village-penthouse-3-bdr-walk-to-ski",
       airbnbLink: "https://www.airbnb.ca/rooms/1595039212030139605?guests=1&adults=1&s=67&unique_share_id=dc75c08b-e1ae-46ae-8b17-0587b742fa45",
-      isPetFriendly: false,
+      isPetFriendly: true,
       isSkiInSkiOut: false,
     },
     {
