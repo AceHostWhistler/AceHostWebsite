@@ -127,6 +127,11 @@ const Navigation = ({
     { text: "Worldwide", url: "/properties?category=worldwide" },
   ];
 
+  const closePrimaryDropdowns = () => {
+    setShowRentalsDropdown(false);
+    setShowResourcesDropdown(false);
+  };
+
   return (
     <nav
       className={`${
@@ -141,7 +146,7 @@ const Navigation = ({
         <div className={`flex items-center justify-between ${isScrolled ? 'h-16' : 'h-20'} transition-all duration-300`}>
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex-shrink-0">
+            <Link href="/" className="flex-shrink-0" onMouseEnter={closePrimaryDropdowns}>
               <div className={`relative ${isScrolled ? 'w-36 h-14' : 'w-40 h-16'} transition-all duration-300`}>
                 <Image
                   src="/logo.png"
@@ -195,6 +200,8 @@ const Navigation = ({
                   <Link
                     key={index}
                     href={link.url}
+                    onMouseEnter={closePrimaryDropdowns}
+                    onClick={closePrimaryDropdowns}
                     className={`px-4 py-2 rounded-md text-sm font-semibold relative ${
                       currentPage === link.url
                         ? "text-black border-b-2 border-black"
@@ -212,7 +219,10 @@ const Navigation = ({
               {/* Resources Dropdown */}
               <div className="relative" ref={resourcesRef}>
                 <button
-                  onMouseEnter={() => setShowResourcesDropdown(true)}
+                  onMouseEnter={() => {
+                    setShowRentalsDropdown(false);
+                    setShowResourcesDropdown(true);
+                  }}
                   onClick={() =>
                     setShowResourcesDropdown(!showResourcesDropdown)
                   }
@@ -476,6 +486,8 @@ const Navigation = ({
 
               <Link
                 href="/contact"
+                onMouseEnter={closePrimaryDropdowns}
+                onClick={closePrimaryDropdowns}
                 className="ml-2 px-5 py-2 bg-black text-white rounded-md text-sm font-semibold hover:bg-gray-800 transition-colors whitespace-nowrap"
               >
                 Contact Us
