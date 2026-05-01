@@ -11,6 +11,7 @@ import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 const SLUG = "fifa-vancouver-whistler-the-luxury-whistler-fifa-experience";
 const PUBLISH_DATE = "May 1, 2026";
 const ISO_MODIFIED = "2026-05-01T09:30:00-07:00";
+const CANONICAL_URL = `https://acehost.ca/post/${SLUG}`;
 const HERO_IMAGE =
   "/photos/properties/2919 Heritage/02 - 20260301 MM4P 01 DJI_20260301181105_0776_D-Edit-AI Generative Fill.jpg";
 const HERO_IMAGE_URL = `https://acehost.ca${encodeURI(HERO_IMAGE)}`;
@@ -97,19 +98,6 @@ const luxuryHomesBeyondKadenwood: FeaturedProperty[] = [
     ],
     bookUrl:
       "https://www.airbnb.ca/rooms/1551638001847968788?guests=1&adults=1&s=67&unique_share_id=ff68258e-d89f-4493-8e79-fd85820e6872",
-  },
-  {
-    name: "Luxury 5-bed Whistler Village",
-    description:
-      "A fantastic high-end option with excellent summer appeal, ideal for guests wanting a luxury home base with easy access to the village and golf.",
-    photos: [
-      "/high-quality/scandinave-fixed/scandinave-7.jpg?v2",
-      "/high-quality/scandinave-fixed/scandinave-0.jpg?v2",
-      "/high-quality/scandinave-fixed/scandinave-1.jpg?v2",
-      "/high-quality/scandinave-fixed/scandinave-2.jpg?v2",
-    ],
-    bookUrl:
-      "https://www.airbnb.ca/rooms/1313847204355627326?guests=1&adults=1&s=67&unique_share_id=507dffd6-1f84-49a3-99eb-d10f493a65a6",
   },
   {
     name: "Falcon | Elegant Chalet",
@@ -248,13 +236,38 @@ const condoTownhomeOptions: FeaturedProperty[] = [
 
 export default function BlogPost() {
   const currentArticleLink = `/post/${SLUG}`;
+  const allFeaturedProperties = [
+    ...kadenwoodHomes,
+    ...luxuryHomesBeyondKadenwood,
+    ...condoTownhomeOptions,
+  ];
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: META.title,
     image: HERO_IMAGE_URL,
+    mainEntityOfPage: CANONICAL_URL,
     datePublished: ISO_MODIFIED,
     dateModified: ISO_MODIFIED,
+    articleSection: [
+      "FIFA 2026",
+      "Vancouver Travel",
+      "Whistler Luxury Rentals",
+    ],
+    keywords:
+      "FIFA Vancouver 2026, Whistler luxury rentals, Vancouver World Cup accommodation, Sea to Sky Highway stay, Whistler FIFA shuttle",
+    about: [
+      {
+        "@type": "Place",
+        name: "Vancouver",
+        address: { "@type": "PostalAddress", addressRegion: "BC", addressCountry: "CA" },
+      },
+      {
+        "@type": "Place",
+        name: "Whistler",
+        address: { "@type": "PostalAddress", addressRegion: "BC", addressCountry: "CA" },
+      },
+    ],
     author: {
       "@type": "Organization",
       name: "AceHost Whistler",
@@ -270,28 +283,105 @@ export default function BlogPost() {
     },
     description: META.description,
   };
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Can I stay in Whistler and attend FIFA matches in Vancouver?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. Many guests stay in Whistler and travel to BC Place in Vancouver for match days, then return to Whistler for a quieter luxury stay.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How long is the drive from Vancouver to Whistler?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "The Sea to Sky Highway drive between Vancouver and Whistler typically takes around two hours, depending on traffic and conditions.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Does AceHost provide FIFA shuttle coordination?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "With advance notice, AceHost can help coordinate private or public shuttle options for FIFA matchday transportation.",
+        },
+      },
+    ],
+  };
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://acehost.ca" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://acehost.ca/blogs" },
+      { "@type": "ListItem", position: 3, name: META.title, item: CANONICAL_URL },
+    ],
+  };
+  const listingStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Featured FIFA Vancouver Whistler luxury properties",
+    numberOfItems: allFeaturedProperties.length,
+    itemListElement: allFeaturedProperties.map((property, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "LodgingBusiness",
+        name: property.name,
+        image: `https://acehost.ca${encodeURI(property.photos[0])}`,
+        url: property.bookUrl.startsWith("http")
+          ? property.bookUrl
+          : `https://acehost.ca${property.bookUrl}`,
+      },
+    })),
+  };
 
   return (
     <>
       <Head>
         <title>{META.title}</title>
         <meta name="description" content={META.description} />
-        <link rel="canonical" href={`https://acehost.ca/post/${SLUG}`} />
+        <link rel="canonical" href={CANONICAL_URL} />
+        <meta
+          name="robots"
+          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
         <meta property="og:title" content={META.title} />
         <meta property="og:description" content={META.description} />
+        <meta property="og:url" content={CANONICAL_URL} />
         <meta property="og:image" content={HERO_IMAGE_URL} />
         <meta property="og:type" content="article" />
+        <meta property="article:published_time" content={ISO_MODIFIED} />
+        <meta property="article:modified_time" content={ISO_MODIFIED} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={META.title} />
         <meta name="twitter:description" content={META.description} />
+        <meta name="twitter:url" content={CANONICAL_URL} />
         <meta name="twitter:image" content={HERO_IMAGE_URL} />
         <meta
           name="keywords"
-          content="FIFA Vancouver 2026, Whistler luxury rentals, BC Place matches, Sea to Sky Highway, Whistler FIFA shuttle, Airbnb Whistler luxury homes"
+          content="FIFA Vancouver 2026, Whistler luxury rentals, Vancouver World Cup accommodation, BC Place match stays, Sea to Sky Highway travel, luxury Whistler Airbnb, Vancouver to Whistler FIFA shuttle"
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(listingStructuredData) }}
         />
       </Head>
 
