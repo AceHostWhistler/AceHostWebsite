@@ -25,6 +25,14 @@ interface BlogIndexProps {
 // In a production app, you'd extract metadata from the actual files
 const blogPostsData: BlogPost[] = [
   {
+    slug: "fifa-vancouver-whistler-the-luxury-whistler-fifa-experience",
+    title:
+      "FIFA Vancouver / Whistler, The Luxury Whistler FIFA Experience | AceHost",
+    category: "FIFA 2026, Luxury Travel",
+    readTime: "13 min read",
+    heroImage: "/photos/properties/Altitude New Photos Best/1.jpg",
+  },
+  {
     slug: "is-owning-a-vacation-rental-in-whistler-worth-it-2026",
     title:
       "Is Owning a Vacation Rental in Whistler Worth It in 2026? How Much Can a Luxury Whistler Rental Actually Make? | AceHost",

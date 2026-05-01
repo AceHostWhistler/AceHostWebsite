@@ -12,6 +12,16 @@ export interface Article {
 export const allArticles: Article[] = [
   {
     title:
+      "FIFA Vancouver / Whistler, The Luxury Whistler FIFA Experience | AceHost",
+    category: "FIFA 2026, Luxury Travel",
+    description:
+      "Planning World Cup 2026 in Vancouver? Discover why staying in Whistler gives you a private luxury base with easy matchday access, plus featured homes to book.",
+    readTime: "13 min read",
+    link: "/post/fifa-vancouver-whistler-the-luxury-whistler-fifa-experience",
+    coverImage: "/photos/properties/Altitude New Photos Best/1.jpg",
+  },
+  {
+    title:
       "Is Owning a Vacation Rental in Whistler Worth It in 2026? How Much Can a Luxury Whistler Rental Actually Make? | AceHost",
     category: "Property Investment, Whistler",
     description:
