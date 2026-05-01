@@ -364,10 +364,6 @@ const CotswoldsUKSohoFarmHouse = () => {
                 <em>BBQ available from April 1 to October 30. BBQ not available in winter.</em>
               </p>
               <p>
-                <em>*New Pool: Heated 10ft pool will be available for rentals prior to June 27th, 2026! Located near the outdoor sauna &amp; hot tub, with 6 luxurious sun beds.*</em>
-              </p>
-
-              <p>
                 <strong>Important pet rule:</strong> We welcome a maximum of 2 dogs. Subject to a pet fee, automatically adjusted on the listing when toggled.
               </p>
 
