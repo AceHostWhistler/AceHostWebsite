@@ -11,7 +11,8 @@ import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 const SLUG = "fifa-vancouver-whistler-the-luxury-whistler-fifa-experience";
 const PUBLISH_DATE = "May 1, 2026";
 const ISO_MODIFIED = "2026-05-01T09:30:00-07:00";
-const HERO_IMAGE = "/photos/properties/Altitude New Photos Best/1.jpg";
+const HERO_IMAGE =
+  "/photos/properties/2919 Heritage/02 - 20260301 MM4P 01 DJI_20260301181105_0776_D-Edit-AI Generative Fill.jpg";
 const HERO_IMAGE_URL = `https://acehost.ca${encodeURI(HERO_IMAGE)}`;
 
 const META = {
@@ -26,22 +27,21 @@ type FeaturedProperty = {
   description: string;
   photos: string[];
   bookUrl: string;
-  bookLabel?: string;
 };
 
-const featuredProperties: FeaturedProperty[] = [
+const kadenwoodHomes: FeaturedProperty[] = [
   {
-    name: "Altitude Retreat | Kadenwood",
+    name: "The Mountaintop at Kadenwood | Ski in Ski out",
     description:
-      "A stunning luxury retreat ideal for larger groups looking for privacy, mountain views, and a true high-end Whistler stay.",
+      "A spectacular luxury home and one of the most exciting options for FIFA travellers wanting privacy, panoramic mountain views, and a truly elevated Whistler stay.",
     photos: [
-      "/photos/properties/Altitude New Photos Best/1.jpg",
-      "/photos/properties/Altitude New Photos Best/2.jpg",
-      "/photos/properties/Altitude New Photos Best/3.jpg",
-      "/photos/properties/Altitude New Photos Best/4.jpg",
+      "/photos/properties/2919 Heritage/02 - 20260301 MM4P 01 DJI_20260301181105_0776_D-Edit-AI Generative Fill.jpg",
+      "/photos/properties/2919 Heritage/01 - 20260301 MM4P 01 DJI_20260301111158_0401_D-Edit-Edit-AI Generative Fill.jpg",
+      "/photos/properties/2919 Heritage/03 - 20260301 MM4P 01 DJI_20260301181209_0786_D.jpg",
+      "/photos/properties/2919 Heritage/04 - 20260301 MM4P 01 DJI_20260301181237_0791_D-Edit-AI Generative Fill.jpg",
     ],
-    bookUrl: "/contact",
-    bookLabel: "Inquire to Book",
+    bookUrl:
+      "https://www.airbnb.ca/rooms/1599369454342102375?guests=1&adults=1&s=67&unique_share_id=07a4f082-1dec-4a06-bf97-05638b3b71ef",
   },
   {
     name: "Chalet La Forja | Ski in Ski out",
@@ -57,6 +57,19 @@ const featuredProperties: FeaturedProperty[] = [
       "https://www.airbnb.ca/rooms/52655503?guests=1&adults=1&s=67&unique_share_id=f1bb5c2c-51f9-4a82-9aa4-670fb8caa71d",
   },
   {
+    name: "Panoramic Estate | Kadenwood",
+    description:
+      "A stunning luxury home with dramatic views, ideal for groups wanting privacy, scale, and a true high-end Whistler stay.",
+    photos: [
+      "/photos/properties/Panoramic Estate/01-2923 Ancient Cedars-01.jpg",
+      "/photos/properties/Panoramic Estate/02-2923 Ancient Cedars-02.jpg",
+      "/photos/properties/Panoramic Estate/03-2923 Ancient Cedars-03.jpg",
+      "/photos/properties/Panoramic Estate/04-2923 Ancient Cedars-04.jpg",
+    ],
+    bookUrl:
+      "https://www.airbnb.ca/rooms/1104637821836596397?guests=1&adults=1&s=67&unique_share_id=67164555-993c-40dc-b188-23ffe0755654",
+  },
+  {
     name: "Slope Side Chalet | Ski-In/Out",
     description:
       "A beautiful Kadenwood option that blends a warm mountain feel with elevated design and privacy.",
@@ -69,6 +82,9 @@ const featuredProperties: FeaturedProperty[] = [
     bookUrl:
       "https://www.airbnb.ca/rooms/826226399590812184?guests=1&adults=1&s=67&unique_share_id=aab7fbd3-669a-461d-b913-c15cf257b4c0",
   },
+];
+
+const luxuryHomesBeyondKadenwood: FeaturedProperty[] = [
   {
     name: "Luxury 6-Bedroom | Whistler",
     description:
@@ -83,17 +99,17 @@ const featuredProperties: FeaturedProperty[] = [
       "https://www.airbnb.ca/rooms/1551638001847968788?guests=1&adults=1&s=67&unique_share_id=ff68258e-d89f-4493-8e79-fd85820e6872",
   },
   {
-    name: "Luxe 5-BED Scandinave Retreat | Walk to Slopes",
+    name: "Luxury 5-bed Whistler Village",
     description:
-      "A larger townhome-style option that is perfect for groups wanting both value and space, while still enjoying a premium Whistler experience.",
+      "A fantastic high-end option with excellent summer appeal, ideal for guests wanting a luxury home base with easy access to the village and golf.",
     photos: [
-      "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00620.jpg",
-      "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00635.jpg",
-      "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00615.jpg",
-      "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00610.jpg",
+      "/high-quality/scandinave-fixed/scandinave-7.jpg?v2",
+      "/high-quality/scandinave-fixed/scandinave-0.jpg?v2",
+      "/high-quality/scandinave-fixed/scandinave-1.jpg?v2",
+      "/high-quality/scandinave-fixed/scandinave-2.jpg?v2",
     ],
-    bookUrl: "/contact",
-    bookLabel: "Inquire to Book",
+    bookUrl:
+      "https://www.airbnb.ca/rooms/1313847204355627326?guests=1&adults=1&s=67&unique_share_id=507dffd6-1f84-49a3-99eb-d10f493a65a6",
   },
   {
     name: "Falcon | Elegant Chalet",
@@ -120,6 +136,87 @@ const featuredProperties: FeaturedProperty[] = [
     ],
     bookUrl:
       "https://www.airbnb.ca/rooms/1168163637007998550?guests=1&adults=1&s=67&unique_share_id=8227e964-920d-4bc0-8073-13043963151f",
+  },
+];
+
+const condoTownhomeOptions: FeaturedProperty[] = [
+  {
+    name: "Rare 3-bedroom | Whistler Village | Walk to Hill",
+    description:
+      "A great option for guests wanting central convenience, extra space, and easy access to everything Whistler has to offer.",
+    photos: [
+      "/photos/properties/John 3-bed Granite Court/03 - 20251125 A7M4 01 A1_01852.jpg",
+      "/photos/properties/John 3-bed Granite Court/01 - 20251125 A7M4 01 A1_02152.jpg",
+      "/photos/properties/John 3-bed Granite Court/02 - 20251125 A7M4 01 A1_02202.jpg",
+      "/photos/properties/John 3-bed Granite Court/04 - 20251125 A7M4 01 A1_02228-Edit.jpg",
+    ],
+    bookUrl:
+      "https://www.airbnb.ca/rooms/1565322561889624431?guests=1&adults=1&s=67&unique_share_id=bcb85131-d1b0-4d39-9975-7580fd94a5d9",
+  },
+  {
+    name: "Luxe-Cozy 3-Bed Whistler Village",
+    description:
+      "A polished 3-bedroom option in a great location, ideal for groups wanting a relaxed but elevated Whistler base.",
+    photos: [
+      "/photos/properties/Cozy Luxe 3-Bed in Whistler Village/01-1 4668 Blackcomb Way 01-Edit.jpg",
+      "/photos/properties/Cozy Luxe 3-Bed in Whistler Village/02-1 4668 Blackcomb Way 02-Edit.jpg",
+      "/photos/properties/Cozy Luxe 3-Bed in Whistler Village/03-1 4668 Blackcomb Way 03.jpg",
+      "/photos/properties/Cozy Luxe 3-Bed in Whistler Village/04-1 4668 Blackcomb Way 04-Edit.jpg",
+    ],
+    bookUrl:
+      "https://www.airbnb.ca/rooms/1249285355870765792?guests=1&adults=1&s=67&unique_share_id=dcc074b1-0fe5-477a-bc67-701bc6736b13",
+  },
+  {
+    name: "The Aspens | 2-Bed Ski in/Out",
+    description:
+      "A classic Whistler option for those who want comfort, convenience, and a clean mountain stay.",
+    photos: [
+      "/photos/properties/The Aspens/4800-Spearhead-Drive-1.JPG",
+      "/photos/properties/The Aspens/4800-Spearhead-Drive-2.JPG",
+      "/photos/properties/The Aspens/4800-Spearhead-Drive-3.JPG",
+      "/photos/properties/The Aspens/4800-Spearhead-Drive-4.JPG",
+    ],
+    bookUrl:
+      "https://www.airbnb.com/rooms/1072474554447345991?guests=1&adults=1&s=67&unique_share_id=e556b35c-05b5-40b6-91e1-5304ffafc23b",
+  },
+  {
+    name: "Marquise 2-Bed Ski-in Ski-out",
+    description:
+      "A strong option for couples or smaller groups wanting a comfortable and well-located Whistler experience.",
+    photos: [
+      "/photos/properties/Marquise 2-bed/Marquise-1.jpg",
+      "/photos/properties/Marquise 2-bed/Marquise-2.jpg",
+      "/photos/properties/Marquise 2-bed/Marquise-3.jpg",
+      "/photos/properties/Marquise 2-bed/Marquise-4.jpg",
+    ],
+    bookUrl:
+      "https://www.airbnb.ca/rooms/1370367404602078616?guests=1&adults=1&s=67&unique_share_id=eb381b39-e67d-44ea-9d7c-2de2e1b5fa20",
+  },
+  {
+    name: "Ski-in/Ski-out | Walk to Lifts | 2 Bed",
+    description:
+      "A practical and well-positioned 2-bedroom option for guests who want convenience without sacrificing quality.",
+    photos: [
+      "/photos/properties/ski-in-ski-out-walk-to-lifts-2-bed/Le chamois.jpg",
+      "/photos/properties/ski-in-ski-out-walk-to-lifts-2-bed/Le chamois-2.jpg",
+      "/photos/properties/ski-in-ski-out-walk-to-lifts-2-bed/Le chamois-3.jpg",
+      "/photos/properties/ski-in-ski-out-walk-to-lifts-2-bed/Le chamois-4.jpg",
+    ],
+    bookUrl:
+      "https://www.airbnb.ca/rooms/1015303987589924725?guests=1&adults=1&s=67&unique_share_id=1d282b7d-e5fc-4539-b272-d5d4809bf789",
+  },
+  {
+    name: "Luxe 5-BED Scandinave Retreat | Walk to Slopes",
+    description:
+      "A larger townhome-style option that is perfect for groups wanting both value and space, while still enjoying a premium Whistler experience.",
+    photos: [
+      "/high-quality/scandinave-fixed/scandinave-7.jpg?v2",
+      "/high-quality/scandinave-fixed/scandinave-0.jpg?v2",
+      "/high-quality/scandinave-fixed/scandinave-1.jpg?v2",
+      "/high-quality/scandinave-fixed/scandinave-2.jpg?v2",
+    ],
+    bookUrl:
+      "https://www.airbnb.ca/rooms/1313847204355627326?guests=1&adults=1&s=67&unique_share_id=507dffd6-1f84-49a3-99eb-d10f493a65a6",
   },
   {
     name: "Whistler Village Views | Luxury 2.5 Bedroom",
@@ -319,29 +416,14 @@ export default function BlogPost() {
                 and perfect for travellers who want space, views, and a real
                 sense of retreat.
               </p>
-
-              <h3 className="text-2xl font-semibold text-gray-900 mt-10 mb-3 not-prose">
-                Luxury homes beyond Kadenwood
-              </h3>
-              <p>
-                These homes are excellent for guests who want larger layouts,
-                elevated design, and easy access to Whistler village amenities in
-                summer.
-              </p>
-
-              <h3 className="text-2xl font-semibold text-gray-900 mt-10 mb-3 not-prose">
-                Condo and townhome options
-              </h3>
-              <p>
-                Not every FIFA trip needs a large private chalet. AceHost also
-                offers stylish condo and townhome options for smaller groups,
-                couples, and families who still want a premium Whistler base.
-              </p>
             </div>
 
             <div className="mt-10 space-y-12">
-              {featuredProperties.map((property) => (
-                <section key={property.name} className="border border-gray-200 rounded-xl p-5 md:p-6">
+              {kadenwoodHomes.map((property) => (
+                <section
+                  key={property.name}
+                  className="border border-gray-200 rounded-xl p-5 md:p-6"
+                >
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">
                     {property.name}
                   </h3>
@@ -366,11 +448,108 @@ export default function BlogPost() {
 
                   <a
                     href={property.bookUrl}
-                    target={property.bookUrl.startsWith("http") ? "_blank" : undefined}
-                    rel={property.bookUrl.startsWith("http") ? "noopener noreferrer" : undefined}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-block bg-black text-white px-5 py-3 rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium"
                   >
-                    {property.bookLabel || "Book on Airbnb"}
+                    Book on Airbnb
+                  </a>
+                </section>
+              ))}
+            </div>
+
+            <div className="prose prose-lg max-w-none mt-14">
+              <h3 className="text-2xl font-semibold text-gray-900 mt-10 mb-3 not-prose">
+                Luxury homes beyond Kadenwood
+              </h3>
+            </div>
+
+            <div className="mt-6 space-y-12">
+              {luxuryHomesBeyondKadenwood.map((property) => (
+                <section
+                  key={property.name}
+                  className="border border-gray-200 rounded-xl p-5 md:p-6"
+                >
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                    {property.name}
+                  </h3>
+                  <p className="text-gray-700 mb-5">{property.description}</p>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
+                    {property.photos.slice(0, 4).map((photo, index) => (
+                      <div
+                        key={`${property.name}-${index}`}
+                        className="relative aspect-[4/3] rounded-lg overflow-hidden"
+                      >
+                        <Image
+                          src={photo}
+                          alt={`${property.name} photo ${index + 1}`}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 640px) 100vw, 50vw"
+                        />
+                      </div>
+                    ))}
+                  </div>
+
+                  <a
+                    href={property.bookUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-black text-white px-5 py-3 rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium"
+                  >
+                    Book on Airbnb
+                  </a>
+                </section>
+              ))}
+            </div>
+
+            <div className="prose prose-lg max-w-none mt-14">
+              <h3 className="text-2xl font-semibold text-gray-900 mt-10 mb-3 not-prose">
+                Condo and townhome options
+              </h3>
+              <p>
+                Not every FIFA trip needs a large private chalet. AceHost also
+                offers stylish condo and townhome options for smaller groups,
+                couples, and families who still want a premium Whistler base.
+              </p>
+            </div>
+
+            <div className="mt-6 space-y-12">
+              {condoTownhomeOptions.map((property) => (
+                <section
+                  key={property.name}
+                  className="border border-gray-200 rounded-xl p-5 md:p-6"
+                >
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                    {property.name}
+                  </h3>
+                  <p className="text-gray-700 mb-5">{property.description}</p>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
+                    {property.photos.slice(0, 4).map((photo, index) => (
+                      <div
+                        key={`${property.name}-${index}`}
+                        className="relative aspect-[4/3] rounded-lg overflow-hidden"
+                      >
+                        <Image
+                          src={photo}
+                          alt={`${property.name} photo ${index + 1}`}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 640px) 100vw, 50vw"
+                        />
+                      </div>
+                    ))}
+                  </div>
+
+                  <a
+                    href={property.bookUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-black text-white px-5 py-3 rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium"
+                  >
+                    Book on Airbnb
                   </a>
                 </section>
               ))}

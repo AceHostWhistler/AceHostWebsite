@@ -18,7 +18,8 @@ export const allArticles: Article[] = [
       "Planning World Cup 2026 in Vancouver? Discover why staying in Whistler gives you a private luxury base with easy matchday access, plus featured homes to book.",
     readTime: "13 min read",
     link: "/post/fifa-vancouver-whistler-the-luxury-whistler-fifa-experience",
-    coverImage: "/photos/properties/Altitude New Photos Best/1.jpg",
+    coverImage:
+      "/photos/properties/2919 Heritage/02 - 20260301 MM4P 01 DJI_20260301181105_0776_D-Edit-AI Generative Fill.jpg",
   },
   {
     title:

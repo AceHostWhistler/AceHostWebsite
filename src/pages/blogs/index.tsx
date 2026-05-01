@@ -30,7 +30,8 @@ const blogPostsData: BlogPost[] = [
       "FIFA Vancouver / Whistler, The Luxury Whistler FIFA Experience | AceHost",
     category: "FIFA 2026, Luxury Travel",
     readTime: "13 min read",
-    heroImage: "/photos/properties/Altitude New Photos Best/1.jpg",
+    heroImage:
+      "/photos/properties/2919 Heritage/02 - 20260301 MM4P 01 DJI_20260301181105_0776_D-Edit-AI Generative Fill.jpg",
   },
   {
     slug: "is-owning-a-vacation-rental-in-whistler-worth-it-2026",
