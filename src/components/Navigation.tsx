@@ -165,21 +165,33 @@ const Navigation = ({
               {navLinks.map((link, index) =>
                 link.url === "/properties" ? (
                   <div key={index} className="relative" ref={rentalsRef}>
-                    <button
+                    <div
                       onMouseEnter={() => setShowRentalsDropdown(true)}
-                      onClick={() => setShowRentalsDropdown(!showRentalsDropdown)}
                       className={`px-4 py-2 rounded-md text-sm font-semibold flex items-center relative ${
                         currentPage === link.url
                           ? "text-black border-b-2 border-black"
                           : "text-gray-700 hover:text-black transition-colors duration-300 group"
                       }`}
                     >
-                      {link.text}
-                      <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
+                      <Link
+                        href="/properties?category=whistler"
+                        onClick={closePrimaryDropdowns}
+                        className="inline-flex items-center"
+                      >
+                        {link.text}
+                      </Link>
+                      <button
+                        type="button"
+                        onClick={() => setShowRentalsDropdown(!showRentalsDropdown)}
+                        className="ml-1"
+                        aria-label="Toggle luxury rental homes menu"
+                      >
+                        <ChevronDown className="h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
+                      </button>
                       {currentPage !== link.url && (
                         <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black group-hover:w-full transition-all duration-300 ease-in-out"></span>
                       )}
-                    </button>
+                    </div>
 
                     {showRentalsDropdown && (
                       <div className="absolute top-full left-0 mt-2 w-72 bg-white shadow-lg border border-gray-100 rounded-md py-2 z-50">
@@ -534,23 +546,34 @@ const Navigation = ({
               {navLinks.map((link, index) =>
                 link.url === "/properties" ? (
                   <div key={index} className="rounded-md overflow-hidden">
-                    <button
-                      onClick={() =>
-                        setShowMobileRentalsDropdown(!showMobileRentalsDropdown)
-                      }
+                    <div
                       className={`flex justify-between items-center w-full py-3 px-4 rounded-md text-base ${
                         currentPage === link.url
                           ? "bg-gray-100 text-black font-semibold"
                           : "text-gray-700 hover:text-black hover:bg-gray-50 transition-all"
                       }`}
                     >
-                      <span>{link.text}</span>
-                      <ChevronDown
-                        className={`h-5 w-5 transition-transform ${
-                          showMobileRentalsDropdown ? "transform rotate-180" : ""
-                        }`}
-                      />
-                    </button>
+                      <Link
+                        href="/properties?category=whistler"
+                        onClick={() => setIsMenuOpen(false)}
+                        className="flex-1"
+                      >
+                        <span>{link.text}</span>
+                      </Link>
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setShowMobileRentalsDropdown(!showMobileRentalsDropdown)
+                        }
+                        aria-label="Toggle luxury rental homes menu"
+                      >
+                        <ChevronDown
+                          className={`h-5 w-5 transition-transform ${
+                            showMobileRentalsDropdown ? "transform rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+                    </div>
 
                     {showMobileRentalsDropdown && (
                       <div className="mt-1 ml-4 pl-4 border-l-2 border-gray-100 space-y-1">
