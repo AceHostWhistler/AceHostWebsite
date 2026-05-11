@@ -159,7 +159,7 @@ const ChaletLaForja = () => {
             title="Chalet La Forja | Kadenwood | Private Butler"
             guests={16}
             bedrooms={7.5}
-            beds={15}
+            beds={9}
             bathrooms={8}
             priceRange="$7,000-11,000+ per night | Private Butler Included"
             winterPrice="$8500-$11,000+ Nightly | Winter"
@@ -320,56 +320,49 @@ const ChaletLaForja = () => {
                   <h2 className="text-2xl font-bold">Bedroom Layout</h2>
                 </div>
 
-                <p className="font-bold mb-2">UPPER LEVEL:</p>
+                <p className="font-bold mb-2">BEDROOM LAYOUT:</p>
                 <p className="mb-4">
-                  <span className="font-medium">Bedroom 1-</span> Master bedroom
-                  with a beautiful king bed with an ensuite shower and bathtub
-                  as well as a private patio with 2 day lounge beds.
-                </p>
-                <p className="mb-4">
-                  <span className="font-medium">Bedroom 2-</span> Second master
-                  bedroom situated next to the master. It has a king bed with an
-                  ensuite bathroom that has a shower and bath with private patio
-                  access.
-                </p>
-                <p className="mb-4">
-                  <span className="font-medium">Bedroom 3-</span> Located at the
-                  end of the corridor the room has a king bed, an ensuite
-                  bathroom that has a shower and bath and private patio access.
-                </p>
-                <p className="mb-4">
-                  <span className="font-medium">Bedroom 4-</span> Very large
-                  room with a king bed, ensuite bathroom with a shower and is
-                  located next to bedroom 3.
-                </p>
-                <p className="mb-4">
-                  <span className="font-medium">Bedroom 7-</span> This hybrid
-                  office space has a twin bed, large window and connects to
-                  bedroom 2. It has its own private entrance leading from the
-                  hallway and shares a bathroom with bedroom 2.
+                  Full 8+1 bedroom home, with an additional single bed in bedroom 7, a smaller private room with a window. Converted office space that adjoins bedroom 2 and shares the same bathroom. Able to access through own door leading to the hallway.
                 </p>
 
-                <p className="font-bold mb-2">MID LEVEL:</p>
+                <p className="font-bold mb-2">UPPER LEVEL (level located below the main floor):</p>
                 <p className="mb-4">
-                  <span className="font-medium">Bedroom 5-</span> Located on its
-                  own level this bunk bed room has 6 queen beds with a spacious
-                  ensuite bathroom that has a shower and a bath.
+                  <span className="font-medium">•Bedroom 1 -</span> Master bedroom with a beautiful King bed with an ensuite shower and bathtub as well as a private patio with 2 day lounge beds.
+                </p>
+                <p className="mb-4">
+                  <span className="font-medium">•Bedroom 2 -</span> Second master bedroom situated next to the master. It has a King bed with an ensuite bathroom that has a shower and bath with private patio access.
+                </p>
+                <p className="mb-4">
+                  <span className="font-medium">•Bedroom 3 -</span> Located at the end of the corridor the room has a King bed, an ensuite bathroom that has a shower and bath and private patio access.
+                </p>
+                <p className="mb-4">
+                  <span className="font-medium">•Bedroom 4 -</span> Very large room with a King bed, ensuite bathroom with a shower and is located next to bedroom 3.
+                </p>
+                <p className="mb-4">
+                  <span className="font-medium">•Bedroom 7 -</span> This hybrid office space has a Twin bed, large window and connects to bedroom 2. It has its own private entrance leading from the hallway and shares a bathroom with bedroom 2.
+                </p>
+
+                <p className="font-bold mb-2">MIDDLE LEVEL:</p>
+                <p className="mb-4">
+                  <span className="font-medium">•Bedroom 5 -</span> Located on its own level this bunk bed room has 6 Queen beds with a spacious ensuite bathroom that has a shower and a bath.
                 </p>
 
                 <p className="font-bold mb-2">LOWER LEVEL:</p>
                 <p className="mb-4">
-                  <span className="font-medium">Bedroom 6-</span> Has a king bed
-                  and 2 twins and is tucked away down on the lower level for
-                  ultimate privacy with an ensuite bathroom and shower. Enjoy
-                  private access to the pool, hot tub and backyard.
+                  <span className="font-medium">•Bedroom 6 -</span> Has a King bed and 2 twins and is tucked away down on the lower level for ultimate privacy with an ensuite bathroom and shower. Enjoy private access to the pool, hot tub and backyard.
                 </p>
                 <p className="mb-4">
-                  <span className="font-medium">Bedroom 8-</span> Has a king bed
-                  and is connected with bedroom 6 (walk through bedroom 6 to
-                  exit the rooms into the rec room) They share the same
-                  bathroom. Option for one of these rooms to use the large
-                  shower with a steam function located in the rec room just off
-                  these bedrooms.
+                  <span className="font-medium">•Bedroom 8 -</span> Has a King bed and is connected with bedroom 6 (walk through bedroom 6 to exit the rooms into the rec room). They share the same bathroom. Option for one of these rooms to use the large shower with a steam function located in the rec room just off these bedrooms.
+                </p>
+
+                <p className="font-bold mb-2">MAIN FLOOR (Includes kitchen, living room, tv lounge room, & garage):</p>
+                <p className="mb-4">
+                  <span className="font-medium">•Bedroom 9 -</span> Has a Queen bed and is located on the Main Floor. Bathroom & shower located adjacent to the bedroom, and is not a private ensuite. This bathroom is shared with others on the main kitchen/living room level. Perfect for elderly looking to walk less steps to their bedroom, as there are only 5 steps to enter the house & this floor.
+                </p>
+
+                <p className="font-bold mb-2">Bonus & optional:</p>
+                <p className="mb-4">
+                  For a small daily fee, the pool can be set to hot tub temperatures at 104 degrees.
                 </p>
               </div>
             </div>

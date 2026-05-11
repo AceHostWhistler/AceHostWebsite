@@ -234,7 +234,7 @@ const Home = () => {
       image: "/photos/properties/Chalet La Forja/hero00001.jpg",
       guests: "12+4",
       bedrooms: 7.5,
-      beds: 15,
+      beds: 9,
       bathrooms: 8,
       priceRange: "$7,000-11,000+ per night | Private Butler Included",
       winterPrice: "$8500-$11,000+ Nightly | Winter",

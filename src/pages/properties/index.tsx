@@ -2123,9 +2123,6 @@ export default function Properties() {
 
     const propertyUrl = getPropertyUrl(property);
 
-    // Special handling for Cotswolds property
-    const isCotswoldsProperty = property.id === "cotswolds-uk-soho-farm-house";
-
     // Mapping property IDs to Airbnb links
     const airbnbLinks: Record<string, string> = {
       "chalet-la-forja":
@@ -2182,28 +2179,15 @@ export default function Properties() {
           
           <Link href={propertyUrl}>
             <div className="relative w-full h-full">
-              {isCotswoldsProperty ? (
-                <div className="relative w-full h-full">
-                  <Image
-                    src="/optimized/cotswolds-cover.jpg"
-                    alt={`${property.name} - Luxury ${property.location === 'whistler' ? 'Whistler' : property.location === 'vancouver' ? 'Vancouver' : 'Worldwide'} vacation rental with ${property.bedrooms} bedrooms, accommodating up to ${property.guests} guests`}
-                    fill
-                    className="object-cover w-full h-full"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    quality={85}
-                  />
-                </div>
-              ) : (
-                <Image
-                  src={property.images[0]}
-                  alt={`${property.name} - Luxury ${property.location === 'whistler' ? 'Whistler' : property.location === 'vancouver' ? 'Vancouver' : 'Worldwide'} vacation rental with ${property.bedrooms} bedrooms, accommodating up to ${property.guests} guests`}
-                  fill
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  quality={80}
-                />
-              )}
+              <Image
+                src={property.images[0]}
+                alt={`${property.name} - Luxury ${property.location === 'whistler' ? 'Whistler' : property.location === 'vancouver' ? 'Vancouver' : 'Worldwide'} vacation rental with ${property.bedrooms} bedrooms, accommodating up to ${property.guests} guests`}
+                fill
+                className="w-full h-full object-cover"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                quality={80}
+              />
             </div>
           </Link>
 
