@@ -233,7 +233,8 @@ export default function Properties() {
               "/photos/properties/Chalet La Forja/Wine Cellar.jpg",
             ],
             guests: 16,
-            bedrooms: 7.5,
+            bedrooms: 9,
+            beds: 15,
             bathrooms: 8,
             location: "Kadenwood, Whistler",
             description:

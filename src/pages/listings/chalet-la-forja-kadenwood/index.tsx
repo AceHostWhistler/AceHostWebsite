@@ -147,7 +147,7 @@ const ChaletLaForja = () => {
         <title>Chalet La Forja | Kadenwood | Private Butler - AceHost</title>
         <meta
           name="description"
-          content="Experience luxury at Chalet La Forja in Kadenwood. This ski-in/ski-out property features 7.5 bedrooms, private butler service, and stunning mountain views."
+          content="Experience luxury at Chalet La Forja in Kadenwood. This ski-in/ski-out property features 9 bedrooms and 15 beds, private butler service, and stunning mountain views."
         />
       </Head>
 
@@ -158,8 +158,8 @@ const ChaletLaForja = () => {
           <PropertyHeader
             title="Chalet La Forja | Kadenwood | Private Butler"
             guests={16}
-            bedrooms={7.5}
-            beds={9}
+            bedrooms={9}
+            beds={15}
             bathrooms={8}
             priceRange="$7,000-11,000+ per night | Private Butler Included"
             winterPrice="$8500-$11,000+ Nightly | Winter"
@@ -262,9 +262,9 @@ const ChaletLaForja = () => {
                   butlers pantry, two private offices, state of the art
                   electronics with built in Sonos speaker systems in every room,
                   gym, hot-tub, heated pool, steam shower, private gondola, and
-                  access to and from the ski-hill from your front door. Full 7
-                  bedroom home, with an additional single bed in a smaller
-                  private room with a window.
+                  access to and from the ski-hill from your front door. Full 9
+                  bedroom home (8+1 layout), with an additional single bed in a
+                  smaller private room with a window.
                 </p>
                 <p className="text-gray-800 mb-6">
                   <span className="font-bold">Private Butler:</span> In addition
@@ -294,7 +294,7 @@ const ChaletLaForja = () => {
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
                 <div className="relative aspect-[4/3] mb-2">
                   <Image
-                    src="/photos/properties/Chalet La Forja/2950HeritagePeaks3Feb30.jpg"
+                    src="/photos/properties/Chalet La Forja/02-2950 Heritage Peaks Trail-02.jpg"
                     alt="Chalet La Forja Bedroom"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-300"
