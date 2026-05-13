@@ -175,6 +175,9 @@ const TimberHavenKadenwood = () => {
             <p className="text-gray-800 mb-8 max-w-4xl">
               Welcome to your private Kadenwood mountain estate, an 8-bedroom luxury home with stunning views, ski-in/ski-out access, a private hot tub, beautiful furnishings, curated artwork, and access to Kadenwood's private residents-only gondola.
             </p>
+            <p className="text-gray-800 mb-8 max-w-4xl">
+              With spacious living areas, outdoor dining, a ping pong table, multiple lounge spaces, and a main floor with 2 bedrooms including the Master Bedroom suite, this home is perfect for families, large groups, and guests who prefer minimal stairs during their stay.
+            </p>
             <p className="text-gray-800 mb-8 max-w-4xl font-semibold">The space</p>
             <p className="text-gray-800 mb-6 max-w-4xl">
               Located in Kadenwood, Whistler's favourite luxury ski-in/ski-out neighbourhood, this 8-bedroom mountain estate offers the perfect blend of privacy, comfort, and convenience. Perched high above Creekside and surrounded by old growth forest, the home features one-of-a-kind mountain views, elegant interiors, and plenty of room for groups to relax, gather, and enjoy Whistler in every season.
