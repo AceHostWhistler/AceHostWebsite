@@ -745,23 +745,6 @@ const Home = () => {
       isSkiInSkiOut: false,
     },
     {
-      id: "glaciers-reach",
-      name: "Glaciers Reach | Heart of Whistler Village",
-      image: "/photos/properties/Glaciers Reach/01 - 20251021 MM4P 01 0021.jpg",
-      guests: 5,
-      bedrooms: 3,
-      beds: 3,
-      bathrooms: 2,
-      priceRange: "$250-600 per night Summer",
-      winterPrice: "$500-1200 Nightly | Winter",
-      holidayPrice: "$1200-1500 Nightly | Christmas & NY",
-      location: "whistler",
-      link: "/listings/glaciers-reach-whistler-village",
-      airbnbLink: "https://www.airbnb.ca/rooms/1539363076080108525?guests=1&adults=1&s=67&unique_share_id=e234c7cf-b23b-4ce3-9c53-7dde85033c3b",
-      isPetFriendly: false,
-      isSkiInSkiOut: false,
-    },
-    {
       id: "cozy-lakefront-whistler-condo",
       name: "Cozy Lakefront Whistler Condo | Mountain View",
       image: "/photos/properties/Nick North 2-Bed/01 - 20251006 A7M4 03 A1_03279-Edit.jpg",
@@ -906,7 +889,6 @@ const Home = () => {
     "rare-3-bedroom-whistler-village",
     "luxe-cozy-3-bed-whistler-village",
     "luxe-5-bed-scandinave-retreat",
-    "glaciers-reach",
     "northlands-walk-to-village-slopes-luxury-4-bed",
   ]);
 
