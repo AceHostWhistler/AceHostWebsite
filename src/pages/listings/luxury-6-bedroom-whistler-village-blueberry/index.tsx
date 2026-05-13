@@ -151,7 +151,7 @@ const Luxury6BedroomWhistlerVillageBlueberry = () => {
         <title>Luxury 6-Bedroom | Whistler Village | Blueberry - AceHost</title>
         <meta
           name="description"
-          content="Experience Whistler luxury in this newly renovated 6-bedroom, 3-bath Ravencrest condo in prestigious Blueberry Hill. Sleeps 15+ guests across 10 beds with Restoration Hardware and Rove Concepts furnishings, just minutes from Whistler Village."
+          content="Experience Whistler luxury in this newly renovated 6-bedroom, 3-bath Ravencrest condo in prestigious Blueberry Hill. Sleeps 12 guests across 10 beds with Restoration Hardware and Rove Concepts furnishings, just minutes from Whistler Village."
         />
       </Head>
 
@@ -161,7 +161,7 @@ const Luxury6BedroomWhistlerVillageBlueberry = () => {
         <main>
           <PropertyHeader
             title="Luxury 6-Bedroom | Whistler Village | Blueberry"
-            guests={15}
+            guests={12}
             bedrooms={6}
             beds={10}
             bathrooms={3}
@@ -209,7 +209,7 @@ const Luxury6BedroomWhistlerVillageBlueberry = () => {
             <p className="text-gray-800 mb-16 max-w-4xl">
               Welcome to this luxurious 6-bedroom, 3-bath Ravencrest condo in Whistler's exclusive Blueberry neighbourhood.
               <br /><br />
-              Newly renovated and designed with Restoration Hardware and Rove Concepts furnishings, it sleeps 14+ with 10 premium Puffy beds. Enjoy forest views, ski and bike storage, EV parking, and a new BBQ.
+              Newly renovated and designed with Restoration Hardware and Rove Concepts furnishings, it sleeps 12 with 10 premium Puffy beds. Enjoy forest views, ski and bike storage, EV parking, and a new BBQ.
               <br /><br />
               Just a 3-4 minute drive or short taxi ride to Whistler Village, slopes, and lakes, offering tranquility and convenience in one.
             </p>

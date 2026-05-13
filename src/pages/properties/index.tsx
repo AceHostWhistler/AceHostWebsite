@@ -478,12 +478,12 @@ export default function Properties() {
               "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/03 - 20251108 A7M4 02 A1_07764.jpg",
               "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/11 - 20251108 A7M4 02 A1_07858.jpg",
             ],
-            guests: 15,
+            guests: 12,
             bedrooms: 6,
             bathrooms: 3,
             location: "Blueberry Hill, Whistler",
             description:
-              "Experience Whistler luxury in this newly renovated 6-bedroom, 3-bath Ravencrest condo in prestigious Blueberry Hill. Sleeping 15+ guests across 10 beds, it features Restoration Hardware and Rove Concepts furnishings, just minutes from Whistler Village.",
+              "Experience Whistler luxury in this newly renovated 6-bedroom, 3-bath Ravencrest condo in prestigious Blueberry Hill. Sleeping 12 guests across 10 beds, it features Restoration Hardware and Rove Concepts furnishings, just minutes from Whistler Village.",
             features: [
               "Newly Renovated",
               "Forest Views",
