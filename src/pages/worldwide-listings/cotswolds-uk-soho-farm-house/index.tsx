@@ -15,13 +15,15 @@ const CotswoldsUKSohoFarmHouse = () => {
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
   const [touchEndX, setTouchEndX] = useState<number | null>(null);
   const [imagesLoaded, setImagesLoaded] = useState(0);
-  const [totalImages] = useState(82); // Total number of images we have
+  const [totalImages] = useState(84); // Total number of images we have
 
   // Cache version for forcing new image downloads
   const cacheVersion = "v10";
 
   // Define photo paths using the optimized gallery images
   const photoOrder = [
+    "/photos/properties/Cotswolds UK - Soho Farm House/Final Pool Drone money shot good.png", // New cover photo
+    "/photos/properties/Cotswolds UK - Soho Farm House/Pool Drone shot cotswolds.png", // New drone pool photo
     "/optimized/cotswolds-cover.jpg", // Optimized cover photo
     "/optimized/cotswolds-all/cotswolds-all-11.jpg", // DJI_20250602090532_0522_D
     "/optimized/cotswolds-all/cotswolds-all-23.jpg", // 224A5292
