@@ -58,6 +58,8 @@ const TimberHavenKadenwood = () => {
     "/photos/properties/Timber Haven John Harris/50 - 20260506 A7M4 03 A1_00348.jpg",
     "/photos/properties/Timber Haven John Harris/51 - 20260506 A7M4 03 A1_00356.jpg",
     "/photos/properties/Timber Haven John Harris/52 - 20260506 A7M4 03 A1_00456.jpg",
+    "/photos/properties/Timber Haven John Harris/82 - 20260506 A7M4 03 A1_00298 stagged.JPG.jpeg",
+    "/photos/properties/Timber Haven John Harris/83 - 20260506 A7M4 03 A1_00302 stagged.JPG.jpeg",
     "/photos/properties/Timber Haven John Harris/53 - 20260506 A7M4 03 A1_00363.jpg",
     "/photos/properties/Timber Haven John Harris/54 - 20260506 A7M4 03 A1_00369.jpg",
     "/photos/properties/Timber Haven John Harris/55 - 20260506 A7M4 03 A1_00376.jpg",
