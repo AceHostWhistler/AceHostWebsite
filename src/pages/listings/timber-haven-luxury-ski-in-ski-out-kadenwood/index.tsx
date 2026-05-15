@@ -191,6 +191,61 @@ const TimberHavenKadenwood = () => {
             <p className="text-gray-800 mb-6 max-w-4xl">
               Outside, enjoy a private hot tub, outdoor dining area, and peaceful alpine surroundings. In the winter, guests can take advantage of Kadenwood's exceptional ski-in/ski-out access via the Peak to Creek run, along with the private residents-only gondola and groomed ski trail access. In the summer, the home is a beautiful base for hiking, biking, golfing, lake days, and relaxing in one of Whistler's most exclusive communities.
             </p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-10">Bedroom/Home Layout</h3>
+            <p className="text-gray-800 mb-6 max-w-4xl">
+              8 Bedrooms | Multiple Ensuite Bathrooms | Sleeps Large Groups Comfortably
+            </p>
+
+            <h4 className="text-xl font-semibold text-gray-900 mb-3">Main Floor, Primary Living Level</h4>
+            <p className="text-gray-800 mb-2 max-w-4xl font-medium">Bedroom 1, Primary Suite: King bed</p>
+            <p className="text-gray-800 mb-2 max-w-4xl">
+              Spacious primary bedroom with an ensuite bathroom featuring two sinks, a bathtub, and a walk-in shower.
+            </p>
+            <p className="text-gray-800 mb-6 max-w-4xl">
+              This main level bedroom is ideal for guests who prefer to avoid stairs, with the primary suite located on the same floor as the main living spaces.
+            </p>
+
+            <h4 className="text-xl font-semibold text-gray-900 mb-3">Mid Floor, Main Bedroom Level</h4>
+            <p className="text-gray-800 mb-4 max-w-4xl">
+              Mid floor can be accessed via the garage side door or the garage, also providing step free access to the second floor bedrooms.
+            </p>
+            <p className="text-gray-800 mb-2 max-w-4xl font-medium">Bedroom 2: King bed</p>
+            <p className="text-gray-800 mb-4 max-w-4xl">
+              Includes a private ensuite bathroom with one sink and a walk-in shower.
+            </p>
+            <p className="text-gray-800 mb-2 max-w-4xl font-medium">Bedroom 3: King bed</p>
+            <p className="text-gray-800 mb-4 max-w-4xl">
+              Includes a private ensuite bathroom with one sink and a bathtub.
+            </p>
+            <p className="text-gray-800 mb-2 max-w-4xl font-medium">Bedroom 4: Queen bed</p>
+            <p className="text-gray-800 mb-4 max-w-4xl">
+              Shares access to an ensuite/shared bathroom with Bedroom 5. The bathroom includes two sinks and a walk-in shower.
+            </p>
+            <p className="text-gray-800 mb-2 max-w-4xl font-medium">Bedroom 5: King bed</p>
+            <p className="text-gray-800 mb-4 max-w-4xl">
+              Shares access to an ensuite/shared bathroom with Bedroom 4. The bathroom includes two sinks and a walk-in shower.
+            </p>
+            <p className="text-gray-800 mb-2 max-w-4xl font-medium">Bedroom 6: Queen bed</p>
+            <p className="text-gray-800 mb-6 max-w-4xl">
+              This bedroom does not have an ensuite bathroom.
+            </p>
+
+            <h4 className="text-xl font-semibold text-gray-900 mb-3">Basement Level</h4>
+            <p className="text-gray-800 mb-2 max-w-4xl font-medium">Bedroom 7: Two twin beds and two full beds</p>
+            <p className="text-gray-800 mb-4 max-w-4xl">
+              Includes a private ensuite bathroom with one sink and a walk-in shower. This is a great room for kids, teens, or larger groups sharing.
+            </p>
+            <p className="text-gray-800 mb-2 max-w-4xl font-medium">Bedroom 8: Queen bed</p>
+            <p className="text-gray-800 mb-4 max-w-4xl">
+              This bedroom does not have an ensuite, but has access to a bathroom with a steam shower on the basement level.
+            </p>
+            <p className="text-gray-800 mb-2 max-w-4xl font-medium">Common Basement Bathroom</p>
+            <p className="text-gray-800 mb-6 max-w-4xl">
+              Includes two sinks, a walk-in shower, and a steam shower.
+            </p>
+            <p className="text-gray-800 mb-8 max-w-4xl">
+              This lower level is well-suited for additional guests, families with children, or anyone looking for a bit more separation from the main living areas. A very comfy couch to enjoy the TV!
+            </p>
 
             <div className="bg-gray-100 p-8 rounded-xl mb-20">
               <h2 className="text-2xl font-bold mb-4">Registration details</h2>
