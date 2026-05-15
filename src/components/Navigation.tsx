@@ -117,13 +117,13 @@ const Navigation = ({
   ];
 
   const rentalFilterLinks = [
-    { text: "All Properties", url: "/properties?category=all" },
+    { text: "Whistler All Properties", url: "/properties?category=all" },
     { text: "Whistler", url: "/properties?category=whistler" },
-    { text: "Homes", url: "/properties?category=homes" },
-    { text: "Townhomes", url: "/properties?category=townhomes" },
-    { text: "Condos", url: "/properties?category=condos" },
-    { text: "Pet Friendly", url: "/properties?category=pets" },
-    { text: "Ski in Ski out", url: "/properties?category=skiinout" },
+    { text: "Whistler Homes", url: "/properties?category=homes" },
+    { text: "Whistler Townhomes", url: "/properties?category=townhomes" },
+    { text: "Whistler Condos", url: "/properties?category=condos" },
+    { text: "Whistler Pet Friendly", url: "/properties?category=pets" },
+    { text: "Whistler Ski in Ski out", url: "/properties?category=skiinout" },
     { text: "Worldwide", url: "/properties?category=worldwide" },
   ];
 

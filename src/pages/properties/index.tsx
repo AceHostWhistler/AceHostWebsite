@@ -2387,7 +2387,7 @@ export default function Properties() {
                       : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
                   }`}
                 >
-                  All Properties
+                  Whistler All Properties
                 </button>
                 <button
                   onClick={() => setActiveCategory("whistler")}
@@ -2407,7 +2407,7 @@ export default function Properties() {
                       : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
                   }`}
                 >
-                  Homes
+                  Whistler Homes
                 </button>
                 <button
                   onClick={() => setActiveCategory("townhomes")}
@@ -2417,7 +2417,7 @@ export default function Properties() {
                       : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
                   }`}
                 >
-                  Townhomes
+                  Whistler Townhomes
                 </button>
                 <button
                   onClick={() => setActiveCategory("condos")}
@@ -2427,7 +2427,7 @@ export default function Properties() {
                       : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
                   }`}
                 >
-                  Condos
+                  Whistler Condos
                 </button>
                 <button
                   onClick={() => setActiveCategory("pets")}
@@ -2437,7 +2437,7 @@ export default function Properties() {
                       : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
                   }`}
                 >
-                  Pet Friendly
+                  Whistler Pet Friendly
                 </button>
                 <button
                   onClick={() => setActiveCategory("skiinout")}
@@ -2447,7 +2447,7 @@ export default function Properties() {
                       : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
                   }`}
                 >
-                  Ski in Ski out
+                  Whistler Ski in Ski out
                 </button>
                 <button
                   onClick={() => setActiveCategory("worldwide")}

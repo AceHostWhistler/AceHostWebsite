@@ -1299,7 +1299,7 @@ const Home = () => {
                   onClick={() => setActiveFilter("all")}
                   className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "all" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
                 >
-                  All Properties
+                  Whistler All Properties
                 </button>
                 <button
                   onClick={() => setActiveFilter("whistler")}
@@ -1311,31 +1311,31 @@ const Home = () => {
                   onClick={() => setActiveFilter("homes")}
                   className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "homes" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
                 >
-                  Homes
+                  Whistler Homes
                 </button>
                 <button
                   onClick={() => setActiveFilter("townhomes")}
                   className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "townhomes" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
                 >
-                  Townhomes
+                  Whistler Townhomes
                 </button>
                 <button
                   onClick={() => setActiveFilter("condos")}
                   className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "condos" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
                 >
-                  Condos
+                  Whistler Condos
                 </button>
                 <button
                   onClick={() => setActiveFilter("pets")}
                   className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "pets" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
                 >
-                  Pet Friendly
+                  Whistler Pet Friendly
                 </button>
                 <button
                   onClick={() => setActiveFilter("skiinout")}
                   className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "skiinout" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
                 >
-                  Ski In/Out
+                  Whistler Ski In/Out
                 </button>
                 <button
                   onClick={() => setActiveFilter("worldwide")}
