@@ -16,9 +16,10 @@ const GolfCourseViews = () => {
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
   const [touchEndX, setTouchEndX] = useState<number | null>(null);
 
-  // Property photos - including all 45 photos from the directory
+  // Property photos - including all gallery photos from the directory
   const images = [
     // Main featured photo - use this as the cover image
+    "/photos/properties/Muirfield Golf Course/Muirfield Snow shot.png",
     "/photos/properties/Muirfield Golf Course/44 - 20250820 MM4P 01 0016.jpg",
     "/photos/properties/Muirfield Golf Course/01 - 20250820 A7M4 01 A1_00497-Edit.jpg",
     "/photos/properties/Muirfield Golf Course/02 - 20250820 A7M4 01 A1_00179.jpg",
