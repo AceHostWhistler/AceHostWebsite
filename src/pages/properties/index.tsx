@@ -552,6 +552,7 @@ export default function Properties() {
             id: "golf-course-views",
             name: "Golf Course Views | Luxury 4-bed Whistler Village",
             images: [
+              "/photos/properties/Muirfield Golf Course/Muirfield drone snow.png",
               "/photos/properties/Muirfield Golf Course/Muirfield Snow shot.png",
               "/photos/properties/Muirfield Golf Course/44 - 20250820 MM4P 01 0016.jpg",
               "/photos/properties/Muirfield Golf Course/01 - 20250820 A7M4 01 A1_00497-Edit.jpg",

@@ -371,7 +371,7 @@ const Home = () => {
     {
       id: "golf-course-views",
       name: "Golf Course Views | Luxury 4-bed Whistler Village",
-      image: "/photos/properties/Muirfield Golf Course/Muirfield Snow shot.png",
+      image: "/photos/properties/Muirfield Golf Course/Muirfield drone snow.png",
       guests: 9,
       bedrooms: 4,
       beds: 5,
