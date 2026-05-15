@@ -291,7 +291,7 @@ const CotswoldsUKSohoFarmHouse = () => {
           <div className="max-w-5xl mx-auto px-6 md:px-10 lg:px-8" id="details">
             <div className="text-gray-800 space-y-6 leading-relaxed text-base md:text-lg">
               <p>
-                Escape to a stunning estate near Soho Farmhouse, offering a luxurious retreat with an outdoor spa, private tennis court, and cozy annex. This beautiful house is spread across several acres, features 8 bedrooms, a gourmet kitchen, multiple living areas, and 5 bathrooms. Enjoy the hot tub, sauna, and outdoor fire pit.
+                Escape to a stunning estate near Soho Farmhouse, offering a luxurious retreat with an outdoor spa &amp; heated pool/hot tub, private tennis court, and cozy annex house for additional sleeping. This beautiful house is spread across several acres, features 8 bedrooms, a gourmet kitchen, multiple living areas, and 5 bathrooms. Enjoy the hot tub, infrared sauna, cold plunge, pool, &amp; outdoor fire pit.
               </p>
               <p>
                 Perfect for families or groups seeking a peaceful Cotswolds getaway in a prestigious, rural setting.
@@ -299,7 +299,10 @@ const CotswoldsUKSohoFarmHouse = () => {
 
               <h3 className="text-2xl font-bold text-gray-900 pt-2">The space</h3>
               <p>
-                <strong>Main House (6 Bedrooms):</strong> Step inside the heart of the estate, featuring six beautifully appointed bedrooms designed for comfort and relaxation:
+                <strong>Main House (6 Bedrooms):</strong>
+              </p>
+              <p>
+                Step inside the heart of the estate, featuring six beautifully appointed bedrooms designed for comfort and relaxation:
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>Emperor King Bedroom:</strong> A luxurious retreat with a spacious Emperor-size bed.</li>
@@ -318,7 +321,10 @@ const CotswoldsUKSohoFarmHouse = () => {
               </p>
 
               <p>
-                <strong>Annex House (2 Bedrooms):</strong> Discover a private sanctuary in the Annex, nestled behind the tennis court. It features:
+                <strong>Annex House (2 Bedrooms):</strong>
+              </p>
+              <p>
+                Discover a private sanctuary in the Annex, nestled behind the tennis court. It features:
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>King Bedroom:</strong> A comfortable room with a King-size bed.</li>
@@ -328,13 +334,22 @@ const CotswoldsUKSohoFarmHouse = () => {
               </ul>
 
               <p>
-                <strong>Wellness &amp; Outdoor Living:</strong> Experience pure relaxation with our outdoor spa area, offering:
+                <strong>Wellness &amp; Outdoor Living:</strong>
+              </p>
+              <p>
+                Experience pure relaxation with our outdoor spa area, offering:
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>Sauna:</strong> A traditional sauna for a rejuvenating experience.</li>
                 <li><strong>Hot Tub:</strong> Unwind in the hot tub under the open sky.</li>
                 <li><strong>Cold Plunge Pool:</strong> Refresh yourself with a plunge into the cold pool.</li>
               </ul>
+              <p>
+                <em>*Heated Pool: Brand new swimming pool and lounge chairs located out front of the main house. Pool is heated to 85 degrees year round at no extra charge.</em>
+              </p>
+              <p>
+                <em>*Please note the pool is not available until July 1st.*</em>
+              </p>
 
               <p>
                 Enjoy outdoor activities like bocce ball or horseshoes, or simply relax by the outdoor fire pit under the stars.
@@ -363,7 +378,7 @@ const CotswoldsUKSohoFarmHouse = () => {
                 <em>*Cooling fan located in every bedroom and also living spaces, though typically the Cotswolds is cooler at night time compared to London and not needed.</em>
               </p>
               <p>
-                <em>BBQ available from April 1 to October 30. BBQ not available in winter.</em>
+                BBQ available from April 1 to October 30. BBQ not available in winter.
               </p>
               <p>
                 <strong>Important pet rule:</strong> We welcome a maximum of 2 dogs. Subject to a pet fee, automatically adjusted on the listing when toggled.
