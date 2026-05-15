@@ -350,6 +350,120 @@ export default function BlogPost() {
               </p>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6 not-prose">
+                Snow years do matter, but demand is still strong
+              </h2>
+              <p>Like any ski resort, snowfall matters.</p>
+              <p>
+                In a bad snow year, we tend to see demand drop ever so slightly.
+                In a good snow year, well, that speaks for itself.
+              </p>
+              <p>
+                The good news is that Whistler has much more going for it than
+                just one season. It has built a name that goes beyond snow
+                conditions alone, and that is a big reason many buyers still
+                feel confident investing here.
+              </p>
+
+              <div className="relative aspect-[16/9] my-8 rounded-lg overflow-hidden not-prose max-w-full">
+                <Image
+                  src={IMG_TYNDALL_02}
+                  alt="Whistler luxury home at Tyndall Lodge"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 896px"
+                />
+              </div>
+
+              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6 not-prose">
+                Limited land, more demand, and a mountain that keeps improving
+              </h2>
+              <p>
+                One of the nice things about Whistler as an investment market is
+                that it is a small town with limited room to expand.
+              </p>
+              <p>
+                There is only so much land. You cannot just keep building
+                forever.
+              </p>
+              <p>
+                At the same time, the mountain keeps improving. We have already
+                seen major lift upgrades happen over the last five years, and it
+                is fair to think more improvements will continue over time.
+              </p>
+              <p>That creates a very attractive setup.</p>
+              <p>
+                Limited room for more real estate, but still plenty of room for
+                more demand, better infrastructure, and a stronger overall
+                resort experience.
+              </p>
+              <p>
+                Safe to say that Whistler should remain a world-class ski
+                destination for a very long time, especially being so close to an
+                international airport and such a gorgeous drive up from
+                Vancouver.
+              </p>
+
+              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6 not-prose">
+                Not every Whistler property performs the same
+              </h2>
+              <p>This part is very important.</p>
+              <p>
+                Not every property in Whistler is a great investment property.
+              </p>
+              <p>
+                Some homes perform very well. Some are average. Some look good
+                on paper, but do not rent nearly as well as people expect.
+              </p>
+              <p>It can all come down to things like:</p>
+              <ul className="list-disc pl-6 space-y-2 text-gray-800">
+                <li>location</li>
+                <li>layout</li>
+                <li>bedroom count</li>
+                <li>amenities</li>
+                <li>parking</li>
+                <li>hot tub</li>
+                <li>views</li>
+                <li>design</li>
+                <li>upgrade potential</li>
+                <li>how well the property photographs online</li>
+              </ul>
+              <p>That is why buying the right home matters so much.</p>
+              <p>
+                AceHost can help suggest properties if you are looking for an
+                investment property in Whistler, because not every property
+                performs the same. Based on location, layout, amenities,
+                potential for upgrades, and overall booking appeal, there can be
+                a very wide range between a strong purchase and a poor one.
+              </p>
+              <p>
+                Our interests are aligned with yours. We want you to buy the
+                best home for your goals, and we are also happy to connect you
+                with a small selection of honest, hard-working real estate
+                agents we work closely with when discussing properties, revenue
+                potential, and fit.
+              </p>
+
+              <div className="relative aspect-[16/9] my-8 rounded-lg overflow-hidden not-prose max-w-full">
+                <Image
+                  src={IMG_3BED_VILLAGE}
+                  alt="Whistler Village luxury penthouse rental"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 896px"
+                />
+              </div>
+
+              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden not-prose max-w-full">
+                <Image
+                  src={`/photos/post/${SLUG}/scenic.jpg`}
+                  alt="Scenic Whistler mountain view and luxury home"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 896px"
+                />
+              </div>
+
+              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6 not-prose">
                 Appreciation is where it gets even more interesting
               </h2>
               <p>Now let&apos;s add one more layer.</p>
