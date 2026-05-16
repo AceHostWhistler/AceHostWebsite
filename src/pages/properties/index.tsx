@@ -661,9 +661,9 @@ export default function Properties() {
             id: "falcon-blueberry-drive",
             name: "Falcon | Blueberry Drive",
             images: [
-              "/photos/properties/Falcon/03 - 20250827 A7M4 01 DSC00224-Edit.jpg",
-              "/photos/properties/Falcon/01 - 20250827 A7M4 01 DSC00509-Edit.jpg",
-              "/photos/properties/Falcon/02 - 20250827 A7M4 01 DSC00524.jpg",
+              "/photos/properties/Falcon/Outdoor shot Falcon good.png",
+              "/photos/properties/Falcon/Outdoor shot falcon zoomed out.png",
+              "/photos/properties/Falcon/Outdoor shot falcon.png",
             ],
             guests: 15,
             bedrooms: 7,
