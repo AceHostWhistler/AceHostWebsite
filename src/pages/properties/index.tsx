@@ -377,8 +377,10 @@ export default function Properties() {
             id: "timber-haven-luxury-ski-in-ski-out-kadenwood",
             name: "Timber Haven - Luxury Ski in Ski out - Kadenwood",
             images: [
+              "/photos/properties/Timber Haven John Harris/053643CD-8861-4307-81B1-DE022A1D07B9.PNG.jpg",
+              "/photos/properties/Timber Haven John Harris/8D487CA0-D240-4A51-AC47-9B142E4DEE05.PNG.jpg",
+              "/photos/properties/Timber Haven John Harris/FEBAA229-DD26-4A6F-8D6B-AFB00A2AD0C8.PNG.jpg",
               "/photos/properties/Timber Haven John Harris/95 - 20260506 MM4P 02 0367.jpg",
-              "/photos/properties/Timber Haven John Harris/01 - 20260506 A7M4 03 A1_00439-Edit.jpg",
               "/photos/properties/Timber Haven John Harris/02 - 20260506 MM4P 02 0347.jpg",
             ],
             guests: 16,
