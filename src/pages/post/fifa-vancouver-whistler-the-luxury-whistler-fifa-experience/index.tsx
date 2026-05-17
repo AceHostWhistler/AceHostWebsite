@@ -38,6 +38,8 @@ const kadenwoodHomes: FeaturedProperty[] = [
     photos: [
       "/photos/properties/2919 Heritage/Mountaintop Snow cover.png",
       "/photos/properties/2919 Heritage/Drone Mountaintop.png",
+      "/photos/properties/2919 Heritage/Mountaintop Snow cover.png",
+      "/photos/properties/2919 Heritage/Drone Mountaintop.png",
     ],
     bookUrl:
       "https://www.airbnb.ca/rooms/1599369454342102375?guests=1&adults=1&s=67&unique_share_id=07a4f082-1dec-4a06-bf97-05638b3b71ef",
@@ -47,6 +49,9 @@ const kadenwoodHomes: FeaturedProperty[] = [
     description:
       "One of the most impressive homes in Whistler, perfect for guests wanting a statement home with a luxury feel throughout.",
     photos: [
+      "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
+      "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
+      "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
       "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
     ],
     bookUrl:
@@ -102,6 +107,7 @@ const luxuryHomesBeyondKadenwood: FeaturedProperty[] = [
       "/photos/properties/Falcon/Outdoor shot Falcon good.png",
       "/photos/properties/Falcon/Outdoor shot falcon zoomed out.png",
       "/photos/properties/Falcon/Outdoor shot falcon.png",
+      "/photos/properties/Falcon/Outdoor shot Falcon good.png",
     ],
     bookUrl:
       "https://www.airbnb.ca/rooms/18060329?preview_for_ml=true&source_impression_id=p3_1684112119_tL0LL7QnYLFGOCBI",
