@@ -31,6 +31,11 @@ const Luxury6BedroomWhistlerVillageBlueberry = () => {
     "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Drone Blueberry shot.png",
   ];
 
+  const getDescriptionPhoto = (preferredIndex: number) => {
+    if (photos.length === 0) return "";
+    return photos[preferredIndex % photos.length];
+  };
+
   const handlePhotoClick = (index: number) => {
     setSelectedPhotoIndex(index);
   };
@@ -206,7 +211,7 @@ const Luxury6BedroomWhistlerVillageBlueberry = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
                 <div className="relative aspect-[4/3]">
                   <Image
-                    src={photos[8]}
+                    src={getDescriptionPhoto(1)}
                     alt="Luxury living space"
                     width={1920}
                     height={1080}
@@ -215,7 +220,7 @@ const Luxury6BedroomWhistlerVillageBlueberry = () => {
                 </div>
                 <div className="relative aspect-[4/3]">
                   <Image
-                    src={photos[16]}
+                    src={getDescriptionPhoto(2)}
                     alt="Modern kitchen"
                     width={1920}
                     height={1080}
@@ -224,7 +229,7 @@ const Luxury6BedroomWhistlerVillageBlueberry = () => {
                 </div>
                 <div className="relative aspect-[4/3]">
                   <Image
-                    src={photos[24]}
+                    src={getDescriptionPhoto(3)}
                     alt="Cozy bedroom"
                     width={1920}
                     height={1080}
@@ -246,7 +251,7 @@ const Luxury6BedroomWhistlerVillageBlueberry = () => {
                   </ul>
                   <div className="mt-6 relative aspect-[4/3]">
                     <Image
-                      src={photos[33]}
+                      src={getDescriptionPhoto(1)}
                       alt="Primary bedroom"
                       width={1920}
                       height={1080}
@@ -265,7 +270,7 @@ const Luxury6BedroomWhistlerVillageBlueberry = () => {
                   <p className="mt-4 text-gray-800">Each of the three full bathrooms includes both a shower and a bathtub, providing convenience and comfort for large groups.</p>
                   <div className="mt-6 relative aspect-[4/3]">
                     <Image
-                      src={photos[37]}
+                      src={getDescriptionPhoto(2)}
                       alt="Bunk bedroom"
                       width={1920}
                       height={1080}
@@ -323,7 +328,7 @@ const Luxury6BedroomWhistlerVillageBlueberry = () => {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="relative aspect-[4/3]">
                     <Image
-                      src={photos[43]}
+                      src={getDescriptionPhoto(3)}
                       alt="Modern kitchen appliances"
                       width={1920}
                       height={1080}
@@ -332,7 +337,7 @@ const Luxury6BedroomWhistlerVillageBlueberry = () => {
                   </div>
                   <div className="relative aspect-[4/3]">
                     <Image
-                      src={photos[29]}
+                      src={getDescriptionPhoto(1)}
                       alt="Forest view from balcony"
                       width={1920}
                       height={1080}
@@ -359,7 +364,7 @@ const Luxury6BedroomWhistlerVillageBlueberry = () => {
                 <div className="md:col-span-1">
                   <div className="relative aspect-[3/4] h-full">
                     <Image
-                      src={photos[10]}
+                      src={getDescriptionPhoto(2)}
                       alt="Living area with mountain views"
                       width={1920}
                       height={1080}
