@@ -50,9 +50,9 @@ const kadenwoodHomes: FeaturedProperty[] = [
       "One of the most impressive homes in Whistler, perfect for guests wanting a statement home with a luxury feel throughout.",
     photos: [
       "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
-      "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
-      "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
-      "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
+      "/photos/properties/Chalet La Forja/Forja Drone Variant 1.png",
+      "/photos/properties/Chalet La Forja/Forja Drone Variant 2.png",
+      "/photos/properties/Chalet La Forja/Forja Drone Variant 3.png",
     ],
     bookUrl:
       "https://www.airbnb.ca/rooms/52655503?guests=1&adults=1&s=67&unique_share_id=f1bb5c2c-51f9-4a82-9aa4-670fb8caa71d",
