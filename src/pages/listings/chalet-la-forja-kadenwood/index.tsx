@@ -237,7 +237,7 @@ const ChaletLaForja = () => {
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
                 <div className="relative aspect-[4/3] mb-2">
                   <Image
-                    src="/photos/properties/Chalet La Forja/02-2950 Heritage Peaks Trail-02.jpg"
+                    src={photos[0]}
                     alt="Chalet La Forja Bedroom"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-300"
@@ -351,7 +351,7 @@ const ChaletLaForja = () => {
                 <div className="md:w-1/2">
                   <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
                     <Image
-                      src="/photos/properties/Chalet La Forja/05-2950 Heritage Peaks Trail-05 2.jpg"
+                      src={photos[0]}
                       alt="Chalet La Forja Location"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-500"
