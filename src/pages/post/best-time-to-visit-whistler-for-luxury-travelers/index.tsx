@@ -13,7 +13,7 @@ const IMG_RESTAURANT = "/Screenshot 2026-04-23 at 5.17.44\u202fPM.png";
 const IMG_SUMMER_VILLAGE = "/Screenshot 2026-04-23 at 5.18.12\u202fPM.png";
 
 const HERO =
-  "/photos/properties/2919 Heritage/20230104_204342jpg.jpg";
+  "/photos/properties/2919 Heritage/Mountaintop Snow cover.png";
 const HERO_URL = new URL(HERO, "https://acehost.ca").href;
 const PUBLISH_DATE = "April 24, 2026";
 const ISO_MOD = "2026-04-24T12:00:00-07:00";
@@ -150,7 +150,7 @@ export default function BlogPost() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Chalet La Forja/hero00001.jpg"
+                    src="/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png"
                     alt="Chalet La Forja luxury vacation home Whistler"
                     fill
                     className="object-cover"
@@ -231,7 +231,7 @@ export default function BlogPost() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10 not-prose">
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/2919 Heritage/02 - 20260301 MM4P 01 DJI_20260301181105_0776_D-Edit-AI Generative Fill.jpg"
+                    src="/photos/properties/2919 Heritage/Mountaintop Snow cover.png"
                     alt="The Mountaintop at Kadenwood ski-in ski-out luxury home"
                     fill
                     className="object-cover"

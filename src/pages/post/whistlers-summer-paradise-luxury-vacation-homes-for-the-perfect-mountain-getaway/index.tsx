@@ -162,7 +162,7 @@ export default function BlogPost() {
               </h3>
               <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/Altitude New Photos Best/altitude retreat-21.jpg"
+                  src="/photos/properties/2919 Heritage/Mountaintop Snow cover.png"
                   alt="Altitude Retreat luxury mansion in Kadenwood, Whistler"
                   fill
                   className="object-cover"
@@ -200,7 +200,7 @@ export default function BlogPost() {
               </h3>
               <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/Chalet La Forja/05-2950 Heritage Peaks Trail-05.jpg"
+                  src="/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png"
                   alt="Chalet La Forja outdoor space with mountain views in summer"
                   fill
                   className="object-cover"
@@ -236,7 +236,7 @@ export default function BlogPost() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Chalet La Forja/hero00001.jpg"
+                    src="/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png"
                     alt="Chalet La Forja exterior with mountain views"
                     fill
                     className="object-cover"
@@ -295,7 +295,7 @@ export default function BlogPost() {
               </h3>
               <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/Falcon/15-3595 Falcon Cres-15-.jpg"
+                  src="/photos/properties/Falcon/Outdoor shot Falcon good.png"
                   alt="Falcon property on Blueberry Drive with summer mountain views"
                   fill
                   className="object-cover"
@@ -411,7 +411,7 @@ export default function BlogPost() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Falcon/09-3595 Falcon Cres-09.jpg"
+                    src="/photos/properties/Falcon/Outdoor shot Falcon good.png"
                     alt="Summer mountain views from Whistler luxury property"
                     fill
                     className="object-cover"
@@ -419,7 +419,7 @@ export default function BlogPost() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Altitude New Photos Best/altitude retreat-9.jpg"
+                    src="/photos/properties/2919 Heritage/Mountaintop Snow cover.png"
                     alt="Luxury outdoor space with mountain backdrop in summer"
                     fill
                     className="object-cover"

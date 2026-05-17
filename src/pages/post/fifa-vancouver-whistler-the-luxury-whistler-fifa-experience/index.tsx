@@ -13,7 +13,7 @@ const PUBLISH_DATE = "May 1, 2026";
 const ISO_MODIFIED = "2026-05-01T09:30:00-07:00";
 const CANONICAL_URL = `https://acehost.ca/post/${SLUG}`;
 const HERO_IMAGE =
-  "/photos/properties/2919 Heritage/02 - 20260301 MM4P 01 DJI_20260301181105_0776_D-Edit-AI Generative Fill.jpg";
+  "/photos/properties/2919 Heritage/Mountaintop Snow cover.png";
 const HERO_IMAGE_URL = `https://acehost.ca${encodeURI(HERO_IMAGE)}`;
 
 const META = {
@@ -36,10 +36,10 @@ const kadenwoodHomes: FeaturedProperty[] = [
     description:
       "A spectacular luxury home and one of the most exciting options for FIFA travellers wanting privacy, panoramic mountain views, and a truly elevated Whistler stay.",
     photos: [
-      "/photos/properties/2919 Heritage/02 - 20260301 MM4P 01 DJI_20260301181105_0776_D-Edit-AI Generative Fill.jpg",
-      "/photos/properties/2919 Heritage/01 - 20260301 MM4P 01 DJI_20260301111158_0401_D-Edit-Edit-AI Generative Fill.jpg",
-      "/photos/properties/2919 Heritage/03 - 20260301 MM4P 01 DJI_20260301181209_0786_D.jpg",
-      "/photos/properties/2919 Heritage/04 - 20260301 MM4P 01 DJI_20260301181237_0791_D-Edit-AI Generative Fill.jpg",
+      "/photos/properties/2919 Heritage/Mountaintop Snow cover.png",
+      "/photos/properties/2919 Heritage/Mountaintop Snow cover.png",
+      "/photos/properties/2919 Heritage/Mountaintop Snow cover.png",
+      "/photos/properties/2919 Heritage/Mountaintop Snow cover.png",
     ],
     bookUrl:
       "https://www.airbnb.ca/rooms/1599369454342102375?guests=1&adults=1&s=67&unique_share_id=07a4f082-1dec-4a06-bf97-05638b3b71ef",
@@ -49,10 +49,10 @@ const kadenwoodHomes: FeaturedProperty[] = [
     description:
       "One of the most impressive homes in Whistler, perfect for guests wanting a statement home with a luxury feel throughout.",
     photos: [
-      "/photos/properties/Chalet La Forja/hero00001.jpg",
-      "/photos/properties/Chalet La Forja/hero00002.jpg",
-      "/photos/properties/Chalet La Forja/Forja-3 copy.jpg",
-      "/photos/properties/Chalet La Forja/IMG_1414 2.JPG",
+      "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
+      "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
+      "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
+      "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
     ],
     bookUrl:
       "https://www.airbnb.ca/rooms/52655503?guests=1&adults=1&s=67&unique_share_id=f1bb5c2c-51f9-4a82-9aa4-670fb8caa71d",
@@ -91,10 +91,10 @@ const luxuryHomesBeyondKadenwood: FeaturedProperty[] = [
     description:
       "A standout luxury home option for larger groups wanting space, comfort, and a beautiful setting for a Whistler summer stay.",
     photos: [
-      "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/02 - 20251108 MM4P 01 0056.jpg",
-      "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/03 - 20251108 A7M4 02 A1_07764.jpg",
-      "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/11 - 20251108 A7M4 02 A1_07858.jpg",
-      "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/12 - 20251108 A7M4 02 A1_07863.jpg",
+      "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry living room.png",
+      "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry living room.png",
+      "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry living room.png",
+      "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry living room.png",
     ],
     bookUrl:
       "https://www.airbnb.ca/rooms/1551638001847968788?guests=1&adults=1&s=67&unique_share_id=ff68258e-d89f-4493-8e79-fd85820e6872",
@@ -104,10 +104,10 @@ const luxuryHomesBeyondKadenwood: FeaturedProperty[] = [
     description:
       "A gorgeous chalet with strong design appeal, great views, and the type of elevated mountain atmosphere that works beautifully for FIFA travellers.",
     photos: [
-      "/photos/properties/Falcon/03 - 20250827 A7M4 01 DSC00224-Edit.jpg",
-      "/photos/properties/Falcon/01 - 20250827 A7M4 01 DSC00509-Edit.jpg",
-      "/photos/properties/Falcon/02 - 20250827 A7M4 01 DSC00524.jpg",
-      "/photos/properties/Falcon/04 - 20250827 A7M4 01 DSC00234.jpg",
+      "/photos/properties/Falcon/Outdoor shot Falcon good.png",
+      "/photos/properties/Falcon/Outdoor shot Falcon good.png",
+      "/photos/properties/Falcon/Outdoor shot Falcon good.png",
+      "/photos/properties/Falcon/Outdoor shot Falcon good.png",
     ],
     bookUrl:
       "https://www.airbnb.ca/rooms/18060329?preview_for_ml=true&source_impression_id=p3_1684112119_tL0LL7QnYLFGOCBI",

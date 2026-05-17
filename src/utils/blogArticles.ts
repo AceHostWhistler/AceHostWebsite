@@ -19,7 +19,7 @@ export const allArticles: Article[] = [
     readTime: "13 min read",
     link: "/post/fifa-vancouver-whistler-the-luxury-whistler-fifa-experience",
     coverImage:
-      "/photos/properties/2919 Heritage/02 - 20260301 MM4P 01 DJI_20260301181105_0776_D-Edit-AI Generative Fill.jpg",
+      "/photos/properties/2919 Heritage/Mountaintop Snow cover.png",
   },
   {
     title:
@@ -41,7 +41,7 @@ export const allArticles: Article[] = [
     readTime: "14 min read",
     link: "/post/best-time-to-visit-whistler-for-luxury-travelers",
     coverImage:
-      "/photos/properties/2919 Heritage/20230104_204342jpg.jpg",
+      "/photos/properties/2919 Heritage/Mountaintop Snow cover.png",
   },
   {
     title:
@@ -231,7 +231,7 @@ export const allArticles: Article[] = [
     readTime: "8 min read",
     link: "/post/new-acehost-luxury-airbnb-highlight-best-4-bedroom-whistler-golf-course-views",
     coverImage:
-      "/photos/properties/Muirfield Golf Course/01 - 20250820 A7M4 01 A1_00497-Edit.jpg",
+      "/photos/properties/Muirfield Golf Course/Muirfield drone snow.png",
   },
   {
     title: "Whistler's Summer Paradise: Luxury Vacation Homes for the Perfect Mountain Getaway",

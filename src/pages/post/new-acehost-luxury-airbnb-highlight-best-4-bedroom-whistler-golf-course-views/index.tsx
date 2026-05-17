@@ -43,7 +43,7 @@ export default function BlogPost() {
           {/* Hero Section */}
           <div className="relative h-[60vh] overflow-hidden">
             <Image
-              src="/photos/properties/Muirfield Golf Course/44 - 20250820 MM4P 01 0016.jpg"
+              src="/photos/properties/Muirfield Golf Course/Muirfield drone snow.png"
               alt="Luxury 4-bedroom chalet with golf course views in Whistler"
               fill
               className="object-cover"
@@ -95,7 +95,7 @@ export default function BlogPost() {
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/Muirfield Golf Course/03 - 20250820 A7M4 01 A1_00186.jpg"
+                  src="/photos/properties/Muirfield Golf Course/Muirfield drone snow.png"
                   alt="Luxury living room with golf course views"
                   fill
                   className="object-cover"
@@ -104,7 +104,7 @@ export default function BlogPost() {
               </div>
               <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/Muirfield Golf Course/08 - 20250820 A7M4 01 A1_00171.jpg"
+                  src="/photos/properties/Muirfield Golf Course/Muirfield drone snow.png"
                   alt="Chef's kitchen and dining area"
                   fill
                   className="object-cover"
@@ -121,7 +121,7 @@ export default function BlogPost() {
               <div className="mb-8">
                 <div className="relative h-80 rounded-lg overflow-hidden mb-4">
                   <Image
-                    src="/photos/properties/Muirfield Golf Course/16 - 20250820 A7M4 01 A1_00121.jpg"
+                    src="/photos/properties/Muirfield Golf Course/Muirfield drone snow.png"
                     alt="Large kitchen and dining area"
                     fill
                     className="object-cover"
@@ -137,7 +137,7 @@ export default function BlogPost() {
               <div className="mb-8">
                 <div className="relative h-80 rounded-lg overflow-hidden mb-4">
                   <Image
-                    src="/photos/properties/Muirfield Golf Course/24 - 20250820 A7M4 01 A1_00329.jpg"
+                    src="/photos/properties/Muirfield Golf Course/Muirfield drone snow.png"
                     alt="Master bedroom with mountain views"
                     fill
                     className="object-cover"
@@ -154,7 +154,7 @@ export default function BlogPost() {
                 <div>
                   <div className="relative h-80 rounded-lg overflow-hidden mb-4">
                     <Image
-                      src="/photos/properties/Muirfield Golf Course/10 - 20250820 A7M4 01 A1_00222.jpg"
+                      src="/photos/properties/Muirfield Golf Course/Muirfield drone snow.png"
                       alt="Hot tub with outdoor dining and stunning views"
                       fill
                       className="object-cover"
@@ -168,7 +168,7 @@ export default function BlogPost() {
                 <div>
                   <div className="relative h-80 rounded-lg overflow-hidden mb-4">
                     <Image
-                      src="/photos/properties/Muirfield Golf Course/11 - 20250820 A7M4 01 A1_00232.jpg"
+                      src="/photos/properties/Muirfield Golf Course/Muirfield drone snow.png"
                       alt="Hot tub with panoramic views"
                       fill
                       className="object-cover"
@@ -185,7 +185,7 @@ export default function BlogPost() {
               <div className="mb-8">
                 <div className="relative h-80 rounded-lg overflow-hidden mb-4">
                   <Image
-                    src="/photos/properties/Muirfield Golf Course/43 - 20250820 MM4P 01 0011.jpg"
+                    src="/photos/properties/Muirfield Golf Course/Muirfield drone snow.png"
                     alt="Golf course views - stunning in both summer and winter"
                     fill
                     className="object-cover"

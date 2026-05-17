@@ -31,7 +31,7 @@ const blogPostsData: BlogPost[] = [
     category: "FIFA 2026, Luxury Travel",
     readTime: "13 min read",
     heroImage:
-      "/photos/properties/2919 Heritage/02 - 20260301 MM4P 01 DJI_20260301181105_0776_D-Edit-AI Generative Fill.jpg",
+      "/photos/properties/2919 Heritage/Mountaintop Snow cover.png",
   },
   {
     slug: "is-owning-a-vacation-rental-in-whistler-worth-it-2026",
@@ -49,7 +49,7 @@ const blogPostsData: BlogPost[] = [
     category: "Luxury Travel, Whistler",
     readTime: "14 min read",
     heroImage:
-      "/photos/properties/2919 Heritage/20230104_204342jpg.jpg",
+      "/photos/properties/2919 Heritage/Mountaintop Snow cover.png",
   },
   {
     slug: "self-managing-vs-hiring-a-whistler-property-manager-what-owners-need-to-know",
@@ -82,7 +82,7 @@ const blogPostsData: BlogPost[] = [
     title: "New AceHost Luxury Airbnb Highlight | The Best 4 Bedroom You Can Find in All of Whistler, Located on the Golf Course with Stunning Views!",
     category: "Property Highlight",
     readTime: "8 min read",
-    heroImage: "/photos/properties/Muirfield Golf Course/01 - 20250820 A7M4 01 A1_00497-Edit.jpg"
+    heroImage: "/photos/properties/Muirfield Golf Course/Muirfield drone snow.png"
   },
   {
     slug: "best-condo-rentals-in-whistler",

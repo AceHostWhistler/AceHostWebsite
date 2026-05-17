@@ -107,7 +107,7 @@ export default function BlogPost() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Altitude New Photos Best/hero2.jpeg"
+                    src="/photos/properties/2919 Heritage/Mountaintop Snow cover.png"
                     alt="Interior of a luxury Whistler ski chalet"
                     fill
                     className="object-cover"
@@ -159,7 +159,7 @@ export default function BlogPost() {
               </h3>
               <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/Altitude New Photos Best/hero2.jpeg"
+                  src="/photos/properties/2919 Heritage/Mountaintop Snow cover.png"
                   alt="Altitude Retreat luxury mansion in Kadenwood, Whistler"
                   fill
                   className="object-cover"
@@ -194,7 +194,7 @@ export default function BlogPost() {
               </h3>
               <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/Chalet La Forja/hero00001.jpg"
+                  src="/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png"
                   alt="Chalet La Forja luxury vacation home in Kadenwood, Whistler"
                   fill
                   className="object-cover"
@@ -264,7 +264,7 @@ export default function BlogPost() {
               </h3>
               <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/Falcon/15-3595 Falcon Cres-15-.jpg"
+                  src="/photos/properties/Falcon/Outdoor shot Falcon good.png"
                   alt="Falcon luxury chalet in Blueberry Hill, Whistler"
                   fill
                   className="object-cover"
@@ -401,7 +401,7 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/Chalet La Forja/hero00001.jpg"
+                  src="/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png"
                   alt="Luxury chalet in Whistler with mountain views"
                   fill
                   className="object-cover"
