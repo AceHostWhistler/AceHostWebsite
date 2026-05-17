@@ -242,17 +242,6 @@ export const allArticles: Article[] = [
     coverImage:
       "/photos/post/whistlers-summer-paradise-luxury-vacation-homes-for-the-perfect-mountain-getaway/hero.jpg",
   },
-  {
-    title:
-      "Behind the Curtain at AceHost: Sustainable Luxury Property Management in Whistler, BC",
-    category: "Property Management, Sustainability",
-    description:
-      "How AceHost balances sustainability with luxury in Whistler property management and guest experience.",
-    readTime: "5 min read",
-    link: "/post/behind-the-curtain-at-acehost-sustainable-luxury-property-management-in-whistler-bc",
-    coverImage:
-      "/photos/post/luxury-property-management-investment-opportunities-in-whistler/hero.jpg",
-  },
 ];
 
 // Function to get related articles excluding the current one

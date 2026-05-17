@@ -61,15 +61,6 @@ const blogPostsData: BlogPost[] = [
       "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05891.jpg",
   },
   {
-    slug: "behind-the-curtain-at-acehost-sustainable-luxury-property-management-in-whistler-bc",
-    title:
-      "Behind the Curtain at AceHost: Sustainable Luxury Property Management in Whistler, BC",
-    category: "Property Management, Sustainability",
-    readTime: "5 min read",
-    heroImage:
-      "/photos/post/luxury-property-management-investment-opportunities-in-whistler/hero.jpg",
-  },
-  {
     slug: "best-luxury-airbnb-ski-in-ski-out-vacation-rentals-in-whistler-for-large-groups",
     title:
       "Best Luxury Airbnb Ski in Ski out Vacation Rentals in Whistler for Large Groups | AceHost",
