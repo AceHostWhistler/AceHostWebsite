@@ -354,7 +354,7 @@ const Home = () => {
     {
       id: "luxury-6-bedroom-blueberry",
       name: "Luxury 6-Bedroom | Whistler Village | Blueberry",
-      image: "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/02 - 20251108 MM4P 01 0056.jpg",
+      image: "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry living room.png",
       guests: 12,
       bedrooms: 6,
       beds: 10,

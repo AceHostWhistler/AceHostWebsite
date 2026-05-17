@@ -510,9 +510,10 @@ export default function Properties() {
             id: "luxury-6-bedroom-blueberry",
             name: "Luxury 6-Bedroom | Whistler Village | Blueberry",
             images: [
-              "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/02 - 20251108 MM4P 01 0056.jpg",
-              "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/03 - 20251108 A7M4 02 A1_07764.jpg",
-              "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/11 - 20251108 A7M4 02 A1_07858.jpg",
+              "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry living room.png",
+              "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry balcony shot.png",
+              "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Deck snow shot blueberry.png",
+              "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Drone Blueberry shot.png",
             ],
             guests: 12,
             bedrooms: 6,
