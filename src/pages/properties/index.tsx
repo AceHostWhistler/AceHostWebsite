@@ -228,9 +228,7 @@ export default function Properties() {
             id: "chalet-la-forja",
             name: "Chalet La Forja | Kadenwood | Private Butler",
             images: [
-              "/photos/properties/Chalet La Forja/hero00001.jpg",
-              "/photos/properties/Chalet La Forja/DSC02005-Edit.jpg",
-              "/photos/properties/Chalet La Forja/Wine Cellar.jpg",
+              "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
             ],
             guests: 16,
             bedrooms: 9,
