@@ -166,7 +166,11 @@ const TimberHavenKadenwood = () => {
             {photos.length > 28 && (
               <div className="text-center mt-6">
                 <button
-                  onClick={() => setShowAllPhotos(true)}
+                  onClick={() => {
+                    setShowAllPhotos(true);
+                    setIsImageLoading(true);
+                    setSelectedPhotoIndex(0);
+                  }}
                   className="inline-flex items-center px-6 py-2 bg-black hover:bg-gray-900 text-white rounded-full text-sm font-medium"
                 >
                   View all {photos.length} photos
