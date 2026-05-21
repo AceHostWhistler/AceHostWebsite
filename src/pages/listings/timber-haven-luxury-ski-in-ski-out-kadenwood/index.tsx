@@ -12,6 +12,8 @@ const TimberHavenKadenwood = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [isImageLoading, setIsImageLoading] = useState(false);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const [touchEndX, setTouchEndX] = useState<number | null>(null);
 
   const photos = [
     "/photos/properties/Timber Haven John Harris/053643CD-8861-4307-81B1-DE022A1D07B9.PNG.jpg",
@@ -99,6 +101,45 @@ const TimberHavenKadenwood = () => {
     "/photos/properties/Timber Haven John Harris/100 - 20260506 MM4P 02 0387.jpg",
   ];
 
+  const handlePhotoClick = (index: number) => {
+    setIsImageLoading(true);
+    setSelectedPhotoIndex(index);
+  };
+
+  const handleImageLoad = () => {
+    setIsImageLoading(false);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStartX(e.touches[0].clientX);
+    setTouchEndX(null);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEndX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX || !touchEndX) return;
+
+    const difference = touchStartX - touchEndX;
+
+    if (Math.abs(difference) > 50) {
+      if (difference > 0) {
+        navigatePhoto("next");
+      } else {
+        navigatePhoto("prev");
+      }
+    }
+
+    setTouchStartX(null);
+    setTouchEndX(null);
+  };
+
+  const closeFullScreenPhoto = () => {
+    setSelectedPhotoIndex(null);
+  };
+
   const closeAllPhotos = () => {
     setShowAllPhotos(false);
     setSelectedPhotoIndex(null);
@@ -146,10 +187,7 @@ const TimberHavenKadenwood = () => {
                 <div
                   key={index}
                   className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
-                  onClick={() => {
-                    setIsImageLoading(true);
-                    setSelectedPhotoIndex(index);
-                  }}
+                  onClick={() => handlePhotoClick(index)}
                 >
                   <Image
                     src={photo}
@@ -166,11 +204,7 @@ const TimberHavenKadenwood = () => {
             {photos.length > 28 && (
               <div className="text-center mt-6">
                 <button
-                  onClick={() => {
-                    setShowAllPhotos(true);
-                    setIsImageLoading(true);
-                    setSelectedPhotoIndex(0);
-                  }}
+                  onClick={() => setShowAllPhotos(true)}
                   className="inline-flex items-center px-6 py-2 bg-black hover:bg-gray-900 text-white rounded-full text-sm font-medium"
                 >
                   View all {photos.length} photos
@@ -284,71 +318,98 @@ const TimberHavenKadenwood = () => {
             </div>
           </div>
 
-          {(showAllPhotos || selectedPhotoIndex !== null) && (
-            <div className="fixed inset-0 z-50 bg-black overflow-y-auto" onClick={closeAllPhotos}>
+          {showAllPhotos && (
+            <div className="fixed inset-0 z-50 bg-black overflow-y-auto">
               <div className="sticky top-0 z-10 bg-black p-4 flex justify-between items-center">
                 <h2 className="text-lg sm:text-xl text-white font-medium">Timber Haven - All Photos</h2>
                 <button onClick={closeAllPhotos} className="text-white hover:text-gray-300 bg-gray-900 px-4 py-2 rounded-full">
                   Close
                 </button>
               </div>
-              <div className="flex justify-center items-center h-[calc(100vh-80px)] relative">
-                {selectedPhotoIndex !== null && (
-                  <>
-                    <button
-                      className="absolute left-4 top-1/2 -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 z-20"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        navigatePhoto("prev");
-                      }}
-                      aria-label="Previous photo"
-                    >
-                      &larr;
-                    </button>
-                    <button
-                      className="absolute right-4 top-1/2 -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 z-20"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        navigatePhoto("next");
-                      }}
-                      aria-label="Next photo"
-                    >
-                      &rarr;
-                    </button>
-                    <div className="relative w-[95vw] h-[85vh]">
-                      {isImageLoading && (
-                        <div className="absolute inset-0 flex items-center justify-center z-10">
-                          <div className="w-12 h-12 border-4 border-gray-300 border-t-white rounded-full animate-spin" />
-                        </div>
-                      )}
-                      <Image
-                        src={photos[selectedPhotoIndex]}
-                        alt={`Timber Haven full photo ${selectedPhotoIndex + 1}`}
-                        fill
-                        className="object-contain"
-                        sizes="95vw"
-                        onLoadingComplete={() => setIsImageLoading(false)}
-                        quality={85}
-                      />
+              <div className="max-w-7xl mx-auto py-6 px-4">
+                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+                  {photos.map((photo, index) => (
+                    <div key={index} className="mb-6">
+                      <div
+                        className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer"
+                        onClick={() => handlePhotoClick(index)}
+                      >
+                        <Image
+                          src={photo}
+                          alt={`Timber Haven ${index + 1}`}
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 45vw, 30vw"
+                          className="object-cover hover:scale-105 transition-transform duration-300"
+                          priority={index < 4}
+                          loading={index < 4 ? "eager" : "lazy"}
+                        />
+                      </div>
                     </div>
-                    <div className="absolute bottom-4 left-0 right-0 text-center">
-                      <p className="text-white text-sm bg-black bg-opacity-50 inline-block px-4 py-2 rounded-full">
-                        {selectedPhotoIndex + 1} / {photos.length}
-                      </p>
-                    </div>
-                  </>
-                )}
+                  ))}
+                </div>
               </div>
+            </div>
+          )}
+
+          {selectedPhotoIndex !== null && (
+            <div
+              className="fixed inset-0 z-[60] bg-black flex items-center justify-center"
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
+              <div className="absolute top-4 right-4 flex space-x-4">
+                <button
+                  onClick={closeFullScreenPhoto}
+                  className="text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
+                  aria-label="Close"
+                >
+                  <X className="h-6 w-6" />
+                </button>
+              </div>
+
               <button
-                className="absolute top-4 right-4 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 z-20"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setSelectedPhotoIndex(null);
-                }}
-                aria-label="Close full screen"
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
+                onClick={() => navigatePhoto("prev")}
+                aria-label="Previous photo"
               >
-                <X className="w-5 h-5" />
+                &larr;
               </button>
+
+              <div className="relative w-full h-full max-w-5xl max-h-[75vh] mx-auto px-4">
+                {isImageLoading && (
+                  <div className="absolute inset-0 flex items-center justify-center z-10">
+                    <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                  </div>
+                )}
+                <div className="relative w-full h-full">
+                  <Image
+                    src={photos[selectedPhotoIndex]}
+                    alt={`Property full view ${selectedPhotoIndex + 1}`}
+                    fill
+                    priority
+                    className={`object-contain transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
+                    sizes="80vw"
+                    onLoadingComplete={handleImageLoad}
+                    quality={75}
+                    loading="eager"
+                  />
+                </div>
+              </div>
+
+              <button
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-900 p-2 rounded-full hover:bg-gray-800 transition-colors z-20"
+                onClick={() => navigatePhoto("next")}
+                aria-label="Next photo"
+              >
+                &rarr;
+              </button>
+
+              <div className="absolute bottom-4 left-0 right-0 text-center z-20">
+                <p className="text-white text-sm bg-black bg-opacity-50 inline-block px-4 py-2 rounded-full">
+                  {selectedPhotoIndex + 1} / {photos.length}
+                </p>
+              </div>
             </div>
           )}
         </main>
