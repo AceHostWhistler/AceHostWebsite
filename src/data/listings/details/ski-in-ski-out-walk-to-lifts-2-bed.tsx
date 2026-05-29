@@ -1,0 +1,281 @@
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { FaBed, FaBath } from "react-icons/fa";
+import type { ListingDetailsProps } from "../types";
+
+export default function SkiInSkiOutWalkToLifts2BedDetails({ photos }: ListingDetailsProps) {
+  return (
+    <>
+      <div className="max-w-6xl mx-auto px-4" id="details">
+                  <p className="text-gray-800 mb-16 max-w-4xl">
+                    Welcome to this modern apartment in the Le Chamois hotel, situated in the heart of Upper Village and just a short distance from Blackcomb Gondola. This cozy getaway is perfect for skiing and offers 1.5 beds and 2 baths. The kitchen is equipped with a stove top hob, fridge, air fryer, and microwave.
+                  </p>
+
+                  {/* The Space Section */}
+                  <div className="flex flex-col md:flex-row mb-20">
+                    <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
+                      <div className="relative aspect-[4/3] mb-2">
+                        <Image
+                          src={photos[2]}
+                          alt="Le Chamois Interior"
+                          fill
+                          className="object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    </div>
+                    <div className="md:w-1/2">
+                      <div className="flex items-center mb-6">
+                        <div className="bg-black text-white p-4 rounded-full mr-4">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z"
+                              stroke="white"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <h2 className="text-2xl md:text-3xl font-bold">The Space</h2>
+                      </div>
+                      <div className="space-y-5">
+                        <p className="text-gray-700">
+                          Welcome to this contemporary apartment, with 1.5 beds and 2 baths, conveniently located in the Le Chamois hotel in the heart of Upper Village and just a stones throw from Blackcomb Gondola. Making this cosy spot, the perfect ski in ski out getaway in Whistler!
+                        </p>
+                        <p className="text-gray-700">
+                          <strong>Kitchen Appliances:</strong>
+                          <br />
+                          Stove top hob
+                          <br />
+                          Fridge
+                          <br />
+                          Air Fryer
+                          <br />
+                          Microwave
+                        </p>
+                        <p className="text-gray-700">
+                          Master bedroom with a stylish queen bed, ensuite bathroom with a spacious walk in shower, brand new Toto Japanese toilet and faucets in both bathrooms. A bright office desk space and large smart TV is also located in this room.
+                        </p>
+                        <p className="text-gray-700">
+                          Murphy double bed is located in the living room and pulls out the wall and can be conveniently stored away when not in use. The second bathroom is located just off the living space and has a shower and bathtub. *Please note that the washer and dryer facility is shared with the hotel and you must pay per load, only $2.50*
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Guest Access Section */}
+                  <div className="flex flex-col md:flex-row-reverse mb-20">
+                    <div className="md:w-1/2 pl-0 md:pl-12 mb-8 md:mb-0">
+                      <div className="relative aspect-[4/3] mb-2">
+                        <Image
+                          src={photos[4]}
+                          alt="Le Chamois facilities"
+                          fill
+                          className="object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    </div>
+                    <div className="md:w-1/2">
+                      <div className="flex items-center mb-6">
+                        <div className="bg-black text-white p-4 rounded-full mr-4">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M15 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H9"
+                              stroke="white"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                            <path
+                              d="M15 3L12 6L9 3"
+                              stroke="white"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <h2 className="text-2xl md:text-3xl font-bold">
+                          Guest Access
+                        </h2>
+                      </div>
+                      <div className="space-y-5">
+                        <p className="text-gray-700">
+                          Use of the whole apartment and hotel facilities, including the gym, outdoor hot tub and pool and personal ski locker.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Bedroom Layout Section */}
+                  <div className="flex flex-col md:flex-row mb-20">
+                    <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
+                      <div className="relative aspect-[4/3] mb-2">
+                        <Image
+                          src={photos[5]}
+                          alt="Le Chamois bedroom"
+                          fill
+                          className="object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    </div>
+                    <div className="md:w-1/2">
+                      <div className="flex items-center mb-6">
+                        <div className="bg-black text-white p-4 rounded-full mr-4">
+                          <FaBed size={24} />
+                        </div>
+                        <h2 className="text-2xl md:text-3xl font-bold">
+                          Bedroom Layout
+                        </h2>
+                      </div>
+                      <div className="space-y-5">
+                        <p className="text-gray-700">
+                          Located at the base of Blackcomb Mountain, and only a 10-minute stroll away from the lively energy of Whistler Village. Upper Village offers the perfect balance between peaceful mountain retreat and easy access to the bustling heart of the action. Enjoy an array of restaurants, bars and shops in walking distance from the apartment. Access to the Blackcomb gondola is just a 2 minute walk. The ski out is also located just a 2 minute walk from the apartment.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Amenities Section */}
+                  <div className="flex flex-col md:flex-row-reverse mb-20">
+                    <div className="md:w-1/2 pl-0 md:pl-12 mb-8 md:mb-0">
+                      <div className="relative aspect-[4/3] mb-2">
+                        <Image
+                          src={photos[8]}
+                          alt="Le Chamois amenities"
+                          fill
+                          className="object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    </div>
+                    <div className="md:w-1/2">
+                      <div className="flex items-center mb-6">
+                        <div className="bg-black text-white p-4 rounded-full mr-4">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                              stroke="white"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                            <path
+                              d="M12 6V12L16 14"
+                              stroke="white"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <h2 className="text-2xl md:text-3xl font-bold">Amenities</h2>
+                      </div>
+                      <div className="space-y-5">
+                        <p className="text-gray-700">
+                          Scenic views, Mountain view, Bathroom, Bathtub, Hair dryer, Cleaning products, Shampoo, Conditioner, Body soap, Hot water, Shower gel, laundry- Paid washer & dryer – In building. Essentials Towels, bed sheets, toilet paper, Hangers, Iron, Entertainment TV, Heating and cooling Central air conditioning, Indoor fireplace, Central heating, Home safety Smoke alarm Carbon monoxide alarm Fire extinguisher First aid kit, Internet and office Wifi, Dedicated workspace, Kitchen and Dining, Kitchen Space where guests can cook their own meals. Refrigerator, Microwave, Dishes and silverware Bowls, chopsticks, plates, cups, etc. Mini fridge, Freezer, Dishwasher, Stove, Hot, kettle, Coffee maker: Nespresso, Wine glasses, Toaster, Dining table.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Location Section */}
+                  <div className="flex flex-col md:flex-row mb-20">
+                    <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
+                      <div className="relative aspect-[4/3] mb-2">
+                        <Image
+                          src={photos[10]}
+                          alt="Le Chamois location"
+                          fill
+                          className="object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    </div>
+                    <div className="md:w-1/2">
+                      <div className="flex items-center mb-6">
+                        <div className="bg-black text-white p-4 rounded-full mr-4">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z"
+                              stroke="white"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                            <path
+                              d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
+                              stroke="white"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <h2 className="text-2xl md:text-3xl font-bold">Location</h2>
+                      </div>
+                      <div className="space-y-5">
+                        <h3 className="font-medium text-xl">Getting around</h3>
+                        <p className="text-gray-700">
+                          Complimentary underground hotel parking available for one vehicle. There is also plenty of paid parking available just a short 1-2 minute drive in lots 1-5. Bus stop also located just outside the hotel.
+                        </p>
+
+                        <h3 className="font-medium text-xl">Location features</h3>
+                        <ul className="list-disc pl-5 space-y-2 text-gray-700">
+                          <li>Ski-in/Ski-out Guests can access ski lifts without driving or taking paid transportation</li>
+                          <li>Laundromat nearby</li>
+                        </ul>
+
+                        <h3 className="font-medium text-xl">Parking and facilities</h3>
+                        <ul className="list-disc pl-5 space-y-2 text-gray-700">
+                          <li>Free parking on premises</li>
+                          <li>Shared outdoor pool – available all year, open specific hours, heated, lap pool open from 9:00 a.m. to 10:00 p.m.</li>
+                          <li>Shared hot tub – available all year</li>
+                          <li>Elevator The home or building has an elevator that's at least 132 centimetres deep and a doorway that's at least 81 centimetres wide.</li>
+                          <li>Shared gym in building</li>
+                          <li>Paid street parking off premises</li>
+                          <li>Paid parking garage on premises – 1 space</li>
+                          <li>Single level home</li>
+                          <li>No stairs in home</li>
+                        </ul>
+
+                        <h3 className="font-medium text-xl">Services</h3>
+                        <ul className="list-disc pl-5 space-y-2 text-gray-700">
+                          <li>Luggage drop-off allowed For guests' convenience when they have early arrival or late departure</li>
+                          <li>Long-term stays allowed</li>
+                          <li>Allow stay for 28 days or more</li>
+                          <li>Self check-in Keypad Check yourself into the home with a door code</li>
+                          <li>Cleaning available during stay</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* All Photos Modal */}
+    </>
+  );
+}

@@ -1,0 +1,60 @@
+import type { ListingData } from "../types";
+
+const listing: ListingData = {
+  slug: "whispering-pines-ski-in-ski-out",
+  photos: [
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-1.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-2.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-3.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-4.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-5.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-6.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-7.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-8.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-9.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-10.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-11.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-12.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-13.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-14.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-15.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-16.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-17.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-18.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-19.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-20.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-21.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-22.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-23.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-24.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-25.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-26.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-27.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-28.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-29.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-30.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-31.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-32.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-33.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-34.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-35.JPG"
+],
+  seo: {
+    title: "The Aspens | 2-Bed Ski in/Out - AceHost",
+    description: "Ultimate ski-in, ski-out in Aspens. Ground-level unit steps from hot tub/pool, Blackcomb Mountain, and ski lifts. Main & Upper Whistler Village within walking distance. Nearby biking trails, 2 golf courses, and Lost Lake.",
+  },
+  header:   {
+      "title": "The Aspens | 2-Bed Ski in/Out",
+      "guests": 4,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "priceRange": "$350-$1,300 per night",
+      "beds": 3,
+      "airbnbLink": "https://www.airbnb.com/rooms/1072474554447345991?guests=1&adults=1&s=67&unique_share_id=e556b35c-05b5-40b6-91e1-5304ffafc23b",
+      "contactLink": "/contact"
+  },
+  galleryTitle: "The Aspens",
+  photoAltPrefix: "The Aspens",
+};
+
+export default listing;

@@ -1,0 +1,423 @@
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import type { ListingDetailsProps } from "../types";
+
+export default function PanoramicEstateKadenwoodDetails({ photos }: ListingDetailsProps) {
+  return (
+    <>
+      <div className="max-w-6xl mx-auto px-4" id="details">
+                  <p className="text-gray-800 mb-8 max-w-4xl">
+                    Welcome to Panoramic Estate in Kadenwood. This ski in ski out
+                    architectural delight, with 8 bedrooms, 10 beds, and 7 baths,
+                    accommodating up to 18 guests, is perfect for 1 or 2 large
+                    families.
+                  </p>
+                  <p className="text-gray-800 mb-8 max-w-4xl">
+                    Offering mountain views, an open-plan kitchen, multiple indoor
+                    fireplaces, a ping pong table, a sleek hot tub, indoor sauna,
+                    basement media room, and built-in sound system.
+                  </p>
+                  <p className="text-gray-800 mb-16 max-w-4xl">
+                    Enjoy private elevator access to all levels. Spacious outdoor
+                    decks and luxurious amenities for the perfect mountain retreat!
+                  </p>
+
+                  {/* Instagram Reel Video - Centered and Larger */}
+                  <div className="flex justify-center mb-16">
+                    <div className="w-full max-w-lg">
+                      <div className="rounded-xl overflow-hidden shadow-2xl bg-white">
+                        <div className="flex flex-col h-full">
+                          <div className="p-6 border-b bg-gradient-to-r from-gray-50 to-white">
+                            <h3 className="text-xl font-bold text-center text-gray-900">
+                              Panoramic Estate Walk Through
+                            </h3>
+                          </div>
+
+                          <div
+                            className="aspect-w-9 aspect-h-16 relative"
+                            style={{ minHeight: "690px" }}
+                          >
+                            <div className="absolute inset-0 w-full h-full">
+                              <iframe
+                                className="absolute inset-0 w-full h-full"
+                                src="https://www.instagram.com/reel/DOoXPbrj_UV/embed/?utm_source=ig_embed&utm_campaign=loading&hidecaption=1&utm_medium=embed&autoplay=false"
+                                frameBorder="0"
+                                scrolling="no"
+                                loading="lazy"
+                                allowFullScreen={true}
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                title="Panoramic Estate Walk Through Video"
+                              ></iframe>
+                            </div>
+                          </div>
+
+                          <div className="p-4 border-t bg-gradient-to-r from-gray-50 to-white">
+                            <a
+                              href="https://www.instagram.com/reel/DOoXPbrj_UV/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                              className="text-blue-600 text-sm font-medium block text-center hover:text-blue-800 transition-colors"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              View more on Instagram
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* The Space Section */}
+                  <div className="flex flex-col md:flex-row mb-20">
+                    <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
+                      <div className="relative aspect-[4/3] mb-2">
+                        <Image
+                          src={photos[4]}
+                          alt="Panoramic Estate Interior"
+                          fill
+                          className="object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    </div>
+                    <div className="md:w-1/2">
+                      <div className="flex items-center mb-6">
+                        <div className="bg-black text-white p-4 rounded-full mr-4">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z"
+                              fill="white"
+                            />
+                          </svg>
+                        </div>
+                        <h2 className="text-2xl font-bold">The Space</h2>
+                      </div>
+                      <p className="text-gray-800 mb-6">
+                        Panoramic Estate is located in the prestigious Kadenwood
+                        neighborhood, Whistler's premier ski-in/ski-out
+                        community. This exclusive enclave offers privacy and
+                        tranquility while providing convenient access to
+                        Whistler's world-class amenities.
+                      </p>
+                      <p className="text-gray-800 mb-6">
+                        This architectural masterpiece provides the perfect blend of
+                        luxury and comfort, with multiple living spaces spread across
+                        several levels, all accessible via a private elevator. The
+                        property boasts stunning mountain views from its spacious
+                        outdoor decks, creating the perfect setting for your mountain
+                        getaway.
+                      </p>
+                      <p className="text-gray-800">
+                        Modern amenities including a built-in sound system, multiple
+                        fireplaces, a state-of-the-art kitchen, and entertainment
+                        facilities ensure your stay is both comfortable and memorable,
+                        whether you're visiting for a family reunion, corporate
+                        retreat, or a luxury ski vacation.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Bedroom Layout Section */}
+                  <div className="flex flex-col md:flex-row mb-20">
+                    <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
+                      <div className="relative aspect-[4/3] mb-2">
+                        <Image
+                          src={photos[14]}
+                          alt="Panoramic Estate Bedroom"
+                          fill
+                          className="object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    </div>
+                    <div className="md:w-1/2 order-2 md:order-1">
+                      <div className="flex items-center mb-6">
+                        <div className="bg-black text-white p-4 rounded-full mr-4">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7 13C8.66 13 10 11.66 10 10C10 8.34 8.66 7 7 7C5.34 7 4 8.34 4 10C4 11.66 5.34 13 7 13ZM19 13C20.66 13 22 11.66 22 10C22 8.34 20.66 7 19 7C17.34 7 16 8.34 16 10C16 11.66 17.34 13 19 13ZM7 15C4.67 15 0 16.17 0 18.5V20H14V18.5C14 16.17 9.33 15 7 15ZM19 15C18.71 15 18.38 15.02 18.03 15.05C19.19 15.89 20 17.02 20 18.5V20H24V18.5C24 16.17 21.33 15 19 15Z"
+                              fill="white"
+                            />
+                          </svg>
+                        </div>
+                        <h2 className="text-2xl font-bold">Bedroom Layout</h2>
+                      </div>
+
+                      <p className="font-bold mb-2">TOP LEVEL:</p>
+                      <p className="mb-4">
+                        <span className="font-medium">• Master Bedroom 1 -</span> has
+                        a beautiful king bed with a walk-in closet, chaise lounge,
+                        telescope and outdoor patio. It is located at the end of the
+                        corridor for ultimate privacy. With a spacious ensuite walk-in
+                        shower and stand alone bathtub.
+                      </p>
+                      <p className="mb-4">
+                        <span className="font-medium">• Bedroom 2 -</span> Has a plush
+                        king bed, with an ensuite bathroom with a walk in shower and
+                        outdoor patio. This bedroom has AC.
+                      </p>
+                      <p className="mb-4">
+                        <span className="font-medium">• Bedroom 3 -</span> Bunk room
+                        with two queen beds and an ensuite bathroom with a walk in
+                        shower.
+                      </p>
+                      <p className="mb-4">
+                        <span className="font-medium">• Additional -</span> Washer and
+                        dryer located on this floor.
+                      </p>
+
+                      <p className="font-bold mb-2">UPPER LEVEL:</p>
+                      <p className="mb-4">
+                        <span className="font-medium">• Bedroom 4 -</span> Full bed
+                        with an ensuite bathroom with a walk in shower and office
+                        desk.
+                      </p>
+                      <p className="mb-4">
+                        <span className="font-medium">• Features:</span> Large open
+                        plan kitchen with a big island and pantry. Equipped with a
+                        Miele coffee machine, kitchen aid mixer, soda stream and 2
+                        drawer freezer. Spacious 7 seater dining room. Main living
+                        room with a wood burning fireplace. Media room located just
+                        off the living room with a large TV. Spacious outdoor deck
+                        space.
+                      </p>
+
+                      <p className="font-bold mb-2">MAIN LEVEL:</p>
+                      <p className="mb-4">
+                        <span className="font-medium">• Bedroom 5 -</span> Well
+                        appointed room with a queen bed.
+                      </p>
+                      <p className="mb-4">
+                        <span className="font-medium">• Bedroom 6 -</span> A beautiful
+                        bedroom with a queen bed and patio access to the hot tub. Both
+                        bedrooms 5 and 6 share a bathroom with a walk in shower
+                        located in between both rooms.
+                      </p>
+                      <p className="mb-4">
+                        <span className="font-medium">• Bedroom 8 -</span> (photos not
+                        listed) one-bedroom suite with a queen bed - separate bedroom
+                        and closet and fully functional kitchen with full-sized
+                        appliances. Located just off of the kitchen.
+                      </p>
+
+                      <p className="font-bold mb-2">LOWER LEVEL:</p>
+                      <p className="mb-4">
+                        <span className="font-medium">• Bedroom 7 -</span> is located
+                        on the ground floor, it has a bunk bed with two queen beds. An
+                        additional queen murphy bed is also in this room.
+                      </p>
+                      <p className="mb-4">
+                        <span className="font-medium">• Features:</span> Large
+                        bathroom on this floor next to the media/bedroom with a walk
+                        in shower. Garage fits one car and has a gym area with a
+                        peloton, bench press, weights and running machine. Additional
+                        laundry space with a washer and dryer. Large mudroom and ski
+                        storage area with exit to the garage. Sauna located on this
+                        floor by the mudroom.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Location Section */}
+                  <div className="mb-16">
+                    <div className="flex items-center mb-6">
+                      <div className="bg-black text-white p-4 rounded-full mr-4">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </div>
+                      <h2 className="text-2xl font-bold">Location</h2>
+                    </div>
+                    <p className="text-gray-800 max-w-4xl mb-6">
+                      Kadenwood is considered the most exclusive area to rent or own
+                      in all of Whistler. You'll have access to Kadenwood's
+                      private gondola, providing quick and convenient access to
+                      Creekside Village and the Creekside Gondola, connecting you to
+                      Whistler's extensive ski terrain.
+                    </p>
+                    <p className="text-gray-800 max-w-4xl mb-6">
+                      There are less than 20 homes on the rental market in this
+                      neighbourhood and they tend to book fast. *Vail has spent $320
+                      million dollars in renovations which include the new Creekside
+                      Gondola and Red Chair (Red Chair located at the top of Creekside
+                      Gondola). If you are looking to avoid lines, this is side of
+                      Whistler you will want to have easy access to. The lines tend to
+                      get very busy near the village because of all surrounding hotels
+                      and condo rentals. Kadenwood has easy ski in ski out access to
+                      the new and improved lifts.*
+                    </p>
+                    <p className="text-gray-800 max-w-4xl mb-6">
+                      The Kadenwood neighborhood is perched on the South side of
+                      Whistler Mountain, high above Whistler Creekside and is easily
+                      accessible by road or by private gondola from the base of
+                      Creekside. Kadenwood provides easy access to ski-in/ski-out
+                      trails on the edge of an old-growth forest and offers astounding
+                      Coastal Range views.
+                    </p>
+                    <p className="text-gray-800 max-w-4xl">
+                      The 5 minute gondola ride, 4 minute drive, or a quick ski ride
+                      down will bring you to all the amenities in Creekside Village
+                      including access to Whistler Mountain ski hill.
+                    </p>
+                  </div>
+
+                  {/* Amenities Section */}
+                  <div className="mb-20">
+                    <div className="flex items-center mb-6">
+                      <div className="bg-black text-white p-4 rounded-full mr-4">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M22 9V7H20V5C20 4.45 19.55 4 19 4H15C14.45 4 14 4.45 14 5V7H12V5C12 4.45 11.55 4 11 4H7C6.45 4 6 4.45 6 5V7H4V9H6V11H4V13H6V15H4V17H6V19C6 19.55 6.45 20 7 20H11C11.55 20 12 19.55 12 19V17H14V19C14 19.55 14.45 20 15 20H19C19.55 20 20 19.55 20 19V17H22V15H20V13H22V11H20V9H22ZM18 18H16V16H18V18ZM18 14H16V12H18V14ZM18 10H16V8H18V10ZM12 18H10V16H12V18ZM12 14H10V12H12V14ZM12 10H10V8H12V10ZM18 6V5H16V6H18ZM8 5V6H10V5H8ZM8 18H10V17H8V18ZM8 14H10V13H8V14ZM8 10H10V9H8V10Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </div>
+                      <h2 className="text-2xl font-bold">Amenities</h2>
+                    </div>
+                    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+                      <div>
+                        <h3 className="font-semibold mb-3">Exterior & Access</h3>
+                        <ul className="space-y-2 text-gray-800">
+                          <li className="flex items-center">
+                            <span className="mr-2">•</span>
+                            <span>Ski-in/ski-out access</span>
+                          </li>
+                          <li className="flex items-center">
+                            <span className="mr-2">•</span>
+                            <span>Private Kadenwood gondola</span>
+                          </li>
+                          <li className="flex items-center">
+                            <span className="mr-2">•</span>
+                            <span>Mountain views</span>
+                          </li>
+                          <li className="flex items-center">
+                            <span className="mr-2">•</span>
+                            <span>Spacious outdoor decks</span>
+                          </li>
+                          <li className="flex items-center">
+                            <span className="mr-2">•</span>
+                            <span>Hot tub</span>
+                          </li>
+                          <li className="flex items-center">
+                            <span className="mr-2">•</span>
+                            <span>Garage with gym equipment</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h3 className="font-semibold mb-3">Interior</h3>
+                        <ul className="space-y-2 text-gray-800">
+                          <li className="flex items-center">
+                            <span className="mr-2">•</span>
+                            <span>Private elevator to all levels</span>
+                          </li>
+                          <li className="flex items-center">
+                            <span className="mr-2">•</span>
+                            <span>Multiple indoor fireplaces</span>
+                          </li>
+                          <li className="flex items-center">
+                            <span className="mr-2">•</span>
+                            <span>Indoor sauna</span>
+                          </li>
+                          <li className="flex items-center">
+                            <span className="mr-2">•</span>
+                            <span>Media room</span>
+                          </li>
+                          <li className="flex items-center">
+                            <span className="mr-2">•</span>
+                            <span>Built-in sound system</span>
+                          </li>
+                          <li className="flex items-center">
+                            <span className="mr-2">•</span>
+                            <span>Ping pong table</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h3 className="font-semibold mb-3">Kitchen & Essentials</h3>
+                        <ul className="space-y-2 text-gray-800">
+                          <li className="flex items-center">
+                            <span className="mr-2">•</span>
+                            <span>Open-plan kitchen with island</span>
+                          </li>
+                          <li className="flex items-center">
+                            <span className="mr-2">•</span>
+                            <span>Miele coffee machine</span>
+                          </li>
+                          <li className="flex items-center">
+                            <span className="mr-2">•</span>
+                            <span>Multiple laundry facilities</span>
+                          </li>
+                          <li className="flex items-center">
+                            <span className="mr-2">•</span>
+                            <span>Ski storage area</span>
+                          </li>
+                          <li className="flex items-center">
+                            <span className="mr-2">•</span>
+                            <span>High-speed WiFi</span>
+                          </li>
+                          <li className="flex items-center">
+                            <span className="mr-2">•</span>
+                            <span>Exercise equipment</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Booking Info */}
+                  <div className="bg-gray-100 p-8 rounded-xl mb-20">
+                    <h2 className="text-2xl font-bold mb-4">Book Your Stay</h2>
+                    <p className="text-gray-800 mb-6">
+                      Experience the ultimate luxury ski vacation at Panoramic Estate.
+                      Nightly rates range from $5,800 to $9,000+ depending on the
+                      season, with a minimum stay of 4 nights (7 nights during
+                      holidays).
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <Link
+                        href="/contact"
+                        className="sm:w-auto px-6 py-3 bg-black hover:bg-gray-900 text-white rounded text-center font-medium"
+                      >
+                        Contact Us to Book
+                      </Link>
+                      <a
+                        href="https://www.airbnb.ca/rooms/1104637821836596397?guests=1&adults=1&s=67&unique_share_id=67164555-993c-40dc-b188-23ffe0755654"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="sm:w-auto px-6 py-3 border border-black text-black hover:bg-gray-50 rounded text-center font-medium"
+                      >
+                        View on Airbnb
+                      </a>
+                    </div>
+                  </div>
+                </div>
+    </>
+  );
+}

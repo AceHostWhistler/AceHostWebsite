@@ -1,0 +1,63 @@
+import type { ListingData } from "../types";
+
+const listing: ListingData = {
+  slug: "dream-log-chalet-5-bedroom-4-bath-creekside",
+  photos: [
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00620.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00635.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00615.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00610.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00605.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00595.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00590.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00575-Edit.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00570-Edit.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00565-Edit.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00560-Edit.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00555-Edit.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00546.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00540.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00531.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00524.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00517.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00512.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00501.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00493.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00485.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00474.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00467.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00461.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00455.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00448.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00442.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00431.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00423.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00418.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00407-Edit.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00398-Edit.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00391-Edit.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00377.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00365.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00357.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00348.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00342.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00333.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00322.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00316.jpg"
+],
+  seo: {
+    title: "\n          Dream Log Chalet | 5 Bedroom | 4 Bath | Creekside - AceHost\n        ",
+    description: "Experience Whistler luxury at its finest. This beautiful 5-bedroom log chalet in Bayshores offers spacious accommodations for up to 12 guests, and is only minutes from Creekside Village and the newly upgraded gondola.",
+  },
+  header:   {
+      "title": "Dream Log Chalet | 5 Bedroom | Creekside",
+      "guests": 10,
+      "bedrooms": 5,
+      "bathrooms": 4,
+      "priceRange": "Monthly Price Range: $15,000-$19,000"
+  },
+  galleryTitle: "Dream Log Chalet",
+  photoAltPrefix: "Dream Log Chalet",
+};
+
+export default listing;

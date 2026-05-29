@@ -3,6 +3,9 @@ const { i18n } = require('./next-i18next.config');
 
 const nextConfig = {
   reactStrictMode: true,
+  experimental: {
+    optimizePackageImports: ['lucide-react', 'react-icons'],
+  },
   // swcMinify is no longer needed in Next.js 15
   i18n: {
     ...i18n,
@@ -24,6 +27,51 @@ const nextConfig = {
       {
         source: '/about',
         destination: '/our-story',
+        permanent: true,
+      },
+      {
+        source: '/listings/punta-mita',
+        destination: '/worldwide-listings/punta-mita---casa-juntos',
+        permanent: true,
+      },
+      {
+        source: '/listings/punta-mita---casa-juntos',
+        destination: '/worldwide-listings/punta-mita---casa-juntos',
+        permanent: true,
+      },
+      {
+        source: '/listings/villa-aegean-greece',
+        destination: '/worldwide-listings/mykonos-crystal-villa',
+        permanent: true,
+      },
+      {
+        source: '/listings/villa-oineas-greece-mykonos',
+        destination: '/worldwide-listings/villa-oineas-greece-mykonos',
+        permanent: true,
+      },
+      {
+        source: '/listings/super-yacht-thailand',
+        destination: '/worldwide-listings/super-yacht-thailand',
+        permanent: true,
+      },
+      {
+        source: '/listings/mykonos-crystal-villa',
+        destination: '/worldwide-listings/mykonos-crystal-villa',
+        permanent: true,
+      },
+      {
+        source: '/listings/cotswolds-uk-soho-farm-house',
+        destination: '/worldwide-listings/cotswolds-uk-soho-farm-house',
+        permanent: true,
+      },
+      {
+        source: '/listings/hood-river-luxury-home',
+        destination: '/worldwide-listings/hood-river-luxury-home',
+        permanent: true,
+      },
+      {
+        source: '/listings/santorini-greece-villa-eclipse',
+        destination: '/worldwide-listings/santorini-greece-villa-eclipse',
         permanent: true,
       },
     ];
@@ -81,6 +129,12 @@ const nextConfig = {
     ];
   },
   images: {
+    // Allow local images with optional cache-busting query strings (Next.js 16+)
+    localPatterns: [
+      {
+        pathname: '/**',
+      },
+    ],
     // Enable image optimization for better performance
     unoptimized: false,
     // Remove deprecated domains config
