@@ -26,7 +26,7 @@ for ((i=0; i<$TOTAL; i++)); do
   # Use higher quality for the cover image
   if [[ "$FILENAME" == "DJI_20250602090720_0527_D.jpg" ]]; then
     echo "  - Processing cover image with higher quality"
-    sharp -i "$FILE" -o "$OUTPUT_DIR/cotswolds-cover.jpg" -q $COVER_QUALITY resize $MAX_WIDTH
+    sharp -i "$FILE" -o "public/optimized/cotswolds-cover.jpg" -q $COVER_QUALITY resize $MAX_WIDTH
   fi
 
   # Process all images with standard quality
@@ -36,7 +36,7 @@ for ((i=0; i<$TOTAL; i++)); do
 done
 
 echo "Creating cover image symlink for easy reference"
-ln -sf "../$OUTPUT_DIR/cotswolds-cover.jpg" "public/cotswolds-cover.jpg"
+# Cover is written to public/optimized/cotswolds-cover.jpg (do not symlink into cotswolds-all)
 
 echo "All Cotswolds images processed successfully!"
 echo "Total images processed: $TOTAL" 
