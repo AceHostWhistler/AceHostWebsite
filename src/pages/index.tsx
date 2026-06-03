@@ -843,6 +843,8 @@ const Home = () => {
       holidayPrice: "$1500-2500+ for Christmas/NYE",
       location: "whistler",
       link: "/listings/bluffs-unit-4-taluswood",
+      airbnbLink:
+        "https://www.airbnb.ca/rooms/1693549013411163327?guests=1&adults=1&s=67&unique_share_id=ae0e48f5-0139-41e8-8c9a-dae7f07a70cd",
       isPetFriendly: false,
       isSkiInSkiOut: true,
     },

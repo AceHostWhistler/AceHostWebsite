@@ -49,6 +49,8 @@ const listing: ListingData = {
     priceRange: "Summer: $380-$950 | Winter: $500-$1,350 | Christmas/NYE: $1,500-$2,500+",
     winterPrice: "$500-$1,350 Nightly | Winter",
     holidayPrice: "$1,500-$2,500+ Nightly | Christmas & NY",
+    airbnbLink:
+      "https://www.airbnb.ca/rooms/1693549013411163327?guests=1&adults=1&s=67&unique_share_id=ae0e48f5-0139-41e8-8c9a-dae7f07a70cd",
   },
   galleryTitle: "Bluffs Unit 4",
   photoAltPrefix: "Bluffs Unit 4 Taluswood",
