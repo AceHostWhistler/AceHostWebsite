@@ -56,6 +56,8 @@ import TimberHavenLuxurySkiInSkiOutKadenwoodDetails from "./details/timber-haven
 import timber_haven_luxury_ski_in_ski_out_kadenwoodMeta from "./meta/timber-haven-luxury-ski-in-ski-out-kadenwood";
 import TwoCedarsKadenwoodDetails from "./details/two-cedars-kadenwood";
 import two_cedars_kadenwoodMeta from "./meta/two-cedars-kadenwood";
+import ValhallaUnit33VillageDetails from "./details/valhalla-unit-33-village";
+import valhalla_unit_33_villageMeta from "./meta/valhalla-unit-33-village";
 import WedgeMountainLodgeSpaDetails from "./details/wedge-mountain-lodge-spa";
 import wedge_mountain_lodge_spaMeta from "./meta/wedge-mountain-lodge-spa";
 import WhisperingPinesSkiInSkiOutDetails from "./details/whispering-pines-ski-in-ski-out";
@@ -99,6 +101,7 @@ export const listingSlugs = [
   "the-raven-nest",
   "timber-haven-luxury-ski-in-ski-out-kadenwood",
   "two-cedars-kadenwood",
+  "valhalla-unit-33-village",
   "wedge-mountain-lodge-spa",
   "whispering-pines-ski-in-ski-out",
   "whistler-village-penthouse",
@@ -138,6 +141,7 @@ export const listings: Record<string, ListingEntry> = {
   "the-raven-nest": { ...the_raven_nestMeta, Details: TheRavenNestDetails },
   "timber-haven-luxury-ski-in-ski-out-kadenwood": { ...timber_haven_luxury_ski_in_ski_out_kadenwoodMeta, Details: TimberHavenLuxurySkiInSkiOutKadenwoodDetails },
   "two-cedars-kadenwood": { ...two_cedars_kadenwoodMeta, Details: TwoCedarsKadenwoodDetails },
+  "valhalla-unit-33-village": { ...valhalla_unit_33_villageMeta, Details: ValhallaUnit33VillageDetails },
   "wedge-mountain-lodge-spa": { ...wedge_mountain_lodge_spaMeta, Details: WedgeMountainLodgeSpaDetails },
   "whispering-pines-ski-in-ski-out": { ...whispering_pines_ski_in_ski_outMeta, Details: WhisperingPinesSkiInSkiOutDetails },
   "whistler-village-penthouse": { ...whistler_village_penthouseMeta, Details: WhistlerVillagePenthouseDetails },

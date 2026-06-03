@@ -796,6 +796,25 @@ const Home = () => {
       isSkiInSkiOut: false,
     },
     {
+      id: "valhalla-unit-33-village",
+      name: "Luxury 3-Bed Whistler Village | Private Hot Tub",
+      image:
+        "/photos/properties/Valhalla Unit 33 Village/Living room angle 3.png",
+      guests: 8,
+      bedrooms: 3,
+      beds: 5,
+      bathrooms: 3,
+      priceRange: "$500-$2000 per night",
+      winterPrice: "$650-$1,700 Nightly | Winter",
+      holidayPrice: "$2,000-$3,000 Nightly | Christmas & NY",
+      location: "whistler",
+      link: "/listings/valhalla-unit-33-village",
+      airbnbLink:
+        "https://www.airbnb.ca/rooms/1693450379764005787?guests=1&adults=1&s=67&unique_share_id=bd20bf84-b138-4958-9dc8-9128130a2028",
+      isPetFriendly: false,
+      isSkiInSkiOut: true,
+    },
+    {
       id: "whistler-village-penthouse",
       name: "Whistler Village | Penthouse | 4-Bed",
       image: "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-7.jpg",
@@ -933,6 +952,7 @@ const Home = () => {
     "ski-in-ski-out-walk-to-lifts-2-bed",
     "whistler-village-views-luxury-2-5-bedroom",
     "luxury-3-bed-stunning-views",
+    "valhalla-unit-33-village",
     "bluffs-unit-4",
     "cozy-lakefront-whistler-condo",
     "whistler-village-penthouse",
