@@ -36,12 +36,13 @@ const listing: ListingData = {
     "/photos/properties/Bluffs Unit 4/IMG_001108.PNG",
   ],
   seo: {
-    title: "Bluffs Unit 4 | Taluswood Ski-in/Ski-out | AceHost",
+    title:
+      "Bluffs - Luxury 2 Bed Ski in Ski out in Creeksside - Views! | AceHost",
     description:
       "Perched in Taluswood's Bluffs, this 2-bedroom retreat offers true ski-in ski-out access on Dave Murray Downhill, a private hot tub, and mountain views.",
   },
   header: {
-    title: "Bluffs Unit 4 | Taluswood | Ski-in/Ski-out",
+    title: "Bluffs - Luxury 2 Bed Ski in Ski out in Creeksside - Views!",
     guests: 6,
     bedrooms: 2,
     beds: 3,
@@ -52,12 +53,12 @@ const listing: ListingData = {
     airbnbLink:
       "https://www.airbnb.ca/rooms/1693549013411163327?guests=1&adults=1&s=67&unique_share_id=ae0e48f5-0139-41e8-8c9a-dae7f07a70cd",
   },
-  galleryTitle: "Bluffs Unit 4",
-  photoAltPrefix: "Bluffs Unit 4 Taluswood",
+  galleryTitle: "Bluffs - Luxury 2 Bed Ski in Ski out in Creeksside - Views!",
+  photoAltPrefix: "Bluffs Creekside",
   structuredData: {
     "@context": "https://schema.org/",
     "@type": "Product",
-    name: "Bluffs Unit 4 | Taluswood Ski-in/Ski-out",
+    name: "Bluffs - Luxury 2 Bed Ski in Ski out in Creeksside - Views!",
     image: "/photos/properties/Bluffs Unit 4/IMG_001112.JPG",
     description:
       "Perched in Taluswood's Bluffs, this 2-bedroom retreat offers true ski-in ski-out access, a hot tub, and mountain views in Whistler.",

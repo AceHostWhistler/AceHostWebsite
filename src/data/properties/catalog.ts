@@ -1548,7 +1548,7 @@ export const propertyCategories: PropertyCategory[] = [
           },
           {
             id: "bluffs-unit-4",
-            name: "Bluffs Unit 4 | Taluswood | Ski-in/Ski-out",
+            name: "Bluffs - Luxury 2 Bed Ski in Ski out in Creeksside - Views!",
             images: [
               "/photos/properties/Bluffs Unit 4/IMG_001112.JPG",
               "/photos/properties/Bluffs Unit 4/01 - 20260522 MM4P 02 0362.jpg",

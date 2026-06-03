@@ -832,7 +832,7 @@ const Home = () => {
     },
     {
       id: "bluffs-unit-4",
-      name: "Bluffs Unit 4 | Taluswood | Ski-in/Ski-out",
+      name: "Bluffs - Luxury 2 Bed Ski in Ski out in Creeksside - Views!",
       image: "/photos/properties/Bluffs Unit 4/IMG_001112.JPG",
       guests: 6,
       bedrooms: 2,
