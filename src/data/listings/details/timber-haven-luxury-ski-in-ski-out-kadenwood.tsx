@@ -30,7 +30,7 @@ export default function TimberHavenLuxurySkiInSkiOutKadenwoodDetails({ photos }:
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-10">Inside Timber Haven</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 max-w-5xl">
                     {[
-                      "/photos/properties/Timber Haven John Harris/053643CD-8861-4307-81B1-DE022A1D07B9.PNG.jpg",
+                      "/photos/properties/Timber Haven John Harris/Timber Haven cover.png",
                       "/photos/properties/Timber Haven John Harris/03 - 20260506 A7M4 03 A1_00165.jpg",
                       "/photos/properties/Timber Haven John Harris/20 - 20260506 A7M4 02 A1_09946.jpg",
                       "/photos/properties/Timber Haven John Harris/8D487CA0-D240-4A51-AC47-9B142E4DEE05.PNG.jpg",
