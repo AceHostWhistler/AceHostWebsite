@@ -302,7 +302,7 @@ const Home = () => {
     {
       id: "timber-haven-luxury-ski-in-ski-out-kadenwood",
       name: "Timber Haven - Luxury Ski in Ski out - Kadenwood",
-      image: "/photos/properties/Timber Haven John Harris/053643CD-8861-4307-81B1-DE022A1D07B9.PNG.jpg",
+      image: "/photos/properties/Timber Haven John Harris/Timber Haven cover.png",
       guests: 16,
       bedrooms: 8,
       beds: 10,
