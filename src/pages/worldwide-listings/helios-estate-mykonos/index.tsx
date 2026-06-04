@@ -12,6 +12,7 @@ import {
   editorialGalleryGridClass,
   editorialGalleryImageSizes,
   editorialGalleryModalTileClass,
+  editorialGalleryModalWrapperClass,
   editorialGalleryWrapperClass,
   editorialGalleryTileClass,
   editorialMainClass,
@@ -454,22 +455,23 @@ const HeliosEstateMykonos = () => {
                 <X size={24} />
               </button>
             </div>
-            <div className="container mx-auto py-8 px-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className={editorialGalleryModalWrapperClass}>
+              <div className={editorialGalleryGridClass}>
                 {photos.map((photo, index) => (
-                  <div
-                    key={index}
-                    className="relative aspect-[4/3] cursor-pointer rounded-lg overflow-hidden"
-                    onClick={() => handlePhotoClick(index)}
-                  >
-                    <Image
-                      src={photo}
-                      alt={`Helios Estate Mykonos photo ${index + 1}`}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover hover:scale-105 transition-transform duration-300"
-                      loading="lazy"
-                    />
+                  <div key={index} className="mb-6">
+                    <div
+                      className={editorialGalleryModalTileClass}
+                      onClick={() => handlePhotoClick(index)}
+                    >
+                      <Image
+                        src={photo}
+                        alt={`Helios Estate Mykonos photo ${index + 1}`}
+                        fill
+                        sizes={editorialGalleryImageSizes}
+                        className="object-cover hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                      />
+                    </div>
                   </div>
                 ))}
               </div>

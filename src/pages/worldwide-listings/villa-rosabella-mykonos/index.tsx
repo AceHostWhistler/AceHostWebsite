@@ -12,6 +12,7 @@ import {
   editorialGalleryGridClass,
   editorialGalleryImageSizes,
   editorialGalleryModalTileClass,
+  editorialGalleryModalWrapperClass,
   editorialGalleryWrapperClass,
   editorialGalleryTileClass,
   editorialMainClass,
@@ -504,7 +505,7 @@ const VillaRosabellaMykonos = () => {
               </button>
             </div>
             <div className="container mx-auto py-8 px-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className={`${editorialGalleryModalWrapperClass} ${editorialGalleryGridClass}`}>
                 {photos.map((photo, index) => (
                   <div
                     key={index}
@@ -515,7 +516,7 @@ const VillaRosabellaMykonos = () => {
                       src={photo}
                       alt={`Villa Rosabella Mykonos photo ${index + 1}`}
                       fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      sizes={editorialGalleryImageSizes}
                       className="object-cover hover:scale-105 transition-transform duration-300"
                       loading="lazy"
                     />

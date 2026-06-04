@@ -296,7 +296,7 @@ const SuperYachtThailand = () => {
                         src={photo}
                         alt={`Super Yacht Thailand interior ${index + 1}`}
                         fill
-                        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw"
+                        sizes={editorialGalleryImageSizes}
                         className="object-cover hover:scale-105 transition-transform duration-300"
                         priority={index < 6}
                         loading={index < 6 ? "eager" : "lazy"}

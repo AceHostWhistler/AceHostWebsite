@@ -272,7 +272,7 @@ const HoodRiverLuxuryHome = () => {
                         src={photo}
                         alt={`Hood River Luxury Home ${index + 1}`}
                         fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        sizes={editorialGalleryImageSizes}
                         className="object-cover hover:scale-105 transition-transform duration-300"
                         priority={index < 6}
                         loading={index < 6 ? "eager" : "lazy"}

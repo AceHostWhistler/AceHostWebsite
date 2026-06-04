@@ -13,6 +13,7 @@ import {
   editorialGalleryGridClass,
   editorialGalleryImageSizes,
   editorialGalleryModalTileClass,
+  editorialGalleryModalWrapperClass,
   editorialGalleryWrapperClass,
   editorialGalleryTileClass,
   editorialMainClass,
@@ -558,7 +559,7 @@ const VillaOineasGreeceMykonos = () => {
                   <X size={24} />
                 </button>
               </div>
-              <div className="container mx-auto p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              <div className={`${editorialGalleryModalWrapperClass} ${editorialGalleryGridClass}`}>
                 {photos.map((photo, index) => (
                   <div
                     key={index}
@@ -569,7 +570,7 @@ const VillaOineasGreeceMykonos = () => {
                       src={photo}
                       alt={`Villa Oineas photo ${index + 1}`}
                       fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                      sizes={editorialGalleryImageSizes}
                       className="object-cover hover:scale-105 transition-transform duration-300"
                       loading="lazy"
                     />

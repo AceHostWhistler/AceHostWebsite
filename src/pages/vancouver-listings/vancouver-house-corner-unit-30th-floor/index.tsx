@@ -501,7 +501,7 @@ const VancouverHouseCornerUnit = () => {
                         alt={`Vancouver House interior ${index + 1}`}
                         fill
                         className="object-cover hover:opacity-90 transition-opacity rounded-lg"
-                        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                        sizes={editorialGalleryImageSizes}
                       />
                     </div>
                   ))}
