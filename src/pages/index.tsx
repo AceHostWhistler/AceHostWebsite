@@ -213,7 +213,7 @@ const Home = () => {
     {
       id: "two-cedars",
       name: "Two Cedars | Kadenwood | Private Butler",
-      image: "/photos/properties/Two Cedars New/OSA_AncientCW1248.jpg",
+      image: "/photos/properties/Two Cedars New/Two Cedars Cover photo snow.png",
       guests: 17,
       bedrooms: 7,
       beds: 12,

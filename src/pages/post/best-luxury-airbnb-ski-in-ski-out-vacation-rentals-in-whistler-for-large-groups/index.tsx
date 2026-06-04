@@ -7,7 +7,8 @@ import Footer from "@/components/Footer";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 
 const SLUG = "best-luxury-airbnb-ski-in-ski-out-vacation-rentals-in-whistler-for-large-groups";
-const HERO = "/photos/properties/Two Cedars New/OSA_AncientCW1002 Panorama.jpg";
+const HERO =
+  "/photos/properties/Two Cedars New/Two Cedars Cover photo snow.png";
 const HERO_URL = "https://acehost.ca" + HERO;
 const PUBLISH_DATE = "April 23, 2026";
 const ISO_MOD = "2026-04-23T12:00:00-07:00";
@@ -201,7 +202,7 @@ export default function BlogPost() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 not-prose">
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Two Cedars New/OSA_AncientCW1002 Panorama.jpg"
+                    src="/photos/properties/Two Cedars New/Two Cedars Cover photo snow.png"
                     alt="Two Cedars Kadenwood exterior"
                     fill
                     className="object-cover"

@@ -357,6 +357,14 @@ export default function BlogPost() {
               <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
                 Two Cedars | Kadenwood
               </h3>
+              <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
+                <Image
+                  src="/photos/properties/Two Cedars New/Two Cedars Cover photo snow.png"
+                  alt="Two Cedars luxury chalet in Kadenwood, Whistler"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <p>
                 Set in exclusive Kadenwood, Two Cedars is a luxurious 7-bedroom, 8.5-bathroom
                 property that comfortably accommodates 10 guests. This magnificent 8,000+ square foot

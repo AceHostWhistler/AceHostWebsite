@@ -142,7 +142,7 @@ export default function BlogPost() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10 not-prose">
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Two Cedars New/OSA_AncientCW1002 Panorama.jpg"
+                    src="/photos/properties/Two Cedars New/Two Cedars Cover photo snow.png"
                     alt="Luxury ski-in ski-out chalet in Whistler Kadenwood"
                     fill
                     className="object-cover"

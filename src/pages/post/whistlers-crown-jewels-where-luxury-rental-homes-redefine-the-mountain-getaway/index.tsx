@@ -99,7 +99,7 @@ export default function BlogPost() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Two Cedars New/OSA_AncientCW1002 Panorama.jpg"
+                    src="/photos/properties/Two Cedars New/Two Cedars Cover photo snow.png"
                     alt="Luxury ski chalet exterior with mountain views"
                     fill
                     className="object-cover"
@@ -124,7 +124,7 @@ export default function BlogPost() {
               </h3>
               <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/Two Cedars New/OSA_AncientCW1002 Panorama.jpg"
+                  src="/photos/properties/Two Cedars New/Two Cedars Cover photo snow.png"
                   alt="Two Cedars luxury chalet in Kadenwood, Whistler"
                   fill
                   className="object-cover"

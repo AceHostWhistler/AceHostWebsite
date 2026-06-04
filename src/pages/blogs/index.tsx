@@ -66,7 +66,8 @@ const blogPostsData: BlogPost[] = [
       "Best Luxury Airbnb Ski in Ski out Vacation Rentals in Whistler for Large Groups | AceHost",
     category: "Luxury Properties, Group Travel",
     readTime: "16 min read",
-    heroImage: "/photos/properties/Two Cedars New/OSA_AncientCW1002 Panorama.jpg",
+    heroImage:
+      "/photos/properties/Two Cedars New/Two Cedars Cover photo snow.png",
   },
   {
     slug: "new-acehost-luxury-airbnb-highlight-best-4-bedroom-whistler-golf-course-views",

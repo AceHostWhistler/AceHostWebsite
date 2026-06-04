@@ -264,8 +264,8 @@ const LuxuryChristmasRentals = () => {
 
                 <div className="my-6 relative aspect-[16/9] rounded-xl overflow-hidden shadow-md">
                   <Image
-                    src="/photos/post/top-7-of-the-most-luxury-vacation-rental-homes-in-whistler-for-christmas-new-years/2.png"
-                    alt="Luxury Whistler Estate"
+                    src="/photos/properties/Two Cedars New/Two Cedars Cover photo snow.png"
+                    alt="Two Cedars luxury estate in Kadenwood"
                     fill
                     className="object-cover"
                   />

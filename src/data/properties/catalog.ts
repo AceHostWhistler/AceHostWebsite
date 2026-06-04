@@ -109,9 +109,9 @@ export const propertyCategories: PropertyCategory[] = [
             id: "two-cedars",
             name: "Two Cedars | Kadenwood | Private Butler",
             images: [
-              "/photos/properties/Two Cedars New/OSA_AncientCW1248.jpg",
-              "/photos/properties/Two Cedars New/Living Room 1.jpg",
-              "/photos/properties/Two Cedars New/Master Bedroom 1.jpg",
+              "/photos/properties/Two Cedars New/Two Cedars Cover photo snow.png",
+              "/photos/properties/Two Cedars New/OSA_AncientCW1002 Panorama.jpg",
+              "/photos/properties/Two Cedars New/24-2934 Ancient Cedars-24.jpg",
             ],
             guests: 17,
             bedrooms: 7,

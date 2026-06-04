@@ -212,7 +212,7 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/post/whistlers-dream-rental-homes/2.png"
+                  src="/photos/properties/Two Cedars New/Two Cedars Cover photo snow.png"
                   alt="Two Cedars in Kadenwood"
                   fill
                   className="object-cover"
