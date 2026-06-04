@@ -322,7 +322,7 @@ const PuntaMitaCasaJuntos = () => {
                   <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
                 </div>
               )}
-              <div className="relative w-full h-full">
+              <div className="relative w-full h-full touch-pinch-zoom">
                 <Image
                   src={photos[selectedPhotoIndex]}
                   alt={`Punta Mita Casa Juntos photo ${selectedPhotoIndex + 1}`}

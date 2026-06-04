@@ -1,5 +1,8 @@
 import React, { useCallback, useState } from "react";
-import { usePhotoSwipeNavigation } from "@/hooks/usePhotoSwipeNavigation";
+import {
+  blockGalleryTouchPropagation,
+  usePhotoSwipeNavigation,
+} from "@/hooks/usePhotoSwipeNavigation";
 import Head from "next/head";
 import Image from "next/image";
 import { X } from "lucide-react";
@@ -80,8 +83,12 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
     else goToNextPhoto();
   };
 
-  const { handleTouchStart, handleTouchMove, handleTouchEnd } =
-    usePhotoSwipeNavigation(goToNextPhoto, goToPrevPhoto);
+  const {
+    handleTouchStart,
+    handleTouchMove,
+    handleTouchEnd,
+    handleTouchCancel,
+  } = usePhotoSwipeNavigation(goToNextPhoto, goToPrevPhoto);
 
   const closeAllPhotos = () => {
     setShowAllPhotos(false);
@@ -235,6 +242,7 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
+            onTouchCancel={handleTouchCancel}
           >
             <div className="absolute top-4 right-4 flex space-x-4">
               <button
@@ -263,6 +271,7 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
               <div
                 className="relative h-full w-full touch-pinch-zoom"
                 onClick={(e) => e.stopPropagation()}
+                {...blockGalleryTouchPropagation}
               >
                 <Image
                   src={photos[selectedPhotoIndex]}

@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from "react";
-import { usePhotoSwipeNavigation } from "@/hooks/usePhotoSwipeNavigation";
+import { blockGalleryTouchPropagation, usePhotoSwipeNavigation } from "@/hooks/usePhotoSwipeNavigation";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
@@ -169,7 +169,7 @@ const VillaOineasGreeceMykonos = () => {
     });
   }, [photos.length]);
 
-  const { handleTouchStart, handleTouchMove, handleTouchEnd } =
+  const { handleTouchStart, handleTouchMove, handleTouchEnd, handleTouchCancel } =
     usePhotoSwipeNavigation(goToNextPhoto, goToPrevPhoto);
 
   return (
@@ -587,6 +587,7 @@ const VillaOineasGreeceMykonos = () => {
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
+            onTouchCancel={handleTouchCancel}
             >
               <button
                 className="absolute top-4 right-4 text-white z-10"
@@ -639,7 +640,10 @@ const VillaOineasGreeceMykonos = () => {
                   <path d="M9 18l6-6-6-6" />
                 </svg>
               </button>
-              <div className="relative w-full h-[calc(100vh-120px)] max-w-6xl mx-auto">
+              <div
+                className="relative w-full h-[calc(100vh-120px)] max-w-6xl mx-auto touch-pinch-zoom"
+                {...blockGalleryTouchPropagation}
+              >
                 <Image
                   src={photos[selectedPhotoIndex]}
                   alt={`Villa Oineas photo ${selectedPhotoIndex + 1}`}

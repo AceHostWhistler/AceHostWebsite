@@ -18,7 +18,7 @@ import { getWorldwideAmenities } from "@/data/worldwideAmenities";
 import Footer from "@/components/Footer";
 import { X } from "lucide-react";
 import { FaBed, FaBath } from "react-icons/fa";
-import { usePhotoSwipeNavigation } from "@/hooks/usePhotoSwipeNavigation";
+import { blockGalleryTouchPropagation, usePhotoSwipeNavigation } from "@/hooks/usePhotoSwipeNavigation";
 
 const VancouverHouseCornerUnit = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -74,7 +74,7 @@ const VancouverHouseCornerUnit = () => {
     else goToNextPhoto();
   };
 
-  const { handleTouchStart, handleTouchMove, handleTouchEnd } =
+  const { handleTouchStart, handleTouchMove, handleTouchEnd, handleTouchCancel } =
     usePhotoSwipeNavigation(goToNextPhoto, goToPrevPhoto);
 
   // Close full screen view when all photos modal is closed
@@ -518,6 +518,7 @@ const VancouverHouseCornerUnit = () => {
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
+            onTouchCancel={handleTouchCancel}
           >
             <div className="absolute top-4 right-4 flex space-x-4">
               <button
@@ -543,7 +544,7 @@ const VancouverHouseCornerUnit = () => {
                   <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
                 </div>
               )}
-              <div className="relative w-full h-full">
+              <div className="relative w-full h-full touch-pinch-zoom" {...blockGalleryTouchPropagation}>
                 <Image
                   src={photos[selectedPhotoIndex]}
                   alt={`Property full view ${selectedPhotoIndex + 1}`}

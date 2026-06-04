@@ -1,5 +1,5 @@
 import React, { useCallback, useState, useRef } from "react";
-import { usePhotoSwipeNavigation } from "@/hooks/usePhotoSwipeNavigation";
+import { blockGalleryTouchPropagation, usePhotoSwipeNavigation } from "@/hooks/usePhotoSwipeNavigation";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
@@ -93,7 +93,7 @@ const MykonosCrystalVilla = () => {
     else goToNextPhoto();
   };
 
-  const { handleTouchStart, handleTouchMove, handleTouchEnd } =
+  const { handleTouchStart, handleTouchMove, handleTouchEnd, handleTouchCancel } =
     usePhotoSwipeNavigation(goToNextPhoto, goToPrevPhoto);
 
   // Close full screen view when all photos modal is closed
@@ -388,6 +388,7 @@ const MykonosCrystalVilla = () => {
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
+            onTouchCancel={handleTouchCancel}
           >
             <div className="absolute top-4 right-4 flex space-x-4">
               <button
@@ -413,7 +414,7 @@ const MykonosCrystalVilla = () => {
                   <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
                 </div>
               )}
-              <div className="relative w-full h-full">
+              <div className="relative w-full h-full touch-pinch-zoom" {...blockGalleryTouchPropagation}>
                 <Image
                   src={photos[selectedPhotoIndex]}
                   alt={`Property full view ${selectedPhotoIndex + 1}`}

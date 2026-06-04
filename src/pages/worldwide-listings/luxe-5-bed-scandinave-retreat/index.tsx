@@ -1,5 +1,5 @@
 import React, { useCallback, useState, useEffect } from "react";
-import { usePhotoSwipeNavigation } from "@/hooks/usePhotoSwipeNavigation";
+import { blockGalleryTouchPropagation, usePhotoSwipeNavigation } from "@/hooks/usePhotoSwipeNavigation";
 import Head from "next/head";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -92,7 +92,7 @@ const LuxeScandinaveRetreat = () => {
     });
   }, [photos.length]);
 
-  const { handleTouchStart, handleTouchMove, handleTouchEnd } =
+  const { handleTouchStart, handleTouchMove, handleTouchEnd, handleTouchCancel } =
     usePhotoSwipeNavigation(goToNextPhoto, goToPrevPhoto);
 
   // Close full screen view when all photos modal is closed
@@ -442,6 +442,7 @@ const LuxeScandinaveRetreat = () => {
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
+            onTouchCancel={handleTouchCancel}
             >
               <button
                 className="absolute top-4 right-4 text-white z-10"
@@ -494,7 +495,10 @@ const LuxeScandinaveRetreat = () => {
                   <path d="M9 18l6-6-6-6" />
                 </svg>
               </button>
-              <div className="relative w-full h-[calc(100vh-120px)] max-w-6xl mx-auto">
+              <div
+                className="relative w-full h-[calc(100vh-120px)] max-w-6xl mx-auto touch-pinch-zoom"
+                {...blockGalleryTouchPropagation}
+              >
                 {isImageLoading && (
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
