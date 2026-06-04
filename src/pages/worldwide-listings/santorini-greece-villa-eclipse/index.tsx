@@ -8,7 +8,16 @@ import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { X } from "lucide-react";
-import PropertyHeader from "@/components/PropertyHeader";
+import PropertyHeaderEditorial from "@/components/PropertyHeaderEditorial";
+import {
+  editorialGalleryGridClass,
+  editorialGalleryImageSizes,
+  editorialGalleryModalTileClass,
+  editorialGalleryWrapperClass,
+  editorialGalleryTileClass,
+  editorialMainClass,
+} from "@/lib/editorialPropertyLayout";
+import { getWorldwideAmenities } from "@/data/worldwideAmenities";
 
 const SantoriniGreeceVillaEclipse = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -115,32 +124,33 @@ const SantoriniGreeceVillaEclipse = () => {
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
 
-        <main>
+        <main className={editorialMainClass}>
           {/* Header with Property Info */}
-          <PropertyHeader
+          <PropertyHeaderEditorial
             title="Villa Eclipse | Santorini, Greece"
             guests={10}
             bedrooms={5}
             bathrooms={5}
             priceRange="€1,300-€1,920 per night"
             contactLink="/contact"
+            amenities={getWorldwideAmenities("santorini-greece-villa-eclipse")}
             onMorePhotosClick={openGallery}
           />
 
           {/* Photo Grid */}
-          <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16" id="photos">
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+          <div className={editorialGalleryWrapperClass} id="photos">
+            <div className={editorialGalleryGridClass}>
               {photos.slice(0, 28).map((photo, index) => (
                 <div
                   key={index}
-                  className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
+                  className={editorialGalleryTileClass}
                   onClick={() => handlePhotoClick(index)}
                 >
                   <Image
                     src={photo}
                     alt={`Santorini Greece Villa Eclipse ${index + 1}`}
                     fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    sizes={editorialGalleryImageSizes}
                     className="object-cover hover:scale-105 transition-transform duration-300"
                     priority={index < 2}
                     loading={index < 2 ? "eager" : "lazy"}
@@ -443,7 +453,7 @@ const SantoriniGreeceVillaEclipse = () => {
                 {photos.map((photo, index) => (
                   <div
                     key={index}
-                    className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer"
+                    className={editorialGalleryModalTileClass}
                     onClick={() => handlePhotoClick(index)}
                   >
                     <Image

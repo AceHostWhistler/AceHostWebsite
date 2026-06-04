@@ -71,7 +71,7 @@ const listing: ListingData = {
     description: "Experience luxury at Cedarhof in Kadenwood. This ski-in/ski-out property features 7 bedrooms, private butler service, and stunning views of Whistler Peak.",
   },
   header:   {
-      "title": "Cedarhof | Kadenwood | Private Butler",
+      "title": "Cedarhof | Kadenwood",
       "guests": 14,
       "bedrooms": 7,
       "bathrooms": 7,

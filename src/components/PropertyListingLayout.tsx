@@ -4,9 +4,19 @@ import Head from "next/head";
 import Image from "next/image";
 import { X } from "lucide-react";
 import Navigation from "@/components/Navigation";
-import PropertyHeader from "@/components/PropertyHeader";
+import PropertyHeaderEditorial from "@/components/PropertyHeaderEditorial";
 import Footer from "@/components/Footer";
 import type { ListingData } from "@/data/listings/types";
+import {
+  editorialGalleryGridClass,
+  editorialGalleryImageSizes,
+  editorialGalleryModalTileClass,
+  editorialGalleryModalWrapperClass,
+  editorialGalleryTileClass,
+  editorialGalleryWrapperClass,
+  editorialMainClass,
+} from "@/lib/editorialPropertyLayout";
+import { getListingAmenities } from "@/data/listings/amenities";
 
 const BLUR_DATA_URL =
   "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzMiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4=";
@@ -83,6 +93,11 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
     setSelectedPhotoIndex(null);
   };
 
+  const amenities =
+    listing.amenities?.length
+      ? listing.amenities
+      : getListingAmenities(listing.slug);
+
   return (
     <>
       <Head>
@@ -102,8 +117,8 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
 
-        <main>
-          <PropertyHeader
+        <main className={editorialMainClass}>
+          <PropertyHeaderEditorial
             title={header.title}
             guests={header.guests}
             bedrooms={header.bedrooms}
@@ -115,22 +130,23 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
             airbnbLink={header.airbnbLink}
             contactLink={header.contactLink}
             contactText={header.contactText}
+            amenities={amenities}
             onMorePhotosClick={openGallery}
           />
 
-          <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16" id="photos">
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+          <div className={editorialGalleryWrapperClass} id="photos">
+            <div className={editorialGalleryGridClass}>
               {photos.slice(0, 28).map((photo, index) => (
                 <div
                   key={index}
-                  className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
+                  className={editorialGalleryTileClass}
                   onClick={() => handlePhotoClick(index)}
                 >
                   <Image
                     src={photo}
                     alt={`${photoAltPrefix} ${index + 1}`}
                     fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    sizes={editorialGalleryImageSizes}
                     className="object-cover hover:scale-105 transition-transform duration-300"
                     priority={index < 2}
                     loading={index < 2 ? "eager" : "lazy"}
@@ -183,19 +199,19 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
               </button>
             </div>
 
-            <div className="max-w-7xl mx-auto py-6 px-4">
-              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+            <div className={editorialGalleryModalWrapperClass}>
+              <div className={editorialGalleryGridClass}>
                 {photos.map((photo, index) => (
                   <div key={index} className="mb-6">
                     <div
-                      className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer"
+                      className={editorialGalleryModalTileClass}
                       onClick={() => handlePhotoClick(index)}
                     >
                       <Image
                         src={photo}
                         alt={`${photoAltPrefix} ${index + 1}`}
                         fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        sizes={editorialGalleryImageSizes}
                         className="object-cover hover:scale-105 transition-transform duration-300"
                         priority={index < 6}
                         loading={index < 6 ? "eager" : "lazy"}

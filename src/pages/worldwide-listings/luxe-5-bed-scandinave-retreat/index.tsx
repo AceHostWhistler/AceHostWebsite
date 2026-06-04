@@ -7,7 +7,17 @@ import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { X } from "lucide-react";
-import PropertyHeader from "@/components/PropertyHeader";
+import PropertyHeaderEditorial from "@/components/PropertyHeaderEditorial";
+import {
+  editorialGalleryGridClass,
+  editorialGalleryImageSizes,
+  editorialGalleryModalTileClass,
+  editorialGalleryModalWrapperClass,
+  editorialGalleryWrapperClass,
+  editorialGalleryTileClass,
+  editorialMainClass,
+} from "@/lib/editorialPropertyLayout";
+import { getWorldwideAmenities } from "@/data/worldwideAmenities";
 
 const LuxeScandinaveRetreat = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -160,9 +170,9 @@ const LuxeScandinaveRetreat = () => {
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
 
-        <main>
+        <main className={editorialMainClass}>
           {/* Header with Property Info */}
-          <PropertyHeader
+          <PropertyHeaderEditorial
             title="Luxe 5-BED Scandinave Retreat | Walk to Slopes"
             guests={8}
             bedrooms={3}
@@ -172,6 +182,7 @@ const LuxeScandinaveRetreat = () => {
             winterPrice="$750-$1,600+ Nightly | Winter"
             holidayPrice="$2,300-$3,100+ Nightly | Christmas & NY"
             airbnbLink="https://www.airbnb.ca/rooms/1313847204355627326?guests=1&adults=1&s=67&unique_share_id=507dffd6-1f84-49a3-99eb-d10f493a65a6"
+            amenities={getWorldwideAmenities("luxe-5-bed-scandinave-retreat")}
             onMorePhotosClick={openGallery}
           />
 
@@ -186,10 +197,10 @@ const LuxeScandinaveRetreat = () => {
           )}
 
           {/* Photo Grid - Only show once essential images are loaded */}
-          <div className={`max-w-7xl mx-auto px-4 mb-10 sm:mb-16 ${imagesLoaded < 8 ? 'opacity-0' : 'opacity-100 transition-opacity duration-500'}`} id="photos">
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+          <div className={`${editorialGalleryWrapperClass} ${imagesLoaded < 8 ? 'opacity-0' : 'opacity-100 transition-opacity duration-500'}`} id="photos">
+            <div className={editorialGalleryGridClass}>
               <div
-                className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
+                className={editorialGalleryTileClass}
                 onClick={() => handlePhotoClick(0)}
               >
                 <div className="w-full h-full bg-gray-200">
@@ -206,7 +217,7 @@ const LuxeScandinaveRetreat = () => {
               {photos.slice(1, 4).map((photo, index) => (
                 <div
                   key={index}
-                  className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
+                  className={editorialGalleryTileClass}
                   onClick={() => handlePhotoClick(index + 1)}
                 >
                   <div className="w-full h-full bg-gray-200">
@@ -224,7 +235,7 @@ const LuxeScandinaveRetreat = () => {
               {photos.slice(4, 8).map((photo, index) => (
                 <div
                   key={index + 4}
-                  className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
+                  className={editorialGalleryTileClass}
                   onClick={() => handlePhotoClick(index + 4)}
                 >
                   <div className="w-full h-full bg-gray-200">
@@ -402,7 +413,7 @@ const LuxeScandinaveRetreat = () => {
                   <X size={24} />
                 </button>
               </div>
-              <div className="container mx-auto p-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              <div className={`${editorialGalleryModalWrapperClass} ${editorialGalleryGridClass}`}>
                 {photos.map((photo, index) => (
                   <div
                     key={index}

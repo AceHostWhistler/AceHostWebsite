@@ -5,7 +5,17 @@ import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
-import PropertyHeader from "@/components/PropertyHeader";
+import PropertyHeaderEditorial from "@/components/PropertyHeaderEditorial";
+import {
+  editorialGalleryGridClass,
+  editorialGalleryImageSizes,
+  editorialGalleryModalTileClass,
+  editorialGalleryModalWrapperClass,
+  editorialGalleryWrapperClass,
+  editorialGalleryTileClass,
+  editorialMainClass,
+} from "@/lib/editorialPropertyLayout";
+import { getWorldwideAmenities } from "@/data/worldwideAmenities";
 import Footer from "@/components/Footer";
 import { X, MapPin, Users, Bed, Bath, Check } from "lucide-react";
 
@@ -138,14 +148,15 @@ const PuntaMitaCasaJuntos = () => {
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
 
-        <main>
-          <PropertyHeader 
+        <main className={editorialMainClass}>
+          <PropertyHeaderEditorial 
             title="Punta Mita - Casa Juntos"
             guests={16}
             bedrooms={8}
             bathrooms={8}
             priceRange="$3,500-$5,000 per night"
             airbnbLink="https://www.airbnb.ca/rooms/561767409786915919?guests=1&adults=1&s=67&unique_share_id=7a6e7b88-1a8b-4352-acca-56db762955cd"
+            amenities={getWorldwideAmenities("punta-mita---casa-juntos")}
             onMorePhotosClick={openGallery}
           />
 
@@ -165,19 +176,19 @@ const PuntaMitaCasaJuntos = () => {
           </div>
 
           {/* Photo Grid */}
-          <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16" id="photos">
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+          <div className={editorialGalleryWrapperClass} id="photos">
+            <div className={editorialGalleryGridClass}>
               {photos.slice(0, 28).map((photo, index) => (
                 <div
                   key={index}
-                  className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
+                  className={editorialGalleryTileClass}
                   onClick={() => handlePhotoClick(index)}
                 >
                   <Image
                     src={photo}
                     alt={`Punta Mita - Casa Juntos ${index + 1}`}
                     fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    sizes={editorialGalleryImageSizes}
                     className="object-cover hover:scale-105 transition-transform duration-300"
                     priority={index < 2}
                     loading={index < 2 ? "eager" : "lazy"}
@@ -258,12 +269,12 @@ const PuntaMitaCasaJuntos = () => {
               </button>
             </div>
 
-            <div className="max-w-7xl mx-auto py-6 px-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className={editorialGalleryModalWrapperClass}>
+              <div className={editorialGalleryGridClass}>
                 {photos.map((photo, index) => (
                   <div key={index} className="mb-6">
                     <div
-                      className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer"
+                      className={editorialGalleryModalTileClass}
                       onClick={() => handlePhotoClick(index)}
                     >
                       <Image

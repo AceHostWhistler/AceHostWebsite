@@ -60,11 +60,11 @@ const listing: ListingData = {
     description: "Experience the ultimate luxury at Altitude Retreat in Kadenwood. This 10,000 sq.ft ski-in/ski-out mansion features a gym, sauna, hot tub, and private butler service, perfect for your Whistler vacation.",
   },
   header:   {
-      "title": "Altitude Retreat | Kadenwood | Private Butler",
+      "title": "Altitude Retreat | Kadenwood",
       "guests": 18,
       "bedrooms": 8,
       "bathrooms": 8.5,
-      "priceRange": "$7,500-$10,000+ per night | Private Butler Included",
+      "priceRange": "$7,500-$10,000+ per night ",
       "beds": 12,
       "winterPrice": "$8,000-$10,000+ Nightly | Winter",
       "holidayPrice": "$14,500-$19,000 Nightly | Christmas & NY",

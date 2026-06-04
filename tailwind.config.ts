@@ -8,6 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        futura: [
+          '"Futura"',
+          '"Futura PT"',
+          '"Century Gothic"',
+          '"Trebuchet MS"',
+          '"Avenir Next"',
+          '"Helvetica Neue"',
+          'sans-serif',
+        ],
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

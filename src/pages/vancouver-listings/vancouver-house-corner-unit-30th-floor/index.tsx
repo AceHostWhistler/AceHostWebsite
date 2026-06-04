@@ -5,7 +5,16 @@ import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
-import PropertyHeader from "@/components/PropertyHeader";
+import PropertyHeaderEditorial from "@/components/PropertyHeaderEditorial";
+import {
+  editorialGalleryGridClass,
+  editorialGalleryImageSizes,
+  editorialGalleryModalTileClass,
+  editorialGalleryWrapperClass,
+  editorialGalleryTileClass,
+  editorialMainClass,
+} from "@/lib/editorialPropertyLayout";
+import { getWorldwideAmenities } from "@/data/worldwideAmenities";
 import Footer from "@/components/Footer";
 import { X } from "lucide-react";
 import { FaBed, FaBath } from "react-icons/fa";
@@ -92,8 +101,8 @@ const VancouverHouseCornerUnit = () => {
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
 
-        <main>
-          <PropertyHeader
+        <main className={editorialMainClass}>
+          <PropertyHeaderEditorial
             title="The Vancouver House, Corner Unit | 30th Floor"
             guests={4}
             bedrooms={2}
@@ -101,23 +110,24 @@ const VancouverHouseCornerUnit = () => {
             bathrooms={2}
             priceRange="$12,000 per month | 3 month minimum"
             airbnbLink="https://www.airbnb.ca/rooms/561767409786915919?guests=1&adults=1&s=67&unique_share_id=7a6e7b88-1a8b-4352-acca-56db762955cd"
+            amenities={getWorldwideAmenities("vancouver-house-corner-unit-30th-floor")}
             onMorePhotosClick={openGallery}
           />
 
           {/* Photo Grid */}
-          <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16" id="photos">
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+          <div className={editorialGalleryWrapperClass} id="photos">
+            <div className={editorialGalleryGridClass}>
               {photos.slice(0, 8).map((photo, index) => (
                 <div
                   key={index}
-                  className="aspect-[4/3] relative cursor-pointer rounded-lg overflow-hidden shadow-md"
+                  className={editorialGalleryTileClass}
                   onClick={() => handlePhotoClick(index)}
                 >
                   <Image
                     src={photo}
                     alt={`Vancouver House interior ${index + 1}`}
                     fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    sizes={editorialGalleryImageSizes}
                     className="object-cover hover:scale-105 transition-transform duration-300"
                     priority={index < 2}
                     loading={index < 2 ? "eager" : "lazy"}
@@ -146,7 +156,7 @@ const VancouverHouseCornerUnit = () => {
               <h2 className="text-3xl font-bold mb-6 text-gray-900">
                 Property Details
               </h2>
-              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+              <div className={editorialGalleryGridClass}>
                 <div>
                   <p className="text-gray-700 mb-6">
                     Welcome to this spectacular corner unit on the 30th floor of
@@ -205,7 +215,7 @@ const VancouverHouseCornerUnit = () => {
               <h2 className="text-2xl font-bold mb-6 text-gray-900">
                 Room Layout
               </h2>
-              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+              <div className={editorialGalleryGridClass}>
                 <div>
                   <h3 className="text-xl font-semibold mb-3 text-gray-900">
                     Primary Bedroom
@@ -235,7 +245,7 @@ const VancouverHouseCornerUnit = () => {
               <h2 className="text-2xl font-bold mb-6 text-gray-900">
                 Amenities
               </h2>
-              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+              <div className={editorialGalleryGridClass}>
                 <div className="flex items-start">
                   <svg
                     className="h-5 w-5 text-gray-900 mt-0.5 mr-2"
@@ -479,7 +489,7 @@ const VancouverHouseCornerUnit = () => {
                 <h2 className="text-white text-2xl font-bold mb-6">
                   All Photos ({photos.length})
                 </h2>
-                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
+                <div className={editorialGalleryGridClass}>
                   {photos.map((photo, index) => (
                     <div
                       key={index}

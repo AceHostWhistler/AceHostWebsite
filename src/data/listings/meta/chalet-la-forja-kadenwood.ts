@@ -62,20 +62,32 @@ const listing: ListingData = {
   "/photos/properties/Chalet La Forja/La Forja 03.jpg"
 ],
   seo: {
-    title: "Chalet La Forja | Kadenwood | Private Butler - AceHost",
+    title: "Chalet La Forja | Kadenwood - AceHost",
     description: "Experience luxury at Chalet La Forja in Kadenwood. This ski-in/ski-out property features 9 bedrooms and 15 beds, private butler service, and stunning mountain views.",
   },
   header:   {
-      "title": "Chalet La Forja | Kadenwood | Private Butler",
+      "title": "Chalet La Forja | Kadenwood",
       "guests": 16,
       "bedrooms": 9,
       "bathrooms": 8,
-      "priceRange": "$7,000-11,000+ per night | Private Butler Included",
+      "priceRange": "$7,000-11,000+",
       "beds": 15,
       "winterPrice": "$8500-$11,000+ Nightly | Winter",
       "holidayPrice": "$16,000-$21,000+ Nightly | Christmas & NY",
       "airbnbLink": "https://www.airbnb.ca/rooms/52655503?guests=1&adults=1&s=67&unique_share_id=f1bb5c2c-51f9-4a82-9aa4-670fb8caa71d"
   },
+  amenities: [
+    "Ski-in / ski-out access",
+    "Heated outdoor pool",
+    "Hot tub",
+    "Private butler service",
+    "Fitness gym",
+    "Private Kadenwood gondola",
+    "Steam shower & spa bath",
+    "Gourmet chef's kitchen",
+    "Sonos sound throughout",
+    "Complimentary housekeeping (every other day)",
+  ],
   galleryTitle: "Chalet La Forja",
   photoAltPrefix: "Chalet La Forja",
 };

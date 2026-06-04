@@ -70,6 +70,7 @@ import WhistlerVillageViewsLuxury25BedroomDetails from "./details/whistler-villa
 import whistler_village_views_luxury_2_5_bedroomMeta from "./meta/whistler-village-views-luxury-2-5-bedroom";
 
 import type { ListingEntry } from "./types";
+import { getListingAmenities } from "./amenities";
 
 export const listingSlugs = [
   "altitude-retreat-kadenwood",
@@ -150,5 +151,12 @@ export const listings: Record<string, ListingEntry> = {
 };
 
 export function getListing(slug: string): ListingEntry | undefined {
-  return listings[slug];
+  const entry = listings[slug];
+  if (!entry) return undefined;
+  return {
+    ...entry,
+    amenities: entry.amenities?.length
+      ? entry.amenities
+      : getListingAmenities(slug),
+  };
 }

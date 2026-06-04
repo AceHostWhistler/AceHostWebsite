@@ -55,11 +55,11 @@ const listing: ListingData = {
       "Experience luxury at Two Cedars in Kadenwood. This ski-in/ski-out property features 7 bedrooms, private butler service, and stunning mountain views.",
   },
   header: {
-    title: "Two Cedars | Kadenwood | Private Butler",
+    title: "Two Cedars | Kadenwood",
     guests: 17,
     bedrooms: 7,
     bathrooms: 8.5,
-    priceRange: "$6,500-$9,500+ per night | Private Butler Included",
+    priceRange: "$6,500-$9,500+ per night ",
     beds: 12,
     winterPrice: "$8,500-$10,000+ Nightly | Winter",
     holidayPrice:

@@ -25,6 +25,8 @@ export interface ListingData {
   photos: string[];
   seo: ListingSeo;
   header: ListingHeader;
+  /** Bullet-list highlights shown in editorial header (optional) */
+  amenities?: string[];
   structuredData?: Record<string, unknown>;
   galleryTitle: string;
   photoAltPrefix: string;
