@@ -112,6 +112,11 @@ const MykonosCrystalVilla = () => {
     setSelectedPhotoIndex(null);
   };
 
+  const openGallery = () => {
+    setShowAllPhotos(true);
+    setSelectedPhotoIndex(null);
+  };
+
   return (
     <>
       <Head>
@@ -132,6 +137,7 @@ const MykonosCrystalVilla = () => {
             bedrooms={6}
             bathrooms={7}
             priceRange="€2,000-€4,000 per night"
+            onMorePhotosClick={openGallery}
           />
 
           {/* Photo Grid */}

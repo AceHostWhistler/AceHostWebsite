@@ -93,6 +93,11 @@ const VancouverHouseCornerUnit = () => {
     setSelectedPhotoIndex(null);
   };
 
+  const openGallery = () => {
+    setShowAllPhotos(true);
+    setSelectedPhotoIndex(null);
+  };
+
   return (
     <>
       <Head>
@@ -115,10 +120,11 @@ const VancouverHouseCornerUnit = () => {
             bathrooms={2}
             priceRange="$12,000 per month | 3 month minimum"
             airbnbLink="https://www.airbnb.ca/rooms/561767409786915919?guests=1&adults=1&s=67&unique_share_id=7a6e7b88-1a8b-4352-acca-56db762955cd"
+            onMorePhotosClick={openGallery}
           />
 
           {/* Photo Grid */}
-          <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16">
+          <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16" id="photos">
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
               {photos.slice(0, 8).map((photo, index) => (
                 <div

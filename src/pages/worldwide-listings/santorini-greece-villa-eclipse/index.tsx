@@ -80,6 +80,11 @@ const SantoriniGreeceVillaEclipse = () => {
     setSelectedPhotoIndex(null);
   };
 
+  const openGallery = () => {
+    setShowAllPhotos(true);
+    setSelectedPhotoIndex(null);
+  };
+
   return (
     <>
       <Head>
@@ -102,6 +107,7 @@ const SantoriniGreeceVillaEclipse = () => {
             bathrooms={5}
             priceRange="€1,300-€1,920 per night"
             contactLink="/contact"
+            onMorePhotosClick={openGallery}
           />
 
           {/* Photo Grid */}

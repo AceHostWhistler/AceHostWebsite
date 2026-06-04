@@ -89,6 +89,11 @@ const CotswoldsUKSohoFarmHouse = () => {
     setSelectedPhotoIndex(null);
   };
 
+  const openGallery = () => {
+    setShowAllPhotos(true);
+    setSelectedPhotoIndex(null);
+  };
+
   const handleKeyDown = (e: KeyboardEvent) => {
     if (!showAllPhotos && selectedPhotoIndex === null) return;
     
@@ -181,6 +186,7 @@ const CotswoldsUKSohoFarmHouse = () => {
             priceRange="£1,100-£2,300 per night | 3 night minimum"
             contactLink="/contact"
             airbnbLink="https://www.airbnb.ca/rooms/1414129878809697902?guests=1&adults=1&s=67&unique_share_id=ba3bff7b-bc57-416c-bcd6-96b0943cfe51"
+            onMorePhotosClick={openGallery}
           />
 
           {/* Loading Indicator */}

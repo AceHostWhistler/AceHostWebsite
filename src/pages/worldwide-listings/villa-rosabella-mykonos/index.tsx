@@ -115,6 +115,11 @@ const VillaRosabellaMykonos = () => {
     setSelectedPhotoIndex(null);
   };
 
+  const openGallery = () => {
+    setShowAllPhotos(true);
+    setSelectedPhotoIndex(null);
+  };
+
   return (
     <>
       <Head>
@@ -137,6 +142,7 @@ const VillaRosabellaMykonos = () => {
             bathrooms={8}
             priceRange="€3,500-€5,800 per night"
             contactLink="/contact"
+            onMorePhotosClick={openGallery}
           />
 
           {/* Photo Grid */}

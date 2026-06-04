@@ -99,6 +99,11 @@ const HoodRiverLuxuryHome = () => {
     setSelectedPhotoIndex(null);
   };
 
+  const openGallery = () => {
+    setShowAllPhotos(true);
+    setSelectedPhotoIndex(null);
+  };
+
   return (
     <>
       <Head>
@@ -119,6 +124,7 @@ const HoodRiverLuxuryHome = () => {
             bedrooms={4}
             bathrooms={3.5}
             priceRange="$800-$1,200 per night"
+            onMorePhotosClick={openGallery}
           />
 
           {/* Photo Grid */}

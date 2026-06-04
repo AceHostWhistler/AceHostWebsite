@@ -102,6 +102,11 @@ const SuperYachtThailand = () => {
     setSelectedPhotoIndex(null);
   };
 
+  const openGallery = () => {
+    setShowAllPhotos(true);
+    setSelectedPhotoIndex(null);
+  };
+
   return (
     <>
       <Head>
@@ -122,6 +127,7 @@ const SuperYachtThailand = () => {
             bedrooms={5}
             bathrooms={5}
             priceRange="$11,000-$13,000 per night"
+            onMorePhotosClick={openGallery}
           />
 
           {/* Photo Grid */}

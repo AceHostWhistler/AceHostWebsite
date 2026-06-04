@@ -88,6 +88,11 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
     setSelectedPhotoIndex(null);
   };
 
+  const openGallery = () => {
+    setShowAllPhotos(true);
+    setSelectedPhotoIndex(null);
+  };
+
   return (
     <>
       <Head>
@@ -120,6 +125,7 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
             airbnbLink={header.airbnbLink}
             contactLink={header.contactLink}
             contactText={header.contactText}
+            onMorePhotosClick={openGallery}
           />
 
           <div className="max-w-7xl mx-auto px-4 mb-10 sm:mb-16" id="photos">

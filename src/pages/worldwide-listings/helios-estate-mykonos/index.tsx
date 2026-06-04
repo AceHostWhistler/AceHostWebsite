@@ -137,6 +137,11 @@ const HeliosEstateMykonos = () => {
     setSelectedPhotoIndex(null);
   };
 
+  const openGallery = () => {
+    setShowAllPhotos(true);
+    setSelectedPhotoIndex(null);
+  };
+
   return (
     <>
       <Head>
@@ -159,6 +164,7 @@ const HeliosEstateMykonos = () => {
             bathrooms={9}
             priceRange="€15,000-€26,000 per night"
             contactLink="/contact"
+            onMorePhotosClick={openGallery}
           />
 
           {/* Photo Grid */}

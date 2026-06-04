@@ -141,6 +141,11 @@ const VillaOineasGreeceMykonos = () => {
     setSelectedPhotoIndex(null);
   };
 
+  const openGallery = () => {
+    setShowAllPhotos(true);
+    setSelectedPhotoIndex(null);
+  };
+
   return (
     <>
       <Head>
@@ -163,6 +168,7 @@ const VillaOineasGreeceMykonos = () => {
             bathrooms={5}
             priceRange="€1,450-€2,550 per night"
             contactLink="/contact"
+            onMorePhotosClick={openGallery}
           />
 
           {/* Photo Grid */}
