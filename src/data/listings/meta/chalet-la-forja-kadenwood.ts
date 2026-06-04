@@ -73,7 +73,7 @@ const listing: ListingData = {
       "priceRange": "$7,000-11,000+ per night | Private Butler Included",
       "beds": 15,
       "winterPrice": "$8500-$11,000+ Nightly | Winter",
-      "holidayPrice": "$16,000-$21,000+ Nightly | Christmas & NY (Booked for holidays 2025)",
+      "holidayPrice": "$16,000-$21,000+ Nightly | Christmas & NY",
       "airbnbLink": "https://www.airbnb.ca/rooms/52655503?guests=1&adults=1&s=67&unique_share_id=f1bb5c2c-51f9-4a82-9aa4-670fb8caa71d"
   },
   galleryTitle: "Chalet La Forja",

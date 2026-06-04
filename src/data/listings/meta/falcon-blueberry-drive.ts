@@ -67,7 +67,7 @@ const listing: ListingData = {
       "priceRange": "Nightly Price Range: $1,300-$3,500+",
       "beds": 9,
       "winterPrice": "$2,000-$3,500+ Nightly | Winter",
-      "holidayPrice": "$4,000-$7,200+ Nightly | Christmas (Booked for Christmas Dec 27 end date)",
+      "holidayPrice": "$4,000-$7,200+ Nightly | Christmas & NY",
       "airbnbLink": "https://www.airbnb.ca/rooms/18060329?preview_for_ml=true&source_impression_id=p3_1684112119_tL0LL7QnYLFGOCBI",
       "contactLink": "/contact"
   },

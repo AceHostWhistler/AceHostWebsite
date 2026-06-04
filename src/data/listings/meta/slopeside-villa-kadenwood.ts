@@ -56,7 +56,7 @@ const listing: ListingData = {
       "priceRange": "$2,600-$6,000 per night",
       "beds": 12,
       "winterPrice": "$4,500-$6,500+ Nightly | Winter",
-      "holidayPrice": "$10,000+ Nightly | Christmas & NY (Booked for holidays 2025)",
+      "holidayPrice": "$10,000+ Nightly | Christmas & NY",
       "airbnbLink": "https://www.airbnb.ca/rooms/826226399590812184?guests=1&adults=1&s=67&unique_share_id=aab7fbd3-669a-461d-b913-c15cf257b4c0"
   },
   galleryTitle: "Slope Side Chalet",

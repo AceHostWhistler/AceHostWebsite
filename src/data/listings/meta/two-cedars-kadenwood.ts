@@ -63,7 +63,7 @@ const listing: ListingData = {
     beds: 12,
     winterPrice: "$8,500-$10,000+ Nightly | Winter",
     holidayPrice:
-      "$17,500-$21,000+ Nightly | Christmas & NY (Booked for NY Dec 27 start date)",
+      "$17,500-$21,000+ Nightly | Christmas & NY",
     airbnbLink:
       "https://www.airbnb.ca/rooms/666613336620375768?guests=1&adults=1&s=67&unique_share_id=0d8a1725-cb02-487a-a033-7cc2940692e4",
   },
