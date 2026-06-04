@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
+import { usePhotoSwipeNavigation } from "@/hooks/usePhotoSwipeNavigation";
 import Head from "next/head";
 import Image from "next/image";
 import { X } from "lucide-react";
@@ -34,8 +35,6 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
     null
   );
   const [isImageLoading, setIsImageLoading] = useState(false);
-  const [touchStartX, setTouchStartX] = useState<number | null>(null);
-  const [touchEndX, setTouchEndX] = useState<number | null>(null);
 
   const handlePhotoClick = (index: number) => {
     setIsImageLoading(true);
@@ -46,42 +45,33 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
     setIsImageLoading(false);
   };
 
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchStartX(e.touches[0].clientX);
-    setTouchEndX(null);
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    setTouchEndX(e.touches[0].clientX);
-  };
-
-  const handleTouchEnd = () => {
-    if (!touchStartX || !touchEndX) return;
-    const difference = touchStartX - touchEndX;
-    if (Math.abs(difference) > 50) {
-      navigatePhoto(difference > 0 ? "next" : "prev");
-    }
-    setTouchStartX(null);
-    setTouchEndX(null);
-  };
-
   const closeFullScreenPhoto = () => {
     setSelectedPhotoIndex(null);
   };
 
-  const navigatePhoto = (direction: "prev" | "next") => {
-    if (selectedPhotoIndex === null) return;
+  const goToNextPhoto = useCallback(() => {
     setIsImageLoading(true);
-    if (direction === "prev") {
-      setSelectedPhotoIndex(
-        selectedPhotoIndex === 0 ? photos.length - 1 : selectedPhotoIndex - 1
-      );
-    } else {
-      setSelectedPhotoIndex(
-        selectedPhotoIndex === photos.length - 1 ? 0 : selectedPhotoIndex + 1
-      );
-    }
+    setSelectedPhotoIndex((current) => {
+      if (current === null) return null;
+      return current === photos.length - 1 ? 0 : current + 1;
+    });
+  }, [photos.length]);
+
+  const goToPrevPhoto = useCallback(() => {
+    setIsImageLoading(true);
+    setSelectedPhotoIndex((current) => {
+      if (current === null) return null;
+      return current === 0 ? photos.length - 1 : current - 1;
+    });
+  }, [photos.length]);
+
+  const navigatePhoto = (direction: "prev" | "next") => {
+    if (direction === "prev") goToPrevPhoto();
+    else goToNextPhoto();
   };
+
+  const { handleTouchStart, handleTouchMove, handleTouchEnd } =
+    usePhotoSwipeNavigation(goToNextPhoto, goToPrevPhoto);
 
   const closeAllPhotos = () => {
     setShowAllPhotos(false);
@@ -254,13 +244,17 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
                   <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin" />
                 </div>
               )}
-              <div className="relative w-full h-full">
+              <div
+                className="relative h-full w-full touch-pinch-zoom"
+                onClick={(e) => e.stopPropagation()}
+              >
                 <Image
                   src={photos[selectedPhotoIndex]}
                   alt={`${photoAltPrefix} full view ${selectedPhotoIndex + 1}`}
                   fill
                   priority
-                  className={`object-contain transition-opacity duration-300 ${
+                  draggable={false}
+                  className={`object-contain transition-opacity duration-300 select-none ${
                     isImageLoading ? "opacity-0" : "opacity-100"
                   }`}
                   sizes="100vw"

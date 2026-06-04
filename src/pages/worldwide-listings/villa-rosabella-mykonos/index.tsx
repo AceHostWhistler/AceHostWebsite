@@ -13,9 +13,6 @@ const VillaRosabellaMykonos = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [isImageLoading, setIsImageLoading] = useState(false);
-  const [touchStartX, setTouchStartX] = useState<number | null>(null);
-  const [touchEndX, setTouchEndX] = useState<number | null>(null);
-
   // Property photos
   const photos = [
     "/photos/properties/Villa Rosabella Mykonos/Villa Rosabella (22).jpg",

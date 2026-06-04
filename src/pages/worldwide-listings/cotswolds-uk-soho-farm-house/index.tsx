@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useCallback, useState, useEffect } from "react";
+import { usePhotoSwipeNavigation } from "@/hooks/usePhotoSwipeNavigation";
 import Head from "next/head";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -12,8 +13,6 @@ const CotswoldsUKSohoFarmHouse = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [isImageLoading, setIsImageLoading] = useState(false);
-  const [touchStartX, setTouchStartX] = useState<number | null>(null);
-  const [touchEndX, setTouchEndX] = useState<number | null>(null);
   const [imagesLoaded, setImagesLoaded] = useState(0);
   const [totalImages] = useState(84); // Total number of images we have
 
@@ -82,6 +81,24 @@ const CotswoldsUKSohoFarmHouse = () => {
     
     setSelectedPhotoIndex(newIndex);
   };
+
+  const goToNextPhoto = useCallback(() => {
+    setIsImageLoading(true);
+    setSelectedPhotoIndex((current) => {
+      if (current === null) return null;
+      return current === photos.length - 1 ? 0 : current + 1;
+    });
+  }, [photos.length]);
+
+  const goToPrevPhoto = useCallback(() => {
+    setIsImageLoading(true);
+    setSelectedPhotoIndex((current) => {
+      if (current === null) return null;
+      return current === 0 ? photos.length - 1 : current - 1;
+    });
+  }, [photos.length]);
+  const { handleTouchStart, handleTouchMove, handleTouchEnd } =
+    usePhotoSwipeNavigation(goToNextPhoto, goToPrevPhoto);
 
   // Close full screen view when all photos modal is closed
   const closeAllPhotos = () => {
@@ -721,22 +738,9 @@ const CotswoldsUKSohoFarmHouse = () => {
             <div
               className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center"
               onClick={closeFullScreenPhoto}
-              onTouchStart={(e) => setTouchStartX(e.touches[0].clientX)}
-              onTouchMove={(e) => setTouchEndX(e.touches[0].clientX)}
-              onTouchEnd={() => {
-                if (touchStartX && touchEndX) {
-                  const diff = touchStartX - touchEndX;
-                  if (diff > 50) {
-                    // Swipe left
-                    navigatePhoto("next");
-                  } else if (diff < -50) {
-                    // Swipe right
-                    navigatePhoto("prev");
-                  }
-                }
-                setTouchStartX(null);
-                setTouchEndX(null);
-              }}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
             >
               <button
                 className="absolute top-4 right-4 text-white z-10"

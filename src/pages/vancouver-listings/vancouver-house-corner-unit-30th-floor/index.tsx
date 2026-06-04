@@ -9,13 +9,12 @@ import PropertyHeader from "@/components/PropertyHeader";
 import Footer from "@/components/Footer";
 import { X } from "lucide-react";
 import { FaBed, FaBath } from "react-icons/fa";
+import { usePhotoSwipeNavigation } from "@/hooks/usePhotoSwipeNavigation";
 
 const VancouverHouseCornerUnit = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [isImageLoading, setIsImageLoading] = useState(false);
-  const [touchStartX, setTouchStartX] = useState<number | null>(null);
-  const [touchEndX, setTouchEndX] = useState<number | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   // Property photos
@@ -43,49 +42,31 @@ const VancouverHouseCornerUnit = () => {
     setIsImageLoading(false);
   };
 
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchStartX(e.touches[0].clientX);
-    setTouchEndX(null);
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    setTouchEndX(e.touches[0].clientX);
-  };
-
-  const handleTouchEnd = () => {
-    if (!touchStartX || !touchEndX) return;
-    
-    const difference = touchStartX - touchEndX;
-    
-    if (Math.abs(difference) > 50) {
-      if (difference > 0) {
-        navigatePhoto("next");
-      } else {
-        navigatePhoto("prev");
-      }
-    }
-    
-    setTouchStartX(null);
-    setTouchEndX(null);
-  };
-
   const closeFullScreenPhoto = () => {
     setSelectedPhotoIndex(null);
   };
 
-  const navigatePhoto = (direction: "prev" | "next") => {
-    if (selectedPhotoIndex === null) return;
+  const goToNextPhoto = useCallback(() => {
+    setSelectedPhotoIndex((current) => {
+      if (current === null) return null;
+      return current === photos.length - 1 ? 0 : current + 1;
+    });
+  }, [photos.length]);
 
-    if (direction === "prev") {
-      setSelectedPhotoIndex(
-        selectedPhotoIndex === 0 ? photos.length - 1 : selectedPhotoIndex - 1
-      );
-    } else {
-      setSelectedPhotoIndex(
-        selectedPhotoIndex === photos.length - 1 ? 0 : selectedPhotoIndex + 1
-      );
-    }
+  const goToPrevPhoto = useCallback(() => {
+    setSelectedPhotoIndex((current) => {
+      if (current === null) return null;
+      return current === 0 ? photos.length - 1 : current - 1;
+    });
+  }, [photos.length]);
+
+  const navigatePhoto = (direction: "prev" | "next") => {
+    if (direction === "prev") goToPrevPhoto();
+    else goToNextPhoto();
   };
+
+  const { handleTouchStart, handleTouchMove, handleTouchEnd } =
+    usePhotoSwipeNavigation(goToNextPhoto, goToPrevPhoto);
 
   // Close full screen view when all photos modal is closed
   const closeAllPhotos = () => {

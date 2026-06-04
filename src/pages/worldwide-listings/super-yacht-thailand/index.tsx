@@ -1,4 +1,5 @@
-import React, { useState, useRef } from "react";
+import React, { useCallback, useState, useRef } from "react";
+import { usePhotoSwipeNavigation } from "@/hooks/usePhotoSwipeNavigation";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
@@ -13,8 +14,6 @@ const SuperYachtThailand = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [isImageLoading, setIsImageLoading] = useState(false);
-  const [touchStartX, setTouchStartX] = useState<number | null>(null);
-  const [touchEndX, setTouchEndX] = useState<number | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   // Property photos
@@ -106,6 +105,25 @@ const SuperYachtThailand = () => {
     setShowAllPhotos(true);
     setSelectedPhotoIndex(null);
   };
+
+  const goToNextPhoto = useCallback(() => {
+    setIsImageLoading(true);
+    setSelectedPhotoIndex((current) => {
+      if (current === null) return null;
+      return current === photos.length - 1 ? 0 : current + 1;
+    });
+  }, [photos.length]);
+
+  const goToPrevPhoto = useCallback(() => {
+    setIsImageLoading(true);
+    setSelectedPhotoIndex((current) => {
+      if (current === null) return null;
+      return current === 0 ? photos.length - 1 : current - 1;
+    });
+  }, [photos.length]);
+
+  const { handleTouchStart, handleTouchMove, handleTouchEnd } =
+    usePhotoSwipeNavigation(goToNextPhoto, goToPrevPhoto);
 
   return (
     <>
@@ -285,32 +303,9 @@ const SuperYachtThailand = () => {
         {selectedPhotoIndex !== null && (
           <div 
             className="fixed inset-0 z-[60] bg-black flex items-center justify-center"
-            onTouchStart={() => {
-              setTouchStartX(null);
-              setTouchEndX(null);
-            }}
-            onTouchMove={(e) => {
-              if (touchStartX === null) {
-                setTouchStartX(e.touches[0].clientX);
-              }
-              setTouchEndX(e.touches[0].clientX);
-            }}
-            onTouchEnd={() => {
-              if (touchStartX === null || touchEndX === null) return;
-              
-              const difference = touchStartX - touchEndX;
-              
-              if (Math.abs(difference) > 50) {
-                if (difference > 0) {
-                  navigatePhoto("next");
-                } else {
-                  navigatePhoto("prev");
-                }
-              }
-              
-              setTouchStartX(null);
-              setTouchEndX(null);
-            }}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
           >
             <div className="absolute top-4 right-4 flex space-x-4">
               <button

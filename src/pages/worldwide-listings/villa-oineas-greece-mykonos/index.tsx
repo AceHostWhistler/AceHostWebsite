@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
+import { usePhotoSwipeNavigation } from "@/hooks/usePhotoSwipeNavigation";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
@@ -13,9 +14,6 @@ const VillaOineasGreeceMykonos = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [isImageLoading, setIsImageLoading] = useState(false);
-  const [touchStartX, setTouchStartX] = useState<number | null>(null);
-  const [touchEndX, setTouchEndX] = useState<number | null>(null);
-
   // Property photos
   const photos = [
     "/photos/properties/Oineas Villa - Greece Mykonos/VILLA OINEAS-06907.jpg",
@@ -145,6 +143,25 @@ const VillaOineasGreeceMykonos = () => {
     setShowAllPhotos(true);
     setSelectedPhotoIndex(null);
   };
+
+  const goToNextPhoto = useCallback(() => {
+    setIsImageLoading(true);
+    setSelectedPhotoIndex((current) => {
+      if (current === null) return null;
+      return current === photos.length - 1 ? 0 : current + 1;
+    });
+  }, [photos.length]);
+
+  const goToPrevPhoto = useCallback(() => {
+    setIsImageLoading(true);
+    setSelectedPhotoIndex((current) => {
+      if (current === null) return null;
+      return current === 0 ? photos.length - 1 : current - 1;
+    });
+  }, [photos.length]);
+
+  const { handleTouchStart, handleTouchMove, handleTouchEnd } =
+    usePhotoSwipeNavigation(goToNextPhoto, goToPrevPhoto);
 
   return (
     <>
@@ -557,22 +574,9 @@ const VillaOineasGreeceMykonos = () => {
             <div
               className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center"
               onClick={closeFullScreenPhoto}
-              onTouchStart={(e) => setTouchStartX(e.touches[0].clientX)}
-              onTouchMove={(e) => setTouchEndX(e.touches[0].clientX)}
-              onTouchEnd={() => {
-                if (touchStartX && touchEndX) {
-                  const diff = touchStartX - touchEndX;
-                  if (diff > 50) {
-                    // Swipe left
-                    navigatePhoto("next");
-                  } else if (diff < -50) {
-                    // Swipe right
-                    navigatePhoto("prev");
-                  }
-                }
-                setTouchStartX(null);
-                setTouchEndX(null);
-              }}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
             >
               <button
                 className="absolute top-4 right-4 text-white z-10"

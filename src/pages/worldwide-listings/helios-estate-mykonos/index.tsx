@@ -13,9 +13,6 @@ const HeliosEstateMykonos = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [isImageLoading, setIsImageLoading] = useState(false);
-  const [touchStartX, setTouchStartX] = useState<number | null>(null);
-  const [touchEndX, setTouchEndX] = useState<number | null>(null);
-
   // Property photos
   const photos = [
     "/photos/properties/Helios Estate - Mykonos/HELIOS ESTATE MYKONOS (1).jpg",
