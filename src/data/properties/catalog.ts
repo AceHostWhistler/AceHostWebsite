@@ -424,7 +424,6 @@ export const propertyCategories: PropertyCategory[] = [
             images: [
               "/photos/properties/Timber Haven John Harris/Timber Haven cover.png",
               "/photos/properties/Timber Haven John Harris/8D487CA0-D240-4A51-AC47-9B142E4DEE05.PNG.jpg",
-              "/photos/properties/Timber Haven John Harris/FEBAA229-DD26-4A6F-8D6B-AFB00A2AD0C8.PNG.jpg",
               "/photos/properties/Timber Haven John Harris/02 - 20260506 MM4P 02 0347.jpg",
             ],
             guests: 16,
