@@ -20,6 +20,13 @@ import {
   editorialMainClass,
 } from "@/lib/editorialPropertyLayout";
 import { getListingAmenities } from "@/data/listings/amenities";
+import InsidePropertyPhotoStrip from "@/components/InsidePropertyPhotoStrip";
+
+/** Listings with a custom in-description photo strip — skip the shared one. */
+const CUSTOM_INSIDE_PHOTO_STRIP_SLUGS = new Set([
+  "chalet-la-forja-kadenwood",
+  "timber-haven-luxury-ski-in-ski-out-kadenwood",
+]);
 
 const BLUR_DATA_URL =
   "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIyMiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzMiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4=";
@@ -187,6 +194,13 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
                 <source src={videoUrl} type="video/mp4" />
               </video>
             </div>
+          )}
+
+          {!CUSTOM_INSIDE_PHOTO_STRIP_SLUGS.has(listing.slug) && (
+            <InsidePropertyPhotoStrip
+              title={header.title.split("|")[0].trim()}
+              photos={photos}
+            />
           )}
 
           {children}

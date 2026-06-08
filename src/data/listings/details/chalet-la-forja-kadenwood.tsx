@@ -18,13 +18,35 @@ export default function ChaletLaForjaKadenwoodDetails({ photos }: ListingDetails
                     Ranked one of VRBO's Top 10 vacation rentals in 2023.
                   </p>
 
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-10">
+                    Inside Chalet La Forja
+                  </h3>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-16">
+                    {[photos[2], photos[7], photos[12], photos[34]].map(
+                      (src, index) => (
+                        <div
+                          key={src}
+                          className="relative aspect-[4/3] rounded-lg overflow-hidden"
+                        >
+                          <Image
+                            src={src}
+                            alt={`Chalet La Forja interior and amenities ${index + 1}`}
+                            fill
+                            className="object-cover hover:scale-105 transition-transform duration-300"
+                            sizes="(max-width: 768px) 50vw, 25vw"
+                          />
+                        </div>
+                      )
+                    )}
+                  </div>
+
                   {/* The Space Section */}
                   <div className="flex flex-col md:flex-row mb-20">
                     <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                       <div className="relative aspect-[4/3] mb-2">
                         <Image
-                          src={photos[6]}
-                          alt="Chalet La Forja Interior"
+                          src={photos[11]}
+                          alt="Chalet La Forja living space and kitchen"
                           fill
                           className="object-cover hover:scale-105 transition-transform duration-300"
                         />
@@ -85,8 +107,8 @@ export default function ChaletLaForjaKadenwoodDetails({ photos }: ListingDetails
                     <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
                       <div className="relative aspect-[4/3] mb-2">
                         <Image
-                          src={photos[0]}
-                          alt="Chalet La Forja Bedroom"
+                          src={photos[15]}
+                          alt="Chalet La Forja bedroom suite"
                           fill
                           className="object-cover hover:scale-105 transition-transform duration-300"
                         />
@@ -199,8 +221,8 @@ export default function ChaletLaForjaKadenwoodDetails({ photos }: ListingDetails
                       <div className="md:w-1/2">
                         <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
                           <Image
-                            src={photos[0]}
-                            alt="Chalet La Forja Location"
+                            src={photos[1]}
+                            alt="Chalet La Forja exterior in Kadenwood"
                             fill
                             className="object-cover hover:scale-105 transition-transform duration-500"
                             sizes="(max-width: 768px) 100vw, 50vw"

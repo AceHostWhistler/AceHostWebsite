@@ -133,7 +133,7 @@ export default function NorthlandsWalkToVillageSlopesLuxury4BedDetails({ photos 
                     </div>
                     <div className="relative aspect-[4/3] mb-6 max-w-3xl">
                       <img
-                        src={photos[0]}
+                        src={photos[8]}
                         alt="Northlands Symphony Location"
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                       />

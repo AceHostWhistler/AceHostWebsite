@@ -18,7 +18,7 @@ export default function LuxurySkiInSkiOut7BedroomKadenwoodDetails({ photos }: Li
                     <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                       <div className="relative aspect-[4/3] mb-2">
                         <img
-                          src={photos[0]}
+                          src={photos[6]}
                           alt="Luxury Kadenwood Property Interior"
                           className="w-full h-full object-cover rounded-lg"
                         />

@@ -94,7 +94,7 @@ function PriceRow({ season, value, highlight }: PriceRowProps) {
         highlight ? "bg-amber-50/60 -mx-4 px-4 sm:mx-0 sm:px-0 sm:bg-transparent" : ""
       }`}
     >
-      <span className="text-[8px] font-semibold uppercase tracking-[0.2em] text-stone-500">
+      <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-stone-500">
         {season}
       </span>
       <div className="text-left sm:text-right">
@@ -269,14 +269,14 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
         {amenities.length > 0 && (
           <div className="border-b border-stone-300/50 bg-[#f6f3ed]">
             <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-7">
-              <h2 className="text-[8px] font-semibold uppercase tracking-[0.28em] text-stone-500">
+              <h2 className="text-[10px] font-semibold uppercase tracking-[0.24em] text-stone-500">
                 Amenities
               </h2>
-              <ul className="mt-3 grid gap-x-6 gap-y-1.5 sm:grid-cols-2 lg:grid-cols-3">
+              <ul className="mt-3 grid gap-x-6 gap-y-2 sm:grid-cols-2 lg:grid-cols-3">
                 {amenities.map((item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-2 text-[11px] leading-snug text-stone-800"
+                    className="flex items-start gap-2 text-[12px] leading-snug text-stone-800"
                   >
                     <span
                       className="mt-[0.35rem] h-1 w-1 shrink-0 rounded-full bg-stone-800"
@@ -294,7 +294,7 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
         <div className="mx-auto max-w-6xl px-4 py-7 sm:px-6 sm:py-9">
           <div className="grid gap-7 lg:grid-cols-[1fr_minmax(195px,240px)] lg:gap-12">
             <div>
-              <h2 className="text-[8px] font-semibold uppercase tracking-[0.28em] text-stone-500">
+              <h2 className="text-[10px] font-semibold uppercase tracking-[0.24em] text-stone-500">
                 Rates
               </h2>
               <div className="mt-1.5">
