@@ -610,7 +610,7 @@ export default function BlogPost() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 not-prose">
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Falcon/Outdoor shot Falcon good.png"
+                    src="/photos/properties/Falcon/Cover photo Falcon.png"
                     alt="Falcon Blueberry Drive exterior"
                     fill
                     className="object-cover"
@@ -618,7 +618,7 @@ export default function BlogPost() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Falcon/Outdoor shot Falcon good.png"
+                    src="/photos/properties/Falcon/Cover photo Falcon.png"
                     alt="Falcon living room with fireplace"
                     fill
                     className="object-cover"
@@ -626,7 +626,7 @@ export default function BlogPost() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Falcon/Outdoor shot Falcon good.png"
+                    src="/photos/properties/Falcon/Cover photo Falcon.png"
                     alt="Falcon deck and BBQ"
                     fill
                     className="object-cover"
@@ -634,7 +634,7 @@ export default function BlogPost() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Falcon/Outdoor shot Falcon good.png"
+                    src="/photos/properties/Falcon/Cover photo Falcon.png"
                     alt="Falcon hot tub"
                     fill
                     className="object-cover"

@@ -442,7 +442,7 @@ const Home = () => {
     {
       id: "falcon-blueberry-drive",
       name: "Falcon | Blueberry Drive",
-      image: "/photos/properties/Falcon/Outdoor shot Falcon good.png",
+      image: "/photos/properties/Falcon/Cover photo Falcon.png",
       guests: 15,
       bedrooms: 7,
       beds: 9,

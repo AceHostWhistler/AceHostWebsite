@@ -3,7 +3,7 @@ import type { ListingData } from "../types";
 const listing: ListingData = {
   slug: "falcon-blueberry-drive",
   photos: [
-  "/photos/properties/Falcon/Outdoor shot Falcon good.png",
+  "/photos/properties/Falcon/Cover photo Falcon.png",
   "/photos/properties/Falcon/02 - 20250827 A7M4 01 DSC00524.jpg",
   "/photos/properties/Falcon/03 - 20250827 A7M4 01 DSC00224-Edit.jpg",
   "/photos/properties/Falcon/04 - 20250827 A7M4 01 DSC00234.jpg",

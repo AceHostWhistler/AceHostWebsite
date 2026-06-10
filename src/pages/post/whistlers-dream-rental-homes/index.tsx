@@ -403,7 +403,7 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/Falcon/Outdoor shot Falcon good.png"
+                  src="/photos/properties/Falcon/Cover photo Falcon.png"
                   alt="Falcon in Blueberry"
                   fill
                   className="object-cover"
