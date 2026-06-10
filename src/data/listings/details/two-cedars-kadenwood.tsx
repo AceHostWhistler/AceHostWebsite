@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { FaBed, FaBath } from "react-icons/fa";
 import type { ListingDetailsProps } from "../types";
 
@@ -15,64 +14,9 @@ export default function TwoCedarsKadenwoodDetails({ photos }: ListingDetailsProp
                     At AceHost, we are dedicated to providing a five-star experience, and to enhance your stay, we include a complimentary butler every day.
                   </p>
 
-                  {/* Instagram Reel Video - Centered and Smaller */}
-                  <div className="flex justify-center mb-16">
-                    <div className="w-full max-w-sm">
-                      <div className="rounded-xl overflow-hidden shadow-2xl bg-white">
-                        <div className="flex flex-col h-full">
-                          <div className="p-6 border-b bg-gradient-to-r from-gray-50 to-white">
-                            <h3 className="text-xl font-bold text-center text-gray-900">
-                              Two Cedars Walk Through
-                            </h3>
-                          </div>
-
-                          <div
-                            className="aspect-w-9 aspect-h-16 relative"
-                            style={{ minHeight: "480px" }}
-                          >
-                            <div className="absolute inset-0 w-full h-full">
-                              <iframe
-                                className="absolute inset-0 w-full h-full"
-                                src="https://www.instagram.com/reel/C0slAOvLmII/embed/?utm_source=ig_embed&utm_campaign=loading&hidecaption=1&utm_medium=embed&autoplay=false"
-                                frameBorder="0"
-                                scrolling="no"
-                                loading="lazy"
-                                allowFullScreen={true}
-                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                                referrerPolicy="strict-origin-when-cross-origin"
-                                title="Two Cedars Walk Through Video"
-                              ></iframe>
-                            </div>
-                          </div>
-
-                          <div className="p-4 border-t bg-gradient-to-r from-gray-50 to-white">
-                            <a
-                              href="https://www.instagram.com/reel/C0slAOvLmII/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-                              className="text-blue-600 text-sm font-medium block text-center hover:text-blue-800 transition-colors"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              View more on Instagram
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
                   {/* The Space Section */}
-                  <div className="flex flex-col md:flex-row mb-20">
-                    <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
-                      <div className="relative aspect-[4/3] mb-2">
-                        <Image
-                          src="/photos/properties/Two Cedars New/14-2934 Ancient Cedars-14.jpg"
-                          alt="Two Cedars Interior"
-                          fill
-                          className="object-cover hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                    </div>
-                    <div className="md:w-1/2">
+                  <div className="mb-20">
+                    <div>
                       <div className="flex items-center mb-6">
                         <div className="bg-black text-white p-4 rounded-full mr-4">
                           <svg

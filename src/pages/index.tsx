@@ -1204,18 +1204,6 @@ const Home = () => {
           }}
         />
 
-        {/* Google Fonts preconnect for performance */}
-        <link
-          rel="preconnect"
-          href="https://fonts.googleapis.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-
         {/* Optimize core web vitals */}
         <link rel="preload" href="/logo.png" as="image" />
         <link 

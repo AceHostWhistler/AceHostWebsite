@@ -4,58 +4,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        {/* Preconnect to domains for faster loading */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-
-        {/* Font optimization */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-        
-        <style
-          dangerouslySetInnerHTML={{
-            __html: `
-              /* Font display optimization */
-              @font-face {
-                font-family: 'Inter';
-                font-style: normal;
-                font-weight: 300;
-                font-display: swap;
-              }
-              @font-face {
-                font-family: 'Inter';
-                font-style: normal;
-                font-weight: 400;
-                font-display: swap;
-              }
-              @font-face {
-                font-family: 'Inter';
-                font-style: normal;
-                font-weight: 500;
-                font-display: swap;
-              }
-              @font-face {
-                font-family: 'Inter';
-                font-style: normal;
-                font-weight: 600;
-                font-display: swap;
-              }
-              @font-face {
-                font-family: 'Inter';
-                font-style: normal;
-                font-weight: 700;
-                font-display: swap;
-              }
-            `,
-          }}
-        />
-
         {/* Preload critical assets */}
         <link rel="preload" href="/logo.png" as="image" />
 
@@ -89,8 +37,6 @@ export default function Document() {
 
         {/* Enable DNS prefetching */}
         <meta httpEquiv="x-dns-prefetch-control" content="on" />
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         
         {/* Google Sitelinks Search Box */}
         <script
@@ -109,7 +55,7 @@ export default function Document() {
           }}
         />
       </Head>
-      <body>
+      <body className="font-sans">
         <Main />
         <NextScript />
       </body>

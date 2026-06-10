@@ -231,7 +231,7 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
         <Link href={canonicalPath || "/"}>{title}</Link>
       </nav>
 
-      <header className="bg-[#f6f3ed] font-futura text-stone-900">
+      <header className="bg-[#f6f3ed] font-sans text-stone-900">
         {/* Title band */}
         <div className="border-b border-stone-300/50 bg-[#1c1917] px-4 py-7 text-stone-100 sm:px-6 sm:py-10">
           <div className="mx-auto max-w-6xl">

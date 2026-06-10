@@ -5,19 +5,16 @@ const config: Config = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/data/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/lib/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
       fontFamily: {
-        futura: [
-          '"Futura"',
-          '"Futura PT"',
-          '"Century Gothic"',
-          '"Trebuchet MS"',
-          '"Avenir Next"',
-          '"Helvetica Neue"',
-          'sans-serif',
-        ],
+        sans: ['Arial', 'Helvetica', 'sans-serif'],
+        serif: ['Arial', 'Helvetica', 'sans-serif'],
+        mono: ['Arial', 'Helvetica', 'sans-serif'],
+        futura: ['Arial', 'Helvetica', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

@@ -36,4 +36,4 @@ export const editorialGalleryTileClass = `${mobileGalleryTileClass} ${desktopGal
 
 export const editorialGalleryModalTileClass = `${mobileGalleryModalTileClass} ${desktopGalleryModalTileClass}`;
 
-export const editorialMainClass = "font-futura";
+export const editorialMainClass = "font-sans";

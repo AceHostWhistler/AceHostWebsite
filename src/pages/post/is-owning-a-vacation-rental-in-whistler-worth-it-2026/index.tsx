@@ -320,7 +320,7 @@ export default function BlogPost() {
               </p>
               <p>So the math would look like this:</p>
               <div
-                className="bg-gray-50 border border-gray-200 rounded-lg p-6 my-6 font-mono text-sm sm:text-base not-prose"
+                className="bg-gray-50 border border-gray-200 rounded-lg p-6 my-6 font-sans text-sm sm:text-base not-prose"
                 role="group"
                 aria-label="Simple cash flow example"
               >
@@ -514,7 +514,7 @@ export default function BlogPost() {
               </p>
               <p>That would mean your year-10 profit would be about:</p>
               <div
-                className="bg-gray-50 border border-gray-200 rounded-lg p-6 my-6 font-mono text-sm sm:text-base not-prose"
+                className="bg-gray-50 border border-gray-200 rounded-lg p-6 my-6 font-sans text-sm sm:text-base not-prose"
                 role="group"
                 aria-label="Year ten profit example with revenue growth"
               >
