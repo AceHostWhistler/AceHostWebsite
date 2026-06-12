@@ -378,7 +378,7 @@ export default function Properties() {
       "cozy-lakefront-whistler-condo":
         "https://www.airbnb.ca/rooms/1305524887656641858?guests=1&adults=1&s=67&unique_share_id=23663c37-e33a-445b-a53c-6f927f30d084",
       "bluffs-unit-4":
-        "https://www.airbnb.ca/rooms/1693549013411163327?guests=1&adults=1&s=67&unique_share_id=b2a319a1-84fe-4b91-b5f9-920365c2a0cd",
+        "https://www.airbnb.ca/rooms/1693549013411163327?guests=1&adults=1&s=66&source=embed_widget",
     };
 
     // Use the airbnbLink from the hardcoded list, or fall back to the property's airbnbLink field if it exists

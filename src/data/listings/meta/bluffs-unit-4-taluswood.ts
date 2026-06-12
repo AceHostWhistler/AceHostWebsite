@@ -51,7 +51,7 @@ const listing: ListingData = {
     winterPrice: "$500-$1,350 Nightly | Winter",
     holidayPrice: "$1,500-$2,500+ Nightly | Christmas & NY",
     airbnbLink:
-      "https://www.airbnb.ca/rooms/1693549013411163327?guests=1&adults=1&s=67&unique_share_id=b2a319a1-84fe-4b91-b5f9-920365c2a0cd",
+      "https://www.airbnb.ca/rooms/1693549013411163327?guests=1&adults=1&s=66&source=embed_widget",
   },
   galleryTitle: "Bluffs - Luxury 2 Bed Ski in Ski out in Creeksside - Views!",
   photoAltPrefix: "Bluffs Creekside",
