@@ -1,6 +1,11 @@
 import React from "react";
 import Image from "next/image";
+import Script from "next/script";
 import type { ListingDetailsProps } from "../types";
+import {
+  BLUFFS_AIRBNB_LINK,
+  BLUFFS_AIRBNB_ROOM_ID,
+} from "../bluffsAirbnbLink";
 
 export default function BluffsUnit4TaluswoodDetails({ photos }: ListingDetailsProps) {
   return (
@@ -21,6 +26,30 @@ export default function BluffsUnit4TaluswoodDetails({ photos }: ListingDetailsPr
           Underground parking for two cars and secure ski &amp; bike storage make
           arrivals effortless.
         </p>
+
+        <div className="flex justify-center mb-16">
+          <div className="w-full max-w-md text-center">
+            <div
+              className="airbnb-embed-frame mx-auto"
+              data-id={BLUFFS_AIRBNB_ROOM_ID}
+              data-view="home"
+              data-hide-price="true"
+              style={{ width: "450px", height: "300px", margin: "auto" }}
+            />
+            <a
+              href={BLUFFS_AIRBNB_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block text-blue-600 text-sm font-medium hover:text-blue-800 transition-colors"
+            >
+              View on Airbnb
+            </a>
+          </div>
+        </div>
+        <Script
+          src="https://www.airbnb.ca/embeddable/airbnb_jssdk"
+          strategy="afterInteractive"
+        />
 
         <div className="flex flex-col md:flex-row mb-20">
           <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">

@@ -11,6 +11,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import { FaUser, FaBed, FaBath } from "react-icons/fa";
 import { Users, Bed, Bath } from "lucide-react";
+import { BLUFFS_AIRBNB_LINK } from "@/data/listings/bluffsAirbnbLink";
 
 const Home = () => {
   const { t } = useTranslation("common");
@@ -110,7 +111,7 @@ const Home = () => {
               Pet Friendly
             </div>
           )}
-          <div className="absolute bottom-4 right-4">
+          <div className="absolute bottom-4 right-4 z-20">
             {isContactLink ? (
               <Link
                 href={bookingLink}
@@ -123,6 +124,7 @@ const Home = () => {
                 href={bookingLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
                 className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
               >
                 Book Now
@@ -862,8 +864,7 @@ const Home = () => {
       holidayPrice: "$1500-2500+ for Christmas/NYE",
       location: "whistler",
       link: "/listings/bluffs-unit-4-taluswood",
-      airbnbLink:
-        "https://www.airbnb.ca/rooms/1693549013411163327?guests=1&adults=1&s=66&source=embed_widget",
+      airbnbLink: BLUFFS_AIRBNB_LINK,
       isPetFriendly: false,
       isSkiInSkiOut: true,
     },

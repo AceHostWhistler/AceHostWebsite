@@ -316,6 +316,7 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
                   href={airbnbLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  referrerPolicy="no-referrer-when-downgrade"
                   className="group flex w-full items-center justify-between rounded-full bg-[#1c1917] px-6 py-3.5 text-[12px] font-semibold tracking-wide text-stone-100 shadow-sm transition-all hover:bg-stone-800 hover:shadow-md active:scale-[0.99]"
                 >
                   Book on Airbnb

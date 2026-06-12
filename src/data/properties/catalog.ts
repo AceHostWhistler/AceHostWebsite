@@ -1,3 +1,5 @@
+import { BLUFFS_AIRBNB_LINK } from "../listings/bluffsAirbnbLink";
+
 export interface PropertyFeature {
   id: string;
   name: string;
@@ -1620,8 +1622,7 @@ export const propertyCategories: PropertyCategory[] = [
             winterPrice: "$500-1350 in winter",
             holidayPrice: "$1500-2500+ for Christmas/NYE",
             link: "/listings/bluffs-unit-4-taluswood",
-            airbnbLink:
-              "https://www.airbnb.ca/rooms/1693549013411163327?guests=1&adults=1&s=66&source=embed_widget",
+            airbnbLink: BLUFFS_AIRBNB_LINK,
             isPetFriendly: false,
             isSkiInSkiOut: true,
           },

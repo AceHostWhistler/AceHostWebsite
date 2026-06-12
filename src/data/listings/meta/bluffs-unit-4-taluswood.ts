@@ -1,4 +1,5 @@
 import type { ListingData } from "../types";
+import { BLUFFS_AIRBNB_LINK } from "../bluffsAirbnbLink";
 
 const listing: ListingData = {
   slug: "bluffs-unit-4-taluswood",
@@ -50,8 +51,7 @@ const listing: ListingData = {
     priceRange: "Summer: $380-$950 | Winter: $500-$1,350 | Christmas/NYE: $1,500-$2,500+",
     winterPrice: "$500-$1,350 Nightly | Winter",
     holidayPrice: "$1,500-$2,500+ Nightly | Christmas & NY",
-    airbnbLink:
-      "https://www.airbnb.ca/rooms/1693549013411163327?guests=1&adults=1&s=66&source=embed_widget",
+    airbnbLink: BLUFFS_AIRBNB_LINK,
   },
   galleryTitle: "Bluffs - Luxury 2 Bed Ski in Ski out in Creeksside - Views!",
   photoAltPrefix: "Bluffs Creekside",
