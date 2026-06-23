@@ -12,6 +12,10 @@ import { useTranslation } from "next-i18next";
 import { FaUser, FaBed, FaBath } from "react-icons/fa";
 import { Users, Bed, Bath } from "lucide-react";
 import { BLUFFS_AIRBNB_LINK } from "@/data/listings/bluffsAirbnbLink";
+import {
+  getPropertyAirbnbLink,
+  shouldUseContactForBooking,
+} from "@/data/propertyAirbnbLinks";
 
 const Home = () => {
   const { t } = useTranslation("common");
@@ -68,9 +72,12 @@ const Home = () => {
     let cardLink = property.link || `/listings/${property.id}`;
     
     // For display or booking links
-    const bookingLink = property.contactLink || property.airbnbLink || cardLink;
-    const isContactLink = !!property.contactLink;
-    const isAirbnbLink = !!property.airbnbLink;
+    const airbnbLink = getPropertyAirbnbLink(property.id, property.airbnbLink);
+    const useContact = shouldUseContactForBooking(
+      property.id,
+      property.contactLink,
+      property.airbnbLink
+    );
     
     // Special handling for Cotswolds property
     const isCotswolds = property.id === "cotswolds-uk-soho-farm-house";
@@ -112,16 +119,16 @@ const Home = () => {
             </div>
           )}
           <div className="absolute bottom-4 right-4 z-20">
-            {isContactLink ? (
+            {useContact ? (
               <Link
-                href={bookingLink}
+                href={property.contactLink!}
                 className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
               >
                 Contact Us
               </Link>
-            ) : isAirbnbLink ? (
+            ) : airbnbLink ? (
               <a
-                href={bookingLink}
+                href={airbnbLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
@@ -454,7 +461,6 @@ const Home = () => {
       holidayPrice: "$4,000-$7,200+ Nightly | Christmas",
       location: "whistler",
       link: "/listings/falcon-blueberry-drive",
-      airbnbLink: "",
       isPetFriendly: true,
       isSkiInSkiOut: false,
     },

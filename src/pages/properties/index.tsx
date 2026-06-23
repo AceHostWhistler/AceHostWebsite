@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useMemo } from "react";
-import { BLUFFS_AIRBNB_LINK } from "@/data/listings/bluffsAirbnbLink";
+import {
+  getPropertyAirbnbLink,
+  shouldUseContactForBooking,
+} from "@/data/propertyAirbnbLinks";
 import Navigation from "@/components/Navigation";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -344,49 +347,15 @@ export default function Properties() {
 
     const propertyUrl = getPropertyUrl(property);
 
-    // Mapping property IDs to Airbnb links
-    const airbnbLinks: Record<string, string> = {
-      "chalet-la-forja":
-        "https://www.airbnb.ca/rooms/52655503?guests=1&adults=1&s=67&unique_share_id=f1bb5c2c-51f9-4a82-9aa4-670fb8caa71d",
-      "two-cedars":
-        "https://www.airbnb.ca/rooms/666613336620375768?guests=1&adults=1&s=67&unique_share_id=7e52bdf8-80c0-4a37-9f8b-b411e6e9ad3e",
-      "slopeside-villa":
-        "https://www.airbnb.ca/rooms/826226399590812184?guests=1&adults=1&s=67&unique_share_id=aab7fbd3-669a-461d-b913-c15cf257b4c0",
-      "panoramic-estate":
-        "https://www.airbnb.ca/rooms/1104637821836596397?guests=1&adults=1&s=67&unique_share_id=67164555-993c-40dc-b188-23ffe0755654",
-      "heron-views-whistler":
-        "https://www.airbnb.ca/rooms/1168163637007998550?guests=1&adults=1&s=67&unique_share_id=8227e964-920d-4bc0-8073-13043963151f",
-      "ravens-nest":
-        "https://www.airbnb.ca/rooms/1300258964918876012?guests=1&adults=1&s=67&unique_share_id=41b635e9-00a9-441c-a134-056b2b3814ac",
-      "falcon-blueberry-drive":
-        "https://www.airbnb.ca/rooms/18060329?guests=1&adults=1&s=67&unique_share_id=0759b67e-0517-4127-9de1-842265c53ff7",
-      "the-nest":
-        "https://www.airbnb.ca/rooms/763259660349118016?guests=1&adults=1&s=67&unique_share_id=b5240c14-ecb8-4f5a-9c3c-f3861874c7e0",
-      "snow-pine":
-        "https://www.airbnb.ca/rooms/744832560480313027?guests=1&adults=1&s=67&unique_share_id=50412c76-d839-4753-bf56-19310f38a4ef",
-      "whispering-pines":
-        "https://www.airbnb.com/rooms/1072474554447345991?guests=1&adults=1&s=67&unique_share_id=e556b35c-05b5-40b6-91e1-5304ffafc23b",
-      "whistler-village-views":
-        "https://www.airbnb.ca/rooms/50025973?guests=1&adults=1&s=67&unique_share_id=04ceb090-1b8e-4e32-972f-d616b380a0a8",
-      "whistler-village-views-luxury-2-5-bedroom":
-        "https://www.airbnb.ca/rooms/50025973?preview_for_ml=true&source_impression_id=p3_1699290307_SHcNx7EoXySmn6j5",
-      "marquise-2-bed":
-        "https://www.airbnb.ca/rooms/1370367404602078616?guests=1&adults=1&s=67&unique_share_id=eb381b39-e67d-44ea-9d7c-2de2e1b5fa20",
-      "ski-in-ski-out-walk-to-lifts-2-bed":
-        "https://www.airbnb.ca/rooms/1015303987589924725?guests=1&adults=1&s=67&unique_share_id=5e912eb5-5445-4797-81ec-df21817dd143",
-      "whistler-village-penthouse":
-        "https://www.airbnb.ca/rooms/1471251206220643818?guests=1&adults=1&s=67&unique_share_id=0ec28644-49fa-4b63-9276-7e5f5c6a1153",
-      "cozy-lakefront-whistler-condo":
-        "https://www.airbnb.ca/rooms/1305524887656641858?guests=1&adults=1&s=67&unique_share_id=23663c37-e33a-445b-a53c-6f927f30d084",
-      "bluffs-unit-4": BLUFFS_AIRBNB_LINK,
-      "bluffs-unit-4-taluswood": BLUFFS_AIRBNB_LINK,
-    };
-
-    // Use the airbnbLink from the hardcoded list, or fall back to the property's airbnbLink field if it exists
-    const airbnbLink = airbnbLinks[property.id] || property.airbnbLink;
-
-    // Special handling for properties that should link to contact page
-    const shouldLinkToContact = property.id === "scandinavian-mountainside-retreat-pemberton-meadows-50-acres";
+    const airbnbLink = getPropertyAirbnbLink(
+      property.id,
+      property.airbnbLink
+    );
+    const useContact = shouldUseContactForBooking(
+      property.id,
+      property.contactLink,
+      property.airbnbLink
+    );
 
     return (
       <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow h-full">
@@ -414,7 +383,7 @@ export default function Properties() {
 
           {/* Book Now Button in bottom-right corner */}
           <div className="absolute bottom-4 right-4 z-10">
-            {airbnbLink && !shouldLinkToContact ? (
+            {airbnbLink && !useContact ? (
               <a
                 href={airbnbLink}
                 target="_blank"
@@ -424,9 +393,9 @@ export default function Properties() {
               >
                 Book Now
               </a>
-            ) : shouldLinkToContact ? (
+            ) : useContact ? (
               <Link
-                href="/contact"
+                href={property.contactLink || "/contact"}
                 className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
                 onClick={(e) => e.stopPropagation()}
               >

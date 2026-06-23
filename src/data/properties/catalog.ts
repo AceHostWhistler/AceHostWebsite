@@ -848,6 +848,9 @@ export const propertyCategories: PropertyCategory[] = [
             holidayPrice: "$4,000-$7,200+ Nightly | Christmas",
             isPetFriendly: true,
             isSkiInSkiOut: false,
+            link: "/listings/falcon-blueberry-drive",
+            airbnbLink:
+              "https://www.airbnb.ca/rooms/18060329?preview_for_ml=true&source_impression_id=p3_1684112119_tL0LL7QnYLFGOCBI",
           },
           {
             id: "snow-pine",

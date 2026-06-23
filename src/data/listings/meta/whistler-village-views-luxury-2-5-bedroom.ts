@@ -30,9 +30,11 @@ const listing: ListingData = {
       "guests": 6,
       "bedrooms": 2.5,
       "bathrooms": 2,
-      "priceRange": "Nightly Price Range: $400-$1,150+",
-      "winterPrice": "$600-$900+ Nightly | Winter",
-      "holidayPrice": "$900-$1,150+ Nightly | Christmas & NY"
+      priceRange: "Nightly Price Range: $400-$1,150+",
+      winterPrice: "$600-$900+ Nightly | Winter",
+      holidayPrice: "$900-$1,150+ Nightly | Christmas & NY",
+      airbnbLink:
+        "https://www.airbnb.ca/rooms/50025973?guests=1&adults=1&s=67&unique_share_id=04ceb090-1b8e-4e32-972f-d616b380a0a8",
   },
   galleryTitle: "Whistler Village Views",
   photoAltPrefix: "Whistler Village Views",
