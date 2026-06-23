@@ -921,6 +921,7 @@ export const propertyCategories: PropertyCategory[] = [
             priceRange: "$8,000-$11,500+ per night",
             winterPrice: "Request for Event & Wedding Venue Whistler Pricing",
             holidayPrice: "Request for Nightly rates",
+            contactLink: "/contact",
           },
           {
             id: "luxe-cozy-3-bed-whistler-village",

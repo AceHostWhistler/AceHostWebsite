@@ -14,6 +14,7 @@ import { Users, Bed, Bath } from "lucide-react";
 import { BLUFFS_AIRBNB_LINK } from "@/data/listings/bluffsAirbnbLink";
 import {
   getPropertyAirbnbLink,
+  getPropertyContactLink,
   shouldUseContactForBooking,
 } from "@/data/propertyAirbnbLinks";
 
@@ -121,7 +122,7 @@ const Home = () => {
           <div className="absolute bottom-4 right-4 z-20">
             {useContact ? (
               <Link
-                href={property.contactLink!}
+                href={getPropertyContactLink(property.id, property.contactLink)}
                 className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
               >
                 Contact Us
@@ -461,6 +462,8 @@ const Home = () => {
       holidayPrice: "$4,000-$7,200+ Nightly | Christmas",
       location: "whistler",
       link: "/listings/falcon-blueberry-drive",
+      airbnbLink:
+        "https://www.airbnb.ca/rooms/18060329?preview_for_ml=true&source_impression_id=p3_1684112119_tL0LL7QnYLFGOCBI",
       isPetFriendly: true,
       isSkiInSkiOut: false,
     },
@@ -514,6 +517,7 @@ const Home = () => {
       holidayPrice: "Request for Nightly rates",
       location: "whistler",
       link: "/listings/wedge-mountain-lodge-spa",
+      contactLink: "/contact",
       isPetFriendly: false,
       isSkiInSkiOut: false,
     },
@@ -656,6 +660,7 @@ const Home = () => {
       holidayPrice: "",
       location: "Santorini, Greece",
       link: "/worldwide-listings/santorini-greece-villa-eclipse",
+      contactLink: "/contact",
       isPetFriendly: false,
       isSkiInSkiOut: false,
     },
@@ -671,6 +676,7 @@ const Home = () => {
       holidayPrice: "",
       location: "Mykonos, Greece",
       link: "/worldwide-listings/villa-oineas-greece-mykonos",
+      contactLink: "/contact",
       isPetFriendly: false,
       isSkiInSkiOut: false,
     },
@@ -686,6 +692,7 @@ const Home = () => {
       holidayPrice: "",
       location: "Mykonos, Greece",
       link: "/worldwide-listings/helios-estate-mykonos",
+      contactLink: "/contact",
       isPetFriendly: false,
       isSkiInSkiOut: false,
     },
@@ -701,6 +708,7 @@ const Home = () => {
       holidayPrice: "",
       location: "Mykonos, Greece",
       link: "/worldwide-listings/villa-rosabella-mykonos",
+      contactLink: "/contact",
       isPetFriendly: false,
       isSkiInSkiOut: false,
     },
@@ -854,6 +862,7 @@ const Home = () => {
       holidayPrice: "",
       location: "Vancouver, BC",
       link: "/vancouver-listings/vancouver-house-corner-unit-30th-floor",
+      contactLink: "/contact",
       isPetFriendly: false,
       isSkiInSkiOut: false,
     },

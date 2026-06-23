@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import {
   getPropertyAirbnbLink,
+  getPropertyContactLink,
   shouldUseContactForBooking,
 } from "@/data/propertyAirbnbLinks";
 import Navigation from "@/components/Navigation";
@@ -395,7 +396,7 @@ export default function Properties() {
               </a>
             ) : useContact ? (
               <Link
-                href={property.contactLink || "/contact"}
+                href={getPropertyContactLink(property.id, property.contactLink)}
                 className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
                 onClick={(e) => e.stopPropagation()}
               >

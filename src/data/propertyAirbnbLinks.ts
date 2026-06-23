@@ -14,6 +14,8 @@ export const CONTACT_ONLY_PROPERTY_IDS = new Set([
   "helios-estate-mykonos",
   "villa-rosabella-mykonos",
   "vancouver-house-corner",
+  "wedge-mountain-lodge",
+  "wedge-mountain-lodge-spa",
 ]);
 
 /** Catalog/homepage property IDs that differ from listing slugs */
@@ -39,6 +41,8 @@ const PROPERTY_ID_TO_LISTING_SLUG: Record<string, string> = {
 
 /** Airbnb links for cards not stored in listing meta */
 const EXTRA_PROPERTY_AIRBNB_LINKS: Record<string, string> = {
+  "falcon-blueberry-drive":
+    "https://www.airbnb.ca/rooms/18060329?preview_for_ml=true&source_impression_id=p3_1684112119_tL0LL7QnYLFGOCBI",
   "luxe-5-bed-scandinave-retreat":
     "https://www.airbnb.ca/rooms/1313847204355627326?guests=1&adults=1&s=67&unique_share_id=507dffd6-1f84-49a3-99eb-d10f493a65a6",
   "cotswolds-uk-soho-farm-house":
@@ -94,4 +98,14 @@ export function shouldUseContactForBooking(
     return true;
   }
   return !getPropertyAirbnbLink(propertyId, airbnbLink) && !!contactLink;
+}
+
+export function getPropertyContactLink(
+  propertyId: string,
+  contactLink?: string
+): string {
+  if (contactLink) {
+    return contactLink;
+  }
+  return "/contact";
 }
