@@ -13,6 +13,11 @@ const listing: ListingData = {
   "/photos/properties/Falcon/09 - 20250827 A7M4 01 DSC00278.jpg",
   "/photos/properties/Falcon/10 - 20250827 A7M4 01 DSC00283.jpg",
   "/photos/properties/Falcon/11 - 20250827 A7M4 01 DSC00288.jpg",
+  "/photos/properties/Falcon/Falcon Cres-3.jpg",
+  "/photos/properties/Falcon/Hot tub sauna falcon snow.png",
+  "/photos/properties/Falcon/Outdoor shot Falcon good.png",
+  "/photos/properties/Falcon/Outdoor shot falcon zoomed out.png",
+  "/photos/properties/Falcon/Outdoor shot falcon.png",
   "/photos/properties/Falcon/12 - 20250827 A7M4 01 DSC00304-Edit.jpg",
   "/photos/properties/Falcon/13 - 20250827 A7M4 01 DSC00313.jpg",
   "/photos/properties/Falcon/14 - 20250827 A7M4 01 DSC00320.jpg",
@@ -48,12 +53,7 @@ const listing: ListingData = {
   "/photos/properties/Falcon/44406c5e-85ca-4dd1-a6c7-c1dab050fee7.avif",
   "/photos/properties/Falcon/45 - 20250827 A7M4 01 DSC00604.jpg",
   "/photos/properties/Falcon/46 - 20250827 A7M4 01 DSC00610.jpg",
-  "/photos/properties/Falcon/47 - 20250827 A7M4 01 DSC00617.jpg",
-  "/photos/properties/Falcon/Falcon Cres-3.jpg",
-  "/photos/properties/Falcon/Hot tub sauna falcon snow.png",
-  "/photos/properties/Falcon/Outdoor shot Falcon good.png",
-  "/photos/properties/Falcon/Outdoor shot falcon zoomed out.png",
-  "/photos/properties/Falcon/Outdoor shot falcon.png"
+  "/photos/properties/Falcon/47 - 20250827 A7M4 01 DSC00617.jpg"
 ],
   seo: {
     title: "\n          Falcon | Blueberry Drive - Luxury Property in Whistler | AceHost\n        ",
