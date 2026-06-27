@@ -563,7 +563,6 @@ export const propertyCategories: PropertyCategory[] = [
             images: [
               "/photos/properties/Falcon/Cover photo Falcon.png",
               "/photos/properties/Falcon/02 - 20250827 A7M4 01 DSC00524.jpg",
-              "/photos/properties/Falcon/03 - 20250827 A7M4 01 DSC00224-Edit.jpg",
               "/photos/properties/Falcon/04 - 20250827 A7M4 01 DSC00234.jpg",
               "/photos/properties/Falcon/05 - 20250827 A7M4 01 DSC00243.jpg",
               "/photos/properties/Falcon/06 - 20250827 A7M4 01 DSC00253.jpg",
@@ -608,8 +607,9 @@ export const propertyCategories: PropertyCategory[] = [
               "/photos/properties/Falcon/45 - 20250827 A7M4 01 DSC00604.jpg",
               "/photos/properties/Falcon/46 - 20250827 A7M4 01 DSC00610.jpg",
               "/photos/properties/Falcon/47 - 20250827 A7M4 01 DSC00617.jpg",
-              "/photos/properties/Falcon/Falcon Cres-2.jpg",
               "/photos/properties/Falcon/Falcon Cres-3.jpg",
+              "/photos/properties/Falcon/Hot tub sauna falcon snow.png",
+              "/photos/properties/Falcon/Outdoor shot Falcon good.png",
               "/photos/properties/Falcon/Outdoor shot falcon zoomed out.png",
               "/photos/properties/Falcon/Outdoor shot falcon.png",
             ],
