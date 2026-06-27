@@ -90,7 +90,7 @@ function PriceRow({ season, value, highlight }: PriceRowProps) {
 
   return (
     <div
-      className={`flex flex-col gap-1 border-b border-stone-200/90 py-3 last:border-b-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-5 ${
+      className={`flex flex-col gap-0.5 border-b border-stone-200/90 py-2 last:border-b-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4 ${
         highlight ? "bg-amber-50/60 -mx-4 px-4 sm:mx-0 sm:px-0 sm:bg-transparent" : ""
       }`}
     >
@@ -98,7 +98,7 @@ function PriceRow({ season, value, highlight }: PriceRowProps) {
         {season}
       </span>
       <div className="text-left sm:text-right">
-        <span className="text-lg tracking-tight text-stone-900 sm:text-xl">
+        <span className="text-base tracking-tight text-stone-900 sm:text-lg">
           {amount}
         </span>
         {detail && (
@@ -233,13 +233,13 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
 
       <header className="bg-[#f6f3ed] font-sans text-stone-900">
         {/* Title band */}
-        <div className="border-b border-stone-300/50 bg-[#1c1917] px-4 py-7 text-stone-100 sm:px-6 sm:py-10">
+        <div className="border-b border-stone-300/50 bg-[#1c1917] px-4 py-5 text-stone-100 sm:px-6 sm:py-7">
           <div className="mx-auto max-w-6xl">
             <h1 className="text-[1.5rem] font-medium leading-[1.1] tracking-tight sm:text-[2.05rem] md:text-[2.45rem]">
               {primary}
             </h1>
             {secondary && (
-              <p className="mt-2 max-w-xl text-[12px] font-normal tracking-wide text-stone-300 sm:text-[13.5px]">
+              <p className="mt-1.5 max-w-xl text-[12px] font-normal tracking-wide text-stone-300 sm:text-[13.5px]">
                 {secondary}
               </p>
             )}
@@ -252,12 +252,12 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
             {specs.map((spec) => (
               <div
                 key={spec.label}
-                className="flex min-w-[25%] flex-1 flex-col items-center px-3 py-4 sm:min-w-0 sm:py-5"
+                className="flex min-w-[25%] flex-1 flex-col items-center px-3 py-3 sm:min-w-0 sm:py-3.5"
               >
                 <span className="text-[1.6875rem] font-medium leading-none text-stone-900 sm:text-[1.875rem]">
                   {spec.value}
                 </span>
-                <span className="mt-1.5 text-[8px] font-semibold uppercase tracking-[0.22em] text-stone-600">
+                <span className="mt-1 text-[8px] font-semibold uppercase tracking-[0.22em] text-stone-600">
                   {spec.label}
                 </span>
               </div>
@@ -268,11 +268,11 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
         {/* Amenities */}
         {amenities.length > 0 && (
           <div className="border-b border-stone-300/50 bg-[#f6f3ed]">
-            <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-7">
+            <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6 sm:py-5">
               <h2 className="text-[10px] font-semibold uppercase tracking-[0.24em] text-stone-500">
                 Amenities
               </h2>
-              <ul className="mt-3 grid gap-x-6 gap-y-2 sm:grid-cols-2 lg:grid-cols-3">
+              <ul className="mt-2 grid gap-x-6 gap-y-1.5 sm:grid-cols-2 lg:grid-cols-3">
                 {amenities.map((item) => (
                   <li
                     key={item}
@@ -291,13 +291,13 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
         )}
 
         {/* Pricing + actions */}
-        <div className="mx-auto max-w-6xl px-4 py-7 sm:px-6 sm:py-9">
-          <div className="grid gap-7 lg:grid-cols-[1fr_minmax(195px,240px)] lg:gap-12">
+        <div className="mx-auto max-w-6xl px-4 py-5 sm:px-6 sm:py-6">
+          <div className="grid gap-5 lg:grid-cols-[1fr_minmax(195px,240px)] lg:gap-8">
             <div>
               <h2 className="text-[10px] font-semibold uppercase tracking-[0.24em] text-stone-500">
                 Rates
               </h2>
-              <div className="mt-1.5">
+              <div className="mt-1">
                 <PriceRow season="Nightly" value={priceRange} />
                 {winterPrice && <PriceRow season="Winter" value={winterPrice} />}
                 {holidayPrice && (
@@ -310,14 +310,14 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
               </div>
             </div>
 
-            <div className="flex flex-col justify-center lg:border-l lg:border-stone-300/60 lg:pl-8">
+            <div className="flex flex-col justify-center lg:border-l lg:border-stone-300/60 lg:pl-6">
               {airbnbLink ? (
                 <a
                   href={airbnbLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   referrerPolicy="no-referrer-when-downgrade"
-                  className="group flex w-full items-center justify-between rounded-full bg-[#1c1917] px-6 py-3.5 text-[12px] font-semibold tracking-wide text-stone-100 shadow-sm transition-all hover:bg-stone-800 hover:shadow-md active:scale-[0.99]"
+                  className="group flex w-full items-center justify-between rounded-full bg-[#1c1917] px-5 py-2.5 text-[12px] font-semibold tracking-wide text-stone-100 shadow-sm transition-all hover:bg-stone-800 hover:shadow-md active:scale-[0.99]"
                 >
                   Book on Airbnb
                   <ArrowUpRight className="h-4 w-4 opacity-70 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -325,7 +325,7 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
               ) : contactLink ? (
                 <Link
                   href={contactLink}
-                  className="flex w-full items-center justify-between rounded-full bg-[#1c1917] px-6 py-3.5 text-[12px] font-semibold tracking-wide text-stone-100 shadow-sm transition-colors hover:bg-stone-800"
+                  className="flex w-full items-center justify-between rounded-full bg-[#1c1917] px-5 py-2.5 text-[12px] font-semibold tracking-wide text-stone-100 shadow-sm transition-colors hover:bg-stone-800"
                 >
                   {contactText}
                   <ArrowUpRight className="h-4 w-4 opacity-70" />
@@ -333,14 +333,14 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
               ) : (
                 <Link
                   href="/contact"
-                  className="flex w-full items-center justify-between rounded-full bg-[#1c1917] px-6 py-3.5 text-[12px] font-semibold tracking-wide text-stone-100 shadow-sm transition-colors hover:bg-stone-800"
+                  className="flex w-full items-center justify-between rounded-full bg-[#1c1917] px-5 py-2.5 text-[12px] font-semibold tracking-wide text-stone-100 shadow-sm transition-colors hover:bg-stone-800"
                 >
                   Book Now
                   <ArrowUpRight className="h-4 w-4 opacity-70" />
                 </Link>
               )}
 
-              <div className="mt-4 flex flex-col gap-2 border-t border-stone-300/60 pt-4">
+              <div className="mt-3 flex flex-col gap-1.5 border-t border-stone-300/60 pt-3">
                 <button
                   type="button"
                   onClick={() =>
