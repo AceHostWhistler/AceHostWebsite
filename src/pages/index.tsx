@@ -1128,7 +1128,7 @@ const Home = () => {
         />
         <meta property="og:url" content="https://acehost.ca" />
         <link rel="canonical" href="https://acehost.ca" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicons/favicon.ico" />
 
         {/* Structured data for Google search results */}
         <script
