@@ -8,9 +8,6 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import { IoIosArrowBack, IoIosArrowForward, IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import {
-  FaRegHeart,
-  FaRegComment,
-  FaRegBookmark,
   FaSkiing,
   FaSnowflake,
   FaMountain,
@@ -30,7 +27,6 @@ import {
   FaVideo,
   FaTicketAlt,
 } from "react-icons/fa";
-import { IoPaperPlaneOutline } from "react-icons/io5";
 import { BiSpa, BiDrink, BiHomeAlt, BiInjection } from "react-icons/bi";
 import {
   GiDogHouse,
@@ -237,76 +233,121 @@ const ConciergeService = () => {
 
         <main className="pb-20">
           {/* Hero Section */}
-          <div className="bg-gray-100">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                <div className="space-y-8">
-                  <h1 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
+          <section className="relative overflow-hidden bg-stone-950 text-white">
+            <div
+              className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_70%_0%,rgba(180,83,9,0.18),transparent_55%)]"
+              aria-hidden="true"
+            />
+            <div
+              className="pointer-events-none absolute inset-0 bg-gradient-to-b from-stone-900/40 via-transparent to-stone-950"
+              aria-hidden="true"
+            />
+
+            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-14">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+                <div className="concierge-hero-copy lg:col-span-6 xl:col-span-7 order-2 lg:order-1">
+                  <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.22em] text-white mb-4">
+                    Included with every AceHost stay
+                  </p>
+                  <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.08] text-white mb-5">
                     Whistler VIP Concierge Services
                   </h1>
-                  <div className="space-y-6 text-gray-600 text-lg">
-                    <p>
-                      When you book Luxury Accommodations with AceHost, VIP Concierge Services are included to elevate your stay. Our local team curates a personalized itinerary to ensure every detail is taken care of, from exclusive dining reservations to seamless logistics. We don't just send an itinerary; we secure top tables, prime time slots, and priority access to Whistler's best.
+                  <div className="space-y-4 text-base sm:text-lg leading-relaxed max-w-xl">
+                    <p className="text-white">
+                      When you book luxury accommodations with AceHost, VIP concierge is included to elevate your stay. Our local team secures top tables, prime time slots, and priority access to Whistler&apos;s best.
                     </p>
-                    <p>
-                      With unmatched local knowledge and strong connections, our concierge team is available from arrival to departure for anything you need, last-minute staffing, special requests, or insider tips for untouched powder. Whether planning in advance or responding to same-day changes, we're here to deliver Whistler's top luxury concierge experience.
+                    <p className="text-white">
+                      From arrival to departure, we handle last-minute staffing, special requests, and insider recommendations, whether you plan ahead or need same-day changes.
                     </p>
                   </div>
-                  <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 pt-4">
-                    Explore Our Concierge Services
-                  </h2>
+
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {[
+                      "Private Chefs",
+                      "Heli Adventures",
+                      "VIP Tables",
+                      "In-Home Spa",
+                      "Ski Pass Delivery & Booking",
+                      "Ski Instructors",
+                      "Transportation",
+                      "Restaurant Reservations",
+                      "Daily Housekeeping",
+                      "Ski/Snowboard Rental Delivery",
+                    ].map((label) => (
+                      <span
+                        key={label}
+                        className="inline-flex items-center rounded-full border border-white/30 bg-white/10 px-3 py-1 text-xs sm:text-sm font-medium text-white"
+                      >
+                        {label}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-8 flex flex-col sm:flex-row gap-3">
+                    <a
+                      href="#services"
+                      className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3.5 text-sm font-semibold text-stone-950 transition-colors hover:bg-stone-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-stone-950"
+                    >
+                      Explore Services
+                    </a>
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center justify-center rounded-lg border border-white/40 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:border-white/60 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-stone-950"
+                    >
+                      Contact Us
+                    </Link>
+                  </div>
                 </div>
 
-                {/* Video Player (Vimeo Embed) */}
-                <div className="rounded-lg overflow-hidden shadow-lg bg-white w-3/4 mx-auto">
-                  <div className="flex flex-col h-full">
-                    <div className="p-8 border-b">
-                      <h3 className="text-3xl font-bold text-center">
-                        The AceHost Concierge Reel
-                      </h3>
-                    </div>
-
+                <div className="lg:col-span-6 xl:col-span-5 order-1 lg:order-2 flex justify-center lg:justify-end">
+                  <div className="relative w-full max-w-[280px] sm:max-w-[300px]">
                     <div
-                      className="relative w-full"
-                      style={{ paddingTop: "177.78%", height: "478px" }}
-                    >
-                      <div className="absolute inset-0 w-full h-full">
+                      className="pointer-events-none absolute -inset-6 rounded-[2.5rem] bg-amber-500/20 blur-3xl"
+                      aria-hidden="true"
+                    />
+                    <div className="relative overflow-hidden rounded-[1.75rem] bg-black shadow-2xl ring-1 ring-white/15">
+                      <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
+                        <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-stone-400">
+                          Concierge Reel
+                        </span>
+                        <a
+                          href="https://www.instagram.com/acehost_whistler/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs font-medium text-amber-200/90 transition-colors hover:text-amber-100"
+                        >
+                          @acehost_whistler
+                        </a>
+                      </div>
+
+                      <div className="relative aspect-[9/16] w-full bg-black">
                         <iframe
                           src="https://player.vimeo.com/video/1122268553?badge=0&autopause=0&player_id=0&app_id=58479"
-                          className="absolute inset-0 w-full h-full"
+                          className="absolute inset-0 h-full w-full"
                           frameBorder="0"
                           allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
                           allowFullScreen
                           referrerPolicy="strict-origin-when-cross-origin"
                           title="The AceHost Concierge Reel"
-                        ></iframe>
+                        />
                       </div>
-                    </div>
 
-                    <div className="p-3 border-t">
-                      <a
-                        href="https://www.instagram.com/acehost_whistler/"
-                        className="text-blue-500 text-sm font-medium block mb-3"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        View more on Instagram
-                      </a>
-                      <div className="flex justify-between mb-2">
-                        <div className="flex gap-4">
-                          <FaRegHeart className="text-2xl" />
-                          <FaRegComment className="text-2xl" />
-                          <IoPaperPlaneOutline className="text-2xl" />
-                        </div>
-                        <FaRegBookmark className="text-2xl" />
+                      <div className="border-t border-white/10 px-4 py-3">
+                        <a
+                          href="https://www.instagram.com/acehost_whistler/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm font-medium text-stone-300 transition-colors hover:text-white"
+                        >
+                          Watch more on Instagram →
+                        </a>
                       </div>
-                      <p className="font-medium mb-2">331 likes</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* All Concierge Services */}
           <section id="services" className="py-16 bg-gray-50">
@@ -1163,8 +1204,11 @@ const ConciergeService = () => {
 
         p {
           letter-spacing: -0.01em;
-          color: rgba(60, 60, 67, 0.85);
           line-height: 1.6;
+        }
+
+        .concierge-hero-copy p {
+          color: #ffffff;
         }
       `}</style>
     </>
