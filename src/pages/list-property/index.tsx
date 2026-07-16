@@ -98,28 +98,28 @@ const steps: Step[] = [
     number: 1,
     title: "Contact Us",
     description:
-      "Contact us today. In the meantime, please send us any videos or photos you have of your property, along with some basic information. Ex. Bedroom layout, bathrooms, your rental preferences, etc... Not sure if your property is zoned for nightly rentals? Send us your address and we can help find out for you.",
+      "Contact us today. Whether you already own a property or are still looking for the right home in Whistler, we're eager to help. Many owners work with us before they buy, we're happy to advise on properties you're interested in, help you choose the perfect home for your goals, and connect you with trusted local realtors when needed. In the meantime, please send any videos or photos you have of your property (or listings you're considering), along with basic information such as bedroom layout, bathrooms, and your rental preferences. Not sure if a property is zoned for nightly rentals? Send us the address and we can help find out for you.",
     icon: MessageSquare,
   },
   {
     number: 2,
-    title: "Book a meeting | Show us your home!",
+    title: "Property Assessment & Estimate",
     description:
-      "At AceHost we carefully select properties for our portfolio that will appeal to our network of global guests. We would love to see your home and help with any necessary advice or recommendations with regards to home improvements, staging, supplying, etc...",
-    icon: Home,
+      "We will assess your property and put together a clear estimate and revenue projection for you, along with more information about how AceHost operates. We'll suggest optimal nightly rental rates, outline a personalized marketing strategy, and answer any questions so you know exactly what to expect before we meet in person.",
+    icon: Settings,
   },
   {
     number: 3,
-    title: "Property Assessment & Strategy",
+    title: "Meet Us | Show Us Your Home",
     description:
-      "We will assess your property, suggest optimal nightly rental rates and provide a personalized marketing strategy.",
-    icon: Settings,
+      "At AceHost we carefully select properties for our portfolio that will appeal to our network of global guests. We'd love to see your home in person, meet with us, walk us through the property, and we'll confirm the numbers and estimates we sent over prior to your visit. We can also share advice or recommendations on home improvements, staging, furnishing, and anything else that will help your property perform at its best.",
+    icon: Home,
   },
   {
     number: 4,
     title: "Join the AceHost Team",
     description:
-      "Call, email, or meet in-person to discuss the terms of your contract. Welcome to the AceHost team! We will arrange a professional photographer and handle all subsequent rentals, guests, cleaning teams, payout information, etc...",
+      "Call, email, or meet in person to discuss the terms of your contract. Welcome to the AceHost team! We'll arrange a professional photographer and handle all subsequent rentals, guests, cleaning teams, payout information, and more. We also help stock your home with toiletries and essentials, offer hands-on advice on setting up your property, and can set it up with you step by step, at no cost to you. It's in our interest to help our owners succeed and give guests the most comfortable stay possible. We take the initiative, send you a range of ideas and recommendations, and you simply approve what works for you. That said, we're flexible, bring years of experience, and are always happy to work with owners however they prefer.",
     icon: Users,
   },
 ];
@@ -486,7 +486,7 @@ const ListProperty = () => {
           <div className="mb-20 text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Process</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our simple process to get your property listed and earning income.
+              Our simple process to get your property listed and earning income, whether you already own your home or are still searching for the perfect investment property in Whistler.
             </p>
           </div>
 
