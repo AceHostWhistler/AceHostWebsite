@@ -544,8 +544,8 @@ export default function Properties() {
                     </div>
                     <div className="relative aspect-square w-full overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/15">
                       <Image
-                        src="/photos/properties/Falcon/Falcon upper bedrom now.png"
-                        alt="Falcon luxury bedroom in Whistler"
+                        src="/photos/properties/Two Cedars New/OSA_AncientCW1129.jpg"
+                        alt="Two Cedars luxury chalet in Whistler"
                         fill
                         className="object-cover"
                         quality={90}
