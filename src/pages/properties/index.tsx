@@ -500,35 +500,56 @@ export default function Properties() {
           />
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
-              <div>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+              <div className="lg:col-span-4">
                 <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.08] text-white">
                   Luxury Vacation Rental Properties in Whistler, Canada
                 </h1>
               </div>
 
-              <div className="flex justify-center lg:justify-end">
-                <div className="relative w-full max-w-md lg:max-w-lg">
+              <div className="lg:col-span-8">
+                <div className="relative w-full">
                   <div
                     className="pointer-events-none absolute -inset-4 rounded-3xl bg-amber-500/15 blur-3xl"
                     aria-hidden="true"
                   />
-                  <div className="relative overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/15">
-                    <div className="relative aspect-[3/2] w-full">
+                  <div className="relative grid grid-cols-3 gap-3 sm:gap-4">
+                    <div className="relative aspect-square w-full overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/15">
+                      <Image
+                        src="/photos/properties/Falcon/Cover photo Falcon.png"
+                        alt="Falcon luxury chalet exterior in Whistler"
+                        fill
+                        className="object-cover"
+                        quality={90}
+                        sizes="(max-width: 1024px) 30vw, 280px"
+                      />
+                    </div>
+                    <div className="relative aspect-square w-full overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/15">
                       <Image
                         src="/photos/properties/Panoramic Estate/20241127 MM4P 01 0225-Edit.jpg"
-                        alt="Luxury Whistler Chalet"
+                        alt="Luxury Whistler chalet at Panoramic Estate"
                         fill
                         className="object-cover"
                         quality={90}
                         priority
                         placeholder="blur"
                         blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAEhAI/w5RW4AAAAABJRU5ErkJggg=="
+                        sizes="(max-width: 1024px) 30vw, 280px"
                         onError={(e) => {
                           // @ts-ignore - Next Image doesn't officially support onError but it works
                           e.currentTarget.src =
                             "/photos/properties/Altitude New Photos Best/altitude retreat-12.jpg";
                         }}
+                      />
+                    </div>
+                    <div className="relative aspect-square w-full overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/15">
+                      <Image
+                        src="/photos/properties/Falcon/Falcon upper bedrom now.png"
+                        alt="Falcon luxury bedroom in Whistler"
+                        fill
+                        className="object-cover"
+                        quality={90}
+                        sizes="(max-width: 1024px) 30vw, 280px"
                       />
                     </div>
                   </div>
