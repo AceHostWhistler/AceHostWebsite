@@ -306,9 +306,8 @@ const ListProperty = () => {
 
       <Navigation />
 
-      {/* Hero Section - Full height with gradient overlay and centered content */}
-      <div className="relative w-full h-[90vh] overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/50"></div>
+      {/* Hero Section */}
+      <section className="relative min-h-[72vh] md:min-h-[78vh] flex items-end overflow-hidden">
         <Image
           src="/photos/homepage/WhistlerVacationRental.jpg"
           alt="Luxury Whistler Property"
@@ -316,23 +315,31 @@ const ListProperty = () => {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-          <div className="max-w-4xl bg-black/40 p-8 rounded-xl backdrop-blur-sm">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              List Your Luxury Vacation Rental Property With AceHost
-            </h1>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Partner with Whistler's best luxury Airbnb property management company to maximize your rental income and provide exceptional guest experiences.
-            </p>
-            <Link
-              href="#contact"
-              className="inline-block bg-white text-black px-8 py-4 rounded-md hover:bg-gray-100 transition-colors font-medium"
-            >
-              Get Started
-            </Link>
-          </div>
+        <div
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-[48%] bg-gradient-to-t from-stone-950/80 via-stone-950/30 to-transparent"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute bottom-0 left-0 h-[55%] w-full max-w-3xl bg-gradient-to-tr from-stone-950/65 to-transparent"
+          aria-hidden="true"
+        />
+
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 md:pb-14 pt-28 md:pt-32">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-white tracking-tight leading-[1.08] max-w-4xl mb-5 drop-shadow-sm">
+            List Your Luxury Vacation Rental Property With AceHost
+          </h1>
+          <p className="text-base sm:text-lg md:text-xl text-white max-w-2xl leading-relaxed mb-8 drop-shadow-sm">
+            Partner with Whistler&apos;s best luxury Airbnb property management company to maximize your rental income and provide exceptional guest experiences.
+          </p>
+
+          <Link
+            href="#contact"
+            className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3.5 text-sm font-semibold text-stone-950 transition-colors hover:bg-stone-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-stone-950"
+          >
+            Get Started
+          </Link>
         </div>
-      </div>
+      </section>
 
       <section
         className="bg-white border-b border-gray-100 py-12 sm:py-14"

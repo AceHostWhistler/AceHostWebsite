@@ -261,31 +261,6 @@ export default function Properties() {
     "Pet Friendly",
   ];
 
-  // Hero section update
-  const Hero = () => {
-    return (
-      <div className="relative h-80 lg:h-96 w-full overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-80"
-          style={{
-            backgroundImage: "url(/photos/homepage/mountainview.jpg)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
-        <div className="relative container mx-auto px-4 h-full flex flex-col justify-center z-10">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white max-w-2xl mb-4">
-            Luxury Vacation Rental Properties in Whistler, Canada
-          </h1>
-          <p className="text-white/90 max-w-xl text-lg md:text-xl">
-            Ski-in/Ski-out Chalets, 7+ Bedroom Villas, and Exclusive <Link href="/concierge-service" className="text-white underline">Concierge Services</Link>
-          </p>
-        </div>
-      </div>
-    );
-  };
-
   // PropertyCard with regular img tag - updated to match home page style
   const PropertyCard = ({ property }: { property: PropertyFeature }) => {
     const getPropertyUrl = (property: PropertyFeature): string => {
@@ -514,59 +489,87 @@ export default function Properties() {
         <Navigation transparent={false} />
 
         {/* Hero Section */}
-        <section className="bg-[#f5f5f7] overflow-hidden relative">
-          <div className="max-w-[1400px] mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-0">
-              {/* Text Content Section - Refined layout with better spacing */}
-              <div className="md:col-span-5 p-6 md:p-10 lg:p-16 xl:p-16 flex items-center">
-                <div className="w-full">
-                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 tracking-tight leading-[1.1]">
-                    Luxury Vacation Rental Properties in Whistler, Canada
-              </h1>
-                  <h2 className="text-lg md:text-xl lg:text-2xl font-semibold mb-8 text-gray-700 tracking-tight">
-                    Ski-in/Ski-out Chalets, 7+ Bedroom Villas, and Exclusive Concierge Services
-                  </h2>
-                  <div className="text-base text-gray-600 space-y-6 mb-10">
-                    <p className="leading-relaxed">
-                      AceHost Whistler invites you to experience our curated collection of luxury vacation rentals including everything from ski-in/ski-out chalets to large 7- and 8-bedroom homes, ideal for group getaways, family holidays, or unforgettable corporate retreats. Whether you're visiting during Christmas, New Year's, peak winter ski season, or summer, we have stunning homes suited for you.
-                    </p>
-                    <p className="leading-relaxed">
-                      All bookings at our top villas include our VIP <Link href="/concierge-service" className="text-blue-600 hover:text-blue-800 transition-colors">Concierge Services</Link>, where you can expect a fully personalized trip, think private chefs, heli-skiing, snowmobile fondue tours, airport transfers, and hard-to-get restaurant reservations, local contacts and expertise, all arranged seamlessly by our local experts.
-                    </p>
-                    <p className="leading-relaxed">
-                      Travellers can book directly on Airbnb links below, or speak with us directly to find exact pricing, more information, & more chalet options.
-                    </p>
-                    <p className="text-sm text-gray-500 pt-2">
-                      All prices are in Canadian Dollars (CAD) & not in (USD).
-                    </p>
+        <section className="relative overflow-hidden bg-stone-950 text-white">
+          <div
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_75%_0%,rgba(180,83,9,0.16),transparent_55%)]"
+            aria-hidden="true"
+          />
+          <div
+            className="pointer-events-none absolute inset-0 bg-gradient-to-b from-stone-900/40 via-transparent to-stone-950"
+            aria-hidden="true"
+          />
+
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
+              <div>
+                <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.08] text-white">
+                  Luxury Vacation Rental Properties in Whistler, Canada
+                </h1>
+              </div>
+
+              <div className="flex justify-center lg:justify-end">
+                <div className="relative w-full max-w-md lg:max-w-lg">
+                  <div
+                    className="pointer-events-none absolute -inset-4 rounded-3xl bg-amber-500/15 blur-3xl"
+                    aria-hidden="true"
+                  />
+                  <div className="relative overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/15">
+                    <div className="relative aspect-[3/2] w-full">
+                      <Image
+                        src="/photos/properties/Panoramic Estate/20241127 MM4P 01 0225-Edit.jpg"
+                        alt="Luxury Whistler Chalet"
+                        fill
+                        className="object-cover"
+                        quality={90}
+                        priority
+                        placeholder="blur"
+                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAEhAI/w5RW4AAAAABJRU5ErkJggg=="
+                        onError={(e) => {
+                          // @ts-ignore - Next Image doesn't officially support onError but it works
+                          e.currentTarget.src =
+                            "/photos/properties/Altitude New Photos Best/altitude retreat-12.jpg";
+                        }}
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
-              
-              {/* Image Section with specified photo */}
-              <div className="md:col-span-7 p-6 md:p-10 lg:p-16 xl:p-16 flex items-center justify-center">
-                <div className="w-full h-[500px] md:h-[600px] lg:h-[700px] rounded-3xl overflow-hidden shadow-2xl relative">
-                  <Image 
-                    src="/photos/properties/Panoramic Estate/20241127 MM4P 01 0225-Edit.jpg" 
-                    alt="Luxury Whistler Chalet" 
-                    fill
-                    className="object-cover"
-                    quality={90}
-                    priority
-                    placeholder="blur"
-                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAEhAI/w5RW4AAAAABJRU5ErkJggg=="
-                    onError={(e) => {
-                      // @ts-ignore - Next Image doesn't officially support onError but it works
-                      e.currentTarget.src = "/photos/properties/Altitude New Photos Best/altitude retreat-12.jpg";
-                    }}
-                  />
-                </div>
-              </div>
             </div>
-            
-            {/* Filter Buttons in a separate row with subtle gradient bg */}
-            <div className="bg-gradient-to-b from-[#f5f5f7] to-[#eaeaec] py-10 px-8 lg:px-16">
-              <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
+          </div>
+        </section>
+
+        <section className="bg-[#f6f3ed] border-b border-stone-300/50 py-10 sm:py-12">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-lg md:text-xl lg:text-2xl font-semibold text-stone-900 tracking-tight leading-snug mb-6">
+              Ski-in Ski-out Luxury Chalets in Whistler, 7+ Bedroom Villas, and Exclusive VIP Concierge Services
+            </h2>
+            <div className="space-y-6 text-base sm:text-lg text-stone-800 leading-relaxed">
+              <p>
+                AceHost Whistler invites you to experience our curated collection of luxury vacation rentals including everything from ski-in/ski-out chalets to large 7- and 8-bedroom homes, ideal for group getaways, family holidays, or unforgettable corporate retreats. Whether you&apos;re visiting during Christmas, New Year&apos;s, peak winter ski season, or summer, we have stunning homes suited for you.
+              </p>
+              <p>
+                All bookings at our top villas include our VIP{" "}
+                <Link
+                  href="/concierge-service"
+                  className="font-medium text-stone-900 underline decoration-stone-400 underline-offset-4 transition-colors hover:decoration-stone-900"
+                >
+                  Concierge Services
+                </Link>
+                , where you can expect a fully personalized trip, think private chefs, heli-skiing, snowmobile fondue tours, airport transfers, and hard-to-get restaurant reservations, local contacts and expertise, all arranged seamlessly by our local experts.
+              </p>
+              <p>
+                Travellers can book directly on Airbnb links below, or speak with us directly to find exact pricing, more information, &amp; more chalet options.
+              </p>
+              <p className="text-sm text-stone-600 pt-2">
+                All prices are in Canadian Dollars (CAD) &amp; not in (USD).
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Filter Buttons */}
+        <div className="relative border-b border-stone-300/50 bg-[#ebe6dc] py-8 px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
                 <button
                   onClick={() => setActiveCategory("all")}
                   className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -648,9 +651,7 @@ export default function Properties() {
                   Worldwide
                 </button>
               </div>
-            </div>
           </div>
-        </section>
 
         {/* Filters and Properties Grid */}
         <section className="py-12 bg-white">

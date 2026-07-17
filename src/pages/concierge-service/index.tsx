@@ -246,22 +246,14 @@ const ConciergeService = () => {
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-14">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
                 <div className="concierge-hero-copy lg:col-span-6 xl:col-span-7 order-2 lg:order-1">
-                  <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.22em] text-white mb-4">
-                    Included with every AceHost stay
-                  </p>
                   <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.08] text-white mb-5">
                     Whistler VIP Concierge Services
                   </h1>
-                  <div className="space-y-4 text-base sm:text-lg leading-relaxed max-w-xl">
-                    <p className="text-white">
-                      When you book luxury accommodations with AceHost, VIP concierge is included to elevate your stay. Our local team secures top tables, prime time slots, and priority access to Whistler&apos;s best.
-                    </p>
-                    <p className="text-white">
-                      From arrival to departure, we handle last-minute staffing, special requests, and insider recommendations, whether you plan ahead or need same-day changes.
-                    </p>
-                  </div>
+                  <p className="text-base sm:text-lg text-white leading-relaxed max-w-xl mb-6">
+                    When you book Luxury Accommodations with AceHost, VIP Concierge Services are included to elevate your stay.
+                  </p>
 
-                  <div className="mt-6 flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2">
                     {[
                       "Private Chefs",
                       "Heli Adventures",
@@ -345,6 +337,22 @@ const ConciergeService = () => {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="bg-[#f6f3ed] border-b border-stone-300/50 py-10 sm:py-12">
+            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-2xl md:text-3xl font-semibold text-stone-900 mb-6">
+                Explore Our Concierge Services
+              </h2>
+              <div className="space-y-6 text-base sm:text-lg text-stone-800 leading-relaxed">
+                <p>
+                  Our local team curates a personalized itinerary to ensure every detail is taken care of, from exclusive dining reservations to seamless logistics. We don&apos;t just send an itinerary; we secure top tables, prime time slots, and priority access to Whistler&apos;s best.
+                </p>
+                <p>
+                  With unmatched local knowledge and strong connections, our concierge team is available from arrival to departure for anything you need, last-minute staffing, special requests, or insider tips for untouched powder. Whether planning in advance or responding to same-day changes, we&apos;re here to deliver Whistler&apos;s top luxury concierge experience.
+                </p>
               </div>
             </div>
           </section>

@@ -1243,49 +1243,77 @@ const Home = () => {
         <Navigation transparent={false} />
 
         {/* Hero Section */}
-        <section className="relative bg-white pt-6 pb-0 md:py-6">
-          <div className="flex flex-col md:flex-row w-full max-w-full mx-auto">
-            <div className="md:w-[40%] lg:w-[40%] px-4 sm:px-6 lg:px-8 md:py-6">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
-                Luxury Vacation
-                <br />
-                Rental Properties in
-                <br />
-                Whistler Canada
-              </h1>
-              <p className="text-lg sm:text-xl text-gray-700 mb-6 font-bold">
-                Property Management & VIP Concierge Services
-              </p>
-              <p className="text-base md:text-lg text-gray-700 mb-8 max-w-2xl">
-                AceHost is a leading Whistler luxury Airbnb property management
-                company. We proudly offer an array of magnificent vacation
-                rental homes in Whistler, British Columbia. Offering a seamless
-                experience for property owners looking to rent out their homes
-                and earn, while offering guests the perfect vacation in a
-                luxurious property. Explore our exclusive collection of luxury
-                ski chalets, and ask us how we can make your next stay
-                exceptional!
-              </p>
-              <Link
-                href="/properties"
-                className="inline-block bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-colors text-base font-medium"
-              >
-                View Luxury Rental Properties
-              </Link>
-            </div>
-            <div className="mt-8 md:mt-0 md:w-[58%] lg:w-[58%] flex justify-center md:justify-normal md:items-center px-1 md:px-0 md:pr-4">
-              <div className="w-[98%] md:w-[95%] overflow-hidden">
-                <iframe
-                  src="https://player.vimeo.com/video/1122267050?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&autoplay=0&loop=1&background=0"
-                  className="w-full aspect-video"
-                  frameBorder="0"
-                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                  allowFullScreen
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  title="The AceHost Whistler Vacation Experience"
-                  loading="lazy"
-                  style={{ display: 'block' }}
-                ></iframe>
+        <section className="relative overflow-hidden bg-stone-950 text-white">
+          <div
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_75%_0%,rgba(180,83,9,0.16),transparent_55%)]"
+            aria-hidden="true"
+          />
+          <div
+            className="pointer-events-none absolute inset-0 bg-gradient-to-b from-stone-900/40 via-transparent to-stone-950"
+            aria-hidden="true"
+          />
+
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-14">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+              <div className="lg:col-span-5 xl:col-span-5 order-2 lg:order-1">
+                <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.08] text-white mb-4">
+                  Luxury Vacation
+                  <br />
+                  Rental Properties in
+                  <br />
+                  Whistler Canada
+                </h1>
+                <p className="text-base sm:text-lg font-semibold text-white mb-4">
+                  Property Management &amp; VIP Concierge Services
+                </p>
+                <p className="text-base sm:text-lg text-white leading-relaxed max-w-xl mb-8">
+                  AceHost is a leading Whistler luxury Airbnb property management
+                  company. We proudly offer an array of magnificent vacation
+                  rental homes in Whistler, British Columbia. Offering a seamless
+                  experience for property owners looking to rent out their homes
+                  and earn, while offering guests the perfect vacation in a
+                  luxurious property. Explore our exclusive collection of luxury
+                  ski chalets, and ask us how we can make your next stay
+                  exceptional!
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Link
+                    href="/properties"
+                    className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3.5 text-sm font-semibold text-stone-950 transition-colors hover:bg-stone-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-stone-950"
+                  >
+                    View Luxury Rental Properties
+                  </Link>
+                  <Link
+                    href="/list-property"
+                    className="inline-flex items-center justify-center rounded-lg border border-white/40 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:border-white/60 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-stone-950"
+                  >
+                    List Your Property
+                  </Link>
+                </div>
+              </div>
+
+              <div className="lg:col-span-7 xl:col-span-7 order-1 lg:order-2">
+                <div className="relative w-full">
+                  <div
+                    className="pointer-events-none absolute -inset-4 rounded-3xl bg-amber-500/15 blur-3xl"
+                    aria-hidden="true"
+                  />
+                  <div className="relative overflow-hidden rounded-2xl bg-black shadow-2xl ring-1 ring-white/15">
+                    <div className="relative aspect-video w-full bg-black">
+                      <iframe
+                        src="https://player.vimeo.com/video/1122267050?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&autoplay=0&loop=1&background=0"
+                        className="absolute inset-0 h-full w-full"
+                        frameBorder="0"
+                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                        allowFullScreen
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        title="The AceHost Whistler Vacation Experience"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
