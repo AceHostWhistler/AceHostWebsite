@@ -462,7 +462,7 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05891.jpg"
+                  src="/photos/properties/3445-Heron-Place/68-3445 Heron Place 53-Edit.jpg"
                   alt="Heron Views in Whistler Village"
                   fill
                   className="object-cover"
@@ -524,7 +524,7 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/post/whistlers-dream-rental-homes/11.png"
+                  src="/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-14.jpg"
                   alt="Whistler Village Luxury 2 Bedroom Condo"
                   fill
                   className="object-cover"
@@ -577,7 +577,7 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/post/whistlers-dream-rental-homes/8.jpg"
+                  src="/photos/properties/The Aspens/4800-Spearhead-Drive-1.JPG"
                   alt="The Aspens Luxury 2 Bedroom Condo"
                   fill
                   className="object-cover"
@@ -631,7 +631,7 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/post/whistlers-dream-rental-homes/9.jpg"
+                  src="/photos/properties/ski-in-ski-out-walk-to-lifts-2-bed/Le chamois-4.jpg"
                   alt="Le Chamois Luxury 2 Bedroom Condo"
                   fill
                   className="object-cover"
@@ -682,7 +682,7 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/post/whistlers-dream-rental-homes/10.jpg"
+                  src="/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00620.jpg"
                   alt="Creekside Village Luxury Townhome"
                   fill
                   className="object-cover"
