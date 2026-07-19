@@ -2,7 +2,6 @@ import { listings } from "./listings";
 
 /** Properties that should show Contact Us instead of Book Now on cards */
 export const CONTACT_ONLY_PROPERTY_IDS = new Set([
-  "altitude-retreat",
   "scandinavian-mountainside-retreat-pemberton-meadows-50-acres",
   "hotel-booking-assistance",
   "super-yacht-thailand",

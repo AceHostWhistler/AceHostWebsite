@@ -394,22 +394,30 @@ export default function BlogPost() {
               </div>
 
               <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-                Altitude Retreat | Kadenwood | Private Butler
+                Timber Haven - Luxury Ski in Ski out - Kadenwood
               </h3>
+              <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
+                <Image
+                  src="/photos/properties/Timber Haven John Harris/Timber Haven cover.png"
+                  alt="Timber Haven luxury chalet in Kadenwood, Whistler"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <p>
-                This extraordinary 10,000+ sq. ft. mansion in Kadenwood accommodates up to 
-                18 guests in the ultimate luxury. Featuring ski-in/ski-out access via the private 
-                Kadenwood gondola, Altitude Retreat offers 7 bedrooms, 5.5 bathrooms, a fully equipped gym, 
-                sauna, steam room, private theater, and multiple living spaces for entertaining. 
-                The property includes the services of a private butler to ensure a truly 
+                This extraordinary Kadenwood estate accommodates up to 
+                16 guests in the ultimate luxury. Featuring ski-in/ski-out access via the private 
+                Kadenwood gondola, Timber Haven offers 8 bedrooms, 6.5 bathrooms, a private hot tub, 
+                multiple lounge spaces, outdoor dining, and curated artwork throughout. 
+                AceHost VIP concierge is included to ensure a truly 
                 exceptional stay experience.
               </p>
               <div className="mt-4 mb-8">
                 <Link
-                  href="/listings/altitude-retreat-kadenwood"
+                  href="/listings/timber-haven-luxury-ski-in-ski-out-kadenwood"
                   className="inline-flex items-center text-blue-600 hover:text-blue-800"
                 >
-                  View Altitude Retreat
+                  View Timber Haven
                   <svg
                     className="ml-2 w-4 h-4"
                     fill="currentColor"

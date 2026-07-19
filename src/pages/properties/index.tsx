@@ -266,8 +266,6 @@ export default function Properties() {
     const getPropertyUrl = (property: PropertyFeature): string => {
       return property.link
         ? property.link
-        : property.id === "altitude-retreat"
-        ? "/listings/altitude-retreat-kadenwood"
         : property.id === "two-cedars"
         ? "/listings/two-cedars-kadenwood"
         : property.id === "chalet-la-forja"
@@ -538,7 +536,7 @@ export default function Properties() {
                         onError={(e) => {
                           // @ts-ignore - Next Image doesn't officially support onError but it works
                           e.currentTarget.src =
-                            "/photos/properties/Altitude New Photos Best/altitude retreat-12.jpg";
+                            "/photos/properties/Timber Haven John Harris/Timber Haven cover.png";
                         }}
                       />
                     </div>

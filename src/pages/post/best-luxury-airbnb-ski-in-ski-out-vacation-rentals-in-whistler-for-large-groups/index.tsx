@@ -19,12 +19,14 @@ const META = {
     "Looking for the best luxury Airbnb ski in ski out vacation rentals in Whistler for a large group? Explore spacious Whistler homes with hot tubs, big kitchens, ski access, and concierge services from AceHost.",
 };
 
-// Airbnb links from each property listing (live listing pages) — Altitude: contact (per request)
+// Airbnb links from each property listing (live listing pages)
 const AIRBNB = {
   twoCedars:
     "https://www.airbnb.ca/rooms/666613336620375768?guests=1&adults=1&s=67&unique_share_id=0d8a1725-cb02-487a-a033-7cc2940692e4",
   laForja:
     "https://www.airbnb.ca/rooms/52655503?guests=1&adults=1&s=67&unique_share_id=f1bb5c2c-51f9-4a82-9aa4-670fb8caa71d",
+  timberHaven:
+    "https://www.airbnb.ca/rooms/1684937418405220715?guests=1&adults=1&s=67&unique_share_id=07a60c93-180c-4b37-be0a-dd512adb2808",
   mountaintop:
     "https://www.airbnb.ca/rooms/1599369454342102375?guests=1&adults=1&s=67&unique_share_id=07a4f082-1dec-4a06-bf97-05638b3b71ef",
   panoramic:
@@ -309,62 +311,61 @@ export default function BlogPost() {
                 airbnbHref={AIRBNB.laForja}
               />
 
-              {/* 3 Altitude — Airbnb → Contact */}
+              {/* 3 Timber Haven */}
               <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">
-                3. Altitude Retreat | Kadenwood | Private Butler
+                3. Timber Haven - Luxury Ski in Ski out - Kadenwood
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 not-prose">
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Altitude New Photos Best/1.jpg"
-                    alt="Altitude Retreat Kadenwood exterior and setting"
+                    src="/photos/properties/Timber Haven John Harris/Timber Haven cover.png"
+                    alt="Timber Haven Kadenwood exterior and setting"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Altitude New Photos Best/12.jpg"
-                    alt="Altitude Retreat great room"
+                    src="/photos/properties/Timber Haven John Harris/02 - 20260506 MM4P 02 0347.jpg"
+                    alt="Timber Haven great room"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Altitude New Photos Best/2.jpg"
-                    alt="Altitude Retreat hot tub and deck"
+                    src="/photos/properties/Timber Haven John Harris/20 - 20260506 A7M4 02 A1_09946.jpg"
+                    alt="Timber Haven hot tub and deck"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Altitude New Photos Best/3.jpg"
-                    alt="Altitude Retreat kitchen and dining"
+                    src="/photos/properties/Timber Haven John Harris/03 - 20260506 A7M4 03 A1_00165.jpg"
+                    alt="Timber Haven kitchen and dining"
                     fill
                     className="object-cover"
                   />
                 </div>
               </div>
               <p>
-                Altitude Retreat is a great pick for families who want a big luxury home that still
-                feels warm and comfortable. It sleeps up to 18 guests with 7 bedrooms, 9 beds, and
-                5.5 bathrooms.
+                Timber Haven is a great pick for families who want a big luxury home that still
+                feels warm and comfortable. It sleeps up to 16 guests with 8 bedrooms, 10 beds, and
+                6.5 bathrooms.
               </p>
               <p>
-                This home has that classic luxury Whistler feel: lots of room, a premium setting, and
-                a layout that works well for longer stays. Add the gym, hot tub, and private
-                butler, and it is easy to see why larger groups would love it.
+                This home has that classic luxury Whistler feel: lots of room, a premium Kadenwood setting, and
+                a layout that works well for longer stays. Add ski-in/ski-out access, the private
+                residents-only gondola, and a private hot tub, and it is easy to see why larger groups would love it.
               </p>
               <p>
                 <strong>Why families love it:</strong> big guest capacity, lots of privacy, and a
                 polished mountain-home feel.
               </p>
               <CtaBlock
-                listingHref="/listings/altitude-retreat-kadenwood"
-                airbnbHref="/contact"
-                airbnbLabel="Contact us"
+                listingHref="/listings/timber-haven-luxury-ski-in-ski-out-kadenwood"
+                airbnbHref={AIRBNB.timberHaven}
               />
 
               {/* 4 Mountaintop */}

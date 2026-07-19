@@ -1,5 +1,3 @@
-import AltitudeRetreatKadenwoodDetails from "./details/altitude-retreat-kadenwood";
-import altitude_retreat_kadenwoodMeta from "./meta/altitude-retreat-kadenwood";
 import BearCreek5BedDetails from "./details/bear-creek-5-bed";
 import bear_creek_5_bedMeta from "./meta/bear-creek-5-bed";
 import BluffsUnit4TaluswoodDetails from "./details/bluffs-unit-4-taluswood";
@@ -73,7 +71,6 @@ import type { ListingEntry } from "./types";
 import { getListingAmenities } from "./amenities";
 
 export const listingSlugs = [
-  "altitude-retreat-kadenwood",
   "bear-creek-5-bed",
   "bluffs-unit-4-taluswood",
   "blackcomb-greens",
@@ -113,7 +110,6 @@ export const listingSlugs = [
 export type ListingSlug = (typeof listingSlugs)[number];
 
 export const listings: Record<string, ListingEntry> = {
-  "altitude-retreat-kadenwood": { ...altitude_retreat_kadenwoodMeta, Details: AltitudeRetreatKadenwoodDetails },
   "bear-creek-5-bed": { ...bear_creek_5_bedMeta, Details: BearCreek5BedDetails },
   "bluffs-unit-4-taluswood": { ...bluffs_unit_4_taluswoodMeta, Details: BluffsUnit4TaluswoodDetails },
   "blackcomb-greens": { ...blackcomb_greensMeta, Details: BlackcombGreensDetails },

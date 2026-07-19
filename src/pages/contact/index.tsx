@@ -451,7 +451,7 @@ const Contact = () => {
                     name="propertyInterest"
                     value={formData.propertyInterest}
                     onChange={handleChange}
-                    placeholder="e.g., Altitude Retreat, or any 4-bedroom property"
+                    placeholder="e.g., Timber Haven, or any 4-bedroom property"
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
                   />
                 </div>

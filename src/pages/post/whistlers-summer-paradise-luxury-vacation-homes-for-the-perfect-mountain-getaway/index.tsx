@@ -158,28 +158,28 @@ export default function BlogPost() {
               </div>
 
               <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-                Altitude Retreat | Kadenwood
+                Timber Haven - Luxury Ski in Ski out - Kadenwood
               </h3>
               <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/2919 Heritage/Mountaintop Snow cover.png"
-                  alt="Altitude Retreat luxury mansion in Kadenwood, Whistler"
+                  src="/photos/properties/Timber Haven John Harris/Timber Haven cover.png"
+                  alt="Timber Haven luxury chalet in Kadenwood, Whistler"
                   fill
                   className="object-cover"
                 />
               </div>
               <p>
-                While Altitude Retreat is renowned as a winter destination, its summer appeal is equally spectacular. This magnificent 10,000 sq.ft. mansion in Kadenwood offers unparalleled luxury with its glass walls providing panoramic views of the forest and mountains in their summer splendor. The property's expansive outdoor spaces, including a private hot tub and multiple decks, are perfect for enjoying the mild summer temperatures and spectacular sunsets.
+                While Timber Haven is renowned as a winter destination, its summer appeal is equally spectacular. This magnificent Kadenwood estate offers unparalleled luxury with panoramic views of the forest and mountains in their summer splendor. The property&apos;s expansive outdoor spaces, including a private hot tub and multiple decks, are perfect for enjoying the mild summer temperatures and spectacular sunsets.
               </p>
               <p>
-                Summer guests will appreciate the property's proximity to Whistler's valley trail network, perfect for hiking and biking adventures. After a day of exploration, unwind in the private sauna, work out in the equipped gym, or relax with a private chef-prepared dinner on the deck while enjoying the long summer evenings. The property's private butler service ensures every need is met, allowing guests to fully immerse themselves in Whistler's summer magic.
+                Summer guests will appreciate the property&apos;s proximity to Whistler&apos;s valley trail network, perfect for hiking and biking adventures. After a day of exploration, unwind in the private hot tub or relax with a private chef-prepared dinner on the deck while enjoying the long summer evenings. AceHost VIP concierge ensures every need is met, allowing guests to fully immerse themselves in Whistler&apos;s summer magic.
               </p>
               <div className="mt-6 mb-8">
                 <Link
-                  href="/listings/altitude-retreat-kadenwood"
+                  href="/listings/timber-haven-luxury-ski-in-ski-out-kadenwood"
                   className="inline-flex items-center justify-center px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-all shadow-sm hover:shadow-md font-medium"
                 >
-                  View Altitude Retreat
+                  View Timber Haven
                   <svg
                     className="ml-2 w-5 h-5"
                     fill="currentColor"
@@ -432,7 +432,7 @@ export default function BlogPost() {
               </p>
               
               <p>
-                Each of our properties offers a unique vantage point to appreciate Whistler's natural splendor. The elevated position of our Kadenwood properties—including Panoramic Estate, Slope Side Chalet, Chalet La Forja, and Altitude Retreat—provides sweeping views of the entire valley, while our Blueberry Hill property, Falcon, offers a perfect perspective of Alpha Lake framed by mountain peaks. Even our village property, Heron Views, delivers stunning mountain vistas from a convenient central location.
+                Each of our properties offers a unique vantage point to appreciate Whistler's natural splendor. The elevated position of our Kadenwood properties—including Panoramic Estate, Slope Side Chalet, Chalet La Forja, and Timber Haven—provides sweeping views of the entire valley, while our Blueberry Hill property, Falcon, offers a perfect perspective of Alpha Lake framed by mountain peaks. Even our village property, Heron Views, delivers stunning mountain vistas from a convenient central location.
               </p>
               
               <p>

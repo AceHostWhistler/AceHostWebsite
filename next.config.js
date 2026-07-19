@@ -30,6 +30,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/listings/altitude-retreat-kadenwood',
+        destination: '/listings/timber-haven-luxury-ski-in-ski-out-kadenwood',
+        permanent: true,
+      },
+      {
         source: '/listings/punta-mita',
         destination: '/worldwide-listings/punta-mita---casa-juntos',
         permanent: true,

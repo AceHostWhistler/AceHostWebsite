@@ -1,16 +1,5 @@
 /** Curated amenity highlights for editorial listing headers */
 export const listingAmenities: Record<string, string[]> = {
-  "altitude-retreat-kadenwood": [
-    "Ski-in / ski-out access",
-    "Private Kadenwood gondola",
-    "Private butler service",
-    "Fitness gym",
-    "Hot tub",
-    "Sauna",
-    "Fireplace",
-    "Gourmet chef's kitchen",
-    "AceHost VIP concierge",
-  ],
   "bear-creek-5-bed": [
     "5 bedrooms · 4 bathrooms",
     "Fully renovated Creekside home",

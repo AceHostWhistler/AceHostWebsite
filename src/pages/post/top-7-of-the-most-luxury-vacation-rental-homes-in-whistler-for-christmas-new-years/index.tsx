@@ -332,29 +332,29 @@ const LuxuryChristmasRentals = () => {
 
               {/* Property 3 */}
               <div className="bg-gray-50 p-6 rounded-lg mb-14">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">3) Altitude Retreat | Kadenwood | Private Butler included</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">3) Timber Haven - Luxury Ski in Ski out - Kadenwood</h2>
 
                 <div className="flex flex-col md:flex-row gap-4 mb-6">
                   <div className="flex-1 bg-white p-4 rounded-lg shadow-sm">
                     <p className="font-medium text-gray-900">Property Details</p>
                     <ul className="mt-2 space-y-1 text-gray-700">
-                      <li><strong>10,000+ SQ FT</strong></li>
                       <li><strong>Ski-in/Ski-out access</strong></li>
-                      <li><strong>Sleeps 18</strong></li>
-                      <li><strong>7 Bedrooms</strong></li>
-                      <li><strong>9 Beds</strong></li>
-                      <li><strong>5.5 Baths</strong></li>
+                      <li><strong>Private Kadenwood gondola</strong></li>
+                      <li><strong>Sleeps 16</strong></li>
+                      <li><strong>8 Bedrooms</strong></li>
+                      <li><strong>10 Beds</strong></li>
+                      <li><strong>6.5 Baths</strong></li>
                       <li><strong>Hot Tub</strong></li>
-                      <li><strong>Gym</strong></li>
-                      <li><strong>Private butler included</strong></li>
+                      <li><strong>Outdoor dining</strong></li>
+                      <li><strong>Curated artwork</strong></li>
                     </ul>
                   </div>
                   
                   <div className="flex-1 bg-white p-4 rounded-lg shadow-sm">
                     <p className="font-medium text-gray-900">Price Information</p>
                     <p className="mt-2 text-gray-700">
-                      <strong>Price per night:</strong> $6,500-$10,000<br/>
-                      <strong>Christmas & New Years:</strong> $21,000+<br/>
+                      <strong>Price per night:</strong> $4,000-$9,000+<br/>
+                      <strong>Christmas & New Years:</strong> $12,000-$16,500+<br/>
                       <strong>Minimum Stay:</strong> 4-7 nights
                     </p>
                   </div>
@@ -362,8 +362,8 @@ const LuxuryChristmasRentals = () => {
 
                 <div className="my-6 relative aspect-[16/9] rounded-xl overflow-hidden shadow-md">
                   <Image
-                    src="/photos/post/top-7-of-the-most-luxury-vacation-rental-homes-in-whistler-for-christmas-new-years/3.png"
-                    alt="Pinnacle Ridge Chalet"
+                    src="/photos/properties/Timber Haven John Harris/Timber Haven cover.png"
+                    alt="Timber Haven luxury chalet in Kadenwood"
                     fill
                     className="object-cover"
                   />
@@ -371,32 +371,30 @@ const LuxuryChristmasRentals = () => {
 
                 <div className="space-y-4 text-gray-700">
                   <p>
-                    Discover the epitome of luxury at Altitude Retreat, nestled in
-                    Whistler's most prestigious ski-in, ski-out neighbourhood,
-                    Kadenwood. Set in close proximity to the Private Kadenwood
-                    gondola, this 8 bedroom property offers an unrivalled location
+                    Discover the epitome of luxury at Timber Haven, nestled in
+                    Whistler&apos;s most prestigious ski-in, ski-out neighbourhood,
+                    Kadenwood. Set in close proximity to the private Kadenwood
+                    gondola, this 8-bedroom property offers an unrivalled location
                     for your Whistler vacation.
                   </p>
 
                   <p>
                     This well-equipped property features everything you need for an
-                    indulgent stay. Enjoy a workout in the full-spec gym then take a
-                    dip in the hot tub and/or sauna.
+                    indulgent stay. Enjoy multiple lounge spaces, outdoor dining,
+                    and a private hot tub after a day on the mountain.
                   </p>
 
                   <p>
-                    Secluded by trees and nature, it doesn't get more private
-                    than this! The open-concept living and dining areas are ideal
-                    for entertaining, while the master suite offers a spa-like
-                    experience with its luxurious en-suite bathtub with a view of
-                    the surrounding mountains and forest. Altitude Retreat provides
+                    With stunning mountain views and beautiful furnishings throughout,
+                    the open-concept living and dining areas are ideal
+                    for entertaining large groups. Timber Haven provides
                     the perfect backdrop for an elegant holiday celebration.
                   </p>
                 </div>
 
                 <div className="mt-6">
                   <Link 
-                    href="/listings/altitude-retreat-kadenwood" 
+                    href="/listings/timber-haven-luxury-ski-in-ski-out-kadenwood" 
                     className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                   >
                     View Property Details

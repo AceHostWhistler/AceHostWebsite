@@ -155,25 +155,25 @@ export default function BlogPost() {
               </div>
 
               <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-                Altitude Retreat | Kadenwood
+                Timber Haven - Luxury Ski in Ski out - Kadenwood
               </h3>
               <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/2919 Heritage/Mountaintop Snow cover.png"
-                  alt="Altitude Retreat luxury mansion in Kadenwood, Whistler"
+                  src="/photos/properties/Timber Haven John Harris/Timber Haven cover.png"
+                  alt="Timber Haven luxury chalet in Kadenwood, Whistler"
                   fill
                   className="object-cover"
                 />
               </div>
               <p>
-                Modern alpine luxury at its best. This magnificent 10,000 sq.ft. mansion in Kadenwood accommodates up to 18 guests with 7 bedrooms and 5.5 bathrooms. Think glass walls overlooking the forest, a private hot tub under the stars, an equipped gym, sauna, and ski/board mud room. Located just a stone's throw away from the exclusive Kadenwood residence-only gondola, this property features a private butler service and is surrounded by trees for maximum solitude. It's perfect for holiday gatherings and snowy reunions.
+                Modern alpine luxury at its best. This magnificent Kadenwood estate accommodates up to 16 guests with 8 bedrooms and 6.5 bathrooms. Think stunning mountain views, a private hot tub, ski-in/ski-out access, and beautiful furnishings throughout. Located just a stone&apos;s throw away from the exclusive Kadenwood residents-only gondola, this property is surrounded by trees for maximum solitude. It&apos;s perfect for holiday gatherings and snowy reunions.
               </p>
               <div className="mt-6 mb-8">
                 <Link
-                  href="/listings/altitude-retreat-kadenwood"
+                  href="/listings/timber-haven-luxury-ski-in-ski-out-kadenwood"
                   className="inline-flex items-center justify-center px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-all shadow-sm hover:shadow-md font-medium"
                 >
-                  View Altitude Retreat
+                  View Timber Haven
                   <svg
                     className="ml-2 w-5 h-5"
                     fill="currentColor"

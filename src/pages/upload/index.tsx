@@ -205,7 +205,7 @@ const PropertyUpload = () => {
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       value={formData.name}
                       onChange={handleChange}
-                      placeholder="e.g. Altitude Retreat | Kadenwood"
+                      placeholder="e.g. Timber Haven | Kadenwood"
                     />
                   </div>
 

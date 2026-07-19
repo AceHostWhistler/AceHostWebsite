@@ -224,35 +224,34 @@ export default function BlogPost() {
 
               {/* Property 3 */}
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
-                3) Altitude Retreat | Kadenwood | Private Butler included
+                3) Timber Haven - Luxury Ski in Ski out - Kadenwood
               </h2>
 
               <div className="bg-gray-50 p-5 rounded-lg mb-6">
                 <p className="font-semibold">
-                  Price per night: $6,500-$10,000. Christmas & New Years
-                  $21,000+
+                  Price per night: $4,000-$9,000+. Christmas & New Years
+                  $12,000-$16,500+
                 </p>
                 <p className="mt-4">
-                  10,000+ SQ FT | Ski-in/Ski-out access | Sleeps 18 | 7 Bedrooms
-                  | 9 Beds | 5.5 Baths | Hot Tub | Gym | Private butler included
+                  Ski-in/Ski-out access | Private Kadenwood gondola | Sleeps 16 | 8 Bedrooms
+                  | 10 Beds | 6.5 Baths | Hot Tub | Outdoor dining | Curated artwork
                 </p>
               </div>
 
               <p>
-                Altitude Retreat, also located in the prestigious Kadenwood
-                neighbourhood. Spanning over 10,000 square feet, this property
-                features 7 bedrooms and 9 beds, accommodating up to 18 guests.
+                Timber Haven, also located in the prestigious Kadenwood
+                neighbourhood. This private mountain estate
+                features 8 bedrooms and 10 beds, accommodating up to 16 guests.
                 Immerse yourself in the serenity of the surrounding mountains as
-                you relax in the hot tub with mountain views. Stay in shape with
-                the state-of-the-art gym equipment. The exclusive Kadenwood
+                you relax in the hot tub with mountain views. Multiple lounge spaces
+                and outdoor dining make it ideal for large groups. The exclusive Kadenwood
                 gondola provides unrivalled access to the world-class ski
-                slopes. A complimentary butler is at your service to make your
-                stay truly extraordinary.
+                slopes, making this an extraordinary Whistler stay.
               </p>
 
               <p className="text-blue-600 font-medium mt-2 mb-6">
                 <Link 
-                  href="/listings/altitude-retreat-kadenwood" 
+                  href="/listings/timber-haven-luxury-ski-in-ski-out-kadenwood" 
                   className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   View Property Details
@@ -264,14 +263,14 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/post/whistlers-dream-rental-homes/3.jpeg"
-                  alt="Altitude Retreat in Kadenwood"
+                  src="/photos/properties/Timber Haven John Harris/Timber Haven cover.png"
+                  alt="Timber Haven in Kadenwood"
                   fill
                   className="object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-3">
                   <p className="text-sm font-medium">
-                    Altitude Retreat | Kadenwood
+                    Timber Haven | Kadenwood
                   </p>
                 </div>
               </div>
