@@ -472,6 +472,122 @@ export default function BlogPost() {
                 </div>
               </div>
 
+              {/* Property 7 */}
+              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
+                7) The Mountaintop at Kadenwood | Ski in Ski out
+              </h2>
+
+              <div className="bg-gray-50 p-5 rounded-lg mb-6">
+                <p className="font-semibold">
+                  Price per night: $6,500-$9,000+. Christmas & New Years
+                  $14,900-$19,000+
+                </p>
+                <p className="mt-4">
+                  6200+ SQ FT | Ski-in/Ski-out access | Sleeps 16 | 7 Bedrooms |
+                  7.5 Baths | Hot Tub | Wood Barrel Sauna | Fire Pits | Steam Room
+                </p>
+              </div>
+
+              <p>
+                Located in Whistler&apos;s most prestigious true ski-in ski-out
+                neighbourhood, The Mountaintop at Kadenwood is a refined 7-bedroom
+                retreat with 6,200 square feet of mountain living. A renovated
+                chef&apos;s kitchen, hot tub, wood barrel sauna, fire pits, and
+                private ski trails make it ideal for groups who want seamless
+                slope access without sacrificing luxury.
+              </p>
+
+              <p className="mt-4">
+                For bigger families and ski groups, true ski-in/ski-out access
+                makes all the difference—no morning logistics, no splitting the
+                group across hotels. Wake up, get ready, and get straight onto
+                the mountain from one of Kadenwood&apos;s most spectacular homes.
+              </p>
+
+              <p className="text-blue-600 font-medium mt-2 mb-6">
+                <Link 
+                  href="/listings/luxury-ski-in-ski-out-7-bedroom-kadenwood" 
+                  className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  View Property Details
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </Link>
+              </p>
+
+              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
+                <Image
+                  src="/photos/properties/2919 Heritage/Mountaintop Snow cover.png"
+                  alt="The Mountaintop at Kadenwood"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-3">
+                  <p className="text-sm font-medium">
+                    The Mountaintop | Kadenwood
+                  </p>
+                </div>
+              </div>
+
+              {/* Property 8 */}
+              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
+                8) Panoramic Estate | Kadenwood
+              </h2>
+
+              <div className="bg-gray-50 p-5 rounded-lg mb-6">
+                <p className="font-semibold">
+                  Price per night: $5,800-$9,000+. Christmas & New Years
+                  $16,000+
+                </p>
+                <p className="mt-4">
+                  6500+ SQ FT | Ski-in/Ski-out access | Sleeps 17 | 8 Bedrooms |
+                  10 Beds | 7 Baths | Hot Tub | Cinema Room | Wine Cellar | Elevator
+                </p>
+              </div>
+
+              <p>
+                Panoramic Estate lives up to its name from its exclusive Kadenwood
+                setting, offering breathtaking views across Whistler Valley. This
+                8-bedroom architectural masterpiece spans over 6,500 square feet
+                with high-end finishes, a gourmet kitchen, private hot tub, cinema
+                room, wine cellar, and a private elevator connecting every level.
+              </p>
+
+              <p className="mt-4">
+                With 8 bedrooms and space for up to 17 guests, it is ideal for
+                large families, multi-generational trips, or groups who want
+                everyone to have their own room. Expansive decks, multiple gathering
+                spaces, and ski-in/ski-out access make it one of Whistler&apos;s
+                most impressive luxury rentals.
+              </p>
+
+              <p className="text-blue-600 font-medium mt-2 mb-6">
+                <Link 
+                  href="/listings/panoramic-estate-kadenwood" 
+                  className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  View Property Details
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </Link>
+              </p>
+
+              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
+                <Image
+                  src="/photos/properties/Panoramic Estate/Panoramic Estate.jpg"
+                  alt="Panoramic Estate in Kadenwood"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-3">
+                  <p className="text-sm font-medium">
+                    Panoramic Estate | Kadenwood
+                  </p>
+                </div>
+              </div>
+
               {/* Smaller Luxury Condos/Townhomes */}
               <h2 className="text-3xl font-bold text-gray-900 mt-16 mb-6">
                 Luxury Airbnb Condos/town-homes: in Whistler for smaller groups
@@ -645,32 +761,31 @@ export default function BlogPost() {
 
               {/* Condo 4 */}
               <h3 className="text-2xl font-bold text-gray-900 mt-12 mb-4">
-                4) Luxe 5-bed | 3 bedroom Ski in Ski out in Whistler's
-                Creekside Village
+                4) Luxe 5-BED Scandinave Retreat | Walk to Slopes
               </h3>
 
               <div className="bg-gray-50 p-5 rounded-lg mb-6">
-                <p className="font-semibold">Price per night: $600-$1,800</p>
+                <p className="font-semibold">Price per night: $450-$1,200+</p>
               </div>
 
               <p>
-                Welcome to our beautiful luxury townhome, perched high above the
-                valley floor offering total seclusion & VIEWS, yet exceptionally
-                close proximity to everything you could possibly desire within
-                town.
+                An ideal family ski home in Creekside, just 400m (an 8-minute
+                walk) to the Whistler Creekside Gondola. This beautifully designed
+                3-bedroom, 3-bath retreat sleeps up to 8 guests with stunning,
+                unobstructed views of the Tantalus Range, Alpha Lake, and Nita Lake.
               </p>
 
               <p className="mt-4">
-                LOCATION LOCATION LOCATION: Ski/Bike In & Out - This property is
-                located within a 2 minute walk to the Creekside gondola, and
-                there is also a great ski/bike in & out access point only 100
-                metres up the hill - The choice is yours. Creekside Village is
-                also only a short 2-3 minute walk away.
+                The unique six half-level layout is perfect for one large family,
+                three couples, or two families travelling together. Enjoy heated
+                floors, a gas fireplace, steam shower, kids&apos; triple bunk room,
+                air conditioning, a private deck, and secure ski and bike storage—all
+                within easy walking distance of Creekside Village and the slopes.
               </p>
 
               <p className="text-blue-600 font-medium mt-2 mb-6">
                 <Link 
-                  href="/listings/dream-log-chalet-5-bedroom-4-bath-creekside" 
+                  href="/worldwide-listings/luxe-5-bed-scandinave-retreat" 
                   className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   View Property Details
@@ -682,14 +797,14 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00620.jpg"
-                  alt="Creekside Village Luxury Townhome"
+                  src="/high-quality/scandinave-fixed/scandinave-26.jpg"
+                  alt="Luxe 5-BED Scandinave Retreat in Creekside"
                   fill
                   className="object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-3">
                   <p className="text-sm font-medium">
-                    Luxe 5-bed, 3 bedroom Ski in Ski out Creekside
+                    Luxe 5-BED Scandinave Retreat | Walk to Slopes
                   </p>
                 </div>
               </div>
