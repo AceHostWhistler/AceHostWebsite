@@ -1085,9 +1085,9 @@ export const propertyCategories: PropertyCategory[] = [
             id: "whistler-village-penthouse",
             name: "Whistler Village | Penthouse | 4-Bed",
             images: [
-              "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-7.jpg",
-              "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-2.jpg",
-              "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-5.jpg"
+              "/photos/properties/3-Bed PH Whistler Village/snowy-room-blinds-only Hearthstone.png",
+              "/photos/properties/3-Bed PH Whistler Village/Hearthstone Hot tub.png",
+              "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-2.jpg"
             ],
             guests: 7,
             bedrooms: 2,

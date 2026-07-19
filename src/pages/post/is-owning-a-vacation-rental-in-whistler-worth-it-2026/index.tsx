@@ -16,7 +16,7 @@ const LEGACY_HERO = `/photos/post/${SLUG}/hero.jpg`;
 const IMG_TYNDALL_02 =
   "/photos/properties/303-Tyndall Lodge/02 - 20260107 A7M4 01 A1_03433.jpg";
 const IMG_3BED_VILLAGE =
-  "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-1.jpg";
+  "/photos/properties/3-Bed PH Whistler Village/snowy-room-blinds-only Hearthstone.png";
 const IMG_JOHN_GRANITE =
   "/photos/properties/John 3-bed Granite Court/03 - 20251125 A7M4 01 A1_01852.jpg";
 

@@ -3,16 +3,15 @@ import type { ListingData } from "../types";
 const listing: ListingData = {
   slug: "whistler-village-penthouse",
   photos: [
+  "/photos/properties/3-Bed PH Whistler Village/snowy-room-blinds-only Hearthstone.png",
   "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-1.jpg",
   "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-2.jpg",
   "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-3.jpg",
   "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-4.jpg",
   "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-5.jpg",
   "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-6.jpg",
-  "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-7.jpg",
   "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-8.jpg",
   "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-9.jpg",
-  "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-10.jpg",
   "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-11.jpg",
   "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-12.jpg",
   "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-13.jpg",
@@ -22,7 +21,9 @@ const listing: ListingData = {
   "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-17.jpg",
   "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-18.jpg",
   "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-19.jpg",
-  "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-20.jpg"
+  "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-20.jpg",
+  "/photos/properties/3-Bed PH Whistler Village/Hearthstone Hot tub.png",
+  "/photos/properties/3-Bed PH Whistler Village/Hearthstone living room:hot tub.png"
 ],
   seo: {
     title: "Whistler Village | Penthouse | 4-Bed - AceHost",

@@ -816,7 +816,7 @@ const Home = () => {
     {
       id: "whistler-village-penthouse",
       name: "Whistler Village | Penthouse | 4-Bed",
-      image: "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-7.jpg",
+      image: "/photos/properties/3-Bed PH Whistler Village/snowy-room-blinds-only Hearthstone.png",
       guests: 7,
       bedrooms: 2,
       beds: 4,
