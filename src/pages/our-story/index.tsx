@@ -105,24 +105,28 @@ const OurStory = () => {
             <div>
               <h2 className="text-3xl font-bold mb-6">About AceHost</h2>
               <p className="text-gray-700 mb-6">
-                AceHost was founded on a simple principle: to provide a luxury
-                vacation rental experience that exceeds expectations. We started
-                with a small portfolio of premium properties in Whistler and
-                have grown to become a trusted name in luxury accommodations.
+                AceHost was founded on a simple principle: to provide the best
+                luxury vacation rental experience while offering homeowners a
+                profitable investment. We started with a small portfolio of
+                premium properties in Whistler and have grown to become one of
+                the most trusted names in Whistler luxury accommodations.
               </p>
               <p className="text-gray-700 mb-6">
-                Our team's deep knowledge of Whistler and passion for
-                hospitality allows us to offer a personalized service that large
-                rental companies simply cannot match. We carefully select each
-                property in our collection, ensuring it meets our high standards
-                for quality, comfort, and location.
+                Our team&apos;s deep knowledge of Whistler and passion for
+                hospitality allows us to offer a personalized service that simply
+                cannot be matched. We carefully select each property in our
+                collection, ensuring it meets our high standards for quality,
+                comfort, and location. We also work with homeowners to bring up
+                the standard of their properties to ensure guest satisfaction,
+                which leads to a better return on investment & repeat guests.
               </p>
               <p className="text-gray-700 mb-8">
-                Beyond just providing beautiful properties, we offer
-                comprehensive concierge services to create truly memorable
-                vacations for our guests. From arranging private chefs to
-                organizing exclusive experiences, we're committed to making
-                every stay special.
+                Beyond providing beautiful properties & property management, we
+                offer comprehensive concierge services to create truly memorable
+                vacations for our guests. From arranging private chefs, ski lift
+                pass delivery, restaurant reservations, transportating &
+                logistics, to organizing exclusive experiences, etc., we&apos;re
+                committed to making every stay special.
               </p>
               <Link
                 href="/contact"
