@@ -11,6 +11,16 @@ export interface Article {
 // All blog articles data with proper image paths
 export const allArticles: Article[] = [
   {
+    title: "28 Best Places to Stay in Whistler | AceHost",
+    category: "Luxury Properties, Whistler",
+    description:
+      "Explore 28 AceHost Whistler vacation rentals, from luxury Kadenwood ski chalets and large family homes to Village condos, penthouses, and ski-in ski-out stays.",
+    readTime: "22 min read",
+    link: "/post/28-best-places-to-stay-in-whistler",
+    coverImage:
+      "/photos/properties/Two Cedars New/Two Cedars Cover photo snow.png",
+  },
+  {
     title:
       "FIFA Vancouver / Whistler, The Luxury Whistler FIFA Experience | AceHost",
     category: "FIFA 2026, Luxury Travel",
