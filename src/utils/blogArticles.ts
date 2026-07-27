@@ -51,7 +51,7 @@ export const allArticles: Article[] = [
     readTime: "14 min read",
     link: "/post/best-time-to-visit-whistler-for-luxury-travelers",
     coverImage:
-      "/photos/properties/2919 Heritage/Mountaintop Snow cover.png",
+      "/photos/properties/Muirfield Golf Course/Muirfield Snow shot.png",
   },
   {
     title:

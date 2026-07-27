@@ -1,0 +1,37 @@
+---
+description: Unique cover photos for blog posts
+globs: src/pages/post/**/index.tsx,src/utils/blogArticles.ts
+alwaysApply: false
+---
+
+# Blog cover photos must be unique
+
+Each blog post needs its own cover image. Do not reuse a cover photo that another post already uses on `/blogs`, in `blogArticles.ts`, or as another post's `HERO` / `og:image`.
+
+## Before choosing a cover
+
+1. Check existing covers:
+   ```bash
+   npx tsx -e "import { discoverBlogPosts } from './src/utils/discoverBlogPosts.ts'; discoverBlogPosts().forEach(p => console.log(p.slug, '->', p.heroImage));"
+   ```
+2. Pick a property photo from `/public/photos/properties/` that is **not** already a blog cover.
+3. Prefer dedicated cover shots (e.g. `*cover*.png`, drone/exterior hero shots) over in-article gallery images.
+
+## When creating or editing a blog post
+
+Update **both** places so `/blogs` and the post page stay in sync:
+
+- `src/pages/post/<slug>/index.tsx` — `HERO` constant (and `og:image` / structured data derived from it)
+- `src/utils/blogArticles.ts` — matching `coverImage` for that slug
+
+## Example
+
+```tsx
+// ✅ GOOD — unique cover
+const HERO = "/photos/properties/Muirfield Golf Course/Muirfield Snow shot.png";
+
+// ❌ BAD — already used by fifa-vancouver-whistler-the-luxury-whistler-fifa-experience
+const HERO = "/photos/properties/2919 Heritage/Mountaintop Snow cover.png";
+```
+
+In-article property photos may repeat; this rule applies to **cover/hero/og:image only**.
