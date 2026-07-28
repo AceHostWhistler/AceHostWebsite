@@ -18,59 +18,44 @@ import {
   editorialMainClass,
 } from "@/lib/editorialPropertyLayout";
 import { getWorldwideAmenities } from "@/data/worldwideAmenities";
+import fs from "fs";
+import path from "path";
 
 const PHOTO_DIR = "/photos/properties/Cotswolds UK - Soho Farm House";
-const COVER = `${PHOTO_DIR}/224A8292.jpg`;
+const PHOTO_DIR_FS = path.join(
+  process.cwd(),
+  "public/photos/properties/Cotswolds UK - Soho Farm House"
+);
+const COVER_FILENAME = "224A8292.jpg";
+const COVER = `${PHOTO_DIR}/${COVER_FILENAME}`;
+const IMAGE_EXT = /\.(jpe?g|png|webp|gif)$/i;
 
-const CotswoldsUKSohoFarmHouse = () => {
+interface CotswoldsPageProps {
+  photos: string[];
+}
+
+function discoverCotswoldsPhotos(): string[] {
+  const files = fs
+    .readdirSync(PHOTO_DIR_FS)
+    .filter((file) => IMAGE_EXT.test(file));
+
+  const rest = files
+    .filter((file) => file !== COVER_FILENAME)
+    .sort((a, b) => a.localeCompare(b));
+
+  return [COVER_FILENAME, ...rest].map((file) => `${PHOTO_DIR}/${file}`);
+}
+
+const CotswoldsUKSohoFarmHouse = ({ photos }: CotswoldsPageProps) => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [isImageLoading, setIsImageLoading] = useState(false);
   const [imagesLoaded, setImagesLoaded] = useState(0);
 
-  const cacheVersion = "v11";
-
-  const photos = [
-    `${PHOTO_DIR}/224A8292.jpg`,
-    `${PHOTO_DIR}/DJI_20260720185020_0008_D.jpg`,
-    `${PHOTO_DIR}/DJI_20260722212904_0203_D.jpg`,
-    `${PHOTO_DIR}/DJI_20260722213403_0216_D.jpg`,
-    `${PHOTO_DIR}/DJI_20260722215623_0226_D.jpg`,
-    `${PHOTO_DIR}/224A8288.jpg`,
-    `${PHOTO_DIR}/224A8297.jpg`,
-    `${PHOTO_DIR}/224A8303.jpg`,
-    `${PHOTO_DIR}/Cotswolds cover pool 1.jpeg`,
-    `${PHOTO_DIR}/Cotswolds Cover Pool 2.jpeg`,
-    `${PHOTO_DIR}/Cotswolds Cover Pool 3.jpeg`,
-    `${PHOTO_DIR}/Hot tub shot no AC cotswolds.png`,
-    `${PHOTO_DIR}/224A8416.jpg`,
-    `${PHOTO_DIR}/224A8419.jpg`,
-    `${PHOTO_DIR}/224A8421.jpg`,
-    `${PHOTO_DIR}/224A8425.jpg`,
-    `${PHOTO_DIR}/224A8434.jpg`,
-    `${PHOTO_DIR}/224A8442.jpg`,
-    `${PHOTO_DIR}/224A8446.jpg`,
-    `${PHOTO_DIR}/224A8451.jpg`,
-    `${PHOTO_DIR}/224A8456.jpg`,
-    `${PHOTO_DIR}/224A8460.jpg`,
-    `${PHOTO_DIR}/224A8465.jpg`,
-    `${PHOTO_DIR}/224A8467.jpg`,
-    `${PHOTO_DIR}/224A8469.jpg`,
-    `${PHOTO_DIR}/224A8471.jpg`,
-    `${PHOTO_DIR}/224A8473.jpg`,
-    `${PHOTO_DIR}/224A8474.jpg`,
-    `${PHOTO_DIR}/224A8477.jpg`,
-    `${PHOTO_DIR}/224A8480.jpg`,
-    `${PHOTO_DIR}/224A8486.jpg`,
-    `${PHOTO_DIR}/224A8497.jpg`,
-    `${PHOTO_DIR}/224A8507.jpg`,
-    `${PHOTO_DIR}/224A8517.jpg`,
-    `${PHOTO_DIR}/224A8518.jpg`,
-  ];
+  const cacheVersion = "v12";
 
   const photoOrder = photos;
   const optimalPhotos = photos;
-  const totalImages = photos.length;
 
   const handlePhotoClick = (index: number) => {
     setIsImageLoading(true);
@@ -233,86 +218,33 @@ const CotswoldsUKSohoFarmHouse = () => {
           {/* Photo Grid - Only show once essential images are loaded */}
           <div className={`${editorialGalleryWrapperClass} ${imagesLoaded < 12 ? 'opacity-0' : 'opacity-100 transition-opacity duration-500'}`} id="photos">
             <div className={editorialGalleryGridClass}>
-              <div
-                className={editorialGalleryTileClass}
-                onClick={() => handlePhotoClick(0)}
-              >
-                <div className="w-full h-full bg-gray-200">
-                                      <img
-                    src={`${optimalPhotos[0]}?v=${cacheVersion}`}
-                    alt="Cotswolds UK - Soho Farm House 1"
-                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                    loading="eager"
-                    fetchPriority="high"
-                    width={640}
-                    height={480}
-                    style={{ aspectRatio: '4/3', objectFit: 'cover' }}
-                    onError={(e) => {
-                      // Fallback to the original image if optimized one fails
-                      const target = e.target as HTMLImageElement;
-                      target.onerror = null; // Prevent infinite error loops
-                      target.src = COVER;
-                      console.log("Using fallback for image 1");
-                    }}
-                  />
-                </div>
-              </div>
-              {photos.slice(1, 4).map((photo, index) => (
+              {photos.slice(0, 18).map((photo, index) => (
                 <div
-                  key={index}
+                  key={photo}
                   className={editorialGalleryTileClass}
-                  onClick={() => handlePhotoClick(index + 1)}
+                  onClick={() => handlePhotoClick(index)}
                 >
                   <div className="w-full h-full bg-gray-200">
                     <img
                       src={`${photo}?v=${cacheVersion}`}
-                      alt={`Cotswolds UK - Soho Farm House ${index + 2}`}
+                      alt={`Cotswolds UK - Soho Farm House ${index + 1}`}
                       className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                      loading="eager"
+                      loading={index < 12 ? "eager" : "lazy"}
+                      fetchPriority={index === 0 ? "high" : undefined}
                       width={640}
                       height={480}
                       style={{ aspectRatio: '4/3', objectFit: 'cover' }}
                       onError={(e) => {
-                        // Fallback if optimized image fails to load
                         const target = e.target as HTMLImageElement;
                         target.onerror = null;
-                        // Use a generic fallback image that's known to work
                         target.src = COVER;
-                        console.log(`Using fallback for image ${index + 2}`);
-                      }}
-                    />
-                  </div>
-                </div>
-              ))}
-              {photos.slice(4, 8).map((photo, index) => (
-                <div
-                  key={index + 4}
-                  className={editorialGalleryTileClass}
-                  onClick={() => handlePhotoClick(index + 4)}
-                >
-                  <div className="w-full h-full bg-gray-200">
-                    <img
-                      src={`${photo}?v=${cacheVersion}`}
-                      alt={`Cotswolds UK - Soho Farm House ${index + 5}`}
-                      className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                      loading="eager"
-                      width={640}
-                      height={480}
-                      style={{ aspectRatio: '4/3', objectFit: 'cover' }}
-                      onError={(e) => {
-                        // Fallback if optimized image fails to load
-                        const target = e.target as HTMLImageElement;
-                        target.onerror = null;
-                        // Use a generic fallback image that's known to work
-                        target.src = COVER;
-                        console.log(`Using fallback for image ${index + 5}`);
                       }}
                     />
                   </div>
                 </div>
               ))}
             </div>
-            {photos.length > 8 && (
+            {photos.length > 18 && (
               <div className="text-center mt-6">
                 <button
                   onClick={() => setShowAllPhotos(true)}
@@ -456,7 +388,7 @@ const CotswoldsUKSohoFarmHouse = () => {
               </div>
               <div className="aspect-[4/3] relative rounded-lg overflow-hidden shadow-md">
                 <img
-                  src={`${PHOTO_DIR}/224A8465.jpg`}
+                  src={`${PHOTO_DIR}/224A5352.jpg`}
                   alt="Interior view of the Cotswolds estate"
                   className="object-cover w-full h-full"
                   loading="lazy"
@@ -467,7 +399,7 @@ const CotswoldsUKSohoFarmHouse = () => {
               </div>
               <div className="aspect-[4/3] relative rounded-lg overflow-hidden shadow-md">
                 <img
-                  src={`${PHOTO_DIR}/224A8467.jpg`}
+                  src={`${PHOTO_DIR}/224A5450.jpg`}
                   alt="Interior living space of the Cotswolds estate"
                   className="object-cover w-full h-full"
                   loading="lazy"
@@ -569,28 +501,28 @@ const CotswoldsUKSohoFarmHouse = () => {
                     type: "Emperor King",
                     features: "Ensuite bathroom with spa amenities, luxurious linens",
                     location: "Main House - Master Suite",
-                    image: `${PHOTO_DIR}/224A8486.jpg`,
+                    image: `${PHOTO_DIR}/224A5405.jpg`,
                   },
                   {
                     title: "Bedroom 2",
                     type: "Super King",
                     features: "Ensuite bathroom, premium bedding",
                     location: "Main House",
-                    image: `${PHOTO_DIR}/224A8477.jpg`,
+                    image: `${PHOTO_DIR}/224A5410.jpg`,
                   },
                   {
                     title: "Bedroom 3",
                     type: "Super King",
                     features: "Shared bathroom access, countryside views",
                     location: "Main House",
-                    image: `${PHOTO_DIR}/224A8471.jpg`,
+                    image: `${PHOTO_DIR}/224A5417.jpg`,
                   },
                   {
                     title: "Bedroom 4",
                     type: "Double",
                     features: "Shared bathroom access, cozy retreat",
                     location: "Main House",
-                    image: `${PHOTO_DIR}/224A8442.jpg`,
+                    image: `${PHOTO_DIR}/224A5423.jpg`,
                   },
                   {
                     title: "Bedroom 5",
@@ -861,11 +793,12 @@ const CotswoldsUKSohoFarmHouse = () => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async ({
+export const getStaticProps: GetStaticProps<CotswoldsPageProps> = async ({
   locale,
 }) => {
   return {
     props: {
+      photos: discoverCotswoldsPhotos(),
       ...(await serverSideTranslations(locale || "en", ["common"])),
     },
   };
