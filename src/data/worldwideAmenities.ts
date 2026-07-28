@@ -11,6 +11,7 @@ export const worldwideListingAmenities: Record<string, string[]> = {
   "cotswolds-uk-soho-farm-house": [
     "Soho Farm House estate",
     "Outdoor heated pool",
+    "Air conditioning",
     "Extensive grounds",
     "Event-ready layout",
     "UK countryside retreat",

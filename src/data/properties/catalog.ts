@@ -1232,11 +1232,11 @@ export const propertyCategories: PropertyCategory[] = [
             id: "cotswolds-uk-soho-farm-house",
             name: "Cotswolds UK - Soho Farm House",
             images: [
-              "/photos/properties/Cotswolds UK - Soho Farm House/Final Pool Drone money shot good.png",
-              "/photos/properties/Cotswolds UK - Soho Farm House/Pool Drone shot cotswolds.png",
-              "/photos/properties/Cotswolds UK - Soho Farm House/DJI_20250602091213_0541_D.jpg",
-              "/photos/properties/Cotswolds UK - Soho Farm House/224A5292.jpg",
-              "/photos/properties/Cotswolds UK - Soho Farm House/224A5307.jpg"
+              "/photos/properties/Cotswolds UK - Soho Farm House/224A8292.jpg",
+              "/photos/properties/Cotswolds UK - Soho Farm House/DJI_20260720185020_0008_D.jpg",
+              "/photos/properties/Cotswolds UK - Soho Farm House/Cotswolds Cover Pool 2.jpeg",
+              "/photos/properties/Cotswolds UK - Soho Farm House/224A8465.jpg",
+              "/photos/properties/Cotswolds UK - Soho Farm House/Hot tub shot no AC cotswolds.png"
             ],
             guests: 15,
             bedrooms: 8,
@@ -1251,6 +1251,7 @@ export const propertyCategories: PropertyCategory[] = [
               "Designer Kitchen with AGA Oven",
               "Two Cozy Living Rooms",
               "Electric Car Charger",
+              "Air Conditioning",
               "Outdoor BBQ & Dining",
               "Firepit"
             ],
@@ -1726,11 +1727,11 @@ export const propertyCategories: PropertyCategory[] = [
             id: "cotswolds-uk-soho-farm-house",
             name: "Cotswolds UK - Soho Farm House",
             images: [
-              "/photos/properties/Cotswolds UK - Soho Farm House/Final Pool Drone money shot good.png",
-              "/photos/properties/Cotswolds UK - Soho Farm House/Pool Drone shot cotswolds.png",
-              "/photos/properties/Cotswolds UK - Soho Farm House/DJI_20250602091213_0541_D.jpg",
-              "/photos/properties/Cotswolds UK - Soho Farm House/224A5292.jpg",
-              "/photos/properties/Cotswolds UK - Soho Farm House/224A5307.jpg"
+              "/photos/properties/Cotswolds UK - Soho Farm House/224A8292.jpg",
+              "/photos/properties/Cotswolds UK - Soho Farm House/DJI_20260720185020_0008_D.jpg",
+              "/photos/properties/Cotswolds UK - Soho Farm House/Cotswolds Cover Pool 2.jpeg",
+              "/photos/properties/Cotswolds UK - Soho Farm House/224A8465.jpg",
+              "/photos/properties/Cotswolds UK - Soho Farm House/Hot tub shot no AC cotswolds.png"
             ],
             guests: 15,
             bedrooms: 8,
@@ -1745,6 +1746,7 @@ export const propertyCategories: PropertyCategory[] = [
               "Designer Kitchen with AGA Oven",
               "Two Cozy Living Rooms",
               "Electric Car Charger",
+              "Air Conditioning",
               "Outdoor BBQ & Dining",
               "Firepit"
             ],

@@ -19,46 +19,58 @@ import {
 } from "@/lib/editorialPropertyLayout";
 import { getWorldwideAmenities } from "@/data/worldwideAmenities";
 
+const PHOTO_DIR = "/photos/properties/Cotswolds UK - Soho Farm House";
+const COVER = `${PHOTO_DIR}/224A8292.jpg`;
+
 const CotswoldsUKSohoFarmHouse = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [isImageLoading, setIsImageLoading] = useState(false);
   const [imagesLoaded, setImagesLoaded] = useState(0);
-  const [totalImages] = useState(84); // Total number of images we have
 
-  // Cache version for forcing new image downloads
-  const cacheVersion = "v10";
+  const cacheVersion = "v11";
 
-  // Define photo paths using the optimized gallery images
-  const photoOrder = [
-    "/photos/properties/Cotswolds UK - Soho Farm House/Final Pool Drone money shot good.png", // New cover photo
-    "/photos/properties/Cotswolds UK - Soho Farm House/Pool Drone shot cotswolds.png", // New drone pool photo
-    "/optimized/cotswolds-cover.jpg", // Optimized cover photo
-    "/optimized/cotswolds-all/cotswolds-all-11.jpg", // DJI_20250602090532_0522_D
-    "/optimized/cotswolds-all/cotswolds-all-23.jpg", // 224A5292
-    "/optimized/cotswolds-all/cotswolds-all-35.jpg", // 224A5518
-    "/optimized/cotswolds-all/cotswolds-all-4.jpg",  // 224A7828
-    "/optimized/cotswolds-all/cotswolds-all-21.jpg", // 224A5535
-    "/optimized/cotswolds-all/cotswolds-all-49.jpg", // 224A5314
-    "/optimized/cotswolds-all/cotswolds-all-74.jpg", // 224A5405
-    "/optimized/cotswolds-all/cotswolds-all-5.jpg"   // 224A5352
+  const photos = [
+    `${PHOTO_DIR}/224A8292.jpg`,
+    `${PHOTO_DIR}/DJI_20260720185020_0008_D.jpg`,
+    `${PHOTO_DIR}/DJI_20260722212904_0203_D.jpg`,
+    `${PHOTO_DIR}/DJI_20260722213403_0216_D.jpg`,
+    `${PHOTO_DIR}/DJI_20260722215623_0226_D.jpg`,
+    `${PHOTO_DIR}/224A8288.jpg`,
+    `${PHOTO_DIR}/224A8297.jpg`,
+    `${PHOTO_DIR}/224A8303.jpg`,
+    `${PHOTO_DIR}/Cotswolds cover pool 1.jpeg`,
+    `${PHOTO_DIR}/Cotswolds Cover Pool 2.jpeg`,
+    `${PHOTO_DIR}/Cotswolds Cover Pool 3.jpeg`,
+    `${PHOTO_DIR}/Hot tub shot no AC cotswolds.png`,
+    `${PHOTO_DIR}/224A8416.jpg`,
+    `${PHOTO_DIR}/224A8419.jpg`,
+    `${PHOTO_DIR}/224A8421.jpg`,
+    `${PHOTO_DIR}/224A8425.jpg`,
+    `${PHOTO_DIR}/224A8434.jpg`,
+    `${PHOTO_DIR}/224A8442.jpg`,
+    `${PHOTO_DIR}/224A8446.jpg`,
+    `${PHOTO_DIR}/224A8451.jpg`,
+    `${PHOTO_DIR}/224A8456.jpg`,
+    `${PHOTO_DIR}/224A8460.jpg`,
+    `${PHOTO_DIR}/224A8465.jpg`,
+    `${PHOTO_DIR}/224A8467.jpg`,
+    `${PHOTO_DIR}/224A8469.jpg`,
+    `${PHOTO_DIR}/224A8471.jpg`,
+    `${PHOTO_DIR}/224A8473.jpg`,
+    `${PHOTO_DIR}/224A8474.jpg`,
+    `${PHOTO_DIR}/224A8477.jpg`,
+    `${PHOTO_DIR}/224A8480.jpg`,
+    `${PHOTO_DIR}/224A8486.jpg`,
+    `${PHOTO_DIR}/224A8497.jpg`,
+    `${PHOTO_DIR}/224A8507.jpg`,
+    `${PHOTO_DIR}/224A8517.jpg`,
+    `${PHOTO_DIR}/224A8518.jpg`,
   ];
-  
-  // Read the directory to get all Cotswolds photos
-  const allPhotos = [
-    ...photoOrder,
-    // All other optimized photos (0 to 80)
-    ...Array.from({length: 81}, (_, i) => `/optimized/cotswolds-all/cotswolds-all-${i}.jpg`).filter(
-      // Filter out the photos that are already in photoOrder to avoid duplicates
-      (path) => !photoOrder.includes(path)
-    )
-  ];
-  
-  // Use the first 25 photos as the optimal ones to display first
-  const optimalPhotos = photoOrder.length >= 25 ? photoOrder : [...photoOrder, ...allPhotos.slice(photoOrder.length, 25 - photoOrder.length)];
-  
-  // All photos for the gallery
-  const photos = allPhotos; // Use all optimized photos
+
+  const photoOrder = photos;
+  const optimalPhotos = photos;
+  const totalImages = photos.length;
 
   const handlePhotoClick = (index: number) => {
     setIsImageLoading(true);
@@ -167,15 +179,6 @@ const CotswoldsUKSohoFarmHouse = () => {
         
         img.onerror = () => {
           console.error(`Failed to load image: ${src}`);
-          // If image fails to load, try a fallback
-          if (src.includes('/optimized/')) {
-            // Try loading from the original source as fallback
-            const fallbackSrc = src.replace('/optimized/cotswolds-gallery/', '/photos/properties/Cotswolds UK - Soho Farm House/');
-            console.log(`Trying fallback: ${fallbackSrc}`);
-            const fallbackImg = new Image();
-            fallbackImg.src = fallbackSrc;
-          }
-          // Still count errors to avoid getting stuck
           handlePreloadProgress();
           resolve();
         };
@@ -248,7 +251,7 @@ const CotswoldsUKSohoFarmHouse = () => {
                       // Fallback to the original image if optimized one fails
                       const target = e.target as HTMLImageElement;
                       target.onerror = null; // Prevent infinite error loops
-                      target.src = "/optimized/cotswolds-cover.jpg"; // Use already optimized cover as fallback
+                      target.src = COVER;
                       console.log("Using fallback for image 1");
                     }}
                   />
@@ -274,7 +277,7 @@ const CotswoldsUKSohoFarmHouse = () => {
                         const target = e.target as HTMLImageElement;
                         target.onerror = null;
                         // Use a generic fallback image that's known to work
-                        target.src = "/optimized/cotswolds-cover.jpg";
+                        target.src = COVER;
                         console.log(`Using fallback for image ${index + 2}`);
                       }}
                     />
@@ -301,7 +304,7 @@ const CotswoldsUKSohoFarmHouse = () => {
                         const target = e.target as HTMLImageElement;
                         target.onerror = null;
                         // Use a generic fallback image that's known to work
-                        target.src = "/optimized/cotswolds-cover.jpg";
+                        target.src = COVER;
                         console.log(`Using fallback for image ${index + 5}`);
                       }}
                     />
@@ -339,12 +342,12 @@ const CotswoldsUKSohoFarmHouse = () => {
                 Step inside the heart of the estate, featuring six beautifully appointed bedrooms designed for comfort and relaxation:
               </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li><strong>Emperor King Bedroom:</strong> A luxurious retreat with a spacious Emperor-size bed.</li>
-                <li><strong>Super King Bedroom:</strong> Offers a supremely comfortable Super King-size bed.</li>
-                <li><strong>Super King Bedroom:</strong> Another haven with a Super King-size bed.</li>
-                <li><strong>Double Bedroom:</strong> Features a cozy double bed.</li>
-                <li><strong>Double Bedroom:</strong> Another inviting room with a double bed.</li>
-                <li><strong>Single Bedroom:</strong> A comfortable single bed.</li>
+                <li><strong>King Bedroom 1:</strong> A luxurious retreat with a spacious Emperor-size bed.</li>
+                <li><strong>King Bedroom 2:</strong> Offers a supremely comfortable Super King-size bed.</li>
+                <li><strong>King Bedroom 3:</strong> Another haven with a Super King-size bed.</li>
+                <li><strong>Double Bedroom 4:</strong> Features a cozy double bed.</li>
+                <li><strong>California King Bedroom 5:</strong> Another inviting room with a Super King bed.</li>
+                <li><strong>Queen Bedroom 6:</strong> A comfortable single bed. Located on the main floor. Only 1 step to access the main floor &amp; bathroom next to the room.</li>
               </ul>
 
               <p>
@@ -358,13 +361,14 @@ const CotswoldsUKSohoFarmHouse = () => {
                 <strong>Annex House (2 Bedrooms):</strong>
               </p>
               <p>
-                Discover a private sanctuary in the Annex, nestled behind the tennis court. It features:
+                Discover a private sanctuary in the Annex, nestled behind the tennis court. Perfect for a family or individuals looking for their own quarters/privacy. Also perfect for step free access to 2 bedrooms &amp; bathroom. It features:
               </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li><strong>King Bedroom:</strong> A comfortable room with a King-size bed.</li>
+                <li><strong>Super King Bedroom 7:</strong> A comfortable room with a King-size bed.</li>
                 <li><strong>Flexible Bedroom:</strong> Can be configured with either two single beds or a King-size bed.</li>
                 <li><strong>Full Bathroom:</strong> A well-appointed full bathroom.</li>
                 <li><strong>Kitchenette:</strong> A compact kitchenette, ideal for preparing light meals and snacks.</li>
+                <li><strong>Single Bed Bedroom 8:</strong> A comfortable room with a single bed.</li>
               </ul>
 
               <p>
@@ -377,13 +381,8 @@ const CotswoldsUKSohoFarmHouse = () => {
                 <li><strong>Sauna:</strong> A traditional sauna for a rejuvenating experience.</li>
                 <li><strong>Hot Tub:</strong> Unwind in the hot tub under the open sky.</li>
                 <li><strong>Cold Plunge Pool:</strong> Refresh yourself with a plunge into the cold pool.</li>
+                <li><strong>Outdoor Heated Pool:</strong> Enjoy our heated pool with 4 lounge chairs located outside the main house. Perfect for a swim on a hot day and a beautiful spot for photos. Pool available all year round and heating is included at no extra charge.</li>
               </ul>
-              <p>
-                <em>*Heated Pool: Brand new swimming pool and lounge chairs located out front of the main house. Pool is heated to 85 degrees year round at no extra charge.</em>
-              </p>
-              <p>
-                <em>*Please note the pool is not available until July 1st.*</em>
-              </p>
 
               <p>
                 Enjoy outdoor activities like bocce ball or horseshoes, or simply relax by the outdoor fire pit under the stars.
@@ -391,9 +390,9 @@ const CotswoldsUKSohoFarmHouse = () => {
 
               <p><strong>Additional Amenities:</strong></p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Electric car charger</li>
+                <li>Electric car charger included.</li>
                 <li>Parking for up to 6 vehicles.</li>
-                <li>Extendable indoor dining table (seats 10, extends to 14)</li>
+                <li>Extendable indoor dining table (seats 12-14 comfortably + 2 bar seats in the dining room for a total of 14-16).</li>
                 <li>2 indoor fireplaces (1 gas, 1 wood-burning)</li>
                 <li>Outdoor dining area and BBQ (available from April 1 to October 30).</li>
               </ul>
@@ -406,16 +405,16 @@ const CotswoldsUKSohoFarmHouse = () => {
                 <em>*Aesop Toiletries, known for their high-end, plant-based formulations and elegant design, are thoughtfully placed in every bedroom, adding a touch of luxury to your stay.</em>
               </p>
               <p>
-                <em>*Full high speed wifi in the main 6-bedroom house and also the Annex!</em>
+                <em>*Full high speed wifi in the main 6-bedroom house and also the 2-bedroom Annex home!</em>
               </p>
               <p>
-                <em>*Cooling fan located in every bedroom and also living spaces, though typically the Cotswolds is cooler at night time compared to London and not needed.</em>
+                <em>*Air Conditioning &amp; Cooling: The home is equipped with powerful split A/C units in the main living room, Master Bedroom 1, and the Annex house. These are strong units that help cool the main home, all bedrooms 1-6, and the 2 bedrooms in the Annex home, effectively, even during the hottest peak summer days. In addition, the Cotswolds naturally cools down significantly in the evenings, especially compared to London. The home&apos;s thick, castle-like stone structure also helps keep the interior naturally cool throughout the day and night. The Annex is tucked away in the trees and shade, allowing it to stay comfortably cool even during peak summer heat. All bedrooms have fans: Fans are also provided in every bedroom and throughout the main living spaces for added comfort.</em>
               </p>
               <p>
-                BBQ available from April 1 to October 30. BBQ not available in winter.
+                Outdoor BBQ available from April 1 to October 30. BBQ not available in winter.
               </p>
               <p>
-                <strong>Important pet rule:</strong> We welcome a maximum of 2 dogs. Subject to a pet fee, automatically adjusted on the listing when toggled.
+                <strong>Pet rule:</strong> We welcome a maximum of 2 dogs for a small fee. Please declare in the guest count :)
               </p>
 
               <h3 className="text-2xl font-bold text-gray-900 pt-2">Guest access</h3>
@@ -435,7 +434,7 @@ const CotswoldsUKSohoFarmHouse = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
               <div className="aspect-[4/3] relative rounded-lg overflow-hidden shadow-md">
                 <img
-                  src="/optimized/cotswolds-description/aerial-1.jpg"
+                  src={`${PHOTO_DIR}/DJI_20260720185020_0008_D.jpg`}
                   alt="Aerial view of the Cotswolds estate"
                   className="object-cover w-full h-full"
                   loading="lazy"
@@ -446,7 +445,7 @@ const CotswoldsUKSohoFarmHouse = () => {
               </div>
               <div className="aspect-[4/3] relative rounded-lg overflow-hidden shadow-md">
                 <img
-                  src="/optimized/cotswolds-description/aerial-2.jpg"
+                  src={`${PHOTO_DIR}/DJI_20260722215623_0226_D.jpg`}
                   alt="Aerial view of the property grounds"
                   className="object-cover w-full h-full"
                   loading="lazy"
@@ -457,7 +456,7 @@ const CotswoldsUKSohoFarmHouse = () => {
               </div>
               <div className="aspect-[4/3] relative rounded-lg overflow-hidden shadow-md">
                 <img
-                  src="/optimized/cotswolds-description/interior-1.jpg"
+                  src={`${PHOTO_DIR}/224A8465.jpg`}
                   alt="Interior view of the Cotswolds estate"
                   className="object-cover w-full h-full"
                   loading="lazy"
@@ -468,7 +467,7 @@ const CotswoldsUKSohoFarmHouse = () => {
               </div>
               <div className="aspect-[4/3] relative rounded-lg overflow-hidden shadow-md">
                 <img
-                  src="/optimized/cotswolds-description/interior-2.jpg"
+                  src={`${PHOTO_DIR}/224A8467.jpg`}
                   alt="Interior living space of the Cotswolds estate"
                   className="object-cover w-full h-full"
                   loading="lazy"
@@ -493,18 +492,19 @@ const CotswoldsUKSohoFarmHouse = () => {
               {[
                 {
                   title: "Interior",
-                  image: "/photos/properties/Cotswolds UK - Soho Farm House/224A5313.jpg",
+                  image: `${PHOTO_DIR}/224A8465.jpg`,
                   items: [
                     "Devol designer kitchen with iconic AGA oven",
                     "Spacious living and dining areas",
                     "Luxury linens and towels",
                     "En-suite bathrooms with premium fixtures",
                     "Two dedicated office spaces",
+                    "Split A/C in living room, Master Bedroom 1, and Annex",
                   ],
                 },
                 {
                   title: "Outdoor",
-                  image: "/optimized/cotswolds-all/cotswolds-all-11.jpg",
+                  image: `${PHOTO_DIR}/DJI_20260720185020_0008_D.jpg`,
                   items: [
                     "Private tennis court with new surface",
                     "Outdoor seating and dining areas",
@@ -515,12 +515,12 @@ const CotswoldsUKSohoFarmHouse = () => {
                 },
                 {
                   title: "Wellness",
-                  image: "/photos/properties/Cotswolds UK - Soho Farm House/012A1323.jpg",
+                  image: `${PHOTO_DIR}/Hot tub shot no AC cotswolds.png`,
                   items: [
                     "Infrared sauna",
                     "Private hot tub",
                     "Refreshing cold plunge pool",
-                    "Welcome package upon arrival",
+                    "Year-round heated outdoor pool",
                     "Concierge services",
                   ],
                 },
@@ -569,42 +569,42 @@ const CotswoldsUKSohoFarmHouse = () => {
                     type: "Emperor King",
                     features: "Ensuite bathroom with spa amenities, luxurious linens",
                     location: "Main House - Master Suite",
-                    image: "/photos/properties/Cotswolds UK - Soho Farm House/224A5405.jpg",
+                    image: `${PHOTO_DIR}/224A8486.jpg`,
                   },
                   {
                     title: "Bedroom 2",
                     type: "Super King",
                     features: "Ensuite bathroom, premium bedding",
                     location: "Main House",
-                    image: "/photos/properties/Cotswolds UK - Soho Farm House/224A5410.jpg",
+                    image: `${PHOTO_DIR}/224A8477.jpg`,
                   },
                   {
                     title: "Bedroom 3",
                     type: "Super King",
                     features: "Shared bathroom access, countryside views",
                     location: "Main House",
-                    image: "/photos/properties/Cotswolds UK - Soho Farm House/224A5417.jpg",
+                    image: `${PHOTO_DIR}/224A8471.jpg`,
                   },
                   {
                     title: "Bedroom 4",
-                    type: "King",
+                    type: "Double",
                     features: "Shared bathroom access, cozy retreat",
                     location: "Main House",
-                    image: "/photos/properties/Cotswolds UK - Soho Farm House/224A5423.jpg",
+                    image: `${PHOTO_DIR}/224A8442.jpg`,
                   },
                   {
                     title: "Bedroom 5",
-                    type: "Double",
+                    type: "California King (Super King)",
                     features: "Shared bathroom access, charming space",
                     location: "Main House",
-                    image: "/photos/properties/Cotswolds UK - Soho Farm House/224A5430.jpg",
+                    image: `${PHOTO_DIR}/224A8416.jpg`,
                   },
                   {
                     title: "Bedroom 6",
                     type: "Single",
-                    features: "Shared bathroom access, perfect for one person",
-                    location: "Main House (main floor no stairs)",
-                    image: "/photos/properties/Cotswolds UK - Soho Farm House/224A5359.jpg",
+                    features: "Shared bathroom access, main floor with one step to access",
+                    location: "Main House (main floor)",
+                    image: `${PHOTO_DIR}/224A8456.jpg`,
                   },
                 ].map((bedroom) => (
                   <div key={bedroom.title} className="bg-white rounded-xl shadow-md overflow-hidden">
@@ -633,24 +633,24 @@ const CotswoldsUKSohoFarmHouse = () => {
             <div className="mb-10">
               <h3 className="text-2xl font-bold mb-3">Annex House (40m²)</h3>
               <p className="text-gray-700 mb-8">
-                Tucked away behind the newly surfaced private tennis court, the annex is a peaceful escape of its own. It features a full bathroom and a compact kitchenette, perfect for early risers or night owls who want their own space.
+                Tucked away behind the newly surfaced private tennis court, the annex is a peaceful escape of its own — perfect for families or guests who want their own quarters, privacy, or step-free access to two bedrooms and a bathroom. It features a full bathroom and a compact kitchenette, ideal for early risers or night owls who want their own space.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {[
                   {
                     title: "Bedroom 7",
-                    type: "King",
-                    features: "Private bathroom access, secluded retreat",
+                    type: "Super King (King-size bed)",
+                    features: "Private bathroom access, secluded annex retreat",
                     location: "Annex House",
-                    image: "/photos/properties/Cotswolds UK - Soho Farm House/224A7847.jpg",
+                    image: `${PHOTO_DIR}/224A8480.jpg`,
                   },
                   {
                     title: "Bedroom 8",
-                    type: "Flexible (Two Singles or King)",
-                    features: "Shared bathroom in annex, adaptable configuration",
+                    type: "Single",
+                    features: "Shared bathroom in annex, comfortable single bed",
                     location: "Annex House",
-                    image: "/photos/properties/Cotswolds UK - Soho Farm House/224A7863.jpg",
+                    image: `${PHOTO_DIR}/224A8473.jpg`,
                   },
                 ].map((bedroom) => (
                   <div key={bedroom.title} className="bg-white rounded-xl shadow-md overflow-hidden">
@@ -729,10 +729,9 @@ const CotswoldsUKSohoFarmHouse = () => {
                           // Use a working fallback image
                           if (index < 20) {
                             // For important images, use our optimized cover
-                            target.src = "/optimized/cotswolds-cover.jpg";
+                            target.src = COVER;
                           } else {
-                            // For less important images, use whatever is available
-                            target.src = "/optimized/cotswolds-gallery/photo-1.jpg";
+                            target.src = COVER;
                           }
                           console.log(`Using fallback for modal image ${index + 1}`);
                         }}
@@ -838,12 +837,10 @@ const CotswoldsUKSohoFarmHouse = () => {
                       const target = e.target as HTMLImageElement;
                       target.onerror = null;
                       
-                      // Try using the optimized version if available
-                      if (selectedPhotoIndex !== null && selectedPhotoIndex < 20) {
-                        target.src = `/optimized/cotswolds-gallery/photo-${selectedPhotoIndex + 1}.jpg`;
+                      if (selectedPhotoIndex !== null) {
+                        target.src = COVER;
                       } else {
-                        // Otherwise use a generic fallback
-                        target.src = "/optimized/cotswolds-cover.jpg";
+                        target.src = COVER;
                       }
                       console.log(`Using fallback for fullscreen image ${selectedPhotoIndex !== null ? selectedPhotoIndex + 1 : ''}`);
                       handleImageLoad(); // Make sure we still remove the loading state
