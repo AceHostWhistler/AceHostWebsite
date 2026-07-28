@@ -227,7 +227,7 @@ const CotswoldsUKSohoFarmHouse = ({ photos }: CotswoldsPageProps) => {
             guests={15}
             bedrooms={8}
             bathrooms={5}
-            priceRange="£1,100-£2,300 per night | 3 night minimum"
+            priceRange="2-3 night minimum. £1,200-£3,100 per night | Dependent on season, day of week, holidays, etc."
             contactLink="/contact"
             airbnbLink={AIRBNB_LINK}
             amenities={getWorldwideAmenities("cotswolds-uk-soho-farm-house")}

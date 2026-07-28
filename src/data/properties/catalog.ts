@@ -1241,7 +1241,7 @@ export const propertyCategories: PropertyCategory[] = [
             guests: 15,
             bedrooms: 8,
             bathrooms: 5,
-            priceRange: "£1,100-£2,300 per night | 3 night minimum",
+            priceRange: "2-3 night minimum. £1,200-£3,100 per night | Dependent on season, day of week, holidays, etc.",
             location: "Cotswolds, United Kingdom",
             description: "Designer Stone Estate Near Soho Farmhouse – 8 Bedroom, Spa, Tennis Court, & Annex. Welcome to your countryside dream retreat, just 4 minutes by car (or a scenic 30-minute walk through a private trail) from the world-famous Soho Farmhouse. This beautifully renovated 8-bedroom, 5-bathroom stone estate offers over 320m² of luxurious living space across two dwellings, all set on a stunning and serene 2-acre property.",
             features: [
@@ -1736,7 +1736,7 @@ export const propertyCategories: PropertyCategory[] = [
             guests: 15,
             bedrooms: 8,
             bathrooms: 5,
-            priceRange: "£1,100-£2,300 per night | 3 night minimum",
+            priceRange: "2-3 night minimum. £1,200-£3,100 per night | Dependent on season, day of week, holidays, etc.",
             location: "Cotswolds, United Kingdom",
             description: "Designer Stone Estate Near Soho Farmhouse – 8 Bedroom, Spa, Tennis Court, & Annex. Welcome to your countryside dream retreat, just 4 minutes by car (or a scenic 30-minute walk through a private trail) from the world-famous Soho Farmhouse. This beautifully renovated 8-bedroom, 5-bathroom stone estate offers over 320m² of luxurious living space across two dwellings, all set on a stunning and serene 2-acre property.",
             features: [
