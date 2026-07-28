@@ -25,7 +25,6 @@ const HERO = "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png
 const HERO_URL = `https://acehost.ca${encodeURI(HERO)}`;
 const PUBLISH_DATE = "July 28, 2026";
 const ISO_MOD = "2026-07-28T12:00:00-07:00";
-const CONTACT_URL = "https://www.acehost.ca/contact";
 
 const META = {
   title: "Where to Stay in Whistler in Winter | AceHost",
