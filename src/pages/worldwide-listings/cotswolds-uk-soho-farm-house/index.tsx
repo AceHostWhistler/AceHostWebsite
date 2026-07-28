@@ -1,6 +1,7 @@
 import React, { useCallback, useState, useEffect } from "react";
 import { blockGalleryTouchPropagation, usePhotoSwipeNavigation } from "@/hooks/usePhotoSwipeNavigation";
 import Head from "next/head";
+import Image from "next/image";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
@@ -18,27 +19,35 @@ import {
   editorialMainClass,
 } from "@/lib/editorialPropertyLayout";
 import { getWorldwideAmenities } from "@/data/worldwideAmenities";
-import { COTSWOLDS_COVER, COTSWOLDS_PHOTOS } from "@/data/cotswoldsPhotos";
+import {
+  COTSWOLDS_COVER_GALLERY,
+  COTSWOLDS_FULL_PHOTOS,
+  COTSWOLDS_GALLERY_PHOTOS,
+  COTSWOLDS_PHOTOS,
+  getCotswoldsGallerySrc,
+} from "@/data/cotswoldsPhotos";
 
 const PHOTO_DIR = "/photos/properties/Cotswolds UK - Soho Farm House";
-const COVER = COTSWOLDS_COVER;
+const COVER = COTSWOLDS_COVER_GALLERY;
+const BLUR_PLACEHOLDER =
+  "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U1ZTdlYiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmM2Y0ZjYiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4=";
 const AIRBNB_LINK =
   "https://www.airbnb.ca/rooms/1414129878809697902?guests=1&adults=1&s=67&unique_share_id=ba3bff7b-bc57-416c-bcd6-96b0943cfe51";
 
 interface CotswoldsPageProps {
   photos: string[];
+  galleryPhotos: string[];
+  fullPhotos: string[];
 }
 
-const CotswoldsUKSohoFarmHouse = ({ photos = COTSWOLDS_PHOTOS }: CotswoldsPageProps) => {
+const CotswoldsUKSohoFarmHouse = ({
+  photos = COTSWOLDS_PHOTOS,
+  galleryPhotos = COTSWOLDS_GALLERY_PHOTOS,
+  fullPhotos = COTSWOLDS_FULL_PHOTOS,
+}: CotswoldsPageProps) => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [isImageLoading, setIsImageLoading] = useState(false);
-  const [imagesLoaded, setImagesLoaded] = useState(0);
-
-  const cacheVersion = "v12";
-
-  const photoOrder = photos;
-  const optimalPhotos = photos;
 
   const handlePhotoClick = (index: number) => {
     setIsImageLoading(true);
@@ -51,10 +60,6 @@ const CotswoldsUKSohoFarmHouse = ({ photos = COTSWOLDS_PHOTOS }: CotswoldsPagePr
 
   const handleImageLoad = () => {
     setIsImageLoading(false);
-  };
-
-  const handlePreloadProgress = () => {
-    setImagesLoaded(prev => prev + 1);
   };
 
   const navigatePhoto = (direction: "prev" | "next") => {
@@ -126,37 +131,6 @@ const CotswoldsUKSohoFarmHouse = ({ photos = COTSWOLDS_PHOTOS }: CotswoldsPagePr
     };
   }, [showAllPhotos, selectedPhotoIndex]);
 
-  // Improved preloading for faster gallery display with error handling
-  useEffect(() => {
-    // Preload first 20 optimized images for initial display
-    const preloadImages = photos.slice(0, 20).map(src => {
-      return new Promise<void>((resolve) => {
-        const img = new Image();
-        
-        // Set image loading priority
-        img.loading = 'eager';
-        img.fetchPriority = 'high';
-        
-        // Add cache-busting parameter
-        img.src = `${src}?v=${cacheVersion}`;
-        
-        img.onload = () => {
-          handlePreloadProgress();
-          resolve();
-        };
-        
-        img.onerror = () => {
-          console.error(`Failed to load image: ${src}`);
-          handlePreloadProgress();
-          resolve();
-        };
-      });
-    });
-
-    // Process in batches for better performance
-    Promise.all(preloadImages);
-  }, []);
-
   return (
     <>
       <Head>
@@ -165,10 +139,8 @@ const CotswoldsUKSohoFarmHouse = ({ photos = COTSWOLDS_PHOTOS }: CotswoldsPagePr
           name="description"
           content="Experience luxury at this designer stone estate near Soho Farmhouse in the Cotswolds, UK. This exclusive 8-bedroom property offers spa facilities, a tennis court, and an annex house, all set on a stunning 2-acre property just minutes from Soho Farmhouse."
         />
-        {/* Preload critical images */}
-        {photoOrder.slice(0, 3).map((src, index) => (
-          <link key={index} rel="preload" href={src} as="image" />
-        ))}
+        {/* Preload hero gallery image for faster first paint */}
+        <link rel="preload" href={COVER} as="image" type="image/webp" />
       </Head>
 
       <div className="min-h-screen bg-white">
@@ -188,42 +160,27 @@ const CotswoldsUKSohoFarmHouse = ({ photos = COTSWOLDS_PHOTOS }: CotswoldsPagePr
             onMorePhotosClick={openGallery}
           />
 
-          {/* Loading Indicator */}
-          {imagesLoaded < 12 && (
-            <div className="max-w-7xl mx-auto px-4 mb-10 text-center">
-              <div className="flex justify-center items-center mb-4">
-                <div className="w-8 h-8 border-4 border-gray-800 border-t-transparent rounded-full animate-spin"></div>
-              </div>
-              <p className="text-gray-600">Loading gallery ({Math.min(imagesLoaded, 12)}/12 images)...</p>
-            </div>
-          )}
-
-          {/* Photo Grid - Only show once essential images are loaded */}
-          <div className={`${editorialGalleryWrapperClass} ${imagesLoaded < 12 ? 'opacity-0' : 'opacity-100 transition-opacity duration-500'}`} id="photos">
+          {/* Photo Grid */}
+          <div className={editorialGalleryWrapperClass} id="photos">
             <div className={editorialGalleryGridClass}>
-              {photos.slice(0, 18).map((photo, index) => (
+              {galleryPhotos.slice(0, 18).map((photo, index) => (
                 <div
                   key={photo}
                   className={editorialGalleryTileClass}
                   onClick={() => handlePhotoClick(index)}
                 >
-                  <div className="w-full h-full bg-gray-200">
-                    <img
-                      src={`${photo}?v=${cacheVersion}`}
-                      alt={`Cotswolds UK - Soho Farm House ${index + 1}`}
-                      className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                      loading={index < 12 ? "eager" : "lazy"}
-                      fetchPriority={index === 0 ? "high" : undefined}
-                      width={640}
-                      height={480}
-                      style={{ aspectRatio: '4/3', objectFit: 'cover' }}
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.onerror = null;
-                        target.src = COVER;
-                      }}
-                    />
-                  </div>
+                  <Image
+                    src={photo}
+                    alt={`Cotswolds UK - Soho Farm House ${index + 1}`}
+                    fill
+                    sizes={editorialGalleryImageSizes}
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                    priority={index < 4}
+                    loading={index < 4 ? "eager" : "lazy"}
+                    quality={index < 6 ? 85 : 75}
+                    placeholder="blur"
+                    blurDataURL={BLUR_PLACEHOLDER}
+                  />
                 </div>
               ))}
             </div>
@@ -348,47 +305,43 @@ const CotswoldsUKSohoFarmHouse = ({ photos = COTSWOLDS_PHOTOS }: CotswoldsPagePr
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
               <div className="aspect-[4/3] relative rounded-lg overflow-hidden shadow-md">
-                <img
-                  src={`${PHOTO_DIR}/DJI_20260720185020_0008_D.jpg`}
+                <Image
+                  src={getCotswoldsGallerySrc(`${PHOTO_DIR}/DJI_20260720185020_0008_D.jpg`)}
                   alt="Aerial view of the Cotswolds estate"
-                  className="object-cover w-full h-full"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   loading="lazy"
-                  width={600}
-                  height={450}
-                  style={{ aspectRatio: '4/3', objectFit: 'cover' }}
                 />
               </div>
               <div className="aspect-[4/3] relative rounded-lg overflow-hidden shadow-md">
-                <img
-                  src={`${PHOTO_DIR}/DJI_20260722215623_0226_D.jpg`}
+                <Image
+                  src={getCotswoldsGallerySrc(`${PHOTO_DIR}/DJI_20260722215623_0226_D.jpg`)}
                   alt="Aerial view of the property grounds"
-                  className="object-cover w-full h-full"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   loading="lazy"
-                  width={600}
-                  height={450}
-                  style={{ aspectRatio: '4/3', objectFit: 'cover' }}
                 />
               </div>
               <div className="aspect-[4/3] relative rounded-lg overflow-hidden shadow-md">
-                <img
-                  src={`${PHOTO_DIR}/224A5352.jpg`}
+                <Image
+                  src={getCotswoldsGallerySrc(`${PHOTO_DIR}/224A5352.jpg`)}
                   alt="Interior view of the Cotswolds estate"
-                  className="object-cover w-full h-full"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   loading="lazy"
-                  width={600}
-                  height={450}
-                  style={{ aspectRatio: '4/3', objectFit: 'cover' }}
                 />
               </div>
               <div className="aspect-[4/3] relative rounded-lg overflow-hidden shadow-md">
-                <img
-                  src={`${PHOTO_DIR}/224A5450.jpg`}
+                <Image
+                  src={getCotswoldsGallerySrc(`${PHOTO_DIR}/224A5450.jpg`)}
                   alt="Interior living space of the Cotswolds estate"
-                  className="object-cover w-full h-full"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   loading="lazy"
-                  width={600}
-                  height={450}
-                  style={{ aspectRatio: '4/3', objectFit: 'cover' }}
                 />
               </div>
             </div>
@@ -442,14 +395,13 @@ const CotswoldsUKSohoFarmHouse = ({ photos = COTSWOLDS_PHOTOS }: CotswoldsPagePr
               ].map((amenity) => (
                 <div key={amenity.title} className="bg-white rounded-xl shadow-md overflow-hidden">
                   <div className="relative h-44 bg-gray-200">
-                    <img
-                      src={amenity.image}
+                    <Image
+                      src={getCotswoldsGallerySrc(amenity.image)}
                       alt={`${amenity.title} - Cotswolds Estate`}
-                      className="object-cover w-full h-full"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       loading="lazy"
-                      width={420}
-                      height={280}
-                      style={{ objectFit: "cover" }}
                     />
                   </div>
                   <div className="p-6">
@@ -524,14 +476,13 @@ const CotswoldsUKSohoFarmHouse = ({ photos = COTSWOLDS_PHOTOS }: CotswoldsPagePr
                 ].map((bedroom) => (
                   <div key={bedroom.title} className="bg-white rounded-xl shadow-md overflow-hidden">
                     <div className="relative h-44 bg-gray-200">
-                      <img
-                        src={bedroom.image}
+                      <Image
+                        src={getCotswoldsGallerySrc(bedroom.image)}
                         alt={`${bedroom.title} - Cotswolds Estate`}
-                        className="object-cover w-full h-full"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 640px) 100vw, 33vw"
                         loading="lazy"
-                        width={420}
-                        height={280}
-                        style={{ objectFit: "cover" }}
                       />
                     </div>
                     <div className="p-5">
@@ -570,14 +521,13 @@ const CotswoldsUKSohoFarmHouse = ({ photos = COTSWOLDS_PHOTOS }: CotswoldsPagePr
                 ].map((bedroom) => (
                   <div key={bedroom.title} className="bg-white rounded-xl shadow-md overflow-hidden">
                     <div className="relative h-44 bg-gray-200">
-                      <img
-                        src={bedroom.image}
+                      <Image
+                        src={getCotswoldsGallerySrc(bedroom.image)}
                         alt={`${bedroom.title} - Cotswolds Estate`}
-                        className="object-cover w-full h-full"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 640px) 100vw, 33vw"
                         loading="lazy"
-                        width={420}
-                        height={280}
-                        style={{ objectFit: "cover" }}
                       />
                     </div>
                     <div className="p-5">
@@ -630,36 +580,21 @@ const CotswoldsUKSohoFarmHouse = ({ photos = COTSWOLDS_PHOTOS }: CotswoldsPagePr
                 </button>
               </div>
               <div className={`${editorialGalleryModalWrapperClass} ${editorialGalleryGridClass}`}>
-                {photos.map((photo, index) => (
+                {galleryPhotos.map((photo, index) => (
                   <div
-                    key={index}
-                    className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer bg-gray-800"
+                    key={photo}
+                    className={`${editorialGalleryModalTileClass} bg-gray-800`}
                     onClick={() => handlePhotoClick(index)}
                   >
-                    <div className="w-full h-full">
-                      <img
-                        src={index < 20 ? `${photo}?v=${cacheVersion}` : photo} 
-                        alt={`Cotswolds UK - Soho Farm House photo ${index + 1}`}
-                        className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                        loading={index < 20 ? "eager" : "lazy"}
-                        width={300}
-                        height={225}
-                        style={{ aspectRatio: '4/3', objectFit: 'cover' }}
-                        onError={(e) => {
-                          // Fallback if image fails to load
-                          const target = e.target as HTMLImageElement;
-                          target.onerror = null;
-                          // Use a working fallback image
-                          if (index < 20) {
-                            // For important images, use our optimized cover
-                            target.src = COVER;
-                          } else {
-                            target.src = COVER;
-                          }
-                          console.log(`Using fallback for modal image ${index + 1}`);
-                        }}
-                      />
-                    </div>
+                    <Image
+                      src={photo}
+                      alt={`Cotswolds UK - Soho Farm House photo ${index + 1}`}
+                      fill
+                      sizes={editorialGalleryImageSizes}
+                      className="object-cover hover:scale-105 transition-transform duration-300"
+                      loading={index < 12 ? "eager" : "lazy"}
+                      quality={75}
+                    />
                   </div>
                 ))}
               </div>
@@ -738,35 +673,28 @@ const CotswoldsUKSohoFarmHouse = ({ photos = COTSWOLDS_PHOTOS }: CotswoldsPagePr
                 )}
                 <div className="flex items-center justify-center h-full">
                   <img
-                    src={selectedPhotoIndex !== null ? 
-                      (selectedPhotoIndex < 20 ? 
-                        `${photos[selectedPhotoIndex]}?v=${cacheVersion}` : 
-                        photos[selectedPhotoIndex]) 
-                      : ''}
-                    alt={`Cotswolds UK - Soho Farm House photo ${selectedPhotoIndex !== null ? selectedPhotoIndex + 1 : ''}`}
-                    className={`transition-opacity duration-300 ${isImageLoading ? 'opacity-0' : 'opacity-100'}`}
+                    src={
+                      selectedPhotoIndex !== null
+                        ? fullPhotos[selectedPhotoIndex]
+                        : ""
+                    }
+                    alt={`Cotswolds UK - Soho Farm House photo ${selectedPhotoIndex !== null ? selectedPhotoIndex + 1 : ""}`}
+                    className={`transition-opacity duration-300 ${isImageLoading ? "opacity-0" : "opacity-100"}`}
                     onLoad={handleImageLoad}
                     loading="eager"
                     fetchPriority="high"
-                    style={{ 
-                      maxHeight: '100%', 
-                      maxWidth: '100%', 
-                      width: 'auto',
-                      height: 'auto',
-                      objectFit: 'contain'
+                    style={{
+                      maxHeight: "100%",
+                      maxWidth: "100%",
+                      width: "auto",
+                      height: "auto",
+                      objectFit: "contain",
                     }}
                     onError={(e) => {
-                      // Fallback for full-screen view if image fails to load
                       const target = e.target as HTMLImageElement;
                       target.onerror = null;
-                      
-                      if (selectedPhotoIndex !== null) {
-                        target.src = COVER;
-                      } else {
-                        target.src = COVER;
-                      }
-                      console.log(`Using fallback for fullscreen image ${selectedPhotoIndex !== null ? selectedPhotoIndex + 1 : ''}`);
-                      handleImageLoad(); // Make sure we still remove the loading state
+                      target.src = COVER;
+                      handleImageLoad();
                     }}
                   />
                 </div>
@@ -790,6 +718,8 @@ export const getStaticProps: GetStaticProps<CotswoldsPageProps> = async ({
   return {
     props: {
       photos: COTSWOLDS_PHOTOS,
+      galleryPhotos: COTSWOLDS_GALLERY_PHOTOS,
+      fullPhotos: COTSWOLDS_FULL_PHOTOS,
       ...(await serverSideTranslations(locale || "en", ["common"])),
     },
   };
