@@ -12,6 +12,7 @@ import {
   townhomeProperties,
   type Whistler28Property,
 } from "@/data/blog/whistler-28-places-properties";
+import { airbnbButtonBlog } from "@/lib/airbnbButtonStyles";
 
 const SLUG = "28-best-places-to-stay-in-whistler";
 const CANONICAL_URL = `https://acehost.ca/post/${SLUG}`;
@@ -111,7 +112,7 @@ function PropertyCard({ property }: { property: Whistler28Property }) {
             href={property.bookUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-black text-white px-5 py-3 rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium"
+            className={airbnbButtonBlog}
           >
             Book on Airbnb
           </a>

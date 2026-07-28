@@ -2,6 +2,7 @@ import React from "react";
 import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Image from "next/image";
 import Link from "next/link";
+import { airbnbButtonMd } from "@/lib/airbnbButtonStyles";
 import type { ListingDetailsProps } from "../types";
 
 export default function WhistlerVillagePenthouseDetails({ photos }: ListingDetailsProps) {
@@ -172,7 +173,7 @@ export default function WhistlerVillagePenthouseDetails({ photos }: ListingDetai
                       href="https://www.airbnb.ca/rooms/1471251206220643818?guests=1&adults=1&s=67&unique_share_id=0ec28644-49fa-4b63-9276-7e5f5c6a1153"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block bg-black hover:bg-gray-800 text-white py-3 px-8 rounded-lg font-medium transition-colors"
+                      className={airbnbButtonMd}
                     >
                       Book on Airbnb
                     </a>

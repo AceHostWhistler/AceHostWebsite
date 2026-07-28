@@ -6,6 +6,7 @@ import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { airbnbButtonBlog } from "@/lib/airbnbButtonStyles";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 
 const SLUG = "fifa-vancouver-whistler-the-luxury-whistler-fifa-experience";
@@ -540,7 +541,7 @@ export default function BlogPost() {
                     href={property.bookUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-black text-white px-5 py-3 rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium"
+                    className={airbnbButtonBlog}
                   >
                     Book on Airbnb
                   </a>
@@ -586,7 +587,7 @@ export default function BlogPost() {
                     href={property.bookUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-black text-white px-5 py-3 rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium"
+                    className={airbnbButtonBlog}
                   >
                     Book on Airbnb
                   </a>
@@ -637,7 +638,7 @@ export default function BlogPost() {
                     href={property.bookUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-black text-white px-5 py-3 rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium"
+                    className={airbnbButtonBlog}
                   >
                     Book on Airbnb
                   </a>

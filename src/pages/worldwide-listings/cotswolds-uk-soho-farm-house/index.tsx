@@ -19,6 +19,7 @@ import {
   editorialMainClass,
 } from "@/lib/editorialPropertyLayout";
 import { getWorldwideAmenities } from "@/data/worldwideAmenities";
+import { airbnbButtonLg } from "@/lib/airbnbButtonStyles";
 import {
   COTSWOLDS_COVER_GALLERY,
   COTSWOLDS_FULL_PHOTOS,
@@ -558,7 +559,7 @@ const CotswoldsUKSohoFarmHouse = ({
                 href={AIRBNB_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-8 py-4 bg-red-600 hover:bg-red-700 text-white rounded-md font-medium text-lg transition-colors"
+                className={airbnbButtonLg}
               >
                 Book on Airbnb
               </a>

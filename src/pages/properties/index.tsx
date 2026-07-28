@@ -4,6 +4,7 @@ import {
   getPropertyContactLink,
   shouldUseContactForBooking,
 } from "@/data/propertyAirbnbLinks";
+import { airbnbButtonCard } from "@/lib/airbnbButtonStyles";
 import Navigation from "@/components/Navigation";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -363,7 +364,7 @@ export default function Properties() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
-                className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
+                className={airbnbButtonCard}
               >
                 Book Now
               </a>

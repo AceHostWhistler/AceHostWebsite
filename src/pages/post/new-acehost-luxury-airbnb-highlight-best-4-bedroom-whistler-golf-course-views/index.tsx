@@ -5,6 +5,7 @@ import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+import { airbnbButtonHighlight } from "@/lib/airbnbButtonStyles";
 
 export default function BlogPost() {
   const publishDate = "January 16, 2025";
@@ -353,7 +354,7 @@ export default function BlogPost() {
                   href="https://www.airbnb.ca/rooms/1493522257280258231?guests=1&adults=1&s=67&unique_share_id=6211a691-99f0-457c-beba-f5793e52f927"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center space-x-2"
+                  className={airbnbButtonHighlight}
                 >
                   <span>Book on Airbnb</span>
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

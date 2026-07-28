@@ -3,6 +3,7 @@ import { Users, Bed, Bath, Camera, FileText, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { airbnbButtonHeader } from "@/lib/airbnbButtonStyles";
 
 interface PropertyHeaderProps {
   title: string;
@@ -327,7 +328,7 @@ const PropertyHeader: React.FC<PropertyHeaderProps> = ({
                 href={airbnbLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={primaryCtaClass}
+                className={airbnbButtonHeader}
               >
                 Book on Airbnb
                 <ArrowUpRight className="h-4 w-4 opacity-70 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

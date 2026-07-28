@@ -2,6 +2,7 @@ import React from "react";
 import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Image from "next/image";
 import Link from "next/link";
+import { airbnbButtonInline } from "@/lib/airbnbButtonStyles";
 import type { ListingDetailsProps } from "../types";
 
 export default function PanoramicEstateKadenwoodDetails({ photos }: ListingDetailsProps) {
@@ -412,7 +413,7 @@ export default function PanoramicEstateKadenwoodDetails({ photos }: ListingDetai
                         href="https://www.airbnb.ca/rooms/1104637821836596397?guests=1&adults=1&s=67&unique_share_id=67164555-993c-40dc-b188-23ffe0755654"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="sm:w-auto px-6 py-3 border border-black text-black hover:bg-gray-50 rounded text-center font-medium"
+                        className={airbnbButtonInline}
                       >
                         View on Airbnb
                       </a>

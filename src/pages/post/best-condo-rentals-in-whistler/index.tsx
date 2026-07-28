@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
+import { airbnbButtonSm } from "@/lib/airbnbButtonStyles";
 import Footer from "@/components/Footer";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 
@@ -137,7 +138,7 @@ export default function BlogPost() {
               <p className="text-blue-600 font-medium mt-2 mb-6">
                 <a 
                   href="https://www.airbnb.ca/rooms/1461637483646115205?guests=1&adults=1&s=67&unique_share_id=9b6640b9-138d-4627-bea4-cb2155e32c72"
-                  className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className={`${airbnbButtonSm} mt-2 mb-6`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -189,7 +190,7 @@ export default function BlogPost() {
               <p className="text-blue-600 font-medium mt-2 mb-6">
                 <a 
                   href="https://www.airbnb.ca/rooms/1249285355870765792?guests=1&adults=1&s=67&unique_share_id=0ecd2877-9bf3-4bcc-92f2-5579a0af8e7f"
-                  className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className={`${airbnbButtonSm} mt-2 mb-6`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -241,7 +242,7 @@ export default function BlogPost() {
               <p className="text-blue-600 font-medium mt-2 mb-6">
                 <a 
                   href="https://www.airbnb.ca/rooms/50025973?preview_for_ml=true&source_impression_id=p3_1699290307_SHcNx7EoXySmn6j5"
-                  className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className={`${airbnbButtonSm} mt-2 mb-6`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -293,7 +294,7 @@ export default function BlogPost() {
               <p className="text-blue-600 font-medium mt-2 mb-6">
                 <a 
                   href="https://www.airbnb.ca/rooms/1300258964918876012?guests=1&adults=1&s=67&unique_share_id=41b635e9-00a9-441c-a134-056b2b3814ac"
-                  className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className={`${airbnbButtonSm} mt-2 mb-6`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -345,7 +346,7 @@ export default function BlogPost() {
               <p className="text-blue-600 font-medium mt-2 mb-6">
                 <a 
                   href="https://www.airbnb.com/rooms/1072474554447345991?guests=1&adults=1&s=67&unique_share_id=e556b35c-05b5-40b6-91e1-5304ffafc23b"
-                  className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className={`${airbnbButtonSm} mt-2 mb-6`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -397,7 +398,7 @@ export default function BlogPost() {
               <p className="text-blue-600 font-medium mt-2 mb-6">
                 <a 
                   href="https://www.airbnb.ca/rooms/1015303987589924725?guests=1&adults=1&s=67&unique_share_id=5e912eb5-5445-4797-81ec-df21817dd143"
-                  className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className={`${airbnbButtonSm} mt-2 mb-6`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -449,7 +450,7 @@ export default function BlogPost() {
               <p className="text-blue-600 font-medium mt-2 mb-6">
                 <a 
                   href="https://www.airbnb.ca/rooms/1370367404602078616?guests=1&adults=1&s=67&unique_share_id=eb381b39-e67d-44ea-9d7c-2de2e1b5fa20"
-                  className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className={`${airbnbButtonSm} mt-2 mb-6`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

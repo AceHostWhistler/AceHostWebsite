@@ -19,6 +19,7 @@ import {
   editorialMainClass,
 } from "@/lib/editorialPropertyLayout";
 import { getWorldwideAmenities } from "@/data/worldwideAmenities";
+import { airbnbButtonLg } from "@/lib/airbnbButtonStyles";
 
 const BLUR_PLACEHOLDER =
   "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U1ZTdlYiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmM2Y0ZjYiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4=";
@@ -326,7 +327,7 @@ const LuxeScandinaveRetreat = () => {
               href="https://www.airbnb.ca/rooms/1313847204355627326?guests=1&adults=1&s=67&unique_share_id=507dffd6-1f84-49a3-99eb-d10f493a65a6"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-8 py-4 bg-black hover:bg-gray-900 text-white rounded-md font-medium text-lg transition-colors"
+              className={airbnbButtonLg}
             >
               Book on Airbnb
             </a>

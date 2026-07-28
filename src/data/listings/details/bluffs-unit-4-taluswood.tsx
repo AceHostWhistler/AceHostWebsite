@@ -7,6 +7,7 @@ import {
   BLUFFS_AIRBNB_LINK,
   BLUFFS_AIRBNB_ROOM_ID,
 } from "../bluffsAirbnbLink";
+import { airbnbButtonSm } from "@/lib/airbnbButtonStyles";
 
 export default function BluffsUnit4TaluswoodDetails({ photos }: ListingDetailsProps) {
   return (
@@ -41,7 +42,7 @@ export default function BluffsUnit4TaluswoodDetails({ photos }: ListingDetailsPr
               href={BLUFFS_AIRBNB_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-block text-blue-600 text-sm font-medium hover:text-blue-800 transition-colors"
+              className={`mt-4 inline-block ${airbnbButtonSm}`}
             >
               View on Airbnb
             </a>
