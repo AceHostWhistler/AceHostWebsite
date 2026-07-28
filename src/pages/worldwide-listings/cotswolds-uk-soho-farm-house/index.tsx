@@ -28,10 +28,25 @@ const PHOTO_DIR_FS = path.join(
 );
 const COVER_FILENAME = "224A8292.jpg";
 const COVER = `${PHOTO_DIR}/${COVER_FILENAME}`;
+const AIRBNB_LINK =
+  "https://www.airbnb.ca/rooms/1414129878809697902?guests=1&adults=1&s=67&unique_share_id=ba3bff7b-bc57-416c-bcd6-96b0943cfe51";
 const IMAGE_EXT = /\.(jpe?g|png|webp|gif)$/i;
+const PINNED_GALLERY_COUNT = 6;
 
-interface CotswoldsPageProps {
-  photos: string[];
+function seededShuffle<T>(items: T[], seed: string): T[] {
+  const shuffled = [...items];
+  let hash = 0;
+  for (let i = 0; i < seed.length; i++) {
+    hash = (Math.imul(31, hash) + seed.charCodeAt(i)) | 0;
+  }
+
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    hash = (Math.imul(1664525, hash) + 1013904223) | 0;
+    const j = (hash >>> 0) % (i + 1);
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+
+  return shuffled;
 }
 
 function discoverCotswoldsPhotos(): string[] {
@@ -39,11 +54,25 @@ function discoverCotswoldsPhotos(): string[] {
     .readdirSync(PHOTO_DIR_FS)
     .filter((file) => IMAGE_EXT.test(file));
 
-  const rest = files
+  const sortedRest = files
     .filter((file) => file !== COVER_FILENAME)
     .sort((a, b) => a.localeCompare(b));
 
-  return [COVER_FILENAME, ...rest].map((file) => `${PHOTO_DIR}/${file}`);
+  const pinned = [
+    COVER_FILENAME,
+    ...sortedRest.slice(0, PINNED_GALLERY_COUNT - 1),
+  ];
+  const remaining = sortedRest.slice(PINNED_GALLERY_COUNT - 1);
+  const mixedRest = seededShuffle(
+    remaining,
+    "cotswolds-soho-farm-house-gallery"
+  );
+
+  return [...pinned, ...mixedRest].map((file) => `${PHOTO_DIR}/${file}`);
+}
+
+interface CotswoldsPageProps {
+  photos: string[];
 }
 
 const CotswoldsUKSohoFarmHouse = ({ photos }: CotswoldsPageProps) => {
@@ -200,7 +229,7 @@ const CotswoldsUKSohoFarmHouse = ({ photos }: CotswoldsPageProps) => {
             bathrooms={5}
             priceRange="£1,100-£2,300 per night | 3 night minimum"
             contactLink="/contact"
-            airbnbLink="https://www.airbnb.ca/rooms/1414129878809697902?guests=1&adults=1&s=67&unique_share_id=ba3bff7b-bc57-416c-bcd6-96b0943cfe51"
+            airbnbLink={AIRBNB_LINK}
             amenities={getWorldwideAmenities("cotswolds-uk-soho-farm-house")}
             onMorePhotosClick={openGallery}
           />
@@ -279,7 +308,7 @@ const CotswoldsUKSohoFarmHouse = ({ photos }: CotswoldsPageProps) => {
                 <li><strong>King Bedroom 3:</strong> Another haven with a Super King-size bed.</li>
                 <li><strong>Double Bedroom 4:</strong> Features a cozy double bed.</li>
                 <li><strong>California King Bedroom 5:</strong> Another inviting room with a Super King bed.</li>
-                <li><strong>Queen Bedroom 6:</strong> A comfortable single bed. Located on the main floor. Only 1 step to access the main floor &amp; bathroom next to the room.</li>
+                <li><strong>Queen Bedroom 6:</strong> A comfortable queen bed. Located on the main floor. Only 1 step to access the main floor &amp; bathroom next to the room.</li>
               </ul>
 
               <p>
@@ -533,8 +562,8 @@ const CotswoldsUKSohoFarmHouse = ({ photos }: CotswoldsPageProps) => {
                   },
                   {
                     title: "Bedroom 6",
-                    type: "Single",
-                    features: "Shared bathroom access, main floor with one step to access",
+                    type: "Queen",
+                    features: "Shared bathroom access, queen bed on main floor with one step to access",
                     location: "Main House (main floor)",
                     image: `${PHOTO_DIR}/224A8456.jpg`,
                   },
@@ -614,14 +643,22 @@ const CotswoldsUKSohoFarmHouse = ({ photos }: CotswoldsPageProps) => {
             <p className="text-gray-700 max-w-3xl mx-auto mb-8 leading-relaxed text-lg">
               This is not just a house—it's an experience. A rare blend of country charm and modern luxury, all within striking distance of Soho Farmhouse and the Cotswolds' best attractions. Perfect for family gatherings, corporate retreats, or special celebrations.
             </p>
-            <a
-              href="https://www.airbnb.ca/rooms/1414129878809697902?guests=1&adults=1&s=67&unique_share_id=0320b241-9a00-4a0a-948a-a02d664a98f3"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-8 py-4 bg-black hover:bg-gray-900 text-white rounded-md font-medium text-lg transition-colors"
-            >
-              Contact Us to Book
-            </a>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/contact"
+                className="inline-block px-8 py-4 bg-black hover:bg-gray-900 text-white rounded-md font-medium text-lg transition-colors"
+              >
+                Contact Us to Book
+              </Link>
+              <a
+                href={AIRBNB_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-8 py-4 bg-red-600 hover:bg-red-700 text-white rounded-md font-medium text-lg transition-colors"
+              >
+                Book on Airbnb
+              </a>
+            </div>
           </div>
 
           {/* All Photos Modal - Optimized and Simplified */}
