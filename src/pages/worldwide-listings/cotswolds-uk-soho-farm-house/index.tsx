@@ -18,64 +18,18 @@ import {
   editorialMainClass,
 } from "@/lib/editorialPropertyLayout";
 import { getWorldwideAmenities } from "@/data/worldwideAmenities";
-import fs from "fs";
-import path from "path";
+import { COTSWOLDS_COVER, COTSWOLDS_PHOTOS } from "@/data/cotswoldsPhotos";
 
 const PHOTO_DIR = "/photos/properties/Cotswolds UK - Soho Farm House";
-const PHOTO_DIR_FS = path.join(
-  process.cwd(),
-  "public/photos/properties/Cotswolds UK - Soho Farm House"
-);
-const COVER_FILENAME = "224A8292.jpg";
-const COVER = `${PHOTO_DIR}/${COVER_FILENAME}`;
+const COVER = COTSWOLDS_COVER;
 const AIRBNB_LINK =
   "https://www.airbnb.ca/rooms/1414129878809697902?guests=1&adults=1&s=67&unique_share_id=ba3bff7b-bc57-416c-bcd6-96b0943cfe51";
-const IMAGE_EXT = /\.(jpe?g|png|webp|gif)$/i;
-const PINNED_GALLERY_COUNT = 6;
-
-function seededShuffle<T>(items: T[], seed: string): T[] {
-  const shuffled = [...items];
-  let hash = 0;
-  for (let i = 0; i < seed.length; i++) {
-    hash = (Math.imul(31, hash) + seed.charCodeAt(i)) | 0;
-  }
-
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    hash = (Math.imul(1664525, hash) + 1013904223) | 0;
-    const j = (hash >>> 0) % (i + 1);
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-  }
-
-  return shuffled;
-}
-
-function discoverCotswoldsPhotos(): string[] {
-  const files = fs
-    .readdirSync(PHOTO_DIR_FS)
-    .filter((file) => IMAGE_EXT.test(file));
-
-  const sortedRest = files
-    .filter((file) => file !== COVER_FILENAME)
-    .sort((a, b) => a.localeCompare(b));
-
-  const pinned = [
-    COVER_FILENAME,
-    ...sortedRest.slice(0, PINNED_GALLERY_COUNT - 1),
-  ];
-  const remaining = sortedRest.slice(PINNED_GALLERY_COUNT - 1);
-  const mixedRest = seededShuffle(
-    remaining,
-    "cotswolds-soho-farm-house-gallery"
-  );
-
-  return [...pinned, ...mixedRest].map((file) => `${PHOTO_DIR}/${file}`);
-}
 
 interface CotswoldsPageProps {
   photos: string[];
 }
 
-const CotswoldsUKSohoFarmHouse = ({ photos }: CotswoldsPageProps) => {
+const CotswoldsUKSohoFarmHouse = ({ photos = COTSWOLDS_PHOTOS }: CotswoldsPageProps) => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [isImageLoading, setIsImageLoading] = useState(false);
@@ -835,7 +789,7 @@ export const getStaticProps: GetStaticProps<CotswoldsPageProps> = async ({
 }) => {
   return {
     props: {
-      photos: discoverCotswoldsPhotos(),
+      photos: COTSWOLDS_PHOTOS,
       ...(await serverSideTranslations(locale || "en", ["common"])),
     },
   };
