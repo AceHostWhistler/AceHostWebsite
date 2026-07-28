@@ -19,6 +19,7 @@ import {
   editorialMainClass,
 } from "@/lib/editorialPropertyLayout";
 import { getWorldwideAmenities } from "@/data/worldwideAmenities";
+import { getFullPhotoSrc, getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 
 const SantoriniGreeceVillaEclipse = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -148,7 +149,7 @@ const SantoriniGreeceVillaEclipse = () => {
                   onClick={() => handlePhotoClick(index)}
                 >
                   <Image
-                    src={photo}
+                    src={getGalleryPhotoSrc(photo)}
                     alt={`Santorini Greece Villa Eclipse ${index + 1}`}
                     fill
                     sizes={editorialGalleryImageSizes}
@@ -186,7 +187,7 @@ const SantoriniGreeceVillaEclipse = () => {
                 <div className="md:w-1/2">
                   <div className="relative aspect-[4/3] mb-4 rounded-xl overflow-hidden shadow-lg">
                     <Image
-                      src={photos[2]}
+                      src={getGalleryPhotoSrc(photos[2])}
                       alt="Villa Eclipse Santorini - Exterior View"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-500"
@@ -256,7 +257,7 @@ const SantoriniGreeceVillaEclipse = () => {
                 <div className="md:w-1/2">
                   <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
                     <Image
-                      src={photos[4]}
+                      src={getGalleryPhotoSrc(photos[4])}
                       alt="Villa Eclipse Santorini - Infinity Pool"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-500"
@@ -272,7 +273,7 @@ const SantoriniGreeceVillaEclipse = () => {
                 <div className="md:w-1/2">
                   <div className="relative aspect-[4/3] mb-4 rounded-xl overflow-hidden shadow-lg">
                     <Image
-                      src={photos[6]}
+                      src={getGalleryPhotoSrc(photos[6])}
                       alt="Villa Eclipse Santorini - Interior View"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-500"
@@ -361,7 +362,7 @@ const SantoriniGreeceVillaEclipse = () => {
                 <div className="md:w-1/2">
                   <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
                     <Image
-                      src={photos[8]}
+                      src={getGalleryPhotoSrc(photos[8])}
                       alt="Villa Eclipse Santorini - Ocean View"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-500"
@@ -458,7 +459,7 @@ const SantoriniGreeceVillaEclipse = () => {
                     onClick={() => handlePhotoClick(index)}
                   >
                     <Image
-                      src={photo}
+                      src={getGalleryPhotoSrc(photo)}
                       alt={`Villa Eclipse photo ${index + 1}`}
                       fill
                       sizes={editorialGalleryImageSizes}
@@ -537,7 +538,7 @@ const SantoriniGreeceVillaEclipse = () => {
                 {...blockGalleryTouchPropagation}
               >
                 <Image
-                  src={photos[selectedPhotoIndex]}
+                  src={getFullPhotoSrc(photos[selectedPhotoIndex])}
                   alt={`Villa Eclipse photo ${selectedPhotoIndex + 1}`}
                   fill
                   priority

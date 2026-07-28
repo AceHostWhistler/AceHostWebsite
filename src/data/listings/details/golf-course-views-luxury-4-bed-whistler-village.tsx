@@ -1,4 +1,5 @@
 import React from "react";
+import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Image from "next/image";
 import Link from "next/link";
 import type { ListingDetailsProps } from "../types";
@@ -58,7 +59,7 @@ export default function GolfCourseViewsLuxury4BedWhistlerVillageDetails({ photos
                     <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                       <div className="relative aspect-[4/3] mb-2">
                         <Image
-                          src={photos[1]}
+                          src={getGalleryPhotoSrc(photos[1])}
                           alt="Golf Course Views Interior"
                           fill
                           className="object-cover hover:scale-105 transition-transform duration-300"
@@ -100,7 +101,7 @@ export default function GolfCourseViewsLuxury4BedWhistlerVillageDetails({ photos
                     <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
                       <div className="relative aspect-[4/3] mb-2">
                         <Image
-                          src="/photos/properties/Muirfield Golf Course/03 - 20250820 A7M4 01 A1_00186.jpg"
+                          src={getGalleryPhotoSrc("/photos/properties/Muirfield Golf Course/03 - 20250820 A7M4 01 A1_00186.jpg")}
                           alt="Golf Course Views Bedroom"
                           fill
                           className="object-cover hover:scale-105 transition-transform duration-300"
@@ -150,7 +151,7 @@ export default function GolfCourseViewsLuxury4BedWhistlerVillageDetails({ photos
                     <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                       <div className="relative aspect-[4/3] mb-2">
                         <Image
-                          src="/photos/properties/Muirfield Golf Course/44 - 20250820 MM4P 01 0016.jpg"
+                          src={getGalleryPhotoSrc("/photos/properties/Muirfield Golf Course/44 - 20250820 MM4P 01 0016.jpg")}
                           alt="Golf Course Views Exterior"
                           fill
                           className="object-cover hover:scale-105 transition-transform duration-300"

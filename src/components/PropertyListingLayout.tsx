@@ -21,6 +21,10 @@ import {
 } from "@/lib/editorialPropertyLayout";
 import { getListingAmenities } from "@/data/listings/amenities";
 import InsidePropertyPhotoStrip from "@/components/InsidePropertyPhotoStrip";
+import {
+  getFullPhotoSrc,
+  getGalleryPhotoSrc,
+} from "@/lib/optimizedPropertyPhotos";
 
 /** Listings with a custom in-description photo strip — skip the shared one. */
 const CUSTOM_INSIDE_PHOTO_STRIP_SLUGS = new Set([
@@ -157,7 +161,7 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
                   onClick={() => handlePhotoClick(index)}
                 >
                   <Image
-                    src={photo}
+                    src={getGalleryPhotoSrc(photo)}
                     alt={`${photoAltPrefix} ${index + 1}`}
                     fill
                     sizes={editorialGalleryImageSizes}
@@ -229,7 +233,7 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
                       onClick={() => handlePhotoClick(index)}
                     >
                       <Image
-                        src={photo}
+                        src={getGalleryPhotoSrc(photo)}
                         alt={`${photoAltPrefix} ${index + 1}`}
                         fill
                         sizes={editorialGalleryImageSizes}
@@ -288,7 +292,7 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
                 {...blockGalleryTouchPropagation}
               >
                 <Image
-                  src={photos[selectedPhotoIndex]}
+                  src={getFullPhotoSrc(photos[selectedPhotoIndex])}
                   alt={`${photoAltPrefix} full view ${selectedPhotoIndex + 1}`}
                   fill
                   priority

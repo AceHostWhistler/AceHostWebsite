@@ -16,6 +16,7 @@ import {
   editorialMainClass,
 } from "@/lib/editorialPropertyLayout";
 import { getWorldwideAmenities } from "@/data/worldwideAmenities";
+import { getFullPhotoSrc, getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Footer from "@/components/Footer";
 import { X, MapPin, Users, Bed, Bath, Check } from "lucide-react";
 
@@ -185,7 +186,7 @@ const PuntaMitaCasaJuntos = () => {
                   onClick={() => handlePhotoClick(index)}
                 >
                   <Image
-                    src={photo}
+                    src={getGalleryPhotoSrc(photo)}
                     alt={`Punta Mita - Casa Juntos ${index + 1}`}
                     fill
                     sizes={editorialGalleryImageSizes}
@@ -278,7 +279,7 @@ const PuntaMitaCasaJuntos = () => {
                       onClick={() => handlePhotoClick(index)}
                     >
                       <Image
-                        src={photo}
+                        src={getGalleryPhotoSrc(photo)}
                         alt={`Punta Mita - Casa Juntos ${index + 1}`}
                         fill
                         sizes={editorialGalleryImageSizes}
@@ -324,7 +325,7 @@ const PuntaMitaCasaJuntos = () => {
               )}
               <div className="relative w-full h-full touch-pinch-zoom">
                 <Image
-                  src={photos[selectedPhotoIndex]}
+                  src={getFullPhotoSrc(photos[selectedPhotoIndex])}
                   alt={`Punta Mita Casa Juntos photo ${selectedPhotoIndex + 1}`}
                   fill
                   priority

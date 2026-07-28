@@ -19,6 +19,7 @@ import {
   editorialMainClass,
 } from "@/lib/editorialPropertyLayout";
 import { getWorldwideAmenities } from "@/data/worldwideAmenities";
+import { getFullPhotoSrc, getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 
 const VillaOineasGreeceMykonos = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -209,7 +210,7 @@ const VillaOineasGreeceMykonos = () => {
                   onClick={() => handlePhotoClick(index)}
                 >
                   <Image
-                    src={photo}
+                    src={getGalleryPhotoSrc(photo)}
                     alt={`Villa Oineas Mykonos ${index + 1}`}
                     fill
                     sizes={editorialGalleryImageSizes}
@@ -248,7 +249,7 @@ const VillaOineasGreeceMykonos = () => {
               <div className="md:w-1/2">
                 <div className="relative aspect-[4/3] mb-4 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src={photos[0]}
+                    src={getGalleryPhotoSrc(photos[0])}
                     alt="Villa Oineas Mykonos - Luxury Accommodation"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-500"
@@ -321,7 +322,7 @@ const VillaOineasGreeceMykonos = () => {
               <div className="md:w-1/2">
                 <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src={photos[1]}
+                    src={getGalleryPhotoSrc(photos[1])}
                     alt="Villa Oineas Mykonos - Infinity Pool"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-500"
@@ -337,7 +338,7 @@ const VillaOineasGreeceMykonos = () => {
               <div className="md:w-1/2">
                 <div className="relative aspect-[4/3] mb-4 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src={photos[4]}
+                    src={getGalleryPhotoSrc(photos[4])}
                     alt="Villa Oineas Mykonos - Premium Amenities"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-500"
@@ -434,7 +435,7 @@ const VillaOineasGreeceMykonos = () => {
               <div className="md:w-1/2">
                 <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src={photos[8]}
+                    src={getGalleryPhotoSrc(photos[8])}
                     alt="Villa Oineas Mykonos - Concierge Services"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-500"
@@ -567,7 +568,7 @@ const VillaOineasGreeceMykonos = () => {
                     onClick={() => handlePhotoClick(index)}
                   >
                     <Image
-                      src={photo}
+                      src={getGalleryPhotoSrc(photo)}
                       alt={`Villa Oineas photo ${index + 1}`}
                       fill
                       sizes={editorialGalleryImageSizes}
@@ -646,7 +647,7 @@ const VillaOineasGreeceMykonos = () => {
                 {...blockGalleryTouchPropagation}
               >
                 <Image
-                  src={photos[selectedPhotoIndex]}
+                  src={getFullPhotoSrc(photos[selectedPhotoIndex])}
                   alt={`Villa Oineas photo ${selectedPhotoIndex + 1}`}
                   fill
                   priority

@@ -1,4 +1,5 @@
 import React from "react";
+import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Image from "next/image";
 import Link from "next/link";
 import { FaBed, FaBath } from "react-icons/fa";
@@ -18,7 +19,7 @@ export default function SquamishRetreatWithTheBestViewDetails({ photos }: Listin
                       <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                         <div className="relative aspect-[4/3] mb-2">
                           <Image
-                            src={photos[0]}
+                            src={getGalleryPhotoSrc(photos[0])}
                             alt="Squamish Retreat Interior"
                             width={1920}
                             height={1080}
@@ -71,7 +72,7 @@ export default function SquamishRetreatWithTheBestViewDetails({ photos }: Listin
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
                       <div className="relative aspect-[4/3]">
                         <Image
-                          src={photos[4]}
+                          src={getGalleryPhotoSrc(photos[4])}
                           alt="Living space"
                           width={1920}
                           height={1080}
@@ -80,7 +81,7 @@ export default function SquamishRetreatWithTheBestViewDetails({ photos }: Listin
                       </div>
                       <div className="relative aspect-[4/3]">
                         <Image
-                          src={photos[5]}
+                          src={getGalleryPhotoSrc(photos[5])}
                           alt="Kitchen area"
                           width={1920}
                           height={1080}
@@ -89,7 +90,7 @@ export default function SquamishRetreatWithTheBestViewDetails({ photos }: Listin
                       </div>
                       <div className="relative aspect-[4/3]">
                         <Image
-                          src={photos[8]}
+                          src={getGalleryPhotoSrc(photos[8])}
                           alt="Mountain view"
                           width={1920}
                           height={1080}
@@ -113,7 +114,7 @@ export default function SquamishRetreatWithTheBestViewDetails({ photos }: Listin
                         </ul>
                         <div className="mt-6 relative aspect-[4/3]">
                           <Image
-                            src={photos[10]}
+                            src={getGalleryPhotoSrc(photos[10])}
                             alt="Kitchen area"
                             width={1920}
                             height={1080}
@@ -135,7 +136,7 @@ export default function SquamishRetreatWithTheBestViewDetails({ photos }: Listin
                         <p className="mt-4 text-gray-800">*Complimentary coffee, tea, salt, pepper, olive oil, soap, shampoo, conditioner, and body wash is provided.</p>
                         <div className="mt-6 relative aspect-[4/3]">
                           <Image
-                            src={photos[12]}
+                            src={getGalleryPhotoSrc(photos[12])}
                             alt="Master bedroom"
                             width={1920}
                             height={1080}
@@ -164,7 +165,7 @@ export default function SquamishRetreatWithTheBestViewDetails({ photos }: Listin
                       <div className="md:col-span-1">
                         <div className="relative aspect-[3/4] h-full">
                           <Image
-                            src={photos[15]}
+                            src={getGalleryPhotoSrc(photos[15])}
                             alt="House exterior"
                             width={1920}
                             height={1080}
@@ -193,7 +194,7 @@ export default function SquamishRetreatWithTheBestViewDetails({ photos }: Listin
                       <div className="md:col-span-1">
                         <div className="relative aspect-[3/4] h-full">
                           <Image
-                            src={photos[18]}
+                            src={getGalleryPhotoSrc(photos[18])}
                             alt="Mountain view"
                             width={1920}
                             height={1080}

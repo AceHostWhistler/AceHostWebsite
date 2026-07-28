@@ -1,4 +1,5 @@
 import React from "react";
+import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Image from "next/image";
 import Link from "next/link";
 import { FaBed, FaBath } from "react-icons/fa";
@@ -17,7 +18,7 @@ export default function SkiInSkiOutWalkToLifts2BedDetails({ photos }: ListingDet
                     <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                       <div className="relative aspect-[4/3] mb-2">
                         <Image
-                          src={photos[2]}
+                          src={getGalleryPhotoSrc(photos[2])}
                           alt="Le Chamois Interior"
                           fill
                           className="object-cover hover:scale-105 transition-transform duration-300"
@@ -75,7 +76,7 @@ export default function SkiInSkiOutWalkToLifts2BedDetails({ photos }: ListingDet
                     <div className="md:w-1/2 pl-0 md:pl-12 mb-8 md:mb-0">
                       <div className="relative aspect-[4/3] mb-2">
                         <Image
-                          src={photos[4]}
+                          src={getGalleryPhotoSrc(photos[4])}
                           alt="Le Chamois facilities"
                           fill
                           className="object-cover hover:scale-105 transition-transform duration-300"
@@ -125,7 +126,7 @@ export default function SkiInSkiOutWalkToLifts2BedDetails({ photos }: ListingDet
                     <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                       <div className="relative aspect-[4/3] mb-2">
                         <Image
-                          src={photos[5]}
+                          src={getGalleryPhotoSrc(photos[5])}
                           alt="Le Chamois bedroom"
                           fill
                           className="object-cover hover:scale-105 transition-transform duration-300"
@@ -154,7 +155,7 @@ export default function SkiInSkiOutWalkToLifts2BedDetails({ photos }: ListingDet
                     <div className="md:w-1/2 pl-0 md:pl-12 mb-8 md:mb-0">
                       <div className="relative aspect-[4/3] mb-2">
                         <Image
-                          src={photos[8]}
+                          src={getGalleryPhotoSrc(photos[8])}
                           alt="Le Chamois amenities"
                           fill
                           className="object-cover hover:scale-105 transition-transform duration-300"
@@ -202,7 +203,7 @@ export default function SkiInSkiOutWalkToLifts2BedDetails({ photos }: ListingDet
                     <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                       <div className="relative aspect-[4/3] mb-2">
                         <Image
-                          src={photos[10]}
+                          src={getGalleryPhotoSrc(photos[10])}
                           alt="Le Chamois location"
                           fill
                           className="object-cover hover:scale-105 transition-transform duration-300"

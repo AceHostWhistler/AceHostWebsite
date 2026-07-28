@@ -1,4 +1,5 @@
 import React from "react";
+import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Image from "next/image";
 import type { ListingDetailsProps } from "../types";
 
@@ -19,7 +20,7 @@ export default function ValhallaUnit33VillageDetails({ photos }: ListingDetailsP
           <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
             <div className="relative aspect-[4/3] mb-2">
               <Image
-                src={photos[3]}
+                src={getGalleryPhotoSrc(photos[3])}
                 alt="Valhalla Peaks balcony"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-300"
@@ -91,7 +92,7 @@ export default function ValhallaUnit33VillageDetails({ photos }: ListingDetailsP
           <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
             <div className="relative aspect-[4/3] mb-2">
               <Image
-                src={photos[12]}
+                src={getGalleryPhotoSrc(photos[12])}
                 alt="Valhalla Peaks hot tub"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-300"

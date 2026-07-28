@@ -16,6 +16,7 @@ import {
   editorialMainClass,
 } from "@/lib/editorialPropertyLayout";
 import { getWorldwideAmenities } from "@/data/worldwideAmenities";
+import { getFullPhotoSrc, getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Footer from "@/components/Footer";
 import { X } from "lucide-react";
 
@@ -168,7 +169,7 @@ const SuperYachtThailand = () => {
                   onClick={() => handlePhotoClick(index)}
                 >
                   <Image
-                    src={photo}
+                    src={getGalleryPhotoSrc(photo)}
                     alt={`Super Yacht Thailand ${index + 1}`}
                     fill
                     sizes={editorialGalleryImageSizes}
@@ -211,7 +212,7 @@ const SuperYachtThailand = () => {
               <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                 <div className="relative aspect-[4/3] mb-2">
                   <Image
-                    src={photos[0]}
+                    src={getGalleryPhotoSrc(photos[0])}
                     alt="Super Yacht Thailand - Bow"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-300"
@@ -293,7 +294,7 @@ const SuperYachtThailand = () => {
                       onClick={() => handlePhotoClick(index)}
                     >
                       <Image
-                        src={photo}
+                        src={getGalleryPhotoSrc(photo)}
                         alt={`Super Yacht Thailand interior ${index + 1}`}
                         fill
                         sizes={editorialGalleryImageSizes}
@@ -344,7 +345,7 @@ const SuperYachtThailand = () => {
               )}
               <div className="relative w-full h-full touch-pinch-zoom" {...blockGalleryTouchPropagation}>
                 <Image
-                  src={photos[selectedPhotoIndex]}
+                  src={getFullPhotoSrc(photos[selectedPhotoIndex])}
                   alt={`Property full view ${selectedPhotoIndex + 1}`}
                   fill
                   priority

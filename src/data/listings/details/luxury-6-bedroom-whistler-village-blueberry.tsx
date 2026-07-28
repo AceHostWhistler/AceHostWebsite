@@ -1,4 +1,5 @@
 import React from "react";
+import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Image from "next/image";
 import Link from "next/link";
 import { FaBed, FaBath } from "react-icons/fa";
@@ -23,7 +24,7 @@ export default function Luxury6BedroomWhistlerVillageBlueberryDetails({ photos }
                       <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                         <div className="relative aspect-[4/3] mb-2">
                           <Image
-                            src={photos[0]}
+                            src={getGalleryPhotoSrc(photos[0])}
                             alt="Luxury 6-Bedroom Interior"
                             width={1920}
                             height={1080}

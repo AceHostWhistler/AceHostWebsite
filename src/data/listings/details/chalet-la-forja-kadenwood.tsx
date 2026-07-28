@@ -1,4 +1,5 @@
 import React from "react";
+import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Image from "next/image";
 import Link from "next/link";
 import type { ListingDetailsProps } from "../types";
@@ -45,7 +46,7 @@ export default function ChaletLaForjaKadenwoodDetails({ photos }: ListingDetails
                     <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                       <div className="relative aspect-[4/3] mb-2">
                         <Image
-                          src={photos[11]}
+                          src={getGalleryPhotoSrc(photos[11])}
                           alt="Chalet La Forja living space and kitchen"
                           fill
                           className="object-cover hover:scale-105 transition-transform duration-300"
@@ -107,7 +108,7 @@ export default function ChaletLaForjaKadenwoodDetails({ photos }: ListingDetails
                     <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
                       <div className="relative aspect-[4/3] mb-2">
                         <Image
-                          src={photos[15]}
+                          src={getGalleryPhotoSrc(photos[15])}
                           alt="Chalet La Forja bedroom suite"
                           fill
                           className="object-cover hover:scale-105 transition-transform duration-300"
@@ -221,7 +222,7 @@ export default function ChaletLaForjaKadenwoodDetails({ photos }: ListingDetails
                       <div className="md:w-1/2">
                         <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
                           <Image
-                            src={photos[1]}
+                            src={getGalleryPhotoSrc(photos[1])}
                             alt="Chalet La Forja exterior in Kadenwood"
                             fill
                             className="object-cover hover:scale-105 transition-transform duration-500"

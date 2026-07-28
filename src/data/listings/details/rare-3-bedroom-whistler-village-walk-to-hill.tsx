@@ -1,4 +1,5 @@
 import React from "react";
+import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Image from "next/image";
 import Link from "next/link";
 import { FaBed, FaBath } from "react-icons/fa";
@@ -20,7 +21,7 @@ export default function Rare3BedroomWhistlerVillageWalkToHillDetails({ photos }:
                       <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                         <div className="relative aspect-[4/3] mb-2">
                           <Image
-                            src={photos[0]}
+                            src={getGalleryPhotoSrc(photos[0])}
                             alt="Rare 3-bedroom Interior"
                             width={1920}
                             height={1080}
@@ -68,7 +69,7 @@ export default function Rare3BedroomWhistlerVillageWalkToHillDetails({ photos }:
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
                       <div className="relative aspect-[4/3]">
                         <Image
-                          src={photos[8]}
+                          src={getGalleryPhotoSrc(photos[8])}
                           alt="Living space"
                           width={1920}
                           height={1080}
@@ -77,7 +78,7 @@ export default function Rare3BedroomWhistlerVillageWalkToHillDetails({ photos }:
                       </div>
                       <div className="relative aspect-[4/3]">
                         <Image
-                          src={photos[16]}
+                          src={getGalleryPhotoSrc(photos[16])}
                           alt="Hot tub view"
                           width={1920}
                           height={1080}
@@ -86,7 +87,7 @@ export default function Rare3BedroomWhistlerVillageWalkToHillDetails({ photos }:
                       </div>
                       <div className="relative aspect-[4/3]">
                         <Image
-                          src={photos[24]}
+                          src={getGalleryPhotoSrc(photos[24])}
                           alt="Bedroom"
                           width={1920}
                           height={1080}
@@ -109,7 +110,7 @@ export default function Rare3BedroomWhistlerVillageWalkToHillDetails({ photos }:
                         </ul>
                         <div className="mt-6 relative aspect-[4/3]">
                           <Image
-                            src={photos[33]}
+                            src={getGalleryPhotoSrc(photos[33])}
                             alt="Primary bedroom"
                             width={1920}
                             height={1080}
@@ -123,7 +124,7 @@ export default function Rare3BedroomWhistlerVillageWalkToHillDetails({ photos }:
                         </p>
                         <div className="mt-6 relative aspect-[4/3]">
                           <Image
-                            src={photos[37]}
+                            src={getGalleryPhotoSrc(photos[37])}
                             alt="Second bedroom"
                             width={1920}
                             height={1080}
@@ -153,7 +154,7 @@ export default function Rare3BedroomWhistlerVillageWalkToHillDetails({ photos }:
                       <div className="md:col-span-1">
                         <div className="relative aspect-[3/4] h-full">
                           <Image
-                            src={photos[12]}
+                            src={getGalleryPhotoSrc(photos[12])}
                             alt="Balcony view"
                             width={1920}
                             height={1080}
@@ -178,7 +179,7 @@ export default function Rare3BedroomWhistlerVillageWalkToHillDetails({ photos }:
                       <div className="md:col-span-1">
                         <div className="relative aspect-[3/4] h-full">
                           <Image
-                            src={photos[20]}
+                            src={getGalleryPhotoSrc(photos[20])}
                             alt="View from property"
                             width={1920}
                             height={1080}

@@ -18,6 +18,7 @@ import {
   editorialMainClass,
 } from "@/lib/editorialPropertyLayout";
 import { getWorldwideAmenities } from "@/data/worldwideAmenities";
+import { getFullPhotoSrc, getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 
 const VillaRosabellaMykonos = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -163,7 +164,7 @@ const VillaRosabellaMykonos = () => {
                   onClick={() => handlePhotoClick(index)}
                 >
                   <Image
-                    src={photo}
+                    src={getGalleryPhotoSrc(photo)}
                     alt={`Villa Rosabella Mykonos ${index + 1}`}
                     fill
                     sizes={editorialGalleryImageSizes}
@@ -202,7 +203,7 @@ const VillaRosabellaMykonos = () => {
               <div className="md:w-1/2">
                 <div className="relative aspect-[4/3] mb-4 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src={photos[2]}
+                    src={getGalleryPhotoSrc(photos[2])}
                     alt="Villa Rosabella Mykonos - Luxury Accommodation"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-500"
@@ -275,7 +276,7 @@ const VillaRosabellaMykonos = () => {
               <div className="md:w-1/2">
                 <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src={photos[4]}
+                    src={getGalleryPhotoSrc(photos[4])}
                     alt="Villa Rosabella Mykonos - Infinity Pool"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-500"
@@ -291,7 +292,7 @@ const VillaRosabellaMykonos = () => {
               <div className="md:w-1/2">
                 <div className="relative aspect-[4/3] mb-4 rounded-xl overflow-hidden shadow-lg">
                   <Image
-                    src={photos[6]}
+                    src={getGalleryPhotoSrc(photos[6])}
                     alt="Villa Rosabella Mykonos - Luxury Amenities"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-500"
@@ -472,7 +473,7 @@ const VillaRosabellaMykonos = () => {
             </button>
             <div className="relative w-full h-full flex items-center justify-center">
               <Image
-                src={photos[selectedPhotoIndex]}
+                src={getFullPhotoSrc(photos[selectedPhotoIndex])}
                 alt={`Villa Rosabella Mykonos photo ${selectedPhotoIndex + 1}`}
                 className="object-contain max-h-screen max-w-full"
                 width={1200}
@@ -513,7 +514,7 @@ const VillaRosabellaMykonos = () => {
                     onClick={() => handlePhotoClick(index)}
                   >
                     <Image
-                      src={photo}
+                      src={getGalleryPhotoSrc(photo)}
                       alt={`Villa Rosabella Mykonos photo ${index + 1}`}
                       fill
                       sizes={editorialGalleryImageSizes}

@@ -1,4 +1,5 @@
 import React from "react";
+import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Image from "next/image";
 import Link from "next/link";
 import type { ListingDetailsProps } from "../types";
@@ -119,7 +120,7 @@ export default function AltitudeRetreatKadenwoodDetails({ photos }: ListingDetai
                     <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                       <div className="relative aspect-[3/4] mb-2">
                         <img
-                          src="/photos/properties/Altitude New Photos Best/tall1.jpg"
+                          src={getGalleryPhotoSrc("/photos/properties/Altitude New Photos Best/tall1.jpg")}
                           alt="Altitude Retreat Interior"
                           className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                         />
@@ -172,7 +173,7 @@ export default function AltitudeRetreatKadenwoodDetails({ photos }: ListingDetai
                     <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
                       <div className="relative aspect-[3/4] mb-2">
                         <img
-                          src="/photos/properties/Altitude New Photos Best/tall2.jpg"
+                          src={getGalleryPhotoSrc("/photos/properties/Altitude New Photos Best/tall2.jpg")}
                           alt="Altitude Retreat Bedroom"
                           className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                         />
@@ -268,7 +269,7 @@ export default function AltitudeRetreatKadenwoodDetails({ photos }: ListingDetai
                     </div>
                     <div className="relative aspect-[4/3] mb-6 max-w-3xl">
                       <img
-                        src="/photos/properties/Altitude New Photos Best/4.jpg"
+                        src={getGalleryPhotoSrc("/photos/properties/Altitude New Photos Best/4.jpg")}
                         alt="Altitude Retreat Location"
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                       />
@@ -323,7 +324,7 @@ export default function AltitudeRetreatKadenwoodDetails({ photos }: ListingDetai
                       <div className="md:w-1/3">
                         <div className="relative aspect-[3/4] mb-4">
                           <img
-                            src="/photos/properties/Altitude New Photos Best/tall3.jpg"
+                            src={getGalleryPhotoSrc("/photos/properties/Altitude New Photos Best/tall3.jpg")}
                             alt="Altitude Retreat Experience"
                             className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                           />

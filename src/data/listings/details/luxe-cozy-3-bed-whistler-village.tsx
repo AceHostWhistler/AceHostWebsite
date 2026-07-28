@@ -1,4 +1,5 @@
 import React from "react";
+import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Image from "next/image";
 import Link from "next/link";
 import type { ListingDetailsProps } from "../types";
@@ -22,7 +23,7 @@ export default function LuxeCozy3BedWhistlerVillageDetails({ photos }: ListingDe
                     <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                       <div className="relative aspect-[4/3] mb-2">
                         <Image
-                          src={photos[4]}
+                          src={getGalleryPhotoSrc(photos[4])}
                           alt="Luxe-Cozy Whistler Village Interior"
                           fill
                           className="object-cover hover:scale-105 transition-transform duration-300"
@@ -80,7 +81,7 @@ export default function LuxeCozy3BedWhistlerVillageDetails({ photos }: ListingDe
                     <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
                       <div className="relative aspect-[4/3] mb-2">
                         <Image
-                          src={photos[9]}
+                          src={getGalleryPhotoSrc(photos[9])}
                           alt="Luxe-Cozy Whistler Village Living Area"
                           fill
                           className="object-cover hover:scale-105 transition-transform duration-300"

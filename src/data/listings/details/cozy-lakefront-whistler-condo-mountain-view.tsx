@@ -1,4 +1,5 @@
 import React from "react";
+import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Image from "next/image";
 import Link from "next/link";
 import type { ListingDetailsProps } from "../types";
@@ -19,7 +20,7 @@ export default function CozyLakefrontWhistlerCondoMountainViewDetails({ photos }
                     <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                       <div className="relative aspect-[4/3] mb-2">
                         <Image
-                          src={photos[1]}
+                          src={getGalleryPhotoSrc(photos[1])}
                           alt="Cozy Lakefront Condo Interior"
                           fill
                           className="object-cover hover:scale-105 transition-transform duration-300"
@@ -62,7 +63,7 @@ export default function CozyLakefrontWhistlerCondoMountainViewDetails({ photos }
                     <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
                       <div className="relative aspect-[4/3] mb-2">
                         <Image
-                          src="/photos/properties/Nick North 2-Bed/03 - 20251006 A7M4 03 A1_03258-Edit.jpg"
+                          src={getGalleryPhotoSrc("/photos/properties/Nick North 2-Bed/03 - 20251006 A7M4 03 A1_03258-Edit.jpg")}
                           alt="Cozy Lakefront Condo Kitchen"
                           fill
                           className="object-cover hover:scale-105 transition-transform duration-300"
@@ -117,7 +118,7 @@ export default function CozyLakefrontWhistlerCondoMountainViewDetails({ photos }
                     <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                       <div className="relative aspect-[4/3] mb-2">
                         <Image
-                          src="/photos/properties/Nick North 2-Bed/07 - 20251006 A7M4 03 A1_03439.jpg"
+                          src={getGalleryPhotoSrc("/photos/properties/Nick North 2-Bed/07 - 20251006 A7M4 03 A1_03439.jpg")}
                           alt="Cozy Lakefront Condo Bedroom"
                           fill
                           className="object-cover hover:scale-105 transition-transform duration-300"

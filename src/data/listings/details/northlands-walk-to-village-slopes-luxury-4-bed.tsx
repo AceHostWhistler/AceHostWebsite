@@ -1,4 +1,5 @@
 import React from "react";
+import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Image from "next/image";
 import Link from "next/link";
 import type { ListingDetailsProps } from "../types";
@@ -22,7 +23,7 @@ export default function NorthlandsWalkToVillageSlopesLuxury4BedDetails({ photos 
                     <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                       <div className="relative aspect-[4/3] mb-2">
                         <img
-                          src={photos[1]}
+                          src={getGalleryPhotoSrc(photos[1])}
                           alt="Northlands Symphony Interior"
                           className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                         />
@@ -64,7 +65,7 @@ export default function NorthlandsWalkToVillageSlopesLuxury4BedDetails({ photos 
                     <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
                       <div className="relative aspect-[4/3] mb-2">
                         <img
-                          src={photos[4]}
+                          src={getGalleryPhotoSrc(photos[4])}
                           alt="Northlands Symphony Features"
                           className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                         />
@@ -133,7 +134,7 @@ export default function NorthlandsWalkToVillageSlopesLuxury4BedDetails({ photos 
                     </div>
                     <div className="relative aspect-[4/3] mb-6 max-w-3xl">
                       <img
-                        src={photos[8]}
+                        src={getGalleryPhotoSrc(photos[8])}
                         alt="Northlands Symphony Location"
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                       />

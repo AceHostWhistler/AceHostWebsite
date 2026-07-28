@@ -1,4 +1,5 @@
 import React from "react";
+import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Image from "next/image";
 import Link from "next/link";
 import type { ListingDetailsProps } from "../types";
@@ -16,7 +17,7 @@ export default function CedarhofKadenwoodDetails({ photos }: ListingDetailsProps
                     <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                       <div className="relative aspect-[4/3] mb-2">
                         <Image
-                          src={photos[6]}
+                          src={getGalleryPhotoSrc(photos[6])}
                           alt="Cedarhof Interior"
                           fill
                           className="object-cover hover:scale-105 transition-transform duration-300"
@@ -67,7 +68,7 @@ export default function CedarhofKadenwoodDetails({ photos }: ListingDetailsProps
                     <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
                       <div className="relative aspect-[4/3] mb-2">
                         <Image
-                          src={photos[2]}
+                          src={getGalleryPhotoSrc(photos[2])}
                           alt="Cedarhof Bedroom"
                           fill
                           className="object-cover hover:scale-105 transition-transform duration-300"
@@ -211,7 +212,7 @@ export default function CedarhofKadenwoodDetails({ photos }: ListingDetailsProps
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
                     <div className="relative aspect-[4/3]">
                       <Image
-                        src={photos[8]}
+                        src={getGalleryPhotoSrc(photos[8])}
                         alt="Cedarhof Hot Tub and Pool"
                         fill
                         className="object-cover rounded-lg"
@@ -219,7 +220,7 @@ export default function CedarhofKadenwoodDetails({ photos }: ListingDetailsProps
                     </div>
                     <div className="relative aspect-[4/3]">
                       <Image
-                        src={photos[9]}
+                        src={getGalleryPhotoSrc(photos[9])}
                         alt="Cedarhof Pool"
                         fill
                         className="object-cover rounded-lg"
@@ -265,7 +266,7 @@ export default function CedarhofKadenwoodDetails({ photos }: ListingDetailsProps
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                       <div className="relative aspect-[4/3]">
                         <Image
-                          src={photos[16]}
+                          src={getGalleryPhotoSrc(photos[16])}
                           alt="Cedarhof Wine Room"
                           fill
                           className="object-cover rounded-lg"
@@ -273,7 +274,7 @@ export default function CedarhofKadenwoodDetails({ photos }: ListingDetailsProps
                       </div>
                       <div className="relative aspect-[4/3]">
                         <Image
-                          src={photos[7]}
+                          src={getGalleryPhotoSrc(photos[7])}
                           alt="Cedarhof Media Room"
                           fill
                           className="object-cover rounded-lg"

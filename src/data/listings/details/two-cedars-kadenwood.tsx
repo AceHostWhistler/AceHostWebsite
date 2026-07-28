@@ -1,4 +1,5 @@
 import React from "react";
+import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Image from "next/image";
 import { FaBed, FaBath } from "react-icons/fa";
 import type { ListingDetailsProps } from "../types";
@@ -58,7 +59,7 @@ export default function TwoCedarsKadenwoodDetails({ photos }: ListingDetailsProp
                     <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
                       <div className="relative aspect-[4/3] mb-2">
                         <Image
-                          src="/photos/properties/Two Cedars New/24-2934 Ancient Cedars-24.jpg"
+                          src={getGalleryPhotoSrc("/photos/properties/Two Cedars New/24-2934 Ancient Cedars-24.jpg")}
                           alt="Two Cedars Bedroom"
                           fill
                           className="object-cover hover:scale-105 transition-transform duration-300"
@@ -151,7 +152,7 @@ export default function TwoCedarsKadenwoodDetails({ photos }: ListingDetailsProp
                       <div className="md:w-1/2">
                         <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
                           <Image
-                            src="/photos/properties/Two Cedars New/31-2934 Ancient Cedars-31.jpg"
+                            src={getGalleryPhotoSrc("/photos/properties/Two Cedars New/31-2934 Ancient Cedars-31.jpg")}
                             alt="Two Cedars Location"
                             fill
                             className="object-cover hover:scale-105 transition-transform duration-500"

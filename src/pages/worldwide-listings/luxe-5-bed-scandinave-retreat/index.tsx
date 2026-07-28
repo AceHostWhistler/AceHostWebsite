@@ -1,6 +1,7 @@
 import React, { useCallback, useState, useEffect } from "react";
 import { blockGalleryTouchPropagation, usePhotoSwipeNavigation } from "@/hooks/usePhotoSwipeNavigation";
 import Head from "next/head";
+import Image from "next/image";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
@@ -19,12 +20,14 @@ import {
 } from "@/lib/editorialPropertyLayout";
 import { getWorldwideAmenities } from "@/data/worldwideAmenities";
 
+const BLUR_PLACEHOLDER =
+  "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U1ZTdlYiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmM2Y0ZjYiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4=";
+
 const LuxeScandinaveRetreat = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [isImageLoading, setIsImageLoading] = useState(false);
-  const [imagesLoaded, setImagesLoaded] = useState(0);
-  const [totalImages] = useState(28); // Total number of images we have
+  const [totalImages] = useState(28);
 
   // Cache version for forcing new image downloads
   const cacheVersion = "v2";
@@ -55,10 +58,6 @@ const LuxeScandinaveRetreat = () => {
 
   const handleImageLoad = () => {
     setIsImageLoading(false);
-  };
-
-  const handlePreloadProgress = () => {
-    setImagesLoaded(prev => prev + 1);
   };
 
   const navigatePhoto = (direction: "prev" | "next") => {
@@ -131,28 +130,6 @@ const LuxeScandinaveRetreat = () => {
     };
   }, [showAllPhotos, selectedPhotoIndex]);
 
-  // Preload important images for faster gallery display
-  useEffect(() => {
-    // Preload first 12 images for initial display
-    const preloadImages = photos.slice(0, 12).map(src => {
-      return new Promise<void>((resolve) => {
-        const img = new Image();
-        img.src = src;
-        img.onload = () => {
-          handlePreloadProgress();
-          resolve();
-        };
-        img.onerror = () => {
-          // Still count errors to avoid getting stuck
-          handlePreloadProgress();
-          resolve();
-        };
-      });
-    });
-
-    Promise.all(preloadImages);
-  }, []);
-
   return (
     <>
       <Head>
@@ -162,9 +139,7 @@ const LuxeScandinaveRetreat = () => {
           content="An ideal family ski home just 400m (8 min walk) to Whistler Creekside Gondola. Stunning, unobstructed views of the Tantalus Range, Alpha & Nita Lakes. Perfect for families or groups with 3 bedrooms, 5 beds, and 3 baths."
         />
         {/* Preload critical images */}
-        {optimalPhotos.slice(0, 4).map((src, index) => (
-          <link key={index} rel="preload" href={src} as="image" />
-        ))}
+        <link rel="preload" href={optimalPhotos[0]} as="image" />
       </Head>
 
       <div className="min-h-screen bg-white">
@@ -186,72 +161,30 @@ const LuxeScandinaveRetreat = () => {
             onMorePhotosClick={openGallery}
           />
 
-          {/* Loading Indicator */}
-          {imagesLoaded < 8 && (
-            <div className="max-w-7xl mx-auto px-4 mb-10 text-center">
-              <div className="flex justify-center items-center mb-4">
-                <div className="w-8 h-8 border-4 border-gray-800 border-t-transparent rounded-full animate-spin"></div>
-              </div>
-              <p className="text-gray-600">Loading gallery ({Math.min(imagesLoaded, 8)}/8 images)...</p>
-            </div>
-          )}
-
-          {/* Photo Grid - Only show once essential images are loaded */}
-          <div className={`${editorialGalleryWrapperClass} ${imagesLoaded < 8 ? 'opacity-0' : 'opacity-100 transition-opacity duration-500'}`} id="photos">
+          <div className={editorialGalleryWrapperClass} id="photos">
             <div className={editorialGalleryGridClass}>
-              <div
-                className={editorialGalleryTileClass}
-                onClick={() => handlePhotoClick(0)}
-              >
-                <div className="w-full h-full bg-gray-200">
-                  <img
-                    src={optimalPhotos[0]}
-                    alt="Luxe 5-BED Scandinave Retreat 1"
-                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                    loading="eager"
-                    width={640}
-                    height={480}
+              {photos.slice(0, 12).map((photo, index) => (
+                <div
+                  key={photo}
+                  className={editorialGalleryTileClass}
+                  onClick={() => handlePhotoClick(index)}
+                >
+                  <Image
+                    src={photo}
+                    alt={`Luxe 5-BED Scandinave Retreat ${index + 1}`}
+                    fill
+                    sizes={editorialGalleryImageSizes}
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                    priority={index < 4}
+                    loading={index < 4 ? "eager" : "lazy"}
+                    quality={index < 6 ? 85 : 75}
+                    placeholder="blur"
+                    blurDataURL={BLUR_PLACEHOLDER}
                   />
                 </div>
-              </div>
-              {photos.slice(1, 4).map((photo, index) => (
-                <div
-                  key={index}
-                  className={editorialGalleryTileClass}
-                  onClick={() => handlePhotoClick(index + 1)}
-                >
-                  <div className="w-full h-full bg-gray-200">
-                    <img
-                      src={photo}
-                      alt={`Luxe 5-BED Scandinave Retreat ${index + 2}`}
-                      className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                      loading="eager"
-                      width={640}
-                      height={480}
-                    />
-                  </div>
-                </div>
-              ))}
-              {photos.slice(4, 8).map((photo, index) => (
-                <div
-                  key={index + 4}
-                  className={editorialGalleryTileClass}
-                  onClick={() => handlePhotoClick(index + 4)}
-                >
-                  <div className="w-full h-full bg-gray-200">
-                    <img
-                      src={photo}
-                      alt={`Luxe 5-BED Scandinave Retreat ${index + 5}`}
-                      className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                      loading="eager"
-                      width={640}
-                      height={480}
-                    />
-                  </div>
-                </div>
               ))}
             </div>
-            {photos.length > 8 && (
+            {photos.length > 12 && (
               <div className="text-center mt-6">
                 <button
                   onClick={() => setShowAllPhotos(true)}
@@ -416,17 +349,17 @@ const LuxeScandinaveRetreat = () => {
               <div className={`${editorialGalleryModalWrapperClass} ${editorialGalleryGridClass}`}>
                 {photos.map((photo, index) => (
                   <div
-                    key={index}
-                    className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer bg-gray-800"
+                    key={photo}
+                    className={editorialGalleryModalTileClass}
                     onClick={() => handlePhotoClick(index)}
                   >
-                    <img
+                    <Image
                       src={photo}
                       alt={`Luxe 5-BED Scandinave Retreat photo ${index + 1}`}
-                      className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                      fill
+                      sizes={editorialGalleryImageSizes}
+                      className="object-cover hover:scale-105 transition-transform duration-300"
                       loading={index < 12 ? "eager" : "lazy"}
-                      width={300}
-                      height={225}
                     />
                   </div>
                 ))}

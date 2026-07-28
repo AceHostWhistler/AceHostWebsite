@@ -1,4 +1,5 @@
 import React from "react";
+import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Image from "next/image";
 import Link from "next/link";
 import type { ListingDetailsProps } from "../types";
@@ -19,7 +20,7 @@ export default function WhistlerVillagePenthouseDetails({ photos }: ListingDetai
                     <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                       <div className="relative aspect-[4/3] mb-2">
                         <Image
-                          src={photos[2]}
+                          src={getGalleryPhotoSrc(photos[2])}
                           alt="Whistler Village Penthouse Interior"
                           fill
                           className="object-cover hover:scale-105 transition-transform duration-300"

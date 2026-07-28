@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 
 interface InsidePropertyPhotoStripProps {
   title: string;
@@ -32,7 +33,7 @@ const InsidePropertyPhotoStrip: React.FC<InsidePropertyPhotoStripProps> = ({
             className="relative aspect-[4/3] rounded-lg overflow-hidden"
           >
             <Image
-              src={photos[index]}
+              src={getGalleryPhotoSrc(photos[index])}
               alt={`${title} photo ${i + 1}`}
               fill
               className="object-cover hover:scale-105 transition-transform duration-300"
