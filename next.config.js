@@ -25,6 +25,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/blog/where-to-stay-in-whistler-winter',
+        destination: '/post/where-to-stay-in-whistler-winter',
+        permanent: true,
+      },
+      {
         source: '/about',
         destination: '/our-story',
         permanent: true,

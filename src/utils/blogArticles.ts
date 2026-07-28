@@ -11,6 +11,16 @@ export interface Article {
 // All blog articles data with proper image paths
 export const allArticles: Article[] = [
   {
+    title: "Where to Stay in Whistler in Winter | AceHost",
+    category: "Luxury Travel, Whistler",
+    description:
+      "Compare Whistler Village, Creekside, Kadenwood, Upper Village, Blueberry and more to find the best area for your Whistler winter ski trip.",
+    readTime: "20 min read",
+    link: "/post/where-to-stay-in-whistler-winter",
+    coverImage:
+      "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
+  },
+  {
     title: "28 Best Places to Stay in Whistler | AceHost",
     category: "Luxury Properties, Whistler",
     description:
