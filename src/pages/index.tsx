@@ -12,7 +12,6 @@ import { useTranslation } from "next-i18next";
 import { FaUser, FaBed, FaBath } from "react-icons/fa";
 import { Users, Bed, Bath } from "lucide-react";
 import { BLUFFS_AIRBNB_LINK } from "@/data/listings/bluffsAirbnbLink";
-import { airbnbButtonCard } from "@/lib/airbnbButtonStyles";
 import {
   getPropertyAirbnbLink,
   getPropertyContactLink,
@@ -134,7 +133,7 @@ const Home = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
-                className={airbnbButtonCard}
+                className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
               >
                 Book Now
               </a>
