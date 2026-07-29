@@ -1,6 +1,11 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import { businessInfo } from "@/data/seo/business";
+import { buildLocalBusinessSchema, buildWebsiteSchema } from "@/lib/seo/schema";
 
 export default function Document() {
+  const { geo } = businessInfo;
+  const geoPosition = `${geo.latitude};${geo.longitude}`;
+
   return (
     <Html lang="en">
       <Head>
@@ -20,6 +25,13 @@ export default function Document() {
           name="google-site-verification"
           content="UmTMmjHtW3Q_-Uzi8WXxrPgE2YBsv0RXCQuB_Y"
         />
+
+        {/* Geo signals for local search */}
+        <meta name="geo.region" content="CA-BC" />
+        <meta name="geo.placename" content="Whistler" />
+        <meta name="geo.position" content={geoPosition} />
+        <meta name="ICBM" content={geoPosition} />
+        <meta property="og:locale" content="en_CA" />
         
         {/* Additional metadata for search engines */}
         <meta name="application-name" content="AceHost Whistler" />
@@ -35,25 +47,24 @@ export default function Document() {
         
         {/* Twitter Card data */}
         <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@acehost_whistler" />
         <meta name="twitter:image" content="https://acehost.ca/logo.png" />
 
         {/* Enable DNS prefetching */}
         <meta httpEquiv="x-dns-prefetch-control" content="on" />
+        <link rel="author" href="https://acehost.ca/our-story" />
         
         {/* Google Sitelinks Search Box */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              "url": "https://acehost.ca/",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://acehost.ca/properties?search={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
-            })
+            __html: JSON.stringify(buildWebsiteSchema()),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(buildLocalBusinessSchema()),
           }}
         />
       </Head>

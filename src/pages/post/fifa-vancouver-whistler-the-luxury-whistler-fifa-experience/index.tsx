@@ -242,48 +242,6 @@ export default function BlogPost() {
     ...luxuryHomesBeyondKadenwood,
     ...condoTownhomeOptions,
   ];
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: META.title,
-    image: HERO_IMAGE_URL,
-    mainEntityOfPage: CANONICAL_URL,
-    datePublished: ISO_MODIFIED,
-    dateModified: ISO_MODIFIED,
-    articleSection: [
-      "FIFA 2026",
-      "Vancouver Travel",
-      "Whistler Luxury Rentals",
-    ],
-    keywords:
-      "FIFA Vancouver 2026, Whistler luxury rentals, Vancouver World Cup accommodation, Sea to Sky Highway stay, Whistler FIFA shuttle",
-    about: [
-      {
-        "@type": "Place",
-        name: "Vancouver",
-        address: { "@type": "PostalAddress", addressRegion: "BC", addressCountry: "CA" },
-      },
-      {
-        "@type": "Place",
-        name: "Whistler",
-        address: { "@type": "PostalAddress", addressRegion: "BC", addressCountry: "CA" },
-      },
-    ],
-    author: {
-      "@type": "Organization",
-      name: "AceHost Whistler",
-      url: "https://acehost.ca",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "AceHost Whistler",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://acehost.ca/logo.png",
-      },
-    },
-    description: META.description,
-  };
   const faqStructuredData = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -367,10 +325,6 @@ export default function BlogPost() {
         <meta
           name="keywords"
           content="FIFA Vancouver 2026, Whistler luxury rentals, Vancouver World Cup accommodation, BC Place match stays, Sea to Sky Highway travel, luxury Whistler Airbnb, Vancouver to Whistler FIFA shuttle"
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         <script
           type="application/ld+json"

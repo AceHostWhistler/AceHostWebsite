@@ -10,30 +10,6 @@ import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 const LuxuryChristmasRentals = () => {
   const currentArticleLink = "/post/top-7-of-the-most-luxury-vacation-rental-homes-in-whistler-for-christmas-new-years";
 
-  // Structured Data for Article
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Top 7 of the Most Luxury Vacation Rental Homes in Whistler for Christmas and New Year's",
-    "image": "https://acehost.ca/photos/post/top-7-of-the-most-luxury-vacation-rental-homes-in-whistler-for-christmas-new-years/Hero.png",
-    "datePublished": "2024-11-24T08:00:00+00:00",
-    "dateModified": "2024-11-24T08:00:00+00:00", 
-    "author": {
-      "@type": "Organization",
-      "name": "AceHost Whistler",
-      "url": "https://acehost.ca"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "AceHost Whistler",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://acehost.ca/logo.png"
-      }
-    },
-    "description": "Discover Whistler's most luxurious vacation rental homes for your Christmas and New Year's escape. From ski-in/ski-out chalets to stunning mountain retreats, find the perfect property for an unforgettable holiday."
-  };
-
   // Related articles
   const relatedArticles = [
     {
@@ -80,12 +56,6 @@ const LuxuryChristmasRentals = () => {
         <meta name="twitter:title" content="Top 7 Luxury Vacation Rental Homes in Whistler for Christmas and New Year's | AceHost" />
         <meta name="twitter:description" content="Discover Whistler's most luxurious vacation rental homes for your Christmas and New Year's escape." />
         <meta name="twitter:image" content="https://acehost.ca/photos/post/top-7-of-the-most-luxury-vacation-rental-homes-in-whistler-for-christmas-new-years/Hero.png" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData),
-          }}
-        />
       </Head>
 
       <div className="min-h-screen bg-white">

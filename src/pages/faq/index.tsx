@@ -7,6 +7,7 @@ import { useTranslation } from "next-i18next";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { ArrowRight, Plus, Minus } from "lucide-react";
+import { buildFaqPageSchema } from "@/lib/seo/schema";
 
 const FAQPage = () => {
   const { t } = useTranslation("common");
@@ -169,6 +170,9 @@ const FAQPage = () => {
     },
   ];
 
+  const faqSchemaItems = faqGroups.flatMap((group) => group.questions);
+  const faqPageSchema = buildFaqPageSchema(faqSchemaItems);
+
   return (
     <>
       <Head>
@@ -178,6 +182,12 @@ const FAQPage = () => {
         <meta
           name="description"
           content="Find answers to frequently asked questions about AceHost luxury vacation rentals in Whistler, our concierge services, and property management."
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(faqPageSchema),
+          }}
         />
       </Head>
 

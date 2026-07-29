@@ -24,6 +24,7 @@ import Image from "next/image";
 import Head from "next/head";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import { buildLocalBusinessSchema } from "@/lib/seo/schema";
 
 interface Feature {
   title: string;
@@ -162,6 +163,12 @@ const Contact = () => {
         <meta
           name="description"
           content="Get in touch with AceHost Whistler for luxury property management services, vacation rentals, and VIP concierge services in Whistler."
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(buildLocalBusinessSchema()),
+          }}
         />
       </Head>
 

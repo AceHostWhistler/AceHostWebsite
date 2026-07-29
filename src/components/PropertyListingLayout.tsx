@@ -25,6 +25,8 @@ import {
   getFullPhotoSrc,
   getGalleryPhotoSrc,
 } from "@/lib/optimizedPropertyPhotos";
+import { getPropertyGeoBySlug } from "@/data/seo/propertyGeo";
+import { buildVacationRentalSchema } from "@/lib/seo/schema";
 
 /** Listings with a custom in-description photo strip — skip the shared one. */
 const CUSTOM_INSIDE_PHOTO_STRIP_SLUGS = new Set([
@@ -116,6 +118,28 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
       ? listing.amenities
       : getListingAmenities(listing.slug);
 
+  const listingGeo = getPropertyGeoBySlug(listing.slug);
+  const guestCount =
+    typeof header.guests === "number"
+      ? header.guests
+      : Number(String(header.guests).match(/\d+/)?.[0]);
+  const bedroomCount =
+    typeof header.bedrooms === "number"
+      ? header.bedrooms
+      : Number(String(header.bedrooms).match(/\d+/)?.[0]);
+
+  const fallbackVacationRentalSchema =
+    !structuredData
+      ? buildVacationRentalSchema({
+          title: header.title,
+          url: `https://acehost.ca/listings/${listing.slug}`,
+          geo: listingGeo,
+          bedroomCount: Number.isFinite(bedroomCount) ? bedroomCount : undefined,
+          guestCount: Number.isFinite(guestCount) ? guestCount : undefined,
+          images: photos.slice(0, 3),
+        })
+      : null;
+
   return (
     <>
       <Head>
@@ -127,6 +151,14 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
             type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(structuredData),
+            }}
+          />
+        )}
+        {fallbackVacationRentalSchema && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(fallbackVacationRentalSchema),
             }}
           />
         )}
@@ -150,6 +182,8 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
             contactText={header.contactText}
             amenities={amenities}
             onMorePhotosClick={openGallery}
+            geo={listingGeo}
+            schemaImages={photos.slice(0, 3)}
           />
 
           <div className={editorialGalleryWrapperClass} id="photos">

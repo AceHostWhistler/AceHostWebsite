@@ -23,28 +23,6 @@ const META = {
 
 export default function BlogPost() {
   const currentArticleLink = `/post/${SLUG}`;
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: META.title,
-    image: HERO_URL,
-    datePublished: ISO_MOD,
-    dateModified: ISO_MOD,
-    author: {
-      "@type": "Organization",
-      name: "AceHost Whistler",
-      url: "https://acehost.ca",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "AceHost Whistler",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://acehost.ca/logo.png",
-      },
-    },
-    description: META.description,
-  };
 
   return (
     <>
@@ -63,10 +41,6 @@ export default function BlogPost() {
         <meta
           name="keywords"
           content="Whistler property manager, Whistler vacation rental management, self manage Airbnb Whistler, Whistler rental income, AceHost property management, Whistler owner guide, short term rental Whistler"
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </Head>
 

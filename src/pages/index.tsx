@@ -17,6 +17,11 @@ import {
   getPropertyContactLink,
   shouldUseContactForBooking,
 } from "@/data/propertyAirbnbLinks";
+import {
+  buildHomepageOrganizationSchema,
+  buildOrganizationSchema,
+  buildWebsiteSchema,
+} from "@/lib/seo/schema";
 
 const Home = () => {
   const { t } = useTranslation("common");
@@ -24,48 +29,9 @@ const Home = () => {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
   // Structured data for rich snippets - Enhanced for better SEO
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "AceHost",
-    description:
-      "Luxury Vacation Rental Properties in Whistler Canada | Property Management & VIP Concierge Services",
-    url: "https://acehost.ca",
-    logo: "https://acehost.ca/logo.png",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "4308 Main Street",
-      addressLocality: "Whistler",
-      addressRegion: "BC",
-      postalCode: "V8E 1B2",
-      addressCountry: "CA",
-    },
-    sameAs: [
-      "https://www.instagram.com/acehost_whistler/",
-      "https://www.youtube.com/@acehost_Whistler/videos",
-    ],
-    offers: {
-      "@type": "AggregateOffer",
-      description: "Luxury Vacation Rental Properties in Whistler Canada",
-      areaServed: "Whistler, British Columbia",
-      offerCount: "15+",
-      priceCurrency: "CAD",
-    },
-    openingHours: "Mo,Tu,We,Th,Fr,Sa,Su 09:00-21:00",
-  };
-
-  // Website schema for search appearance
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "AceHost Whistler Luxury Rentals",
-    url: "https://acehost.ca",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: "https://acehost.ca/properties?search={search_term_string}",
-      "query-input": "required name=search_term_string",
-    },
-  };
+  const structuredData = buildOrganizationSchema();
+  const websiteSchema = buildWebsiteSchema();
+  const homepageOrganizationSchema = buildHomepageOrganizationSchema();
 
   // Render optimized property card directly
   const renderPropertyCard = (property: any, index: number) => {
@@ -1132,73 +1098,7 @@ const Home = () => {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "AceHost Whistler",
-              "url": "https://acehost.ca",
-              "logo": "https://acehost.ca/logo.png",
-              "sameAs": [
-                "https://www.instagram.com/acehost_whistler/",
-                "https://www.youtube.com/@acehost_Whistler/videos"
-              ],
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://acehost.ca/properties?search={search_term_string}",
-                "query-input": "required name=search_term_string"
-              },
-              "hasOfferCatalog": {
-                "@type": "OfferCatalog",
-                "name": "Luxury Vacation Rental Properties",
-                "itemListElement": [
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Product",
-                      "name": "Chalet La Forja | Kadenwood | Private Butler",
-                      "url": "https://acehost.ca/listings/chalet-la-forja-kadenwood"
-                    }
-                  }
-                ]
-              },
-              "department": [
-                {
-                  "@type": "Organization",
-                  "name": "View Luxury Rental Properties",
-                  "url": "https://acehost.ca/properties"
-                },
-                {
-                  "@type": "Organization",
-                  "name": "Our Story",
-                  "url": "https://acehost.ca/our-story"
-                },
-                {
-                  "@type": "Organization",
-                  "name": "Contact Us",
-                  "url": "https://acehost.ca/contact"
-                },
-                {
-                  "@type": "Organization",
-                  "name": "Property Management",
-                  "url": "https://acehost.ca/list-property"
-                },
-                {
-                  "@type": "Organization",
-                  "name": "AceHost Whistler Luxury Rentals",
-                  "url": "https://acehost.ca/properties"
-                },
-                {
-                  "@type": "Organization",
-                  "name": "Blog",
-                  "url": "https://acehost.ca/blogs"
-                },
-                {
-                  "@type": "Organization",
-                  "name": "WorldWide Listings",
-                  "url": "https://acehost.ca/worldwide-listings"
-                }
-              ]
-            })
+            __html: JSON.stringify(homepageOrganizationSchema),
           }}
         />
 

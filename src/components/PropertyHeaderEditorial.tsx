@@ -4,6 +4,12 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { ArrowUpRight } from "lucide-react";
 import { airbnbButtonPill } from "@/lib/airbnbButtonStyles";
+import type { PropertyGeo } from "@/data/seo/propertyGeo";
+import { getPropertyGeoByPath } from "@/data/seo/propertyGeo";
+import {
+  buildBreadcrumbSchema,
+  buildVacationRentalSchema,
+} from "@/lib/seo/schema";
 
 interface PropertyHeaderEditorialProps {
   title: string;
@@ -19,6 +25,8 @@ interface PropertyHeaderEditorialProps {
   contactText?: string;
   amenities?: string[];
   onMorePhotosClick?: () => void;
+  geo?: PropertyGeo;
+  schemaImages?: string[];
 }
 
 function scrollToId(id: string) {
@@ -130,6 +138,8 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
   contactText = "Contact Us",
   amenities = [],
   onMorePhotosClick,
+  geo: geoProp,
+  schemaImages,
 }) => {
   const router = useRouter();
   const [cleanPath] = (router.asPath || "/").split("?");
@@ -138,6 +148,7 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
       ? cleanPath.slice(0, -1)
       : cleanPath;
   const canonicalUrl = `https://acehost.ca${canonicalPath}`;
+  const geo = geoProp ?? getPropertyGeoByPath(canonicalPath);
 
   const { primary, secondary } = parseTitleParts(title);
   const toNumber = (value: number | string | undefined): number | undefined => {
@@ -149,56 +160,16 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
 
   const guestCount = toNumber(guests);
   const bedroomCount = toNumber(bedrooms);
-  const bathroomCount = toNumber(bathrooms);
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://acehost.ca/",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Luxury Rental Homes",
-        item: "https://acehost.ca/properties",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: title,
-        item: canonicalUrl,
-      },
-    ],
-  };
-
-  const vacationRentalSchema = {
-    "@context": "https://schema.org",
-    "@type": "VacationRental",
-    name: title,
+  const breadcrumbSchema = buildBreadcrumbSchema(title, canonicalUrl);
+  const vacationRentalSchema = buildVacationRentalSchema({
+    title,
     url: canonicalUrl,
-    description: `${title} vacation rental in Whistler, British Columbia.`,
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Whistler",
-      addressRegion: "BC",
-      addressCountry: "CA",
-    },
-    numberOfRooms: bedroomCount,
-    occupancy: guestCount
-      ? { "@type": "QuantitativeValue", value: guestCount }
-      : undefined,
-    makesOffer: {
-      "@type": "Offer",
-      url: canonicalUrl,
-      priceCurrency: "CAD",
-      availability: "https://schema.org/InStock",
-    },
-  };
+    geo,
+    bedroomCount,
+    guestCount,
+    images: schemaImages,
+  });
 
   const specs = [
     { value: String(guests), label: "Guests" },

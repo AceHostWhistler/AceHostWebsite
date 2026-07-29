@@ -1,3 +1,4 @@
+// Legacy API route. Canonical sitemap is generated at build time by scripts/generate-sitemap.js
 import { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';

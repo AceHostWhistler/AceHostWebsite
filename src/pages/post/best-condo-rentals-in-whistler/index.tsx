@@ -10,30 +10,6 @@ import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 export default function BlogPost() {
   const publishDate = "October 15, 2025";
   const currentArticleLink = "/post/best-condo-rentals-in-whistler";
-  
-  // Structured Data for Article
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Ultimate Guide to the Best Condo Airbnb Rentals in Whistler | Ski in Ski out + Best Locations!",
-    "image": "https://acehost.ca/photos/post/best-condo-rentals-in-whistler/hero.jpg",
-    "datePublished": "2025-10-15T08:00:00+00:00",
-    "dateModified": "2025-10-15T08:00:00+00:00", 
-    "author": {
-      "@type": "Organization",
-      "name": "AceHost Whistler",
-      "url": "https://acehost.ca"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "AceHost Whistler",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://acehost.ca/logo.png"
-      }
-    },
-    "description": "Discover Whistler's most stylish and comfortable condo rentals, from ski-in/ski-out options to village-center gems. Find your perfect 1-3 bedroom mountain escape with breathtaking views and amazing amenities."
-  };
 
   return (
     <>
@@ -54,12 +30,6 @@ export default function BlogPost() {
         <meta name="twitter:description" content="Discover Whistler's most stylish and comfortable condo rentals, from ski-in/ski-out options to village-center gems. Find your perfect 1-3 bedroom mountain escape with breathtaking views and amazing amenities." />
         <meta name="twitter:image" content="https://acehost.ca/photos/post/best-condo-rentals-in-whistler/hero.jpg" />
         <meta name="keywords" content="Whistler condo rentals, Whistler Airbnb, ski in ski out Whistler, best Whistler condos, Whistler accommodation, Whistler vacation rental, luxury condo Whistler" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData),
-          }}
-        />
       </Head>
 
       <div className="min-h-screen bg-white">

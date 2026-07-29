@@ -9,30 +9,6 @@ import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 export default function BlogPost() {
   const publishDate = "August 27, 2024";
   const currentArticleLink = "/post/whistlers-dream-rental-homes";
-  
-  // Structured Data for Article
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Whistler's Dream Rental Homes: Top 5 Luxury Vacation Properties",
-    "image": "https://acehost.ca/photos/post/whistlers-dream-rental-homes/hero.jpg",
-    "datePublished": "2024-08-27T08:00:00+00:00",
-    "dateModified": "2024-08-27T08:00:00+00:00", 
-    "author": {
-      "@type": "Organization",
-      "name": "AceHost Whistler",
-      "url": "https://acehost.ca"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "AceHost Whistler",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://acehost.ca/logo.png"
-      }
-    },
-    "description": "Explore Whistler's most exclusive luxury vacation rentals, from ski-in/ski-out chalets to stunning village properties. Discover what makes these 5 properties the ultimate mountain getaway."
-  };
 
   return (
     <>
@@ -52,12 +28,6 @@ export default function BlogPost() {
         <meta name="twitter:title" content="Whistler's Dream Rental Homes: Top 5 Luxury Vacation Properties | AceHost" />
         <meta name="twitter:description" content="Explore Whistler's most exclusive luxury vacation rentals, from ski-in/ski-out chalets to stunning village properties. Discover what makes these 5 properties the ultimate mountain getaway." />
         <meta name="twitter:image" content="https://acehost.ca/photos/post/whistlers-dream-rental-homes/hero.jpg" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData),
-          }}
-        />
       </Head>
 
       <div className="min-h-screen bg-white">

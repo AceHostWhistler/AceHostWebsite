@@ -2,5 +2,22 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://acehost.ca/sitemap.xml 
+# AI search crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Sitemap and AI site guide
+Sitemap: https://acehost.ca/sitemap.xml
+# LLM site guide: https://acehost.ca/llms.txt

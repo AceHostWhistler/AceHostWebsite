@@ -201,33 +201,6 @@ function SectionImage({
 export default function BlogPost() {
   const currentArticleLink = `/post/${SLUG}`;
 
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline:
-      "Where to Stay in Whistler in Winter: The Best Neighbourhood for Every Type of Ski Trip",
-    image: HERO_URL,
-    mainEntityOfPage: CANONICAL_URL,
-    datePublished: ISO_MOD,
-    dateModified: ISO_MOD,
-    author: {
-      "@type": "Organization",
-      name: "AceHost Whistler",
-      url: "https://acehost.ca",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "AceHost Whistler",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://acehost.ca/logo.png",
-      },
-    },
-    description: META.description,
-    keywords:
-      "where to stay in Whistler in winter, best area to stay in Whistler, Whistler Village vs Creekside, Kadenwood chalets, Whistler ski vacation rentals",
-  };
-
   const faqStructuredData = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -262,10 +235,6 @@ export default function BlogPost() {
         <meta
           name="keywords"
           content="where to stay in Whistler in winter, best area to stay in Whistler, where to stay in Whistler, Whistler Village vs Creekside, luxury Whistler chalets, Whistler ski vacation rentals"
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         <script
           type="application/ld+json"

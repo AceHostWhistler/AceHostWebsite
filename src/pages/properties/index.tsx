@@ -35,6 +35,10 @@ import {
   type PropertyFeature,
   type PropertyCategory,
 } from "@/data/properties/catalog";
+import { buildPropertiesItemListSchema } from "@/lib/seo/schema";
+
+const propertiesStructuredData =
+  buildPropertiesItemListSchema(propertyCategories);
 
 export default function Properties() {
   const { t } = useTranslation("common");
@@ -51,49 +55,6 @@ export default function Properties() {
     skiInSkiOut: false
   });
   const [showFilters, setShowFilters] = useState(false);
-
-  // Structured data for SEO
-  const structuredData = useMemo(
-    () => ({
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      itemListElement: [] as Array<{
-        "@type": string;
-        position: number;
-        item: {
-          "@type": string;
-          name: string;
-          image: string;
-          description: string;
-          accommodationCategory: string;
-          numberOfRooms: number | null;
-          amenityFeature: Array<{
-            "@type": string;
-            name: string;
-          }>;
-          address: {
-            "@type": string;
-            addressLocality: string;
-          };
-          offers?: {
-            "@type": string;
-            priceCurrency: string;
-            priceValidUntil: string;
-            url: string;
-            availability: string;
-          };
-          aggregateRating?: {
-            "@type": string;
-            ratingValue: number;
-            reviewCount: number;
-          };
-        };
-      }>,
-      numberOfItems: 0,
-    }),
-    []
-  );
-
 
   // Update active category based on URL query parameter
   useEffect(() => {
@@ -176,52 +137,6 @@ export default function Properties() {
     return { ...category, properties: filteredProperties };
   });
   }, [propertyCategories, activeCategory, filters]);
-
-  // Populate structured data with filtered properties for SEO
-  useEffect(() => {
-    const allProperties = displayProperties.flatMap(
-      (category) => category.properties
-    );
-
-    structuredData.numberOfItems = allProperties.length;
-    structuredData.itemListElement = allProperties.map((property, index) => {
-      const propertyUrl = property.link
-        ? `https://acehost.ca${property.link}`
-        : `https://acehost.ca/listings/${property.id}`;
-
-      return {
-        "@type": "ListItem",
-        position: index + 1,
-        item: {
-          "@type": "Accommodation",
-          name: property.name,
-          image: property.images[0],
-          description: property.description,
-          accommodationCategory: "Vacation Rental",
-          numberOfRooms: property.bedrooms,
-          amenityFeature: property.features.map((feature) => ({
-            "@type": "LocationFeatureSpecification",
-            name: feature,
-          })),
-          address: {
-            "@type": "PostalAddress",
-            addressLocality: property.location,
-          },
-          offers: {
-            "@type": "Offer",
-            priceCurrency: "CAD",
-            priceValidUntil: new Date(
-              new Date().setFullYear(new Date().getFullYear() + 1)
-            )
-              .toISOString()
-              .split("T")[0],
-            url: propertyUrl,
-            availability: "https://schema.org/InStock",
-          },
-        },
-      };
-    });
-  }, [displayProperties, structuredData, propertyCategories]);
 
   // Add/remove amenity filter
   const toggleAmenityFilter = (amenity: string) => {
@@ -479,7 +394,9 @@ export default function Properties() {
         <link rel="canonical" href="https://acehost.ca/properties" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(propertiesStructuredData),
+          }}
         />
       </Head>
 

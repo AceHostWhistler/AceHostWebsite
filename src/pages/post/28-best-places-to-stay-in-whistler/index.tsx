@@ -125,31 +125,6 @@ function PropertyCard({ property }: { property: Whistler28Property }) {
 export default function BlogPost() {
   const currentArticleLink = `/post/${SLUG}`;
 
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline:
-      "From Village Condos to $20 Million Chalets: 28 Incredible Places to Stay in Whistler",
-    image: HERO_URL,
-    mainEntityOfPage: CANONICAL_URL,
-    datePublished: ISO_MOD,
-    dateModified: ISO_MOD,
-    author: {
-      "@type": "Organization",
-      name: "AceHost Whistler",
-      url: "https://acehost.ca",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "AceHost Whistler",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://acehost.ca/logo.png",
-      },
-    },
-    description: META.description,
-  };
-
   const faqStructuredData = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -203,10 +178,6 @@ export default function BlogPost() {
         <meta
           name="keywords"
           content="Whistler vacation rentals, best places to stay in Whistler, Kadenwood chalets, Whistler Village condos, ski-in ski-out Whistler, luxury Whistler Airbnb, AceHost Whistler"
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         <script
           type="application/ld+json"
