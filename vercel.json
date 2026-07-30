@@ -19,6 +19,42 @@
     },
     {
       "source": "/:path*",
+      "has": [{ "type": "host", "value": "riviera-stays.com" }],
+      "destination": "https://www.acehost.ca/:path*",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.riviera-stays.com" }],
+      "destination": "https://www.acehost.ca/:path*",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "acecascade.ca" }],
+      "destination": "https://www.acehost.ca/:path*",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.acecascade.ca" }],
+      "destination": "https://www.acehost.ca/:path*",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "acecascade.com" }],
+      "destination": "https://www.acehost.ca/:path*",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.acecascade.com" }],
+      "destination": "https://www.acehost.ca/:path*",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path*",
       "has": [{ "type": "host", "value": "acehost.ca" }],
       "destination": "https://www.acehost.ca/:path*",
       "statusCode": 308

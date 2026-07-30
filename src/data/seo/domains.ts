@@ -10,6 +10,12 @@ export const PRIMARY_SITE_URL = `https://${PRIMARY_HOST}`;
 export const DUPLICATE_CONTENT_REDIRECT_HOSTS = new Set([
   "reelroom.ca",
   "www.reelroom.ca",
+  "riviera-stays.com",
+  "www.riviera-stays.com",
+  "acecascade.ca",
+  "www.acecascade.ca",
+  "acecascade.com",
+  "www.acecascade.com",
 ]);
 
 export function isPrimaryHost(host: string): boolean {
