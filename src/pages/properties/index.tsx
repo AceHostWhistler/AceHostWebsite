@@ -36,6 +36,7 @@ import {
   type PropertyCategory,
 } from "@/data/properties/catalog";
 import { buildPropertiesItemListSchema } from "@/lib/seo/schema";
+import { SITE_URL } from "@/data/seo/business";
 
 const propertiesStructuredData =
   buildPropertiesItemListSchema(propertyCategories);
@@ -391,7 +392,7 @@ export default function Properties() {
           content="Browse our exclusive collection of luxury vacation rentals in Whistler, BC. Ski-in/ski-out chalets, premium condos, and spectacular mountain homes available."
         />
         <link rel="icon" href="/favicons/favicon.ico" />
-        <link rel="canonical" href="https://acehost.ca/properties" />
+        <link rel="canonical" href={`${SITE_URL}/properties`} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

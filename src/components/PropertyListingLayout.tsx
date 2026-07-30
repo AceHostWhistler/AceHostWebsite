@@ -27,6 +27,7 @@ import {
 } from "@/lib/optimizedPropertyPhotos";
 import { getPropertyGeoBySlug } from "@/data/seo/propertyGeo";
 import { buildVacationRentalSchema } from "@/lib/seo/schema";
+import { SITE_URL } from "@/data/seo/business";
 
 /** Listings with a custom in-description photo strip — skip the shared one. */
 const CUSTOM_INSIDE_PHOTO_STRIP_SLUGS = new Set([
@@ -132,7 +133,7 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
     !structuredData
       ? buildVacationRentalSchema({
           title: header.title,
-          url: `https://acehost.ca/listings/${listing.slug}`,
+          url: `${SITE_URL}/listings/${listing.slug}`,
           geo: listingGeo,
           bedroomCount: Number.isFinite(bedroomCount) ? bedroomCount : undefined,
           guestCount: Number.isFinite(guestCount) ? guestCount : undefined,

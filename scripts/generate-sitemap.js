@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
-const SITE_URL = 'https://acehost.ca';
+const SITE_URL = 'https://www.acehost.ca';
 const OUTPUT_PATH = path.join(process.cwd(), 'public', 'sitemap.xml');
 const PAGES_DIR = path.join(process.cwd(), 'src', 'pages');
 const LISTINGS_INDEX = path.join(process.cwd(), 'src', 'data', 'listings', 'index.ts');

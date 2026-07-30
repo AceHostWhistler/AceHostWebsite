@@ -10,6 +10,7 @@ import {
   buildBreadcrumbSchema,
   buildVacationRentalSchema,
 } from "@/lib/seo/schema";
+import { SITE_URL } from "@/data/seo/business";
 
 interface PropertyHeaderEditorialProps {
   title: string;
@@ -147,7 +148,7 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
     cleanPath.endsWith("/") && cleanPath !== "/"
       ? cleanPath.slice(0, -1)
       : cleanPath;
-  const canonicalUrl = `https://acehost.ca${canonicalPath}`;
+  const canonicalUrl = `${SITE_URL}${canonicalPath}`;
   const geo = geoProp ?? getPropertyGeoByPath(canonicalPath);
 
   const { primary, secondary } = parseTitleParts(title);
@@ -184,7 +185,7 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
   return (
     <>
       <Head>
-        <link rel="up" href="https://acehost.ca/properties" />
+        <link rel="up" href={`${SITE_URL}/properties`} />
         <link rel="bookmark" href={canonicalUrl} />
         <script
           type="application/ld+json"

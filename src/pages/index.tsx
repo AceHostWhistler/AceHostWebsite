@@ -22,6 +22,7 @@ import {
   buildOrganizationSchema,
   buildWebsiteSchema,
 } from "@/lib/seo/schema";
+import { SITE_URL } from "@/data/seo/business";
 
 const Home = () => {
   const { t } = useTranslation("common");
@@ -1074,8 +1075,8 @@ const Home = () => {
           property="og:image"
           content="https://acehost.ca/photos/homepage/WhistlerVacationRental.jpg"
         />
-        <meta property="og:url" content="https://acehost.ca" />
-        <link rel="canonical" href="https://acehost.ca" />
+        <meta property="og:url" content={SITE_URL} />
+        <link rel="canonical" href={SITE_URL} />
         <link rel="icon" href="/favicons/favicon.ico" />
 
         {/* Structured data for Google search results */}

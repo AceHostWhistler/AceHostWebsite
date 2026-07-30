@@ -1,4 +1,6 @@
-export const SITE_URL = "https://acehost.ca";
+import { PRIMARY_SITE_URL } from "@/data/seo/domains";
+
+export const SITE_URL = PRIMARY_SITE_URL;
 
 export const businessInfo = {
   name: "AceHost",

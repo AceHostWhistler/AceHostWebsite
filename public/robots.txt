@@ -19,5 +19,5 @@ User-agent: PerplexityBot
 Allow: /
 
 # Sitemap and AI site guide
-Sitemap: https://acehost.ca/sitemap.xml
-# LLM site guide: https://acehost.ca/llms.txt
+Sitemap: https://www.acehost.ca/sitemap.xml
+# LLM site guide: https://www.acehost.ca/llms.txt
