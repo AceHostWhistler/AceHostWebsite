@@ -314,7 +314,10 @@ export default function BlogPost() {
               </p>
               <p>
                 That works out to about a <strong>13.1%</strong> annual return
-                on your cash invested.
+                on your cash invested. And this does not include equity
+                appreciation on leverage. Which in the past in Whistler has
+                consistently overtime been about 4-5%. Past does not represent
+                future, but we can hope that it rhymes.
               </p>
               <p>That is the part many buyers overlook.</p>
               <p>
