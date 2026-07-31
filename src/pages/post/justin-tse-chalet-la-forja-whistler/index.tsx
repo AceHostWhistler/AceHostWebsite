@@ -37,18 +37,16 @@ const LISTING_HREF = "/listings/chalet-la-forja-kadenwood";
 const KADENWOOD_HREF = "/post/where-to-stay-in-whistler-winter#kadenwood";
 const PROPERTIES_HREF = "/properties";
 
-const OTHER_KADENWOOD_PROPERTIES: Whistler28Property[] = [
-  ...kadenwoodProperties.filter((p) => p.listingHref !== LISTING_HREF),
-  {
-    number: 7,
-    name: "Cedarhof | Kadenwood",
-    description:
-      "A luxury ski-in/ski-out Kadenwood retreat with a heated pool, hot tub, tasting room, and stunning views over Whistler Peak.",
-    image: "/optimized/cedarhof/2932 Pool A NEW.jpg",
-    listingHref: "/listings/cedarhof-kadenwood",
-    contactOnly: true,
-  },
-];
+const KADENWOOD_BOOKING_PROPERTIES: Whistler28Property[] = kadenwoodProperties.map(
+  (property) =>
+    property.listingHref === LISTING_HREF
+      ? {
+          ...property,
+          image:
+            "/photos/properties/Chalet La Forja/2950 Heritage Peaks Trail 4 Large 2.png",
+        }
+      : property
+);
 
 function KadenwoodPropertyCard({ property }: { property: Whistler28Property }) {
   return (
@@ -521,7 +519,7 @@ export default function BlogPost() {
               </p>
 
               <div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                {OTHER_KADENWOOD_PROPERTIES.map((property) => (
+                {KADENWOOD_BOOKING_PROPERTIES.map((property) => (
                   <KadenwoodPropertyCard
                     key={property.listingHref}
                     property={property}
