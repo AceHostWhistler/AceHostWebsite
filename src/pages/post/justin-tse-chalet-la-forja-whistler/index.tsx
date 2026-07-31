@@ -28,14 +28,16 @@ const PUBLISH_DATE = "July 31, 2026";
 const ISO_MOD = "2026-07-31T12:00:00-07:00";
 
 const META = {
-  title: "Justin Tse at Chalet La Forja | Luxury Whistler Experience | AceHost",
+  title:
+    "Justin Tse in Kadenwood | Luxury Whistler Experience with AceHost",
   description:
-    "Join Justin Tse at Chalet La Forja in Kadenwood for the ultimate luxury Whistler experience, from ski-in/ski-out living to skiing, dining, ice fishing and a helicopter adventure with AceHost.",
+    "Creator Justin Tse stayed with AceHost in Kadenwood, Whistler. See how our ski-in/ski-out chalets, VIP concierge, and curated experiences turn a Whistler trip into something unforgettable.",
 };
 
 const LISTING_HREF = "/listings/chalet-la-forja-kadenwood";
 const KADENWOOD_HREF = "/post/where-to-stay-in-whistler-winter#kadenwood";
 const PROPERTIES_HREF = "/properties";
+const CONCIERGE_HREF = "/concierge-service";
 
 const KADENWOOD_BOOKING_PROPERTIES: Whistler28Property[] = kadenwoodProperties.map(
   (property) =>
@@ -159,7 +161,7 @@ export default function BlogPost() {
         <meta name="twitter:image" content={heroUrl} />
         <meta
           name="keywords"
-          content="Justin Tse Whistler, Chalet La Forja, Kadenwood Whistler, luxury Whistler chalet, luxury Whistler experiences, AceHost, ski-in ski-out Whistler, Whistler Blackcomb"
+          content="Justin Tse Whistler, Kadenwood Whistler, luxury Whistler chalet, AceHost concierge, luxury Whistler experiences, ski-in ski-out Whistler, Whistler Blackcomb, Chalet La Forja"
         />
       </Head>
 
@@ -171,7 +173,7 @@ export default function BlogPost() {
             <div className="mb-10">
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
-                  Property Feature
+                  Luxury Travel
                 </span>
                 <span className="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
                   Kadenwood
@@ -182,8 +184,8 @@ export default function BlogPost() {
               </div>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                Inside the Ultimate Luxury Whistler Experience with Justin Tse
-                at Chalet La Forja
+                Justin Tse&apos;s Luxury Whistler Experience with AceHost in
+                Kadenwood
               </h1>
 
               <div className="flex items-center text-sm text-gray-600 mb-8">
@@ -192,7 +194,7 @@ export default function BlogPost() {
 
               <ArticleImage
                 src={PHOTOS.hero}
-                alt="Chalet La Forja snowy exterior in Kadenwood, Whistler"
+                alt="Luxury Kadenwood chalet interior in Whistler"
                 priority
               />
             </div>
@@ -201,83 +203,116 @@ export default function BlogPost() {
               <p className="text-xl text-gray-800 leading-relaxed">
                 It was an absolute pleasure hosting Justin Tse in Whistler and
                 giving him a taste of what an AceHost winter experience can look
-                like.
+                like in{" "}
+                <Link href={KADENWOOD_HREF}>Kadenwood</Link>.
               </p>
 
               <p>
-                Justin joined us at{" "}
-                <Link href={LISTING_HREF}>Chalet La Forja</Link>, one of the
-                most spectacular luxury homes in{" "}
-                <Link href={KADENWOOD_HREF}>Kadenwood</Link>, and documented the
-                trip for his YouTube channel in{" "}
+                Justin stayed at{" "}
+                <Link href={LISTING_HREF}>Chalet La Forja</Link> during the trip
+                and documented the experience for his YouTube channel in{" "}
                 <em>
                   The Ultimate Luxury Whistler Chalet Winter Road Trip
                   Experience
                 </em>
-                .
+                . But the video captures something bigger than any single home:
+                what it feels like to base a Whistler vacation in one of the
+                mountain&apos;s most exclusive neighbourhoods, with a team
+                handling the details from arrival to departure.
               </p>
 
               <p>
-                The result is an incredible look at Whistler beyond simply
-                booking a beautiful place to stay.
-              </p>
-
-              <p>
-                From exploring Chalet La Forja and skiing Whistler Blackcomb to
-                ice fishing, dining in Whistler and heading into the mountains
-                by helicopter, Justin&apos;s trip showcases exactly why we
-                believe a great Whistler vacation should be about the entire
-                experience.
+                From skiing Whistler Blackcomb and ice fishing to dining in
+                Whistler and heading into the mountains by helicopter,
+                Justin&apos;s itinerary shows why we believe a great Whistler
+                trip should be about the entire experience — not just where you
+                sleep.
               </p>
 
               <YouTubeEmbed />
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6 not-prose">
-                Welcome to Chalet La Forja
+                Why Stay in Kadenwood
               </h2>
 
               <p>
-                Justin&apos;s Whistler experience begins at{" "}
-                <Link href={LISTING_HREF}>Chalet La Forja</Link>, located high
-                above Creekside in Kadenwood.
+                <Link href={KADENWOOD_HREF}>Kadenwood</Link> sits above Whistler
+                Creekside on Whistler Mountain and is one of the most sought-after
+                addresses in the resort. The neighbourhood combines true
+                ski-in/ski-out access, dramatic mountain views, and a level of
+                privacy that is hard to find elsewhere in Whistler.
               </p>
 
               <p>
-                At more than 10,000 square feet, Chalet La Forja is one of the
-                standout homes in the AceHost collection. The property
-                accommodates up to 16 guests and features nine bedrooms, a heated
-                outdoor pool, private hot tub, fitness gym, gourmet chef&apos;s
-                kitchen, Sonos sound throughout the home and direct ski-in/ski-out
-                access.
+                Many of our guests choose Kadenwood because they want a large
+                luxury chalet where several families or a big group can stay
+                together — without spending the week driving back and forth from
+                the Village. Access to Kadenwood&apos;s private gondola connects
+                the neighbourhood with Creekside below, making it easy to reach
+                restaurants, groceries and the base area while still feeling
+                completely removed from the crowds.
               </p>
 
               <ArticleImage
                 src={PHOTOS.greatRoom}
-                alt="Chalet La Forja great room and interior living space"
+                alt="Luxury Kadenwood chalet living space in Whistler"
               />
 
               <p>
-                The home also provides access to Kadenwood&apos;s private
-                gondola, connecting the neighbourhood with Creekside below.
-                Kadenwood itself sits above Whistler Creekside on Whistler
-                Mountain, offering a combination of privacy, mountain access and
-                proximity to the restaurants and amenities of Creekside Village.
+                AceHost manages a collection of exceptional{" "}
+                <Link href={PROPERTIES_HREF}>
+                  luxury Whistler vacation rentals
+                </Link>{" "}
+                in Kadenwood, from seven-bedroom ski chalets with private butler
+                service to larger estates built for multi-generational trips.
+                Homes in the neighbourhood typically feature hot tubs, expansive
+                great rooms, gourmet kitchens, and direct mountain access — the
+                kind of setup that makes a Whistler vacation feel effortless from
+                the moment you arrive.
               </p>
 
-              <p>For guests staying at Chalet La Forja, the house is only the beginning.</p>
+              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6 not-prose">
+                The AceHost Concierge Experience
+              </h2>
+
+              <p>
+                Beautiful homes are at the centre of what we do, but AceHost has
+                never been only about handing guests the keys to a house. For
+                many of our guests, a trip to Whistler is a major family
+                vacation, celebration, or once-a-year ski trip. Some are
+                travelling internationally. Others are bringing several
+                generations together under one roof.
+              </p>
+
+              <p>
+                Our job is to make the rest of the trip as seamless as the
+                accommodation. That is where our{" "}
+                <Link href={CONCIERGE_HREF}>VIP concierge team</Link> comes in.
+              </p>
+
+              <p>
+                Before arrival, we can help organize airport transportation,
+                stock the fridge with groceries, arrange ski equipment and
+                private instructors, and build a rough itinerary around what the
+                group wants from the week. During the stay, our concierge team
+                handles restaurant reservations, private chefs, spa treatments,
+                snowmobiling, helicopter experiences, childcare, and the kind of
+                last-minute requests that come up when you are travelling with a
+                large group.
+              </p>
 
               <ArticleImage
                 src={PHOTOS.poolHotTub}
-                alt="Chalet La Forja heated outdoor pool and hot tub in winter"
+                alt="Heated outdoor pool and hot tub at a Kadenwood luxury chalet"
               />
 
               <p>
-                A private butler is included with each stay, along with
-                complimentary housekeeping every other day. Our{" "}
-                <Link href="/concierge-service">concierge team</Link> can also
-                coordinate everything from private chefs and transportation to
-                ski instructors, restaurant reservations, helicopter experiences
-                and additional Whistler adventures.
+                Several of our Kadenwood homes also include a private butler and
+                complimentary housekeeping every other day, so guests can focus on
+                skiing, relaxing, and enjoying time together rather than
+                managing logistics. Whether you are staying for a long weekend or
+                a full holiday week, the goal is the same: a Whistler trip that
+                feels curated, not complicated.
               </p>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6 not-prose">
@@ -286,10 +321,9 @@ export default function BlogPost() {
 
               <p>
                 One of the things we loved about Justin&apos;s video is that it
-                doesn&apos;t simply tour the home.
+                doesn&apos;t simply tour the home. It shows what happens once
+                you step outside of it.
               </p>
-
-              <p>It shows what happens once you step outside of it.</p>
 
               <p>His itinerary included:</p>
 
@@ -316,7 +350,7 @@ export default function BlogPost() {
               <p>
                 The video also features a stop at North Arm Farm during the
                 journey to Whistler. Justin&apos;s full itinerary moves quickly
-                from the chalet tour into the road trip, mountain and dining
+                from the chalet into the road trip, mountain, and dining
                 experiences that made up the stay.
               </p>
 
@@ -324,45 +358,35 @@ export default function BlogPost() {
 
               <p>
                 You can ski all morning, return to an incredible private chalet
-                in the afternoon, head out for an entirely different adventure
+                in the afternoon, head out for an entirely different adventure,
                 and finish the evening around a beautiful dinner with friends or
-                family.
+                family. No two trips need to look the same — and that is exactly
+                the kind of itinerary our concierge team loves building.
               </p>
 
-              <p>No two trips need to look the same.</p>
-
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6 not-prose">
-                Skiing Whistler Blackcomb
+                Skiing Whistler Blackcomb from Kadenwood
               </h2>
 
               <p>
                 Of course, no winter visit to Whistler feels complete without
-                time on the mountain.
-              </p>
-
-              <p>
-                Chalet La Forja sits within Kadenwood, one of Whistler&apos;s
-                premier ski-in/ski-out neighbourhoods. Guests can access
-                Whistler Mountain directly from the neighbourhood and return home
-                after skiing without needing to base their day around driving
+                time on the mountain. Staying in Kadenwood means guests can
+                access Whistler Mountain directly from the neighbourhood and
+                return home after skiing without basing their day around driving
                 into the Village.
               </p>
 
               <ArticleImage
                 src={PHOTOS.skiExterior}
-                alt="Chalet La Forja ski-in ski-out exterior in Kadenwood snow"
+                alt="Ski-in ski-out luxury chalet exterior in Kadenwood snow"
               />
 
               <p>
-                For guests unfamiliar with Whistler Blackcomb, our team can
-                also help arrange private ski instructors, equipment rentals and
-                other mountain logistics before arrival.
-              </p>
-
-              <p>
-                We want guests to spend their vacation skiing, not figuring out
-                where to pick up equipment or making calls trying to organize
-                the next day.
+                For guests unfamiliar with Whistler Blackcomb, our team can help
+                arrange private ski instructors, equipment rentals, and other
+                mountain logistics before arrival. We want guests to spend their
+                vacation skiing, not figuring out where to pick up equipment or
+                making calls trying to organize the next day.
               </p>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6 not-prose">
@@ -371,37 +395,33 @@ export default function BlogPost() {
 
               <p>
                 Whistler is obviously known around the world for skiing and
-                snowboarding, but some of our favourite experiences have very
-                little to do with the lifts.
+                snowboarding, but some of our favourite guest experiences have
+                very little to do with the lifts.
               </p>
 
               <p>
                 Justin&apos;s trip included ice fishing, followed later by a
-                helicopter experience in the mountains.
+                helicopter experience in the mountains — both arranged as part of
+                a broader AceHost itinerary.
               </p>
 
               <p>
-                For guests looking to build a special itinerary, AceHost can help
-                arrange a range of experiences depending on the season, weather
-                and interests of the group.
+                For guests looking to build a special trip, our concierge team
+                can arrange a range of experiences depending on the season,
+                weather, and interests of the group. That might include
+                snowmobiling, a private chef at the chalet, restaurant
+                reservations, private transportation, massages, or other
+                customized activities.
               </p>
 
               <ArticleImage
                 src={PHOTOS.mountainExterior}
-                alt="Chalet La Forja mountain setting in Kadenwood, Whistler"
+                alt="Kadenwood luxury chalet in the Whistler mountains"
               />
 
               <p>
-                That might include a helicopter experience, snowmobiling, a
-                private chef at the chalet, restaurant reservations, private
-                transportation, massages or other customized activities. Chalet
-                La Forja bookings include AceHost&apos;s VIP concierge assistance
-                to help coordinate experiences throughout the stay.
-              </p>
-
-              <p>
                 For larger family trips especially, we find that the best
-                itineraries usually have a balance.
+                itineraries usually have a balance:
               </p>
 
               <ul>
@@ -421,61 +441,23 @@ export default function BlogPost() {
 
               <p>
                 Dining is a huge part of the Whistler experience, and it is
-                something we help guests with every day.
-              </p>
-
-              <p>
-                Depending on what guests are looking for, we can help arrange
-                restaurant reservations around Whistler and Creekside or
-                organize private dining at the chalet.
+                something we help guests with every day. Depending on what the
+                group is looking for, we can help arrange restaurant reservations
+                around Whistler and Creekside or organize private dining at the
+                chalet.
               </p>
 
               <ArticleImage
                 src={PHOTOS.kitchenDining}
-                alt="Chalet La Forja gourmet kitchen and dining space"
+                alt="Gourmet kitchen and dining space in a Kadenwood chalet"
               />
 
               <p>
-                For a home like La Forja, having dinner prepared at the property
-                can be every bit as memorable as going into town. The
-                chalet&apos;s gourmet kitchen, large entertaining spaces and
-                included butler service make staying home for the evening feel
-                like an experience of its own.
-              </p>
-
-              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6 not-prose">
-                What an AceHost Stay Is Really About
-              </h2>
-
-              <p>
-                Beautiful properties are at the centre of what we do, but AceHost
-                has never been only about handing guests the keys to a house.
-              </p>
-
-              <p>
-                For many of our guests, a trip to Whistler is a major family
-                vacation, celebration or once-a-year ski trip. Some are
-                travelling internationally. Others are bringing several
-                generations of their family together under one roof.
-              </p>
-
-              <p>
-                Our job is to make the rest of the trip as seamless as the
-                accommodation.
-              </p>
-
-              <p>
-                That can mean helping organize airport transportation before the
-                group lands, having groceries waiting at the chalet, arranging
-                ski equipment and instructors, securing difficult restaurant
-                reservations or building several days of private experiences
-                around the group.
-              </p>
-
-              <p>
-                Justin&apos;s video gave us a chance to show that side of
-                AceHost, and we couldn&apos;t have enjoyed putting the
-                experience together more.
+                Many of our Kadenwood homes are built for entertaining — large
+                kitchens, long dining tables, and great rooms designed for
+                groups. For some trips, having dinner prepared at the property
+                is every bit as memorable as going into town. For others, a mix
+                of both works best. Our concierge team can help plan either way.
               </p>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6 not-prose">
@@ -489,33 +471,33 @@ export default function BlogPost() {
 
               <p>
                 Justin has built his audience around highly polished content
-                spanning technology, lifestyle, automotive and travel, and his
-                cinematic style made him a perfect fit for showcasing both
-                Chalet La Forja and Whistler itself.
+                spanning technology, lifestyle, automotive, and travel, and his
+                cinematic style made him a perfect fit for showcasing what an
+                AceHost stay in Kadenwood can feel like — from the home itself to
+                the adventures beyond it.
               </p>
 
               <p>
-                It was a pleasure hosting the group, getting them into the
-                mountains and showing them a few of the experiences we love
-                sharing with our guests.
+                It was a pleasure hosting the group at Chalet La Forja, getting
+                them into the mountains, and showing them a few of the
+                experiences we love sharing with our guests. We hope to have them
+                back in Whistler again soon.
               </p>
 
-              <p>We hope to have them back in Whistler again soon.</p>
-
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6 not-prose">
-                More Kadenwood Properties to Book
+                Book a Kadenwood Stay with AceHost
               </h2>
 
               <p>
-                Chalet La Forja is one of several exceptional ski-in/ski-out homes
-                in{" "}
-                <Link href={KADENWOOD_HREF}>Kadenwood</Link>. If you are planning
-                a Whistler trip and exploring other large luxury chalets in the
-                neighbourhood, these AceHost{" "}
+                If Justin&apos;s trip has you thinking about a Whistler vacation
+                with the same level of comfort and support, our Kadenwood
+                collection is a great place to start. These are some of the
+                largest and most impressive{" "}
                 <Link href={PROPERTIES_HREF}>
                   luxury Whistler vacation rentals
                 </Link>{" "}
-                are also available to book directly on Airbnb or through our team.
+                we manage — all available to book directly on Airbnb or through
+                our team.
               </p>
 
               <div className="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
@@ -527,70 +509,33 @@ export default function BlogPost() {
                 ))}
               </div>
 
-              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6 not-prose">
-                Stay at Chalet La Forja
-              </h2>
-
-              <div className="not-prose bg-gray-50 border border-gray-200 rounded-xl p-6 sm:p-8 my-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  <Link
-                    href={LISTING_HREF}
-                    className="hover:text-gray-700 transition-colors"
-                  >
-                    Chalet La Forja | Kadenwood, Whistler
-                  </Link>
-                </h3>
-                <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm text-gray-700">
-                  <li>10,000+ SQ FT</li>
-                  <li>16 Guests</li>
-                  <li>9 Bedrooms</li>
-                  <li>15 Beds</li>
-                  <li>8 Bathrooms</li>
-                  <li>Ski-in/Ski-out</li>
-                  <li>Heated Outdoor Pool</li>
-                  <li>Private Hot Tub</li>
-                  <li>Fitness Gym</li>
-                  <li>Private Kadenwood Gondola</li>
-                  <li>Private Butler Included</li>
-                  <li>Housekeeping Every Other Day</li>
-                  <li>AceHost VIP Concierge</li>
-                </ul>
-                <p className="mt-4 text-sm text-gray-600">
-                  Chalet La Forja was also recognized among Vrbo&apos;s Top 10
-                  Vacation Rentals in 2023.
-                </p>
-              </div>
-
               <ArticleImage
                 src={PHOTOS.ctaExterior}
-                alt="Chalet La Forja dramatic exterior in Kadenwood, Whistler"
+                alt="Luxury Kadenwood chalet exterior in Whistler"
               />
 
               <p>
-                Whether you&apos;re planning a family ski vacation, Christmas in
-                Whistler, a special celebration or simply want to experience one
-                of Whistler&apos;s most remarkable homes, our team would be
-                happy to help put together the stay.
-              </p>
-
-              <p>
-                Explore{" "}
-                <Link href={LISTING_HREF}>Chalet La Forja</Link> and current
-                availability through AceHost, browse our full collection of{" "}
-                <Link href={PROPERTIES_HREF}>
-                  luxury Whistler vacation rentals
-                </Link>
-                , or{" "}
-                <Link href="/contact">contact our team directly</Link> to start
+                Whether you are planning a family ski vacation, Christmas in
+                Whistler, a special celebration, or a once-in-a-lifetime group
+                trip, our team would be happy to help put together the stay.
+                Browse our full collection, explore our{" "}
+                <Link href={CONCIERGE_HREF}>concierge services</Link>, or{" "}
+                <Link href="/contact">contact us directly</Link> to start
                 planning your Whistler experience.
               </p>
 
-              <div className="not-prose flex flex-col sm:flex-row gap-4 mt-10">
+              <div className="not-prose flex flex-col sm:flex-row flex-wrap gap-4 mt-10">
                 <Link
-                  href={LISTING_HREF}
+                  href={PROPERTIES_HREF}
                   className="inline-block text-center bg-red-600 text-white px-8 py-4 rounded-lg font-medium hover:bg-red-700 transition-colors"
                 >
-                  View Chalet La Forja
+                  View Kadenwood Properties
+                </Link>
+                <Link
+                  href={CONCIERGE_HREF}
+                  className="inline-block text-center bg-gray-900 text-white px-8 py-4 rounded-lg font-medium hover:bg-gray-800 transition-colors"
+                >
+                  Concierge Services
                 </Link>
                 <Link
                   href="/contact"

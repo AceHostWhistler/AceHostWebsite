@@ -11,10 +11,10 @@ export interface Article {
 // All blog articles data with proper image paths
 export const allArticles: Article[] = [
   {
-    title: "Justin Tse at Chalet La Forja | Luxury Whistler Experience | AceHost",
-    category: "Property Feature, Kadenwood",
+    title: "Justin Tse in Kadenwood | Luxury Whistler Experience with AceHost",
+    category: "Luxury Travel, Kadenwood",
     description:
-      "Join Justin Tse at Chalet La Forja in Kadenwood for the ultimate luxury Whistler experience, from ski-in/ski-out living to skiing, dining, ice fishing and a helicopter adventure with AceHost.",
+      "Creator Justin Tse stayed with AceHost in Kadenwood, Whistler. See how our ski-in/ski-out chalets, VIP concierge, and curated experiences turn a Whistler trip into something unforgettable.",
     readTime: "12 min read",
     link: "/post/justin-tse-chalet-la-forja-whistler",
     coverImage:
