@@ -15,8 +15,8 @@ const CANONICAL_URL = `${SITE_URL}/post/${SLUG}`;
 const YOUTUBE_ID = "cNHhE2B8Zeo";
 
 const PHOTOS = {
-  hero: "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
-  greatRoom: "/photos/properties/Chalet La Forja/2950 Heritage Peaks Trail 4 Large 2.png",
+  hero: "/photos/properties/Chalet La Forja/2950 Heritage Peaks Trail 4 Large 2.png",
+  greatRoom: "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
   poolHotTub: "/photos/properties/Chalet La Forja/2950HeritagePeaks3Feb22 2.jpg",
   skiExterior: "/photos/properties/Chalet La Forja/Forja-3 copy.jpg",
   mountainExterior: "/photos/properties/Chalet La Forja/2950HeritagePeaks3Feb33.jpg",

@@ -18,7 +18,7 @@ export const allArticles: Article[] = [
     readTime: "12 min read",
     link: "/post/justin-tse-chalet-la-forja-whistler",
     coverImage:
-      "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
+      "/photos/properties/Chalet La Forja/2950 Heritage Peaks Trail 4 Large 2.png",
   },
   {
     title: "Where to Stay in Whistler in Winter | AceHost",
