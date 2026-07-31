@@ -317,89 +317,34 @@ const Navigation = ({
 
                         {/* Blog entries */}
                         <div className="space-y-4 mb-6">
-                          {/* Blog 1 */}
-                          <Link
-                            href="/post/luxury-property-management-investment-opportunities-in-whistler"
-                            onClick={() => setShowResourcesDropdown(false)}
-                            className="flex gap-4 group hover:bg-gray-50 p-3 rounded-lg transition-all duration-300"
-                          >
-                            <div className="flex-shrink-0 w-32 overflow-hidden rounded-md">
-                              <Image
-                                src="/photos/homepage/resources/WhisterPropertyManagment.jpg"
-                                alt="Whistler Property"
-                                width={128}
-                                height={96}
-                                className="w-full h-24 object-cover rounded-md transform group-hover:scale-105 transition-transform duration-300"
-                              />
-                            </div>
-                            <div className="flex-grow">
-                              <h4 className="font-semibold text-sm mb-1 group-hover:text-blue-600 transition-colors duration-300">
-                                Acehost Whistler Property Management Services
-                              </h4>
-                              <p className="text-xs text-gray-600 leading-tight">
-                                AceHost Whistler's guide on property
-                                management services and why Whistler's
-                                best property managers are key.
-                              </p>
-                            </div>
-                          </Link>
-
-                          {/* Blog 2 */}
-                          <Link
-                            href="/post/discover-the-ultimate-ski-in-ski-out-luxury-chalet-homes-in-whistler-canada"
-                            onClick={() => setShowResourcesDropdown(false)}
-                            className="flex gap-4 group hover:bg-gray-50 p-3 rounded-lg transition-all duration-300"
-                          >
-                            <div className="flex-shrink-0 w-32 overflow-hidden rounded-md">
-                              <Image
-                                src="/photos/homepage/resources/DiscoverUltimate.jpg"
-                                alt="Ski Chalet"
-                                width={128}
-                                height={96}
-                                className="w-full h-24 object-cover rounded-md transform group-hover:scale-105 transition-transform duration-300"
-                              />
-                            </div>
-                            <div className="flex-grow">
-                              <h4 className="font-semibold text-sm mb-1 group-hover:text-blue-600 transition-colors duration-300">
-                                Discover the Ultimate Ski-in Ski-out Luxury
-                                Chalet Homes in Whistler, Canada
-                              </h4>
-                              <p className="text-xs text-gray-600 leading-tight">
-                                Staying in a Luxury Ski in Ski out Chalet Rental
-                                can have a major impact on your vacation in
-                                Whistler or any ski town.
-                              </p>
-                            </div>
-                          </Link>
-
-                          {/* Blog 3 */}
-                          <Link
-                            href="/post/luxury-whistler-vacation-redefined-how-acehost-whistler-caters-to-the-1-in-canadas-ultimate-playground"
-                            onClick={() => setShowResourcesDropdown(false)}
-                            className="flex gap-4 group hover:bg-gray-50 p-3 rounded-lg transition-all duration-300"
-                          >
-                            <div className="flex-shrink-0 w-32 overflow-hidden rounded-md">
-                              <Image
-                                src="/photos/homepage/resources/LuxuryWhistlerRedefined.jpg"
-                                alt="Luxury Whistler"
-                                width={128}
-                                height={96}
-                                className="w-full h-24 object-cover rounded-md transform group-hover:scale-105 transition-transform duration-300"
-                              />
-                            </div>
-                            <div className="flex-grow">
-                              <h4 className="font-semibold text-sm mb-1 group-hover:text-blue-600 transition-colors duration-300">
-                                Luxury Whistler Vacation Redefined: How AceHost
-                                Whistler Caters to the 1% in Canada's
-                                Ultimate Playground
-                              </h4>
-                              <p className="text-xs text-gray-600 leading-tight">
-                                In recent years, a different kind of traveler
-                                has made Whistler their go-to destination, one
-                                seeking not just the thrill of alpine sports.
-                              </p>
-                            </div>
-                          </Link>
+                          {allArticles.slice(1, 4).map((article) => (
+                            <Link
+                              key={article.link}
+                              href={article.link}
+                              onClick={() => setShowResourcesDropdown(false)}
+                              className="flex gap-4 group hover:bg-gray-50 p-3 rounded-lg transition-all duration-300"
+                            >
+                              <div className="flex-shrink-0 w-32 overflow-hidden rounded-md">
+                                <Image
+                                  src={article.coverImage}
+                                  alt={article.title}
+                                  width={128}
+                                  height={96}
+                                  className="w-full h-24 object-cover rounded-md transform group-hover:scale-105 transition-transform duration-300"
+                                />
+                              </div>
+                              <div className="flex-grow">
+                                <h4 className="font-semibold text-sm mb-1 group-hover:text-blue-600 transition-colors duration-300">
+                                  {article.title}
+                                </h4>
+                                {article.description ? (
+                                  <p className="text-xs text-gray-600 leading-tight">
+                                    {article.description}
+                                  </p>
+                                ) : null}
+                              </div>
+                            </Link>
+                          ))}
                         </div>
                       </div>
 
@@ -655,7 +600,7 @@ const Navigation = ({
                       FAQ's
                     </Link>
                     <Link
-                      href="/post/luxury-property-management-investment-opportunities-in-whistler"
+                      href={allArticles[0].link}
                       onClick={() => {
                         setShowMobileResourcesDropdown(false);
                         setIsMenuOpen(false);
@@ -663,30 +608,24 @@ const Navigation = ({
                       className="flex items-center py-3 px-4 text-base text-gray-600 hover:text-black hover:bg-gray-50 rounded-md transition-colors"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
-                      Whistler Property Management
+                      Featured: Justin Tse at La Forja
                     </Link>
-                    <Link
-                      href="/post/discover-the-ultimate-ski-in-ski-out-luxury-chalet-homes-in-whistler-canada"
-                      onClick={() => {
-                        setShowMobileResourcesDropdown(false);
-                        setIsMenuOpen(false);
-                      }}
-                      className="flex items-center py-3 px-4 text-base text-gray-600 hover:text-black hover:bg-gray-50 rounded-md transition-colors"
-                    >
-                      <ChevronRight className="h-4 w-4 mr-2" />
-                      Ski-in Ski-out Luxury Chalets
-                    </Link>
-                    <Link
-                      href="/post/luxury-whistler-vacation-redefined-how-acehost-whistler-caters-to-the-1-in-canadas-ultimate-playground"
-                      onClick={() => {
-                        setShowMobileResourcesDropdown(false);
-                        setIsMenuOpen(false);
-                      }}
-                      className="flex items-center py-3 px-4 text-base text-gray-600 hover:text-black hover:bg-gray-50 rounded-md transition-colors"
-                    >
-                      <ChevronRight className="h-4 w-4 mr-2" />
-                      Luxury Whistler Vacation
-                    </Link>
+                    {allArticles.slice(1, 4).map((article) => (
+                      <Link
+                        key={article.link}
+                        href={article.link}
+                        onClick={() => {
+                          setShowMobileResourcesDropdown(false);
+                          setIsMenuOpen(false);
+                        }}
+                        className="flex items-center py-3 px-4 text-base text-gray-600 hover:text-black hover:bg-gray-50 rounded-md transition-colors"
+                      >
+                        <ChevronRight className="h-4 w-4 mr-2" />
+                        {article.title.length > 48
+                          ? `${article.title.slice(0, 45)}…`
+                          : article.title}
+                      </Link>
+                    ))}
                   </div>
                 )}
               </div>

@@ -9,6 +9,7 @@ import {
   discoverBlogPosts,
   type BlogPostListing,
 } from "@/utils/discoverBlogPosts";
+import { allArticles } from "@/utils/blogArticles";
 
 interface BlogIndexProps {
   blogPosts: BlogPostListing[];
@@ -27,6 +28,7 @@ const BLOGS_DESC =
   "Explore the AceHost blog for insights on luxury accommodations in Whistler, property management tips, seasonal ski reports, and exclusive travel experiences.";
 
 const BlogIndex = ({ blogPosts }: BlogIndexProps) => {
+  const featuredArticle = allArticles[0];
   const listStructuredData = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -90,9 +92,44 @@ const BlogIndex = ({ blogPosts }: BlogIndexProps) => {
 
         <main className="pt-24 pb-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl font-bold text-center text-gray-900 mb-16">
+            <h1 className="text-4xl font-bold text-center text-gray-900 mb-10">
               The AceHost Blog
             </h1>
+
+            <Link
+              href={featuredArticle.link}
+              className="block mb-16 group"
+            >
+              <div className="relative rounded-2xl overflow-hidden bg-gray-900 shadow-lg">
+                <div className="relative aspect-[21/9] w-full">
+                  <Image
+                    src={featuredArticle.coverImage}
+                    alt={featuredArticle.title}
+                    fill
+                    className="object-cover opacity-80 group-hover:opacity-90 group-hover:scale-[1.02] transition-all duration-500"
+                    sizes="(max-width: 1280px) 100vw, 1280px"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                </div>
+                <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10">
+                  <span className="inline-block bg-red-600 text-white text-xs font-semibold uppercase tracking-wide px-3 py-1 rounded-full mb-4">
+                    Featured
+                  </span>
+                  <h2 className="text-2xl sm:text-4xl font-bold text-white mb-3 leading-tight group-hover:text-gray-100 transition-colors">
+                    {featuredArticle.title}
+                  </h2>
+                  {featuredArticle.description ? (
+                    <p className="text-gray-200 text-sm sm:text-base max-w-3xl leading-relaxed">
+                      {featuredArticle.description}
+                    </p>
+                  ) : null}
+                  <span className="inline-block mt-5 text-white font-medium text-sm group-hover:underline">
+                    Read the featured article →
+                  </span>
+                </div>
+              </div>
+            </Link>
 
             <div
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
