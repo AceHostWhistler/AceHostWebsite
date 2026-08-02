@@ -29,19 +29,15 @@ const BLOGS_DESC =
 
 const BlogIndex = ({ blogPosts }: BlogIndexProps) => {
   const featuredArticle = allArticles[0];
-  const gridSlugs = allArticles.slice(1, 3).map((a) =>
-    a.link.replace(/^\/post\//, "")
-  );
-  const gridPosts = gridSlugs
-    .map((slug) => blogPosts.find((p) => p.slug === slug))
-    .filter((p): p is BlogPostListing => p != null);
+  const featuredSlug = featuredArticle.link.replace(/^\/post\//, "");
+  const gridPosts = blogPosts.filter((post) => post.slug !== featuredSlug);
   const listStructuredData = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     "@id": "https://acehost.ca/blogs#blog-itemlist",
     name: "AceHost Whistler blog",
-    numberOfItems: gridPosts.length,
-    itemListElement: gridPosts.map((post, i) => ({
+    numberOfItems: blogPosts.length,
+    itemListElement: blogPosts.map((post, i) => ({
       "@type": "ListItem",
       position: i + 1,
       name: post.title,
