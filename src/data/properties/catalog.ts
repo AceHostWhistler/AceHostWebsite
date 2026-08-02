@@ -675,6 +675,45 @@ export const propertyCategories: PropertyCategory[] = [
             isSkiInSkiOut: false,
           },
           {
+            id: "luxe-5-bed-scandinave-retreat",
+            name: "Luxe 5-BED Scandinave Retreat | Walk to Slopes",
+            images: [
+              "/high-quality/scandinave-fixed/scandinave-26.jpg",
+              "/high-quality/scandinave-fixed/scandinave-0.jpg",
+              "/high-quality/scandinave-fixed/scandinave-1.jpg"
+            ],
+            guests: 8,
+            bedrooms: 3,
+            beds: 5,
+            bathrooms: 3,
+            location: "Creekside, Whistler",
+            description:
+              "An ideal family ski home just 400m (8 min walk) to Whistler Creekside Gondola. Stunning, unobstructed views of the Tantalus Range, Alpha & Nita Lakes. Perfect for 1 large family, 3 couples, or 2 families (up to 4 adults & 6 kids).",
+            features: [
+              "Walk to Creekside Gondola",
+              "Heated Floors",
+              "Gas Fireplace",
+              "Steam Shower",
+              "Kids' Triple Bunk Room",
+              "Air Conditioning",
+              "Private Deck",
+              "Secure Ski/Bike Storage"
+            ],
+            highlights: [
+              "8 Min Walk to Gondola",
+              "Stunning Mountain Views",
+              "Unique 6 Half-Level Design",
+              "Family-Friendly Layout"
+            ],
+            priceRange: "$450-$1200+ per night Summer",
+            winterPrice: "$750-$1,600+ Nightly | Winter",
+            holidayPrice: "$2300-$3100+ Nightly | Christmas & NY",
+            link: "/worldwide-listings/luxe-5-bed-scandinave-retreat",
+            airbnbLink: "https://www.airbnb.ca/rooms/1313847204355627326?guests=1&adults=1&s=67&unique_share_id=507dffd6-1f84-49a3-99eb-d10f493a65a6",
+            isPetFriendly: false,
+            isSkiInSkiOut: false,
+          },
+          {
             id: "golf-course-views",
             name: "Golf Course Views | Luxury 4-bed Whistler Village",
             images: [
@@ -1039,45 +1078,6 @@ export const propertyCategories: PropertyCategory[] = [
             priceRange: "Nightly Price Range: $400-$1,150+",
             winterPrice: "$600-$900+ Nightly | Winter",
             holidayPrice: "$900-$1,150+ Nightly | Christmas & NY",
-            isPetFriendly: false,
-            isSkiInSkiOut: false,
-          },
-          {
-            id: "luxe-5-bed-scandinave-retreat",
-            name: "Luxe 5-BED Scandinave Retreat | Walk to Slopes",
-            images: [
-              "/high-quality/scandinave-fixed/scandinave-26.jpg",
-              "/high-quality/scandinave-fixed/scandinave-0.jpg",
-              "/high-quality/scandinave-fixed/scandinave-1.jpg"
-            ],
-            guests: 8,
-            bedrooms: 3,
-            beds: 5,
-            bathrooms: 3,
-            location: "Creekside, Whistler",
-            description:
-              "An ideal family ski home just 400m (8 min walk) to Whistler Creekside Gondola. Stunning, unobstructed views of the Tantalus Range, Alpha & Nita Lakes. Perfect for 1 large family, 3 couples, or 2 families (up to 4 adults & 6 kids).",
-            features: [
-              "Walk to Creekside Gondola",
-              "Heated Floors",
-              "Gas Fireplace",
-              "Steam Shower",
-              "Kids' Triple Bunk Room",
-              "Air Conditioning",
-              "Private Deck",
-              "Secure Ski/Bike Storage"
-            ],
-            highlights: [
-              "8 Min Walk to Gondola",
-              "Stunning Mountain Views",
-              "Unique 6 Half-Level Design",
-              "Family-Friendly Layout"
-            ],
-            priceRange: "$450-$1200+ per night Summer",
-            winterPrice: "$750-$1,600+ Nightly | Winter",
-            holidayPrice: "$2300-$3100+ Nightly | Christmas & NY",
-            link: "/worldwide-listings/luxe-5-bed-scandinave-retreat",
-            airbnbLink: "https://www.airbnb.ca/rooms/1313847204355627326?guests=1&adults=1&s=67&unique_share_id=507dffd6-1f84-49a3-99eb-d10f493a65a6",
             isPetFriendly: false,
             isSkiInSkiOut: false,
           },
