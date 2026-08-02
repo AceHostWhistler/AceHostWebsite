@@ -104,8 +104,8 @@ export const MANSION_RENTAL_PROPERTIES: MansionRentalProperty[] = [
         alt: "Panoramic Estate luxury rental in Kadenwood Whistler",
       },
       {
-        src: listingPhotos("panoramic-estate-kadenwood", [1])[0],
-        alt: "Panoramic Estate deck and mountain views",
+        src: "/photos/properties/Panoramic Estate/20241127 MM4P 01 0225-Edit.jpg",
+        alt: "Panoramic Estate open kitchen and living space with mountain views",
       },
     ],
   },
@@ -139,7 +139,7 @@ export const MANSION_RENTAL_PROPERTIES: MansionRentalProperty[] = [
     standout: "7,800 sq ft log chalet, 14-person hot tub, theatre and golf-course views",
     images: [
       {
-        src: listingPhotos("heron-views-whistler-village", [0])[0],
+        src: "/photos/properties/3445-Heron-Place/36-3445 Heron Place 36.jpg",
         alt: "Heron Views large log chalet rental in Whistler",
       },
     ],
