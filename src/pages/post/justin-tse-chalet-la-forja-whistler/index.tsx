@@ -17,10 +17,15 @@ const YOUTUBE_ID = "cNHhE2B8Zeo";
 const PHOTOS = {
   hero: "/photos/properties/Chalet La Forja/2950 Heritage Peaks Trail 4 Large 2.png",
   greatRoom: "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
-  poolHotTub: "/photos/properties/Chalet La Forja/2950HeritagePeaks3Feb22 2.jpg",
+  justinEntrance:
+    "/photos/post/justin-tse-chalet-la-forja-whistler/justin-la-forja-entrance.png",
+  justinOffice:
+    "/photos/post/justin-tse-chalet-la-forja-whistler/justin-la-forja-office.png",
+  justinKitchen:
+    "/photos/post/justin-tse-chalet-la-forja-whistler/justin-la-forja-kitchen.png",
+  justinSnow:
+    "/photos/post/justin-tse-chalet-la-forja-whistler/justin-whistler-snow.png",
   skiExterior: "/photos/properties/Chalet La Forja/Forja-3 copy.jpg",
-  mountainExterior: "/photos/properties/Chalet La Forja/2950HeritagePeaks3Feb33.jpg",
-  kitchenDining: "/photos/properties/Chalet La Forja/05-2950 Heritage Peaks Trail-05 2.jpg",
   ctaExterior: "/photos/properties/Chalet La Forja/hero00002.jpg",
 } as const;
 
@@ -105,19 +110,29 @@ function ArticleImage({
   src,
   alt,
   priority = false,
+  portrait = false,
 }: {
   src: string;
   alt: string;
   priority?: boolean;
+  portrait?: boolean;
 }) {
   return (
-    <div className="relative w-full aspect-[16/9] my-10 rounded-xl overflow-hidden not-prose">
+    <div
+      className={`relative w-full my-10 rounded-xl overflow-hidden not-prose ${
+        portrait ? "aspect-[4/5] max-w-xl mx-auto" : "aspect-[16/9]"
+      }`}
+    >
       <Image
         src={src}
         alt={alt}
         fill
-        className="object-cover"
-        sizes="(max-width: 896px) 100vw, 896px"
+        className="object-cover object-center"
+        sizes={
+          portrait
+            ? "(max-width: 576px) 100vw, 576px"
+            : "(max-width: 896px) 100vw, 896px"
+        }
         priority={priority}
       />
     </div>
@@ -229,6 +244,11 @@ export default function BlogPost() {
                 sleep.
               </p>
 
+              <ArticleImage
+                src={PHOTOS.justinEntrance}
+                alt="Justin Tse arriving at Chalet La Forja in Kadenwood, Whistler"
+              />
+
               <YouTubeEmbed />
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6 not-prose">
@@ -302,8 +322,9 @@ export default function BlogPost() {
               </p>
 
               <ArticleImage
-                src={PHOTOS.poolHotTub}
-                alt="Heated outdoor pool and hot tub at a Kadenwood luxury chalet"
+                src={PHOTOS.justinOffice}
+                alt="Justin Tse working from Chalet La Forja with mountain views in Kadenwood"
+                portrait
               />
 
               <p>
@@ -353,6 +374,12 @@ export default function BlogPost() {
                 from the chalet into the road trip, mountain, and dining
                 experiences that made up the stay.
               </p>
+
+              <ArticleImage
+                src={PHOTOS.justinSnow}
+                alt="Justin Tse taking in the Whistler mountain landscape during his AceHost stay"
+                portrait
+              />
 
               <p>For us, this is what makes Whistler special.</p>
 
@@ -414,11 +441,6 @@ export default function BlogPost() {
                 customized activities.
               </p>
 
-              <ArticleImage
-                src={PHOTOS.mountainExterior}
-                alt="Kadenwood luxury chalet in the Whistler mountains"
-              />
-
               <p>
                 For larger family trips especially, we find that the best
                 itineraries usually have a balance:
@@ -448,8 +470,8 @@ export default function BlogPost() {
               </p>
 
               <ArticleImage
-                src={PHOTOS.kitchenDining}
-                alt="Gourmet kitchen and dining space in a Kadenwood chalet"
+                src={PHOTOS.justinKitchen}
+                alt="Justin Tse in the gourmet kitchen at Chalet La Forja, Kadenwood"
               />
 
               <p>
