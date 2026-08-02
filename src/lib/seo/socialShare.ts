@@ -7,7 +7,8 @@ export type SocialSharePayload = {
   type?: "website" | "article";
 };
 
-export const DEFAULT_SOCIAL_IMAGE = "/photos/homepage/WhistlerVacationRental.jpg";
+export const ACEHOST_LOGO_IMAGE = "/logo.png";
+export const DEFAULT_SOCIAL_IMAGE = ACEHOST_LOGO_IMAGE;
 
 export function toAbsoluteImageUrl(imagePath: string): string {
   if (!imagePath) {

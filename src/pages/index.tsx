@@ -1073,8 +1073,10 @@ const Home = () => {
         />
         <meta
           property="og:image"
-          content="https://acehost.ca/photos/homepage/WhistlerVacationRental.jpg"
+          content={`${SITE_URL}/logo.png`}
         />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={`${SITE_URL}/logo.png`} />
         <meta property="og:url" content={SITE_URL} />
         <link rel="canonical" href={SITE_URL} />
         <link rel="icon" href="/favicons/favicon.ico" />

@@ -35,6 +35,7 @@ import {
   type PropertyFeature,
   type PropertyCategory,
 } from "@/data/properties/catalog";
+import { getPropertyListingPath } from "@/data/properties/listingPath";
 import { buildPropertiesItemListSchema } from "@/lib/seo/schema";
 import { SITE_URL } from "@/data/seo/business";
 
@@ -179,63 +180,7 @@ export default function Properties() {
 
   // PropertyCard with regular img tag - updated to match home page style
   const PropertyCard = ({ property }: { property: PropertyFeature }) => {
-    const getPropertyUrl = (property: PropertyFeature): string => {
-      return property.link
-        ? property.link
-        : property.id === "two-cedars"
-        ? "/listings/two-cedars-kadenwood"
-        : property.id === "chalet-la-forja"
-        ? "/listings/chalet-la-forja-kadenwood"
-        : property.id === "slopeside-villa"
-        ? "/listings/slopeside-villa-kadenwood"
-        : property.id === "panoramic-estate"
-        ? "/listings/panoramic-estate-kadenwood"
-        : property.id === "heron-views-whistler"
-        ? "/listings/heron-views-whistler-village"
-        : property.id === "ravens-nest"
-        ? "/listings/ravens-nest-ski-in-ski-out-views"
-        : property.id === "falcon-blueberry-drive"
-        ? "/listings/falcon-blueberry-drive"
-        : property.id === "snow-pine"
-        ? "/listings/snow-pine"
-        : property.id === "wedge-mountain-lodge-spa"
-        ? "/listings/wedge-mountain-lodge-spa"
-        : property.id === "luxe-cozy-3-bed-whistler-village"
-        ? "/listings/luxe-cozy-3-bed-whistler-village"
-        : property.id === "dream-log-chalet-5-bedroom-4-bath-creekside"
-        ? "/listings/dream-log-chalet-5-bedroom-4-bath-creekside"
-        : property.id === "the-nest"
-        ? "/listings/the-nest-ski-in-ski-out"
-        : property.id === "whispering-pines"
-        ? "/listings/whispering-pines-ski-in-ski-out"
-        : property.id === "whistler-village-views"
-        ? "/listings/whistler-village-views-luxury-2-5-bedroom"
-        : property.id === "whistler-village-views-luxury-2-5-bedroom"
-        ? "/listings/whistler-village-views-luxury-2-5-bedroom"
-        : property.id === "marquise-2-bed"
-        ? "/listings/marquise-2-bed-ski-in-ski-out"
-        : property.id === "ski-in-ski-out-walk-to-lifts-2-bed"
-        ? "/listings/ski-in-ski-out-walk-to-lifts-2-bed"
-        : property.id === "scandinavian-mountainside-retreat-pemberton-meadows-50-acres"
-        ? "/listings/scandinavian-mountainside-retreat-pemberton-meadows-50-acres"
-        : property.id === "vancouver-house-corner"
-        ? "/vancouver-listings/vancouver-house-corner-unit-30th-floor"
-        : property.id === "santorini-greece-villa-eclipse"
-        ? "/worldwide-listings/santorini-greece-villa-eclipse"
-        : property.id === "villa-oineas-greece-mykonos"
-        ? "/worldwide-listings/villa-oineas-greece-mykonos"
-        : property.id === "yacht-thailand" 
-        ? "/worldwide-listings/super-yacht-thailand"
-        : property.id === "villa-aegean-greece" 
-        ? "/worldwide-listings/mykonos-crystal-villa"
-        : property.id === "punta-mita"
-        ? "/worldwide-listings/punta-mita---casa-juntos"
-        : property.id === "hood-river-luxury-home"
-        ? "/worldwide-listings/hood-river-luxury-home"
-        : `/listings/${property.id}`;
-    };
-
-    const propertyUrl = getPropertyUrl(property);
+    const propertyUrl = getPropertyListingPath(property);
 
     const airbnbLink = getPropertyAirbnbLink(
       property.id,
