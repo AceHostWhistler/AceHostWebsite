@@ -32,11 +32,12 @@ export const worldwideListingAmenities: Record<string, string[]> = {
     "Pacific Northwest escape",
   ],
   "luxe-5-bed-scandinave-retreat": [
-    "Scandinave Spa adjacent",
-    "5-bedroom retreat",
-    "Mont-Tremblant area",
-    "Luxury furnishings",
-    "Ideal for wellness getaways",
+    "Creekside, Whistler",
+    "8-minute walk to Creekside Gondola",
+    "3 bedrooms · 5 beds · 3 baths",
+    "Tantalus Range & lake views",
+    "Heated floors & steam shower",
+    "Family-friendly ski home",
   ],
   "punta-mita---casa-juntos": [
     "Punta Mita resort",
