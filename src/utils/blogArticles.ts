@@ -21,6 +21,26 @@ export const allArticles: Article[] = [
       "/photos/properties/Chalet La Forja/2950 Heritage Peaks Trail 4 Large 2.png",
   },
   {
+    title: "Whistler Airbnb Zoning & Licence Rules | AceHost",
+    category: "Property Management, Whistler",
+    description:
+      "Thinking about listing a Whistler property on Airbnb? Learn how zoning, covenants, municipal licensing and provincial registration determine whether nightly rentals are allowed.",
+    readTime: "12 min read",
+    link: "/post/can-you-airbnb-your-whistler-home-zoning-licensing-nightly-rental-rules",
+    coverImage:
+      "/photos/properties/3445-Heron-Place/68-3445 Heron Place 53-Edit.jpg",
+  },
+  {
+    title: "Whistler Mansion Rentals & Luxury Chalets | AceHost",
+    category: "Luxury Properties, Group Travel",
+    description:
+      "Explore nine of AceHost's best Whistler mansion rentals and luxury chalets, from fully staffed Kadenwood estates to large-group homes near the Village and Creekside.",
+    readTime: "15 min read",
+    link: "/post/whistler-mansion-rentals-largest-luxury-private-chalets",
+    coverImage:
+      "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
+  },
+  {
     title: "Where to Stay in Whistler in Winter | AceHost",
     category: "Luxury Travel, Whistler",
     description:

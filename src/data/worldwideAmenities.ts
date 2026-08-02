@@ -33,11 +33,11 @@ export const worldwideListingAmenities: Record<string, string[]> = {
   ],
   "luxe-5-bed-scandinave-retreat": [
     "Creekside, Whistler",
+    "3 bedrooms · 5 beds",
+    "Whistler Creekside · 400 m to gondola",
     "8-minute walk to Creekside Gondola",
-    "3 bedrooms · 5 beds · 3 baths",
     "Tantalus Range & lake views",
     "Heated floors & steam shower",
-    "Family-friendly ski home",
   ],
   "punta-mita---casa-juntos": [
     "Punta Mita resort",

@@ -12,7 +12,7 @@ export default function PanoramicEstateKadenwoodDetails({ photos }: ListingDetai
                   <p className="text-gray-800 mb-8 max-w-4xl">
                     Welcome to Panoramic Estate in Kadenwood. This ski in ski out
                     architectural delight, with 8 bedrooms, 10 beds, and 7 baths,
-                    accommodating up to 18 guests, is perfect for 1 or 2 large
+                    accommodating up to 17 guests, is perfect for 1 or 2 large
                     families.
                   </p>
                   <p className="text-gray-800 mb-8 max-w-4xl">

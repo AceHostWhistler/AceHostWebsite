@@ -29,13 +29,19 @@ const BLOGS_DESC =
 
 const BlogIndex = ({ blogPosts }: BlogIndexProps) => {
   const featuredArticle = allArticles[0];
+  const gridSlugs = allArticles.slice(1, 3).map((a) =>
+    a.link.replace(/^\/post\//, "")
+  );
+  const gridPosts = gridSlugs
+    .map((slug) => blogPosts.find((p) => p.slug === slug))
+    .filter((p): p is BlogPostListing => p != null);
   const listStructuredData = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     "@id": "https://acehost.ca/blogs#blog-itemlist",
     name: "AceHost Whistler blog",
-    numberOfItems: blogPosts.length,
-    itemListElement: blogPosts.map((post, i) => ({
+    numberOfItems: gridPosts.length,
+    itemListElement: gridPosts.map((post, i) => ({
       "@type": "ListItem",
       position: i + 1,
       name: post.title,
@@ -138,7 +144,7 @@ const BlogIndex = ({ blogPosts }: BlogIndexProps) => {
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
               id="blog-itemlist"
             >
-              {blogPosts.map((post) => (
+              {gridPosts.map((post) => (
                 <div
                   key={post.slug}
                   className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300"

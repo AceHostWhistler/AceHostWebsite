@@ -138,7 +138,7 @@ export const listingAmenities: Record<string, string[]> = {
   ],
   "panoramic-estate-kadenwood": [
     "Ski-in / ski-out · Kadenwood",
-    "8 bedrooms · up to 18 guests",
+    "8 bedrooms · up to 17 guests",
     "Hot tub & indoor sauna",
     "Multiple fireplaces",
     "Media room & ping pong",

@@ -6,10 +6,17 @@ import { ArrowRight } from 'lucide-react';
 interface BlogRelatedArticlesProps {
   currentArticleLink: string;
   count?: number;
+  /** When set, shows these articles instead of random picks */
+  articles?: Article[];
 }
 
-export default function BlogRelatedArticles({ currentArticleLink, count = 3 }: BlogRelatedArticlesProps) {
-  const relatedArticles = getRelatedArticles(currentArticleLink, count);
+export default function BlogRelatedArticles({
+  currentArticleLink,
+  count = 3,
+  articles,
+}: BlogRelatedArticlesProps) {
+  const relatedArticles =
+    articles ?? getRelatedArticles(currentArticleLink, count);
 
   return (
     <section className="py-16 md:py-24 bg-gray-50">
