@@ -101,30 +101,33 @@ const BlogIndex = ({ blogPosts }: BlogIndexProps) => {
               className="block mb-16 group"
             >
               <div className="relative rounded-2xl overflow-hidden bg-gray-900 shadow-lg">
-                <div className="relative aspect-[21/9] w-full">
+                <div className="relative aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9] w-full">
                   <Image
                     src={featuredArticle.coverImage}
                     alt={featuredArticle.title}
                     fill
-                    className="object-cover opacity-80 group-hover:opacity-90 group-hover:scale-[1.02] transition-all duration-500"
-                    sizes="(max-width: 1280px) 100vw, 1280px"
+                    className="object-cover object-center opacity-90 sm:opacity-80 group-hover:opacity-90 sm:group-hover:scale-[1.02] transition-all duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1280px"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                  <div
+                    className="absolute inset-0 hidden sm:block bg-gradient-to-t from-black/80 via-black/30 to-transparent"
+                    aria-hidden="true"
+                  />
                 </div>
-                <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10">
-                  <span className="inline-block bg-red-600 text-white text-xs font-semibold uppercase tracking-wide px-3 py-1 rounded-full mb-4">
+                <div className="relative p-5 sm:absolute sm:inset-x-0 sm:bottom-0 sm:p-10 sm:bg-gradient-to-t sm:from-black/90 sm:via-black/50 sm:to-transparent">
+                  <span className="inline-block bg-red-600 text-white text-xs font-semibold uppercase tracking-wide px-3 py-1 rounded-full mb-3 sm:mb-4">
                     Featured
                   </span>
-                  <h2 className="text-2xl sm:text-4xl font-bold text-white mb-3 leading-tight group-hover:text-gray-100 transition-colors">
+                  <h2 className="text-xl sm:text-2xl lg:text-4xl font-bold text-white mb-2 sm:mb-3 leading-snug sm:leading-tight group-hover:text-gray-100 transition-colors">
                     {featuredArticle.title}
                   </h2>
                   {featuredArticle.description ? (
-                    <p className="text-gray-200 text-sm sm:text-base max-w-3xl leading-relaxed">
+                    <p className="text-gray-200 text-sm sm:text-base max-w-3xl leading-relaxed line-clamp-4 sm:line-clamp-none">
                       {featuredArticle.description}
                     </p>
                   ) : null}
-                  <span className="inline-block mt-5 text-white font-medium text-sm group-hover:underline">
+                  <span className="inline-block mt-4 sm:mt-5 text-white font-medium text-sm group-hover:underline">
                     Read the featured article →
                   </span>
                 </div>

@@ -11,6 +11,13 @@ import {
 
 type StaticPageMeta = Omit<SocialSharePayload, "type">;
 
+const LA_FORJA_COVER_IMAGE =
+  getPropertyCardCoverImage("/listings/chalet-la-forja-kadenwood") ??
+  "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png";
+
+const MOUNTAINTOP_COVER_IMAGE =
+  "/photos/properties/2919 Heritage/Mountaintop Snow cover.png";
+
 const STATIC_PAGES: Record<string, StaticPageMeta> = {
   "/": {
     title: "AceHost | Luxury Vacation Rental Properties in Whistler",
@@ -22,13 +29,13 @@ const STATIC_PAGES: Record<string, StaticPageMeta> = {
     title: "Luxury Vacation Rentals in Whistler | AceHost",
     description:
       "Browse our exclusive collection of luxury vacation rentals in Whistler, BC. Ski-in/ski-out chalets, premium condos, and spectacular mountain homes available.",
-    image: ACEHOST_LOGO_IMAGE,
+    image: LA_FORJA_COVER_IMAGE,
   },
   "/blogs": {
     title: "The AceHost Blog | Luxury Whistler Vacation Rentals & Tips",
     description:
       "Explore the AceHost blog for insights on luxury accommodations in Whistler, property management tips, seasonal ski reports, and exclusive travel experiences.",
-    image: ACEHOST_LOGO_IMAGE,
+    image: MOUNTAINTOP_COVER_IMAGE,
   },
   "/contact": {
     title: "Contact Us | AceHost Whistler",
