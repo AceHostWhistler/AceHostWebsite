@@ -21,7 +21,8 @@ const PUBLISH_DATE = "August 1, 2026";
 const ISO_MOD = "2026-08-01T12:00:00-07:00";
 
 const META = {
-  title: "Whistler Mansion Rentals & Luxury Chalets | AceHost",
+  title:
+    "Whistler's Most Impressive Airbnb Homes: Large Luxury Chalets, Mansions and Ski-In/Ski-Out Estates | AceHost",
   description:
     "Explore Whistler mansion rentals and luxury private chalets for groups, including ski-in/ski-out estates, pools, butlers, hot tubs and VIP service.",
 };
@@ -253,8 +254,8 @@ export default function BlogPost() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-10">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Whistler Mansion Rentals: The Largest and Most Luxurious Private
-                Chalets for Groups
+                Whistler&apos;s Most Impressive Airbnb Homes: Large Luxury
+                Chalets, Mansions and Ski-In/Ski-Out Estates
               </h1>
               <div className="flex flex-wrap items-center text-sm text-gray-600 mb-8 gap-x-3 gap-y-2">
                 <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">

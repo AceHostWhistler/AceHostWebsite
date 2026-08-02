@@ -31,7 +31,8 @@ export const allArticles: Article[] = [
       "/photos/properties/3445-Heron-Place/68-3445 Heron Place 53-Edit.jpg",
   },
   {
-    title: "Whistler Mansion Rentals & Luxury Chalets | AceHost",
+    title:
+      "Whistler's Most Impressive Airbnb Homes: Large Luxury Chalets, Mansions and Ski-In/Ski-Out Estates | AceHost",
     category: "Luxury Properties, Group Travel",
     description:
       "Explore nine of AceHost's best Whistler mansion rentals and luxury chalets, from fully staffed Kadenwood estates to large-group homes near the Village and Creekside.",
