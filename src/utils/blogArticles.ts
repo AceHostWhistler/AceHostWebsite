@@ -48,8 +48,7 @@ export const allArticles: Article[] = [
       "Compare Whistler Village, Creekside, Kadenwood, Upper Village, Blueberry and more to find the best area for your Whistler winter ski trip.",
     readTime: "20 min read",
     link: "/post/where-to-stay-in-whistler-winter",
-    coverImage:
-      "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
+    coverImage: "/photos/properties/Falcon/Falcon Master snow.png",
   },
   {
     title: "28 Best Places to Stay in Whistler | AceHost",

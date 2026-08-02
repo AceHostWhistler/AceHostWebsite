@@ -21,7 +21,7 @@ import {
 
 const SLUG = "where-to-stay-in-whistler-winter";
 const CANONICAL_URL = `https://acehost.ca/post/${SLUG}`;
-const HERO = "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png";
+const HERO = "/photos/properties/Falcon/Falcon Master snow.png";
 const HERO_URL = `https://acehost.ca${encodeURI(HERO)}`;
 const PUBLISH_DATE = "July 28, 2026";
 const ISO_MOD = "2026-07-28T12:00:00-07:00";
@@ -262,7 +262,7 @@ export default function BlogPost() {
               <div className="relative w-full aspect-[16/9] mb-8 rounded-xl overflow-hidden">
                 <Image
                   src={HERO}
-                  alt="Luxury Whistler ski chalet surrounded by snow in British Columbia"
+                  alt="Falcon luxury chalet in Blueberry Whistler covered in winter snow"
                   fill
                   className="object-cover"
                   priority
