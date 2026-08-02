@@ -8,6 +8,8 @@ import { useMemo } from "react";
 import { allArticles } from "@/utils/blogArticles";
 import { buildArticleSchema } from "@/lib/seo/schema";
 import { businessInfo, SITE_URL } from "@/data/seo/business";
+import SocialShareMeta from "@/components/SocialShareMeta";
+import { resolveSocialShare } from "@/lib/seo/resolveSocialShare";
 
 function getCanonicalPath(asPath: string): string {
   const [cleanPath] = asPath.split("#");
@@ -36,6 +38,11 @@ function App({ Component, pageProps }: AppProps) {
       image: article.coverImage,
     });
   }, [canonicalPath]);
+
+  const socialShare = useMemo(
+    () => resolveSocialShare(router.asPath || "/", locales),
+    [router.asPath, locales]
+  );
 
   return (
     <>
@@ -67,6 +74,12 @@ function App({ Component, pageProps }: AppProps) {
           );
         })}
         <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
+        <SocialShareMeta
+          title={socialShare.title}
+          description={socialShare.description}
+          image={socialShare.image}
+          type={socialShare.type}
+        />
         {blogArticleSchema && (
           <script
             type="application/ld+json"

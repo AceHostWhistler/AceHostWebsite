@@ -39,16 +39,10 @@ export default function Document() {
         
         {/* OpenGraph metadata for social sharing and search results */}
         <meta property="og:site_name" content="AceHost Whistler" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://acehost.ca/logo.png" />
-        <meta property="og:image:width" content="512" />
-        <meta property="og:image:height" content="512" />
-        <meta property="og:image:alt" content="AceHost Whistler Logo" />
         
-        {/* Twitter Card data */}
-        <meta name="twitter:card" content="summary" />
+        {/* Twitter Card defaults — per-page images set in _app SocialShareMeta */}
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@acehost_whistler" />
-        <meta name="twitter:image" content="https://acehost.ca/logo.png" />
 
         {/* Enable DNS prefetching */}
         <meta httpEquiv="x-dns-prefetch-control" content="on" />
