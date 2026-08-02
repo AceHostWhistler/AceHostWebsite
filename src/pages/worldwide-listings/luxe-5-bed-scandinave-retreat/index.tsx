@@ -19,7 +19,9 @@ import {
   editorialMainClass,
 } from "@/lib/editorialPropertyLayout";
 import { getWorldwideAmenities } from "@/data/worldwideAmenities";
+import { SCANDINAVE_PHOTOS } from "@/data/scandinavePhotos";
 import { airbnbButtonLg } from "@/lib/airbnbButtonStyles";
+import { getFullPhotoSrc, getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 
 const BLUR_PLACEHOLDER =
   "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U1ZTdlYiIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmM2Y0ZjYiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4=";
@@ -28,25 +30,8 @@ const LuxeScandinaveRetreat = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [isImageLoading, setIsImageLoading] = useState(false);
-  const [totalImages] = useState(28);
 
-  // Cache version for forcing new image downloads
-  const cacheVersion = "v2";
-
-  // Generate all photo paths from the optimized scandinave directory with fixed aspect ratio
-  const allPhotos = Array.from({ length: 28 }, (_, i) => `/high-quality/scandinave-fixed/scandinave-${i}.jpg?${cacheVersion}`);
-  
-  // Reorder photos to make scandinave-7.jpg the first one
-  const reorderedPhotos = [
-    `/high-quality/scandinave-fixed/scandinave-7.jpg?${cacheVersion}`,
-    ...allPhotos.filter(photo => !photo.includes('scandinave-7.jpg'))
-  ];
-  
-  // Use the first 12 optimized images as the main photos
-  const optimalPhotos = reorderedPhotos.slice(0, 12);
-  
-  // All photos include all 28 images
-  const photos = reorderedPhotos;
+  const photos = SCANDINAVE_PHOTOS;
 
   const handlePhotoClick = (index: number) => {
     setIsImageLoading(true);
@@ -140,7 +125,7 @@ const LuxeScandinaveRetreat = () => {
           content="An ideal family ski home just 400m (8 min walk) to Whistler Creekside Gondola. Stunning, unobstructed views of the Tantalus Range, Alpha & Nita Lakes. Perfect for families or groups with 3 bedrooms, 5 beds, and 3 baths."
         />
         {/* Preload critical images */}
-        <link rel="preload" href={optimalPhotos[0]} as="image" />
+        <link rel="preload" href={getGalleryPhotoSrc(photos[0])} as="image" />
       </Head>
 
       <div className="min-h-screen bg-white">
@@ -171,7 +156,7 @@ const LuxeScandinaveRetreat = () => {
                   onClick={() => handlePhotoClick(index)}
                 >
                   <Image
-                    src={photo}
+                    src={getGalleryPhotoSrc(photo)}
                     alt={`Luxe 5-BED Scandinave Retreat ${index + 1}`}
                     fill
                     sizes={editorialGalleryImageSizes}
@@ -254,7 +239,7 @@ const LuxeScandinaveRetreat = () => {
               <div className="md:w-1/2">
                 <div className="relative aspect-[4/3] mb-4 rounded-xl overflow-hidden shadow-lg bg-gray-200">
                   <img
-                    src={optimalPhotos[2]}
+                    src={getGalleryPhotoSrc(photos[2])}
                     alt="Luxe 5-BED Scandinave Retreat - Premium Amenities"
                     className="object-cover hover:scale-105 transition-transform duration-500 w-full h-full"
                     loading="lazy"
@@ -355,7 +340,7 @@ const LuxeScandinaveRetreat = () => {
                     onClick={() => handlePhotoClick(index)}
                   >
                     <Image
-                      src={photo}
+                      src={getGalleryPhotoSrc(photo)}
                       alt={`Luxe 5-BED Scandinave Retreat photo ${index + 1}`}
                       fill
                       sizes={editorialGalleryImageSizes}
@@ -439,7 +424,7 @@ const LuxeScandinaveRetreat = () => {
                   </div>
                 )}
                 <img
-                  src={selectedPhotoIndex !== null ? photos[selectedPhotoIndex] : ''}
+                  src={selectedPhotoIndex !== null ? getFullPhotoSrc(photos[selectedPhotoIndex]) : ''}
                   alt={`Luxe 5-BED Scandinave Retreat photo ${selectedPhotoIndex !== null ? selectedPhotoIndex + 1 : ''}`}
                   className={`object-contain w-full h-full transition-opacity duration-300 ${isImageLoading ? 'opacity-0' : 'opacity-100'}`}
                   onLoad={handleImageLoad}

@@ -12,6 +12,7 @@ import { useTranslation } from "next-i18next";
 import { FaUser, FaBed, FaBath } from "react-icons/fa";
 import { Users, Bed, Bath } from "lucide-react";
 import { BLUFFS_AIRBNB_LINK } from "@/data/listings/bluffsAirbnbLink";
+import { SCANDINAVE_COVER } from "@/data/scandinavePhotos";
 import {
   getPropertyAirbnbLink,
   getPropertyContactLink,
@@ -349,7 +350,7 @@ const Home = () => {
     {
       id: "luxe-5-bed-scandinave-retreat",
       name: "Luxe 5-BED Scandinave Retreat | Walk to Slopes",
-      image: "/high-quality/scandinave-fixed/scandinave-26.jpg",
+      image: SCANDINAVE_COVER,
       guests: 8,
       bedrooms: 3,
       beds: 5,

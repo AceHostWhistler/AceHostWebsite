@@ -1,4 +1,5 @@
 import { BLUFFS_AIRBNB_LINK } from "../listings/bluffsAirbnbLink";
+import { SCANDINAVE_COVER, SCANDINAVE_PHOTOS } from "../scandinavePhotos";
 
 export interface PropertyFeature {
   id: string;
@@ -678,9 +679,9 @@ export const propertyCategories: PropertyCategory[] = [
             id: "luxe-5-bed-scandinave-retreat",
             name: "Luxe 5-BED Scandinave Retreat | Walk to Slopes",
             images: [
-              "/high-quality/scandinave-fixed/scandinave-26.jpg",
-              "/high-quality/scandinave-fixed/scandinave-0.jpg",
-              "/high-quality/scandinave-fixed/scandinave-1.jpg"
+              SCANDINAVE_COVER,
+              SCANDINAVE_PHOTOS[1],
+              SCANDINAVE_PHOTOS[2],
             ],
             guests: 8,
             bedrooms: 3,
