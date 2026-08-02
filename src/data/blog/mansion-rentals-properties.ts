@@ -1,5 +1,4 @@
 import { listings } from "@/data/listings";
-import { SCANDINAVE_COVER } from "@/data/scandinavePhotos";
 import { getPropertyAirbnbLink } from "@/data/propertyAirbnbLinks";
 
 export interface MansionRentalProperty {
@@ -184,7 +183,7 @@ export const MANSION_RENTAL_PROPERTIES: MansionRentalProperty[] = [
     standout: "Five beds, 400 m to the gondola, steam shower and lake views",
     images: [
       {
-        src: SCANDINAVE_COVER,
+        src: "/photos/properties/Luxe 3-bed Scandinave/1-2 2221 Gondola Way 26.jpg",
         alt: "Luxe five-bed Creekside Whistler ski rental",
       },
     ],
