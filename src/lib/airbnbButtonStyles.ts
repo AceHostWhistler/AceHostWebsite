@@ -1,5 +1,6 @@
-/** Airbnb brand-style red used for Book on Airbnb CTAs (matches Cotswolds listing). */
-const AIRBNB_RED = "bg-red-600 hover:bg-red-700 text-white";
+/** Airbnb Rausch (#FF5A5F) for Book on Airbnb / red Book Now CTAs. Black CTAs stay separate. */
+const AIRBNB_RED =
+  "bg-[#FF5A5F] hover:bg-[#E0484D] text-white";
 
 export const airbnbButtonCard =
   `${AIRBNB_RED} px-5 py-2.5 rounded-md text-[1.03rem] font-medium transition-colors`;
