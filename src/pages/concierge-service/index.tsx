@@ -597,8 +597,8 @@ const ConciergeService = () => {
                   icon={<MdSpa className="text-lg" />}
                   title="In-Home Hair & Beauty"
                   description="Prepare for a special evening or simply treat yourself with our in-home hair styling and beauty services. Our professional stylists and makeup artists bring the salon experience directly to you, ensuring you look and feel your best for any occasion."
-                  imageSrc="/photos/homepage/concierge-service/In House Beauty and Wellness.jpg"
-                  imageAlt="In-Home Hair & Beauty"
+                  imageSrc="/photos/homepage/concierge-service/in-home-hair-beauty.png"
+                  imageAlt="In-home hair and makeup styling in a luxury Whistler chalet"
                 />
 
                 <ConciergeCard
