@@ -210,7 +210,7 @@ const Home = () => {
       id: "chalet-la-forja",
       name: "Chalet La Forja | Kadenwood | Private Butler",
       image: "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
-      guests: "12+4",
+      guests: 16,
       bedrooms: 9,
       beds: 15,
       bathrooms: 8,
