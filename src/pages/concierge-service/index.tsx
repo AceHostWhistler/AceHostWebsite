@@ -539,8 +539,8 @@ const ConciergeService = () => {
                   icon={<GiFoodTruck className="text-lg" />}
                   title="Catered Meals"
                   description="If you prefer a more casual dining experience without the full private chef service, our catered meal options are perfect. We'll arrange for gourmet prepared meals to be delivered to your accommodation, ready to heat and serve at your convenience. These meals are prepared by top local chefs using fresh, seasonal ingredients."
-                  imageSrc="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 12.57.08 PM.png"
-                  imageAlt="Catered Meals"
+                  imageSrc="/photos/homepage/concierge-service/catered-meals.png"
+                  imageAlt="Gourmet catered meal spread in a luxury Whistler chalet kitchen"
                 />
 
                 <ConciergeCard
