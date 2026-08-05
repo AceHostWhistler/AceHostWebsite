@@ -560,8 +560,8 @@ const ConciergeService = () => {
                   icon={<FaWineGlassAlt className="text-lg" />}
                   title="Wine & Champagne Selection"
                   description="Let our wine specialists curate a selection of fine wines and champagnes for your stay. Whether you're looking for specific bottles, want recommendations to pair with meals, or wish to arrange a private tasting, our team can ensure your cellar is stocked with premium offerings that match your taste and occasion."
-                  imageSrc="/photos/homepage/concierge-service/SommelierWinePairings.webp"
-                  imageAlt="Wine & Champagne Selection"
+                  imageSrc="/photos/homepage/concierge-service/wine-champagne-selection.png"
+                  imageAlt="Curated wine and champagne bottles in a luxury Whistler chalet wine cellar"
                 />
 
 
