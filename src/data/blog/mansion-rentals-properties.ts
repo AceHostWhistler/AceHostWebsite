@@ -131,7 +131,7 @@ export const MANSION_RENTAL_PROPERTIES: MansionRentalProperty[] = [
   {
     name: "Heron Views",
     listingHref: "/listings/heron-views-whistler-village",
-    airbnbHref: listingAirbnb("heron-views-whistler"),
+    airbnbHref: listingAirbnb("heron-views-whistler-village"),
     area: "Blueberry Hill",
     bedrooms: 5,
     guests: 11,
@@ -161,7 +161,7 @@ export const MANSION_RENTAL_PROPERTIES: MansionRentalProperty[] = [
   {
     name: "Luxury 6-Bedroom",
     listingHref: "/listings/luxury-6-bedroom-whistler-village-blueberry",
-    airbnbHref: listingAirbnb("luxury-6-bedroom-blueberry"),
+    airbnbHref: listingAirbnb("luxury-6-bedroom-whistler-village-blueberry"),
     area: "Blueberry",
     bedrooms: 6,
     guests: 12,
