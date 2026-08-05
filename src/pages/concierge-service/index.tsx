@@ -698,8 +698,8 @@ const ConciergeService = () => {
                   icon={<BiInjection className="text-lg" />}
                   title="IV Drip Therapy"
                   description="Rehydrate, recharge, and revitalize with IV therapy delivered to you. Elevate your wellness with our popular IV drip therapy sessions, tailored for ultimate comfort and rejuvenation. Choose from a wide range of options, including vitamin and immune boosts, NAD anti-aging, recovery drips, vitamin injections, and more."
-                  imageSrc="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.30.59 AM.png"
-                  imageAlt="IV Drip Therapy"
+                  imageSrc="/photos/homepage/concierge-service/iv-drip-therapy.png"
+                  imageAlt="In-home IV drip therapy in a luxury Whistler chalet with mountain views"
                 />
               </div>
             </div>
