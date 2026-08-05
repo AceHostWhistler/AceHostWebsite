@@ -34,4 +34,4 @@ export const SCANDINAVE_PHOTOS: string[] = [
   `${D}/17-2 2221 Gondola Way 17.jpg`,
 ];
 
-export const SCANDINAVE_COVER = SCANDINAVE_PHOTOS[0];
+export const SCANDINAVE_COVER = `${SCANDINAVE_PHOTO_DIR}/1-2 2221 Gondola Way 26.jpg`;
