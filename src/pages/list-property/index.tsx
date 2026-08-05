@@ -151,7 +151,7 @@ const features: Feature[] = [
   {
     title: "Our Relationships",
     description:
-      "Our value driver is creating meaningful and lasting relationships with homeowners. We've established a business model that relies on clear and frequent communication. Though we are home to Whistler, we have instilled confidence in homeowners and therefore have expanded our services to The United States, The United Kingdom, Spain, Greece, and Mexico. We offer a hands-off experience for homeowners both locally, but also overseas.",
+      "Exceptional property management begins with trust. At AceHost, we build lasting relationships with Whistler homeowners through clear communication, complete transparency, and meticulous care for every property. Our experienced local team manages every detail, from pricing and guest services to maintenance and property care, giving homeowners a truly hands-off experience and confidence that their Whistler home is being managed to the highest standard.",
     additionalDescription: "",
     icon: Users,
   },
