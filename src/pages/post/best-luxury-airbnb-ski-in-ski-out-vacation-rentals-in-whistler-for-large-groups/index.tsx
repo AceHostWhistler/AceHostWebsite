@@ -244,24 +244,24 @@ export default function BlogPost() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png"
-                    alt="Chalet La Forja pool and hot tub"
+                    src="/photos/properties/Chalet La Forja/07-2950 Heritage Peaks Trail-07.jpg"
+                    alt="Chalet La Forja heated pool and outdoor terrace"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png"
-                    alt="Chalet La Forja kitchen"
+                    src="/photos/properties/Chalet La Forja/22-2950 Heritage Peaks Trail-22.jpg"
+                    alt="Chalet La Forja gourmet kitchen"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png"
-                    alt="Chalet La Forja living space"
+                    src="/photos/properties/Chalet La Forja/31-2950 Heritage Peaks Trail-31.jpg"
+                    alt="Chalet La Forja main living space"
                     fill
                     className="object-cover"
                   />
@@ -358,24 +358,24 @@ export default function BlogPost() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/2919 Heritage/Mountaintop Snow cover.png"
-                    alt="Ski access at Mountaintop Kadenwood"
+                    src="/photos/properties/2919 Heritage/05 - 20260301 A7M4 01 A1_01862-Edit.jpg"
+                    alt="The Mountaintop chef kitchen and dining area"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/2919 Heritage/Mountaintop Snow cover.png"
-                    alt="Mountaintop living and mountain views"
+                    src="/photos/properties/2919 Heritage/104 - 20260301 MM4P 01 DJI_20260301104740_0208_D.jpg"
+                    alt="The Mountaintop Kadenwood estate aerial view"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/2919 Heritage/Mountaintop Snow cover.png"
-                    alt="Mountaintop outdoor deck and hot tub area"
+                    src="/photos/properties/2919 Heritage/38 - 20260301 A7M4 01 A1_02799-Edit.jpg"
+                    alt="The Mountaintop outdoor hot tub and mountain views"
                     fill
                     className="object-cover"
                   />
@@ -415,24 +415,24 @@ export default function BlogPost() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Panoramic Estate/01-2923 Ancient Cedars-01.jpg"
-                    alt="Whistler valley view from Panoramic Estate"
+                    src="/photos/properties/Panoramic Estate/15-2923 Ancient Cedars-15.jpg"
+                    alt="Panoramic Estate great room with mountain views"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Panoramic Estate/02-2923 Ancient Cedars-02.jpg"
-                    alt="Panoramic Estate dining area"
+                    src="/photos/properties/Panoramic Estate/20241127 MM4P 01 0225-Edit.jpg"
+                    alt="Panoramic Estate open kitchen and dining area"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Panoramic Estate/12-2923 Ancient Cedars-12.jpg"
-                    alt="Panoramic Estate family room"
+                    src="/photos/properties/Panoramic Estate/20-2923 Ancient Cedars-20.jpg"
+                    alt="Panoramic Estate media room and lounge"
                     fill
                     className="object-cover"
                   />
@@ -594,7 +594,15 @@ export default function BlogPost() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Falcon/Cover photo Falcon.png"
+                    src="/photos/properties/Falcon/Hot tub sauna falcon snow.png"
+                    alt="Falcon hot tub and barrel sauna in winter"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+                  <Image
+                    src="/photos/properties/Falcon/08 - 20250827 A7M4 01 DSC00273.jpg"
                     alt="Falcon living room with fireplace"
                     fill
                     className="object-cover"
@@ -602,16 +610,8 @@ export default function BlogPost() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Falcon/Cover photo Falcon.png"
-                    alt="Falcon deck and BBQ"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
-                  <Image
-                    src="/photos/properties/Falcon/Cover photo Falcon.png"
-                    alt="Falcon hot tub"
+                    src="/photos/properties/Falcon/Falcon Main floor bedroom.png"
+                    alt="Falcon main-floor bedroom"
                     fill
                     className="object-cover"
                   />
@@ -652,24 +652,24 @@ export default function BlogPost() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry living room.png"
-                    alt="Luxury 6-bedroom kitchen"
+                    src="/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/15 - 20251108 MM4P 01 0011.jpg"
+                    alt="Luxury 6-bedroom Blueberry home exterior in snow"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry living room.png"
-                    alt="Luxury 6-bedroom suite"
+                    src="/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/20 - 20251108 A7M4 02 A1_08158.jpg"
+                    alt="Luxury 6-bedroom primary suite"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry living room.png"
-                    alt="Luxury 6-bedroom common and outdoor area"
+                    src="/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/51 - 20251108 MM4P 01 0006.jpg"
+                    alt="Luxury 6-bedroom kitchen and dining space"
                     fill
                     className="object-cover"
                   />
