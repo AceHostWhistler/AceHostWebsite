@@ -143,8 +143,9 @@ const features: Feature[] = [
   {
     title: "Luxury Is Our Focus",
     description:
-      "We specialize in the management of luxury homes in Whistler. From small condos to luxurious multi-million dollar villas, we deliver first-rate property management for a wide range of homes. AceHost focuses on accommodating luxury homes with full service guest management and cleans, while offering VIP Concierge services, giving homeowners peace of mind in knowing that their home and guests are being looked after with diligence and care.",
-    additionalDescription: "",
+      "We specialize in managing luxury homes in Whistler, from beautifully appointed condos to multi-million-dollar villas. Through full-service guest management, professional cleaning, and VIP Concierge services, we give homeowners confidence that their home and guests receive exceptional care.",
+    additionalDescription:
+      "Are you worried that your property may not yet be luxurious enough for the AceHost portfolio? Please do not be shy about reaching out. We help homeowners transform promising properties into elevated luxury rentals by recommending and coordinating furnishings, design updates, amenities, and guest-experience improvements. Bringing your home up to the standards luxury travellers expect can strengthen its presentation, rental potential, and long-term value.",
     icon: Sparkles,
   },
   {
