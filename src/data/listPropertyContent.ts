@@ -144,7 +144,7 @@ export const MARKETING_CHANNELS = [
 
 export const LIST_PROPERTY_TESTIMONIALS = [
   {
-    name: "Saul Kahn",
+    name: "Saul K.",
     role: "Property Owner",
     text: "AceHost has done a great job managing my Whistler rentals for the past two years. I would recommend them to anyone needing rental management in the Whistler area.",
     date: "38 weeks ago",
@@ -178,6 +178,18 @@ export const LIST_PROPERTY_TESTIMONIALS = [
     role: "Guest",
     text: "I rarely write reviews but AceHost Whistler deserves one. We were sourcing two homes for an artist and crew coming into town and Ben + Max absolutely nailed it. The level of care here was seriously impressive — late night grocery runs, wine deliveries, chefs, bartenders, airport transfers, and help with bags and logistics the whole way through. Felt way more like having a private concierge team than a rental company.",
     date: "13 weeks ago",
+  },
+  {
+    name: "Paulina",
+    role: "Guest at Timber Haven",
+    text: "Ben is an exceptional host! His attention and hospitality were 10000/10. He helped us with everything from the very beginning and was always quick to respond. The house is an absolute WOW and worth every single penny. It's even more incredible in person. Having a cup of coffee on the terrace was the perfect way to start the day. We would definitely stay here again and highly recommend it!",
+    date: "1 day ago",
+  },
+  {
+    name: "Mauricio",
+    role: "Guest at The Mountaintop",
+    text: "Ben was an outstanding host. His responsiveness was exceptional. We had an unexpected issue with another property we had rented and urgently needed a new place within hours. Ben made it happen seamlessly and accommodated us on very short notice. The house is absolutely perfect — exactly as described. It was impeccably clean, spacious, beautifully designed, and located in a fantastic private area with stunning views. The amenities were excellent, and everything felt brand new and truly luxurious. Although we may have been among the first guests to stay there, the home felt professionally managed and very well prepared, as if it had years of hosting experience. We would definitely stay here again without hesitation. Thank you so much, Ben!",
+    date: "February 2026",
   },
   {
     name: "Jody L",
