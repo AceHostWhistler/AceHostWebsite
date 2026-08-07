@@ -241,9 +241,14 @@ const ListProperty = () => {
                 <p className="text-base sm:text-lg text-stone-200 leading-relaxed max-w-xl mb-8">
                   AceHost provides full-service Airbnb and vacation rental
                   property management in Whistler, combining daily revenue
-                  management, luxury marketing, guest services, housekeeping,
-                  maintenance, and VIP concierge into one completely hands-off
-                  experience for homeowners.
+                  management, luxury marketing, guest services, property care,
+                  regular inspections, detailed owner reporting, and VIP concierge
+                  into one completely hands-off experience for homeowners. We
+                  handle the day-to-day guest and property issues while keeping
+                  owners informed with clear monthly payouts and transparent
+                  reporting. Our team also provides ongoing recommendations to
+                  improve the home, guest experience, and long-term rental
+                  performance.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-3 mb-8">
