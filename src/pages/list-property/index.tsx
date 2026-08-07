@@ -45,6 +45,12 @@ function resolveShowcaseProperties(ids: string[]) {
 const showcaseProperties = resolveShowcaseProperties(SHOWCASE_PROPERTY_IDS);
 const showcaseCondos = resolveShowcaseProperties(SHOWCASE_CONDO_PROPERTY_IDS);
 
+function formatGuestReviewName(fullName: string): string {
+  const parts = fullName.trim().split(/\s+/);
+  if (parts.length < 2) return fullName;
+  return `${parts[0]} ${parts[parts.length - 1].charAt(0)}`;
+}
+
 function PropertyShowcaseCard({ property }: { property: PropertyFeature }) {
   const href = getPropertyListingPath(property);
 
@@ -602,7 +608,11 @@ const ListProperty = () => {
                     &ldquo;{item.text}&rdquo;
                   </p>
                   <footer>
-                    <p className="font-semibold text-gray-900">{item.name}</p>
+                    <p className="font-semibold text-gray-900">
+                      {item.role.includes("Guest")
+                        ? formatGuestReviewName(item.name)
+                        : item.name}
+                    </p>
                     <p className="text-sm text-gray-500">{item.role}</p>
                   </footer>
                 </blockquote>
