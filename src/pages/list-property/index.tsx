@@ -19,14 +19,13 @@ import { buildFaqPageSchema } from "@/lib/seo/schema";
 import {
   ACEHOST_AIRBNB_PROFILE_URL,
   BOOKING_PLATFORMS,
-  GUEST_SOCIAL_PROOF,
   HERO_SERVICE_STRIP,
   HOW_IT_WORKS_STEPS,
   LIST_PROPERTY_CANONICAL,
   LIST_PROPERTY_FAQS,
+  LIST_PROPERTY_TESTIMONIALS,
   MARKETING_CHANNELS,
   OWNER_BENEFIT_CARDS,
-  OWNER_TESTIMONIALS,
   REVENUE_VALUE_COLUMNS,
   SEO_SUPPLEMENT_SECTIONS,
   SHOWCASE_PROPERTY_IDS,
@@ -573,25 +572,11 @@ const ListProperty = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12 text-center">
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 mb-4">
-                Trusted by Whistler Homeowners
+                Trusted homeowners and guests
               </h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {OWNER_TESTIMONIALS.map((item) => (
-                <blockquote
-                  key={item.name}
-                  className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 md:col-span-1"
-                >
-                  <p className="text-gray-700 leading-relaxed mb-6">
-                    &ldquo;{item.text}&rdquo;
-                  </p>
-                  <footer>
-                    <p className="font-semibold text-gray-900">{item.name}</p>
-                    <p className="text-sm text-gray-500">{item.role}</p>
-                  </footer>
-                </blockquote>
-              ))}
-              {GUEST_SOCIAL_PROOF.map((item) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {LIST_PROPERTY_TESTIMONIALS.map((item) => (
                 <blockquote
                   key={item.name}
                   className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100"
@@ -682,39 +667,6 @@ const ListProperty = () => {
             >
               Whistler property investment guide
             </Link>
-          </div>
-        </section>
-
-        {/* 12. FAQ — SSR-friendly details/summary */}
-        <section className="py-20 sm:py-24 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="mb-12 text-center">
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 mb-4">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-lg text-gray-600">
-                Common questions about Whistler property management, Airbnb
-                management, and working with AceHost.
-              </p>
-            </div>
-            <div className="space-y-4">
-              {LIST_PROPERTY_FAQS.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden"
-                >
-                  <summary className="cursor-pointer list-none px-6 py-5 font-semibold text-gray-900 flex justify-between items-center gap-4 [&::-webkit-details-marker]:hidden">
-                    <span>{faq.question}</span>
-                    <span className="text-gray-400 group-open:rotate-180 transition-transform">
-                      ▾
-                    </span>
-                  </summary>
-                  <div className="px-6 pb-6 text-gray-600 leading-relaxed">
-                    <p>{faq.answer}</p>
-                  </div>
-                </details>
-              ))}
-            </div>
           </div>
         </section>
 
@@ -899,6 +851,39 @@ const ListProperty = () => {
                   )}
                 </form>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ — after contact form */}
+        <section className="py-20 sm:py-24 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-12 text-center">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 mb-4">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-lg text-gray-600">
+                Common questions about Whistler property management, Airbnb
+                management, and working with AceHost.
+              </p>
+            </div>
+            <div className="space-y-4">
+              {LIST_PROPERTY_FAQS.map((faq) => (
+                <details
+                  key={faq.question}
+                  className="group bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden"
+                >
+                  <summary className="cursor-pointer list-none px-6 py-5 font-semibold text-gray-900 flex justify-between items-center gap-4 [&::-webkit-details-marker]:hidden">
+                    <span>{faq.question}</span>
+                    <span className="text-gray-400 group-open:rotate-180 transition-transform">
+                      ▾
+                    </span>
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-600 leading-relaxed">
+                    <p>{faq.answer}</p>
+                  </div>
+                </details>
+              ))}
             </div>
           </div>
         </section>
