@@ -63,10 +63,10 @@ const STATIC_PAGES: Record<string, StaticPageMeta> = {
   },
   "/list-property": {
     title:
-      "List Your Luxury Vacation Rental Property | AceHost Whistler Property Management",
+      "Luxury Property Management in Whistler | AceHost Airbnb & Vacation Rental Management",
     description:
-      "Partner with AceHost to manage and market your luxury Whistler vacation rental with professional property management and concierge services.",
-    image: ACEHOST_LOGO_IMAGE,
+      "AceHost provides full-service Airbnb and vacation rental property management in Whistler. Maximize rental income with luxury marketing, guest services, property care, and VIP concierge.",
+    image: "https://www.acehost.ca/photos/homepage/WhistlerVacationRental.jpg",
   },
   "/listings/hotel-booking-assistance": {
     title: "Hotel Booking Assistance & Concierge Services | AceHost",

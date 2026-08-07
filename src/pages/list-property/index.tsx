@@ -4,214 +4,95 @@ import Image from "next/image";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ListPropertyServiceCard from "@/components/listProperty/ListPropertyServiceCard";
 import {
   ArrowRight,
-  Check,
-  MessageSquare,
-  Phone,
   Mail,
-  Calendar,
-  ChevronDown,
-  ChevronUp,
+  Phone,
   Star,
-  Shield,
-  Home,
-  Clock,
-  Users,
-  Settings,
-  Sparkles,
+  Check,
 } from "lucide-react";
+import { propertyCategories } from "@/data/properties/catalog";
+import type { PropertyFeature } from "@/data/properties/catalog";
+import { getPropertyListingPath } from "@/data/properties/listingPath";
+import { buildFaqPageSchema } from "@/lib/seo/schema";
+import {
+  ACEHOST_AIRBNB_PROFILE_URL,
+  BOOKING_PLATFORMS,
+  GUEST_SOCIAL_PROOF,
+  HERO_SERVICE_STRIP,
+  HOW_IT_WORKS_STEPS,
+  LIST_PROPERTY_CANONICAL,
+  LIST_PROPERTY_FAQS,
+  MARKETING_CHANNELS,
+  OWNER_BENEFIT_CARDS,
+  OWNER_TESTIMONIALS,
+  REVENUE_VALUE_COLUMNS,
+  SEO_SUPPLEMENT_SECTIONS,
+  SHOWCASE_PROPERTY_IDS,
+  SHOWCASE_CONDO_PROPERTY_IDS,
+  TRUST_STATS,
+} from "@/data/listPropertyContent";
 
-// FAQ section interface
-interface FAQItem {
-  question: string;
-  answer: string;
+const whistlerProperties =
+  propertyCategories.find((c) => c.id === "whistler")?.properties ?? [];
+
+function resolveShowcaseProperties(ids: string[]) {
+  return ids
+    .map((id) => whistlerProperties.find((p) => p.id === id))
+    .filter((p): p is PropertyFeature => Boolean(p));
 }
 
-const faqs: FAQItem[] = [
-  {
-    question: "What makes AceHost different from other Airbnb property management companies in Whistler?",
-    answer:
-      "AceHost specializes exclusively in luxury vacation homes and high-end clientele. We don't just manage your listing, we elevate your property into a 5-star guest experience. Our white-glove service includes professional branding, curated guest experiences, luxury concierge services, and hands-on local support. With a strong reputation and global partnerships, we consistently outperform traditional property managers.",
-  },
-  {
-    question: "Can I Rent my Property with AceHost?",
-    answer:
-      "Yes, if your property is zoned for nightly rentals and meets our quality standards for luxury vacation rentals. We'll help you determine if your property qualifies during our initial consultation.",
-  },
-  {
-    question: "What management fee do you charge?",
-    answer:
-      "Our management fee structure is tailored to each property based on factors like location, size, and amenities. We typically work on a percentage of rental income. Contact us for a personalized rate quote.",
-  },
-  {
-    question: "What's included in your Airbnb management fees for luxury properties?",
-    answer: "Our management fee covers everything from listing optimization and guest communication to scheduling cleanings, managing check-ins, and handling maintenance. We also provide monthly reporting and revenue tracking. For high-end homes, we tailor our services to include concierge planning, mid-stay housekeeping, and luxury amenity stocking upon request.",
-  },
-  {
-    question: "What are the benefits working with AceHost?",
-    answer:
-      "Working with AceHost provides you with expert property management, premium marketing on multiple platforms, Airbnb SuperHost status, access to high-end travelers through our exclusive network, professional photography, VIP concierge services for guests, detailed reporting, and a completely hands-off rental experience.",
-  },
-  {
-    question: "Do I need to live in Whistler to rent out my home with AceHost?",
-    answer: "Not at all. Many of our homeowners live abroad or elsewhere in Canada. We provide a fully hands-off experience, handling everything from guest communication and property maintenance to financial reporting. You'll always have full visibility into your home's performance through regular updates and transparent reporting.",
-  },
-  {
-    question: "I'm not a Canadian resident. Can AceHost still manage my Whistler property and help with NR6 filing?",
-    answer: "Yes, we regularly work with non-resident property owners and can assist with everything you need, including NR6 filing and tax compliance for rental income in Canada. We work closely with experienced accountants and can guide you through the process to ensure your withholding taxes are minimized and everything is CRA-compliant. Managing foreign-owned luxury properties is something we handle seamlessly.",
-  },
-  {
-    question: "How do you screen guests to protect my luxury property?",
-    answer: "We use a combination of platform-integrated verification tools and personal screening to ensure every guest is a good fit for your home. For high-value properties, we prioritize quality over quantity, often hosting families, executives, or well-known guests who are looking for a premium, respectful experience.",
-  },
-  {
-    question: "Can AceHost manage my home if it's not listed on Airbnb?",
-    answer: "Yes. We manage both Airbnb and direct-booked properties. In fact, many of our homes are marketed off-platform to private clients or through our exclusive partnerships. We'll develop a custom marketing and booking strategy that best fits your property and revenue goals.",
-  },
-  {
-    question: "Can AceHost help maximize revenue for my vacation rental property in Whistler?",
-    answer: "Absolutely. We specialize in increasing visibility, booking value, and guest satisfaction. Our data-driven pricing tools, strategic marketing (including influencer partnerships and SEO), and access to high-net-worth travelers all contribute to strong returns. Many of our homeowners see their rental income increase significantly after switching to AceHost.",
-  },
-  {
-    question: "What's involved in getting started with AceHost as my property manager?",
-    answer: "Getting started is easy. After an initial consultation and property walkthrough, we handle onboarding, photography, listings, and setup. Whether your home is already listed or new to the market, we tailor everything for maximum performance, and handle all guest logistics from day one.",
-  },
-  {
-    question:
-      "Are the AceHost luxury vacation rental homes in Whistler professionally cleaned and maintained?",
-    answer:
-      "Absolutely. We work with professional cleaning teams and property maintenance specialists to ensure every property is impeccably presented before each guest arrival and properly maintained throughout the year.",
-  },
-];
+const showcaseProperties = resolveShowcaseProperties(SHOWCASE_PROPERTY_IDS);
+const showcaseCondos = resolveShowcaseProperties(SHOWCASE_CONDO_PROPERTY_IDS);
 
-// Steps in the process
-interface Step {
-  number: number;
-  title: string;
-  description: string;
-  icon: React.ElementType;
+function PropertyShowcaseCard({ property }: { property: PropertyFeature }) {
+  const href = getPropertyListingPath(property);
+
+  return (
+    <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow flex flex-col h-full">
+      <div className="relative h-64">
+        <Link href={href}>
+          <Image
+            src={property.images[0]}
+            alt={`${property.name} — Whistler property managed by AceHost`}
+            fill
+            className="object-cover"
+          />
+        </Link>
+      </div>
+      <div className="p-6 flex-grow flex flex-col">
+        <div className="flex flex-wrap gap-2 mb-4">
+          {property.guests != null && (
+            <span className="bg-gray-900 text-white px-3 py-1 text-sm font-medium rounded-md">
+              {property.guests} Guests
+            </span>
+          )}
+          {property.bedrooms != null && (
+            <span className="bg-gray-200 text-gray-900 px-3 py-1 text-sm font-medium rounded-md">
+              {property.bedrooms} Bedrooms
+            </span>
+          )}
+        </div>
+        <h3 className="text-xl font-medium text-gray-900 mb-4 line-clamp-2">
+          {property.name}
+        </h3>
+        <p className="text-sm text-gray-500 mb-4">{property.location}</p>
+        <Link
+          href={href}
+          className="mt-auto inline-flex items-center text-gray-900 font-medium hover:text-gray-600 transition-colors"
+        >
+          View Property
+          <ArrowRight size={18} className="ml-2" />
+        </Link>
+      </div>
+    </div>
+  );
 }
 
-const steps: Step[] = [
-  {
-    number: 1,
-    title: "Contact Us",
-    description:
-      "Contact us today. Whether you already own a property or are still looking for the right home in Whistler, we're eager to help. Many owners work with us before they buy, we're happy to advise on properties you're interested in, help you choose the perfect home for your goals, and connect you with trusted local realtors when needed. In the meantime, please send any videos or photos you have of your property (or listings you're considering), along with basic information such as bedroom layout, bathrooms, and your rental preferences. Not sure if a property is zoned for nightly rentals? Send us the address and we can help find out for you.",
-    icon: MessageSquare,
-  },
-  {
-    number: 2,
-    title: "Property Assessment & Estimate",
-    description:
-      "We will assess your property and put together a clear estimate and revenue projection for you, along with more information about how AceHost operates. We'll suggest optimal nightly rental rates, outline a personalized marketing strategy, and answer any questions so you know exactly what to expect before we meet in person.",
-    icon: Settings,
-  },
-  {
-    number: 3,
-    title: "Meet Us | Show Us Your Home",
-    description:
-      "At AceHost we carefully select properties for our portfolio that will appeal to our network of global guests. We'd love to see your home in person, meet with us, walk us through the property, and we'll confirm the numbers and estimates we sent over prior to your visit. We can also share advice or recommendations on home improvements, staging, furnishing, and anything else that will help your property perform at its best.",
-    icon: Home,
-  },
-  {
-    number: 4,
-    title: "Join the AceHost Team",
-    description:
-      "Call, email, or meet in person to discuss the terms of your contract. Welcome to the AceHost team! We'll arrange a professional photographer and handle all subsequent rentals, guests, cleaning teams, payout information, and more. We also help stock your home with toiletries and essentials, offer hands-on advice on setting up your property, and can set it up with you step by step, at no cost to you. It's in our interest to help our owners succeed and give guests the most comfortable stay possible. We take the initiative, send you a range of ideas and recommendations, and you simply approve what works for you. That said, we're flexible, bring years of experience, and are always happy to work with owners however they prefer.",
-    icon: Users,
-  },
-];
-
-// Features section
-interface Feature {
-  title: string;
-  description: string;
-  additionalDescription: string;
-  icon: React.ElementType;
-}
-
-const features: Feature[] = [
-  {
-    title: "The AceHost Brand",
-    description:
-      "At AceHost, we strive to build trust and longevity with homeowners. Property management can be a time consuming and stressful feat. AceHost's rental expertise and quality assurance offers a solution to homeowners, yielding hassle-free and profitable property rental income.",
-    additionalDescription: "We handle every aspect of your rental management, from marketing and guest preparation to ensuring a flawless guest experience, professional cleaning that leaves your home spotless, and transparent invoicing and payouts to simplify your taxes.",
-    icon: Star,
-  },
-  {
-    title: "Luxury Is Our Focus",
-    description:
-      "We specialize in managing luxury homes in Whistler, from beautifully appointed condos to multi-million-dollar villas. Through full-service guest management, professional cleaning, and VIP Concierge services, we give homeowners confidence that their home and guests receive exceptional care.",
-    additionalDescription:
-      "Are you worried that your property may not yet be luxurious enough for the AceHost portfolio? Please do not be shy about reaching out. We help homeowners transform promising properties into elevated luxury rentals by recommending and coordinating furnishings, design updates, amenities, and guest-experience improvements. Bringing your home up to the standards luxury travellers expect can strengthen its presentation, rental potential, and long-term value.",
-    icon: Sparkles,
-  },
-  {
-    title: "Our Relationships",
-    description:
-      "Exceptional property management begins with trust. At AceHost, we build lasting relationships with Whistler homeowners through clear communication, complete transparency, and meticulous care for every property. Our experienced local team manages every detail, from pricing and guest services to maintenance and property care, giving homeowners a truly hands-off experience and confidence that their Whistler home is being managed to the highest standard.",
-    additionalDescription: "",
-    icon: Users,
-  },
-];
-
-const reasonsSections = [
-  {
-    title: "The AceHost Team",
-    description:
-      "Our boutique and professional team has over 15 years of experience in luxury hospitality. AceHost's refined industry knowledge and high guest & homeowner retention rates set us apart from our competitors. After just under 4 years of business, we can confidently say that we are the fastest growing luxury vacation rental management company in Whistler.",
-  },
-  {
-    title: "Listing & Marketing Strategies",
-    description:
-      "We are not your average Airbnb management company. Our elevated marketing strategies give homeowners access to additional exposure:",
-    bulletPoints: [
-      "Airbnb Super Host Status",
-      "VRBO Premier Status",
-      "Strong relationships with thousands of High-End Travel Agents & Partners",
-      "High Google Search Ranking - AceHost ranks high on google search for travels and their agents. Benefit in additional bookings by having your home listed on our site.",
-      "Access to a vast network of Returning Guests - Because of the level of service we provide, we have many returning guests looking to book the same or other properties through us. Increase your bookings by offering your home to our loyal returning travellers.",
-      "Ad Spending on numerous platforms (no cost to owner)",
-      "Social Media Presence",
-      "Referrals and Introductions from locals and local businesses",
-    ],
-  },
-  {
-    title: "Returning Guest Satisfaction",
-    description:
-      "Homeowners can benefit from AceHost's portfolio of returning guests. Our services go above and beyond at no cost to travellers, ensuring that trusted customer base has consistently had their expectations exceeded. We believe in building long term relationships with guests and using their feedback to understand how we can improve their next visit to Whistler. Referrals from past guests who have experienced AceHost hospitality contribute to our growing network of new customers.",
-  },
-  {
-    title: "Hands-Off Homeowner Experience",
-    description:
-      "We reduce homeowner responsibilities by creating a hands-off rental experience where we take care of all aspects of guest accommodation. AceHost takes an individual approach with property check-ins, check-outs, sweeps for damage, familiarizing guests with each home to ensure that their stay is comfortable.",
-  },
-  {
-    title: "Rental Flexibility",
-    description:
-      "We understand that rental flexibility is important to homeowners. Depending on homeowner preference, AceHost can adapt to homeowner calendars on year-round basis, seasonally, or for select dates. We are happy to create a personally-curated property rental schedule that works for you and your family.",
-  },
-  {
-    title: "Property Care",
-    description:
-      "Property care is of upmost priority at AceHost. We carefully inspect all properties before guest arrival and after their departure. Under our supervision, our teams of professional housekeepers are committed to providing a high-quality standard of cleanliness. We regularly visit our homes to ensure that everything is in working order and ready for guest arrival.",
-  },
-  {
-    title: "VIP Concierge Services",
-    description:
-      "Our luxury hospitality services offer a well curated stay for all guests, ensuring that their Whistler experience is comfortable and entertaining. Our high-end homes are typically staffed with hosts and chefs, giving homeowners a peace of mind that their home is looked after. Included Concierge Services help increase bookings and increase the likelihood of recurring bookings from past guests.",
-  },
-  {
-    title: "Investment Property Consultations",
-    description:
-      "Are you looking to buy an investment rental property in Whistler? It can be difficult to choose a location for your short term rental property in Whistler, as there are a wide range of neighbourhoods all offering different benefits. At AceHost, we provide one-on-one property consultations to ensure that you are choosing the best luxury property for your needs and investment goals. Whether you want a ski-in ski-out feature, closer proximity to the village, questions about bedrooms, or specific home amenities such as a hot tub or spa facilities, AceHost's knowledge of luxury investment homes can offer a wide selection of homes.\n\nWe are more than happy to introduce you to our favourite, honest, and hard working local realtors. We will also give you estimates on rental income based on the property, location, bedroom layout etc... We will also give you ideas on what you can do to improve your home to appeal to a larger audience of guests, allowing you to increase your rates, earn more income, and provide more value to your guests.\n\nWe are in the business and we know it well. We can help!",
-  },
-];
+const faqSchema = buildFaqPageSchema(LIST_PROPERTY_FAQS);
 
 const ListProperty = () => {
-  const [activeAccordion, setActiveAccordion] = useState<number | null>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -219,15 +100,12 @@ const ListProperty = () => {
     message: "",
     inquiryType: "Property Management",
     propertyAddress: "",
+    propertyListingUrl: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState(false);
   const [statusMessage, setStatusMessage] = useState("");
-
-  const toggleAccordion = (index: number) => {
-    setActiveAccordion(activeAccordion === index ? null : index);
-  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -243,41 +121,47 @@ const ListProperty = () => {
     setSubmitError(false);
     setStatusMessage("");
 
+    const composedMessage = [
+      formData.message.trim(),
+      formData.propertyAddress.trim()
+        ? `\n\nProperty address: ${formData.propertyAddress.trim()}`
+        : "",
+      formData.propertyListingUrl.trim()
+        ? `\nProperty or listing URL: ${formData.propertyListingUrl.trim()}`
+        : "",
+    ]
+      .join("")
+      .trim();
+
+    const payload = {
+      ...formData,
+      message: composedMessage,
+    };
+
     try {
-      console.log("Submitting form data:", formData);
-      
       const response = await fetch("/api/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
       });
 
-      console.log("Response status:", response.status);
-      
-      // Get the response data
-      let data;
+      let data: { message?: string; error?: string } | undefined;
       try {
         data = await response.json();
-        console.log("Response data:", data);
-      } catch (e) {
-        console.error("Failed to parse response:", e);
+      } catch {
+        /* ignore parse errors */
       }
 
       if (!response.ok) {
-        const errorMessage = data?.error || "Network response was not ok";
-        console.error("Form submission error:", errorMessage, data?.details);
         setSubmitError(true);
         setStatusMessage(data?.error || "There was an error sending your message.");
         return;
       }
 
-      // Success! Show message from API if available
       setSubmitSuccess(true);
-      setStatusMessage(data?.message || "Thank you for your message! We'll get back to you soon.");
-      
-      // Clear form data on success
+      setStatusMessage(
+        data?.message || "Thank you for your message! We'll get back to you soon."
+      );
       setFormData({
         name: "",
         email: "",
@@ -285,9 +169,9 @@ const ListProperty = () => {
         message: "",
         inquiryType: "Property Management",
         propertyAddress: "",
+        propertyListingUrl: "",
       });
-    } catch (error) {
-      console.error("Error submitting form:", error);
+    } catch {
       setSubmitError(true);
       setStatusMessage("There was an error connecting to our server.");
     } finally {
@@ -298,538 +182,729 @@ const ListProperty = () => {
   return (
     <>
       <Head>
-        <title>List Your Luxury Vacation Rental Property | AceHost Whistler Property Management</title>
+        <title>
+          Luxury Property Management in Whistler | AceHost Airbnb & Vacation Rental Management
+        </title>
         <meta
           name="description"
-          content="List your luxury property with AceHost, Whistler's best luxury Airbnb property management company. Maximize your rental income with our expertise."
+          content="AceHost provides full-service Airbnb and vacation rental property management in Whistler. Maximize rental income with luxury marketing, guest services, property care, and VIP concierge."
         />
+        <meta
+          name="keywords"
+          content="Airbnb property management Whistler, Whistler property management, vacation rental management Whistler, luxury property management Whistler, short-term rental property management"
+        />
+        <link rel="canonical" href={LIST_PROPERTY_CANONICAL} />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Luxury Property Management in Whistler | AceHost"
+        />
+        <meta
+          property="og:description"
+          content="Full-service Airbnb and vacation rental property management in Whistler. Revenue management, luxury marketing, guest services, and VIP concierge."
+        />
+        <meta
+          property="og:image"
+          content="https://www.acehost.ca/photos/homepage/WhistlerVacationRental.jpg"
+        />
+        <meta property="og:url" content={LIST_PROPERTY_CANONICAL} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+        <script src="https://player.vimeo.com/api/player.js" async />
       </Head>
 
-      <Navigation />
+      <div className="min-h-screen bg-white text-gray-900">
+        <Navigation transparent={false} />
 
-      {/* Hero Section */}
-      <section className="relative min-h-[72vh] md:min-h-[78vh] flex items-end overflow-hidden">
-        <Image
-          src="/photos/homepage/WhistlerVacationRental.jpg"
-          alt="Luxury Whistler Property"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-[48%] bg-gradient-to-t from-stone-950/80 via-stone-950/30 to-transparent"
-          aria-hidden="true"
-        />
-        <div
-          className="pointer-events-none absolute bottom-0 left-0 h-[55%] w-full max-w-3xl bg-gradient-to-tr from-stone-950/65 to-transparent"
-          aria-hidden="true"
-        />
+        {/* 1. Hero */}
+        <section className="relative overflow-hidden bg-stone-950 text-white">
+          <div
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_75%_0%,rgba(180,83,9,0.16),transparent_55%)]"
+            aria-hidden="true"
+          />
+          <div
+            className="pointer-events-none absolute inset-0 bg-gradient-to-b from-stone-900/40 via-transparent to-stone-950"
+            aria-hidden="true"
+          />
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 md:pb-14 pt-28 md:pt-32">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-white tracking-tight leading-[1.08] max-w-4xl mb-5 drop-shadow-sm">
-            List Your Luxury Vacation Rental Property With AceHost
-          </h1>
-          <p className="text-base sm:text-lg md:text-xl text-white max-w-2xl leading-relaxed mb-8 drop-shadow-sm">
-            Partner with Whistler&apos;s best luxury Airbnb property management company to maximize your rental income and provide exceptional guest experiences.
-          </p>
-
-          <Link
-            href="#contact"
-            className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3.5 text-sm font-semibold text-stone-950 transition-colors hover:bg-stone-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-stone-950"
-          >
-            Get Started
-          </Link>
-        </div>
-      </section>
-
-      <section
-        className="bg-white border-b border-gray-100 py-12 sm:py-14"
-        aria-label="Whistler property investment guide"
-      >
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-xl border border-gray-200 bg-gray-50 p-6 sm:p-8">
-            <p className="text-gray-800 text-base sm:text-lg leading-relaxed mb-5">
-              For a more detailed breakdown on investing in a property in
-              Whistler, or renting your own home out, have a look at the math
-              behind renting &amp; investing in Whistler. We are happy to help
-              find you the perfect Whistler rental property investment!
-            </p>
-            <Link
-              href="/post/is-owning-a-vacation-rental-in-whistler-worth-it-2026"
-              className="inline-flex items-center justify-center rounded-lg bg-black px-6 py-3.5 text-base font-semibold text-white transition-colors hover:bg-gray-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2"
-            >
-              Whistler property investment &amp; listing
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Core Values/Features - Clean cards with icons */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-20 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Why Choose AceHost?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide unparalleled property management services for luxury
-              homes in Whistler.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300"
-              >
-                <div className="flex justify-center mb-6">
-                  <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center text-white">
-                    <feature.icon size={28} />
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-center">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  {feature.description}
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-14">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+              <div className="lg:col-span-5 xl:col-span-5 order-2 lg:order-1">
+                <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.08] text-white mb-4">
+                  Luxury Property Management in Whistler
+                </h1>
+                <p className="text-base sm:text-lg font-semibold text-white mb-4">
+                  Maximize your rental income while we take care of every detail.
                 </p>
-                {feature.additionalDescription && (
-                  <p className="text-gray-600 text-lg leading-relaxed mt-4">
-                    {feature.additionalDescription}
-                  </p>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+                <p className="text-base sm:text-lg text-stone-200 leading-relaxed max-w-xl mb-8">
+                  AceHost provides full-service Airbnb and vacation rental
+                  property management in Whistler, combining daily revenue
+                  management, luxury marketing, guest services, housekeeping,
+                  maintenance, and VIP concierge into one completely hands-off
+                  experience for homeowners.
+                </p>
 
-      {/* Airbnb Profile Section - Apple-style Design */}
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50 overflow-hidden relative">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-            <div className="lg:w-1/2 mb-8 lg:mb-0">
-              <div className="mb-2 text-sm font-semibold text-red-500 tracking-widest uppercase">Airbnb Superhost</div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight leading-tight">
-                Exceptional <span className="text-red-500">Reviews</span>
+                <div className="flex flex-col sm:flex-row gap-3 mb-8">
+                  <a
+                    href="#contact"
+                    className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3.5 text-sm font-semibold text-stone-950 transition-colors hover:bg-stone-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-stone-950"
+                  >
+                    Get a Rental Revenue Estimate
+                  </a>
+                  <a
+                    href="#how-it-works"
+                    className="inline-flex items-center justify-center rounded-lg border border-white/30 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                  >
+                    Explore Our Management
+                  </a>
+                </div>
+
+                <p className="text-xs sm:text-sm text-stone-400 tracking-wide">
+                  {HERO_SERVICE_STRIP.join(" • ")}
+                </p>
+              </div>
+
+              <div className="lg:col-span-7 xl:col-span-7 order-1 lg:order-2">
+                <div className="relative w-full">
+                  <div
+                    className="pointer-events-none absolute -inset-4 rounded-3xl bg-amber-500/15 blur-3xl"
+                    aria-hidden="true"
+                  />
+                  <div className="relative overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/15 aspect-[4/3] lg:aspect-video">
+                    <Image
+                      src="/photos/homepage/WhistlerVacationRental.jpg"
+                      alt="Luxury Whistler vacation rental managed by AceHost"
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 2. Trust strip */}
+        <section className="border-b border-gray-100 bg-white py-8 sm:py-10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8">
+              {TRUST_STATS.map((stat) => (
+                <li key={stat.label} className="text-center">
+                  <p
+                    className={`text-2xl sm:text-3xl font-bold tracking-tight ${
+                      stat.airbnbAccent ? "text-[#FF5A5F]" : "text-gray-900"
+                    }`}
+                  >
+                    {stat.value}
+                  </p>
+                  <p className="mt-1 text-sm text-gray-600">{stat.label}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* 3. Why owners choose AceHost */}
+        <section className="py-20 sm:py-24 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-14 text-center max-w-3xl mx-auto">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 mb-4">
+                Why Whistler Homeowners Choose AceHost
               </h2>
-              <p className="text-base text-gray-600 mb-6">
-                Join our portfolio and benefit from our established Superhost status on Airbnb. 
-                Our properties consistently receive 5-star ratings and glowing reviews.
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Local expertise, premium presentation, and full-service vacation
+                rental management built for luxury homes across Whistler.
               </p>
-              
-              {/* Stats */}
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="bg-white shadow-sm p-4 rounded-xl">
-                  <div className="text-3xl font-bold text-black">4.92</div>
-                  <div className="flex mt-1 mb-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <div className="text-sm text-gray-600">Overall Rating</div>
-                </div>
-                <div className="bg-white shadow-sm p-4 rounded-xl">
-                  <div className="text-3xl font-bold text-black">900+</div>
-                  <div className="text-sm text-gray-600">Reviews</div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {OWNER_BENEFIT_CARDS.map((card) => (
+                <ListPropertyServiceCard
+                  key={card.title}
+                  title={card.title}
+                  description={card.description}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 4. Airbnb property management SEO */}
+        <section
+          id="airbnb-management"
+          className="py-20 sm:py-24 bg-white border-t border-gray-100"
+        >
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <div>
+                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 mb-6">
+                  Airbnb Property Management in Whistler
+                </h2>
+                <div className="space-y-5 text-lg text-gray-600 leading-relaxed">
+                  <p>
+                    AceHost offers full-service Airbnb property management for
+                    Whistler homeowners, but our marketing strategy extends far
+                    beyond a single platform. Properties can be distributed across
+                    Airbnb, Vrbo, Booking.com, Expedia, AceHost.ca, direct booking
+                    channels, returning guests, and luxury travel partners.
+                  </p>
+                  <p>
+                    Our team manages pricing, listings, guest communication,
+                    housekeeping, maintenance coordination, inspections, owner
+                    reporting, and the complete guest experience for short-term
+                    rental property management in Whistler.
+                  </p>
+                  <p>
+                    The goal is not simply to generate Airbnb bookings. It is to
+                    position each property for the strongest possible revenue
+                    across the Whistler vacation rental market.
+                  </p>
                 </div>
               </div>
-              
-              <a 
-                href="https://www.airbnb.ca/users/show/425922828" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="inline-flex items-center justify-center px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition-all duration-300"
-              >
-                <span className="text-sm font-medium">View on Airbnb</span>
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
+              <div>
+                <a
+                  href={ACEHOST_AIRBNB_PROFILE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block group"
+                >
+                  <div className="relative rounded-2xl overflow-hidden shadow-lg ring-1 ring-gray-200 bg-gray-50">
+                    <Image
+                      src="/photos/homepage/list-property/airbnb-superhost-profile.png"
+                      alt="Ben's Airbnb Superhost profile — 4.92 rating and 929 reviews"
+                      width={640}
+                      height={480}
+                      className="w-full h-auto object-contain transition-opacity group-hover:opacity-95"
+                    />
+                  </div>
+                </a>
+                <a
+                  href={ACEHOST_AIRBNB_PROFILE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex items-center justify-center rounded-lg bg-[#FF5A5F] hover:bg-[#E0484D] px-6 py-3 text-sm font-semibold text-white transition-colors"
+                >
+                  View Ben&apos;s Airbnb Superhost Profile
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
+              </div>
             </div>
-            <div className="lg:w-1/2">
-              {/* Airbnb Profile Screenshot */}
-              {/* Removed problematic image */}
+          </div>
+        </section>
 
-              <div className="space-y-3">
-                {/* Real Reviews */}
-                <div className="bg-white shadow-sm p-4 rounded-xl">
-                  <p className="text-gray-700 text-sm mb-3">
-                    "...Probably our 10th trip to Whistler and hands down the best place we've stayed. 
-                    The garage was perfect for the gear, kitchen was beautifully appointed, everything super clean, hot tub perfect fo..."
-                  </p>
-                  <div className="flex items-center">
-                    <div className="font-medium text-sm">Krystle</div>
-                    <div className="text-xs text-gray-500 ml-2">April 2025</div>
-                  </div>
-                </div>
-                
-                <div className="bg-white shadow-sm p-4 rounded-xl">
-                  <p className="text-gray-700 text-sm mb-3">
-                    "...Great place, wonderful host and amazing location. My son and I stayed at Ben's place for 5 days of Spring riding. It's exactly as described..."
-                  </p>
-                  <div className="flex items-center">
-                    <div className="font-medium text-sm">Anthony</div>
-                    <div className="text-xs text-gray-500 ml-2">April 2025</div>
-                  </div>
-                </div>
-                
-                <div className="bg-white shadow-sm p-4 rounded-xl">
-                  <p className="text-gray-700 text-sm mb-3">
-                    "...The place is exactly as the pictures show. The location is perfect with ski in/out and valet for skis. Ben responded right away and the check in and check out was super easy. We look forward to coming back to..."
-                  </p>
-                  <div className="flex items-center">
-                    <div className="font-medium text-sm">Jerry</div>
-                    <div className="text-xs text-gray-500 ml-2">April 2025</div>
+        {/* 5. Video / brand */}
+        <section className="py-20 sm:py-24 bg-stone-950 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+              <div className="lg:col-span-5">
+                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+                  Your Home. Our Responsibility.
+                </h2>
+                <p className="text-lg text-stone-300 leading-relaxed">
+                  See what full-service property management with AceHost looks
+                  like behind the scenes.
+                </p>
+              </div>
+              <div className="lg:col-span-7">
+                <div className="relative overflow-hidden rounded-2xl bg-black shadow-2xl ring-1 ring-white/15">
+                  <div className="relative aspect-video w-full">
+                    <iframe
+                      src="https://player.vimeo.com/video/1122267050?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&autoplay=0&loop=1&background=0"
+                      className="absolute inset-0 h-full w-full"
+                      frameBorder="0"
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                      allowFullScreen
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      title="AceHost Whistler property management"
+                      loading="lazy"
+                    />
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Process Steps - Timeline style with large numbers */}
-      <section className="py-28 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-20 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Process</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our simple process to get your property listed and earning income, whether you already own your home or are still searching for the perfect investment property in Whistler.
-            </p>
-          </div>
-
-          <div className="space-y-16">
-            {steps.map((step) => (
-              <div
-                key={step.number}
-                className="flex flex-col md:flex-row items-start md:items-center"
-              >
-                <div className="md:w-1/4 flex flex-col items-center mb-8 md:mb-0">
-                  <div className="w-20 h-20 rounded-full bg-black text-white flex items-center justify-center text-3xl font-bold mb-4">
+        {/* 6. How it works */}
+        <section id="how-it-works" className="py-20 sm:py-24 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-14 text-center max-w-3xl mx-auto">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 mb-4">
+                Getting Started Is Simple
+              </h2>
+              <p className="text-lg text-gray-600">
+                Whether you already own a Whistler home or are evaluating an
+                investment property, AceHost makes the process straightforward.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {HOW_IT_WORKS_STEPS.map((step) => (
+                <div
+                  key={step.number}
+                  className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100"
+                >
+                  <p className="text-sm font-semibold text-gray-400 mb-2">
                     {step.number}
-                  </div>
-                  <step.icon size={28} className="text-gray-400" />
-                </div>
-                <div className="md:w-3/4 md:pl-8">
-                  <h3 className="text-2xl font-bold mb-4">{step.title}</h3>
-                  <p className="text-gray-600 text-lg leading-relaxed">
+                  </p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
                     {step.description}
                   </p>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* The AceHost Difference - Two column grid with clean cards */}
-      <section className="py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-20 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              The AceHost Difference
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover why property owners choose AceHost for their luxury
-              rental management needs.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {reasonsSections.slice(0, 4).map((section, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300"
+              ))}
+            </div>
+            <div className="mt-12 text-center">
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center rounded-lg bg-black px-8 py-4 text-base font-semibold text-white transition-colors hover:bg-gray-800"
               >
-                <h3 className="text-2xl font-bold mb-4">{section.title}</h3>
-                <p className="text-gray-600 text-lg leading-relaxed mb-4">
-                  {section.description}
-                </p>
-
-                {section.bulletPoints && (
-                  <ul className="space-y-3 mt-6">
-                    {section.bulletPoints.map((point, i) => (
-                      <li key={i} className="flex items-start">
-                        <Check className="h-5 w-5 text-green-500 mt-1 mr-3 flex-shrink-0" />
-                        <span className="text-gray-700">{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            ))}
+                Get My Revenue Estimate
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
+            </div>
           </div>
+        </section>
 
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-10">
-            {reasonsSections.slice(4).map((section, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300"
-              >
-                <h3 className="text-2xl font-bold mb-4">{section.title}</h3>
-                <p className="text-gray-600 text-lg leading-relaxed whitespace-pre-line">
-                  {section.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section - Clean accordion style */}
-      <section className="py-28 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-20 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Have questions? We've got answers.
-            </p>
-          </div>
-
-          <div className="space-y-6">
-            {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
-              >
-                <button
-                  className="w-full px-8 py-6 text-left font-medium text-xl flex justify-between items-center"
-                  onClick={() => toggleAccordion(index)}
+        {/* 7. Revenue / value */}
+        <section className="py-20 sm:py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-14 text-center max-w-3xl mx-auto">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 mb-4">
+                Maximizing the Value of Your Whistler Property
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {REVENUE_VALUE_COLUMNS.map((column) => (
+                <div
+                  key={column.title}
+                  className="rounded-2xl border border-gray-100 bg-gray-50 p-8"
                 >
-                  <span>{faq.question}</span>
-                  <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
-                    {activeAccordion === index ? (
-                      <ChevronUp className="h-5 w-5 text-gray-500" />
-                    ) : (
-                      <ChevronDown className="h-5 w-5 text-gray-500" />
-                    )}
-                  </div>
-                </button>
-                {activeAccordion === index && (
-                  <div className="px-8 py-6 border-t border-gray-100">
-                    <p className="text-gray-600 text-lg leading-relaxed">
-                      {faq.answer}
-                    </p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form Section - Modern, clean design */}
-      <section id="contact" className="py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-20 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to List Your Property?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Contact us today to start maximizing your property's rental
-              potential.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
-            <div className="lg:col-span-2">
-              <div className="sticky top-8">
-                <h3 className="text-3xl font-bold mb-10">
-                  Contact Information
-                </h3>
-                <div className="space-y-8">
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center text-white mr-6">
-                      <Mail className="h-6 w-6" />
-                    </div>
-                    <a
-                      href="mailto:ben@acehost.ca"
-                      className="text-xl hover:text-black transition-colors"
-                    >
-                      ben@acehost.ca
-                    </a>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center text-white mr-6">
-                      <Phone className="h-6 w-6" />
-                    </div>
-                    <a
-                      href="tel:+16047648919"
-                      className="text-xl hover:text-black transition-colors"
-                    >
-                      +1 604 764 8919
-                    </a>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center text-white mr-6">
-                      <MessageSquare className="h-6 w-6" />
-                    </div>
-                    <span className="text-xl">AceHost Whistler</span>
-                  </div>
-                </div>
-
-                <div className="mt-16">
-                  <h3 className="text-3xl font-bold mb-10">
-                    What We Need From You
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    {column.title}
                   </h3>
-                  <ul className="space-y-5">
-                    <li className="flex items-start">
-                      <Check className="h-6 w-6 text-green-500 mt-1 mr-4 flex-shrink-0" />
-                      <span className="text-lg">
-                        Photos or videos of your property
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-6 w-6 text-green-500 mt-1 mr-4 flex-shrink-0" />
-                      <span className="text-lg">
-                        Bedroom and bathroom layout
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-6 w-6 text-green-500 mt-1 mr-4 flex-shrink-0" />
-                      <span className="text-lg">
-                        Your rental preferences (year-round, seasonal, etc.)
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-6 w-6 text-green-500 mt-1 mr-4 flex-shrink-0" />
-                      <span className="text-lg">
-                        Property address to verify zoning for nightly rentals
-                      </span>
-                    </li>
-                  </ul>
+                  <p className="text-gray-600 leading-relaxed">
+                    {column.description}
+                  </p>
                 </div>
-              </div>
-            </div>
-
-            <div className="lg:col-span-3 bg-gray-50 p-12 rounded-2xl shadow-sm">
-              <h3 className="text-3xl font-bold mb-10">Send Us a Message</h3>
-              <form className="space-y-8" onSubmit={handleSubmit}>
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-lg font-medium text-gray-700 mb-2"
-                  >
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-6 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent text-lg"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-lg font-medium text-gray-700 mb-2"
-                  >
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-6 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent text-lg"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-lg font-medium text-gray-700 mb-2"
-                  >
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-6 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent text-lg"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="propertyAddress"
-                    className="block text-lg font-medium text-gray-700 mb-2"
-                  >
-                    Property Address
-                  </label>
-                  <input
-                    type="text"
-                    id="propertyAddress"
-                    name="propertyAddress"
-                    value={formData.propertyAddress}
-                    onChange={handleChange}
-                    className="w-full px-6 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent text-lg"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-lg font-medium text-gray-700 mb-2"
-                  >
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={6}
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-6 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent text-lg"
-                    placeholder="Tell us about your property..."
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-black text-white px-8 py-5 rounded-xl text-lg font-medium hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
-                >
-                  {isSubmitting ? (
-                    "Sending..."
-                  ) : (
-                    <>
-                  <span>Submit</span>
-                  <ArrowRight className="ml-3 h-5 w-5" />
-                    </>
-                  )}
-                </button>
-
-                {submitSuccess && (
-                  <div className="p-4 bg-green-50 text-green-700 rounded-md mt-4">
-                    <p className="font-medium">{statusMessage}</p>
-                  </div>
-                )}
-
-                {submitError && (
-                  <div className="p-4 bg-red-50 text-red-700 rounded-md mt-4">
-                    <p className="font-medium">{statusMessage || "There was an error sending your message."}</p>
-                    <p>Please try again later or contact us directly at ben@acehost.ca or +1 604 764 8919.</p>
-                  </div>
-                )}
-              </form>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <Footer />
+        {/* 8. Managed property showcase */}
+        <section className="py-20 sm:py-24 bg-gray-50">
+          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-14 text-center max-w-3xl mx-auto">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 mb-4">
+                Properties Managed by AceHost
+              </h2>
+              <p className="text-lg text-gray-600">
+                A selection of premium Whistler homes and condos already entrusted
+                to our local property management team.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {showcaseProperties.map((property) => (
+                <PropertyShowcaseCard key={property.id} property={property} />
+              ))}
+            </div>
+
+            <div className="mt-16 mb-10 text-center max-w-3xl mx-auto">
+              <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 mb-3">
+                Condos &amp; Apartments
+              </h3>
+              <p className="text-lg text-gray-600">
+                From Creekside and Blueberry to Whistler Village penthouses —
+                AceHost manages a wide range of condo rentals across Whistler.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {showcaseCondos.map((property) => (
+                <PropertyShowcaseCard key={property.id} property={property} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 9. Marketing reach */}
+        <section className="py-20 sm:py-24 bg-white border-t border-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-12 text-center max-w-3xl mx-auto">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 mb-4">
+                More Than Just Airbnb
+              </h2>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                We don&apos;t rely on a single booking platform. AceHost combines
+                the world&apos;s leading vacation-rental marketplaces with our own
+                direct-booking website, repeat guests, travel-agent relationships,
+                digital marketing, and luxury concierge network.
+              </p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-3 mb-10">
+              {BOOKING_PLATFORMS.map((platform) => (
+                <span
+                  key={platform}
+                  className="px-5 py-2.5 rounded-full border border-gray-200 bg-gray-50 text-sm font-semibold text-gray-800"
+                >
+                  {platform}
+                </span>
+              ))}
+            </div>
+            <div className="flex flex-wrap justify-center gap-3">
+              {MARKETING_CHANNELS.map((channel) => (
+                <span
+                  key={channel}
+                  className="px-4 py-2 rounded-md bg-gray-900 text-white text-sm font-medium"
+                >
+                  {channel}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 10. Testimonials */}
+        <section className="py-20 sm:py-24 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-12 text-center">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 mb-4">
+                Trusted by Whistler Homeowners
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {OWNER_TESTIMONIALS.map((item) => (
+                <blockquote
+                  key={item.name}
+                  className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 md:col-span-1"
+                >
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    &ldquo;{item.text}&rdquo;
+                  </p>
+                  <footer>
+                    <p className="font-semibold text-gray-900">{item.name}</p>
+                    <p className="text-sm text-gray-500">{item.role}</p>
+                  </footer>
+                </blockquote>
+              ))}
+              {GUEST_SOCIAL_PROOF.map((item) => (
+                <blockquote
+                  key={item.name}
+                  className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100"
+                >
+                  <div className="flex mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className="h-4 w-4 text-yellow-400 fill-current"
+                      />
+                    ))}
+                  </div>
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    &ldquo;{item.text}&rdquo;
+                  </p>
+                  <footer>
+                    <p className="font-semibold text-gray-900">{item.name}</p>
+                    <p className="text-sm text-gray-500">{item.role}</p>
+                  </footer>
+                </blockquote>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 11. Investment consultation */}
+        <section className="py-20 sm:py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg order-2 lg:order-1">
+                <Image
+                  src="/photos/homepage/ViewOurCollection.jpg"
+                  alt="Whistler luxury vacation rental investment consultation with AceHost"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="order-1 lg:order-2">
+                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 mb-6">
+                  Looking for the Right Whistler Investment?
+                </h2>
+                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                  You don&apos;t need to own a property yet. AceHost regularly
+                  helps buyers evaluate potential Whistler investments before
+                  they purchase.
+                </p>
+                <ul className="space-y-3 mb-8">
+                  {[
+                    "Rental revenue estimates",
+                    "Nightly rental zoning considerations",
+                    "Neighbourhood comparisons",
+                    "Amenity recommendations",
+                    "Renovation and furnishing opportunities",
+                    "Introductions to trusted local real-estate professionals",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start text-gray-700">
+                      <Check className="h-5 w-5 text-gray-900 mt-0.5 mr-3 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-sm text-gray-500 mb-6">
+                  AceHost does not provide legal, tax, or regulated investment
+                  advice.
+                </p>
+                <a
+                  href="#contact"
+                  className="inline-flex items-center justify-center rounded-lg bg-black px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-gray-800"
+                >
+                  Send Us a Property You&apos;re Considering
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Investment blog link — preserved internal link */}
+        <section className="py-10 bg-gray-50 border-y border-gray-100">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p className="text-gray-700 text-lg leading-relaxed mb-5">
+              For a detailed breakdown on investing in Whistler or renting your
+              own home, explore our guide to vacation rental ownership in
+              Whistler.
+            </p>
+            <Link
+              href="/post/is-owning-a-vacation-rental-in-whistler-worth-it-2026"
+              className="inline-flex items-center justify-center rounded-lg border border-gray-900 px-6 py-3 text-sm font-semibold text-gray-900 transition-colors hover:bg-gray-900 hover:text-white"
+            >
+              Whistler property investment guide
+            </Link>
+          </div>
+        </section>
+
+        {/* 12. FAQ — SSR-friendly details/summary */}
+        <section className="py-20 sm:py-24 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-12 text-center">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 mb-4">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-lg text-gray-600">
+                Common questions about Whistler property management, Airbnb
+                management, and working with AceHost.
+              </p>
+            </div>
+            <div className="space-y-4">
+              {LIST_PROPERTY_FAQS.map((faq) => (
+                <details
+                  key={faq.question}
+                  className="group bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden"
+                >
+                  <summary className="cursor-pointer list-none px-6 py-5 font-semibold text-gray-900 flex justify-between items-center gap-4 [&::-webkit-details-marker]:hidden">
+                    <span>{faq.question}</span>
+                    <span className="text-gray-400 group-open:rotate-180 transition-transform">
+                      ▾
+                    </span>
+                  </summary>
+                  <div className="px-6 pb-6 text-gray-600 leading-relaxed">
+                    <p>{faq.answer}</p>
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Supplemental SEO content — always in DOM */}
+        <section className="py-16 bg-gray-50 border-t border-gray-100">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="sr-only">
+              Whistler vacation rental management services
+            </h2>
+            <div className="space-y-10">
+              {SEO_SUPPLEMENT_SECTIONS.map((section) => (
+                <div key={section.title}>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {section.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {section.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 13. Final conversion / form */}
+        <section id="contact" className="py-20 sm:py-28 bg-stone-950 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-14 text-center max-w-3xl mx-auto">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+                Curious What Your Whistler Property Could Earn?
+              </h2>
+              <p className="text-lg text-stone-300 leading-relaxed">
+                Send us your property address or listing link and we&apos;ll
+                provide an initial assessment of its vacation-rental potential.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
+              <div className="lg:col-span-2 space-y-8">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                    <Mail className="h-5 w-5" />
+                  </div>
+                  <a
+                    href="mailto:ben@acehost.ca"
+                    className="text-lg hover:text-stone-300 transition-colors"
+                  >
+                    ben@acehost.ca
+                  </a>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                    <Phone className="h-5 w-5" />
+                  </div>
+                  <a
+                    href="tel:+16047648919"
+                    className="text-lg hover:text-stone-300 transition-colors"
+                  >
+                    +1 604 764 8919
+                  </a>
+                </div>
+              </div>
+
+              <div className="lg:col-span-3 bg-white text-gray-900 rounded-2xl p-8 sm:p-10 shadow-xl">
+                <form className="space-y-6" onSubmit={handleSubmit}>
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium mb-2">
+                      Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-black"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium mb-2">
+                      Email *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-black"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium mb-2">
+                      Phone *
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-black"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="propertyAddress"
+                      className="block text-sm font-medium mb-2"
+                    >
+                      Property Address
+                    </label>
+                    <input
+                      type="text"
+                      id="propertyAddress"
+                      name="propertyAddress"
+                      value={formData.propertyAddress}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-black"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="propertyListingUrl"
+                      className="block text-sm font-medium mb-2"
+                    >
+                      Property or Listing URL
+                    </label>
+                    <input
+                      type="url"
+                      id="propertyListingUrl"
+                      name="propertyListingUrl"
+                      value={formData.propertyListingUrl}
+                      onChange={handleChange}
+                      placeholder="https://"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-black"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium mb-2">
+                      Message *
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={5}
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
+                      placeholder="Tell us about your property or the home you're considering..."
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-black"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-black text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-800 transition-colors flex items-center justify-center disabled:opacity-60"
+                  >
+                    {isSubmitting ? (
+                      "Sending..."
+                    ) : (
+                      <>
+                        Request My Revenue Estimate
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </>
+                    )}
+                  </button>
+                  {submitSuccess && (
+                    <div className="p-4 bg-green-50 text-green-800 rounded-xl">
+                      <p className="font-medium">{statusMessage}</p>
+                    </div>
+                  )}
+                  {submitError && (
+                    <div className="p-4 bg-red-50 text-red-800 rounded-xl">
+                      <p className="font-medium">
+                        {statusMessage ||
+                          "There was an error sending your message."}
+                      </p>
+                    </div>
+                  )}
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <Footer />
+      </div>
     </>
   );
 };
