@@ -300,7 +300,11 @@ const ListProperty = () => {
                 <li key={stat.label} className="text-center">
                   <p
                     className={`text-2xl sm:text-3xl font-bold tracking-tight ${
-                      stat.airbnbAccent ? "text-[#FF5A5F]" : "text-gray-900"
+                      stat.airbnbAccent
+                        ? "text-[#FF5A5F]"
+                        : stat.vrboAccent
+                          ? "text-[#245ABC]"
+                          : "text-gray-900"
                     }`}
                   >
                     {stat.value}
