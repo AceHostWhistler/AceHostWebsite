@@ -1,4 +1,5 @@
 import { BLUFFS_AIRBNB_LINK } from "../listings/bluffsAirbnbLink";
+import { BLUFFS_UNIT_8_AIRBNB_LINK } from "../listings/bluffsUnit8AirbnbLink";
 import { SCANDINAVE_COVER, SCANDINAVE_PHOTOS } from "../scandinavePhotos";
 
 export interface PropertyFeature {
@@ -49,6 +50,7 @@ export const CONDO_IDS = new Set([
   "luxury-3-bed-stunning-views",
   "valhalla-unit-33-village",
   "bluffs-unit-4",
+  "bluffs-unit-8",
   "cozy-lakefront-whistler-condo",
   "whistler-village-penthouse",
   "whistler-village-penthouse-3-bdr",
@@ -713,6 +715,45 @@ export const propertyCategories: PropertyCategory[] = [
             airbnbLink: "https://www.airbnb.ca/rooms/1313847204355627326?guests=1&adults=1&s=67&unique_share_id=507dffd6-1f84-49a3-99eb-d10f493a65a6",
             isPetFriendly: false,
             isSkiInSkiOut: false,
+          },
+          {
+            id: "bluffs-unit-8",
+            name: "Bluffs #8 - Luxury 3 Bed - Ski in Ski out - Views!",
+            images: [
+              "/photos/properties/Bluffs Unit 8/Bluffs 8 edit 4.png",
+              "/photos/properties/Bluffs Unit 8/01 - 20260805 MM4P 010149.jpg",
+              "/photos/properties/Bluffs Unit 8/Hot tub snow bluffs.png",
+            ],
+            guests: 8,
+            bedrooms: 3,
+            beds: 7,
+            bathrooms: 3,
+            location: "Taluswood, Whistler",
+            description:
+              "Perched in Taluswood's Bluffs, this 3-bedroom retreat puts you right on the Dave Murray Downhill for true ski-in ski-out days and beautiful mountain-view evenings.",
+            features: [
+              "True Ski-in/Ski-out",
+              "Hot Tub",
+              "Gas Fireplace",
+              "Chef-Ready Kitchen",
+              "Underground Parking (2 stalls)",
+              "Ski & Bike Storage",
+              "Mountain Views",
+              "Portable AC (May–Nov)",
+            ],
+            highlights: [
+              "Dave Murray Downhill Access",
+              "King Suite on Top Floor",
+              "Four Twin Bunk Beds",
+              "Private Complex Hot Tub",
+            ],
+            priceRange: "$450-$1200+ per night Summer",
+            winterPrice: "$750-$1,600+ Nightly | Winter",
+            holidayPrice: "$2300-$3100+ Nightly | Christmas & NY",
+            link: "/listings/bluffs-unit-8-taluswood",
+            airbnbLink: BLUFFS_UNIT_8_AIRBNB_LINK,
+            isPetFriendly: false,
+            isSkiInSkiOut: true,
           },
           {
             id: "golf-course-views",

@@ -17,6 +17,16 @@ export const listingAmenities: Record<string, string[]> = {
     "Chef-ready kitchen",
     "BBQ & outdoor dining",
   ],
+  "bluffs-unit-8-taluswood": [
+    "Ski-in / ski-out on Dave Murray",
+    "Taluswood mountain views",
+    "Private complex hot tub",
+    "King suite on top floor",
+    "Four Twin bunk beds",
+    "Portable AC (May–Nov)",
+    "Chef-ready kitchen",
+    "Two underground parking stalls",
+  ],
   "blackcomb-greens": [
     "Whistler Blackcomb access",
     "Townhome layout",

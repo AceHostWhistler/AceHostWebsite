@@ -2,6 +2,8 @@ import BearCreek5BedDetails from "./details/bear-creek-5-bed";
 import bear_creek_5_bedMeta from "./meta/bear-creek-5-bed";
 import BluffsUnit4TaluswoodDetails from "./details/bluffs-unit-4-taluswood";
 import bluffs_unit_4_taluswoodMeta from "./meta/bluffs-unit-4-taluswood";
+import BluffsUnit8TaluswoodDetails from "./details/bluffs-unit-8-taluswood";
+import bluffs_unit_8_taluswoodMeta from "./meta/bluffs-unit-8-taluswood";
 import BlackcombGreensDetails from "./details/blackcomb-greens";
 import blackcomb_greensMeta from "./meta/blackcomb-greens";
 import CedarhofKadenwoodDetails from "./details/cedarhof-kadenwood";
@@ -73,6 +75,7 @@ import { getListingAmenities } from "./amenities";
 export const listingSlugs = [
   "bear-creek-5-bed",
   "bluffs-unit-4-taluswood",
+  "bluffs-unit-8-taluswood",
   "blackcomb-greens",
   "cedarhof-kadenwood",
   "chalet-la-forja-kadenwood",
@@ -112,6 +115,7 @@ export type ListingSlug = (typeof listingSlugs)[number];
 export const listings: Record<string, ListingEntry> = {
   "bear-creek-5-bed": { ...bear_creek_5_bedMeta, Details: BearCreek5BedDetails },
   "bluffs-unit-4-taluswood": { ...bluffs_unit_4_taluswoodMeta, Details: BluffsUnit4TaluswoodDetails },
+  "bluffs-unit-8-taluswood": { ...bluffs_unit_8_taluswoodMeta, Details: BluffsUnit8TaluswoodDetails },
   "blackcomb-greens": { ...blackcomb_greensMeta, Details: BlackcombGreensDetails },
   "cedarhof-kadenwood": { ...cedarhof_kadenwoodMeta, Details: CedarhofKadenwoodDetails },
   "chalet-la-forja-kadenwood": { ...chalet_la_forja_kadenwoodMeta, Details: ChaletLaForjaKadenwoodDetails },

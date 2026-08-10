@@ -29,6 +29,7 @@ const PROPERTY_ID_TO_LISTING_SLUG: Record<string, string> = {
   "rare-3-bedroom-whistler-village": "rare-3-bedroom-whistler-village-walk-to-hill",
   "ravens-nest": "ravens-nest-ski-in-ski-out-views",
   "bluffs-unit-4": "bluffs-unit-4-taluswood",
+  "bluffs-unit-8": "bluffs-unit-8-taluswood",
   "cozy-lakefront-whistler-condo": "cozy-lakefront-whistler-condo-mountain-view",
   "squamish-retreat": "squamish-retreat-with-the-best-view",
   "whistler-village-penthouse-3-bdr": "whistler-village-penthouse-3-bdr-walk-to-ski",
