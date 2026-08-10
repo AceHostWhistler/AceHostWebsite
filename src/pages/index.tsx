@@ -368,7 +368,7 @@ const Home = () => {
       id: "bluffs-unit-8",
       name: "Bluffs #8 - Luxury 3 Bed - Ski in Ski out - Views!",
       image: "/photos/properties/Bluffs Unit 8/Bluffs 8 edit 4.png",
-      guests: 8,
+      guests: 10,
       bedrooms: 3,
       beds: 7,
       bathrooms: 3,

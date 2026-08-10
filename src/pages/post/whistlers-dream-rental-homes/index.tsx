@@ -792,7 +792,7 @@ export default function BlogPost() {
                 Perched in Taluswood&apos;s Bluffs, this three-bedroom retreat puts you
                 right on the Dave Murray Downhill for true ski-in ski-out days and
                 beautiful mountain-view evenings. With a King suite, Queen bedroom,
-                four Twin bunk beds, and a Queen sofa bed, the home sleeps up to 8
+                four Twin bunk beds, and a Queen sofa bed, the home sleeps up to 10
                 guests and works especially well for families and groups.
               </p>
 

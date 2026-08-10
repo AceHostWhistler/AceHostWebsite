@@ -724,13 +724,13 @@ export const propertyCategories: PropertyCategory[] = [
               "/photos/properties/Bluffs Unit 8/01 - 20260805 MM4P 010149.jpg",
               "/photos/properties/Bluffs Unit 8/Hot tub snow bluffs.png",
             ],
-            guests: 8,
+            guests: 10,
             bedrooms: 3,
             beds: 7,
             bathrooms: 3,
             location: "Taluswood, Whistler",
             description:
-              "Perched in Taluswood's Bluffs, this 3-bedroom retreat puts you right on the Dave Murray Downhill for true ski-in ski-out days and beautiful mountain-view evenings.",
+              "Perched in Taluswood's Bluffs, this 3-bedroom retreat puts you right on the Dave Murray Downhill for true ski-in ski-out days and beautiful mountain-view evenings. Sleeps up to 10 guests.",
             features: [
               "True Ski-in/Ski-out",
               "Hot Tub",

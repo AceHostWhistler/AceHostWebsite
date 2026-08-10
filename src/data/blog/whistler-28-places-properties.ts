@@ -285,7 +285,7 @@ export const townhomeProperties: Whistler28Property[] = [
     number: 29,
     name: "Bluffs #8 - Luxury 3 Bed - Ski in Ski out - Views!",
     description:
-      "A three-bedroom Taluswood retreat on the Dave Murray Downhill with a King suite, bunk room, hot tub, and elevated views over Whistler.",
+      "A three-bedroom Taluswood retreat on the Dave Murray Downhill with a King suite, bunk room, hot tub, and elevated views over Whistler. Sleeps up to 10 guests.",
     image: "/photos/properties/Bluffs Unit 8/Bluffs 8 edit 4.png",
     listingHref: "/listings/bluffs-unit-8-taluswood",
     bookUrl:

@@ -41,11 +41,11 @@ const listing: ListingData = {
     title:
       "Bluffs #8 - Luxury 3 Bed - Ski in Ski out - Views! | AceHost",
     description:
-      "Perched in Taluswood's Bluffs, this 3-bedroom ski-in ski-out retreat offers a King suite, bunk room, hot tub, mountain views, and space for up to 8 guests in Whistler.",
+      "Perched in Taluswood's Bluffs, this 3-bedroom ski-in ski-out retreat offers a King suite, bunk room, hot tub, mountain views, and space for up to 10 guests in Whistler.",
   },
   header: {
     title: "Bluffs #8 - Luxury 3 Bed - Ski in Ski out - Views!",
-    guests: 8,
+    guests: 10,
     bedrooms: 3,
     beds: 7,
     bathrooms: 3,
@@ -62,7 +62,7 @@ const listing: ListingData = {
     name: "Bluffs #8 - Luxury 3 Bed - Ski in Ski out - Views!",
     image: "/photos/properties/Bluffs Unit 8/Bluffs 8 edit 4.png",
     description:
-      "Perched in Taluswood's Bluffs, this 3-bedroom ski-in ski-out retreat offers mountain views, a hot tub, and space for up to 8 guests in Whistler.",
+      "Perched in Taluswood's Bluffs, this 3-bedroom ski-in ski-out retreat offers mountain views, a hot tub, and space for up to 10 guests in Whistler.",
     sku: "bluffs-unit-8-taluswood",
     brand: {
       "@type": "Brand",
