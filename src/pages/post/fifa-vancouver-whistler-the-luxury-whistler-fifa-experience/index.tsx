@@ -208,6 +208,19 @@ const condoTownhomeOptions: FeaturedProperty[] = [
       "https://www.airbnb.ca/rooms/1313847204355627326?guests=1&adults=1&s=67&unique_share_id=507dffd6-1f84-49a3-99eb-d10f493a65a6",
   },
   {
+    name: "Bluffs #8 - Luxury 3 Bed - Ski in Ski out - Views!",
+    description:
+      "A three-bedroom Taluswood ski-in/ski-out retreat with a King suite, bunk room, hot tub, and elevated views — ideal for families and groups who want Dave Murray access in Creekside.",
+    photos: [
+      "/photos/properties/Bluffs Unit 8/Bluffs 8 edit 4.png",
+      "/photos/properties/Bluffs Unit 8/01 - 20260805 MM4P 010149.jpg",
+      "/photos/properties/Bluffs Unit 8/Bluffs 8 Master.png",
+      "/photos/properties/Bluffs Unit 8/Hot tub snow bluffs.png",
+    ],
+    bookUrl:
+      "https://www.airbnb.ca/rooms/1747927495845801389?guests=1&adults=1&s=67&unique_share_id=99456c1e-0b4a-4b30-933f-0c8270cc0adb",
+  },
+  {
     name: "Whistler Village Views | Luxury 2.5 Bedroom",
     description:
       "A polished and comfortable option for guests wanting village convenience with a more upscale feel.",

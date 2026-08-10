@@ -32,7 +32,7 @@ const FAQ_ITEMS = [
   {
     question: "How many Whistler properties does AceHost currently feature?",
     answer:
-      "At the time of publishing, this guide includes 28 individual AceHost properties located in Whistler. The collection can change as new homes are added and seasonal or private options become available.",
+      "At the time of publishing, this guide includes 29 individual AceHost properties located in Whistler. The collection can change as new homes are added and seasonal or private options become available.",
   },
   {
     question:

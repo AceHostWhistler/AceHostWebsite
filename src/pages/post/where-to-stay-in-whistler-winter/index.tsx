@@ -532,6 +532,10 @@ export default function BlogPost() {
                 src="/photos/properties/Bluffs Unit 4/IMG_001112.JPG"
                 alt="Luxury Creekside ski-access home in Whistler Taluswood"
               />
+              <SectionImage
+                src="/photos/properties/Bluffs Unit 8/Bluffs 8 edit 4.png"
+                alt="Bluffs #8 luxury 3-bed ski-in ski-out condo in Taluswood Creekside"
+              />
               <h3>Creekside Also Has Ski Lessons</h3>
               <p>
                 You <strong>do not necessarily need to travel into Whistler Village

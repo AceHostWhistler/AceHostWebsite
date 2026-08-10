@@ -74,6 +74,7 @@ export const creeksidePropertyRefs: WinterNeighbourhoodPropertyRef[] = [
     image: "/high-quality/scandinave-fixed/scandinave-26.jpg",
   },
   { slug: "bluffs-unit-4-taluswood" },
+  { slug: "bluffs-unit-8-taluswood" },
   {
     slug: "snow-pine",
     footnote: "Extended-stay property. Contact AceHost for availability.",

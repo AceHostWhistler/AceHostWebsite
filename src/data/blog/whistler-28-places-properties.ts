@@ -282,6 +282,16 @@ export const townhomeProperties: Whistler28Property[] = [
       "https://www.airbnb.com/rooms/1693549013411163327?guests=1&adults=1&s=67&unique_share_id=759d2f0b-5f96-4039-b45f-18a842fc59f7",
   },
   {
+    number: 29,
+    name: "Bluffs #8 - Luxury 3 Bed - Ski in Ski out - Views!",
+    description:
+      "A three-bedroom Taluswood retreat on the Dave Murray Downhill with a King suite, bunk room, hot tub, and elevated views over Whistler.",
+    image: "/photos/properties/Bluffs Unit 8/Bluffs 8 edit 4.png",
+    listingHref: "/listings/bluffs-unit-8-taluswood",
+    bookUrl:
+      "https://www.airbnb.ca/rooms/1747927495845801389?guests=1&adults=1&s=67&unique_share_id=99456c1e-0b4a-4b30-933f-0c8270cc0adb",
+  },
+  {
     number: 27,
     name: "Whistler Village Penthouse | 3 BDR | Walk to Ski",
     description:

@@ -779,6 +779,57 @@ export default function BlogPost() {
                 </div>
               </div>
 
+              {/* Condo 5 */}
+              <h3 className="text-2xl font-bold text-gray-900 mt-12 mb-4">
+                5) Bluffs #8 - Luxury 3 Bed - Ski in Ski out - Views!
+              </h3>
+
+              <div className="bg-gray-50 p-5 rounded-lg mb-6">
+                <p className="font-semibold">Price per night: $450-$1,200+ summer | $750-$1,600+ winter</p>
+              </div>
+
+              <p>
+                Perched in Taluswood&apos;s Bluffs, this three-bedroom retreat puts you
+                right on the Dave Murray Downhill for true ski-in ski-out days and
+                beautiful mountain-view evenings. With a King suite, Queen bedroom,
+                four Twin bunk beds, and a Queen sofa bed, the home sleeps up to 8
+                guests and works especially well for families and groups.
+              </p>
+
+              <p className="mt-4">
+                The open-concept main level includes a chef-ready kitchen, gas
+                fireplace, Smart TV, portable AC from May through November, and a
+                covered balcony with BBQ. Complex hot tub access, two underground
+                parking stalls, outdoor parking for larger vehicles, and secure ski
+                and bike storage make every season comfortable.
+              </p>
+
+              <p className="text-blue-600 font-medium mt-2 mb-6">
+                <Link
+                  href="/listings/bluffs-unit-8-taluswood"
+                  className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  View Property Details
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </Link>
+              </p>
+
+              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
+                <Image
+                  src="/photos/properties/Bluffs Unit 8/Bluffs 8 edit 4.png"
+                  alt="Bluffs #8 luxury 3-bed ski-in ski-out condo in Taluswood"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-3">
+                  <p className="text-sm font-medium">
+                    Bluffs #8 - Luxury 3 Bed - Ski in Ski out - Views!
+                  </p>
+                </div>
+              </div>
+
               {/* VIP Concierge Services */}
               <h2 className="text-3xl font-bold text-gray-900 mt-16 mb-6">
                 AceHost Whistler Included VIP Concierge Services
