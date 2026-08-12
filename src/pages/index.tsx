@@ -3,6 +3,7 @@ import { ArrowRight, Instagram, Youtube } from "lucide-react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Testimonials from "@/components/Testimonials";
@@ -24,6 +25,19 @@ import {
   buildWebsiteSchema,
 } from "@/lib/seo/schema";
 import { SITE_URL } from "@/data/seo/business";
+
+const GuestySearchWidget = dynamic(
+  () => import("@/components/GuestySearchWidget"),
+  {
+    ssr: false,
+    loading: () => (
+      <div
+        className="mx-auto min-h-[280px] w-full max-w-md rounded-2xl bg-white p-6 shadow-[0_16px_40px_-20px_rgba(15,23,42,0.35)] ring-1 ring-stone-200/80 animate-pulse"
+        aria-hidden="true"
+      />
+    ),
+  }
+);
 
 const Home = () => {
   const { t } = useTranslation("common");
@@ -1334,6 +1348,10 @@ const Home = () => {
         {/* Testimonials Section */}
         <section className="py-24 bg-gray-50">
           <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-14 flex justify-center">
+              <GuestySearchWidget variant="featured" />
+            </div>
+
             <h2 className="text-4xl font-light mb-6 text-gray-900">
               What Our Guests Say
             </h2>

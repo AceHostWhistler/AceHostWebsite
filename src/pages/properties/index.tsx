@@ -26,6 +26,7 @@ import {
 import Footer from "@/components/Footer";
 import Head from "next/head";
 import { GetStaticProps } from "next";
+import dynamic from "next/dynamic";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Image from "next/image";
@@ -41,6 +42,19 @@ import { SITE_URL } from "@/data/seo/business";
 
 const propertiesStructuredData =
   buildPropertiesItemListSchema(propertyCategories);
+
+const GuestySearchWidget = dynamic(
+  () => import("@/components/GuestySearchWidget"),
+  {
+    ssr: false,
+    loading: () => (
+      <div
+        className="min-h-[280px] w-full rounded-xl bg-white p-4 shadow-sm ring-1 ring-stone-200/80 animate-pulse"
+        aria-hidden="true"
+      />
+    ),
+  }
+);
 
 export default function Properties() {
   const { t } = useTranslation("common");
@@ -421,30 +435,38 @@ export default function Properties() {
         </section>
 
         <section className="bg-[#f6f3ed] border-b border-stone-300/50 py-10 sm:py-12">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-lg md:text-xl lg:text-2xl font-semibold text-stone-900 tracking-tight leading-snug mb-6">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-lg md:text-xl lg:text-2xl font-semibold text-stone-900 tracking-tight leading-snug mb-6 max-w-3xl">
               Ski-in Ski-out Luxury Chalets in Whistler, 7+ Bedroom Villas, and Exclusive VIP Concierge Services
             </h2>
-            <div className="space-y-6 text-base sm:text-lg text-stone-800 leading-relaxed">
-              <p>
+
+            <div className="mb-8 grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-10 lg:items-start">
+              <p className="text-base leading-relaxed text-stone-800 sm:text-lg lg:col-span-7 lg:row-start-1">
                 AceHost Whistler invites you to experience our curated collection of luxury vacation rentals including everything from ski-in/ski-out chalets to large 7- and 8-bedroom homes, ideal for group getaways, family holidays, or unforgettable corporate retreats. Whether you&apos;re visiting during Christmas, New Year&apos;s, peak winter ski season, or summer, we have stunning homes suited for you.
               </p>
-              <p>
-                All bookings at our top villas include our VIP{" "}
-                <Link
-                  href="/concierge-service"
-                  className="font-medium text-stone-900 underline decoration-stone-400 underline-offset-4 transition-colors hover:decoration-stone-900"
-                >
-                  Concierge Services
-                </Link>
-                , where you can expect a fully personalized trip, think private chefs, heli-skiing, snowmobile fondue tours, airport transfers, and hard-to-get restaurant reservations, local contacts and expertise, all arranged seamlessly by our local experts.
-              </p>
-              <p>
-                Travellers can book directly on Airbnb links below, or speak with us directly to find exact pricing, more information, &amp; more chalet options.
-              </p>
-              <p className="text-sm text-stone-600 pt-2">
-                All prices are in Canadian Dollars (CAD) &amp; not in (USD).
-              </p>
+
+              <div className="lg:col-span-5 lg:col-start-8 lg:row-start-1 lg:row-span-3 lg:sticky lg:top-24">
+                <GuestySearchWidget />
+              </div>
+
+              <div className="space-y-6 text-base leading-relaxed text-stone-800 sm:text-lg lg:col-span-7 lg:row-start-2">
+                <p>
+                  All bookings at our top villas include our VIP{" "}
+                  <Link
+                    href="/concierge-service"
+                    className="font-medium text-stone-900 underline decoration-stone-400 underline-offset-4 transition-colors hover:decoration-stone-900"
+                  >
+                    Concierge Services
+                  </Link>
+                  , where you can expect a fully personalized trip, think private chefs, heli-skiing, snowmobile fondue tours, airport transfers, and hard-to-get restaurant reservations, local contacts and expertise, all arranged seamlessly by our local experts.
+                </p>
+                <p>
+                  Travellers can book directly on Airbnb links below, or speak with us directly to find exact pricing, more information, &amp; more chalet options.
+                </p>
+                <p className="pt-2 text-sm text-stone-600">
+                  All prices are in Canadian Dollars (CAD) &amp; not in (USD).
+                </p>
+              </div>
             </div>
           </div>
         </section>
