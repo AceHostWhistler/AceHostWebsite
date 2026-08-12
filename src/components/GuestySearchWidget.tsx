@@ -38,7 +38,7 @@ export default function GuestySearchWidget({
 
   return (
     <aside
-      className={`w-full ${isFeatured ? "mx-auto max-w-md text-center" : ""}`}
+      className={`w-full ${isFeatured ? "mx-auto text-center" : ""}`}
       aria-label="Book with us"
     >
       <h3
@@ -57,17 +57,11 @@ export default function GuestySearchWidget({
         </p>
       )}
 
-      <div
-        className={
-          isFeatured
-            ? "overflow-hidden rounded-2xl bg-white p-5 shadow-[0_16px_40px_-20px_rgba(15,23,42,0.35)] ring-1 ring-stone-200/80 sm:p-6"
-            : "rounded-xl bg-white p-4 shadow-sm ring-1 ring-stone-200/80"
-        }
-      >
+      <div className="overflow-visible rounded-xl bg-white p-4 shadow-sm ring-1 ring-stone-200/80">
         <div
           ref={containerRef}
           id={WIDGET_CONTAINER_ID}
-          className="min-h-[280px] w-full"
+          className="min-h-[280px] w-full overflow-visible"
         />
       </div>
 

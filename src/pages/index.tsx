@@ -32,7 +32,7 @@ const GuestySearchWidget = dynamic(
     ssr: false,
     loading: () => (
       <div
-        className="mx-auto min-h-[280px] w-full max-w-md rounded-2xl bg-white p-6 shadow-[0_16px_40px_-20px_rgba(15,23,42,0.35)] ring-1 ring-stone-200/80 animate-pulse"
+        className="min-h-[280px] w-full rounded-xl bg-white p-4 shadow-sm ring-1 ring-stone-200/80 animate-pulse"
         aria-hidden="true"
       />
     ),
