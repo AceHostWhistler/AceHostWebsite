@@ -1348,8 +1348,10 @@ const Home = () => {
         {/* Testimonials Section */}
         <section className="py-24 bg-gray-50">
           <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="mb-14 flex justify-center">
-              <GuestySearchWidget variant="featured" />
+            <div className="mb-14 flex justify-center px-4 sm:px-0">
+              <div className="w-full max-w-lg">
+                <GuestySearchWidget airbnbLinksPosition="above" />
+              </div>
             </div>
 
             <h2 className="text-4xl font-light mb-6 text-gray-900">
