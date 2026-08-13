@@ -26,10 +26,10 @@ import {
 import Footer from "@/components/Footer";
 import Head from "next/head";
 import { GetStaticProps } from "next";
-import dynamic from "next/dynamic";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Image from "next/image";
+import GuestySearchWidget from "@/components/GuestySearchWidget";
 import {
   propertyCategories,
   getPropertyType,
@@ -42,19 +42,6 @@ import { SITE_URL } from "@/data/seo/business";
 
 const propertiesStructuredData =
   buildPropertiesItemListSchema(propertyCategories);
-
-const GuestySearchWidget = dynamic(
-  () => import("@/components/GuestySearchWidget"),
-  {
-    ssr: false,
-    loading: () => (
-      <div
-        className="min-h-[280px] w-full rounded-xl bg-white p-4 shadow-sm ring-1 ring-stone-200/80 animate-pulse"
-        aria-hidden="true"
-      />
-    ),
-  }
-);
 
 export default function Properties() {
   const { t } = useTranslation("common");

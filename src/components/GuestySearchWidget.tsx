@@ -1,9 +1,6 @@
-import { useEffect, useRef } from "react";
+import { ArrowUpRight, CalendarDays } from "lucide-react";
 
-const WIDGET_CONTAINER_ID = "search-widget_IO312PWQ";
-
-/** Exact embed snippet from Guesty dashboard — do not modify. */
-const GUESTY_EMBED_SCRIPT = `!function(e,t,a,n,c,r){function s(t){e.console.log("[Guesty Embedded Widget]:",t)}var i,d,l,o,y,m,g,h,p,u;n&&(i=n,d=t.getElementsByTagName("head")[0],(l=t.createElement("link")).rel="stylesheet",l.type="text/css",l.href=i,l.media="all",d.appendChild(l)),o=function(){try{e[a].create(r).catch(function(e){s(e.message)})}catch(e){s(e.message)}},h=!1,y=c,m=function(){h||this.readyState&&"complete"!=this.readyState||(h=!0,o())},(g=t.createElement("script")).type="text/javascript",g.src=y,g.async="true",g.onload=g.onreadystatechange=m,p=g,(u=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,u)}(window,document,"GuestySearchBarWidget","https://s3.amazonaws.com/guesty-frontend-production/search-bar-production.css","https://s3.amazonaws.com/guesty-frontend-production/search-bar-production.js",{"siteUrl":"acehost.guestybookings.com","color":"#206CFF"});`;
+const GUESTY_BOOKING_URL = "https://acehost.guestybookings.com";
 
 type GuestySearchWidgetProps = {
   airbnbLinksPosition?: "above" | "below";
@@ -12,45 +9,41 @@ type GuestySearchWidgetProps = {
 export default function GuestySearchWidget({
   airbnbLinksPosition = "below",
 }: GuestySearchWidgetProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) {
-      return;
-    }
-
-    const timer = window.setTimeout(() => {
-      if (container.dataset.guestyEmbed === "true") {
-        return;
-      }
-
-      container.dataset.guestyEmbed = "true";
-
-      const script = document.createElement("script");
-      script.text = GUESTY_EMBED_SCRIPT;
-      container.appendChild(script);
-    }, 0);
-
-    return () => window.clearTimeout(timer);
-  }, []);
-
   return (
-    <aside className="w-full" aria-label="Book with us">
-      <h3 className="mb-3 text-lg font-semibold tracking-tight text-stone-900">
-        Book with us
-      </h3>
-
-      <div className="overflow-visible rounded-xl bg-white p-4 shadow-sm ring-1 ring-stone-200/80">
-        <div
-          ref={containerRef}
-          id={WIDGET_CONTAINER_ID}
-          className="min-h-[280px] w-full overflow-visible"
-        />
+    <aside
+      className="w-full rounded-xl bg-white p-5 shadow-sm ring-1 ring-stone-200/80 sm:p-6"
+      aria-label="Book with us"
+    >
+      <div className="mb-4 flex items-start gap-3">
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-stone-100 text-stone-800">
+          <CalendarDays className="h-5 w-5" aria-hidden="true" />
+        </div>
+        <div>
+          <h3 className="text-lg font-semibold tracking-tight text-stone-900">
+            Book with us
+          </h3>
+          <p className="mt-1 text-sm leading-relaxed text-stone-600">
+            Search dates, view live availability, and book direct on our secure
+            checkout.
+          </p>
+        </div>
       </div>
 
-      <p className="mt-3 text-sm leading-relaxed text-stone-600">
-        Select dates to view availability and book with us. Airbnb links{" "}
+      <a
+        href={GUESTY_BOOKING_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group flex w-full items-center justify-center gap-2 rounded-md bg-stone-900 px-5 py-3.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-stone-800 active:scale-[0.99]"
+      >
+        Check availability
+        <ArrowUpRight
+          className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+          aria-hidden="true"
+        />
+      </a>
+
+      <p className="mt-3 text-xs leading-relaxed text-stone-500">
+        Opens our booking site in a new tab. Airbnb links{" "}
         {airbnbLinksPosition} as an option as well.
       </p>
     </aside>

@@ -3,10 +3,10 @@ import { ArrowRight, Instagram, Youtube } from "lucide-react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import dynamic from "next/dynamic";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Testimonials from "@/components/Testimonials";
+import GuestySearchWidget from "@/components/GuestySearchWidget";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
@@ -25,19 +25,6 @@ import {
   buildWebsiteSchema,
 } from "@/lib/seo/schema";
 import { SITE_URL } from "@/data/seo/business";
-
-const GuestySearchWidget = dynamic(
-  () => import("@/components/GuestySearchWidget"),
-  {
-    ssr: false,
-    loading: () => (
-      <div
-        className="min-h-[280px] w-full rounded-xl bg-white p-4 shadow-sm ring-1 ring-stone-200/80 animate-pulse"
-        aria-hidden="true"
-      />
-    ),
-  }
-);
 
 const Home = () => {
   const { t } = useTranslation("common");
@@ -1239,7 +1226,7 @@ const Home = () => {
         </section>
 
         {/* Services Section */}
-        <section className="py-20 bg-white">
+        <section className="bg-white pt-20 pb-10">
           <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 sm:px-6 lg:px-8">
             {sections.map((section, index) => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-lg">
@@ -1277,8 +1264,14 @@ const Home = () => {
         </section>
 
         {/* Featured Properties */}
-        <section className="py-24 bg-gray-50">
+        <section className="bg-gray-50 pb-24 pt-10 sm:pt-12">
           <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-14 flex justify-center px-4 sm:px-0">
+              <div className="w-full max-w-lg">
+                <GuestySearchWidget airbnbLinksPosition="below" />
+              </div>
+            </div>
+
             <div className="mb-16 text-center">
               <h2 className="text-4xl font-light mb-6 text-gray-900">
                 View Our Full Collection Of Luxury Vacation Rental Properties
@@ -1348,12 +1341,6 @@ const Home = () => {
         {/* Testimonials Section */}
         <section className="py-24 bg-gray-50">
           <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="mb-14 flex justify-center px-4 sm:px-0">
-              <div className="w-full max-w-lg">
-                <GuestySearchWidget airbnbLinksPosition="above" />
-              </div>
-            </div>
-
             <h2 className="text-4xl font-light mb-6 text-gray-900">
               What Our Guests Say
             </h2>
