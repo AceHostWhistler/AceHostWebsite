@@ -7,6 +7,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Testimonials from "@/components/Testimonials";
 import GuestySearchWidget from "@/components/GuestySearchWidget";
+import PropertyCoverImage from "@/components/PropertyCoverImage";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
@@ -51,37 +52,24 @@ const Home = () => {
     
     // Special handling for Cotswolds property
     const isCotswolds = property.id === "cotswolds-uk-soho-farm-house";
-    
+    const coverSrc = isCotswolds
+      ? "/photos/properties/Cotswolds UK - Soho Farm House/224A8292.jpg"
+      : property.image;
+    const coverAlt = `${property.title || property.name} - Luxury ${property.location === "whistler" ? "Whistler" : property.location === "vancouver" ? "Vancouver" : "Worldwide"} vacation rental with ${property.bedrooms} bedroom${property.bedrooms !== 1 ? "s" : ""}, accommodating up to ${property.guests} guest${property.guests !== 1 ? "s" : ""}`;
+
     return (
       <div
         key={property.id}
         className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow flex flex-col h-full"
       >
         <div className="relative h-64">
-          <Link href={cardLink}>
-            {isCotswolds ? (
-              <div className="w-full h-full">
-                <img
-                  src="/photos/properties/Cotswolds UK - Soho Farm House/224A8292.jpg"
-                  alt={`${property.title || property.name} - Luxury ${property.location === 'whistler' ? 'Whistler' : property.location === 'vancouver' ? 'Vancouver' : 'Worldwide'} vacation rental with ${property.bedrooms} bedroom${property.bedrooms !== 1 ? 's' : ''}, accommodating up to ${property.guests} guest${property.guests !== 1 ? 's' : ''}`}
-                  className="object-cover cursor-pointer w-full h-full"
-                  style={{ aspectRatio: '3/2', objectFit: 'cover' }}
-                  onError={(e) => {
-                    // Fallback to other images if this one fails
-                    const target = e.target as HTMLImageElement;
-                    target.onerror = null;
-                    target.src = "/photos/properties/Cotswolds UK - Soho Farm House/224A8292.jpg";
-                  }}
-                />
-              </div>
-            ) : (
-              <img
-                src={property.image}
-                alt={`${property.title || property.name} - Luxury ${property.location === 'whistler' ? 'Whistler' : property.location === 'vancouver' ? 'Vancouver' : 'Worldwide'} vacation rental with ${property.bedrooms} bedroom${property.bedrooms !== 1 ? 's' : ''}, accommodating up to ${property.guests} guest${property.guests !== 1 ? 's' : ''}`}
-                className="w-full h-full object-cover cursor-pointer"
-                loading={index < 6 ? "eager" : "lazy"}
-              />
-            )}
+          <Link href={cardLink} className="block relative h-full w-full">
+            <PropertyCoverImage
+              src={coverSrc}
+              alt={coverAlt}
+              priority={index < 6}
+              className="cursor-pointer object-cover"
+            />
           </Link>
           {property.isPetFriendly && (
             <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 text-xs font-medium rounded-md z-10">
@@ -1126,22 +1114,7 @@ const Home = () => {
           }}
         />
 
-        {/* Optimize core web vitals */}
-        <link rel="preload" href="/logo.png" as="image" />
-        <link 
-          rel="preload" 
-          href="/photos/homepage/WhistlerVacationRental.jpg" 
-          as="image" 
-          media="(min-width: 768px)" 
-          fetchPriority="high" 
-        />
-        <link 
-          rel="preload" 
-          href="/photos/homepage/ViewOurCollection.jpg" 
-          as="image" 
-          media="(min-width: 768px)" 
-          fetchPriority="high"
-        />
+        {/* Logo is optimized via next/image in Navigation when possible */}
         <script src="https://player.vimeo.com/api/player.js" async></script>
       </Head>
 
@@ -1239,7 +1212,7 @@ const Home = () => {
                         fill
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 400px"
                         className="object-cover cursor-pointer"
-                        priority={index === 0}
+                        priority={index < 3}
                         quality={85}
                         loading={index === 0 ? "eager" : "lazy"}
                         placeholder="blur"

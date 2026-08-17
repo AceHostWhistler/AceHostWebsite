@@ -28,8 +28,8 @@ import Head from "next/head";
 import { GetStaticProps } from "next";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import Image from "next/image";
 import GuestySearchWidget from "@/components/GuestySearchWidget";
+import PropertyCoverImage from "@/components/PropertyCoverImage";
 import {
   propertyCategories,
   getPropertyType,
@@ -179,8 +179,14 @@ export default function Properties() {
     "Pet Friendly",
   ];
 
-  // PropertyCard with regular img tag - updated to match home page style
-  const PropertyCard = ({ property }: { property: PropertyFeature }) => {
+  // Property card with optimized cover images
+  const PropertyCard = ({
+    property,
+    imagePriority = false,
+  }: {
+    property: PropertyFeature;
+    imagePriority?: boolean;
+  }) => {
     const propertyUrl = getPropertyListingPath(property);
 
     const airbnbLink = getPropertyAirbnbLink(
@@ -203,18 +209,13 @@ export default function Properties() {
             </div>
           )}
           
-          <Link href={propertyUrl}>
-            <div className="relative w-full h-full">
-              <Image
-                src={property.images[0]}
-                alt={`${property.name} - Luxury ${property.location === 'whistler' ? 'Whistler' : property.location === 'vancouver' ? 'Vancouver' : 'Worldwide'} vacation rental with ${property.bedrooms} bedrooms, accommodating up to ${property.guests} guests`}
-                fill
-                className="w-full h-full object-cover"
-                loading="lazy"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                quality={80}
-              />
-            </div>
+          <Link href={propertyUrl} className="block relative h-full w-full">
+            <PropertyCoverImage
+              src={property.images[0]}
+              alt={`${property.name} - Luxury ${property.location === "whistler" ? "Whistler" : property.location === "vancouver" ? "Vancouver" : "Worldwide"} vacation rental with ${property.bedrooms} bedrooms, accommodating up to ${property.guests} guests`}
+              priority={imagePriority}
+              className="object-cover"
+            />
           </Link>
 
           {/* Book Now Button in bottom-right corner */}
@@ -377,41 +378,27 @@ export default function Properties() {
                   />
                   <div className="relative grid grid-cols-3 gap-3 sm:gap-4">
                     <div className="relative aspect-square w-full overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/15">
-                      <Image
+                      <PropertyCoverImage
                         src="/photos/properties/Falcon/Cover photo Falcon.png"
                         alt="Falcon luxury chalet exterior in Whistler"
-                        fill
-                        className="object-cover"
-                        quality={90}
-                        sizes="(max-width: 1024px) 30vw, 280px"
+                        priority
+                        variant="hero"
                       />
                     </div>
                     <div className="relative aspect-square w-full overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/15">
-                      <Image
+                      <PropertyCoverImage
                         src="/photos/properties/Panoramic Estate/20241127 MM4P 01 0225-Edit.jpg"
                         alt="Luxury Whistler chalet at Panoramic Estate"
-                        fill
-                        className="object-cover"
-                        quality={90}
                         priority
-                        placeholder="blur"
-                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAEhAI/w5RW4AAAAABJRU5ErkJggg=="
-                        sizes="(max-width: 1024px) 30vw, 280px"
-                        onError={(e) => {
-                          // @ts-ignore - Next Image doesn't officially support onError but it works
-                          e.currentTarget.src =
-                            "/photos/properties/Timber Haven John Harris/Timber Haven cover.png";
-                        }}
+                        variant="hero"
                       />
                     </div>
                     <div className="relative aspect-square w-full overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/15">
-                      <Image
+                      <PropertyCoverImage
                         src="/photos/properties/Two Cedars New/OSA_AncientCW1129.jpg"
                         alt="Two Cedars luxury chalet in Whistler"
-                        fill
-                        className="object-cover"
-                        quality={90}
-                        sizes="(max-width: 1024px) 30vw, 280px"
+                        priority
+                        variant="hero"
                       />
                     </div>
                   </div>
@@ -549,7 +536,10 @@ export default function Properties() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             {/* Property Listings */}
             <div className="w-full">
-              {displayProperties.map((category) => (
+              {(() => {
+                let propertyCoverIndex = 0;
+
+                return displayProperties.map((category) => (
                 <div key={category.id} className="mb-16 sm:mb-20">
                   <div className="mb-8 sm:mb-10">
                     <h2 className="text-2xl sm:text-3xl font-light mb-3 sm:mb-4 text-gray-900">
@@ -565,12 +555,22 @@ export default function Properties() {
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                    {category.properties.map((property) => (
-                      <PropertyCard key={property.id} property={property} />
-                    ))}
+                    {category.properties.map((property) => {
+                      const imagePriority = propertyCoverIndex < 9;
+                      propertyCoverIndex += 1;
+
+                      return (
+                        <PropertyCard
+                          key={property.id}
+                          property={property}
+                          imagePriority={imagePriority}
+                        />
+                      );
+                    })}
                   </div>
                 </div>
-              ))}
+              ));
+              })()}
             </div>
             
             {/* Pricing Information */}
