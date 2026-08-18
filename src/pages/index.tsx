@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import Testimonials from "@/components/Testimonials";
 import GuestySearchWidget from "@/components/GuestySearchWidget";
 import PropertyCoverImage from "@/components/PropertyCoverImage";
+import LazyVimeoPlayer from "@/components/LazyVimeoPlayer";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
@@ -1115,7 +1116,6 @@ const Home = () => {
         />
 
         {/* Logo is optimized via next/image in Navigation when possible */}
-        <script src="https://player.vimeo.com/api/player.js" async></script>
       </Head>
 
       <div className="min-h-screen bg-white text-gray-900 overflow-x-hidden max-w-full">
@@ -1179,18 +1179,13 @@ const Home = () => {
                     aria-hidden="true"
                   />
                   <div className="relative overflow-hidden rounded-2xl bg-black shadow-2xl ring-1 ring-white/15">
-                    <div className="relative aspect-video w-full bg-black">
-                      <iframe
-                        src="https://player.vimeo.com/video/1122267050?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&autoplay=0&loop=1&background=0"
-                        className="absolute inset-0 h-full w-full"
-                        frameBorder="0"
-                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                        allowFullScreen
-                        referrerPolicy="strict-origin-when-cross-origin"
-                        title="The AceHost Whistler Vacation Experience"
-                        loading="lazy"
-                      />
-                    </div>
+                    <LazyVimeoPlayer
+                      videoId="1122267050"
+                      title="The AceHost Whistler Vacation Experience"
+                      loadStrategy="immediate"
+                      loop
+                      className="w-full"
+                    />
                   </div>
                 </div>
               </div>

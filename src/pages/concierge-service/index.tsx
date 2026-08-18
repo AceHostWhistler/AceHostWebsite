@@ -5,6 +5,7 @@ import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import LazyVimeoPlayer from "@/components/LazyVimeoPlayer";
 import Link from "next/link";
 import { IoIosArrowBack, IoIosArrowForward, IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import {
@@ -225,7 +226,6 @@ const ConciergeService = () => {
           name="description"
           content="Personalized luxury concierge services for your Whistler vacation. From private chefs to heli-skiing, we take care of every detail."
         />
-        <script src="https://player.vimeo.com/api/player.js" async></script>
       </Head>
 
       <div className="min-h-screen bg-white">
@@ -312,17 +312,13 @@ const ConciergeService = () => {
                         </a>
                       </div>
 
-                      <div className="relative aspect-[9/16] w-full bg-black">
-                        <iframe
-                          src="https://player.vimeo.com/video/1122268553?badge=0&autopause=0&player_id=0&app_id=58479"
-                          className="absolute inset-0 h-full w-full"
-                          frameBorder="0"
-                          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                          allowFullScreen
-                          referrerPolicy="strict-origin-when-cross-origin"
-                          title="The AceHost Concierge Reel"
-                        />
-                      </div>
+                      <LazyVimeoPlayer
+                        videoId="1122268553"
+                        title="The AceHost Concierge Reel"
+                        aspectRatio="portrait"
+                        loadStrategy="inView"
+                        className="w-full bg-black"
+                      />
 
                       <div className="border-t border-white/10 px-4 py-3">
                         <a

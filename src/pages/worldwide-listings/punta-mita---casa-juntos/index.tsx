@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
@@ -18,13 +18,13 @@ import {
 import { getWorldwideAmenities } from "@/data/worldwideAmenities";
 import { getFullPhotoSrc, getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Footer from "@/components/Footer";
+import LazyVimeoPlayer from "@/components/LazyVimeoPlayer";
 import { X, MapPin, Users, Bed, Bath, Check } from "lucide-react";
 
 const PuntaMitaCasaJuntos = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [isImageLoading, setIsImageLoading] = useState(false);
-  const videoRef = useRef<HTMLIFrameElement>(null);
 
   // Property photos - updated to match actual files in the directory
   const photos = [
@@ -163,17 +163,13 @@ const PuntaMitaCasaJuntos = () => {
 
           {/* Video Section */}
           <div className="max-w-7xl mx-auto px-4 mb-10">
-            <div className="aspect-video relative rounded-lg overflow-hidden shadow-lg">
-              <iframe
-                ref={videoRef}
-                src="https://player.vimeo.com/video/1072749932?h=a4f9e2ffdd"
-                className="absolute top-0 left-0 w-full h-full"
-                frameBorder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen
-                title="Punta Mita - Casa Juntos"
-              ></iframe>
-            </div>
+            <LazyVimeoPlayer
+              videoId="1072749932"
+              hash="a4f9e2ffdd"
+              title="Punta Mita - Casa Juntos"
+              loadStrategy="inView"
+              className="rounded-lg shadow-lg"
+            />
           </div>
 
           {/* Photo Grid */}
