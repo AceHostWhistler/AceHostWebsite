@@ -229,7 +229,7 @@ export default function BlogPost() {
               </h3>
               <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/Slopeside Kadenwood/01-2945 Slope Side 01.jpg"
+                  src="/photos/properties/Slopeside Kadenwood/01-2945 Kadenwood Dr 01.jpg"
                   alt="Slope Side Chalet luxury property in Kadenwood, Whistler"
                   fill
                   className="object-cover"

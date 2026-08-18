@@ -26,7 +26,7 @@ const listing: ListingData = {
     "/photos/properties/Bluffs Unit 4/27 - 20260522 A7M4 03 A1_06434.jpg",
     "/photos/properties/Bluffs Unit 4/28 - 20260522 A7M4 03 A1_06559.jpg",
     "/photos/properties/Bluffs Unit 4/29 - 20260522 A7M4 03 A1_06613.jpg",
-    "/photos/properties/Bluffs Unit 4/31 - 20260522 MM4P 02 0367.jpg",
+    "/photos/properties/Bluffs Unit 4/Bluffs drone.jpg",
     "/photos/properties/Bluffs Unit 4/Bluffs photo 2.png",
     "/photos/properties/Bluffs Unit 4/Master ironed 3.png",
     "/photos/properties/Bluffs Unit 4/Bed 2 ironed 2.png",

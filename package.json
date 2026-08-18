@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/generate-sitemap.js && node scripts/generate-cotswolds-photos.js && next build",
+    "build": "node scripts/generate-sitemap.js && node scripts/generate-cotswolds-photos.js && node scripts/optimize-property-photos.js && node scripts/verify-property-photos.js && next build",
     "start": "next start",
     "lint": "next lint",
     "generate-sitemap": "node scripts/generate-sitemap.js",

@@ -244,7 +244,7 @@ export default function BlogPost() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Slopeside Kadenwood/01-2945 Slope Side 01.jpg"
+                    src="/photos/properties/Slopeside Kadenwood/01-2945 Kadenwood Dr 01.jpg"
                     alt="Slopeside Villa outdoor space with mountain views"
                     fill
                     className="object-cover"

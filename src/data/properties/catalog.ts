@@ -390,9 +390,9 @@ export const propertyCategories: PropertyCategory[] = [
             id: "slopeside-villa",
             name: "Slope Side Chalet | Kadenwood",
             images: [
-              "/photos/properties/Slopeside Kadenwood/01-2945 Slope Side 01.jpg",
-              "/photos/properties/Slopeside Kadenwood/03-2945 Slope Side 03.jpg",
-              "/photos/properties/Slopeside Kadenwood/10-2945 Slope Side 10.jpg",
+              "/photos/properties/Slopeside Kadenwood/01-2945 Kadenwood Dr 01.jpg",
+              "/photos/properties/Slopeside Kadenwood/03-2945 Kadenwood Dr 03.jpg",
+              "/photos/properties/Slopeside Kadenwood/10-2945 Kadenwood Dr 10.jpg",
             ],
             guests: 16,
             bedrooms: 7,
@@ -839,8 +839,8 @@ export const propertyCategories: PropertyCategory[] = [
             name: "Raven's Nest | Ski in Ski out | Views",
             images: [
               "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05349.jpg",
-              "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05352.jpg",
-              "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05360.jpg",
+              "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05358.jpg",
+              "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05364.jpg",
             ],
             guests: 6,
             bedrooms: 3,

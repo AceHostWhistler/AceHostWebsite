@@ -1,11 +1,7 @@
-import BearCreek5BedDetails from "./details/bear-creek-5-bed";
-import bear_creek_5_bedMeta from "./meta/bear-creek-5-bed";
 import BluffsUnit4TaluswoodDetails from "./details/bluffs-unit-4-taluswood";
 import bluffs_unit_4_taluswoodMeta from "./meta/bluffs-unit-4-taluswood";
 import BluffsUnit8TaluswoodDetails from "./details/bluffs-unit-8-taluswood";
 import bluffs_unit_8_taluswoodMeta from "./meta/bluffs-unit-8-taluswood";
-import BlackcombGreensDetails from "./details/blackcomb-greens";
-import blackcomb_greensMeta from "./meta/blackcomb-greens";
 import CedarhofKadenwoodDetails from "./details/cedarhof-kadenwood";
 import cedarhof_kadenwoodMeta from "./meta/cedarhof-kadenwood";
 import ChaletLaForjaKadenwoodDetails from "./details/chalet-la-forja-kadenwood";
@@ -50,8 +46,6 @@ import SquamishRetreatWithTheBestViewDetails from "./details/squamish-retreat-wi
 import squamish_retreat_with_the_best_viewMeta from "./meta/squamish-retreat-with-the-best-view";
 import TheNestSkiInSkiOutDetails from "./details/the-nest-ski-in-ski-out";
 import the_nest_ski_in_ski_outMeta from "./meta/the-nest-ski-in-ski-out";
-import TheRavenNestDetails from "./details/the-raven-nest";
-import the_raven_nestMeta from "./meta/the-raven-nest";
 import TimberHavenLuxurySkiInSkiOutKadenwoodDetails from "./details/timber-haven-luxury-ski-in-ski-out-kadenwood";
 import timber_haven_luxury_ski_in_ski_out_kadenwoodMeta from "./meta/timber-haven-luxury-ski-in-ski-out-kadenwood";
 import TwoCedarsKadenwoodDetails from "./details/two-cedars-kadenwood";
@@ -73,10 +67,8 @@ import type { ListingEntry } from "./types";
 import { getListingAmenities } from "./amenities";
 
 export const listingSlugs = [
-  "bear-creek-5-bed",
   "bluffs-unit-4-taluswood",
   "bluffs-unit-8-taluswood",
-  "blackcomb-greens",
   "cedarhof-kadenwood",
   "chalet-la-forja-kadenwood",
   "cozy-lakefront-whistler-condo-mountain-view",
@@ -99,7 +91,6 @@ export const listingSlugs = [
   "snow-pine",
   "squamish-retreat-with-the-best-view",
   "the-nest-ski-in-ski-out",
-  "the-raven-nest",
   "timber-haven-luxury-ski-in-ski-out-kadenwood",
   "two-cedars-kadenwood",
   "valhalla-unit-33-village",
@@ -113,10 +104,8 @@ export const listingSlugs = [
 export type ListingSlug = (typeof listingSlugs)[number];
 
 export const listings: Record<string, ListingEntry> = {
-  "bear-creek-5-bed": { ...bear_creek_5_bedMeta, Details: BearCreek5BedDetails },
   "bluffs-unit-4-taluswood": { ...bluffs_unit_4_taluswoodMeta, Details: BluffsUnit4TaluswoodDetails },
   "bluffs-unit-8-taluswood": { ...bluffs_unit_8_taluswoodMeta, Details: BluffsUnit8TaluswoodDetails },
-  "blackcomb-greens": { ...blackcomb_greensMeta, Details: BlackcombGreensDetails },
   "cedarhof-kadenwood": { ...cedarhof_kadenwoodMeta, Details: CedarhofKadenwoodDetails },
   "chalet-la-forja-kadenwood": { ...chalet_la_forja_kadenwoodMeta, Details: ChaletLaForjaKadenwoodDetails },
   "cozy-lakefront-whistler-condo-mountain-view": { ...cozy_lakefront_whistler_condo_mountain_viewMeta, Details: CozyLakefrontWhistlerCondoMountainViewDetails },
@@ -139,7 +128,6 @@ export const listings: Record<string, ListingEntry> = {
   "snow-pine": { ...snow_pineMeta, Details: SnowPineDetails },
   "squamish-retreat-with-the-best-view": { ...squamish_retreat_with_the_best_viewMeta, Details: SquamishRetreatWithTheBestViewDetails },
   "the-nest-ski-in-ski-out": { ...the_nest_ski_in_ski_outMeta, Details: TheNestSkiInSkiOutDetails },
-  "the-raven-nest": { ...the_raven_nestMeta, Details: TheRavenNestDetails },
   "timber-haven-luxury-ski-in-ski-out-kadenwood": { ...timber_haven_luxury_ski_in_ski_out_kadenwoodMeta, Details: TimberHavenLuxurySkiInSkiOutKadenwoodDetails },
   "two-cedars-kadenwood": { ...two_cedars_kadenwoodMeta, Details: TwoCedarsKadenwoodDetails },
   "valhalla-unit-33-village": { ...valhalla_unit_33_villageMeta, Details: ValhallaUnit33VillageDetails },

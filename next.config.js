@@ -15,6 +15,21 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/listings/bear-creek-5-bed',
+        destination: '/properties',
+        permanent: true,
+      },
+      {
+        source: '/listings/blackcomb-greens',
+        destination: '/properties',
+        permanent: true,
+      },
+      {
+        source: '/listings/the-raven-nest',
+        destination: '/listings/ravens-nest-ski-in-ski-out-views',
+        permanent: true,
+      },
+      {
         source: '/luxury-rentals',
         destination: '/properties',
         permanent: true,

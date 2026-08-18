@@ -8,9 +8,13 @@ import {
   getCotswoldsGallerySrc,
 } from "@/data/cotswoldsPhotos";
 import optimizedFolders from "@/data/optimizedPropertyFolders.json";
+import photoManifest from "@/data/optimizedPhotoManifest.json";
 
 const PHOTO_PREFIX = "/photos/properties/";
 const optimizedFolderSet = new Set<string>(optimizedFolders.folders);
+
+const galleryManifest = photoManifest.gallery as Record<string, string>;
+const fullManifest = photoManifest.full as Record<string, string>;
 
 function isCotswoldsPath(src: string): boolean {
   return src.includes("Cotswolds UK - Soho Farm House");
@@ -40,16 +44,26 @@ function isOptimizedFolder(src: string): boolean {
   return folder !== null && optimizedFolderSet.has(folder);
 }
 
+function resolveOptimizedSrc(
+  src: string,
+  variant: "gallery" | "full"
+): string {
+  const manifest = variant === "gallery" ? galleryManifest : fullManifest;
+  return manifest[src] ?? toWebpPath(src, variant);
+}
+
 export function getGalleryPhotoSrc(src: string): string {
   if (isCotswoldsPath(src)) return getCotswoldsGallerySrc(src);
   if (!isOptimizedFolder(src)) return src;
-  return toWebpPath(src, "gallery");
+  const optimized = resolveOptimizedSrc(src, "gallery");
+  return galleryManifest[src] ? optimized : src;
 }
 
 export function getFullPhotoSrc(src: string): string {
   if (isCotswoldsPath(src)) return getCotswoldsFullSrc(src);
   if (!isOptimizedFolder(src)) return src;
-  return toWebpPath(src, "full");
+  const optimized = resolveOptimizedSrc(src, "full");
+  return fullManifest[src] ? optimized : src;
 }
 
 export function mapGalleryPhotos(photos: string[]): string[] {

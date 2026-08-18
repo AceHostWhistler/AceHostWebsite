@@ -11,7 +11,11 @@ const PROPERTIES_DIR = path.join(process.cwd(), "public/photos/properties");
 const GALLERY_ROOT = path.join(process.cwd(), "public/high-quality/property-gallery");
 const FULL_ROOT = path.join(process.cwd(), "public/high-quality/property-full");
 const MANIFEST_PATH = path.join(process.cwd(), "src/data/optimizedPropertyFolders.json");
-const IMAGE_EXT = /\.(jpe?g|png|webp|gif)$/i;
+const PHOTO_MANIFEST_PATH = path.join(
+  process.cwd(),
+  "src/data/optimizedPhotoManifest.json"
+);
+const IMAGE_EXT = /\.(avif|jpe?g|png|webp|gif)$/i;
 const SKIP_FOLDERS = new Set(["Cotswolds UK - Soho Farm House"]);
 
 const VARIANTS = {
@@ -47,7 +51,31 @@ function listImageFiles(dir) {
   return files;
 }
 
-async function optimizeFile(sourcePath, folderName) {
+function sourceWebPath(folderName, fileName) {
+  return `/photos/properties/${folderName}/${fileName}`;
+}
+
+function optimizedWebPath(folderName, baseName, variant) {
+  const prefix =
+    variant === "gallery"
+      ? "/high-quality/property-gallery/"
+      : "/high-quality/property-full/";
+  return `${prefix}${folderName}/${baseName}.webp`;
+}
+
+function recordManifestEntry(manifest, sourcePath, folderName, fileName) {
+  const baseName = fileName.replace(/\.[^.]+$/, "");
+  const source = sourceWebPath(folderName, fileName);
+  for (const variant of Object.keys(VARIANTS)) {
+    const optimized = optimizedWebPath(folderName, baseName, variant);
+    const diskPath = path.join(process.cwd(), "public", optimized);
+    if (fs.existsSync(diskPath)) {
+      manifest[variant][source] = optimized;
+    }
+  }
+}
+
+async function optimizeFile(sourcePath, folderName, manifest) {
   const fileName = path.basename(sourcePath);
   const baseName = fileName.replace(/\.[^.]+$/, "");
 
@@ -68,6 +96,8 @@ async function optimizeFile(sourcePath, folderName) {
       .webp({ quality: config.quality, effort: 4 })
       .toFile(outputPath);
   }
+
+  recordManifestEntry(manifest, sourcePath, folderName, fileName);
 }
 
 async function main() {
@@ -89,6 +119,7 @@ async function main() {
     `Optimizing ${folders.length} property folders (>= ${minFolderMb}MB)...`
   );
 
+  const photoManifest = { gallery: {}, full: {} };
   let totalFiles = 0;
   for (const folder of folders) {
     const folderPath = path.join(PROPERTIES_DIR, folder);
@@ -96,17 +127,41 @@ async function main() {
     console.log(`\n${folder} (${images.length} images)`);
     for (let i = 0; i < images.length; i++) {
       process.stdout.write(`  [${i + 1}/${images.length}]\r`);
-      await optimizeFile(images[i], folder);
+      await optimizeFile(images[i], folder, photoManifest);
       totalFiles++;
     }
   }
 
-  const manifest = {
+  for (const folder of folders) {
+    const folderPath = path.join(PROPERTIES_DIR, folder);
+    for (const imagePath of listImageFiles(folderPath)) {
+      recordManifestEntry(
+        photoManifest,
+        imagePath,
+        folder,
+        path.basename(imagePath)
+      );
+    }
+  }
+
+  const folderManifest = {
     folders,
     generatedAt: new Date().toISOString(),
     minFolderMb,
   };
-  fs.writeFileSync(MANIFEST_PATH, JSON.stringify(manifest, null, 2) + "\n");
+  fs.writeFileSync(MANIFEST_PATH, JSON.stringify(folderManifest, null, 2) + "\n");
+  fs.writeFileSync(
+    PHOTO_MANIFEST_PATH,
+    JSON.stringify(
+      {
+        generatedAt: new Date().toISOString(),
+        gallery: photoManifest.gallery,
+        full: photoManifest.full,
+      },
+      null,
+      2
+    ) + "\n"
+  );
 
   const gallerySize = dirSize(GALLERY_ROOT);
   const fullSize = dirSize(FULL_ROOT);
@@ -114,7 +169,8 @@ async function main() {
     `\nDone. ${totalFiles} images across ${folders.length} folders.`
   );
   console.log(`Gallery total: ${formatBytes(gallerySize)} | Full total: ${formatBytes(fullSize)}`);
-  console.log(`Manifest: ${MANIFEST_PATH}`);
+  console.log(`Folder manifest: ${MANIFEST_PATH}`);
+  console.log(`Photo manifest: ${PHOTO_MANIFEST_PATH}`);
 }
 
 function dirSize(dir) {

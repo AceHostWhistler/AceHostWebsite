@@ -266,8 +266,8 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
       "Expect a fully equipped kitchen, comfortable living spaces, and a location that keeps you close to skiing, dining, and village strolls without the premium price tag of slope-side penthouses.",
       "Contact AceHost for availability and booking details on this Upper Village favorite.",
     ],
-    listingHref: "/listings/blackcomb-greens",
-    imageSrc: "/photos/properties/blackcomb-greens/exterior1.jpg",
+    listingHref: "/listings/marquise-2-bed-ski-in-ski-out",
+    imageSrc: "/photos/properties/Marquise 2-bed/Marquise-1.jpg",
     imageAlt: "Blackcomb Greens luxury townhouse in Upper Village Whistler",
   },
 ];
