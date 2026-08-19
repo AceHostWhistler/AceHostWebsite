@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
+import { buildVimeoEmbedUrl } from "@/lib/videoEmbeds";
 
 type LoadStrategy = "click" | "immediate" | "inView";
 
@@ -53,8 +54,15 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
         ? "aspect-[9/16]"
         : "aspect-video";
 
-  const hashParam = hash ? `h=${hash}&` : "";
-  const vimeoUrl = `https://player.vimeo.com/video/${videoId}?${hashParam}badge=0&autopause=0&title=${showTitle ? 1 : 0}&byline=${showByline ? 1 : 0}&portrait=${showPortrait ? 1 : 0}&autoplay=${autoplay && shouldLoadIframe ? 1 : 0}&loop=${loop ? 1 : 0}&background=${background ? 1 : 0}`;
+  const vimeoUrl = buildVimeoEmbedUrl(videoId, {
+    hash,
+    autoplay: autoplay && shouldLoadIframe,
+    loop,
+    background,
+    showByline,
+    showTitle,
+    showPortrait,
+  });
 
   const thumbnailUrl =
     thumbnailQuality === "high"
@@ -107,11 +115,9 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
       ) : (
         <iframe
           src={vimeoUrl}
-          className="absolute inset-0 h-full w-full"
-          frameBorder="0"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+          className="absolute inset-0 h-full w-full border-0"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
           allowFullScreen
-          referrerPolicy="strict-origin-when-cross-origin"
           title={title}
         />
       )}

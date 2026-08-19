@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const { i18n } = require('./next-i18next.config');
+const { buildContentSecurityPolicy } = require('./scripts/csp');
 
 const nextConfig = {
   reactStrictMode: true,
@@ -109,7 +110,7 @@ const nextConfig = {
         headers: [
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; connect-src 'self' https:; frame-src 'self' https:; object-src 'none'; form-action 'self' https:;",
+            value: buildContentSecurityPolicy(),
           },
           {
             key: 'X-Content-Type-Options',
