@@ -38,19 +38,20 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
   showTitle = false,
   showPortrait = false,
   hash,
-  loadStrategy = "inView",
+  loadStrategy = "click",
   fit = "contain",
 }) => {
-  const [clicked, setClicked] = useState(false);
+  const [clicked, setClicked] = useState(loadStrategy === "immediate");
   const [thumbnailFailed, setThumbnailFailed] = useState(false);
   const { ref, inView } = useInView({
     triggerOnce: true,
     rootMargin: loadStrategy === "inView" ? "400px 0px" : "200px 0px",
   });
 
-  const shouldLoadIframe =
+  const shouldLoadIframe = loadStrategy === "immediate" || clicked;
+  const showPoster =
+    loadStrategy === "click" ||
     loadStrategy === "immediate" ||
-    clicked ||
     (loadStrategy === "inView" && inView);
 
   const aspectRatioClass =
@@ -67,7 +68,7 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
 
     return buildVimeoEmbedUrl(videoId, {
       hash,
-      autoplay: autoplay && shouldLoadIframe,
+      autoplay: autoplay && clicked,
       loop,
       background,
       showByline,
@@ -77,6 +78,7 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
   }, [
     autoplay,
     background,
+    clicked,
     hash,
     loop,
     shouldLoadIframe,
@@ -90,8 +92,18 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
 
   const iframeClass =
     fit === "cover"
-      ? "absolute left-1/2 top-1/2 h-[130%] w-[130%] max-w-none -translate-x-1/2 -translate-y-1/2 border-0"
-      : "absolute inset-0 h-full w-full border-0";
+      ? "absolute left-1/2 top-1/2 z-10 h-[130%] w-[130%] max-w-none -translate-x-1/2 -translate-y-1/2 border-0"
+      : "absolute inset-0 z-10 h-full w-full border-0";
+
+  if (!showPoster) {
+    return (
+      <div
+        ref={ref}
+        className={`relative ${aspectRatioClass} overflow-hidden bg-neutral-900 ${className}`}
+        aria-hidden="true"
+      />
+    );
+  }
 
   return (
     <div
@@ -101,7 +113,7 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
       {!shouldLoadIframe || !vimeoUrl ? (
         <button
           type="button"
-          className="absolute inset-0 flex items-center justify-center cursor-pointer"
+          className="absolute inset-0 z-10 flex cursor-pointer items-center justify-center"
           onClick={() => setClicked(true)}
           aria-label={`Play ${title}`}
         >
@@ -120,7 +132,7 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
             )}
           </div>
 
-          <div className="relative z-10 flex items-center justify-center w-16 h-16 rounded-full bg-black/70">
+          <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full bg-black/70">
             <svg
               width="24"
               height="24"

@@ -1180,7 +1180,8 @@ const Home = () => {
                     <LazyVimeoPlayer
                       videoId="1122267050"
                       title="The AceHost Whistler Vacation Experience"
-                      loadStrategy="inView"
+                      loadStrategy="click"
+                      autoplay
                       fit="cover"
                       loop
                       className="w-full"
