@@ -1,14 +1,13 @@
 import React, { useState } from "react";
+import dynamic from "next/dynamic";
 import { ArrowRight, Instagram, Youtube } from "lucide-react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import Testimonials from "@/components/Testimonials";
 import GuestySearchWidget from "@/components/GuestySearchWidget";
 import PropertyCoverImage from "@/components/PropertyCoverImage";
-import LazyVimeoPlayer from "@/components/LazyVimeoPlayer";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { FaUser, FaBed, FaBath } from "react-icons/fa";
@@ -26,6 +25,14 @@ import {
   buildWebsiteSchema,
 } from "@/lib/seo/schema";
 import { SITE_URL } from "@/data/seo/business";
+
+const LazyVimeoPlayer = dynamic(() => import("@/components/LazyVimeoPlayer"), {
+  ssr: true,
+});
+
+const Testimonials = dynamic(() => import("@/components/Testimonials"), {
+  ssr: true,
+});
 
 const Home = () => {
   const [activeFilter, setActiveFilter] = useState("whistler"); // Set Whistler as default
@@ -66,7 +73,7 @@ const Home = () => {
             <PropertyCoverImage
               src={coverSrc}
               alt={coverAlt}
-              priority={index < 6}
+              priority={index < 2}
               className="cursor-pointer object-cover"
             />
           </Link>
@@ -1131,63 +1138,63 @@ const Home = () => {
           />
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-14">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-              <div className="lg:col-span-5 xl:col-span-5 order-2 lg:order-1">
-                <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.08] text-white mb-4">
-                  Luxury Vacation
-                  <br />
-                  Rental Properties in
-                  <br />
-                  Whistler Canada
-                </h1>
-                <p className="text-base sm:text-lg font-semibold text-white mb-4">
-                  Property Management &amp; VIP Concierge Services
-                </p>
-                <p className="text-base sm:text-lg text-white leading-relaxed max-w-xl mb-8">
-                  AceHost is a leading Whistler luxury Airbnb property management
-                  company. We proudly offer an array of magnificent vacation
-                  rental homes in Whistler, British Columbia. Offering a seamless
-                  experience for property owners looking to rent out their homes
-                  and earn, while offering guests the perfect vacation in a
-                  luxurious property. Explore our exclusive collection of luxury
-                  ski chalets, and ask us how we can make your next stay
-                  exceptional!
-                </p>
+            <div className="max-w-3xl">
+              <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.08] text-white mb-4">
+                Luxury Vacation
+                <br />
+                Rental Properties in
+                <br />
+                Whistler Canada
+              </h1>
+              <p className="text-base sm:text-lg font-semibold text-white mb-8">
+                Property Management &amp; VIP Concierge Services
+              </p>
+            </div>
 
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Link
-                    href="/properties"
-                    className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3.5 text-sm font-semibold text-stone-950 transition-colors hover:bg-stone-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-stone-950"
-                  >
-                    View Luxury Rental Properties
-                  </Link>
-                  <Link
-                    href="/list-property"
-                    className="inline-flex items-center justify-center rounded-lg border border-white/40 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:border-white/60 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-stone-950"
-                  >
-                    List Your Property
-                  </Link>
-                </div>
+            <div className="relative w-full max-w-4xl mb-8">
+              <div
+                className="pointer-events-none absolute -inset-4 rounded-3xl bg-amber-500/15 blur-3xl"
+                aria-hidden="true"
+              />
+              <div className="relative overflow-hidden rounded-2xl bg-black shadow-2xl ring-1 ring-white/15">
+                <LazyVimeoPlayer
+                  videoId="1122267050"
+                  title="The AceHost Whistler Vacation Experience"
+                  loadStrategy="click"
+                  thumbnailQuality="default"
+                  autoplay
+                  fit="cover"
+                  loop
+                  className="w-full"
+                />
               </div>
+            </div>
 
-              <div className="lg:col-span-7 xl:col-span-7 order-1 lg:order-2">
-                <div className="relative w-full">
-                  <div
-                    className="pointer-events-none absolute -inset-4 rounded-3xl bg-amber-500/15 blur-3xl"
-                    aria-hidden="true"
-                  />
-                  <div className="relative overflow-hidden rounded-2xl bg-black shadow-2xl ring-1 ring-white/15">
-                    <LazyVimeoPlayer
-                      videoId="1122267050"
-                      title="The AceHost Whistler Vacation Experience"
-                      loadStrategy="click"
-                      autoplay
-                      fit="cover"
-                      loop
-                      className="w-full"
-                    />
-                  </div>
-                </div>
+            <div className="max-w-3xl">
+              <p className="text-base sm:text-lg text-white leading-relaxed mb-8">
+                AceHost is a leading Whistler luxury Airbnb property management
+                company. We proudly offer an array of magnificent vacation
+                rental homes in Whistler, British Columbia. Offering a seamless
+                experience for property owners looking to rent out their homes
+                and earn, while offering guests the perfect vacation in a
+                luxurious property. Explore our exclusive collection of luxury
+                ski chalets, and ask us how we can make your next stay
+                exceptional!
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link
+                  href="/properties"
+                  className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3.5 text-sm font-semibold text-stone-950 transition-colors hover:bg-stone-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-stone-950"
+                >
+                  View Luxury Rental Properties
+                </Link>
+                <Link
+                  href="/list-property"
+                  className="inline-flex items-center justify-center rounded-lg border border-white/40 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:border-white/60 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-stone-950"
+                >
+                  List Your Property
+                </Link>
               </div>
             </div>
           </div>
@@ -1207,8 +1214,8 @@ const Home = () => {
                         fill
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 400px"
                         className="object-cover cursor-pointer"
-                        priority={index < 3}
-                        quality={85}
+                        loading="lazy"
+                        quality={75}
                         placeholder="blur"
                         blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAEhAI/w5RW4AAAAABJRU5ErkJggg=="
                       />

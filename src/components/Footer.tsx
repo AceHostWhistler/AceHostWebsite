@@ -18,6 +18,7 @@ const Footer = () => {
                   src="/logo.png"
                   alt="AceHost Logo"
                   fill
+                  sizes="192px"
                   className="object-contain object-left"
                   priority
                 />
@@ -160,6 +161,7 @@ const Footer = () => {
                 src="/logo.png"
                 alt="AceHost Logo"
                 fill
+                sizes="96px"
                 className="object-contain"
               />
             </span>

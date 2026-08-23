@@ -173,6 +173,7 @@ const ConciergeService = () => {
             src={imageSrc}
             alt={imageAlt}
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
             className="object-cover"
             priority={index < 6} // Prioritize loading first 6 images
           />
@@ -317,6 +318,7 @@ const ConciergeService = () => {
                         title="The AceHost Concierge Reel"
                         aspectRatio="portrait"
                         loadStrategy="inView"
+                        autoplay
                         className="w-full bg-black"
                       />
 

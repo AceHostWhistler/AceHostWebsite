@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useTranslation } from "next-i18next";
 import {
   Menu,
   ChevronDown,
@@ -41,7 +40,6 @@ const Navigation = ({
   const rentalsRef = useRef<HTMLDivElement>(null);
   const resourcesRef = useRef<HTMLDivElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
-  const { t } = useTranslation("common");
 
   // Handle scroll events for sticky header
   useEffect(() => {
@@ -154,6 +152,7 @@ const Navigation = ({
                   src="/logo.png"
                   alt="AceHost Logo"
                   fill
+                  sizes="160px"
                   className="object-contain"
                   priority
                 />

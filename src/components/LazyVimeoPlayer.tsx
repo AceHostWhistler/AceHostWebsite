@@ -50,9 +50,8 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
 
   const shouldLoadIframe = loadStrategy === "immediate" || clicked;
   const showPoster =
-    loadStrategy === "click" ||
     loadStrategy === "immediate" ||
-    (loadStrategy === "inView" && inView);
+    ((loadStrategy === "click" || loadStrategy === "inView") && inView);
 
   const aspectRatioClass =
     aspectRatio === "square"
@@ -66,9 +65,12 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
       return null;
     }
 
+    const shouldAutoplay = autoplay && clicked;
+
     return buildVimeoEmbedUrl(videoId, {
       hash,
-      autoplay: autoplay && clicked,
+      autoplay: shouldAutoplay,
+      muted: shouldAutoplay,
       loop,
       background,
       showByline,
@@ -125,6 +127,7 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
                 className="absolute inset-0 h-full w-full object-cover opacity-80 transition-opacity hover:opacity-95"
                 loading="lazy"
                 decoding="async"
+                fetchPriority="low"
                 onError={() => setThumbnailFailed(true)}
               />
             ) : (
@@ -151,7 +154,7 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
           src={vimeoUrl}
           title={title}
           className={iframeClass}
-          loading={loadStrategy === "immediate" ? "eager" : "lazy"}
+          loading="eager"
         />
       )}
     </div>

@@ -59,11 +59,25 @@ function parseHttpResponse(raw: string): VimeoProxyResponse {
   return { status, headers, body };
 }
 
-export function rewriteVimeoDevProxyUrls(body: string): string {
-  return body
+export function rewriteVimeoDevProxyUrls(
+  body: string,
+  origin = "http://localhost:3000"
+): string {
+  let rewritten = body
     .replaceAll(`https://${VIMEO_HOST}`, DEV_PROXY_PREFIX)
     .replaceAll(`http://${VIMEO_HOST}`, DEV_PROXY_PREFIX)
-    .replaceAll(`//${VIMEO_HOST}`, DEV_PROXY_PREFIX);
+    .replaceAll(`//${VIMEO_HOST}`, DEV_PROXY_PREFIX)
+    .replaceAll('"player_url":"player.vimeo.com"', '"player_url":"localhost:3000/api/dev/vimeo"')
+    .replace(/(['"`])\/video\//g, `$1${DEV_PROXY_PREFIX}/video/`);
+
+  if (rewritten.includes("<head") && !/<base[\s>]/i.test(rewritten)) {
+    rewritten = rewritten.replace(
+      /<head([^>]*)>/i,
+      `<head$1><base href="${origin}${DEV_PROXY_PREFIX}/">`
+    );
+  }
+
+  return rewritten;
 }
 
 export async function fetchVimeoThroughTrustedDns(

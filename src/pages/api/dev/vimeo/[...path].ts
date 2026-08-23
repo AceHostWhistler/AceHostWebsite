@@ -84,13 +84,24 @@ export default async function handler(
       return res.end();
     }
 
-    const body = rewriteVimeoDevProxyUrls(upstream.body);
-    devProxyCache.set(cacheKey, {
-      status: upstream.status,
-      contentType,
-      body,
-      expiresAt: Date.now() + DEV_PROXY_CACHE_TTL_MS,
-    });
+    const origin =
+      typeof req.headers.origin === "string"
+        ? req.headers.origin
+        : typeof req.headers.host === "string"
+          ? `http://${req.headers.host}`
+          : "http://localhost:3000";
+
+    const body = rewriteVimeoDevProxyUrls(upstream.body, origin);
+    const isHtml = contentType.includes("text/html");
+
+    if (!isHtml) {
+      devProxyCache.set(cacheKey, {
+        status: upstream.status,
+        contentType,
+        body,
+        expiresAt: Date.now() + DEV_PROXY_CACHE_TTL_MS,
+      });
+    }
 
     return res.send(body);
   } catch (error) {
