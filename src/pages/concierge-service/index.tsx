@@ -246,7 +246,7 @@ const ConciergeService = () => {
 
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-14">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-                <div className="concierge-hero-copy lg:col-span-6 xl:col-span-7 order-2 lg:order-1">
+                <div className="concierge-hero-copy lg:col-span-6 xl:col-span-7">
                   <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.08] text-white mb-5">
                     Whistler VIP Concierge Services
                   </h1>
@@ -292,7 +292,7 @@ const ConciergeService = () => {
                   </div>
                 </div>
 
-                <div className="lg:col-span-6 xl:col-span-5 order-1 lg:order-2 flex justify-center lg:justify-end">
+                <div className="lg:col-span-6 xl:col-span-5 flex justify-center lg:justify-end">
                   <div className="relative w-full max-w-[280px] sm:max-w-[300px]">
                     <div
                       className="pointer-events-none absolute -inset-6 rounded-[2.5rem] bg-amber-500/20 blur-3xl"
@@ -317,7 +317,8 @@ const ConciergeService = () => {
                         videoId="1122268553"
                         title="The AceHost Concierge Reel"
                         aspectRatio="portrait"
-                        loadStrategy="inView"
+                        loadStrategy="click"
+                        showPortrait
                         autoplay
                         className="w-full bg-black"
                       />
