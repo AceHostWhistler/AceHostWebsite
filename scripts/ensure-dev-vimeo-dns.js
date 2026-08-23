@@ -113,14 +113,11 @@ async function main() {
 
   const block = buildHostsBlock(trustedIps);
 
-  if (!forceFix && !process.env.ACEHOST_AUTO_FIX_VIMEO_DNS) {
+  if (!forceFix) {
     console.warn(
       "\nVimeo videos will show \"refused to connect\" on localhost until DNS is fixed."
     );
     console.warn("Run once in your terminal:\n  npm run fix-dev-dns\n");
-    if (process.argv.includes("--allow-fail")) {
-      return;
-    }
     return;
   }
 
