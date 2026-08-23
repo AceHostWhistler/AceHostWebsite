@@ -1181,6 +1181,7 @@ const Home = () => {
                       videoId="1122267050"
                       title="The AceHost Whistler Vacation Experience"
                       loadStrategy="inView"
+                      fit="cover"
                       loop
                       className="w-full"
                     />

@@ -22,6 +22,7 @@ interface LazyVimeoPlayerProps {
   showPortrait?: boolean;
   hash?: string;
   loadStrategy?: LoadStrategy;
+  fit?: "contain" | "cover";
 }
 
 const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
@@ -38,6 +39,7 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
   showPortrait = false,
   hash,
   loadStrategy = "inView",
+  fit = "contain",
 }) => {
   const [clicked, setClicked] = useState(false);
   const [thumbnailFailed, setThumbnailFailed] = useState(false);
@@ -86,6 +88,11 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
 
   const thumbnailUrl = buildVimeoThumbnailUrl(videoId, thumbnailQuality);
 
+  const iframeClass =
+    fit === "cover"
+      ? "absolute left-1/2 top-1/2 h-[130%] w-[130%] max-w-none -translate-x-1/2 -translate-y-1/2 border-0"
+      : "absolute inset-0 h-full w-full border-0";
+
   return (
     <div
       ref={ref}
@@ -103,7 +110,7 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
               <img
                 src={thumbnailUrl}
                 alt={title}
-                className="h-full w-full object-cover opacity-80 transition-opacity hover:opacity-95"
+                className="absolute inset-0 h-full w-full object-cover opacity-80 transition-opacity hover:opacity-95"
                 loading="lazy"
                 decoding="async"
                 onError={() => setThumbnailFailed(true)}
@@ -131,6 +138,7 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
         <VideoEmbedFrame
           src={vimeoUrl}
           title={title}
+          className={iframeClass}
           loading={loadStrategy === "immediate" ? "eager" : "lazy"}
         />
       )}
