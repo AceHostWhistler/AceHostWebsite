@@ -8,13 +8,27 @@ const DEV_PROXY_PREFIX = "/api/dev/vimeo";
 const resolver = new Resolver();
 resolver.setServers(["8.8.8.8", "1.1.1.1"]);
 
+let cachedVimeoIp: { value: string; expiresAt: number } | null = null;
+
 async function resolveVimeoHost(hostname: string): Promise<string> {
+  if (cachedVimeoIp && Date.now() < cachedVimeoIp.expiresAt) {
+    return cachedVimeoIp.value;
+  }
+
+  let ip: string;
   try {
-    return (await resolver.resolve4(hostname))[0];
+    ip = (await resolver.resolve4(hostname))[0];
   } catch {
     const cname = await resolver.resolveCname(hostname);
-    return (await resolver.resolve4(cname[0]))[0];
+    ip = (await resolver.resolve4(cname[0]))[0];
   }
+
+  cachedVimeoIp = {
+    value: ip,
+    expiresAt: Date.now() + 60 * 60 * 1000,
+  };
+
+  return ip;
 }
 
 type VimeoProxyResponse = {

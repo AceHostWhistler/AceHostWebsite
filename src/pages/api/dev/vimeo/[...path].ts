@@ -4,6 +4,12 @@ import {
   rewriteVimeoDevProxyUrls,
 } from "@/lib/devVimeoProxy";
 
+const DEV_PROXY_CACHE_TTL_MS = 5 * 60 * 1000;
+const devProxyCache = new Map<
+  string,
+  { status: number; contentType: string; body: string; expiresAt: number }
+>();
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -44,6 +50,21 @@ export default async function handler(
     (typeof req.headers.referer === "string" && req.headers.referer) ||
     "http://localhost:3000/";
 
+  const cacheKey = `${pathParts.join("/")}?${query.toString()}`;
+  const cached = devProxyCache.get(cacheKey);
+  if (cached && Date.now() < cached.expiresAt) {
+    res.status(cached.status);
+    res.setHeader("Content-Type", cached.contentType);
+    res.setHeader("Cache-Control", "private, max-age=300");
+    res.setHeader("X-Frame-Options", "SAMEORIGIN");
+
+    if (req.method === "HEAD") {
+      return res.end();
+    }
+
+    return res.send(cached.body);
+  }
+
   try {
     const upstream = await fetchVimeoThroughTrustedDns(
       `/${pathParts.join("/")}`,
@@ -64,6 +85,13 @@ export default async function handler(
     }
 
     const body = rewriteVimeoDevProxyUrls(upstream.body);
+    devProxyCache.set(cacheKey, {
+      status: upstream.status,
+      contentType,
+      body,
+      expiresAt: Date.now() + DEV_PROXY_CACHE_TTL_MS,
+    });
+
     return res.send(body);
   } catch (error) {
     console.error("[dev-vimeo-proxy]", error);

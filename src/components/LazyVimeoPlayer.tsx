@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import {
   buildVimeoEmbedUrl,
@@ -37,13 +37,13 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
   showTitle = false,
   showPortrait = false,
   hash,
-  loadStrategy = "click",
+  loadStrategy = "inView",
 }) => {
-  const [clicked, setClicked] = useState(loadStrategy === "immediate");
+  const [clicked, setClicked] = useState(false);
   const [thumbnailFailed, setThumbnailFailed] = useState(false);
   const { ref, inView } = useInView({
     triggerOnce: true,
-    rootMargin: "200px 0px",
+    rootMargin: loadStrategy === "inView" ? "400px 0px" : "200px 0px",
   });
 
   const shouldLoadIframe =
@@ -58,15 +58,31 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
         ? "aspect-[9/16]"
         : "aspect-video";
 
-  const vimeoUrl = buildVimeoEmbedUrl(videoId, {
-    hash,
-    autoplay: autoplay && shouldLoadIframe,
-    loop,
+  const vimeoUrl = useMemo(() => {
+    if (!shouldLoadIframe) {
+      return null;
+    }
+
+    return buildVimeoEmbedUrl(videoId, {
+      hash,
+      autoplay: autoplay && shouldLoadIframe,
+      loop,
+      background,
+      showByline,
+      showTitle,
+      showPortrait,
+    });
+  }, [
+    autoplay,
     background,
+    hash,
+    loop,
+    shouldLoadIframe,
     showByline,
-    showTitle,
     showPortrait,
-  });
+    showTitle,
+    videoId,
+  ]);
 
   const thumbnailUrl = buildVimeoThumbnailUrl(videoId, thumbnailQuality);
 
@@ -75,7 +91,7 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
       ref={ref}
       className={`relative ${aspectRatioClass} overflow-hidden ${className}`}
     >
-      {!shouldLoadIframe ? (
+      {!shouldLoadIframe || !vimeoUrl ? (
         <button
           type="button"
           className="absolute inset-0 flex items-center justify-center cursor-pointer"
@@ -112,7 +128,11 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
           </div>
         </button>
       ) : (
-        <VideoEmbedFrame src={vimeoUrl} title={title} />
+        <VideoEmbedFrame
+          src={vimeoUrl}
+          title={title}
+          loading={loadStrategy === "immediate" ? "eager" : "lazy"}
+        />
       )}
     </div>
   );

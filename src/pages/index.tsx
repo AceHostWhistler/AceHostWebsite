@@ -11,7 +11,6 @@ import PropertyCoverImage from "@/components/PropertyCoverImage";
 import LazyVimeoPlayer from "@/components/LazyVimeoPlayer";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "next-i18next";
 import { FaUser, FaBed, FaBath } from "react-icons/fa";
 import { Users, Bed, Bath } from "lucide-react";
 import { BLUFFS_AIRBNB_LINK } from "@/data/listings/bluffsAirbnbLink";
@@ -29,7 +28,6 @@ import {
 import { SITE_URL } from "@/data/seo/business";
 
 const Home = () => {
-  const { t } = useTranslation("common");
   const [activeFilter, setActiveFilter] = useState("whistler"); // Set Whistler as default
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
@@ -1182,7 +1180,7 @@ const Home = () => {
                     <LazyVimeoPlayer
                       videoId="1122267050"
                       title="The AceHost Whistler Vacation Experience"
-                      loadStrategy="immediate"
+                      loadStrategy="inView"
                       loop
                       className="w-full"
                     />
@@ -1359,3 +1357,11 @@ const Home = () => {
 };
 
 export default Home;
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale || "en", ["common"])),
+    },
+  };
+};

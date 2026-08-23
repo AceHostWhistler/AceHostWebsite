@@ -5,6 +5,7 @@ interface VideoEmbedFrameProps {
   title: string;
   className?: string;
   allow?: string;
+  loading?: "lazy" | "eager";
 }
 
 const DEFAULT_ALLOW =
@@ -15,12 +16,14 @@ const VideoEmbedFrame: React.FC<VideoEmbedFrameProps> = ({
   title,
   className = "absolute inset-0 h-full w-full border-0",
   allow = DEFAULT_ALLOW,
+  loading = "lazy",
 }) => (
   <iframe
     src={src}
     className={className}
     allow={allow}
     allowFullScreen
+    loading={loading}
     referrerPolicy="strict-origin-when-cross-origin"
     title={title}
   />
