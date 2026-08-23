@@ -135,6 +135,15 @@ const nextConfig = {
         ],
       },
       {
+        source: '/api/dev/vimeo/:path*',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'SAMEORIGIN',
+          },
+        ],
+      },
+      {
         source: '/upload',
         headers: [
           {

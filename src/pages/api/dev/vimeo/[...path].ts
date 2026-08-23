@@ -57,6 +57,7 @@ export default async function handler(
     res.status(upstream.status);
     res.setHeader("Content-Type", contentType);
     res.setHeader("Cache-Control", "no-store");
+    res.setHeader("X-Frame-Options", "SAMEORIGIN");
 
     if (req.method === "HEAD") {
       return res.end();
