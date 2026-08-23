@@ -202,7 +202,6 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
                     sizes={editorialGalleryImageSizes}
                     className="object-cover hover:scale-105 transition-transform duration-300"
                     priority={index < 2}
-                    loading={index < 2 ? "eager" : "lazy"}
                     quality={index < 4 ? 85 : 75}
                     placeholder="blur"
                     blurDataURL={BLUR_DATA_URL}
@@ -274,7 +273,6 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
                         sizes={editorialGalleryImageSizes}
                         className="object-cover hover:scale-105 transition-transform duration-300"
                         priority={index < 6}
-                        loading={index < 6 ? "eager" : "lazy"}
                       />
                     </div>
                     <div className="mt-1 text-center">
@@ -338,7 +336,6 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
                   sizes="100vw"
                   onLoadingComplete={handleImageLoad}
                   quality={85}
-                  loading="eager"
                 />
               </div>
             </div>

@@ -162,7 +162,6 @@ const LuxeScandinaveRetreat = () => {
                     sizes={editorialGalleryImageSizes}
                     className="object-cover hover:scale-105 transition-transform duration-300"
                     priority={index < 4}
-                    loading={index < 4 ? "eager" : "lazy"}
                     quality={index < 6 ? 85 : 75}
                     placeholder="blur"
                     blurDataURL={BLUR_PLACEHOLDER}
@@ -345,7 +344,6 @@ const LuxeScandinaveRetreat = () => {
                       fill
                       sizes={editorialGalleryImageSizes}
                       className="object-cover hover:scale-105 transition-transform duration-300"
-                      loading={index < 12 ? "eager" : "lazy"}
                     />
                   </div>
                 ))}

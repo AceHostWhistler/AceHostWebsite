@@ -3,6 +3,7 @@ import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Image from "next/image";
 import Link from "next/link";
 import { airbnbButtonInline } from "@/lib/airbnbButtonStyles";
+import LazyInstagramEmbed from "@/components/LazyInstagramEmbed";
 import type { ListingDetailsProps } from "../types";
 
 export default function PanoramicEstateKadenwoodDetails({ photos }: ListingDetailsProps) {
@@ -40,19 +41,12 @@ export default function PanoramicEstateKadenwoodDetails({ photos }: ListingDetai
                             className="aspect-w-9 aspect-h-16 relative"
                             style={{ minHeight: "690px" }}
                           >
-                            <div className="absolute inset-0 w-full h-full">
-                              <iframe
-                                className="absolute inset-0 w-full h-full"
-                                src="https://www.instagram.com/reel/DOoXPbrj_UV/embed/?utm_source=ig_embed&utm_campaign=loading&hidecaption=1&utm_medium=embed&autoplay=false"
-                                frameBorder="0"
-                                scrolling="no"
-                                loading="lazy"
-                                allowFullScreen={true}
-                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                                referrerPolicy="strict-origin-when-cross-origin"
-                                title="Panoramic Estate Walk Through Video"
-                              ></iframe>
-                            </div>
+                            <LazyInstagramEmbed
+                              reelId="DOoXPbrj_UV"
+                              title="Panoramic Estate Walk Through Video"
+                              loadStrategy="inView"
+                              className="absolute inset-0 h-full w-full"
+                            />
                           </div>
 
                           <div className="p-4 border-t bg-gradient-to-r from-gray-50 to-white">

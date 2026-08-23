@@ -8,6 +8,8 @@ import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 import { SITE_URL } from "@/data/seo/business";
 import { kadenwoodProperties } from "@/data/blog/whistler-28-places-properties";
 import type { Whistler28Property } from "@/data/blog/whistler-28-places-properties";
+import VideoEmbedFrame from "@/components/VideoEmbedFrame";
+import { buildYouTubeEmbedUrl } from "@/lib/videoEmbeds";
 import { airbnbButtonBlog } from "@/lib/airbnbButtonStyles";
 
 const SLUG = "justin-tse-chalet-la-forja-whistler";
@@ -142,12 +144,10 @@ function ArticleImage({
 function YouTubeEmbed() {
   return (
     <div className="relative w-full aspect-video my-10 rounded-xl overflow-hidden not-prose shadow-sm">
-      <iframe
-        src={`https://www.youtube.com/embed/${YOUTUBE_ID}`}
+      <VideoEmbedFrame
+        src={buildYouTubeEmbedUrl(YOUTUBE_ID)}
         title="The Ultimate Luxury Whistler Chalet Winter Road Trip Experience | Justin Tse"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-        className="absolute inset-0 h-full w-full border-0"
       />
     </div>
   );

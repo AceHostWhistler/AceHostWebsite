@@ -1209,7 +1209,6 @@ const Home = () => {
                         className="object-cover cursor-pointer"
                         priority={index < 3}
                         quality={85}
-                        loading={index === 0 ? "eager" : "lazy"}
                         placeholder="blur"
                         blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAEhAI/w5RW4AAAAABJRU5ErkJggg=="
                       />

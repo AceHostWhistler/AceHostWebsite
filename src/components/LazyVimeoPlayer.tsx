@@ -1,7 +1,10 @@
 import React, { useState } from "react";
-import Image from "next/image";
 import { useInView } from "react-intersection-observer";
-import { buildVimeoEmbedUrl } from "@/lib/videoEmbeds";
+import {
+  buildVimeoEmbedUrl,
+  buildVimeoThumbnailUrl,
+} from "@/lib/videoEmbeds";
+import VideoEmbedFrame from "@/components/VideoEmbedFrame";
 
 type LoadStrategy = "click" | "immediate" | "inView";
 
@@ -37,6 +40,7 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
   loadStrategy = "click",
 }) => {
   const [clicked, setClicked] = useState(loadStrategy === "immediate");
+  const [thumbnailFailed, setThumbnailFailed] = useState(false);
   const { ref, inView } = useInView({
     triggerOnce: true,
     rootMargin: "200px 0px",
@@ -64,10 +68,7 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
     showPortrait,
   });
 
-  const thumbnailUrl =
-    thumbnailQuality === "high"
-      ? `https://vumbnail.com/${videoId}.jpg`
-      : `https://vumbnail.com/${videoId}_medium.jpg`;
+  const thumbnailUrl = buildVimeoThumbnailUrl(videoId, thumbnailQuality);
 
   return (
     <div
@@ -75,27 +76,25 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
       className={`relative ${aspectRatioClass} overflow-hidden ${className}`}
     >
       {!shouldLoadIframe ? (
-        <div
+        <button
+          type="button"
           className="absolute inset-0 flex items-center justify-center cursor-pointer"
           onClick={() => setClicked(true)}
-          onKeyDown={(event) => {
-            if (event.key === "Enter" || event.key === " ") {
-              event.preventDefault();
-              setClicked(true);
-            }
-          }}
-          role="button"
-          tabIndex={0}
           aria-label={`Play ${title}`}
         >
           <div className="absolute inset-0 bg-black">
-            <Image
-              src={thumbnailUrl}
-              alt={title}
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover opacity-80 hover:opacity-95 transition-opacity"
-            />
+            {!thumbnailFailed ? (
+              <img
+                src={thumbnailUrl}
+                alt={title}
+                className="h-full w-full object-cover opacity-80 transition-opacity hover:opacity-95"
+                loading="lazy"
+                decoding="async"
+                onError={() => setThumbnailFailed(true)}
+              />
+            ) : (
+              <div className="h-full w-full bg-neutral-900" aria-hidden="true" />
+            )}
           </div>
 
           <div className="relative z-10 flex items-center justify-center w-16 h-16 rounded-full bg-black/70">
@@ -111,15 +110,9 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
               <path d="M8 5V19L19 12L8 5Z" fill="currentColor" />
             </svg>
           </div>
-        </div>
+        </button>
       ) : (
-        <iframe
-          src={vimeoUrl}
-          className="absolute inset-0 h-full w-full border-0"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-          allowFullScreen
-          title={title}
-        />
+        <VideoEmbedFrame src={vimeoUrl} title={title} />
       )}
     </div>
   );

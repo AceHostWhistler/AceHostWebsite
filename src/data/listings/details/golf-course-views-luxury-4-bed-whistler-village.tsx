@@ -2,6 +2,7 @@ import React from "react";
 import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Image from "next/image";
 import Link from "next/link";
+import LazyInstagramEmbed from "@/components/LazyInstagramEmbed";
 import type { ListingDetailsProps } from "../types";
 
 export default function GolfCourseViewsLuxury4BedWhistlerVillageDetails({ photos }: ListingDetailsProps) {
@@ -29,19 +30,12 @@ export default function GolfCourseViewsLuxury4BedWhistlerVillageDetails({ photos
                             className="aspect-w-9 aspect-h-16 relative"
                             style={{ minHeight: "690px" }}
                           >
-                            <div className="absolute inset-0 w-full h-full">
-                              <iframe
-                                className="absolute inset-0 w-full h-full"
-                                src="https://www.instagram.com/reel/DQCt3vQAR-3/embed/?utm_source=ig_embed&utm_campaign=loading&hidecaption=1&utm_medium=embed&autoplay=false"
-                                frameBorder="0"
-                                scrolling="no"
-                                loading="lazy"
-                                allowFullScreen={true}
-                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                                referrerPolicy="strict-origin-when-cross-origin"
-                                title="Muirfield Golf Course Views Walkthrough Video"
-                              ></iframe>
-                            </div>
+                            <LazyInstagramEmbed
+                              reelId="DQCt3vQAR-3"
+                              title="Muirfield Golf Course Views Walkthrough Video"
+                              loadStrategy="inView"
+                              className="absolute inset-0 h-full w-full"
+                            />
                           </div>
 
                           <div className="p-4 bg-gradient-to-r from-gray-50 to-white border-t">

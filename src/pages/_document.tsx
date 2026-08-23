@@ -50,6 +50,8 @@ export default function Document() {
         <link rel="preconnect" href="https://player.vimeo.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.youtube.com" />
         <link rel="preconnect" href="https://www.youtube.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.instagram.com" />
+        <link rel="preconnect" href="https://www.instagram.com" crossOrigin="anonymous" />
         <link rel="author" href="https://acehost.ca/our-story" />
         
         {/* Google Sitelinks Search Box */}

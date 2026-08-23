@@ -13,6 +13,8 @@ import {
   MessageCircle,
 } from "lucide-react";
 import LanguageSelector from "./LanguageSelector";
+import VideoEmbedFrame from "./VideoEmbedFrame";
+import { buildYouTubeEmbedUrl } from "@/lib/videoEmbeds";
 import { useRouter } from "next/router";
 import { allArticles } from "@/utils/blogArticles";
 
@@ -363,15 +365,17 @@ const Navigation = ({
                             className="block group hover:bg-gray-50 p-2 rounded-lg transition-all duration-300"
                           >
                             <div className="w-full h-20 rounded-md overflow-hidden mb-1 relative">
-                              <iframe
-                                width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/BKK5X_LPd8k?autoplay=1&mute=1&playsinline=1&loop=1&playlist=BKK5X_LPd8k&controls=0&showinfo=0&modestbranding=1"
+                              <VideoEmbedFrame
+                                src={buildYouTubeEmbedUrl("BKK5X_LPd8k", {
+                                  autoplay: true,
+                                  mute: true,
+                                  loop: true,
+                                  controls: false,
+                                })}
                                 title="The Dream Luxury Whistler Vacation"
-                                frameBorder="0"
+                                className="w-full h-full pointer-events-none border-0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                className="w-full h-full pointer-events-none"
-                              ></iframe>
+                              />
                               <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity"></div>
                             </div>
                             <h5 className="text-xs font-medium leading-tight mt-1 group-hover:text-blue-600 transition-colors">
@@ -389,15 +393,17 @@ const Navigation = ({
                             className="block group hover:bg-gray-50 p-2 rounded-lg transition-all duration-300"
                           >
                             <div className="w-full h-20 rounded-md overflow-hidden mb-1 relative">
-                              <iframe
-                                width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/GOzVT9x08sc?autoplay=1&mute=1&playsinline=1&loop=1&playlist=GOzVT9x08sc&controls=0&showinfo=0&modestbranding=1"
+                              <VideoEmbedFrame
+                                src={buildYouTubeEmbedUrl("GOzVT9x08sc", {
+                                  autoplay: true,
+                                  mute: true,
+                                  loop: true,
+                                  controls: false,
+                                })}
                                 title="Luxury Chalet Tour"
-                                frameBorder="0"
+                                className="w-full h-full pointer-events-none border-0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                className="w-full h-full pointer-events-none"
-                              ></iframe>
+                              />
                               <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity"></div>
                             </div>
                             <h5 className="text-xs font-medium leading-tight mt-1 group-hover:text-blue-600 transition-colors">
@@ -415,15 +421,17 @@ const Navigation = ({
                             className="block group hover:bg-gray-50 p-2 rounded-lg transition-all duration-300"
                           >
                             <div className="w-full h-16 rounded-md overflow-hidden mb-1 relative">
-                              <iframe
-                                width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/cNHhE2B8Zeo?autoplay=1&mute=1&playsinline=1&loop=1&playlist=cNHhE2B8Zeo&controls=0&showinfo=0&modestbranding=1"
+                              <VideoEmbedFrame
+                                src={buildYouTubeEmbedUrl("cNHhE2B8Zeo", {
+                                  autoplay: true,
+                                  mute: true,
+                                  loop: true,
+                                  controls: false,
+                                })}
                                 title="The Ultimate Luxury Whistler Chalet Winter Road Trip"
-                                frameBorder="0"
+                                className="w-full h-full pointer-events-none border-0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                className="w-full h-full pointer-events-none"
-                              ></iframe>
+                              />
                               <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity"></div>
                             </div>
                             <h5 className="text-xs font-medium leading-tight mt-1 group-hover:text-blue-600 transition-colors">
