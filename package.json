@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "node scripts/ensure-dev-vimeo-dns.js --fix --allow-fail && next dev",
+    "dev": "next dev",
     "fix-dev-dns": "node scripts/ensure-dev-vimeo-dns.js --fix",
     "build": "node scripts/generate-sitemap.js && node scripts/generate-cotswolds-photos.js && node scripts/optimize-property-photos.js && node scripts/verify-property-photos.js && node scripts/verify-video-embeds.js && next build",
     "start": "next start",

@@ -115,9 +115,11 @@ async function main() {
 
   if (!forceFix) {
     console.warn(
-      "\nVimeo videos will show \"refused to connect\" on localhost until DNS is fixed."
+      "\n[dev-vimeo-dns] Localhost Vimeo embeds use /api/dev/vimeo automatically in dev."
     );
-    console.warn("Run once in your terminal:\n  npm run fix-dev-dns\n");
+    console.warn(
+      "Only run `npm run fix-dev-dns` if you want to bypass the proxy system-wide.\n"
+    );
     return;
   }
 
