@@ -62,7 +62,13 @@ export function buildVimeoEmbedUrl(
     params.set("h", hash);
   }
 
-  return `https://player.vimeo.com/video/${videoId}?${params.toString()}`;
+  const query = params.toString();
+
+  if (process.env.NODE_ENV === "development") {
+    return `/api/dev/vimeo/video/${videoId}?${query}`;
+  }
+
+  return `https://player.vimeo.com/video/${videoId}?${query}`;
 }
 
 export function buildVimeoThumbnailUrl(
