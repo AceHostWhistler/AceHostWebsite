@@ -8,7 +8,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import GuestySearchWidget from "@/components/GuestySearchWidget";
 import PropertyCoverImage from "@/components/PropertyCoverImage";
-import LazyVimeoPlayer from "@/components/LazyVimeoPlayer";
+import VimeoClickToPlay from "@/components/VimeoClickToPlay";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { FaUser, FaBed, FaBath } from "react-icons/fa";
@@ -1182,11 +1182,10 @@ const Home = () => {
                     aria-hidden="true"
                   />
                   <div className="relative overflow-hidden rounded-2xl bg-black shadow-2xl ring-1 ring-white/15">
-                    <LazyVimeoPlayer
+                    <VimeoClickToPlay
                       videoId="1122267050"
                       title="The AceHost Whistler Vacation Experience"
-                      loadStrategy="immediate"
-                      fit="cover"
+                      priority
                       loop
                       className="w-full"
                     />

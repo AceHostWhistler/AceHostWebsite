@@ -5,7 +5,7 @@ import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import LazyVimeoPlayer from "@/components/LazyVimeoPlayer";
+import VimeoClickToPlay from "@/components/VimeoClickToPlay";
 import Link from "next/link";
 import { IoIosArrowBack, IoIosArrowForward, IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import {
@@ -313,13 +313,11 @@ const ConciergeService = () => {
                         </a>
                       </div>
 
-                      <LazyVimeoPlayer
+                      <VimeoClickToPlay
                         videoId="1122268553"
                         title="The AceHost Concierge Reel"
                         aspectRatio="portrait"
-                        loadStrategy="immediate"
                         showPortrait
-                        fit="cover"
                         className="w-full bg-black"
                       />
 

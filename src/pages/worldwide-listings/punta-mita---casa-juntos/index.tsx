@@ -18,7 +18,7 @@ import {
 import { getWorldwideAmenities } from "@/data/worldwideAmenities";
 import { getFullPhotoSrc, getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Footer from "@/components/Footer";
-import LazyVimeoPlayer from "@/components/LazyVimeoPlayer";
+import VimeoClickToPlay from "@/components/VimeoClickToPlay";
 import { X, MapPin, Users, Bed, Bath, Check } from "lucide-react";
 
 const PuntaMitaCasaJuntos = () => {
@@ -163,11 +163,10 @@ const PuntaMitaCasaJuntos = () => {
 
           {/* Video Section */}
           <div className="max-w-7xl mx-auto px-4 mb-10">
-            <LazyVimeoPlayer
+            <VimeoClickToPlay
               videoId="1072749932"
               hash="a4f9e2ffdd"
               title="Punta Mita - Casa Juntos"
-              loadStrategy="inView"
               className="rounded-lg shadow-lg"
             />
           </div>

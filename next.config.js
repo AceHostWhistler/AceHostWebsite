@@ -218,6 +218,11 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'vumbnail.com',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.vimeocdn.com',
+        pathname: '/**',
       }
     ],
   },

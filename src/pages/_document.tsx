@@ -46,8 +46,6 @@ export default function Document() {
 
         {/* Enable DNS prefetching */}
         <meta httpEquiv="x-dns-prefetch-control" content="on" />
-        <link rel="dns-prefetch" href="https://player.vimeo.com" />
-        <link rel="preconnect" href="https://player.vimeo.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.youtube.com" />
         <link rel="preconnect" href="https://www.youtube.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.instagram.com" />
