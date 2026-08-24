@@ -1,6 +1,6 @@
 /**
  * Pre-generates WebP gallery + full variants for large property photo folders.
- * Run: node scripts/optimize-property-photos.js
+ * Run manually when source photos change: npm run optimize-property-photos
  * Options: --min-folder-mb 50 (default)
  */
 const fs = require("fs");
@@ -63,7 +63,7 @@ function optimizedWebPath(folderName, baseName, variant) {
   return `${prefix}${folderName}/${baseName}.webp`;
 }
 
-function recordManifestEntry(manifest, sourcePath, folderName, fileName) {
+function recordManifestEntry(manifest, folderName, fileName) {
   const baseName = fileName.replace(/\.[^.]+$/, "");
   const source = sourceWebPath(folderName, fileName);
   for (const variant of Object.keys(VARIANTS)) {
@@ -78,8 +78,9 @@ function recordManifestEntry(manifest, sourcePath, folderName, fileName) {
 async function optimizeFile(sourcePath, folderName, manifest) {
   const fileName = path.basename(sourcePath);
   const baseName = fileName.replace(/\.[^.]+$/, "");
+  let encodedVariants = 0;
 
-  for (const [name, config] of Object.entries(VARIANTS)) {
+  for (const [, config] of Object.entries(VARIANTS)) {
     const outputDir = path.join(config.root, folderName);
     fs.mkdirSync(outputDir, { recursive: true });
     const outputPath = path.join(outputDir, `${baseName}.webp`);
@@ -95,12 +96,21 @@ async function optimizeFile(sourcePath, folderName, manifest) {
       .resize({ width: config.maxWidth, withoutEnlargement: true, fit: "inside" })
       .webp({ quality: config.quality, effort: 4 })
       .toFile(outputPath);
+    encodedVariants++;
   }
 
-  recordManifestEntry(manifest, sourcePath, folderName, fileName);
+  recordManifestEntry(manifest, folderName, fileName);
+  return encodedVariants;
 }
 
 async function main() {
+  if (process.env.VERCEL === "1") {
+    console.log(
+      "Skipping property photo optimization on Vercel (using pre-built assets from git)."
+    );
+    process.exit(0);
+  }
+
   const minFolderMb = parseMinFolderMb();
   if (!fs.existsSync(PROPERTIES_DIR)) {
     console.error("Properties directory not found.");
@@ -121,13 +131,15 @@ async function main() {
 
   const photoManifest = { gallery: {}, full: {} };
   let totalFiles = 0;
+  let totalEncodedVariants = 0;
+
   for (const folder of folders) {
     const folderPath = path.join(PROPERTIES_DIR, folder);
     const images = listImageFiles(folderPath);
     console.log(`\n${folder} (${images.length} images)`);
     for (let i = 0; i < images.length; i++) {
       process.stdout.write(`  [${i + 1}/${images.length}]\r`);
-      await optimizeFile(images[i], folder, photoManifest);
+      totalEncodedVariants += await optimizeFile(images[i], folder, photoManifest);
       totalFiles++;
     }
   }
@@ -135,13 +147,15 @@ async function main() {
   for (const folder of folders) {
     const folderPath = path.join(PROPERTIES_DIR, folder);
     for (const imagePath of listImageFiles(folderPath)) {
-      recordManifestEntry(
-        photoManifest,
-        imagePath,
-        folder,
-        path.basename(imagePath)
-      );
+      recordManifestEntry(photoManifest, folder, path.basename(imagePath));
     }
+  }
+
+  if (totalEncodedVariants === 0) {
+    console.log(
+      `\nDone. ${totalFiles} images across ${folders.length} folders (all up to date, manifests unchanged).`
+    );
+    return;
   }
 
   const folderManifest = {
@@ -166,7 +180,7 @@ async function main() {
   const gallerySize = dirSize(GALLERY_ROOT);
   const fullSize = dirSize(FULL_ROOT);
   console.log(
-    `\nDone. ${totalFiles} images across ${folders.length} folders.`
+    `\nDone. ${totalFiles} images across ${folders.length} folders (${totalEncodedVariants} variants re-encoded).`
   );
   console.log(`Gallery total: ${formatBytes(gallerySize)} | Full total: ${formatBytes(fullSize)}`);
   console.log(`Folder manifest: ${MANIFEST_PATH}`);
