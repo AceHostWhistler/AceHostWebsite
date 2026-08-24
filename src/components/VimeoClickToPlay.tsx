@@ -92,34 +92,74 @@ function logVimeoError(...args: unknown[]) {
   }
 }
 
+function isVideoElement(
+  node: Element | null,
+  doc: Document
+): node is HTMLVideoElement {
+  if (!node || node.tagName !== "VIDEO") {
+    return false;
+  }
+
+  const VideoCtor = doc.defaultView?.HTMLVideoElement;
+  return !VideoCtor || node instanceof VideoCtor;
+}
+
 function isProxiedVimeoEmbed(url: string): boolean {
   return url.includes("/api/vimeo/") || url.includes("/api/dev/vimeo/");
 }
 
 async function waitForProxiedVimeoReady(
-  iframe: HTMLIFrameElement,
-  timeoutMs = 30000
+  getIframe: () => HTMLIFrameElement | null,
+  timeoutMs = 20000
 ): Promise<HTMLVideoElement> {
   const startedAt = Date.now();
+  let lastVideo: HTMLVideoElement | null = null;
 
   while (Date.now() - startedAt < timeoutMs) {
     try {
-      const doc = iframe.contentDocument;
-      const player = doc?.getElementById("player");
-      const video = doc?.querySelector("video");
+      const iframe = getIframe();
+      const doc = iframe?.contentDocument;
+      if (!doc) {
+        await new Promise((resolve) => window.setTimeout(resolve, 100));
+        continue;
+      }
 
-      if (
-        player &&
-        !player.classList.contains("loading") &&
-        video instanceof HTMLVideoElement
-      ) {
+      const video = doc.querySelector("video");
+      if (isVideoElement(video, doc)) {
+        lastVideo = video;
+        const elapsed = Date.now() - startedAt;
+
+        if (
+          !video.paused ||
+          video.currentTime > 0 ||
+          video.readyState >= HTMLMediaElement.HAVE_FUTURE_DATA ||
+          elapsed >= 3000
+        ) {
+          return video;
+        }
+
+        await new Promise<void>((resolve) => {
+          const timeout = window.setTimeout(resolve, 1500);
+          const finish = () => {
+            window.clearTimeout(timeout);
+            resolve();
+          };
+
+          video.addEventListener("playing", finish, { once: true });
+          video.addEventListener("canplay", finish, { once: true });
+        });
+
         return video;
       }
     } catch {
       // Ignore transient access errors while the iframe document loads.
     }
 
-    await new Promise((resolve) => window.setTimeout(resolve, 200));
+    await new Promise((resolve) => window.setTimeout(resolve, 100));
+  }
+
+  if (lastVideo) {
+    return lastVideo;
   }
 
   throw new Error("Timed out waiting for proxied Vimeo player to become ready.");
@@ -141,6 +181,8 @@ const VimeoClickToPlay: React.FC<VimeoClickToPlayProps> = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const playerRef = useRef<{ destroy?: () => Promise<void> } | null>(null);
+  const playbackAttemptRef = useRef(0);
+  const activeInitAttemptRef = useRef<number | null>(null);
   const [phase, setPhase] = useState<PlayerPhase>("idle");
   const [playUrl, setPlayUrl] = useState<string | null>(null);
   const [posterFailed, setPosterFailed] = useState(false);
@@ -203,6 +245,8 @@ const VimeoClickToPlay: React.FC<VimeoClickToPlayProps> = ({
     logVimeoDebug("Vimeo canonical URL:", canonicalUrl);
 
     setErrorMessage(null);
+    playbackAttemptRef.current += 1;
+    activeInitAttemptRef.current = null;
 
     flushSync(() => {
       setPlayUrl(embedUrl);
@@ -210,15 +254,16 @@ const VimeoClickToPlay: React.FC<VimeoClickToPlayProps> = ({
     });
   }, [isInteractive, loop, resolvedVideo, showPortrait]);
 
-  useEffect(() => {
-    if (phase !== "loading" || !playUrl || !iframeRef.current) {
-      return;
-    }
+  const initializePlayer = useCallback(async () => {
+      const attempt = playbackAttemptRef.current;
+      const isStale = () => attempt !== playbackAttemptRef.current;
+      const iframe = iframeRef.current;
 
-    let cancelled = false;
-    const iframe = iframeRef.current;
+      if (!iframe) {
+        resetToPoster("Vimeo iframe is missing.");
+        return;
+      }
 
-    const initializePlayer = async () => {
       try {
         const iframeMetrics = iframe.getBoundingClientRect();
         logVimeoDebug("Iframe mounted:", {
@@ -234,8 +279,8 @@ const VimeoClickToPlay: React.FC<VimeoClickToPlayProps> = ({
         });
 
         if (isProxiedVimeoEmbed(iframe.src)) {
-          const video = await waitForProxiedVimeoReady(iframe);
-          if (cancelled) {
+          const video = await waitForProxiedVimeoReady(() => iframeRef.current);
+          if (isStale()) {
             return;
           }
 
@@ -247,17 +292,23 @@ const VimeoClickToPlay: React.FC<VimeoClickToPlayProps> = ({
 
           setPhase("ready");
 
-          await video.play().catch((error: unknown) => {
-            logVimeoError("Proxied Vimeo playback failed:", error);
-            resetToPoster(
-              error instanceof Error ? error.message : "Vimeo playback failed."
-            );
-          });
+          if (video.paused) {
+            await video.play().catch((error: unknown) => {
+              logVimeoError("Proxied Vimeo playback failed:", error);
+              if (!isStale()) {
+                resetToPoster(
+                  error instanceof Error
+                    ? error.message
+                    : "Vimeo playback failed."
+                );
+              }
+            });
+          }
           return;
         }
 
         const Player = (await import("@vimeo/player")).default;
-        if (cancelled) {
+        if (isStale()) {
           return;
         }
 
@@ -266,11 +317,15 @@ const VimeoClickToPlay: React.FC<VimeoClickToPlayProps> = ({
 
         player.on("error", (event) => {
           logVimeoError("Vimeo player error event:", event);
-          resetToPoster(typeof event === "string" ? event : "Vimeo player error.");
+          if (!isStale()) {
+            resetToPoster(
+              typeof event === "string" ? event : "Vimeo player error."
+            );
+          }
         });
 
         await player.ready();
-        if (cancelled) {
+        if (isStale()) {
           return;
         }
 
@@ -279,12 +334,14 @@ const VimeoClickToPlay: React.FC<VimeoClickToPlayProps> = ({
 
         await player.play().catch((error: unknown) => {
           logVimeoError("Vimeo playback failed:", error);
-          resetToPoster(
-            error instanceof Error ? error.message : "Vimeo playback failed."
-          );
+          if (!isStale()) {
+            resetToPoster(
+              error instanceof Error ? error.message : "Vimeo playback failed."
+            );
+          }
         });
       } catch (error) {
-        if (cancelled) {
+        if (isStale()) {
           return;
         }
 
@@ -293,32 +350,42 @@ const VimeoClickToPlay: React.FC<VimeoClickToPlayProps> = ({
           error instanceof Error ? error.message : "Vimeo failed to initialize."
         );
       }
-    };
+    },
+    [resetToPoster]
+  );
 
-    const onIframeLoad = () => {
-      logVimeoDebug("Vimeo iframe load event fired");
-      void initializePlayer();
-    };
+  const beginIframeInitialization = useCallback(() => {
+    const iframe = iframeRef.current;
+    if (!iframe || phase !== "loading" || !playUrl) {
+      return;
+    }
 
-    const onIframeError = () => {
-      logVimeoError("Vimeo iframe load error");
-      resetToPoster("Vimeo iframe failed to load.");
-    };
+    if (!iframe.src.includes("/video/")) {
+      return;
+    }
 
-    iframe.addEventListener("load", onIframeLoad);
-    iframe.addEventListener("error", onIframeError);
+    const attempt = playbackAttemptRef.current;
+    if (activeInitAttemptRef.current === attempt) {
+      return;
+    }
 
+    activeInitAttemptRef.current = attempt;
+    void initializePlayer();
+  }, [initializePlayer, phase, playUrl]);
+
+  const handleIframeLoad = useCallback(() => {
+    logVimeoDebug("Vimeo iframe load event fired");
+    beginIframeInitialization();
+  }, [beginIframeInitialization]);
+
+  useEffect(() => {
     return () => {
-      cancelled = true;
-      iframe.removeEventListener("load", onIframeLoad);
-      iframe.removeEventListener("error", onIframeError);
-
       if (playerRef.current?.destroy) {
         void playerRef.current.destroy().catch(() => undefined);
       }
       playerRef.current = null;
     };
-  }, [phase, playUrl, resetToPoster]);
+  }, [playUrl]);
 
   const handleKeyDown = (event: KeyboardEvent<HTMLButtonElement>) => {
     if (event.key === "Enter" || event.key === " ") {
@@ -350,6 +417,11 @@ const VimeoClickToPlay: React.FC<VimeoClickToPlayProps> = ({
           allow={IFRAME_ALLOW}
           allowFullScreen
           referrerPolicy="strict-origin-when-cross-origin"
+          onLoad={handleIframeLoad}
+          onError={() => {
+            logVimeoError("Vimeo iframe load error");
+            resetToPoster("Vimeo iframe failed to load.");
+          }}
         />
       ) : null}
 
