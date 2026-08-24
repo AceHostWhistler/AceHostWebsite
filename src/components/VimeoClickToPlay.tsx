@@ -10,7 +10,6 @@ import { flushSync } from "react-dom";
 import Image from "next/image";
 import {
   buildVimeoPlayEmbedUrl,
-  getVimeoCanonicalPlayUrl,
   getVimeoPosterUrl,
   resolveVimeoVideo,
 } from "@/lib/videoEmbeds";
@@ -234,15 +233,11 @@ const VimeoClickToPlay: React.FC<VimeoClickToPlayProps> = ({
     };
 
     const embedUrl = buildVimeoPlayEmbedUrl(resolvedVideo.videoId, playOptions);
-    const canonicalUrl = getVimeoCanonicalPlayUrl(
-      resolvedVideo.videoId,
-      playOptions
-    );
 
     logVimeoDebug("Vimeo ID:", resolvedVideo.videoId);
     logVimeoDebug("Vimeo privacy hash:", resolvedVideo.hash ?? "(none)");
-    logVimeoDebug("Vimeo iframe URL (proxied):", embedUrl);
-    logVimeoDebug("Vimeo canonical URL:", canonicalUrl);
+    logVimeoDebug("Vimeo iframe URL:", embedUrl);
+    logVimeoDebug("Using Vimeo proxy:", isProxiedVimeoEmbed(embedUrl));
 
     setErrorMessage(null);
     playbackAttemptRef.current += 1;

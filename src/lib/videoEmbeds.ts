@@ -144,13 +144,27 @@ export function getVimeoCanonicalPlayUrl(
   return `https://player.vimeo.com/video/${videoId}?${params.toString()}`;
 }
 
+/** Use the first-party proxy only on localhost where DNS may block player.vimeo.com. */
+export function shouldUseVimeoProxy(hostname?: string): boolean {
+  const host =
+    hostname ??
+    (typeof window !== "undefined" ? window.location.hostname : "");
+
+  return host === "localhost" || host === "127.0.0.1";
+}
+
 /** Build embed URL after the visitor presses Play — autoplay is intentional here. */
 export function buildVimeoPlayEmbedUrl(
   videoId: string,
   options: VimeoPlayEmbedOptions = {}
 ): string {
   const params = buildVimeoPlayParams(options);
-  return `${VIMEO_PROXY_PREFIX}/video/${videoId}?${params.toString()}`;
+
+  if (shouldUseVimeoProxy()) {
+    return `${VIMEO_PROXY_PREFIX}/video/${videoId}?${params.toString()}`;
+  }
+
+  return getVimeoCanonicalPlayUrl(videoId, options);
 }
 
 export function getVimeoPosterUrl(
