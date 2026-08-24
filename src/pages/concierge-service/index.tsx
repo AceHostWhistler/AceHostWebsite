@@ -317,9 +317,8 @@ const ConciergeService = () => {
                         videoId="1122268553"
                         title="The AceHost Concierge Reel"
                         aspectRatio="portrait"
-                        loadStrategy="click"
+                        loadStrategy="immediate"
                         showPortrait
-                        autoplay
                         className="w-full bg-black"
                       />
 

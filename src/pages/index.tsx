@@ -8,6 +8,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import GuestySearchWidget from "@/components/GuestySearchWidget";
 import PropertyCoverImage from "@/components/PropertyCoverImage";
+import LazyVimeoPlayer from "@/components/LazyVimeoPlayer";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { FaUser, FaBed, FaBath } from "react-icons/fa";
@@ -25,10 +26,6 @@ import {
   buildWebsiteSchema,
 } from "@/lib/seo/schema";
 import { SITE_URL } from "@/data/seo/business";
-
-const LazyVimeoPlayer = dynamic(() => import("@/components/LazyVimeoPlayer"), {
-  ssr: true,
-});
 
 const Testimonials = dynamic(() => import("@/components/Testimonials"), {
   ssr: true,
@@ -1188,9 +1185,7 @@ const Home = () => {
                     <LazyVimeoPlayer
                       videoId="1122267050"
                       title="The AceHost Whistler Vacation Experience"
-                      loadStrategy="click"
-                      autoplay
-                      fit="cover"
+                      loadStrategy="immediate"
                       loop
                       className="w-full"
                     />

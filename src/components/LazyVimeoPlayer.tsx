@@ -1,9 +1,10 @@
-import React, { useCallback, useMemo, useRef, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import {
   buildVimeoEmbedUrl,
   buildVimeoThumbnailUrl,
 } from "@/lib/videoEmbeds";
+import VideoEmbedFrame from "@/components/VideoEmbedFrame";
 
 type LoadStrategy = "click" | "immediate" | "inView";
 
@@ -24,9 +25,6 @@ interface LazyVimeoPlayerProps {
   fit?: "contain" | "cover";
 }
 
-const IFRAME_ALLOW =
-  "autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share";
-
 const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
   videoId,
   title,
@@ -45,17 +43,19 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
 }) => {
   const [clicked, setClicked] = useState(loadStrategy === "immediate");
   const [thumbnailFailed, setThumbnailFailed] = useState(false);
-  const iframeRef = useRef<HTMLIFrameElement>(null);
-  const prefetchedRef = useRef(false);
   const { ref, inView } = useInView({
     triggerOnce: true,
     rootMargin: loadStrategy === "inView" ? "400px 0px" : "200px 0px",
   });
 
-  const shouldLoadIframe = loadStrategy === "immediate" || clicked;
-  const showPoster =
+  const shouldLoadIframe =
     loadStrategy === "immediate" ||
-    ((loadStrategy === "click" || loadStrategy === "inView") && inView);
+    clicked ||
+    (loadStrategy === "inView" && inView);
+
+  const showPoster =
+    loadStrategy === "click" ||
+    (loadStrategy === "inView" && inView && !shouldLoadIframe);
 
   const aspectRatioClass =
     aspectRatio === "square"
@@ -64,75 +64,34 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
         ? "aspect-[9/16]"
         : "aspect-video";
 
-  const playUrl = useMemo(
-    () =>
-      buildVimeoEmbedUrl(videoId, {
-        hash,
-        autoplay: autoplay && shouldLoadIframe,
-        muted: autoplay && shouldLoadIframe,
-        loop,
-        background,
-        showByline,
-        showTitle,
-        showPortrait,
-      }),
-    [
-      autoplay,
-      background,
-      hash,
-      loop,
-      shouldLoadIframe,
-      showByline,
-      showPortrait,
-      showTitle,
-      videoId,
-    ]
-  );
-
-  const clickPlayUrl = useMemo(
-    () =>
-      buildVimeoEmbedUrl(videoId, {
-        hash,
-        autoplay,
-        muted: autoplay,
-        loop,
-        background,
-        showByline,
-        showTitle,
-        showPortrait,
-      }),
-    [
-      autoplay,
-      background,
-      hash,
-      loop,
-      showByline,
-      showPortrait,
-      showTitle,
-      videoId,
-    ]
-  );
-
-  const prefetchEmbed = useCallback(() => {
-    if (!clickPlayUrl || prefetchedRef.current || shouldLoadIframe) {
-      return;
+  const vimeoUrl = useMemo(() => {
+    if (!shouldLoadIframe) {
+      return null;
     }
 
-    prefetchedRef.current = true;
-    const link = document.createElement("link");
-    link.rel = "prefetch";
-    link.href = clickPlayUrl;
-    link.as = "document";
-    document.head.appendChild(link);
-  }, [clickPlayUrl, shouldLoadIframe]);
-
-  const handlePlay = useCallback(() => {
-    const url = autoplay ? clickPlayUrl : playUrl;
-    if (iframeRef.current && url) {
-      iframeRef.current.src = url;
-    }
-    setClicked(true);
-  }, [autoplay, clickPlayUrl, playUrl]);
+    return buildVimeoEmbedUrl(videoId, {
+      hash,
+      autoplay: autoplay && (clicked || loadStrategy === "immediate"),
+      muted: false,
+      loop,
+      background,
+      showByline,
+      showTitle,
+      showPortrait,
+    });
+  }, [
+    autoplay,
+    background,
+    clicked,
+    hash,
+    loadStrategy,
+    loop,
+    shouldLoadIframe,
+    showByline,
+    showPortrait,
+    showTitle,
+    videoId,
+  ]);
 
   const thumbnailUrl = buildVimeoThumbnailUrl(videoId, thumbnailQuality);
 
@@ -141,7 +100,7 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
       ? "absolute left-1/2 top-1/2 z-10 h-[130%] w-[130%] max-w-none -translate-x-1/2 -translate-y-1/2 border-0"
       : "absolute inset-0 z-10 h-full w-full border-0";
 
-  if (!showPoster) {
+  if (loadStrategy === "inView" && !inView) {
     return (
       <div
         ref={ref}
@@ -156,24 +115,18 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
       ref={ref}
       className={`relative ${aspectRatioClass} overflow-hidden ${className}`}
     >
-      <iframe
-        ref={iframeRef}
-        src={loadStrategy === "immediate" ? playUrl : undefined}
-        className={iframeClass}
-        allow={IFRAME_ALLOW}
-        allowFullScreen
-        loading="eager"
-        referrerPolicy="strict-origin-when-cross-origin"
-        title={title}
-      />
-
-      {!shouldLoadIframe ? (
+      {shouldLoadIframe && vimeoUrl ? (
+        <VideoEmbedFrame
+          src={vimeoUrl}
+          title={title}
+          className={iframeClass}
+          loading={loadStrategy === "immediate" ? "eager" : "lazy"}
+        />
+      ) : showPoster ? (
         <button
           type="button"
-          className="absolute inset-0 z-20 flex cursor-pointer items-center justify-center"
-          onPointerEnter={prefetchEmbed}
-          onFocus={prefetchEmbed}
-          onClick={handlePlay}
+          className="absolute inset-0 z-10 flex cursor-pointer items-center justify-center"
+          onClick={() => setClicked(true)}
           aria-label={`Play ${title}`}
         >
           <div className="absolute inset-0 bg-black">
@@ -206,7 +159,9 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
             </svg>
           </div>
         </button>
-      ) : null}
+      ) : (
+        <div className="absolute inset-0 bg-neutral-900" aria-hidden="true" />
+      )}
     </div>
   );
 };

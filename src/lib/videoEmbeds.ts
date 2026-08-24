@@ -69,7 +69,7 @@ export function buildVimeoEmbedUrl(
     byline: showByline ? "1" : "0",
     portrait: showPortrait ? "1" : "0",
     autoplay: autoplay ? "1" : "0",
-    muted: muted || autoplay ? "1" : "0",
+    muted: muted ? "1" : "0",
     loop: loop ? "1" : "0",
     background: background ? "1" : "0",
   });
