@@ -3,7 +3,8 @@ import tls from "node:tls";
 import { Resolver } from "node:dns/promises";
 
 const VIMEO_HOST = "player.vimeo.com";
-const DEV_PROXY_PREFIX = "/api/dev/vimeo";
+export const VIMEO_PROXY_PREFIX = "/api/vimeo";
+const DEV_PROXY_PREFIX = VIMEO_PROXY_PREFIX;
 
 const resolver = new Resolver();
 resolver.setServers(["8.8.8.8", "1.1.1.1"]);
@@ -67,7 +68,7 @@ export function rewriteVimeoDevProxyUrls(
     .replaceAll(`https://${VIMEO_HOST}`, DEV_PROXY_PREFIX)
     .replaceAll(`http://${VIMEO_HOST}`, DEV_PROXY_PREFIX)
     .replaceAll(`//${VIMEO_HOST}`, DEV_PROXY_PREFIX)
-    .replaceAll('"player_url":"player.vimeo.com"', '"player_url":"localhost:3000/api/dev/vimeo"')
+    .replaceAll('"player_url":"player.vimeo.com"', `"player_url":"${new URL(origin).host}${VIMEO_PROXY_PREFIX}"`)
     .replace(/(['"`])\/video\//g, `$1${DEV_PROXY_PREFIX}/video/`);
 
   if (rewritten.includes("<head") && !/<base[\s>]/i.test(rewritten)) {
@@ -107,7 +108,7 @@ export async function fetchVimeoThroughTrustedDns(
               "Accept: */*",
               "Accept-Language: en-US,en;q=0.9",
               `Referer: ${referer}`,
-              "Origin: http://localhost:3000",
+              `Origin: ${new URL(referer).origin}`,
               "Accept-Encoding: identity",
               "Connection: close",
               "",
