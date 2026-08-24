@@ -92,6 +92,39 @@ function logVimeoError(...args: unknown[]) {
   }
 }
 
+function isProxiedVimeoEmbed(url: string): boolean {
+  return url.includes("/api/vimeo/") || url.includes("/api/dev/vimeo/");
+}
+
+async function waitForProxiedVimeoReady(
+  iframe: HTMLIFrameElement,
+  timeoutMs = 30000
+): Promise<HTMLVideoElement> {
+  const startedAt = Date.now();
+
+  while (Date.now() - startedAt < timeoutMs) {
+    try {
+      const doc = iframe.contentDocument;
+      const player = doc?.getElementById("player");
+      const video = doc?.querySelector("video");
+
+      if (
+        player &&
+        !player.classList.contains("loading") &&
+        video instanceof HTMLVideoElement
+      ) {
+        return video;
+      }
+    } catch {
+      // Ignore transient access errors while the iframe document loads.
+    }
+
+    await new Promise((resolve) => window.setTimeout(resolve, 200));
+  }
+
+  throw new Error("Timed out waiting for proxied Vimeo player to become ready.");
+}
+
 const VimeoClickToPlay: React.FC<VimeoClickToPlayProps> = ({
   videoId,
   videoUrl,
@@ -131,7 +164,6 @@ const VimeoClickToPlay: React.FC<VimeoClickToPlayProps> = ({
   const resetToPoster = useCallback((message?: string) => {
     setPhase("error");
     setErrorMessage(message ?? "Vimeo playback failed.");
-    setPlayUrl(null);
 
     if (playerRef.current?.destroy) {
       void playerRef.current.destroy().catch(() => undefined);
@@ -200,6 +232,29 @@ const VimeoClickToPlay: React.FC<VimeoClickToPlayProps> = ({
           visibility: window.getComputedStyle(iframe).visibility,
           zIndex: window.getComputedStyle(iframe).zIndex,
         });
+
+        if (isProxiedVimeoEmbed(iframe.src)) {
+          const video = await waitForProxiedVimeoReady(iframe);
+          if (cancelled) {
+            return;
+          }
+
+          logVimeoDebug("Proxied Vimeo player ready", {
+            paused: video.paused,
+            readyState: video.readyState,
+            currentTime: video.currentTime,
+          });
+
+          setPhase("ready");
+
+          await video.play().catch((error: unknown) => {
+            logVimeoError("Proxied Vimeo playback failed:", error);
+            resetToPoster(
+              error instanceof Error ? error.message : "Vimeo playback failed."
+            );
+          });
+          return;
+        }
 
         const Player = (await import("@vimeo/player")).default;
         if (cancelled) {
