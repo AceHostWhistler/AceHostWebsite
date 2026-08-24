@@ -38,10 +38,46 @@ type VimeoProxyResponse = {
   body: string;
 };
 
+function decodeChunkedBody(
+  body: string,
+  headers: Record<string, string>
+): string {
+  const transferEncoding = headers["transfer-encoding"]?.toLowerCase() ?? "";
+  if (!transferEncoding.includes("chunked")) {
+    return body;
+  }
+
+  let offset = 0;
+  const chunks: string[] = [];
+
+  while (offset < body.length) {
+    const lineEnd = body.indexOf("\r\n", offset);
+    if (lineEnd === -1) {
+      break;
+    }
+
+    const sizeLine = body.slice(offset, lineEnd).split(";")[0]?.trim() ?? "";
+    const size = Number.parseInt(sizeLine, 16);
+    if (Number.isNaN(size)) {
+      break;
+    }
+
+    if (size === 0) {
+      break;
+    }
+
+    offset = lineEnd + 2;
+    chunks.push(body.slice(offset, offset + size));
+    offset += size + 2;
+  }
+
+  return chunks.join("");
+}
+
 function parseHttpResponse(raw: string): VimeoProxyResponse {
   const separator = raw.indexOf("\r\n\r\n");
   const head = raw.slice(0, separator);
-  const body = raw.slice(separator + 4);
+  const rawBody = raw.slice(separator + 4);
   const lines = head.split("\r\n");
   const status = Number.parseInt(lines[0]?.match(/^HTTP\/\d\.\d (\d+)/)?.[1] || "502", 10);
   const headers: Record<string, string> = {};
@@ -56,6 +92,8 @@ function parseHttpResponse(raw: string): VimeoProxyResponse {
     const value = line.slice(index + 1).trim();
     headers[key] = value;
   }
+
+  const body = decodeChunkedBody(rawBody, headers);
 
   return { status, headers, body };
 }

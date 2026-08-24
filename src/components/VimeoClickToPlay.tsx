@@ -1,5 +1,6 @@
 import React, {
   useCallback,
+  useEffect,
   useMemo,
   useRef,
   useState,
@@ -9,12 +10,14 @@ import { flushSync } from "react-dom";
 import Image from "next/image";
 import {
   buildVimeoPlayEmbedUrl,
+  getVimeoCanonicalPlayUrl,
   getVimeoPosterUrl,
   resolveVimeoVideo,
 } from "@/lib/videoEmbeds";
-import { useVimeoCoverLayout } from "@/hooks/useVimeoCoverLayout";
 
 type AspectRatioPreset = "video" | "square" | "portrait";
+
+type PlayerPhase = "idle" | "loading" | "ready" | "error";
 
 export interface VimeoClickToPlayProps {
   videoId?: string;
@@ -32,17 +35,12 @@ export interface VimeoClickToPlayProps {
 }
 
 const IFRAME_ALLOW = "autoplay; fullscreen; picture-in-picture";
+const IS_DEV = process.env.NODE_ENV === "development";
 
 const ASPECT_CLASS: Record<AspectRatioPreset, string> = {
   video: "aspect-video",
   square: "aspect-square",
   portrait: "aspect-[9/16]",
-};
-
-const DEFAULT_VIDEO_ASPECT: Record<AspectRatioPreset, number> = {
-  video: 16 / 9,
-  square: 1,
-  portrait: 9 / 16,
 };
 
 const PRECONNECT_HOSTS = ["https://i.vimeocdn.com"] as const;
@@ -82,6 +80,18 @@ function isOptimizablePoster(url: string): boolean {
   }
 }
 
+function logVimeoDebug(...args: unknown[]) {
+  if (IS_DEV) {
+    console.log("[VimeoClickToPlay]", ...args);
+  }
+}
+
+function logVimeoError(...args: unknown[]) {
+  if (IS_DEV) {
+    console.error("[VimeoClickToPlay]", ...args);
+  }
+}
+
 const VimeoClickToPlay: React.FC<VimeoClickToPlayProps> = ({
   videoId,
   videoUrl,
@@ -89,7 +99,6 @@ const VimeoClickToPlay: React.FC<VimeoClickToPlayProps> = ({
   title,
   poster,
   aspectRatio = "video",
-  videoAspectRatio,
   className = "",
   loop = false,
   priority = false,
@@ -98,23 +107,16 @@ const VimeoClickToPlay: React.FC<VimeoClickToPlayProps> = ({
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const playerRef = useRef<{ destroy?: () => Promise<void> } | null>(null);
+  const [phase, setPhase] = useState<PlayerPhase>("idle");
   const [playUrl, setPlayUrl] = useState<string | null>(null);
   const [posterFailed, setPosterFailed] = useState(false);
   const [intentPrimed, setIntentPrimed] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const resolvedVideo = useMemo(
     () => resolveVimeoVideo({ videoId, videoUrl, hash }),
     [hash, videoId, videoUrl]
-  );
-
-  const sourceAspectRatio =
-    videoAspectRatio ?? DEFAULT_VIDEO_ASPECT[aspectRatio];
-
-  const coverStyle = useVimeoCoverLayout(
-    containerRef,
-    sourceAspectRatio,
-    isPlaying
   );
 
   const posterUrl =
@@ -122,6 +124,20 @@ const VimeoClickToPlay: React.FC<VimeoClickToPlayProps> = ({
     (resolvedVideo
       ? getVimeoPosterUrl(resolvedVideo.videoId, posterQuality)
       : "");
+
+  const showPosterOverlay = phase !== "ready";
+  const isInteractive = phase === "idle" || phase === "error";
+
+  const resetToPoster = useCallback((message?: string) => {
+    setPhase("error");
+    setErrorMessage(message ?? "Vimeo playback failed.");
+    setPlayUrl(null);
+
+    if (playerRef.current?.destroy) {
+      void playerRef.current.destroy().catch(() => undefined);
+    }
+    playerRef.current = null;
+  }, []);
 
   const handleIntent = useCallback(() => {
     if (intentPrimed) {
@@ -133,25 +149,121 @@ const VimeoClickToPlay: React.FC<VimeoClickToPlayProps> = ({
   }, [intentPrimed]);
 
   const startPlayback = useCallback(() => {
-    if (!resolvedVideo || isPlaying) {
+    if (!resolvedVideo || !isInteractive) {
       return;
     }
 
-    const url = buildVimeoPlayEmbedUrl(resolvedVideo.videoId, {
+    const playOptions = {
       hash: resolvedVideo.hash,
       loop,
       showPortrait,
-    });
+    };
 
-    if (iframeRef.current) {
-      iframeRef.current.src = url;
-    }
+    const embedUrl = buildVimeoPlayEmbedUrl(resolvedVideo.videoId, playOptions);
+    const canonicalUrl = getVimeoCanonicalPlayUrl(
+      resolvedVideo.videoId,
+      playOptions
+    );
+
+    logVimeoDebug("Vimeo ID:", resolvedVideo.videoId);
+    logVimeoDebug("Vimeo privacy hash:", resolvedVideo.hash ?? "(none)");
+    logVimeoDebug("Vimeo iframe URL (proxied):", embedUrl);
+    logVimeoDebug("Vimeo canonical URL:", canonicalUrl);
+
+    setErrorMessage(null);
 
     flushSync(() => {
-      setPlayUrl(url);
-      setIsPlaying(true);
+      setPlayUrl(embedUrl);
+      setPhase("loading");
     });
-  }, [isPlaying, loop, resolvedVideo, showPortrait]);
+  }, [isInteractive, loop, resolvedVideo, showPortrait]);
+
+  useEffect(() => {
+    if (phase !== "loading" || !playUrl || !iframeRef.current) {
+      return;
+    }
+
+    let cancelled = false;
+    const iframe = iframeRef.current;
+
+    const initializePlayer = async () => {
+      try {
+        const iframeMetrics = iframe.getBoundingClientRect();
+        logVimeoDebug("Iframe mounted:", {
+          src: iframe.src,
+          width: iframeMetrics.width,
+          height: iframeMetrics.height,
+          top: iframeMetrics.top,
+          left: iframeMetrics.left,
+          transform: window.getComputedStyle(iframe).transform,
+          opacity: window.getComputedStyle(iframe).opacity,
+          visibility: window.getComputedStyle(iframe).visibility,
+          zIndex: window.getComputedStyle(iframe).zIndex,
+        });
+
+        const Player = (await import("@vimeo/player")).default;
+        if (cancelled) {
+          return;
+        }
+
+        const player = new Player(iframe);
+        playerRef.current = player;
+
+        player.on("error", (event) => {
+          logVimeoError("Vimeo player error event:", event);
+          resetToPoster(typeof event === "string" ? event : "Vimeo player error.");
+        });
+
+        await player.ready();
+        if (cancelled) {
+          return;
+        }
+
+        logVimeoDebug("Vimeo player ready");
+        setPhase("ready");
+
+        await player.play().catch((error: unknown) => {
+          logVimeoError("Vimeo playback failed:", error);
+          resetToPoster(
+            error instanceof Error ? error.message : "Vimeo playback failed."
+          );
+        });
+      } catch (error) {
+        if (cancelled) {
+          return;
+        }
+
+        logVimeoError("Vimeo failed to initialize:", error);
+        resetToPoster(
+          error instanceof Error ? error.message : "Vimeo failed to initialize."
+        );
+      }
+    };
+
+    const onIframeLoad = () => {
+      logVimeoDebug("Vimeo iframe load event fired");
+      void initializePlayer();
+    };
+
+    const onIframeError = () => {
+      logVimeoError("Vimeo iframe load error");
+      resetToPoster("Vimeo iframe failed to load.");
+    };
+
+    iframe.addEventListener("load", onIframeLoad);
+    iframe.addEventListener("error", onIframeError);
+
+    return () => {
+      cancelled = true;
+      iframe.removeEventListener("load", onIframeLoad);
+      iframe.removeEventListener("error", onIframeError);
+
+      if (playerRef.current?.destroy) {
+        void playerRef.current.destroy().catch(() => undefined);
+      }
+      playerRef.current = null;
+    };
+  }, [phase, playUrl, resetToPoster]);
 
   const handleKeyDown = (event: KeyboardEvent<HTMLButtonElement>) => {
     if (event.key === "Enter" || event.key === " ") {
@@ -174,27 +286,23 @@ const VimeoClickToPlay: React.FC<VimeoClickToPlayProps> = ({
       ref={containerRef}
       className={`relative w-full overflow-hidden bg-black ${ASPECT_CLASS[aspectRatio]} ${className}`}
     >
-      {isPlaying ? (
+      {playUrl ? (
         <iframe
           ref={iframeRef}
-          src={playUrl ?? undefined}
+          src={playUrl}
           title={title}
-          className="absolute left-1/2 top-1/2 border-0"
-          style={coverStyle}
+          className="absolute inset-0 h-full w-full border-0"
           allow={IFRAME_ALLOW}
           allowFullScreen
           referrerPolicy="strict-origin-when-cross-origin"
         />
-      ) : (
-        <button
-          type="button"
-          className="absolute inset-0 z-10 flex cursor-pointer items-center justify-center border-0 bg-transparent p-0"
-          onPointerDown={handleIntent}
-          onPointerEnter={handleIntent}
-          onFocus={handleIntent}
-          onClick={startPlayback}
-          onKeyDown={handleKeyDown}
-          aria-label="Play video"
+      ) : null}
+
+      {showPosterOverlay ? (
+        <div
+          className={`absolute inset-0 z-10 flex items-center justify-center ${
+            isInteractive ? "" : "pointer-events-none"
+          }`}
         >
           <span className="absolute inset-0 bg-black" aria-hidden="true">
             {!posterFailed && posterUrl ? (
@@ -204,7 +312,7 @@ const VimeoClickToPlay: React.FC<VimeoClickToPlayProps> = ({
                   alt={title}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 720px"
-                  className="object-cover opacity-90"
+                  className={`object-cover ${phase === "loading" ? "opacity-100" : "opacity-90"}`}
                   priority={priority}
                   loading={priority ? "eager" : "lazy"}
                   onError={() => setPosterFailed(true)}
@@ -213,7 +321,9 @@ const VimeoClickToPlay: React.FC<VimeoClickToPlayProps> = ({
                 <img
                   src={posterUrl}
                   alt={title}
-                  className="absolute inset-0 h-full w-full object-cover opacity-90"
+                  className={`absolute inset-0 h-full w-full object-cover ${
+                    phase === "loading" ? "opacity-100" : "opacity-90"
+                  }`}
                   loading={priority ? "eager" : "lazy"}
                   decoding="async"
                   fetchPriority={priority ? "high" : "low"}
@@ -225,21 +335,46 @@ const VimeoClickToPlay: React.FC<VimeoClickToPlayProps> = ({
             )}
           </span>
 
-          <span className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full bg-black/70">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="text-white"
-              aria-hidden="true"
+          {phase === "loading" ? (
+            <span
+              className="relative z-20 flex h-16 w-16 items-center justify-center rounded-full bg-black/70"
+              aria-live="polite"
+              aria-label="Loading video"
             >
-              <path d="M8 5V19L19 12L8 5Z" fill="currentColor" />
-            </svg>
-          </span>
-        </button>
-      )}
+              <span className="h-8 w-8 animate-spin rounded-full border-2 border-white/30 border-t-white" />
+            </span>
+          ) : (
+            <button
+              type="button"
+              className="relative z-20 flex h-16 w-16 cursor-pointer items-center justify-center rounded-full border-0 bg-black/70 p-0"
+              onPointerDown={handleIntent}
+              onPointerEnter={handleIntent}
+              onFocus={handleIntent}
+              onClick={startPlayback}
+              onKeyDown={handleKeyDown}
+              aria-label={phase === "error" ? "Retry video" : "Play video"}
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="text-white"
+                aria-hidden="true"
+              >
+                <path d="M8 5V19L19 12L8 5Z" fill="currentColor" />
+              </svg>
+            </button>
+          )}
+
+          {phase === "error" && errorMessage ? (
+            <span className="absolute bottom-3 left-3 right-3 z-20 rounded bg-black/75 px-3 py-2 text-center text-xs text-white">
+              {errorMessage}
+            </span>
+          ) : null}
+        </div>
+      ) : null}
     </div>
   );
 };

@@ -106,11 +106,11 @@ export function resolveVimeoVideo({
   return null;
 }
 
-/** Build embed URL after the visitor presses Play — autoplay is intentional here. */
-export function buildVimeoPlayEmbedUrl(
-  videoId: string,
-  { hash, loop = false, showPortrait = false }: VimeoPlayEmbedOptions = {}
-): string {
+function buildVimeoPlayParams({
+  hash,
+  loop = false,
+  showPortrait = false,
+}: VimeoPlayEmbedOptions = {}): URLSearchParams {
   const params = new URLSearchParams({
     autoplay: "1",
     controls: "1",
@@ -132,6 +132,24 @@ export function buildVimeoPlayEmbedUrl(
     params.set("h", hash);
   }
 
+  return params;
+}
+
+/** Canonical Vimeo player URL — for logging and embed-domain checks. */
+export function getVimeoCanonicalPlayUrl(
+  videoId: string,
+  options: VimeoPlayEmbedOptions = {}
+): string {
+  const params = buildVimeoPlayParams(options);
+  return `https://player.vimeo.com/video/${videoId}?${params.toString()}`;
+}
+
+/** Build embed URL after the visitor presses Play — autoplay is intentional here. */
+export function buildVimeoPlayEmbedUrl(
+  videoId: string,
+  options: VimeoPlayEmbedOptions = {}
+): string {
+  const params = buildVimeoPlayParams(options);
   return `${VIMEO_PROXY_PREFIX}/video/${videoId}?${params.toString()}`;
 }
 
