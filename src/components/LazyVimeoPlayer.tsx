@@ -97,7 +97,7 @@ const LazyVimeoPlayer: React.FC<LazyVimeoPlayerProps> = ({
 
   const iframeClass =
     fit === "cover"
-      ? "absolute left-1/2 top-1/2 z-10 h-[130%] w-[130%] max-w-none -translate-x-1/2 -translate-y-1/2 border-0"
+      ? "absolute left-1/2 top-[44%] z-10 h-[126%] w-[130%] max-w-none -translate-x-1/2 -translate-y-1/2 border-0"
       : "absolute inset-0 z-10 h-full w-full border-0";
 
   if (loadStrategy === "inView" && !inView) {

@@ -319,6 +319,7 @@ const ConciergeService = () => {
                         aspectRatio="portrait"
                         loadStrategy="immediate"
                         showPortrait
+                        fit="cover"
                         className="w-full bg-black"
                       />
 
