@@ -1,2 +1,2 @@
-export { default } from "./VimeoClickToPlay";
-export type { VimeoClickToPlayProps } from "./VimeoClickToPlay";
+export { default } from "./VimeoEmbed";
+export type { VimeoEmbedProps } from "./VimeoEmbed";

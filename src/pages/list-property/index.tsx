@@ -5,7 +5,7 @@ import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ListPropertyServiceCard from "@/components/listProperty/ListPropertyServiceCard";
-import VimeoClickToPlay from "@/components/VimeoClickToPlay";
+import VimeoEmbed from "@/components/VimeoEmbed";
 import {
   ArrowRight,
   Mail,
@@ -424,7 +424,7 @@ const ListProperty = () => {
               </div>
               <div className="lg:col-span-7">
                 <div className="relative overflow-hidden rounded-2xl bg-black shadow-2xl ring-1 ring-white/15">
-                  <VimeoClickToPlay
+                  <VimeoEmbed
                     videoId="1122267050"
                     title="AceHost Whistler property management"
                     loop

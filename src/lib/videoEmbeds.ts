@@ -7,30 +7,16 @@ export const EMBED_FRAME_HOSTS = [
 ] as const;
 
 const VIMEO_APP_ID = "58479";
-const VIMEO_PROXY_PREFIX = "/api/vimeo";
 
 export type ParsedVimeoVideo = {
   videoId: string;
   hash?: string;
 };
 
-type VimeoPlayEmbedOptions = {
+type VimeoEmbedOptions = {
   hash?: string;
   loop?: boolean;
   showPortrait?: boolean;
-};
-
-/** Official Vimeo CDN posters — more accurate than vumbnail for portrait clips */
-const VIMEO_POSTER_OVERRIDES: Record<string, string> = {
-  "1122267050":
-    "https://i.vimeocdn.com/video/2113216144-e33261ed68ffa73f7f37ff4b716fd6c1d00dc9a9c47cb067e45d7c96ca1c9941-d",
-  "1122268553":
-    "https://i.vimeocdn.com/video/2063559667-7256546b7f523f4af102396f6b5e735cd01fa8daf9607bdb28697b215ac9e097-d",
-};
-
-const VIMEO_POSTER_WIDTH: Record<"default" | "high", string> = {
-  default: "640",
-  high: "1280",
 };
 
 type YouTubeEmbedOptions = {
@@ -106,87 +92,32 @@ export function resolveVimeoVideo({
   return null;
 }
 
-function buildVimeoPlayParams({
-  hash,
-  loop = false,
-  showPortrait = false,
-}: VimeoPlayEmbedOptions = {}): URLSearchParams {
+/** Standard Vimeo iframe URL — no autoplay; visitor uses Vimeo's native Play button. */
+export function buildVimeoEmbedUrl(
+  videoId: string,
+  { hash, loop = false, showPortrait = false }: VimeoEmbedOptions = {}
+): string {
   const params = new URLSearchParams({
-    autoplay: "1",
     controls: "1",
     playsinline: "1",
+    preload: "none",
+    dnt: "1",
     title: "0",
     byline: "0",
     portrait: showPortrait ? "1" : "0",
-    dnt: "1",
     badge: "0",
     autopause: "0",
     player_id: "0",
     app_id: VIMEO_APP_ID,
     loop: loop ? "1" : "0",
-    background: "0",
-    muted: "0",
+    play_button_position: "center",
   });
 
   if (hash) {
     params.set("h", hash);
   }
 
-  return params;
-}
-
-/** Canonical Vimeo player URL — for logging and embed-domain checks. */
-export function getVimeoCanonicalPlayUrl(
-  videoId: string,
-  options: VimeoPlayEmbedOptions = {}
-): string {
-  const params = buildVimeoPlayParams(options);
   return `https://player.vimeo.com/video/${videoId}?${params.toString()}`;
-}
-
-/** Use the first-party proxy only on localhost where DNS may block player.vimeo.com. */
-export function shouldUseVimeoProxy(hostname?: string): boolean {
-  const host =
-    hostname ??
-    (typeof window !== "undefined" ? window.location.hostname : "");
-
-  return host === "localhost" || host === "127.0.0.1";
-}
-
-/** Build embed URL after the visitor presses Play — autoplay is intentional here. */
-export function buildVimeoPlayEmbedUrl(
-  videoId: string,
-  options: VimeoPlayEmbedOptions = {}
-): string {
-  const params = buildVimeoPlayParams(options);
-
-  if (shouldUseVimeoProxy()) {
-    return `${VIMEO_PROXY_PREFIX}/video/${videoId}?${params.toString()}`;
-  }
-
-  return getVimeoCanonicalPlayUrl(videoId, options);
-}
-
-export function getVimeoPosterUrl(
-  videoId: string,
-  quality: "default" | "high" = "high"
-): string {
-  const override = VIMEO_POSTER_OVERRIDES[videoId];
-  if (override) {
-    return `${override}?mw=${VIMEO_POSTER_WIDTH[quality]}&q=85`;
-  }
-
-  return quality === "high"
-    ? `https://vumbnail.com/${videoId}.jpg`
-    : `https://vumbnail.com/${videoId}_medium.jpg`;
-}
-
-/** @deprecated Use getVimeoPosterUrl */
-export function buildVimeoThumbnailUrl(
-  videoId: string,
-  quality: "default" | "high" = "high"
-): string {
-  return getVimeoPosterUrl(videoId, quality);
 }
 
 export function buildYouTubeEmbedUrl(
