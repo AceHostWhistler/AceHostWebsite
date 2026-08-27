@@ -147,10 +147,10 @@ export default function WhistlerWeatherForecast2026Page() {
               <span className="inline-block bg-white/15 backdrop-blur-sm text-white text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
                 {CATEGORY}
               </span>
-              <h1 className="text-3xl sm:text-4xl md:text-[2.75rem] font-bold text-white leading-tight mb-4">
+              <h1 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-4">
                 {ARTICLE_HEADLINE}
               </h1>
-              <p className="text-lg sm:text-xl text-gray-100 leading-relaxed max-w-2xl mb-6">
+              <p className="text-base sm:text-lg text-gray-100 leading-relaxed max-w-2xl mb-6">
                 What a potentially historic El Niño could mean for Whistler
                 Blackcomb snowfall, temperatures and powder days this winter.
               </p>
@@ -168,10 +168,6 @@ export default function WhistlerWeatherForecast2026Page() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
             <div className="lg:grid lg:grid-cols-[minmax(0,820px)_220px] lg:gap-12 xl:gap-16 lg:justify-center">
               <div className="min-w-0 max-w-[820px] lg:max-w-none mx-auto lg:mx-0 w-full">
-                <p className="not-prose text-sm text-gray-500 italic mb-8">
-                  Updated August 2026
-                </p>
-
                 <TableOfContents mobile />
 
                 <WhistlerWeatherForecastContent />

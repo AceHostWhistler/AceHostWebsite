@@ -27,7 +27,7 @@ function ArticleImage({
   priority?: boolean;
 }) {
   return (
-    <figure className="not-prose my-10">
+    <figure className="not-prose my-8">
       <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
         <Image
           src={src}
@@ -50,7 +50,7 @@ function ArticleImage({
 
 function StatCallout({ children }: { children: React.ReactNode }) {
   return (
-    <p className="not-prose text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 my-8 leading-tight">
+    <p className="not-prose text-lg font-semibold text-gray-900 my-6 leading-relaxed border-l-4 border-gray-900 pl-4">
       {children}
     </p>
   );
@@ -74,7 +74,7 @@ function FaqAccordion() {
               onClick={() => setExpanded(isOpen ? null : index)}
               aria-expanded={isOpen}
             >
-              <h3 className="text-lg font-semibold text-gray-900 leading-snug">
+              <h3 className="text-base font-semibold text-gray-900 leading-snug">
                 {item.question}
               </h3>
               {isOpen ? (
@@ -97,14 +97,14 @@ function FaqAccordion() {
 
 export default function WhistlerWeatherForecastContent() {
   return (
-    <article className="prose prose-lg max-w-none prose-headings:scroll-mt-28">
-      <p className="text-xl text-gray-800 leading-relaxed not-prose">
+    <article className="prose prose-lg max-w-none text-gray-800 prose-headings:text-gray-900 prose-headings:font-bold prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-5 prose-h3:text-lg prose-h3:mt-8 prose-h3:mb-4 prose-p:leading-[1.8] prose-p:my-5 prose-li:my-1 prose-headings:scroll-mt-28">
+      <p>
         If you have been Googling the{" "}
         <strong>Whistler weather forecast for winter 2026/2027</strong>, you
         have probably already encountered two words repeatedly:
       </p>
 
-      <p className="not-prose text-xl font-semibold text-gray-900">El Niño.</p>
+      <p className="font-semibold text-gray-900">El Niño.</p>
 
       <p>
         And this winter, El Niño is no longer just a possibility.
@@ -129,10 +129,10 @@ export default function WhistlerWeatherForecastContent() {
 
       <p>So, does it mean a bad Whistler ski season?</p>
 
-      <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 not-prose leading-snug">
+      <p className="font-semibold text-gray-900">
         Not necessarily. In fact, Whistler&apos;s historical El Niño snowfall
         numbers are considerably more encouraging than most skiers would expect.
-      </h2>
+      </p>
 
       <p>
         There are genuine reasons to expect a warmer winter overall. There is
@@ -156,11 +156,11 @@ export default function WhistlerWeatherForecastContent() {
         good.
       </p>
 
-      <div className="not-prose bg-gray-50 border border-gray-200 rounded-xl p-6 sm:p-8 my-10">
-        <h2 className="text-lg font-bold text-gray-900 mb-4">
+      <div className="not-prose bg-gray-50 border border-gray-200 rounded-xl p-6 sm:p-8 my-8">
+        <p className="text-sm font-semibold uppercase tracking-wide text-gray-500 mb-4">
           2026/2027 Whistler Winter Forecast at a Glance
-        </h2>
-        <ul className="space-y-3 text-gray-800 text-base leading-relaxed">
+        </p>
+        <ul className="space-y-2.5 text-gray-800 text-base leading-relaxed">
           <li>
             <strong>ENSO:</strong> El Niño is strengthening, with NOAA giving a
             greater than 90% chance of a very strong event.
@@ -206,18 +206,18 @@ export default function WhistlerWeatherForecastContent() {
 
       <h2
         id="quick-forecast"
-        className="text-3xl font-bold text-gray-900 not-prose mt-12 mb-6"
+        className="scroll-mt-28"
       >
         The Quick Whistler Winter 2026/2027 Forecast
       </h2>
 
       <p>If you just want our early prediction, here it is:</p>
 
-      <h3 className="text-xl font-semibold text-gray-900 not-prose">
+      <p className="font-semibold text-gray-900">
         Winter 2026/2027 will most likely be warmer than normal in Whistler,
         particularly at lower elevations, but that does not automatically
         translate into dramatically below-normal alpine snowfall.
-      </h3>
+      </p>
 
       <p>
         The latest{" "}
@@ -320,7 +320,7 @@ export default function WhistlerWeatherForecastContent() {
 
       <h2
         id="la-nina-vs-el-nino"
-        className="text-3xl font-bold text-gray-900 not-prose mt-12 mb-6"
+        className="scroll-mt-28"
       >
         First, La Niña vs. El Niño: What Is Actually Happening?
       </h2>
@@ -388,7 +388,7 @@ export default function WhistlerWeatherForecastContent() {
 
       <h2
         id="whistler-el-nino-history"
-        className="text-3xl font-bold text-gray-900 not-prose mt-12 mb-6"
+        className="scroll-mt-28"
       >
         Here Is the Statistic That Should Get Whistler Skiers Excited
       </h2>
@@ -452,10 +452,10 @@ export default function WhistlerWeatherForecastContent() {
 
       <p>In other words, across that particular seven-winter dataset:</p>
 
-      <h3 className="text-xl font-semibold text-gray-900 not-prose">
+      <p className="font-semibold text-gray-900">
         Significant El Niño winters averaged approximately 5% MORE snow than
         Whistler&apos;s 30-year normal through March 31.
-      </h3>
+      </p>
 
       <p>
         Even the median was approximately 921 cm, essentially right around
@@ -483,17 +483,17 @@ export default function WhistlerWeatherForecastContent() {
 
       <p>But the data clearly demonstrate something important:</p>
 
-      <h3 className="text-xl font-semibold text-gray-900 not-prose">
+      <p className="font-semibold text-gray-900">
         &ldquo;Strong El Niño = no snow in Whistler&rdquo; is simply not
         supported by Whistler&apos;s historical record.
-      </h3>
+      </p>
 
       <ArticleImage
         src={IMAGES.powderStorm.src}
         alt={IMAGES.powderStorm.alt}
       />
 
-      <h2 className="text-3xl font-bold text-gray-900 not-prose mt-12 mb-6">
+      <h2 className="scroll-mt-28">
         Whistler Has Already Had Excellent Snow During Very Strong El Niño
         Winters
       </h2>
@@ -548,7 +548,7 @@ export default function WhistlerWeatherForecastContent() {
 
       <h2
         id="january-february-snowfall"
-        className="text-3xl font-bold text-gray-900 not-prose mt-12 mb-6"
+        className="scroll-mt-28"
       >
         Even More Interesting: El Niño May Shift Whistler&apos;s Best Snow
         Deeper Into Winter
@@ -626,7 +626,7 @@ export default function WhistlerWeatherForecastContent() {
 
       <h2
         id="warmer-weather-more-snow"
-        className="text-3xl font-bold text-gray-900 not-prose mt-12 mb-6"
+        className="scroll-mt-28"
       >
         How Can a Warmer Winter Sometimes Produce Huge Snowstorms?
       </h2>
@@ -680,13 +680,13 @@ export default function WhistlerWeatherForecastContent() {
 
       <p>That is one of the key things to understand about this winter.</p>
 
-      <h3 className="text-xl font-semibold text-gray-900 not-prose">
+      <p className="font-semibold text-gray-900">
         The biggest question may not be how much moisture reaches Whistler.
-      </h3>
+      </p>
 
-      <h3 className="text-xl font-semibold text-gray-900 not-prose">
+      <p className="font-semibold text-gray-900">
         It may be how cold the mountain is when the wettest storms arrive.
-      </h3>
+      </p>
 
       <p>
         A relatively warm seasonal average does not prevent individual weeks,
@@ -700,7 +700,7 @@ export default function WhistlerWeatherForecastContent() {
 
       <h2
         id="pacific-moisture"
-        className="text-3xl font-bold text-gray-900 not-prose mt-12 mb-6"
+        className="scroll-mt-28"
       >
         Whistler Has a Giant Moisture Source Sitting Beside It: The Pacific Ocean
       </h2>
@@ -757,7 +757,7 @@ export default function WhistlerWeatherForecastContent() {
         alt={IMAGES.coastMountains.alt}
       />
 
-      <h2 className="text-3xl font-bold text-gray-900 not-prose mt-12 mb-6">
+      <h2 className="scroll-mt-28">
         Why &ldquo;Warmer Than Average&rdquo; Can Be Misleading for Skiers
       </h2>
 
@@ -822,7 +822,7 @@ export default function WhistlerWeatherForecastContent() {
 
       <h2
         id="whistler-elevation"
-        className="text-3xl font-bold text-gray-900 not-prose mt-12 mb-6"
+        className="scroll-mt-28"
       >
         Whistler Is Almost Two Different Climates in One Resort
       </h2>
@@ -870,7 +870,7 @@ export default function WhistlerWeatherForecastContent() {
         alt={IMAGES.alpineValley.alt}
       />
 
-      <h2 className="text-3xl font-bold text-gray-900 not-prose mt-12 mb-6">
+      <h2 className="scroll-mt-28">
         Why Whistler May Be One of the Better B.C. Bets During El Niño
       </h2>
 
@@ -932,7 +932,7 @@ export default function WhistlerWeatherForecastContent() {
 
       <h2
         id="whistler-vs-world"
-        className="text-3xl font-bold text-gray-900 not-prose mt-12 mb-6"
+        className="scroll-mt-28"
       >
         How Does Whistler Compare With U.S. and European Ski Resorts This Winter?
       </h2>
@@ -951,10 +951,10 @@ export default function WhistlerWeatherForecastContent() {
 
       <p>And this is where we need to be honest.</p>
 
-      <h3 className="text-xl font-semibold text-gray-900 not-prose">
+      <p className="font-semibold text-gray-900">
         Some U.S. ski regions currently have a more favourable El Niño snowfall
         forecast than Whistler.
-      </h3>
+      </p>
 
       <p>
         OpenSnow&apos;s August 2026 outlook favours{" "}
@@ -977,9 +977,9 @@ export default function WhistlerWeatherForecastContent() {
 
       <p>But there is another way to look at it.</p>
 
-      <h3 className="text-xl font-semibold text-gray-900 not-prose">
+      <p className="font-semibold text-gray-900">
         Whistler&apos;s normal snowfall is 422 inches.
-      </h3>
+      </p>
 
       <p>
         If Whistler received only <strong>90% of normal snowfall</strong>, that
@@ -1007,9 +1007,9 @@ export default function WhistlerWeatherForecastContent() {
         Whistler does not need a record year to have a huge amount of snow.
       </p>
 
-      <h3 className="text-xl font-semibold text-gray-900 not-prose">
+      <p className="font-semibold text-gray-900">
         What about Europe?
-      </h3>
+      </p>
 
       <p>Europe is even harder to compare directly.</p>
 
@@ -1074,7 +1074,7 @@ export default function WhistlerWeatherForecastContent() {
         alt={IMAGES.worldComparison.alt}
       />
 
-      <h2 className="text-3xl font-bold text-gray-900 not-prose mt-12 mb-6">
+      <h2 className="scroll-mt-28">
         Whistler&apos;s Secret Weapon: It Doesn&apos;t Need a Record Winter
       </h2>
 
@@ -1116,9 +1116,9 @@ export default function WhistlerWeatherForecastContent() {
 
       <p>But they demonstrate something important.</p>
 
-      <h3 className="text-xl font-semibold text-gray-900 not-prose">
+      <p className="font-semibold text-gray-900">
         A below-average Whistler winter can still be an extremely snowy winter.
-      </h3>
+      </p>
 
       <p>The phrase &ldquo;below average&rdquo; is relative.</p>
 
@@ -1133,7 +1133,7 @@ export default function WhistlerWeatherForecastContent() {
         at coloured seasonal forecast maps.
       </p>
 
-      <h2 className="text-3xl font-bold text-gray-900 not-prose mt-12 mb-6">
+      <h2 className="scroll-mt-28">
         The Snowmaking Factor Is Also Bigger Than People Realize
       </h2>
 
@@ -1161,7 +1161,7 @@ export default function WhistlerWeatherForecastContent() {
 
       <h2
         id="month-by-month-forecast"
-        className="text-3xl font-bold text-gray-900 not-prose mt-12 mb-6"
+        className="scroll-mt-28"
       >
         Our Month-by-Month Whistler Snow Forecast for Winter 2026/2027
       </h2>
@@ -1179,7 +1179,7 @@ export default function WhistlerWeatherForecastContent() {
 
       <ArticleImage src={IMAGES.villageSnow.src} alt={IMAGES.villageSnow.alt} />
 
-      <h3 className="text-2xl font-bold text-gray-900 not-prose mt-10 mb-4">
+      <h3 className="scroll-mt-28">
         November 2026: The Wild Card
       </h3>
 
@@ -1216,7 +1216,7 @@ export default function WhistlerWeatherForecastContent() {
         <strong>Confidence:</strong> Low this far out
       </p>
 
-      <h3 className="text-2xl font-bold text-gray-900 not-prose mt-10 mb-4">
+      <h3 className="scroll-mt-28">
         December 2026: Watch the Snow Line
       </h3>
 
@@ -1266,7 +1266,7 @@ export default function WhistlerWeatherForecastContent() {
         <strong>Confidence:</strong> Moderate
       </p>
 
-      <h3 className="text-2xl font-bold text-gray-900 not-prose mt-10 mb-4">
+      <h3 className="scroll-mt-28">
         January 2027: The Month We Are Watching Most Closely
       </h3>
 
@@ -1323,7 +1323,7 @@ export default function WhistlerWeatherForecastContent() {
         <BookWhistlerWinterButton variant="primary" />
       </div>
 
-      <h3 className="text-2xl font-bold text-gray-900 not-prose mt-10 mb-4">
+      <h3 className="scroll-mt-28">
         February 2027: Another Potential Sweet Spot
       </h3>
 
@@ -1359,7 +1359,7 @@ export default function WhistlerWeatherForecastContent() {
         <strong>Base depth:</strong> Typically well established by this point
       </p>
 
-      <h3 className="text-2xl font-bold text-gray-900 not-prose mt-10 mb-4">
+      <h3 className="scroll-mt-28">
         March 2027: Close to Normal Historically
       </h3>
 
@@ -1388,7 +1388,7 @@ export default function WhistlerWeatherForecastContent() {
         <strong>Overall travel appeal:</strong> Excellent
       </p>
 
-      <h3 className="text-2xl font-bold text-gray-900 not-prose mt-10 mb-4">
+      <h3 className="scroll-mt-28">
         April 2027: Spring Arrives
       </h3>
 
@@ -1410,7 +1410,7 @@ export default function WhistlerWeatherForecastContent() {
         surprise spring powder whenever colder Pacific systems arrive.
       </p>
 
-      <h2 className="text-3xl font-bold text-gray-900 not-prose mt-12 mb-6">
+      <h2 className="scroll-mt-28">
         Could Whistler Actually Get More Snow Because Some Storms Are Warmer and
         Wetter?
       </h2>
@@ -1460,7 +1460,7 @@ export default function WhistlerWeatherForecastContent() {
         cold side of that line than a lower mountain.
       </p>
 
-      <h2 className="text-3xl font-bold text-gray-900 not-prose mt-12 mb-6">
+      <h2 className="scroll-mt-28">
         The Biggest Ingredients That Could Turn 2026/2027 Into a Great Whistler
         Snow Year
       </h2>
@@ -1469,7 +1469,7 @@ export default function WhistlerWeatherForecastContent() {
         There are several things we will be watching as winter gets closer.
       </p>
 
-      <h3 className="text-xl font-semibold text-gray-900 not-prose mt-8 mb-3">
+      <h3 className="scroll-mt-28">
         1. The Exact Position of the Pacific Storm Track
       </h3>
 
@@ -1487,7 +1487,7 @@ export default function WhistlerWeatherForecastContent() {
         outperform the broader British Columbia seasonal outlook.
       </p>
 
-      <h3 className="text-xl font-semibold text-gray-900 not-prose mt-8 mb-3">
+      <h3 className="scroll-mt-28">
         2. Freezing Levels During the Wettest Storms
       </h3>
 
@@ -1511,7 +1511,7 @@ export default function WhistlerWeatherForecastContent() {
         seasonal forecast.
       </p>
 
-      <h3 className="text-xl font-semibold text-gray-900 not-prose mt-8 mb-3">
+      <h3 className="scroll-mt-28">
         3. Short Cold-Air Outbreaks
       </h3>
 
@@ -1529,7 +1529,7 @@ export default function WhistlerWeatherForecastContent() {
         can change very quickly.
       </p>
 
-      <h3 className="text-xl font-semibold text-gray-900 not-prose mt-8 mb-3">
+      <h3 className="scroll-mt-28">
         4. January and February
       </h3>
 
@@ -1540,7 +1540,7 @@ export default function WhistlerWeatherForecastContent() {
 
       <p>January in particular deserves attention.</p>
 
-      <h3 className="text-xl font-semibold text-gray-900 not-prose mt-8 mb-3">
+      <h3 className="scroll-mt-28">
         5. Whether Persistent High Pressure Develops
       </h3>
 
@@ -1565,7 +1565,7 @@ export default function WhistlerWeatherForecastContent() {
 
       <h2
         id="risks"
-        className="text-3xl font-bold text-gray-900 not-prose mt-12 mb-6"
+        className="scroll-mt-28"
       >
         The Honest Risks for Whistler in Winter 2026/2027
       </h2>
@@ -1604,7 +1604,7 @@ export default function WhistlerWeatherForecastContent() {
 
       <p>That distinction is critical.</p>
 
-      <h2 className="text-3xl font-bold text-gray-900 not-prose mt-12 mb-6">
+      <h2 className="scroll-mt-28">
         Don&apos;t Confuse Village Weather With Mountain Weather
       </h2>
 
@@ -1654,7 +1654,7 @@ export default function WhistlerWeatherForecastContent() {
 
       <p>A lot.</p>
 
-      <h2 className="text-3xl font-bold text-gray-900 not-prose mt-12 mb-6">
+      <h2 className="scroll-mt-28">
         So, How Much Snow Will Whistler Get in Winter 2026/2027?
       </h2>
 
@@ -1670,37 +1670,37 @@ export default function WhistlerWeatherForecastContent() {
 
       <p>What we can say is this:</p>
 
-      <h3 className="text-xl font-semibold text-gray-900 not-prose">
+      <p className="font-semibold text-gray-900">
         The probability of a warmer-than-normal winter is elevated.
-      </h3>
+      </p>
 
-      <h3 className="text-xl font-semibold text-gray-900 not-prose">
+      <p className="font-semibold text-gray-900">
         A very strong El Niño now appears highly likely.
-      </h3>
+      </p>
 
-      <h3 className="text-xl font-semibold text-gray-900 not-prose">
+      <p className="font-semibold text-gray-900">
         The risk of below-normal snowfall across British Columbia is higher than
         it would be during a strong La Niña.
-      </h3>
+      </p>
 
-      <h3 className="text-xl font-semibold text-gray-900 not-prose">
+      <p className="font-semibold text-gray-900">
         Whistler&apos;s lower elevations face more risk than its mid and upper
         mountain.
-      </h3>
+      </p>
 
-      <h3 className="text-xl font-semibold text-gray-900 not-prose">
+      <p className="font-semibold text-gray-900">
         Whistler&apos;s historical mid-mountain performance during significant El
         Niño winters has been surprisingly resilient.
-      </h3>
+      </p>
 
-      <h3 className="text-xl font-semibold text-gray-900 not-prose">
+      <p className="font-semibold text-gray-900">
         January has one of the most encouraging historical signals.
-      </h3>
+      </p>
 
-      <h3 className="text-xl font-semibold text-gray-900 not-prose">
+      <p className="font-semibold text-gray-900">
         Historical Whistler snowfall during seven significant El Niño winters
         averaged slightly above the 30-year normal through March 31.
-      </h3>
+      </p>
 
       <p>
         And there is a very plausible scenario where winter 2026/2027 produces
@@ -1720,7 +1720,7 @@ export default function WhistlerWeatherForecastContent() {
 
       <p>They do not create the same vacation.</p>
 
-      <h2 className="text-3xl font-bold text-gray-900 not-prose mt-12 mb-6">
+      <h2 className="scroll-mt-28">
         One Final Number: More Than 10 Metres of Snow Is Normal Here
       </h2>
 
@@ -1765,7 +1765,7 @@ export default function WhistlerWeatherForecastContent() {
 
       <h2
         id="final-forecast"
-        className="text-3xl font-bold text-gray-900 not-prose mt-12 mb-6"
+        className="scroll-mt-28"
       >
         Our Final Whistler Winter 2026/2027 Snow Forecast
       </h2>
@@ -1877,7 +1877,7 @@ export default function WhistlerWeatherForecastContent() {
 
       <h2
         id="faq"
-        className="text-3xl font-bold text-gray-900 not-prose mt-12 mb-6"
+        className="scroll-mt-28"
       >
         Whistler Weather Forecast 2026/2027 FAQ
       </h2>
@@ -1896,7 +1896,7 @@ export default function WhistlerWeatherForecastContent() {
       </div>
 
       <div className="not-prose bg-gray-900 text-white rounded-xl p-6 sm:p-8 my-10">
-        <h2 className="text-2xl font-bold mb-4">
+        <h2 className="text-xl font-bold mb-4 not-prose text-white">
           Planning a Whistler Ski Trip for Winter 2026/2027?
         </h2>
         <p className="text-gray-200 leading-relaxed mb-6">
@@ -1966,7 +1966,7 @@ export default function WhistlerWeatherForecastContent() {
         helps you choose the right neighbourhood.
       </p>
 
-      <h3 className="text-xl font-bold text-gray-900 not-prose mt-10 mb-4">
+      <h3 className="scroll-mt-28">
         Forecast Sources
       </h3>
 
