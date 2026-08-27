@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 
 const LuxuryChristmasRentals = () => {
@@ -676,6 +677,9 @@ const LuxuryChristmasRentals = () => {
           {/* Related Articles */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-16">
             <h2 className="text-2xl font-bold text-gray-900 mb-8">More Articles You Might Like</h2>
+            
+            <BlogGuestyInlineBanner compact />
+
             
             <BlogRelatedArticles 
               currentArticleLink={currentArticleLink}

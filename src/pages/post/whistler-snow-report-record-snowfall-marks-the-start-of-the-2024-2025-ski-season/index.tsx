@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from '../../../components/BlogRelatedArticles';
 
 const WhistlerSnowReport = () => {
@@ -258,6 +259,8 @@ const WhistlerSnowReport = () => {
           </div>
 
           {/* Related Articles */}
+          <BlogGuestyInlineBanner compact />
+
           <BlogRelatedArticles 
             currentArticleLink="/post/whistler-snow-report-record-snowfall-marks-the-start-of-the-2024-2025-ski-season" 
           />

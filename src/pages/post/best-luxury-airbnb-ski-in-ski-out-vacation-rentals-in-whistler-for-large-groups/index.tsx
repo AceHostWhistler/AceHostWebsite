@@ -5,6 +5,7 @@ import Link from "next/link";
 import { airbnbButtonCtaBlock } from "@/lib/airbnbButtonStyles";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 
 const SLUG = "best-luxury-airbnb-ski-in-ski-out-vacation-rentals-in-whistler-for-large-groups";
@@ -775,6 +776,9 @@ export default function BlogPost() {
             </div>
           </div>
         </main>
+
+        <BlogGuestyInlineBanner compact />
+
 
         <BlogRelatedArticles currentArticleLink={currentArticleLink} count={3} />
         <Footer />

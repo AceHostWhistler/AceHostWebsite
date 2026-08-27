@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 
 const SLUG =
@@ -387,6 +388,9 @@ export default function BlogPost() {
             </div>
           </div>
         </main>
+
+        <BlogGuestyInlineBanner compact />
+
 
         <BlogRelatedArticles currentArticleLink={currentArticleLink} count={3} />
         <Footer />

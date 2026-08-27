@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 import { SITE_URL } from "@/data/seo/business";
 import { kadenwoodProperties } from "@/data/blog/whistler-28-places-properties";
@@ -567,6 +568,9 @@ export default function BlogPost() {
                 </Link>
               </div>
             </div>
+
+            <BlogGuestyInlineBanner compact />
+
 
             <BlogRelatedArticles currentArticleLink={currentArticleLink} />
           </div>

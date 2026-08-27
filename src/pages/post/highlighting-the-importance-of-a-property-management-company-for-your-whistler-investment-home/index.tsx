@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 
 const HERO_IMAGE =
@@ -322,6 +323,8 @@ const PropertyManagementBlog = () => {
             </article>
 
             {/* More Articles Section - replaced with BlogRelatedArticles component */}
+            <BlogGuestyInlineBanner compact />
+
             <BlogRelatedArticles currentArticleLink={currentArticleLink} />
           </div>
         </main>

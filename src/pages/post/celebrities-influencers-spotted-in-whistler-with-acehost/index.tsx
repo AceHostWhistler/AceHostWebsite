@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 
 const CelebritiesInfluencersBlog = () => {
@@ -468,6 +469,8 @@ const CelebritiesInfluencersBlog = () => {
             </div>
 
             {/* More Articles Section */}
+            <BlogGuestyInlineBanner compact />
+
             <BlogRelatedArticles currentArticleLink={currentArticleLink} />
           </div>
         </main>

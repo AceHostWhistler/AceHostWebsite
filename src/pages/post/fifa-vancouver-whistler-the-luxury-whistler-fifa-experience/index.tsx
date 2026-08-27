@@ -7,6 +7,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { airbnbButtonBlog } from "@/lib/airbnbButtonStyles";
+import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 
 const SLUG = "fifa-vancouver-whistler-the-luxury-whistler-fifa-experience";
@@ -656,6 +657,8 @@ export default function BlogPost() {
             </div>
 
             <div className="not-prose mt-12">
+              <BlogGuestyInlineBanner compact />
+
               <BlogRelatedArticles currentArticleLink={currentArticleLink} />
             </div>
           </div>

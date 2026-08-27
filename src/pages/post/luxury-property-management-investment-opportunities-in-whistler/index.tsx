@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 
 export default function BlogPost() {
@@ -481,6 +482,8 @@ export default function BlogPost() {
               </div>
 
               {/* Related Articles Section */}
+              <BlogGuestyInlineBanner compact />
+
               <BlogRelatedArticles currentArticleLink={currentArticleLink} />
             </div>
           </div>

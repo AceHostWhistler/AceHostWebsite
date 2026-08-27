@@ -178,7 +178,10 @@ export default function WhistlerWeatherForecast2026Page() {
               </aside>
             </div>
 
-            <BlogRelatedArticles currentArticleLink={currentArticleLink} />
+            <BlogRelatedArticles
+              currentArticleLink={currentArticleLink}
+              showBookingCtas={false}
+            />
           </div>
         </main>
 

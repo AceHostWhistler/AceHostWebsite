@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 import {
   allWhistler28Properties,
@@ -370,6 +371,9 @@ export default function BlogPost() {
                   <p>{item.answer}</p>
                 </div>
               ))}
+
+              <BlogGuestyInlineBanner compact />
+
 
               <BlogRelatedArticles currentArticleLink={currentArticleLink} />
             </div>

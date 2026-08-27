@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 
 const WhistlerWinterOutlook = () => {
@@ -284,6 +285,8 @@ const WhistlerWinterOutlook = () => {
             </div>
 
             {/* Related Articles Section */}
+            <BlogGuestyInlineBanner compact />
+
             <BlogRelatedArticles currentArticleLink={currentArticleLink} />
           </div>
         </main>

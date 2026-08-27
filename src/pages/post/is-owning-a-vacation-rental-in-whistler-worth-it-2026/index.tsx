@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 
 const SLUG = "is-owning-a-vacation-rental-in-whistler-worth-it-2026";
@@ -649,6 +650,9 @@ export default function BlogPost() {
                   to buy and/or rent your home.
                 </p>
               </div>
+
+              <BlogGuestyInlineBanner compact />
+
 
               <BlogRelatedArticles currentArticleLink={currentArticleLink} />
             </div>

@@ -5,6 +5,7 @@ import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import { airbnbButtonSm } from "@/lib/airbnbButtonStyles";
 import Footer from "@/components/Footer";
+import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 import {
   CONDO_RENTAL_PROPERTIES,
@@ -279,6 +280,9 @@ export default function BlogPost() {
                   Explore All Properties
                 </Link>
               </div>
+
+              <BlogGuestyInlineBanner compact />
+
 
               <BlogRelatedArticles currentArticleLink={currentArticleLink} />
             </div>

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { airbnbButtonCtaBlock } from "@/lib/airbnbButtonStyles";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 import { allArticles } from "@/utils/blogArticles";
 import {
@@ -880,6 +881,9 @@ export default function BlogPost() {
             </div>
           </div>
         </main>
+
+        <BlogGuestyInlineBanner compact />
+
 
         <BlogRelatedArticles
           currentArticleLink={currentArticleLink}

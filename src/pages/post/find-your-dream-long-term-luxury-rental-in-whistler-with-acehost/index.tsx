@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 
 const LongTermRentals = () => {
@@ -404,6 +405,8 @@ const LongTermRentals = () => {
 
             {/* Related Articles */}
             <div className="max-w-5xl mx-auto px-4 sm:px-6 mb-20">
+              <BlogGuestyInlineBanner compact />
+
               <BlogRelatedArticles currentArticleLink={currentArticleLink} />
             </div>
           </div>
