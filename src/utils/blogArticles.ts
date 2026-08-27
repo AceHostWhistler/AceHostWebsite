@@ -29,7 +29,7 @@ export const allArticles: Article[] = [
     readTime: "28 min read",
     link: "/post/whistler-weather-forecast-2026-2027-winter",
     coverImage:
-      "/photos/properties/2919 Heritage/Drone Mountaintop.png",
+      "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Drone Blueberry shot.png",
   },
   {
     title: "Whistler Airbnb Zoning & Licence Rules | AceHost",

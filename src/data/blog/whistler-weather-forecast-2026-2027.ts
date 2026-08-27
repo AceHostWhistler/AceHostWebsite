@@ -14,8 +14,8 @@ export const META = {
 };
 
 export const HERO = {
-  src: "/photos/properties/2919 Heritage/Drone Mountaintop.png",
-  alt: "Skier in deep powder at Whistler Blackcomb during winter",
+  src: "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Drone Blueberry shot.png",
+  alt: "Aerial view of Whistler Village and Blueberry in winter snow",
 };
 
 export const OG_IMAGE =
