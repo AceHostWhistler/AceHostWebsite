@@ -180,9 +180,7 @@ export default function WhistlerWeatherForecast2026Page() {
               </aside>
             </div>
 
-            <div className="max-w-[820px] mx-auto mt-16">
-              <BlogRelatedArticles currentArticleLink={currentArticleLink} />
-            </div>
+            <BlogRelatedArticles currentArticleLink={currentArticleLink} />
           </div>
         </main>
 

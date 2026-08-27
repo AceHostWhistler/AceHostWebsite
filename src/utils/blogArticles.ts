@@ -306,10 +306,9 @@ export const allArticles: Article[] = [
   },
 ];
 
-// Function to get related articles excluding the current one
+// Function to get related articles excluding the current one (newest registry entries first)
 export const getRelatedArticles = (currentArticleLink: string, count: number = 3): Article[] => {
   return allArticles
-    .filter(article => article.link !== currentArticleLink)
-    .sort(() => 0.5 - Math.random()) // Randomize the articles
-    .slice(0, count); // Get the specified number of articles
+    .filter((article) => article.link !== currentArticleLink)
+    .slice(0, count);
 }; 

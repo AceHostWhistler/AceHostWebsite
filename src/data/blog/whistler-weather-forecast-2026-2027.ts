@@ -45,7 +45,7 @@ export const IMAGES = {
     alt: "Whistler Blackcomb alpine skiing during winter",
   },
   villageSnow: {
-    src: "/photos/properties/whistler-village-views-new/whistler-village-views.jpg",
+    src: "/photos/properties/Valhalla Unit 33 Village/Northlands Outdoor snow.png",
     alt: "Whistler Village covered in fresh snow during winter",
   },
   ctaChalet: {
