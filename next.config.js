@@ -46,6 +46,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/blog/whistler-weather-forecast-2026-2027-winter',
+        destination: '/post/whistler-weather-forecast-2026-2027-winter',
+        permanent: true,
+      },
+      {
         source: '/about',
         destination: '/our-story',
         permanent: true,

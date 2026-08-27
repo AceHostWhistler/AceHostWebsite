@@ -21,6 +21,17 @@ export const allArticles: Article[] = [
       "/photos/properties/Chalet La Forja/2950 Heritage Peaks Trail 4 Large 2.png",
   },
   {
+    title:
+      "Whistler Weather Forecast 2026/2027 Winter: La Niña/El Niño Outlook & Snow Forecast | AceHost",
+    category: "Whistler Winter",
+    description:
+      "Whistler winter 2026/2027 weather and snow forecast. See what a very strong El Niño could mean for Whistler Blackcomb snowfall, temperatures, January powder and ski conditions.",
+    readTime: "28 min read",
+    link: "/post/whistler-weather-forecast-2026-2027-winter",
+    coverImage:
+      "/photos/properties/2919 Heritage/Drone Mountaintop.png",
+  },
+  {
     title: "Whistler Airbnb Zoning & Licence Rules | AceHost",
     category: "Property Management, Whistler",
     description:

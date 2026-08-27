@@ -101,7 +101,15 @@ const WhistlerWinterOutlook = () => {
                   Pacific Ocean. This warming has significant repercussions on
                   global weather patterns, often leading to drier and warmer
                   conditions in regions like British Columbia, which Whistler
-                  experienced firsthand this past season.
+                  experienced firsthand this past season. For our latest outlook
+                  on the upcoming season, see our{" "}
+                  <Link
+                    href="/post/whistler-weather-forecast-2026-2027-winter"
+                    className="text-blue-700 hover:underline"
+                  >
+                    Whistler weather forecast for winter 2026/2027
+                  </Link>
+                  .
                 </p>
 
                 <p className="mb-8">

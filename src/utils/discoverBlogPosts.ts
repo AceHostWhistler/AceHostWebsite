@@ -83,6 +83,13 @@ function parseTitle(content: string, slug: string): string {
 }
 
 function parseHeroImage(content: string, slug: string): string {
+  const objectHero = content.match(
+    /(?:const|export const)\s+(?:HERO|HERO_IMAGE|COVER_IMAGE)\s*=\s*\{[\s\S]*?src:\s*"([^"]+)"/
+  )?.[1];
+  if (objectHero) {
+    return objectHero;
+  }
+
   const constantHero =
     content.match(/const (?:HERO|HERO_IMAGE|COVER_IMAGE)\s*=\s*\n?\s*"([^"]+)"/)?.[1] ??
     content.match(/const (?:HERO|HERO_IMAGE|COVER_IMAGE)\s*=\s*\n?\s*'([^']+)'/)?.[1];
