@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 import WhistlerWeatherForecastContent from "@/components/blog/WhistlerWeatherForecastContent";
+import BookWhistlerWinterButton from "@/components/blog/BookWhistlerWinterButton";
 import {
   buildArticleSchema,
   buildFaqPageSchema,
@@ -153,13 +154,14 @@ export default function WhistlerWeatherForecast2026Page() {
                 What a potentially historic El Niño could mean for Whistler
                 Blackcomb snowfall, temperatures and powder days this winter.
               </p>
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-200">
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-200 mb-6">
                 <span>Updated August 2026</span>
                 <span aria-hidden className="hidden sm:inline">
                   |
                 </span>
                 <span>{READ_TIME}</span>
               </div>
+              <BookWhistlerWinterButton variant="hero" />
             </div>
           </header>
 

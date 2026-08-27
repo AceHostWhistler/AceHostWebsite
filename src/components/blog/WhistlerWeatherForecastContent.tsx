@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Plus, Minus } from "lucide-react";
 import ElNinoSnowfallChart from "@/components/blog/ElNinoSnowfallChart";
 import ElNinoMonthlyChart from "@/components/blog/ElNinoMonthlyChart";
+import BookWhistlerWinterButton from "@/components/blog/BookWhistlerWinterButton";
 import {
   EL_NINO_SNOWFALL_DATA,
   EL_NINO_NORMAL_CM,
@@ -194,6 +195,14 @@ export default function WhistlerWeatherForecastContent() {
         This forecast will be updated as new seasonal guidance becomes available
         closer to winter.
       </p>
+
+      <div className="not-prose flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-gray-900 text-white rounded-xl p-5 sm:p-6 my-10">
+        <p className="text-gray-100 leading-relaxed text-sm sm:text-base">
+          Planning around January or February? Browse live availability for AceHost
+          Whistler winter homes.
+        </p>
+        <BookWhistlerWinterButton variant="hero" className="shrink-0 sm:px-8" />
+      </div>
 
       <h2
         id="quick-forecast"
@@ -1306,6 +1315,14 @@ export default function WhistlerWeatherForecastContent() {
         confidence on individual storms this far out
       </p>
 
+      <div className="not-prose text-center border border-gray-200 rounded-xl p-6 sm:p-8 my-10 bg-gray-50">
+        <p className="text-gray-800 leading-relaxed mb-5 max-w-xl mx-auto">
+          Historical El Niño data makes January one of the most interesting months
+          to target. See what AceHost has available for a Whistler winter stay.
+        </p>
+        <BookWhistlerWinterButton variant="primary" />
+      </div>
+
       <h3 className="text-2xl font-bold text-gray-900 not-prose mt-10 mb-4">
         February 2027: Another Potential Sweet Spot
       </h3>
@@ -1888,15 +1905,16 @@ export default function WhistlerWeatherForecastContent() {
           dining, transportation and experiences that make the resort special.
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
+          <BookWhistlerWinterButton variant="hero" className="flex-1 sm:flex-none" />
           <Link
             href="/properties"
-            className="inline-block text-center px-6 py-3 bg-white text-gray-900 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+            className="inline-block text-center px-6 py-3 border border-white text-white rounded-lg font-medium hover:bg-white/10 transition-colors"
           >
             Explore Whistler Stays
           </Link>
           <Link
             href="/concierge-service"
-            className="inline-block text-center px-6 py-3 border border-white text-white rounded-lg font-medium hover:bg-white/10 transition-colors"
+            className="inline-block text-center px-6 py-3 border border-white/60 text-white rounded-lg font-medium hover:bg-white/10 transition-colors"
           >
             Whistler Concierge
           </Link>
