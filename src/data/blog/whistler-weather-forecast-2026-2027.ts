@@ -52,6 +52,22 @@ export const IMAGES = {
     src: "/photos/properties/Two Cedars New/Two Cedars Cover photo snow.png",
     alt: "Luxury Whistler vacation home in winter",
   },
+  marquiseWinterExterior: {
+    src: "/photos/properties/Marquise 2-bed/Marquise-15.jpg",
+    alt: "Whistler vacation residence with deep winter snow on the surrounding landscape",
+  },
+  marquiseSnowyDeck: {
+    src: "/photos/properties/Marquise 2-bed/Marquise-14.jpg",
+    alt: "Snow-covered deck and winter scenery at a Whistler area home",
+  },
+  graniteCourtWinter: {
+    src: "/photos/properties/John 3-bed Granite Court/01 - 20251125 A7M4 01 A1_02152.jpg",
+    alt: "Fresh snow around a Whistler Granite Court residence in winter",
+  },
+  falconSnowExterior: {
+    src: "/photos/properties/Falcon/Outdoor shot falcon zoomed out.png",
+    alt: "Luxury Whistler home surrounded by snow-covered trees and mountains",
+  },
 } as const;
 
 export const TOC_ITEMS = [

@@ -386,6 +386,11 @@ export default function WhistlerWeatherForecastContent() {
         snowfall record.
       </p>
 
+      <ArticleImage
+        src={IMAGES.marquiseWinterExterior.src}
+        alt={IMAGES.marquiseWinterExterior.alt}
+      />
+
       <h2
         id="whistler-el-nino-history"
         className="scroll-mt-28"
@@ -624,6 +629,11 @@ export default function WhistlerWeatherForecastContent() {
         historical snowfall signal for British Columbia.
       </p>
 
+      <ArticleImage
+        src={IMAGES.marquiseSnowyDeck.src}
+        alt={IMAGES.marquiseSnowyDeck.alt}
+      />
+
       <h2
         id="warmer-weather-more-snow"
         className="scroll-mt-28"
@@ -819,6 +829,11 @@ export default function WhistlerWeatherForecastContent() {
         For skiers, those individual storm cycles are what can make or break a
         week.
       </p>
+
+      <ArticleImage
+        src={IMAGES.graniteCourtWinter.src}
+        alt={IMAGES.graniteCourtWinter.alt}
+      />
 
       <h2
         id="whistler-elevation"
@@ -1603,6 +1618,11 @@ export default function WhistlerWeatherForecastContent() {
       </p>
 
       <p>That distinction is critical.</p>
+
+      <ArticleImage
+        src={IMAGES.falconSnowExterior.src}
+        alt={IMAGES.falconSnowExterior.alt}
+      />
 
       <h2 className="scroll-mt-28">
         Don&apos;t Confuse Village Weather With Mountain Weather
