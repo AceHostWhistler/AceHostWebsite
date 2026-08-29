@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -7,6 +6,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
 
 const WhistlerWinterOutlook = () => {
   const currentArticleLink = "/post/whistlers-winter-outlook-2024-from-el-nino-challenges-to-la-nina-promises";
@@ -15,17 +15,6 @@ const WhistlerWinterOutlook = () => {
   
   return (
     <>
-      <Head>
-        <title>
-          Whistler's Winter Outlook 2024: From El Niño Challenges to La
-          Niña Promises | AceHost
-        </title>
-        <meta
-          name="description"
-          content="Discover what the 2024 winter season holds for Whistler. Learn about the shift from El Niño to La Niña and what it means for snowfall patterns and ski conditions this season."
-        />
-      </Head>
-
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
 

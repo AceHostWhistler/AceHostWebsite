@@ -1,32 +1,20 @@
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
 import WhistlerWeatherForecastContent from "@/components/blog/WhistlerWeatherForecastContent";
 import BookWhistlerWinterButton from "@/components/blog/BookWhistlerWinterButton";
+import BlogSeoHead from "@/components/blog/BlogSeoHead";
 import {
-  buildArticleSchema,
-  buildFaqPageSchema,
-} from "@/lib/seo/schema";
-import {
-  CANONICAL_URL,
   CATEGORY,
   FAQ_ITEMS,
   HERO,
-  META,
-  OG_IMAGE,
   READ_TIME,
   SLUG,
   TOC_ITEMS,
 } from "@/data/blog/whistler-weather-forecast-2026-2027";
-
-const PUBLISH_DATE = "August 26, 2026";
-const ISO_MOD = "2026-08-26T10:00:00-07:00";
-
-const HERO_URL = `https://acehost.ca${encodeURI(HERO.src)}`;
-const OG_URL = `https://acehost.ca${encodeURI(OG_IMAGE)}`;
 const ARTICLE_HEADLINE =
   "Whistler Weather Forecast 2026/2027 Winter: La Niña/El Niño Outlook & Snow Forecast";
 
@@ -85,48 +73,12 @@ function TableOfContents({ mobile = false }: { mobile?: boolean }) {
 export default function WhistlerWeatherForecast2026Page() {
   const currentArticleLink = `/post/${SLUG}`;
 
-  const articleSchema = buildArticleSchema({
-    title: ARTICLE_HEADLINE,
-    description: META.description,
-    url: CANONICAL_URL,
-    image: OG_URL,
-    datePublished: ISO_MOD,
-  });
-
-  const faqSchema = buildFaqPageSchema(FAQ_ITEMS);
-
   return (
     <>
-      <Head>
-        <title>{META.title}</title>
-        <meta name="description" content={META.description} />
-        <link rel="canonical" href={CANONICAL_URL} />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content={META.title} />
-        <meta property="og:description" content={META.description} />
-        <meta property="og:url" content={CANONICAL_URL} />
-        <meta property="og:image" content={OG_URL} />
-        <meta property="og:type" content="article" />
-        <meta property="article:published_time" content={ISO_MOD} />
-        <meta property="article:modified_time" content={ISO_MOD} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={META.title} />
-        <meta name="twitter:description" content={META.description} />
-        <meta name="twitter:url" content={CANONICAL_URL} />
-        <meta name="twitter:image" content={OG_URL} />
-        <meta
-          name="keywords"
-          content="Whistler weather forecast 2026/2027 winter, Whistler snow forecast 2026/2027, Whistler El Niño, Whistler Blackcomb snow forecast, Whistler January snow, best time to ski Whistler 2027, El Niño ski season 2026/2027"
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-      </Head>
+      <BlogSeoHead
+        keywords="Whistler weather forecast 2026/2027 winter, Whistler snow forecast 2026/2027, Whistler El Niño, Whistler Blackcomb snow forecast, Whistler January snow, best time to ski Whistler 2027, El Niño ski season 2026/2027"
+        faqItems={FAQ_ITEMS}
+      />
 
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
@@ -168,7 +120,8 @@ export default function WhistlerWeatherForecast2026Page() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
             <div className="lg:grid lg:grid-cols-[minmax(0,820px)_220px] lg:gap-12 xl:gap-16 lg:justify-center">
               <div className="min-w-0 max-w-[820px] lg:max-w-none mx-auto lg:mx-0 w-full">
-                <TableOfContents mobile />
+                <BlogBreadcrumbs slug="whistler-weather-forecast-2026-2027-winter" />
+              <TableOfContents mobile />
 
                 <WhistlerWeatherForecastContent />
               </div>

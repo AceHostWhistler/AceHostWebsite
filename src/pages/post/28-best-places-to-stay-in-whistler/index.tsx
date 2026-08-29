@@ -1,11 +1,12 @@
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
+import BlogSeoHead from "@/components/blog/BlogSeoHead";
 import {
   allWhistler28Properties,
   kadenwoodProperties,
@@ -16,9 +17,9 @@ import {
 import { airbnbButtonBlog } from "@/lib/airbnbButtonStyles";
 
 const SLUG = "28-best-places-to-stay-in-whistler";
-const CANONICAL_URL = `https://acehost.ca/post/${SLUG}`;
+const CANONICAL_URL = `https://www.acehost.ca/post/${SLUG}`;
 const HERO = "/photos/properties/Two Cedars New/Two Cedars Cover photo snow.png";
-const HERO_URL = `https://acehost.ca${encodeURI(HERO)}`;
+const HERO_URL = `https://www.acehost.ca${encodeURI(HERO)}`;
 const PUBLISH_DATE = "July 26, 2026";
 const ISO_MOD = "2026-07-26T10:00:00-07:00";
 const CONTACT_URL = "https://www.acehost.ca/contact";
@@ -126,19 +127,6 @@ function PropertyCard({ property }: { property: Whistler28Property }) {
 export default function BlogPost() {
   const currentArticleLink = `/post/${SLUG}`;
 
-  const faqStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: FAQ_ITEMS.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
-      },
-    })),
-  };
-
   const listingStructuredData = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -150,47 +138,21 @@ export default function BlogPost() {
       item: {
         "@type": "LodgingBusiness",
         name: property.name,
-        image: `https://acehost.ca${encodeURI(property.image)}`,
+        image: `https://www.acehost.ca${encodeURI(property.image)}`,
         url: property.contactOnly
           ? CONTACT_URL
-          : property.bookUrl ?? `https://acehost.ca${property.listingHref}`,
+          : property.bookUrl ?? `https://www.acehost.ca${property.listingHref}`,
       },
     })),
   };
 
   return (
     <>
-      <Head>
-        <title>{META.title}</title>
-        <meta name="description" content={META.description} />
-        <link rel="canonical" href={CANONICAL_URL} />
-        <meta property="og:title" content={META.title} />
-        <meta property="og:description" content={META.description} />
-        <meta property="og:url" content={CANONICAL_URL} />
-        <meta property="og:image" content={HERO_URL} />
-        <meta property="og:type" content="article" />
-        <meta property="article:published_time" content={ISO_MOD} />
-        <meta property="article:modified_time" content={ISO_MOD} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={META.title} />
-        <meta name="twitter:description" content={META.description} />
-        <meta name="twitter:url" content={CANONICAL_URL} />
-        <meta name="twitter:image" content={HERO_URL} />
-        <meta
-          name="keywords"
-          content="Whistler vacation rentals, best places to stay in Whistler, Kadenwood chalets, Whistler Village condos, ski-in ski-out Whistler, luxury Whistler Airbnb, AceHost Whistler"
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(listingStructuredData),
-          }}
-        />
-      </Head>
+      <BlogSeoHead
+        keywords="Whistler vacation rentals, best places to stay in Whistler, Kadenwood chalets, Whistler Village condos, ski-in ski-out Whistler, luxury Whistler Airbnb, AceHost Whistler"
+        faqItems={FAQ_ITEMS}
+        extraSchemas={[listingStructuredData]}
+      />
 
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
@@ -198,7 +160,8 @@ export default function BlogPost() {
         <main className="pt-24 pb-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-10">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              <BlogBreadcrumbs slug="28-best-places-to-stay-in-whistler" />
+                            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 From Village Condos to $20 Million Chalets: 28 Incredible Places
                 to Stay in Whistler
               </h1>

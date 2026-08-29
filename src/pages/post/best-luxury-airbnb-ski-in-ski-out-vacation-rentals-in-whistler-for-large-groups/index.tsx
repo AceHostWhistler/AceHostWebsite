@@ -1,5 +1,5 @@
 import React from "react";
-import Head from "next/head";
+import BlogSeoHead from "@/components/blog/BlogSeoHead";
 import Image from "next/image";
 import Link from "next/link";
 import { airbnbButtonCtaBlock } from "@/lib/airbnbButtonStyles";
@@ -7,11 +7,12 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
 
 const SLUG = "best-luxury-airbnb-ski-in-ski-out-vacation-rentals-in-whistler-for-large-groups";
 const HERO =
   "/photos/properties/Two Cedars New/Two Cedars Cover photo snow.png";
-const HERO_URL = "https://acehost.ca" + HERO;
+const HERO_URL = "https://www.acehost.ca" + HERO;
 const PUBLISH_DATE = "April 23, 2026";
 const ISO_MOD = "2026-04-23T12:00:00-07:00";
 
@@ -87,23 +88,7 @@ export default function BlogPost() {
 
   return (
     <>
-      <Head>
-        <title>{META.title}</title>
-        <meta name="description" content={META.description} />
-        <link rel="canonical" href={"https://acehost.ca/" + "post/" + SLUG} />
-        <meta property="og:title" content={META.title} />
-        <meta property="og:description" content={META.description} />
-        <meta property="og:image" content={HERO_URL} />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={META.title} />
-        <meta name="twitter:description" content={META.description} />
-        <meta name="twitter:image" content={HERO_URL} />
-        <meta
-          name="keywords"
-          content="Whistler large group rental, luxury Airbnb Whistler, ski in ski out Whistler, Kadenwood chalet, Whistler family vacation, AceHost, Whistler hot tub, Whistler Blueberry, Whistler Village chalet, group trip Whistler"
-        />
-      </Head>
+      <BlogSeoHead keywords="Whistler large group rental, luxury Airbnb Whistler, ski in ski out Whistler, Kadenwood chalet, Whistler family vacation, AceHost, Whistler hot tub, Whistler Blueberry, Whistler Village chalet, group trip Whistler" />
 
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
@@ -111,7 +96,8 @@ export default function BlogPost() {
         <main className="pt-24 pb-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-10">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              <BlogBreadcrumbs slug="best-luxury-airbnb-ski-in-ski-out-vacation-rentals-in-whistler-for-large-groups" />
+                            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Best Luxury Airbnb Ski in Ski out Vacation Rentals in Whistler for
                 Large Groups | AceHost
               </h1>

@@ -251,7 +251,9 @@ export interface ArticleSchemaInput {
   description: string;
   url: string;
   image?: string;
+  headline?: string;
   datePublished?: string;
+  dateModified?: string;
 }
 
 export function buildArticleSchema({
@@ -259,7 +261,9 @@ export function buildArticleSchema({
   description,
   url,
   image,
+  headline,
   datePublished,
+  dateModified,
 }: ArticleSchemaInput) {
   const absoluteImage = image
     ? image.startsWith("http")
@@ -270,7 +274,7 @@ export function buildArticleSchema({
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    headline: title,
+    headline: headline ?? title,
     description,
     url,
     mainEntityOfPage: url,
@@ -290,6 +294,37 @@ export function buildArticleSchema({
       },
     },
     ...(datePublished ? { datePublished } : {}),
+    ...(dateModified ? { dateModified } : {}),
+  };
+}
+
+export function buildBlogBreadcrumbSchema(
+  articleTitle: string,
+  canonicalUrl: string
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: `${SITE_URL}/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: `${SITE_URL}/blogs`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: articleTitle,
+        item: canonicalUrl,
+      },
+    ],
   };
 }
 

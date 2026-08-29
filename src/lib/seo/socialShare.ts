@@ -5,6 +5,8 @@ export type SocialSharePayload = {
   description: string;
   image: string;
   type?: "website" | "article";
+  publishedAt?: string;
+  modifiedAt?: string;
 };
 
 export const ACEHOST_LOGO_IMAGE = "/logo.png";

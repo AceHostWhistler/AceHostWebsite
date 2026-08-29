@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -7,29 +6,17 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
 
 const HERO_IMAGE =
   "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05424.jpg";
-const HERO_IMAGE_URL = `https://acehost.ca${encodeURI(HERO_IMAGE)}`;
+const HERO_IMAGE_URL = `https://www.acehost.ca${encodeURI(HERO_IMAGE)}`;
 
 const PropertyManagementBlog = () => {
   const currentArticleLink = "/post/highlighting-the-importance-of-a-property-management-company-for-your-whistler-investment-home";
 
   return (
     <>
-      <Head>
-        <title>
-          Highlighting the Importance of a Property Management Company For Your
-          Whistler Investment Home | AceHost
-        </title>
-        <meta
-          name="description"
-          content="Discover why having a qualified property management company is essential for your Whistler investment home. Learn how AceHost Whistler can help manage your rental property, maximize income, and provide peace of mind."
-        />
-        <meta property="og:image" content={HERO_IMAGE_URL} />
-        <meta property="twitter:image" content={HERO_IMAGE_URL} />
-      </Head>
-
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
 

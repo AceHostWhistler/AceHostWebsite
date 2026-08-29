@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -7,24 +6,13 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
 
 const BestPropertyManagementBlog = () => {
   const currentArticleLink = "/post/best-airbnb-property-management-company-in-whistler";
 
   return (
     <>
-      <Head>
-        <title>
-          Best Airbnb Property Management Company in Whistler | AceHost
-        </title>
-        <meta
-          name="description"
-          content="Discover what makes AceHost the best luxury Airbnb property management company in Whistler. Learn about our specialized services, from VIP concierge to revenue optimization, and why property owners trust us with their investments."
-        />
-        <meta property="og:image" content="https://acehost.ca/photos/post/luxury-property-management-investment-opportunities-in-whistler/hero.jpg" />
-        <meta property="twitter:image" content="https://acehost.ca/photos/post/luxury-property-management-investment-opportunities-in-whistler/hero.jpg" />
-      </Head>
-
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
 

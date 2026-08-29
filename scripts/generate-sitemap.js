@@ -45,6 +45,9 @@ function getBlogPostRoutes() {
   return fs
     .readdirSync(POST_DIR, { withFileTypes: true })
     .filter((entry) => entry.isDirectory())
+    .filter((entry) =>
+      fs.existsSync(path.join(POST_DIR, entry.name, 'index.tsx'))
+    )
     .map((entry) => {
       const indexPath = path.join(POST_DIR, entry.name, 'index.tsx');
       let lastmod = new Date().toISOString().split('T')[0];

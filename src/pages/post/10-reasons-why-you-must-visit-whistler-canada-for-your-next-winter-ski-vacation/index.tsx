@@ -1,11 +1,11 @@
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
 
 export default function BlogPost() {
   const publishDate = "March 4, 2024";
@@ -13,17 +13,6 @@ export default function BlogPost() {
 
   return (
     <>
-      <Head>
-        <title>
-          10 Reasons Why You Must Visit Whistler Canada For Your Next Winter Ski
-          Vacation | AceHost
-        </title>
-        <meta
-          name="description"
-          content="Explore why Whistler should be at the top of your Christmas, New Years, Winter, or all year-round vacation bucket list."
-        />
-      </Head>
-
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
 
@@ -31,7 +20,8 @@ export default function BlogPost() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Blog Header */}
             <div className="mb-10">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              <BlogBreadcrumbs slug="10-reasons-why-you-must-visit-whistler-canada-for-your-next-winter-ski-vacation" />
+                            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 10 Reasons Why You Must Visit Whistler Canada For Your Next
                 Winter Ski Vacation
               </h1>

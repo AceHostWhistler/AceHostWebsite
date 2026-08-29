@@ -1,11 +1,11 @@
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
 
 export default function BlogPost() {
   const publishDate = "May 1, 2025";
@@ -40,16 +40,6 @@ export default function BlogPost() {
 
   return (
     <>
-      <Head>
-        <title>
-          Whistler's Summer Paradise: Luxury Vacation Homes for the Perfect Mountain Getaway | AceHost
-        </title>
-        <meta
-          name="description"
-          content="Discover Whistler's stunning summer luxury vacation rentals offering world-class mountain biking, hiking trails, lakeside relaxation, and outdoor adventures from May to September."
-        />
-      </Head>
-
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
 
@@ -57,7 +47,8 @@ export default function BlogPost() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Blog Header */}
             <div className="mb-10">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              <BlogBreadcrumbs slug="whistlers-summer-paradise-luxury-vacation-homes-for-the-perfect-mountain-getaway" />
+                            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Whistler's Summer Paradise: Luxury Vacation Homes for the Perfect Mountain Getaway
               </h1>
               <div className="flex items-center text-sm text-gray-600 mb-8">

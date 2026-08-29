@@ -1,11 +1,11 @@
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
 
 export default function BlogPost() {
   const publishDate = "August 27, 2024";
@@ -13,24 +13,6 @@ export default function BlogPost() {
 
   return (
     <>
-      <Head>
-        <title>
-          Whistler's Dream Rental Homes: Top 5 Luxury Vacation Properties | AceHost
-        </title>
-        <meta
-          name="description"
-          content="Explore Whistler's most exclusive luxury vacation rentals, from ski-in/ski-out chalets to stunning village properties. Discover what makes these 5 properties the ultimate mountain getaway."
-        />
-        <meta property="og:title" content="Whistler's Dream Rental Homes: Top 5 Luxury Vacation Properties | AceHost" />
-        <meta property="og:description" content="Explore Whistler's most exclusive luxury vacation rentals, from ski-in/ski-out chalets to stunning village properties. Discover what makes these 5 properties the ultimate mountain getaway." />
-        <meta property="og:image" content="https://acehost.ca/photos/post/whistlers-dream-rental-homes/hero.jpg" />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Whistler's Dream Rental Homes: Top 5 Luxury Vacation Properties | AceHost" />
-        <meta name="twitter:description" content="Explore Whistler's most exclusive luxury vacation rentals, from ski-in/ski-out chalets to stunning village properties. Discover what makes these 5 properties the ultimate mountain getaway." />
-        <meta name="twitter:image" content="https://acehost.ca/photos/post/whistlers-dream-rental-homes/hero.jpg" />
-      </Head>
-
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
 
@@ -38,7 +20,8 @@ export default function BlogPost() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Blog Header */}
             <div className="mb-10">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              <BlogBreadcrumbs slug="whistlers-dream-rental-homes" />
+                            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Whistler's Dream Rental Homes: Top 5 Luxury Vacation Properties
               </h1>
               <div className="flex items-center text-sm text-gray-600 mb-8">
@@ -857,7 +840,7 @@ export default function BlogPost() {
                   availability, please visit the AceHost Whistler website.
                 </p>
                 <Link
-                  href="https://acehost.ca"
+                  href="https://www.acehost.ca"
                   className="inline-block bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"

@@ -1,21 +1,22 @@
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
+import BlogSeoHead from "@/components/blog/BlogSeoHead";
 import { allArticles } from "@/utils/blogArticles";
 
 const SLUG =
   "can-you-airbnb-your-whistler-home-zoning-licensing-nightly-rental-rules";
-const CANONICAL_URL = `https://acehost.ca/post/${SLUG}`;
+const CANONICAL_URL = `https://www.acehost.ca/post/${SLUG}`;
 const HERO =
   "/photos/properties/3445-Heron-Place/68-3445 Heron Place 53-Edit.jpg";
 const SUPPORTING_IMAGE =
   "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/15 - 20251108 MM4P 01 0011.jpg";
-const HERO_URL = `https://acehost.ca${encodeURI(HERO)}`;
+const HERO_URL = `https://www.acehost.ca${encodeURI(HERO)}`;
 const PUBLISH_DATE = "August 1, 2026";
 const ISO_MOD = "2026-08-01T10:00:00-07:00";
 
@@ -152,42 +153,12 @@ export default function BlogPost() {
     allArticles.find((a) => a.link === link)
   ).filter((a): a is (typeof allArticles)[number] => Boolean(a));
 
-  const faqStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: FAQ_ITEMS.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: { "@type": "Answer", text: item.answer },
-    })),
-  };
-
   return (
     <>
-      <Head>
-        <title>{META.title}</title>
-        <meta name="description" content={META.description} />
-        <link rel="canonical" href={CANONICAL_URL} />
-        <meta property="og:title" content={META.title} />
-        <meta property="og:description" content={META.description} />
-        <meta property="og:image" content={HERO_URL} />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={CANONICAL_URL} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={META.title} />
-        <meta name="twitter:description" content={META.description} />
-        <meta name="twitter:image" content={HERO_URL} />
-        <meta
-          name="keywords"
-          content="Whistler Airbnb zoning, Whistler nightly rental zoning, Whistler tourist accommodation licence, Whistler short-term rental rules, Phase 1 Phase 2 Whistler, AceHost property management Whistler"
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(faqStructuredData),
-          }}
-        />
-      </Head>
+      <BlogSeoHead
+        keywords="Whistler Airbnb zoning, Whistler nightly rental zoning, Whistler tourist accommodation licence, Whistler short-term rental rules, Phase 1 Phase 2 Whistler, AceHost property management Whistler"
+        faqItems={FAQ_ITEMS}
+      />
 
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
@@ -195,7 +166,8 @@ export default function BlogPost() {
         <main className="pt-24 pb-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-10">
-              <span className="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full mb-4">
+              <BlogBreadcrumbs slug="can-you-airbnb-your-whistler-home-zoning-licensing-nightly-rental-rules" />
+                            <span className="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full mb-4">
                 Property Management, Whistler
               </span>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">

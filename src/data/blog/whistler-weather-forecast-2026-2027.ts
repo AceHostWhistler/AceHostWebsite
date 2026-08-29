@@ -1,6 +1,6 @@
 export const SLUG = "whistler-weather-forecast-2026-2027-winter";
 
-export const CANONICAL_URL = `https://acehost.ca/post/${SLUG}`;
+export const CANONICAL_URL = `https://www.acehost.ca/post/${SLUG}`;
 
 export const PUBLISH_DATE = "August 26, 2026";
 export const ISO_MOD = "2026-08-26T10:00:00-07:00";

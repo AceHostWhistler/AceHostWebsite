@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { airbnbButtonCtaBlock } from "@/lib/airbnbButtonStyles";
@@ -7,6 +6,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
+import BlogSeoHead from "@/components/blog/BlogSeoHead";
 import { allArticles } from "@/utils/blogArticles";
 import {
   MANSION_RENTAL_PROPERTIES,
@@ -14,10 +15,10 @@ import {
 } from "@/data/blog/mansion-rentals-properties";
 
 const SLUG = "whistler-mansion-rentals-largest-luxury-private-chalets";
-const CANONICAL_URL = `https://acehost.ca/post/${SLUG}`;
+const CANONICAL_URL = `https://www.acehost.ca/post/${SLUG}`;
 const HERO =
   "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png";
-const HERO_URL = `https://acehost.ca${encodeURI(HERO)}`;
+const HERO_URL = `https://www.acehost.ca${encodeURI(HERO)}`;
 const PUBLISH_DATE = "August 1, 2026";
 const ISO_MOD = "2026-08-01T12:00:00-07:00";
 
@@ -190,19 +191,6 @@ export default function BlogPost() {
     RELATED_LINKS.includes(article.link)
   );
 
-  const faqStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: FAQ_ITEMS.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
-      },
-    })),
-  };
-
   const itemListStructuredData = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -216,37 +204,11 @@ export default function BlogPost() {
 
   return (
     <>
-      <Head>
-        <title>{META.title}</title>
-        <meta name="description" content={META.description} />
-        <link rel="canonical" href={CANONICAL_URL} />
-        <meta property="og:title" content={META.title} />
-        <meta property="og:description" content={META.description} />
-        <meta property="og:url" content={CANONICAL_URL} />
-        <meta property="og:image" content={HERO_URL} />
-        <meta property="og:type" content="article" />
-        <meta property="article:published_time" content={ISO_MOD} />
-        <meta property="article:modified_time" content={ISO_MOD} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={META.title} />
-        <meta name="twitter:description" content={META.description} />
-        <meta name="twitter:url" content={CANONICAL_URL} />
-        <meta name="twitter:image" content={HERO_URL} />
-        <meta
-          name="keywords"
-          content="Whistler mansion rentals, Whistler luxury mansion, luxury chalet rental Whistler, large chalet Whistler, Whistler vacation rental for large groups, ski-in ski-out mansion Whistler, Kadenwood chalet rental, luxury Airbnb Whistler, AceHost Whistler"
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(itemListStructuredData),
-          }}
-        />
-      </Head>
+      <BlogSeoHead
+        keywords="Whistler mansion rentals, Whistler luxury mansion, luxury chalet rental Whistler, large chalet Whistler, Whistler vacation rental for large groups, ski-in ski-out mansion Whistler, Kadenwood chalet rental, luxury Airbnb Whistler, AceHost Whistler"
+        faqItems={FAQ_ITEMS}
+        extraSchemas={[itemListStructuredData]}
+      />
 
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
@@ -254,7 +216,8 @@ export default function BlogPost() {
         <main className="pt-24 pb-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-10">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              <BlogBreadcrumbs slug="whistler-mansion-rentals-largest-luxury-private-chalets" />
+                            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Whistler&apos;s Most Impressive Airbnb Homes: Large Luxury
                 Chalets, Mansions and Ski-In/Ski-Out Estates
               </h1>

@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -7,6 +6,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
 
 const LuxuryWhistlerVacation = () => {
   const currentArticleLink = "/post/luxury-whistler-vacation-redefined-how-acehost-whistler-caters-to-the-1-in-canadas-ultimate-playground";
@@ -41,17 +41,6 @@ const LuxuryWhistlerVacation = () => {
 
   return (
     <>
-      <Head>
-        <title>
-          Luxury Whistler Vacation Redefined: How AceHost Whistler Caters to the
-          1% in Canada's Ultimate Playground | AceHost
-        </title>
-        <meta
-          name="description"
-          content="Discover how AceHost Whistler elevates luxury vacations with exclusive properties and bespoke concierge services for the world's most discerning travelers."
-        />
-      </Head>
-
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
 

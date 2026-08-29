@@ -1,11 +1,11 @@
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
 
 export default function BlogPost() {
   const publishDate = "March 4, 2024";
@@ -13,17 +13,6 @@ export default function BlogPost() {
 
   return (
     <>
-      <Head>
-        <title>
-          Whistler: Luxury Vacation Haven | 20 reasons to visit Whistler |
-          AceHost
-        </title>
-        <meta
-          name="description"
-          content="Whistler, a world-renowned ski resort in British Columbia, Canada, is the ultimate destination for luxury home vacations. Discover 20 reasons why Whistler is the perfect choice for your next getaway."
-        />
-      </Head>
-
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
 
@@ -31,7 +20,8 @@ export default function BlogPost() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Blog Header */}
             <div className="mb-10">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              <BlogBreadcrumbs slug="whistler-luxury-vacation-haven" />
+                            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Whistler: Luxury Vacation Haven | 20 reasons to visit Whistler
               </h1>
               <div className="flex items-center text-sm text-gray-600 mb-8">

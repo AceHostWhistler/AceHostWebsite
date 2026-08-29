@@ -6,7 +6,10 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { useMemo } from "react";
 import { allArticles } from "@/utils/blogArticles";
-import { buildArticleSchema } from "@/lib/seo/schema";
+import {
+  buildArticleSchema,
+  buildBlogBreadcrumbSchema,
+} from "@/lib/seo/schema";
 import { businessInfo, SITE_URL } from "@/data/seo/business";
 import SocialShareMeta from "@/components/SocialShareMeta";
 import { resolveSocialShare } from "@/lib/seo/resolveSocialShare";
@@ -27,16 +30,29 @@ function App({ Component, pageProps }: AppProps) {
   const locales = router.locales || ["en"];
   const defaultLocale = router.defaultLocale || "en";
 
-  const blogArticleSchema = useMemo(() => {
+  const blogStructuredData = useMemo(() => {
     if (!canonicalPath.startsWith("/post/")) return null;
     const article = allArticles.find((entry) => entry.link === canonicalPath);
     if (!article) return null;
-    return buildArticleSchema({
-      title: article.title,
-      description: article.description ?? article.title,
-      url: `${SITE_URL}${article.link}`,
-      image: article.coverImage,
-    });
+
+    const articleUrl = `${SITE_URL}${article.link}`;
+    const breadcrumbTitle = article.headline ?? article.title;
+
+    return {
+      "@context": "https://schema.org",
+      "@graph": [
+        buildArticleSchema({
+          title: article.title,
+          headline: article.headline,
+          description: article.description ?? article.title,
+          url: articleUrl,
+          image: article.coverImage,
+          datePublished: article.publishedAt,
+          dateModified: article.modifiedAt ?? article.publishedAt,
+        }),
+        buildBlogBreadcrumbSchema(breadcrumbTitle, articleUrl),
+      ],
+    };
   }, [canonicalPath]);
 
   const socialShare = useMemo(
@@ -74,17 +90,20 @@ function App({ Component, pageProps }: AppProps) {
           );
         })}
         <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
+        <title>{socialShare.title}</title>
         <SocialShareMeta
           title={socialShare.title}
           description={socialShare.description}
           image={socialShare.image}
           type={socialShare.type}
+          publishedAt={socialShare.publishedAt}
+          modifiedAt={socialShare.modifiedAt}
         />
-        {blogArticleSchema && (
+        {blogStructuredData && (
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
-              __html: JSON.stringify(blogArticleSchema),
+              __html: JSON.stringify(blogStructuredData),
             }}
           />
         )}

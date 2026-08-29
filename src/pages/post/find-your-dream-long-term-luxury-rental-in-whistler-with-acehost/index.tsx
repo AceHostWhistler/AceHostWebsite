@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -7,6 +6,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
 
 const LongTermRentals = () => {
   const currentArticleLink = "/post/find-your-dream-long-term-luxury-rental-in-whistler-with-acehost";
@@ -45,17 +45,6 @@ const LongTermRentals = () => {
 
   return (
     <>
-      <Head>
-        <title>
-          Find Your Dream Long-Term Luxury Rental in Whistler with AceHost |
-          AceHost
-        </title>
-        <meta
-          name="description"
-          content="Discover the perfect long-term luxury rental in Whistler with AceHost's exclusive property portfolio. Enjoy premium amenities in Canada's top resort destination."
-        />
-      </Head>
-
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
 

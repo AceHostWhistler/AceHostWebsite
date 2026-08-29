@@ -1,11 +1,12 @@
 import React from "react";
-import Head from "next/head";
+import BlogSeoHead from "@/components/blog/BlogSeoHead";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
 import { SITE_URL } from "@/data/seo/business";
 import { kadenwoodProperties } from "@/data/blog/whistler-28-places-properties";
 import type { Whistler28Property } from "@/data/blog/whistler-28-places-properties";
@@ -160,26 +161,7 @@ export default function BlogPost() {
 
   return (
     <>
-      <Head>
-        <title>{META.title}</title>
-        <meta name="description" content={META.description} />
-        <link rel="canonical" href={CANONICAL_URL} />
-        <meta property="og:title" content={META.title} />
-        <meta property="og:description" content={META.description} />
-        <meta property="og:url" content={CANONICAL_URL} />
-        <meta property="og:image" content={heroUrl} />
-        <meta property="og:type" content="article" />
-        <meta property="article:published_time" content={ISO_MOD} />
-        <meta property="article:modified_time" content={ISO_MOD} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={META.title} />
-        <meta name="twitter:description" content={META.description} />
-        <meta name="twitter:image" content={heroUrl} />
-        <meta
-          name="keywords"
-          content="Justin Tse Whistler, Kadenwood Whistler, luxury Whistler chalet, AceHost concierge, luxury Whistler experiences, ski-in ski-out Whistler, Whistler Blackcomb, Chalet La Forja"
-        />
-      </Head>
+      <BlogSeoHead keywords="Justin Tse Whistler, Kadenwood Whistler, luxury Whistler chalet, AceHost concierge, luxury Whistler experiences, ski-in ski-out Whistler, Whistler Blackcomb, Chalet La Forja" />
 
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
@@ -187,7 +169,8 @@ export default function BlogPost() {
         <main className="pt-24 pb-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-10">
-              <div className="flex flex-wrap gap-2 mb-4">
+              <BlogBreadcrumbs slug="justin-tse-chalet-la-forja-whistler" />
+                            <div className="flex flex-wrap gap-2 mb-4">
                 <span className="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
                   Luxury Travel
                 </span>

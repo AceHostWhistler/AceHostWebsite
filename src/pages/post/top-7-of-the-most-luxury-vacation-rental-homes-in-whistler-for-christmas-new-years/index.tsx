@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -7,6 +6,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
 
 const LuxuryChristmasRentals = () => {
   const currentArticleLink = "/post/top-7-of-the-most-luxury-vacation-rental-homes-in-whistler-for-christmas-new-years";
@@ -40,25 +40,6 @@ const LuxuryChristmasRentals = () => {
 
   return (
     <>
-      <Head>
-        <title>
-          Top 7 of the Most Luxury Vacation Rental Homes in Whistler | Christmas
-          and New Year's | AceHost
-        </title>
-        <meta
-          name="description"
-          content="Discover Whistler's most luxurious vacation rental homes for your Christmas and New Year's escape. From ski-in/ski-out chalets to stunning mountain retreats, find the perfect property for an unforgettable holiday."
-        />
-        <meta property="og:title" content="Top 7 Luxury Vacation Rental Homes in Whistler for Christmas and New Year's | AceHost" />
-        <meta property="og:description" content="Discover Whistler's most luxurious vacation rental homes for your Christmas and New Year's escape. From ski-in/ski-out chalets to stunning mountain retreats, find the perfect property." />
-        <meta property="og:image" content="https://acehost.ca/photos/post/top-7-of-the-most-luxury-vacation-rental-homes-in-whistler-for-christmas-new-years/Hero.png" />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Top 7 Luxury Vacation Rental Homes in Whistler for Christmas and New Year's | AceHost" />
-        <meta name="twitter:description" content="Discover Whistler's most luxurious vacation rental homes for your Christmas and New Year's escape." />
-        <meta name="twitter:image" content="https://acehost.ca/photos/post/top-7-of-the-most-luxury-vacation-rental-homes-in-whistler-for-christmas-new-years/Hero.png" />
-      </Head>
-
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
 

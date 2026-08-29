@@ -187,6 +187,8 @@ export function resolveSocialShare(
         description: article.description ?? article.title,
         image: article.coverImage,
         type: "article",
+        publishedAt: article.publishedAt,
+        modifiedAt: article.modifiedAt ?? article.publishedAt,
       };
     }
 

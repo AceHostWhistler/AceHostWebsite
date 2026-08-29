@@ -1,11 +1,12 @@
 import React from "react";
-import Head from "next/head";
+import BlogSeoHead from "@/components/blog/BlogSeoHead";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
 
 const SLUG = "is-owning-a-vacation-rental-in-whistler-worth-it-2026";
 
@@ -22,7 +23,7 @@ const IMG_JOHN_GRANITE =
   "/photos/properties/John 3-bed Granite Court/03 - 20251125 A7M4 01 A1_01852.jpg";
 
 const absImageUrl = (publicPath: string) =>
-  `https://acehost.ca${encodeURI(publicPath)}`;
+  `https://www.acehost.ca${encodeURI(publicPath)}`;
 const HERO_URL = absImageUrl(COVER_IMAGE);
 const PUBLISH_DATE = "April 23, 2026";
 const ISO_MOD = "2026-04-23T10:00:00-07:00";
@@ -39,23 +40,7 @@ export default function BlogPost() {
 
   return (
     <>
-      <Head>
-        <title>{META.title}</title>
-        <meta name="description" content={META.description} />
-        <link rel="canonical" href={`https://acehost.ca/post/${SLUG}`} />
-        <meta property="og:title" content={META.title} />
-        <meta property="og:description" content={META.description} />
-        <meta property="og:image" content={HERO_URL} />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={META.title} />
-        <meta name="twitter:description" content={META.description} />
-        <meta name="twitter:image" content={HERO_URL} />
-        <meta
-          name="keywords"
-          content="Whistler vacation rental investment, luxury Whistler rental income, Whistler real estate 2026, Whistler short term rental, AceHost, Whistler property investment"
-        />
-      </Head>
+      <BlogSeoHead keywords="Whistler vacation rental investment, luxury Whistler rental income, Whistler real estate 2026, Whistler short term rental, AceHost, Whistler property investment" />
 
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
@@ -63,7 +48,8 @@ export default function BlogPost() {
         <main className="pt-24 pb-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-10">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              <BlogBreadcrumbs slug="is-owning-a-vacation-rental-in-whistler-worth-it-2026" />
+                            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Is Owning a Vacation Rental in Whistler Worth It in 2026? How
                 Much Can a Luxury Whistler Rental Actually Make?
               </h1>

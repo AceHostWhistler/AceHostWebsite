@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { GetStaticProps } from "next";
@@ -9,14 +8,16 @@ import Footer from "@/components/Footer";
 import { airbnbButtonBlog } from "@/lib/airbnbButtonStyles";
 import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
+import BlogSeoHead from "@/components/blog/BlogSeoHead";
 
 const SLUG = "fifa-vancouver-whistler-the-luxury-whistler-fifa-experience";
 const PUBLISH_DATE = "May 1, 2026";
 const ISO_MODIFIED = "2026-05-01T09:30:00-07:00";
-const CANONICAL_URL = `https://acehost.ca/post/${SLUG}`;
+const CANONICAL_URL = `https://www.acehost.ca/post/${SLUG}`;
 const HERO_IMAGE =
   "/photos/properties/2919 Heritage/Mountaintop Snow cover.png";
-const HERO_IMAGE_URL = `https://acehost.ca${encodeURI(HERO_IMAGE)}`;
+const HERO_IMAGE_URL = `https://www.acehost.ca${encodeURI(HERO_IMAGE)}`;
 
 const META = {
   title:
@@ -286,15 +287,6 @@ export default function BlogPost() {
       },
     ],
   };
-  const breadcrumbStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://acehost.ca" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://acehost.ca/blogs" },
-      { "@type": "ListItem", position: 3, name: META.title, item: CANONICAL_URL },
-    ],
-  };
   const listingStructuredData = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -306,53 +298,20 @@ export default function BlogPost() {
       item: {
         "@type": "LodgingBusiness",
         name: property.name,
-        image: `https://acehost.ca${encodeURI(property.photos[0])}`,
+        image: `https://www.acehost.ca${encodeURI(property.photos[0])}`,
         url: property.bookUrl.startsWith("http")
           ? property.bookUrl
-          : `https://acehost.ca${property.bookUrl}`,
+          : `https://www.acehost.ca${property.bookUrl}`,
       },
     })),
   };
 
   return (
     <>
-      <Head>
-        <title>{META.title}</title>
-        <meta name="description" content={META.description} />
-        <link rel="canonical" href={CANONICAL_URL} />
-        <meta
-          name="robots"
-          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
-        />
-        <meta property="og:title" content={META.title} />
-        <meta property="og:description" content={META.description} />
-        <meta property="og:url" content={CANONICAL_URL} />
-        <meta property="og:image" content={HERO_IMAGE_URL} />
-        <meta property="og:type" content="article" />
-        <meta property="article:published_time" content={ISO_MODIFIED} />
-        <meta property="article:modified_time" content={ISO_MODIFIED} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={META.title} />
-        <meta name="twitter:description" content={META.description} />
-        <meta name="twitter:url" content={CANONICAL_URL} />
-        <meta name="twitter:image" content={HERO_IMAGE_URL} />
-        <meta
-          name="keywords"
-          content="FIFA Vancouver 2026, Whistler luxury rentals, Vancouver World Cup accommodation, BC Place match stays, Sea to Sky Highway travel, luxury Whistler Airbnb, Vancouver to Whistler FIFA shuttle"
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(listingStructuredData) }}
-        />
-      </Head>
+      <BlogSeoHead
+        keywords="FIFA Vancouver 2026, Whistler luxury rentals, Vancouver World Cup accommodation, BC Place match stays, Sea to Sky Highway travel, luxury Whistler Airbnb, Vancouver to Whistler FIFA shuttle"
+        extraSchemas={[faqStructuredData, listingStructuredData]}
+      />
 
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
@@ -360,7 +319,8 @@ export default function BlogPost() {
         <main className="pt-24 pb-20">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-10">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              <BlogBreadcrumbs slug="fifa-vancouver-whistler-the-luxury-whistler-fifa-experience" />
+                            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 FIFA Vancouver / Whistler, The Luxury Whistler FIFA Experience
               </h1>
               <div className="flex flex-wrap items-center text-sm text-gray-600 mb-8 gap-x-4">

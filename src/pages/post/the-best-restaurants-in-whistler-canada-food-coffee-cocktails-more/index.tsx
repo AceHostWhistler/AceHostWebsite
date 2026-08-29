@@ -1,11 +1,11 @@
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
 
 export default function BlogPost() {
   const publishDate = "March 4, 2024";
@@ -34,17 +34,6 @@ export default function BlogPost() {
 
   return (
     <>
-      <Head>
-        <title>
-          The Best Restaurants in Whistler, Canada | Food, Coffee, Cocktails &
-          More | AceHost
-        </title>
-        <meta
-          name="description"
-          content="Discover Whistler's finest dining experiences, from Michelin-recommended restaurants to cozy cafés. Explore our curated guide to the best food, coffee, and cocktails in Whistler, Canada."
-        />
-      </Head>
-
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
 
@@ -52,7 +41,8 @@ export default function BlogPost() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Blog Header */}
             <div className="mb-10">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              <BlogBreadcrumbs slug="the-best-restaurants-in-whistler-canada-food-coffee-cocktails-more" />
+                            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 The Best Restaurants in Whistler, Canada | Food, Coffee,
                 Cocktails & More
               </h1>

@@ -1,11 +1,11 @@
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
 import { airbnbButtonHighlight } from "@/lib/airbnbButtonStyles";
 
 export default function BlogPost() {
@@ -15,29 +15,6 @@ export default function BlogPost() {
 
   return (
     <>
-      <Head>
-        <title>
-          New AceHost Luxury Airbnb Highlight | The Best 4 Bedroom You Can Find in All of Whistler, Located on the Golf Course with Stunning Views! | AceHost
-        </title>
-        <meta
-          name="description"
-          content="Discover AceHost's newest luxury 4-bedroom Airbnb on Nicklaus North Golf Course in Whistler. Stunning views, chef's kitchen, hot tub, and just minutes from Whistler Village. Available for Christmas & New Year's!"
-        />
-        <meta
-          name="keywords"
-          content="Whistler Airbnb, luxury vacation rental, golf course views, 4 bedroom chalet, Nicklaus North, Whistler Village, Christmas rentals, New Year vacation, ski vacation, golf getaway"
-        />
-        <meta property="og:title" content="New AceHost Luxury Airbnb: Best 4-Bedroom Golf Course Views in Whistler" />
-        <meta
-          property="og:description"
-          content="Experience luxury at its finest with this stunning 4-bedroom chalet on Nicklaus North Golf Course. Perfect for families and groups seeking the ultimate Whistler getaway."
-        />
-        <meta property="og:image" content="https://acehost.ca/photos/properties/Muirfield Golf Course/44 - 20250820 MM4P 01 0016.jpg" />
-        <meta property="og:url" content={`https://acehost.ca${currentArticleLink}`} />
-        <meta property="og:type" content="article" />
-        <link rel="canonical" href={`https://acehost.ca${currentArticleLink}`} />
-      </Head>
-
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
 

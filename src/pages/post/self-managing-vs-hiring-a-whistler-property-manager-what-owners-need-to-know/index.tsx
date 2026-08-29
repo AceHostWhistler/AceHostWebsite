@@ -1,17 +1,18 @@
 import React from "react";
-import Head from "next/head";
+import BlogSeoHead from "@/components/blog/BlogSeoHead";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
 
 const SLUG =
   "self-managing-vs-hiring-a-whistler-property-manager-what-owners-need-to-know";
 const HERO =
   "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05891.jpg";
-const HERO_URL = `https://acehost.ca${HERO.replace(/ /g, "%20")}`;
+const HERO_URL = `https://www.acehost.ca${HERO.replace(/ /g, "%20")}`;
 const PUBLISH_DATE = "April 23, 2026";
 const ISO_MOD = "2026-04-23T14:00:00-07:00";
 
@@ -27,23 +28,7 @@ export default function BlogPost() {
 
   return (
     <>
-      <Head>
-        <title>{META.title}</title>
-        <meta name="description" content={META.description} />
-        <link rel="canonical" href={`https://acehost.ca/post/${SLUG}`} />
-        <meta property="og:title" content={META.title} />
-        <meta property="og:description" content={META.description} />
-        <meta property="og:image" content={HERO_URL} />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={META.title} />
-        <meta name="twitter:description" content={META.description} />
-        <meta name="twitter:image" content={HERO_URL} />
-        <meta
-          name="keywords"
-          content="Whistler property manager, Whistler vacation rental management, self manage Airbnb Whistler, Whistler rental income, AceHost property management, Whistler owner guide, short term rental Whistler"
-        />
-      </Head>
+      <BlogSeoHead keywords="Whistler property manager, Whistler vacation rental management, self manage Airbnb Whistler, Whistler rental income, AceHost property management, Whistler owner guide, short term rental Whistler" />
 
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
@@ -51,7 +36,8 @@ export default function BlogPost() {
         <main className="pt-24 pb-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-10">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              <BlogBreadcrumbs slug="self-managing-vs-hiring-a-whistler-property-manager-what-owners-need-to-know" />
+                            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Self-Managing vs Hiring a Whistler Property Manager, What Owners
                 Need to Know
               </h1>

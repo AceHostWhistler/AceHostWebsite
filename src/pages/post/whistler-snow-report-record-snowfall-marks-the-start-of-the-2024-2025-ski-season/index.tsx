@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -36,17 +35,6 @@ const WhistlerSnowReport = () => {
 
   return (
     <>
-      <Head>
-        <title>
-          Whistler Snow Report: Record Snowfall Marks the Start of the 2024/2025
-          Ski Season | AceHost
-        </title>
-        <meta
-          name="description"
-          content="Winter is here, and Whistler is off to an incredible start for the 2024/25 ski season with record-breaking early-season snowfall. Learn about La Niña's impact and why this season is shaping up to be one for the books."
-        />
-      </Head>
-
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
 

@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
@@ -7,6 +6,7 @@ import { airbnbButtonSm } from "@/lib/airbnbButtonStyles";
 import Footer from "@/components/Footer";
 import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
 import {
   CONDO_RENTAL_PROPERTIES,
   type CondoRentalProperty,
@@ -94,44 +94,14 @@ export default function BlogPost() {
 
   return (
     <>
-      <Head>
-        <title>
-          Ultimate Guide to the Best Condo Airbnb Rentals in Whistler | Ski in Ski out + Best Locations!
-        </title>
-        <meta name="description" content={metaDescription} />
-        <meta
-          property="og:title"
-          content="Ultimate Guide to the Best Condo Airbnb Rentals in Whistler | Ski in Ski out + Best Locations!"
-        />
-        <meta property="og:description" content={metaDescription} />
-        <meta
-          property="og:image"
-          content="https://acehost.ca/photos/post/best-condo-rentals-in-whistler/hero.jpg"
-        />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Ultimate Guide to the Best Condo Airbnb Rentals in Whistler | Ski in Ski out + Best Locations!"
-        />
-        <meta name="twitter:description" content={metaDescription} />
-        <meta
-          name="twitter:image"
-          content="https://acehost.ca/photos/post/best-condo-rentals-in-whistler/hero.jpg"
-        />
-        <meta
-          name="keywords"
-          content="Whistler condo rentals, Whistler Airbnb, ski in ski out Whistler, best Whistler condos, Whistler accommodation, Whistler vacation rental, luxury condo Whistler, Blueberry 6 bedroom Whistler"
-        />
-      </Head>
-
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
 
         <main className="pt-24 pb-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-10">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              <BlogBreadcrumbs slug="best-condo-rentals-in-whistler" />
+                            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Ultimate Guide to the Best Condo Airbnb Rentals in Whistler | Ski in Ski out + Best Locations!
               </h1>
               <div className="flex items-center text-sm text-gray-600 mb-8">
@@ -272,7 +242,7 @@ export default function BlogPost() {
                   At AceHost, we specialize in connecting discerning travelers with Whistler&apos;s finest properties. From ski-in/ski-out couples&apos; retreats to village penthouses and the six-bedroom Blueberry home for large groups, our collection includes every exceptional condo and apartment rental we manage in Whistler.
                 </p>
                 <Link
-                  href="https://acehost.ca/properties"
+                  href="https://www.acehost.ca/properties"
                   className="inline-block bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"

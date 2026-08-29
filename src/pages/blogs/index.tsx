@@ -10,6 +10,8 @@ import {
   type BlogPostListing,
 } from "@/utils/discoverBlogPosts";
 import { allArticles } from "@/utils/blogArticles";
+import { SITE_URL } from "@/data/seo/business";
+import { toAbsoluteImageUrl } from "@/lib/seo/socialShare";
 
 interface BlogIndexProps {
   blogPosts: BlogPostListing[];
@@ -23,9 +25,10 @@ export const getStaticProps: GetStaticProps<BlogIndexProps> = async () => {
   };
 };
 
-const BLOGS_URL = "https://acehost.ca/blogs";
+const BLOGS_URL = `${SITE_URL}/blogs`;
 const BLOGS_DESC =
   "Explore the AceHost blog for insights on luxury accommodations in Whistler, property management tips, seasonal ski reports, and exclusive travel experiences.";
+const BLOGS_OG_IMAGE = toAbsoluteImageUrl(allArticles[0].coverImage);
 
 const BlogIndex = ({ blogPosts }: BlogIndexProps) => {
   const featuredArticle = allArticles[0];
@@ -34,14 +37,14 @@ const BlogIndex = ({ blogPosts }: BlogIndexProps) => {
   const listStructuredData = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "@id": "https://acehost.ca/blogs#blog-itemlist",
+    "@id": `${BLOGS_URL}#blog-itemlist`,
     name: "AceHost Whistler blog",
     numberOfItems: blogPosts.length,
     itemListElement: blogPosts.map((post, i) => ({
       "@type": "ListItem",
       position: i + 1,
       name: post.title,
-      url: `https://acehost.ca/post/${post.slug}`,
+      url: `${SITE_URL}/post/${post.slug}`,
     })),
   };
   const pageStructuredData = {
@@ -53,7 +56,7 @@ const BlogIndex = ({ blogPosts }: BlogIndexProps) => {
     isPartOf: {
       "@type": "WebSite",
       name: "AceHost Whistler",
-      url: "https://acehost.ca",
+      url: SITE_URL,
     },
     mainEntity: { "@id": `${BLOGS_URL}#blog-itemlist` },
   };
@@ -77,7 +80,9 @@ const BlogIndex = ({ blogPosts }: BlogIndexProps) => {
         />
         <meta property="og:description" content={BLOGS_DESC} />
         <meta property="og:url" content={BLOGS_URL} />
+        <meta property="og:image" content={BLOGS_OG_IMAGE} />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={BLOGS_OG_IMAGE} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

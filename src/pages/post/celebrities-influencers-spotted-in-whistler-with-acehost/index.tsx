@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -7,24 +6,13 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
 
 const CelebritiesInfluencersBlog = () => {
   const currentArticleLink = "/post/celebrities-influencers-spotted-in-whistler-with-acehost";
 
   return (
     <>
-      <Head>
-        <title>
-          Celebrities/Influencers Spotted in Whistler with AceHost | AceHost
-        </title>
-        <meta
-          name="description"
-          content="Discover the A-listers and top influencers who've chosen AceHost for their Whistler getaways. From the Riverdale cast to fashion icons and adventure filmmakers, see who's been spotted enjoying our luxury properties."
-        />
-        <meta property="og:image" content="https://acehost.ca/photos/post/Blog Celebrities Spotted/65205c6674572904228e48cc_image008.jpg" />
-        <meta property="twitter:image" content="https://acehost.ca/photos/post/Blog Celebrities Spotted/65205c6674572904228e48cc_image008.jpg" />
-      </Head>
-
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
 
@@ -325,7 +313,8 @@ const CelebritiesInfluencersBlog = () => {
                 </h2>
                 
                 <div className="mb-10">
-                  <h3 className="text-xl md:text-2xl font-bold mb-4">
+              <BlogBreadcrumbs slug="celebrities-influencers-spotted-in-whistler-with-acehost" />
+                                <h3 className="text-xl md:text-2xl font-bold mb-4">
                     Mattih: YouTube Phenomenon
                   </h3>
                   <p className="font-medium mb-2">1.31 Million YouTube Subscribers</p>
