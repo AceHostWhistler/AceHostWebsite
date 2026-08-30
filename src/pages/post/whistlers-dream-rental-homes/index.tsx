@@ -196,7 +196,7 @@ export default function BlogPost() {
               <p>
                 Timber Haven, also located in the prestigious Kadenwood
                 neighbourhood. This private mountain estate
-                features 8 bedrooms and 10 beds, accommodating up to 16 guests.
+                features 8 bedrooms and 11 beds, accommodating up to 16 guests.
                 Immerse yourself in the serenity of the surrounding mountains as
                 you relax in the hot tub with mountain views. Multiple lounge spaces
                 and outdoor dining make it ideal for large groups. The exclusive Kadenwood

@@ -95,7 +95,7 @@ const listing: ListingData = {
       "bedrooms": 8,
       "bathrooms": 6.5,
       "priceRange": "$4000-$9,000+ per night",
-      "beds": 10,
+      "beds": 11,
       "winterPrice": "$6500-$9000+ Nightly | Winter",
       "holidayPrice": "$12,000-$16,500 Nightly | Christmas & NY",
       "airbnbLink": "https://www.airbnb.ca/rooms/1684937418405220715?guests=1&adults=1&s=67&unique_share_id=07a60c93-180c-4b37-be0a-dd512adb2808"

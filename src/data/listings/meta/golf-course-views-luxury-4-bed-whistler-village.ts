@@ -58,11 +58,11 @@ const listing: ListingData = {
   },
   header:   {
       "title": "Golf Course Views | Luxury 4-bed Whistler Village",
-      "guests": 9,
+      "guests": 8,
       "bedrooms": 4,
       "bathrooms": 3.5,
       "priceRange": "$750-1500 per night Summer",
-      "beds": 5,
+      "beds": 6,
       "winterPrice": "$1200-2000 Nightly | Winter",
       "holidayPrice": "$3500-5000 Nightly | Christmas & NY",
       "airbnbLink": "https://www.airbnb.ca/rooms/1493522257280258231?guests=1&adults=1&s=67&unique_share_id=d98beea7-9f12-4195-8af6-52e4aa1a94cd"

@@ -315,7 +315,7 @@ export default function BlogPost() {
               </div>
               <p>
                 Timber Haven is a great pick for families who want a big luxury home that still
-                feels warm and comfortable. It sleeps up to 16 guests with 8 bedrooms, 10 beds, and
+                feels warm and comfortable. It sleeps up to 16 guests with 8 bedrooms, 11 beds, and
                 6.5 bathrooms.
               </p>
               <p>

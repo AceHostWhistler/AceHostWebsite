@@ -280,7 +280,7 @@ export default function BlogPost() {
                       <span className="font-semibold text-gray-900">Available for Christmas & New Year's</span>
                     </div>
                     <p className="text-gray-700 mb-4">
-                      Secure your holiday getaway in one of Whistler's most desirable properties. With space for 9 guests across 4 bedrooms, it's perfect for extended family gatherings or groups of friends.
+                      Secure your holiday getaway in one of Whistler's most desirable properties. With space for 8 guests across 4 bedrooms, it's perfect for extended family gatherings or groups of friends.
                     </p>
                     <div className="text-sm text-gray-600">
                       <p>Minimum stays: 2 nights weekdays | 3 nights weekends | 7 nights Christmas/NY</p>

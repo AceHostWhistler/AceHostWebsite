@@ -432,7 +432,7 @@ export const propertyCategories: PropertyCategory[] = [
             ],
             guests: 16,
             bedrooms: 8,
-            beds: 10,
+            beds: 11,
             bathrooms: 6.5,
             location: "Kadenwood, Whistler",
             description:
@@ -765,9 +765,10 @@ export const propertyCategories: PropertyCategory[] = [
               "/photos/properties/Muirfield Golf Course/01 - 20250820 A7M4 01 A1_00497-Edit.jpg",
               "/photos/properties/Muirfield Golf Course/03 - 20250820 A7M4 01 A1_00186.jpg",
             ],
-            guests: 9,
+            guests: 8,
             bedrooms: 4,
             bathrooms: 3.5,
+            beds: 6,
             location: "Nicklaus North, Whistler",
             description:
               "This cozy, standalone chalet sits right on Nicklaus North Golf Course with stunning views of Hole 14. Enjoy a private hot tub, media room, wood-burning fireplace, and chef's kitchen. Just a short drive to Whistler Village and the ski lifts, plus being north of the village helps you skip the city traffic after skiing.",
@@ -1043,9 +1044,10 @@ export const propertyCategories: PropertyCategory[] = [
             images: [
               "/photos/properties/Wolverine Crescent/01 - 20251220 A7M4 01 A1_01116-Edit.jpg",
             ],
-            guests: 10,
+            guests: 11,
             bedrooms: 5,
-            bathrooms: 6,
+            beds: 7,
+            bathrooms: 4.5,
             location: "Nordic, Whistler",
             description:
               "Perched like an eagle high upon the hillside of Whistler Benchlands with spectacular views, this exquisite contemporary chalet offers a luxury stay with a rare ski-in ski-out access to Whistler Resort, private hot tub, fire pit and games room.",

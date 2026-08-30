@@ -505,7 +505,7 @@ export default function BlogPost() {
                 5. Timber Haven | Luxury Ski in Ski out | Kadenwood
               </h3>
               <p className="text-gray-700 font-medium not-prose text-base mb-4">
-                16 guests | 8 bedrooms | 10 beds | 6.5 bathrooms
+                16 guests | 8 bedrooms | 11 beds | 6.5 bathrooms
               </p>
               <PropertyImages images={HEADLINE_PROPERTIES[4].images} />
               <p>

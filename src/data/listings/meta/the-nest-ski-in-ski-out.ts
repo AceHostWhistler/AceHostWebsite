@@ -77,9 +77,10 @@ const listing: ListingData = {
   },
   header:   {
       "title": "The Nest | Ski-in/Ski-out",
-      "guests": 10,
+      "guests": 11,
       "bedrooms": 5,
-      "bathrooms": 6,
+      "bathrooms": 4.5,
+      "beds": 7,
       "priceRange": "Monthly Price Range: $18,000-$29,000",
       "airbnbLink": "https://www.airbnb.ca/rooms/763259660349118016?guests=1&adults=1&s=67&unique_share_id=b5240c14-ecb8-4f5a-9c3c-f3861874c7e0"
   },
