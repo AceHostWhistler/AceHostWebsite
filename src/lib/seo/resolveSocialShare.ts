@@ -124,7 +124,7 @@ const WORLDWIDE_LISTING_TITLES: Record<string, Pick<StaticPageMeta, "title" | "d
     description: businessInfo.description,
   },
   "cotswolds-uk-soho-farm-house": {
-    title: "Luxury Cotswolds Rental Home Near Soho Farmhouse | AceHost",
+    title: "Luxury Cotswolds Estate Near Soho Farmhouse | Pool, Tennis & Spa | AceHost",
     description: businessInfo.description,
   },
   "vancouver-house-corner-unit-30th-floor": {

@@ -12,7 +12,7 @@ export default function TwoCedarsKadenwoodDetails({ photos }: ListingDetailsProp
                     Welcome to Two Cedars. Designed by the architects at OpenSpace, this state-of-the-art property welcomes 17 guests to the prestigious Kadenwood neighborhood in Whistler. This luxury property features ski-in ski-out access and quick access to the private Kadenwood Gondola offering service to the base of Creekside Village.
                   </p>
                   <p className="text-gray-800 mb-16 max-w-4xl">
-                    At AceHost, we are dedicated to providing a five-star experience, and to enhance your stay, we include a complimentary butler every day.
+                    At AceHost, we are dedicated to providing a five-star experience. A private butler is included from December 1 through April 30; butler service is optional in summer at extra cost—please inquire.
                   </p>
 
                   {/* The Space Section */}
@@ -36,7 +36,7 @@ export default function TwoCedarsKadenwoodDetails({ photos }: ListingDetailsProp
                         <h2 className="text-2xl font-bold">The Space</h2>
                       </div>
                       <p className="text-gray-800 mb-6">
-                        <strong>Private Butler:</strong> In addition to serving breakfast, lunch, and dinner, the butler is responsible for all food and drink service throughout the day, as well as dining table set up/takedown, and cleanup around the kitchen areas. To create the perfect ambiance, they will set up the hot tub, light the fire, and adjust the music and household functions. Get your daily dose of caffeine from your own personal barista. Overall, the butler is there to make your stay as smooth and comfortable as possible.
+                        <strong>Private Butler:</strong> Private butler included December 1 through April 30 and optional in summer at extra cost (please inquire). In addition to serving breakfast, lunch, and dinner, the butler is responsible for all food and drink service throughout the day, as well as dining table set up/takedown, and cleanup around the kitchen areas. To create the perfect ambiance, they will set up the hot tub, light the fire, and adjust the music and household functions. Get your daily dose of caffeine from your own personal barista. Overall, the butler is there to make your stay as smooth and comfortable as possible.
                       </p>
                       <p className="text-gray-800 mb-6">
                         This 10,000 square ft property blends contemporary architecture with tasteful interior design, offering luxurious hospitality in one of Whistler's finest homes. The high-end furniture, floor-to-ceiling windows, and stunning artwork showcase an award-winning home that is vast yet intimate. Two Cedars has 7 bedrooms, each with a private en suite bathroom. With 12 beds in total, this home offers the perfect stay for a large group of family or friends, combining an open-plan living space with bedroom privacy. Amenities at Two Cedars include a large home theatre, an equipped gym, an outdoor & indoor hot tub, an infrared sauna, and foosball table.
@@ -222,7 +222,7 @@ export default function TwoCedarsKadenwoodDetails({ photos }: ListingDetailsProp
                     <div className="bg-gray-50 p-6 rounded-lg mb-6">
                       <h3 className="text-xl font-bold mb-4">Included in price:</h3>
                       <ul className="list-disc pl-6 space-y-2 text-gray-800">
-                        <li>Host/Butler for the whole stay (10-12 hours per day)</li>
+                        <li>Host/Butler (Dec 1–Apr 30; optional in summer at extra cost, 10–12 hours per day when included)</li>
                         <li>Full complimentary VIP concierge service</li>
                         <li>Restaurant reservations and recommendations</li>
                         <li>Ski lift pass pick up and delivery</li>

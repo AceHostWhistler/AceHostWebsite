@@ -81,14 +81,15 @@ export default function ChaletLaForjaKadenwoodDetails({ photos }: ListingDetails
                         smaller private room with a window.
                       </p>
                       <p className="text-gray-800 mb-6">
-                        <span className="font-bold">Private Butler:</span> In addition
-                        to serving breakfast, lunch, and dinner, the butler is
-                        responsible for all food and drink service throughout the day.
-                        To create the perfect ambiance, they will set up the hot tub,
-                        light the fire, and adjust the music and household functions.
-                        Get your daily dose of caffeine from your own personal
-                        barista. Overall, the butler is there to make your stay as
-                        smooth and comfortable as possible.
+                        <span className="font-bold">Private Butler:</span> Private
+                        butler included December 1 through April 30 and optional in
+                        summer at extra cost (please inquire). In addition to serving
+                        breakfast, lunch, and dinner, the butler is responsible for all
+                        food and drink service throughout the day. To create the perfect
+                        ambiance, they will set up the hot tub, light the fire, and
+                        adjust the music and household functions. Get your daily dose of
+                        caffeine from your own personal barista. Overall, the butler is
+                        there to make your stay as smooth and comfortable as possible.
                       </p>
                       <p className="text-gray-800 mb-6">
                         Complimentary housekeeping included every other day.

@@ -258,7 +258,7 @@ export default function BlogPost() {
               </div>
               <p>
                 Chalet La Forja is for families who want to go big. It sleeps 16+ guests, with
-                9 bedrooms, 15 beds, and 8 bathrooms, which makes it a great fit for larger family
+                9 bedrooms, 16 beds, and 8 bathrooms, which makes it a great fit for larger family
                 groups with lots of kids, cousins, or multiple couples.
               </p>
               <p>

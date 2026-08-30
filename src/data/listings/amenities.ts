@@ -48,7 +48,7 @@ export const listingAmenities: Record<string, string[]> = {
     "Ski-in / ski-out access",
     "Heated outdoor pool",
     "Hot tub",
-    "Private butler service",
+    "Private butler service (Dec 1–Apr 30; optional in summer)",
     "Fitness gym",
     "Private Kadenwood gondola",
     "Steam shower & spa bath",
@@ -236,7 +236,7 @@ export const listingAmenities: Record<string, string[]> = {
   "two-cedars-kadenwood": [
     "Ski-in / ski-out access",
     "Private Kadenwood gondola",
-    "Private butler service",
+    "Private butler service (Dec 1–Apr 30; optional in summer)",
     "Sleeps up to 17 guests",
     "Architect-designed estate",
     "AceHost VIP concierge",

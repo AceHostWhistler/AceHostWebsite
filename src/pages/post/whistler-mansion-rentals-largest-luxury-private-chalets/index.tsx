@@ -56,7 +56,7 @@ const FAQ_ITEMS = [
   {
     question: "Which AceHost Whistler homes include a private butler?",
     answer:
-      "Two Cedars and Chalet La Forja include private butler service. A chalet host or butler may be added to certain other properties, subject to availability and the terms of the booking.",
+      "Two Cedars and Chalet La Forja include private butler service from December 1 through April 30 (optional in summer at extra cost). A chalet host or butler may be added to certain other properties, subject to availability and the terms of the booking.",
   },
   {
     question: "Are these homes truly ski-in/ski-out?",
@@ -381,11 +381,11 @@ export default function BlogPost() {
                 winter.
               </p>
               <p>
-                Most importantly, a private butler is included every day. The
-                butler can assist with coffee service, food and beverage service,
-                table setup, kitchen cleanup and the small details that make a
-                large group stay feel effortless. AceHost VIP concierge planning is
-                also included.
+                Most importantly, a private butler is included from December 1
+                through April 30 (optional in summer at extra cost). The butler can
+                assist with coffee service, food and beverage service, table setup,
+                kitchen cleanup and the small details that make a large group stay
+                feel effortless. AceHost VIP concierge planning is also included.
               </p>
               <p>
                 <strong>Best for:</strong> Groups wanting a design-led home with a
@@ -400,7 +400,7 @@ export default function BlogPost() {
                 2. Chalet La Forja | Kadenwood | Private Butler
               </h3>
               <p className="text-gray-700 font-medium not-prose text-base mb-4">
-                16 guests | 9 bedrooms | 15 beds | 8 bathrooms | More than 10,000
+                16 guests | 9 bedrooms | 16 beds | 8 bathrooms | More than 10,000
                 sq ft
               </p>
               <PropertyImages images={HEADLINE_PROPERTIES[1].images} />
@@ -418,9 +418,10 @@ export default function BlogPost() {
                 bedroom for a guest who would prefer to minimize stairs.
               </p>
               <p>
-                A private butler is included, along with complimentary housekeeping
-                every other day. AceHost can also coordinate private chefs,
-                additional chalet hosts, airport transportation, restaurant
+                A private butler is included from December 1 through April 30
+                (optional in summer at extra cost), along with complimentary
+                housekeeping every other day. AceHost can also coordinate private
+                chefs, additional chalet hosts, airport transportation, restaurant
                 reservations, ski arrangements and other VIP experiences.
               </p>
               <p>
@@ -785,7 +786,8 @@ export default function BlogPost() {
               </ul>
               <p>
                 Inclusions vary by property. Two Cedars and Chalet La Forja include
-                private butler service, and Chalet La Forja includes housekeeping
+                private butler service from December 1 through April 30 (optional in
+                summer at extra cost), and Chalet La Forja includes housekeeping
                 every other day. Private chefs, drivers, activities and other
                 third-party services are generally additional unless the listing or
                 quote states otherwise. Learn more about our{" "}
