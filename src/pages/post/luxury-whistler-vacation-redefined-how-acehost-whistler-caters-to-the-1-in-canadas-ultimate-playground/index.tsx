@@ -95,6 +95,7 @@ const LuxuryWhistlerVacation = () => {
 
           {/* Blog Content */}
           <div className="max-w-3xl mx-auto px-4 sm:px-6">
+            <BlogGuestyInlineBanner compact placement="top" />
             <article className="prose prose-lg max-w-none">
               <p>
                 Tucked away in the mountains of British Columbia, Whistler has
@@ -467,7 +468,7 @@ const LuxuryWhistlerVacation = () => {
 
           {/* Related Articles */}
           <div className="max-w-5xl mx-auto px-4 sm:px-6 mb-20">
-            <BlogGuestyInlineBanner compact />
+            <BlogGuestyInlineBanner compact placement="bottom" />
 
             <BlogRelatedArticles currentArticleLink={currentArticleLink} />
           </div>

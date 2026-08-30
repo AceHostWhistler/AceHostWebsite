@@ -196,6 +196,8 @@ export default function BlogPost() {
                 alt="Luxury Kadenwood chalet interior in Whistler"
                 priority
               />
+            <BlogGuestyInlineBanner compact placement="top" />
+
             </div>
 
             <div className="prose prose-lg max-w-none">
@@ -552,7 +554,7 @@ export default function BlogPost() {
               </div>
             </div>
 
-            <BlogGuestyInlineBanner compact />
+            <BlogGuestyInlineBanner compact placement="bottom" />
 
 
             <BlogRelatedArticles currentArticleLink={currentArticleLink} />

@@ -88,6 +88,7 @@ const WhistlerSnowReport = () => {
 
           {/* Blog Content */}
           <div className="max-w-3xl mx-auto px-4 sm:px-6">
+            <BlogGuestyInlineBanner compact placement="top" />
             <article className="prose prose-lg max-w-none">
               <h2>The 2024/25 Whistler Snow Report: A Historic Start</h2>
               <p>
@@ -247,7 +248,7 @@ const WhistlerSnowReport = () => {
           </div>
 
           {/* Related Articles */}
-          <BlogGuestyInlineBanner compact />
+          <BlogGuestyInlineBanner compact placement="bottom" />
 
           <BlogRelatedArticles 
             currentArticleLink="/post/whistler-snow-report-record-snowfall-marks-the-start-of-the-2024-2025-ski-season" 

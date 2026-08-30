@@ -68,6 +68,7 @@ const WhistlerWinterOutlook = () => {
 
           {/* Blog Content */}
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
+            <BlogGuestyInlineBanner compact placement="top" />
             <article className="prose prose-lg max-w-none">
               <div className="not-prose">
                 <p className="text-xl text-gray-700 mb-8 leading-relaxed">
@@ -274,7 +275,7 @@ const WhistlerWinterOutlook = () => {
             </div>
 
             {/* Related Articles Section */}
-            <BlogGuestyInlineBanner compact />
+            <BlogGuestyInlineBanner compact placement="bottom" />
 
             <BlogRelatedArticles currentArticleLink={currentArticleLink} />
           </div>

@@ -91,6 +91,7 @@ const LuxuryChristmasRentals = () => {
 
           {/* Blog Content */}
           <div className="max-w-3xl mx-auto px-4 sm:px-6">
+            <BlogGuestyInlineBanner compact placement="top" />
             <article className="prose prose-lg max-w-none">
               <p className="text-lg leading-relaxed mb-10">
                 For those seeking the ultimate in comfort and style, AceHost
@@ -659,7 +660,7 @@ const LuxuryChristmasRentals = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-16">
             <h2 className="text-2xl font-bold text-gray-900 mb-8">More Articles You Might Like</h2>
             
-            <BlogGuestyInlineBanner compact />
+            <BlogGuestyInlineBanner compact placement="bottom" />
 
             
             <BlogRelatedArticles 

@@ -61,6 +61,7 @@ export default function BlogPost() {
               </div>
             </div>
 
+            <BlogGuestyInlineBanner compact placement="top" />
             {/* Blog Content */}
             <div className="prose prose-lg max-w-none">
               <div className="bg-gray-50 p-6 rounded-lg mb-8">
@@ -448,7 +449,7 @@ export default function BlogPost() {
           </div>
           
           {/* Related Articles */}
-          <BlogGuestyInlineBanner compact />
+          <BlogGuestyInlineBanner compact placement="bottom" />
 
           <BlogRelatedArticles currentArticleLink={currentArticleLink} />
         </main>

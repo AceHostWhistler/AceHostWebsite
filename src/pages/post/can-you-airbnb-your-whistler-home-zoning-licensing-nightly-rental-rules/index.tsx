@@ -191,6 +191,8 @@ export default function BlogPost() {
                   sizes="(max-width: 1024px) 100vw, 896px"
                 />
               </div>
+            <BlogGuestyInlineBanner compact placement="top" />
+
             </div>
 
             <div className="prose prose-lg max-w-none">
@@ -657,7 +659,7 @@ export default function BlogPost() {
                 </p>
               </div>
 
-              <BlogGuestyInlineBanner compact />
+              <BlogGuestyInlineBanner compact placement="bottom" />
 
 
               <BlogRelatedArticles

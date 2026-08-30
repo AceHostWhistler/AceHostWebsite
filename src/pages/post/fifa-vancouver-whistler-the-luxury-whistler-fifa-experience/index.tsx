@@ -340,6 +340,8 @@ export default function BlogPost() {
                   sizes="(max-width: 1024px) 100vw, 1024px"
                 />
               </div>
+            <BlogGuestyInlineBanner compact placement="top" />
+
             </div>
 
             <div className="prose prose-lg max-w-none">
@@ -617,7 +619,7 @@ export default function BlogPost() {
             </div>
 
             <div className="not-prose mt-12">
-              <BlogGuestyInlineBanner compact />
+              <BlogGuestyInlineBanner compact placement="bottom" />
 
               <BlogRelatedArticles currentArticleLink={currentArticleLink} />
             </div>

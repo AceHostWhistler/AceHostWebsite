@@ -47,15 +47,22 @@ export function BlogGuestyPostRelatedBanner() {
   );
 }
 
-/** Inline banner for mid or end of article body (prose-width) */
+/** Inline banner for top or bottom of article body (prose-width) */
 export function BlogGuestyInlineBanner({
   compact = false,
+  placement = "bottom",
 }: {
   compact?: boolean;
+  placement?: "top" | "bottom";
 }) {
+  const spacing =
+    placement === "top" ? "not-prose mb-8 mt-0" : "not-prose my-10";
+
   if (compact) {
     return (
-      <div className="not-prose my-10 rounded-xl border border-gray-200 bg-gray-50 px-5 py-5 sm:px-6 sm:flex sm:items-center sm:justify-between sm:gap-6">
+      <div
+        className={`${spacing} rounded-xl border border-gray-200 bg-gray-50 px-5 py-5 sm:px-6 sm:flex sm:items-center sm:justify-between sm:gap-6`}
+      >
         <p className="text-gray-800 text-sm sm:text-base leading-relaxed mb-4 sm:mb-0">
           Planning a Whistler trip? Browse AceHost stays with live availability.
         </p>
@@ -69,7 +76,9 @@ export function BlogGuestyInlineBanner({
   }
 
   return (
-    <div className="not-prose my-10 rounded-xl bg-gray-900 text-white px-6 py-8 sm:px-8 sm:py-10 text-center">
+    <div
+      className={`${spacing} rounded-xl bg-gray-900 text-white px-6 py-8 sm:px-8 sm:py-10 text-center`}
+    >
       <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-2">
         AceHost Whistler
       </p>

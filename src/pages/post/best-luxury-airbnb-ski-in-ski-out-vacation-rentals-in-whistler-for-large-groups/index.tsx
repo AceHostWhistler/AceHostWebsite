@@ -117,6 +117,8 @@ export default function BlogPost() {
               </div>
             </div>
 
+            <BlogGuestyInlineBanner compact placement="top" />
+
             <div className="prose prose-lg max-w-none">
               <p className="text-xl text-gray-800 leading-relaxed">
                 Planning a Whistler trip with a big family, multiple couples, grandparents, kids, or
@@ -763,7 +765,7 @@ export default function BlogPost() {
           </div>
         </main>
 
-        <BlogGuestyInlineBanner compact />
+        <BlogGuestyInlineBanner compact placement="bottom" />
 
 
         <BlogRelatedArticles currentArticleLink={currentArticleLink} count={3} />

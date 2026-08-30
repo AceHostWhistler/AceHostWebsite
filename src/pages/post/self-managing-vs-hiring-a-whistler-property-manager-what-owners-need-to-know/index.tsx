@@ -55,6 +55,8 @@ export default function BlogPost() {
                   priority
                 />
               </div>
+            <BlogGuestyInlineBanner compact placement="top" />
+
             </div>
 
             <div className="prose prose-lg max-w-none">
@@ -375,7 +377,7 @@ export default function BlogPost() {
           </div>
         </main>
 
-        <BlogGuestyInlineBanner compact />
+        <BlogGuestyInlineBanner compact placement="bottom" />
 
 
         <BlogRelatedArticles currentArticleLink={currentArticleLink} count={3} />

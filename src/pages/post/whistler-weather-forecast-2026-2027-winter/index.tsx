@@ -6,6 +6,7 @@ import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
 import WhistlerWeatherForecastContent from "@/components/blog/WhistlerWeatherForecastContent";
 import BookWhistlerWinterButton from "@/components/blog/BookWhistlerWinterButton";
+import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogSeoHead from "@/components/blog/BlogSeoHead";
 import {
   CATEGORY,
@@ -121,6 +122,7 @@ export default function WhistlerWeatherForecast2026Page() {
             <div className="lg:grid lg:grid-cols-[minmax(0,820px)_220px] lg:gap-12 xl:gap-16 lg:justify-center">
               <div className="min-w-0 max-w-[820px] lg:max-w-none mx-auto lg:mx-0 w-full">
                 <BlogBreadcrumbs slug="whistler-weather-forecast-2026-2027-winter" />
+                <BlogGuestyInlineBanner compact placement="top" />
               <TableOfContents mobile />
 
                 <WhistlerWeatherForecastContent />
@@ -130,6 +132,8 @@ export default function WhistlerWeatherForecast2026Page() {
                 <TableOfContents />
               </aside>
             </div>
+
+            <BlogGuestyInlineBanner compact placement="bottom" />
 
             <BlogRelatedArticles
               currentArticleLink={currentArticleLink}
