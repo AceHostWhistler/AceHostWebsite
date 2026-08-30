@@ -1,0 +1,50 @@
+---
+description: Blog posts should be fun, skimmable, and easy to read with clear titles
+globs: src/pages/post/**/*.tsx,src/components/blog/**/*.tsx
+alwaysApply: false
+---
+
+# Blog readability — fun, skimmable, well-titled
+
+Blog posts should feel inviting to read, not like a dense book chapter. A reader should be able to **skim headings and callouts** and still get the story.
+
+Reference implementation: `src/components/blog/WhistlerWeatherForecastContent.tsx`
+
+## Structure
+
+- **Lead hook** — one strong opening paragraph (larger type, `not-prose`) that states the topic and why it matters.
+- **SectionHeader** — major sections with optional kicker labels (`Start here`, `Plan your trip`, `Bottom line`). Use `id` for TOC anchors.
+- **SubSectionTitle** — h3-style breaks inside long sections so no section runs more than ~4 paragraphs without a sub-heading.
+- **TextBlock** — group related paragraphs in `<div className="space-y-4">`. Never use one sentence per `<p>` across the whole article.
+
+## Callouts (break up walls of text)
+
+- **KeyPoints** — bullet lists for stats, takeaways, or “what to expect” summaries.
+- **StatCallout** — single standout stat or quote with left border emphasis.
+- **OutlookCard** (or similar) — structured metadata blocks (outlook, highlights, confidence).
+- **At-a-glance box** — gray bordered summary near the top for scanners.
+
+## Writing style
+
+- Merge choppy one-liners into full paragraphs (2–4 sentences each).
+- Use kickers and sub-titles that sound human, not robotic (`Our early prediction`, not `Summary`).
+- Alternate prose → callout → prose → image so the rhythm stays visual.
+- Keep FAQ, CTAs, and images **outside** `TextBlock` wrappers — never nest section headers inside text blocks.
+
+## Avoid
+
+```tsx
+// ❌ BAD — book-like, impossible to skim
+<p>El Niño is here.</p>
+<p>It is strengthening.</p>
+<p>NOAA says 90% chance.</p>
+<p>That means warmer weather.</p>
+
+// ✅ GOOD — grouped prose + scannable callout
+<TextBlock>
+  <p>El Niño is here and strengthening. NOAA gives a greater than 90% chance of a very strong event this winter — expect a warmer, more variable season.</p>
+</TextBlock>
+<KeyPoints title="Historical highlights" items={["January: 138% of normal", "..."]} />
+```
+
+When adding or rewriting blog content, apply these patterns even if the layout helpers live in the same file as the article (co-locate small helpers like the weather forecast post does).
