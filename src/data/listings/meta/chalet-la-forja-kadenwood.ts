@@ -80,7 +80,7 @@ const listing: ListingData = {
     "Ski-in / ski-out access",
     "Heated outdoor pool",
     "Hot tub",
-    "Private butler service (Dec 1–Apr 30; optional in summer)",
+    "Private butler service (daily in winter; optional in summer)",
     "Fitness gym",
     "Private Kadenwood gondola",
     "Steam shower & spa bath",

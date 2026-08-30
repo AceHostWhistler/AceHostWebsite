@@ -52,7 +52,7 @@ const listing: ListingData = {
   seo: {
     title: "Two Cedars | Kadenwood | Private Butler - AceHost",
     description:
-      "Experience luxury at Two Cedars in Kadenwood. This ski-in/ski-out property features 7 bedrooms, private butler service (Dec 1–Apr 30), and stunning mountain views.",
+      "Welcome to Two Cedars, an OpenSpace-designed architectural masterpiece in Kadenwood. Sleeps 17 with ski-in/ski-out access, private Kadenwood Gondola service, and daily butler included in winter.",
   },
   header: {
     title: "Two Cedars | Kadenwood",

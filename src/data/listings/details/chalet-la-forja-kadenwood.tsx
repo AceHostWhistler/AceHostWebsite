@@ -8,15 +8,20 @@ export default function ChaletLaForjaKadenwoodDetails({ photos }: ListingDetails
   return (
     <>
       <div className="max-w-6xl mx-auto px-4" id="details">
-                  <p className="text-gray-800 mb-16 max-w-4xl">
+                  <p className="text-gray-800 mb-8 max-w-4xl">
                     Luxury Ski-In/Out | Pool | Hot tub | Gym | Gondola; Welcome to
                     Chalet La Forja in Kadenwood. This 10,000+ square foot home
                     amongst the locals is considered one of, if not the most
                     prestigious luxury rental in all of Whistler. Perfect for 1 or 2
-                    families seeking their own bedrooms.
+                    families seeking their own bedrooms, with the option to host more
+                    people.
                     <br />
                     <br />
-                    Ranked one of VRBO's Top 10 vacation rentals in 2023.
+                    Ranked one of VRBO&apos;s Top 10 vacation rentals in 2023.
+                    <br />
+                    <br />
+                    Housekeeping included in price every other day. Butler included
+                    daily in winter.
                   </p>
 
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-10">
@@ -72,6 +77,20 @@ export default function ChaletLaForjaKadenwoodDetails({ photos }: ListingDetails
                         <h2 className="text-2xl font-bold">The Space</h2>
                       </div>
                       <p className="text-gray-800 mb-6">
+                        <span className="font-bold">Private Butler &amp; Daily Cleaning:</span>{" "}
+                        (Private butler included December 1 through April 30 and
+                        optional in summer at extra cost, please inquire). In addition
+                        to serving breakfast, lunch, and dinner, the butler is
+                        responsible for all food and drink service throughout the day as
+                        well as cleanup and set up of dining table and kitchen area. To
+                        create the perfect ambiance, they will set up the hot tub, light
+                        the fire, and adjust the music and household functions. Get your
+                        daily dose of caffeine from your own personal barista. Overall,
+                        the butler is there to make your stay as smooth and comfortable
+                        as possible. Daily cleaning is included in your stay, every other
+                        day.
+                      </p>
+                      <p className="text-gray-800 mb-6">
                         This luxurious home includes a gourmet chefs kitchen with a
                         butlers pantry, two private offices, state of the art
                         electronics with built in Sonos speaker systems in every room,
@@ -79,20 +98,6 @@ export default function ChaletLaForjaKadenwoodDetails({ photos }: ListingDetails
                         access to and from the ski-hill from your front door. Full 9
                         bedroom home (8+1 layout), with an additional single bed in a
                         smaller private room with a window.
-                      </p>
-                      <p className="text-gray-800 mb-6">
-                        <span className="font-bold">Private Butler:</span> Private
-                        butler included December 1 through April 30 and optional in
-                        summer at extra cost (please inquire). In addition to serving
-                        breakfast, lunch, and dinner, the butler is responsible for all
-                        food and drink service throughout the day. To create the perfect
-                        ambiance, they will set up the hot tub, light the fire, and
-                        adjust the music and household functions. Get your daily dose of
-                        caffeine from your own personal barista. Overall, the butler is
-                        there to make your stay as smooth and comfortable as possible.
-                      </p>
-                      <p className="text-gray-800 mb-6">
-                        Complimentary housekeeping included every other day.
                       </p>
                       <p className="text-gray-800">
                         Included when booking this property, we will help you with all
