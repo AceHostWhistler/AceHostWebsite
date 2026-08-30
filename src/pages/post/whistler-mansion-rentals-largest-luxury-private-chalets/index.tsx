@@ -436,7 +436,7 @@ export default function BlogPost() {
                 3. The Mountaintop at Kadenwood | Ski in Ski out
               </h3>
               <p className="text-gray-700 font-medium not-prose text-base mb-4">
-                16 guests | 7 bedrooms | 8 beds | 7.5 bathrooms | Approximately
+                16 guests | 7 bedrooms | 8 beds | 6.5 bathrooms | Approximately
                 6,200 sq ft
               </p>
               <PropertyImages images={HEADLINE_PROPERTIES[2].images} />

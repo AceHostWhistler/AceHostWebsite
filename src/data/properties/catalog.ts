@@ -323,10 +323,10 @@ export const propertyCategories: PropertyCategory[] = [
   ],
             guests: 16,
             bedrooms: 7,
-            bathrooms: 7.5,
+            bathrooms: 6.5,
             location: "Kadenwood, Whistler",
             description:
-              "Located in Whistler's most prestigious true ski-in ski-out neighbourhood, Kadenwood, this 7-bedroom, 7.5-bath retreat offers 6200 square feet of refined mountain living with chef's kitchen, hot tub, fire pits, and more.",
+              "Located in Whistler's most prestigious true ski-in ski-out neighbourhood, Kadenwood, this 7-bedroom, 6.5-bath retreat offers 6200 square feet of refined mountain living with chef's kitchen, hot tub, fire pits, and more.",
             features: [
               "Renovated Chef's Kitchen",
               "Hot Tub",
@@ -1082,7 +1082,7 @@ export const propertyCategories: PropertyCategory[] = [
               "Outdoor swimming pool",
             ],
             highlights: [],
-            priceRange: "Nightly Price Range: $350-$1,050",
+            priceRange: "Nightly Price Range: $350-$1,200",
             winterPrice: "",
             holidayPrice: "",
             link: "/listings/ski-in-ski-out-walk-to-lifts-2-bed",

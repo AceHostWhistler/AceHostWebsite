@@ -257,9 +257,9 @@ export default function LuxurySkiInSkiOut7BedroomKadenwoodDetails({ photos }: Li
                       <h2 className="text-2xl font-bold">Registration Details</h2>
                     </div>
                     <p className="text-gray-800 max-w-4xl">
-                      <strong>Municipal registration number:</strong> 00013412
+                      <strong>Municipal registration number:</strong> 00015634
                       <br />
-                      <strong>Provincial registration number:</strong> PM939298865
+                      <strong>Provincial registration number:</strong> PM846619574
                     </p>
                   </div>
                 </div>

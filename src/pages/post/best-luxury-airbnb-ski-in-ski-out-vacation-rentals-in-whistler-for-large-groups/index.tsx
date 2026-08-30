@@ -373,7 +373,7 @@ export default function BlogPost() {
               <p>
                 If your group&rsquo;s dream Whistler trip is all about skiing, this one is a strong
                 contender. The Mountaintop at Kadenwood sleeps up to 16 guests with 7 bedrooms and
-                7.5 bathrooms.
+                6.5 bathrooms.
               </p>
               <p>
                 For bigger families, ski in ski out access makes a huge difference. No messy morning

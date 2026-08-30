@@ -27,10 +27,10 @@ const listing: ListingData = {
   },
   header:   {
       "title": "Ski-in/Ski-out | Walk to Lifts | 2 Bed",
-      "guests": 7,
+      "guests": 4,
       "bedrooms": 2,
       "bathrooms": 2,
-      "priceRange": "$650-$1,200 per night",
+      "priceRange": "$350-$1,200 per night",
       "airbnbLink": "https://www.airbnb.ca/rooms/1015303987589924725?guests=1&adults=1&s=67&unique_share_id=1d282b7d-e5fc-4539-b272-d5d4809bf789"
   },
   galleryTitle: "Le Chamois Apartment",

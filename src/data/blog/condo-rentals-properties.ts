@@ -95,7 +95,7 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
   },
   {
     name: "Le Chamois | 2 Bed | Walk to Lifts",
-    priceRange: "$350-$1,050 per night (seasonal)",
+    priceRange: "$350-$1,200 per night (seasonal)",
     stats: "Sleeps 4 | 2 Bedrooms | 2 Beds | 2 Bathrooms | Walk to Lifts | Upper Village Location",
     paragraphs: [
       "Welcome to this modern apartment in the prestigious Le Chamois hotel, perfectly positioned in the heart of Upper Village and just across the street from the Blackcomb Gondola. This stylish retreat offers the ideal combination of comfort and convenience for your Whistler adventure.",

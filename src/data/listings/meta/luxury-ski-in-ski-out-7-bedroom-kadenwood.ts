@@ -86,13 +86,13 @@ const listing: ListingData = {
 ],
   seo: {
     title: "The Mountaintop at Kadenwood | Ski in Ski out - AceHost",
-    description: "Located in Whistler's most prestigious true ski-in ski-out neighbourhood, Kadenwood, this 7-bedroom, 7.5-bath retreat offers 6200 square feet of refined mountain living with chef's kitchen, hot tub, fire pits, and more.",
+    description: "Located in Whistler's most prestigious true ski-in ski-out neighbourhood, Kadenwood, this 7-bedroom, 6.5-bath retreat offers 6200 square feet of refined mountain living with chef's kitchen, hot tub, fire pits, and more.",
   },
   header:   {
       "title": "The Mountaintop at Kadenwood | Ski in Ski out",
       "guests": 16,
       "bedrooms": 7,
-      "bathrooms": 7.5,
+      "bathrooms": 6.5,
       "priceRange": "$6,500-$9,000+ per night. $8,000-$10,000+ in winter. $14,900-$19,000 for Christmas/NYE.",
       "beds": 8,
       "airbnbLink": "https://www.airbnb.ca/rooms/1599369454342102375?guests=1&adults=1&s=67&unique_share_id=07a4f082-1dec-4a06-bf97-05638b3b71ef"

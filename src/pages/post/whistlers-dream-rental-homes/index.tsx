@@ -439,7 +439,7 @@ export default function BlogPost() {
                 </p>
                 <p className="mt-4">
                   6200+ SQ FT | Ski-in/Ski-out access | Sleeps 16 | 7 Bedrooms |
-                  7.5 Baths | Hot Tub | Wood Barrel Sauna | Fire Pits | Steam Room
+                  6.5 Baths | Hot Tub | Wood Barrel Sauna | Fire Pits | Steam Room
                 </p>
               </div>
 
