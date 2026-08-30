@@ -79,8 +79,31 @@ export const HOME_IDS = new Set([
   "punta-mita---casa-juntos",
 ]);
 
+export function isWhistlerAreaLocation(location: string): boolean {
+  const loc = location.toLowerCase();
+  return (
+    loc === "whistler" ||
+    loc.includes("whistler") ||
+    loc.includes("pemberton") ||
+    loc.includes("squamish")
+  );
+}
+
+/** All unique properties across categories (first occurrence wins). */
+export function getAllCatalogProperties(): PropertyFeature[] {
+  const byId = new Map<string, PropertyFeature>();
+  for (const category of propertyCategories) {
+    for (const property of category.properties) {
+      if (!byId.has(property.id)) {
+        byId.set(property.id, property);
+      }
+    }
+  }
+  return Array.from(byId.values());
+}
+
 export function getPropertyType(
-  property: PropertyFeature
+  property: Pick<PropertyFeature, "id" | "name">
 ): "home" | "townhome" | "condo" {
   const id = property.id;
   const name = property.name.toLowerCase();
@@ -323,6 +346,7 @@ export const propertyCategories: PropertyCategory[] = [
   ],
             guests: 16,
             bedrooms: 7,
+            beds: 8,
             bathrooms: 6.5,
             location: "Kadenwood, Whistler",
             description:
@@ -471,7 +495,7 @@ export const propertyCategories: PropertyCategory[] = [
             ],
             guests: 11,
             bedrooms: 5,
-            bathrooms: 6,
+            bathrooms: 5.5,
             location: "Whistler Village, Whistler",
             description:
               "Located in the heart of Whistler Village, this beautifully updated condo offers unparalleled convenience with stunning mountain views. Just steps away from the lifts, restaurants, and village attractions.",
