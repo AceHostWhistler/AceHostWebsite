@@ -10,21 +10,8 @@ export default function PanoramicEstateKadenwoodDetails({ photos }: ListingDetai
   return (
     <>
       <div className="max-w-6xl mx-auto px-4" id="details">
-                  <p className="text-gray-800 mb-8 max-w-4xl">
-                    Welcome to Panoramic Estate, a spacious timber chalet in
-                    Kadenwood with ski-in/ski-out access. Its 8 bedrooms, 11 beds
-                    and 7 baths accommodate up to 17 guests, making it well suited
-                    to one or two large families.
-                  </p>
-                  <p className="text-gray-800 mb-8 max-w-4xl">
-                    Mountain-view decks, an open-plan kitchen, multiple fireplaces,
-                    an extra-large hot tub, indoor sauna, media room, ping pong,
-                    built-in sound and gym equipment provide space to gather,
-                    entertain and unwind.
-                  </p>
                   <p className="text-gray-800 mb-16 max-w-4xl">
-                    Multiple living areas are arranged across several levels and
-                    connected by a private residential elevator.
+                    Welcome to Panoramic Estate in Kadenwood, a true Whistler-style luxury log chalet with soaring timber ceilings, warm wood finishes, stone fireplaces and incredible mountain views. This expansive 8-bedroom ski-in/ski-out home is perfect for families and groups, with multiple living spaces, large outdoor decks, a private elevator, hot tub, sauna and media room, all surrounded by the peaceful mountain setting of exclusive Kadenwood.
                   </p>
 
                   {/* Instagram Reel Video - Centered and Larger */}
@@ -93,26 +80,18 @@ export default function PanoramicEstateKadenwoodDetails({ photos }: ListingDetai
                             />
                           </svg>
                         </div>
-                        <h2 className="text-2xl font-bold">The Space</h2>
+                        <h2 className="text-2xl font-bold">The space</h2>
                       </div>
                       <p className="text-gray-800 mb-6">
-                        Panoramic Estate is designed for families and groups who
-                        value both time together and room to spread out. Eight
-                        bedrooms and multiple living areas provide generous communal
-                        spaces alongside quieter private areas, while the elevator
-                        conveniently connects the home's levels.
+                        Panoramic Estate is designed for families and groups who value both time together and room to spread out. 8 bedrooms and multiple living areas are arranged across several levels, all conveniently connected by a private elevator. The layout works particularly well for multi-generational families and groups travelling together, providing generous communal spaces alongside quieter private areas. Large outdoor decks showcase the surrounding mountain scenery, while multiple fireplaces create a warm alpine atmosphere indoors. A private extra large hot tub, indoor sauna, media room, ping pong, built-in sound system and fitness equipment provide entertainment and relaxation throughout the home.
                       </p>
                       <p className="text-gray-800 mb-6">
-                        Large outdoor decks frame the surrounding mountain scenery,
-                        and multiple fireplaces create a warm alpine atmosphere
-                        indoors. The hot tub, sauna, media room, ping pong table,
-                        built-in sound system and fitness equipment offer
-                        entertainment and relaxation throughout the home.
+                        Ski-in/ski-out access and Kadenwood’s private gondola complete the experience, combining the privacy of a large mountain estate with convenient access to Creekside and Whistler Mountain. Nestled high on the mountainside within the prestigious and secluded Kadenwood community, Panoramic Estate also offers exclusive access to the residents & guest only Private Kadenwood gondola.
                       </p>
                       <p className="text-gray-800">
-                        The open-plan kitchen is equipped for group stays, and the
-                        dining setup seats 14 using the eight-seat dining table and
-                        six-seat extension table.
+                        <strong>Location:</strong>
+                        <br />
+                        Set high above Creekside in Kadenwood, Panoramic Estate combines a private alpine setting with exceptional access to Whistler Mountain. Guests can use Kadenwood’s private residents-and-guests-only gondola to reach Creekside Village in approximately five minutes, or enjoy ski-in/ski-out access during the winter when conditions permit. Creekside offers lifts, restaurants, cafés and groceries, while Whistler Village is approximately a 10-minute drive away.
                       </p>
                     </div>
                   </div>
@@ -145,110 +124,81 @@ export default function PanoramicEstateKadenwoodDetails({ photos }: ListingDetai
                             />
                           </svg>
                         </div>
-                        <h2 className="text-2xl font-bold">Bedroom Layout</h2>
+                        <h2 className="text-2xl font-bold">BEDROOM LAYOUT:</h2>
                       </div>
 
                       <p className="font-bold mb-2">TOP LEVEL:</p>
                       <p className="mb-4">
-                        <span className="font-medium">• Master Bedroom 1 -</span> has
-                        a beautiful king bed with a walk-in closet, chaise lounge,
-                        telescope and outdoor patio. It is located at the end of the
-                        corridor for ultimate privacy. With a spacious ensuite walk-in
-                        shower and stand-alone bathtub. This bedroom will have
-                        dedicated central AC from May 1, 2027.
+                        <span className="font-medium">• Master Bedroom 1-</span> has a beautiful King bed with a walk-in closet, chaise lounge, telescope, and outdoor patio. It is located at the end of the corridor for ultimate privacy. With a spacious ensuite walk-in shower and a stand-alone bathtub. This bedroom has central AC.
                       </p>
                       <p className="mb-4">
-                        <span className="font-medium">• Master Bedroom 2 -</span> Has a plush
-                        king bed, with an ensuite bathroom with a walk in shower and
-                        outdoor patio. This bedroom will have dedicated central AC
-                        from May 1, 2027.
+                        <span className="font-medium">• Master Bedroom 2-</span> Has a plush King bed, with an ensuite bathroom with a walk-in shower and outdoor patio. This bedroom has central AC.
                       </p>
                       <p className="mb-4">
-                        <span className="font-medium">• Bedroom 3 -</span> Bunk room
-                        with two queen beds and an ensuite bathroom with a walk in
-                        shower.
-                      </p>
-                      <p className="mb-4">
-                        <span className="font-medium">• Additional -</span> Washer and
-                        dryer located on this floor.
+                        • Washer and dryer located on this floor.
+                        <br />
+                        <span className="font-medium">• Bedroom 3-</span> Bunk room with two queen beds and an ensuite bathroom with a walk-in shower.
                       </p>
 
                       <p className="font-bold mb-2">UPPER LEVEL:</p>
                       <p className="mb-4">
-                        <span className="font-medium">• Bedroom 4 -</span> Full bed
-                        and office desk, with a bathroom and walk-in shower located
-                        right next door.
+                        <span className="font-medium">• Bedroom 4-</span> Full bed with a bathroom located right next door with a walk-in shower and office desk.
                       </p>
                       <p className="mb-4">
-                        <span className="font-medium">• Features:</span> Large open
-                        plan kitchen with a big island and pantry. Equipped with a
-                        Miele coffee machine, KitchenAid mixer and two-drawer freezer.
-                        The eight-seat dining table includes a six-seat extension
-                        table and chairs, seating 14 comfortably. The main living
-                        room has a wood-burning fireplace, with fire starter and logs
-                        provided. A media room with a large TV sits just off the
-                        living room, and the level opens to spacious outdoor decks.
+                        • Large open-plan kitchen with a big island and pantry. Equipped with a Miele coffee machine, kitchen aid mixer, and 2-drawer freezer.
+                        <br />
+                        • Dining table (14 guests): Spacious 8 seater dining table + 6 seater extension table with chairs available for a total of 14 comfortably at the dining table.
+                        <br />
+                        • Main living room with a wood-burning fireplace. Fire starter and logs are provided and included in your stay.
+                        <br />
+                        • Media room located just off the living room with a large TV.
+                        <br />
+                        • Spacious outdoor deck space
+                        <br />
+                        • 10 top picnic table outside on the deck is great for summer meals.
                       </p>
                       <p className="mb-4">
-                        <span className="font-medium">• Bedroom 8 -</span> (photos not
-                        listed) is a separate upper-level one-bedroom suite with a
-                        queen bed, separate bedroom and closet, and a fully functional
-                        kitchen with full-sized appliances. It is located just off
-                        the main kitchen.
+                        <span className="font-medium">• Bedroom 8-</span> one-bedroom suite with a Queen bed - separate bedroom and closet and fully functional kitchen with full-sized appliances. Located just off of the kitchen.
                       </p>
 
                       <p className="font-bold mb-2">MAIN LEVEL:</p>
                       <p className="mb-4">
-                        <span className="font-medium">• Bedroom 5 -</span> Well
-                        appointed room with a queen bed.
+                        <span className="font-medium">• Bedroom 5-</span> Well-appointed room with a Queen bed
                       </p>
                       <p className="mb-4">
-                        <span className="font-medium">• Bedroom 6 -</span> A beautiful
-                        bedroom with a queen bed and patio access to the hot tub. Both
-                        bedrooms 5 and 6 share a bathroom with a walk in shower
-                        located in between both rooms.
+                        <span className="font-medium">• Bedroom 6-</span> A beautiful bedroom with a Queen bed and patio access to the hot tub. Both bedrooms share a bathroom with a walk-in shower located in between both rooms.
                       </p>
                       <p className="font-bold mb-2">LOWER LEVEL:</p>
                       <p className="mb-4">
-                        <span className="font-medium">• Bedroom 7 -</span> is located
-                        on the ground floor, it has a bunk bed with two queen beds. An
-                        additional queen murphy bed is also in this room.
+                        <span className="font-medium">• Bedroom 7-</span> is located on the ground floor, it has a bunk bed with two Queen beds. An additional Queen Murphy bed is also in this room.
                       </p>
                       <p className="mb-4">
-                        <span className="font-medium">• Features:</span> Large
-                        bathroom on this floor next to the media/bedroom with a walk
-                        in shower. Garage fits one car and has a gym area with a
-                        peloton, bench press, weights and running machine. Additional
-                        laundry space with a washer and dryer. Large mudroom and ski
-                        storage area with exit to the garage. Sauna located on this
-                        floor by the mudroom.
+                        • Large bathroom on this floor next to the media/bedroom with a walk-in shower.
+                        <br />
+                        • Garage fits one car and has a gym area with a peloton, bench press, weights, and running machine.
+                        <br />
+                        • Additional laundry space with a washer and dryer.
+                        <br />
+                        • Large mudroom and ski storage area with exit to the garage.
+                        <br />
+                        • Sauna located on this floor by the mudroom.
                       </p>
                       <p className="mb-4">
-                        <span className="font-medium">• Air Conditioning:</span>{" "}
-                        Brand-new central AC is scheduled to be available from May 1,
-                        2027. Master Bedrooms 1 and 2 will have dedicated central AC,
-                        while the remainder of the home will be cooled through
-                        common-area AC.
-                        The timber construction also helps regulate indoor
-                        temperatures year-round.
+                        *Air Conditioning / AC: The home has brand-new central AC throughout every floor. Please note that not every bedroom has its own dedicated AC unit. Both Master Bedroom 1 and Master Bedroom 2 have their own central AC, while the rest of the home is cooled through the AC in the common areas. (Available for guest comfort as of May 1, 2027 onwards)
+                        <br />
+                        Even on the hottest summer days, the entire home stays very comfortable, including the bedrooms. The log-style construction also naturally helps regulate the temperature, keeping the home cool in summer and warm in winter based on your preferred settings, both day and night, year-round.
                       </p>
                     </div>
                   </div>
 
                   {/* Guest Access Section */}
                   <div className="mb-16">
-                    <h2 className="text-2xl font-bold mb-4">Guest Access</h2>
+                    <h2 className="text-2xl font-bold mb-4">Guest access</h2>
                     <p className="text-gray-800 max-w-4xl mb-4">
-                      Guests have private access to the entire home, including the
-                      garage, driveway, hot tub and all advertised living spaces and
-                      amenities.
+                      Guests have access to the entire private home, garage, hot tub, driveway, etc..
                     </p>
                     <p className="text-gray-800 max-w-4xl">
-                      <strong>Important elevator note:</strong> The home includes a
-                      private residential elevator connecting all levels. Occasional
-                      servicing may be required, so availability cannot always be
-                      guaranteed. If elevator access is essential for your group,
-                      please confirm with us before booking.
+                      *Important elevator note: The home includes a private elevator connecting all levels. As with any residential elevator, occasional servicing may be required and availability cannot always be guaranteed. If elevator access is essential for your group, please confirm with us before booking.*
                     </p>
                   </div>
 
@@ -269,40 +219,26 @@ export default function PanoramicEstateKadenwoodDetails({ photos }: ListingDetai
                           />
                         </svg>
                       </div>
-                      <h2 className="text-2xl font-bold">Location</h2>
+                      <h2 className="text-2xl font-bold">Neighbourhood highlights</h2>
                     </div>
                     <p className="text-gray-800 max-w-4xl mb-6">
-                      Sitting almost 1,000 feet above the valley floor, Kadenwood is
-                      one of Whistler's most exclusive ski-in/ski-out neighbourhoods.
-                      Set high above Creekside on Whistler Mountain, it offers
-                      privacy, old-growth forest, mountain views and access to the
-                      private Kadenwood Gondola for residents and guests.
+                      Sitting almost 1,000 feet above the valley floor, Kadenwood is one of Whistler’s most exclusive ski-in/ski-out neighbourhoods. Set high above Creekside on Whistler Mountain, it offers incredible privacy, old-growth forest, beautiful mountain views and access to the private Kadenwood Gondola for residents and guests.
                     </p>
                     <p className="text-gray-800 max-w-4xl mb-6">
-                      The private gondola connects Kadenwood with Creekside Village
-                      in approximately five minutes. Creekside can also be reached
-                      by a short drive or, during ski season when conditions permit,
-                      from the mountain.
+                      The private gondola connects Kadenwood directly with Creekside Village in approximately five minutes. Creekside can also be reached by a short drive or, during ski season, directly from the mountain.
                     </p>
                     <p className="text-gray-800 max-w-4xl mb-6">
-                      Creekside provides direct access to Whistler Mountain. Its
-                      upgraded 10-person gondola increased out-of-base capacity by
-                      approximately 35%, while the upgraded Big Red Express
-                      increased uphill capacity by approximately 30%, helping
-                      improve mountain access and wait times.
+                      For skiers, Creekside is an excellent place to start the day. While many visitors naturally begin from the main Whistler Village base, Creekside provides direct access to Whistler Mountain without needing to travel into the Village each morning. The upgraded 10-person Creekside Gondola increased out-of-base capacity by approximately 35%, while the upgraded Big Red Express increased uphill capacity by approximately 30%, helping improve mountain access and wait times.
                     </p>
                     <p className="text-gray-800 max-w-4xl mb-6">
-                      Creekside Village has groceries at Creekside Market and
-                      restaurants and cafés including Red Door Bistro, Rimrock Café,
-                      Creekbread, Dusty's, BReD and Rockit Coffee. Whistler Village
-                      is approximately a 10-minute drive away.
+                      Creekside Village has everything needed close to home, including Creekside Market for groceries and some of Whistler’s favourite restaurants and cafés, including Red Door Bistro, Rimrock Café, Creekbread, Dusty’s, BReD and Rockit Coffee.
                     </p>
-                    <h3 className="text-xl font-bold mb-3">Getting Around</h3>
+                    <p className="text-gray-800 max-w-4xl mb-6">
+                      Whistler Village is approximately a 10-minute drive away, giving guests easy access to the main Village while enjoying the privacy and peaceful mountain setting of Kadenwood.
+                    </p>
+                    <h3 className="text-xl font-bold mb-3">Getting around</h3>
                     <p className="text-gray-800 max-w-4xl">
-                      Reach Creekside and Whistler Village by private gondola, taxi,
-                      ride app, private driver or rental vehicle. Transportation is
-                      not necessary for skiing because the property is located on
-                      Whistler Mountain.
+                      Can access Creekside & Whistler village via the private gondola, taxi, ride app, private driver, or vehicle rentals. Transportation is not necessary to ski since the property is located right on Whistler
                     </p>
                   </div>
 
@@ -416,27 +352,23 @@ export default function PanoramicEstateKadenwoodDetails({ photos }: ListingDetai
                     </div>
                   </div>
 
-                  {/* Concierge Services */}
+                  {/* Other Things to Note */}
                   <div className="mb-16">
-                    <h2 className="text-2xl font-bold mb-4">Concierge Services</h2>
+                    <h2 className="text-2xl font-bold mb-4">Other things to note</h2>
                     <p className="text-gray-800 max-w-4xl">
-                      Complimentary AceHost VIP concierge planning is included with
-                      every stay. Our local team can coordinate restaurant
-                      reservations, private chefs, airport transfers, private
-                      drivers, grocery pre-stocking, equipment rentals, instructors,
-                      childcare, in-home massage and other Whistler experiences.
+                      Complimentary AceHost VIP concierge planning is included with every stay. Our local Whistler team is available to help make your trip seamless, from restaurant reservations and local recommendations to coordinating private chefs, airport transfers, private drivers, grocery pre-stocking, ski and snowboard rentals, instructors, childcare, in-home massage, snowmobiling, helicopter experiences and more.
                       <br /><br />
-                      We can arrange complimentary ski-pass delivery directly to the
-                      home for passes booked through our team. Please contact us
-                      before purchasing so we can coordinate delivery. Optional
-                      third-party services are charged separately unless specifically
-                      stated as included with your reservation.
+                      Ski lift pass booking & delivery: One of the perks of booking with AceHost is complimentary ski pass delivery directly to your door. We can arrange day passes, multi-day passes, season passes and more, helping you skip the ticket office, paperwork and extra stop upon arrival. Please reach out to us before purchasing your passes, as the booking will need to be made through our team in order for us to arrange delivery. We’re happy to guide you through the process and make it as easy as possible.
+                      <br /><br />
+                      Optional third-party services are charged separately unless specifically stated as included with your reservation.
+                      <br /><br />
+                      Please don't hesitate to reach out if you need anything!
                     </p>
                   </div>
 
                   {/* Registration Details */}
                   <div className="mb-16">
-                    <h2 className="text-2xl font-bold mb-4">Registration Details</h2>
+                    <h2 className="text-2xl font-bold mb-4">Registration details</h2>
                     <p className="text-gray-800 max-w-4xl">
                       <strong>Municipal registration number:</strong> 00013273
                       <br />

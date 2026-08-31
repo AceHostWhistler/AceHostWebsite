@@ -63,7 +63,7 @@ const listing: ListingData = {
 ],
   seo: {
     title: "Chalet La Forja - Ski in Ski out Kadenwood Estate | AceHost",
-    description: "Chalet La Forja is a 10,000-plus-square-foot Kadenwood estate for 16 guests, with ski-in/ski-out access, a pool, hot tub, sauna, gym, private gondola access, and winter butler service.",
+    description: "Welcome to Chalet La Forja in Kadenwood, one of Whistler’s most prestigious luxury rentals. This 10,000+ sq. ft. ski-in/ski-out estate is designed for unforgettable family stays, with 9 bedrooms, expansive living spaces, a heated outdoor pool, hot tub, sauna, gym and private gondola access to Creekside. Perfect for one or two families wanting exceptional space, privacy and service. Housekeeping included every other day Daily Butler Included in Winter",
   },
   header:   {
       "title": "Chalet La Forja - Ski in Ski out Kadenwood Estate",

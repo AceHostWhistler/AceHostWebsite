@@ -8,18 +8,12 @@ export default function ChaletLaForjaKadenwoodDetails({ photos }: ListingDetails
     <>
       <div className="max-w-6xl mx-auto px-4" id="details">
                   <p className="text-gray-800 mb-8 max-w-4xl">
-                    Chalet La Forja is a 10,000-plus-square-foot ski-in/ski-out
-                    estate in Kadenwood for up to 16 guests. The home combines nine
-                    bedrooms with a heated pool, hot tub, sauna, gym, and access to
-                    Kadenwood&apos;s private gondola.
+                    Welcome to Chalet La Forja in Kadenwood, one of Whistler’s most prestigious luxury rentals. This 10,000+ sq. ft. ski-in/ski-out estate is designed for unforgettable family stays, with 9 bedrooms, expansive living spaces, a heated outdoor pool, hot tub, sauna, gym and private gondola access to Creekside. Perfect for one or two families wanting exceptional space, privacy and service.
                     <br />
                     <br />
-                    Ranked one of VRBO&apos;s Top 10 vacation rentals in 2023.
+                    Housekeeping included every other day
                     <br />
-                    <br />
-                    Housekeeping is included every other day. Daily butler service is
-                    included in winter from December 1 through April 30 and is
-                    available in summer for an additional charge.
+                    Daily Butler Included in Winter
                   </p>
 
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-10">
@@ -72,27 +66,23 @@ export default function ChaletLaForjaKadenwoodDetails({ photos }: ListingDetails
                             />
                           </svg>
                         </div>
-                        <h2 className="text-2xl font-bold">The Space</h2>
+                        <h2 className="text-2xl font-bold">The space</h2>
                       </div>
                       <p className="text-gray-800 mb-6">
-                        <span className="font-bold">Butler and housekeeping:</span>{" "}
-                        Daily butler service is included from December 1 through April
-                        30 and can be added in summer at extra cost. The butler handles
-                        food and drink service, dining setup and clearing, and kitchen
-                        tidying, and can prepare the hot tub and fire. Housekeeping is
-                        included every other day.
+                        Chalet La Forja delivers the scale and service of a private alpine resort, exclusively for your group. More than 10,000 sq. ft. of living space provides room to gather, entertain and retreat in privacy. The home features nine bedrooms, generous living areas, a gourmet chef’s kitchen with butler’s pantry, two private offices, Sonos audio throughout and exceptional indoor-outdoor entertaining spaces. Outside, a private heated swimming pool and hot tub create one of Kadenwood’s most impressive après-ski settings. Inside, guests can enjoy a private gym, sauna, multiple lounge spaces and extensive amenities throughout the residence. True ski-in/ski-out access connects the home to Whistler Mountain, while Kadenwood’s private gondola provides convenient access to Creekside.
                       </p>
                       <p className="text-gray-800 mb-6">
-                        The home features a gourmet chef&apos;s kitchen with a
-                        butler&apos;s pantry, two private offices, integrated Sonos
-                        audio, a gym, hot tub, heated pool, sauna, and steam shower.
-                        Ski directly to and from the property, then use the private
-                        Kadenwood gondola for convenient Creekside access.
+                        Ranked among Top 10 Vacation Rentals in 2023 in all of Canada.
+                      </p>
+                      <p className="text-gray-800 mb-6">
+                        <strong>Location:</strong><br />
+                        Chalet La Forja is perched high on Whistler Mountain in Kadenwood, a private mountainside community above Creekside. In winter, guests can access Whistler Mountain directly from the neighbourhood or take the private Kadenwood Gondola down to Creekside in approximately five minutes. It is a rare combination of estate-level privacy and convenient access to skiing, dining, groceries and the rest of Whistler.
+                      </p>
+                      <p className="text-gray-800 mb-6">
+                        Private butler service is included from December 1 through April 30, and complimentary housekeeping is included every other day throughout the year.
                       </p>
                       <p className="text-gray-800">
-                        Nine bedrooms and 16 beds span the home&apos;s levels, giving
-                        families and groups a mix of private suites, a large bunk room,
-                        and flexible adjoining rooms.
+                        In addition to serving breakfast, lunch, and dinner, the butler is responsible for all food and drink service throughout the day as well as cleanup and set up of dining table and kitchen area. To create the perfect ambiance, they will set up the hot tub, light the fire, and adjust the music and household functions. Get your daily dose of caffeine from your own personal barista. Overall, the butler is there to make your stay as smooth and comfortable as possible.
                       </p>
                     </div>
                   </div>
@@ -125,14 +115,11 @@ export default function ChaletLaForjaKadenwoodDetails({ photos }: ListingDetails
                             />
                           </svg>
                         </div>
-                        <h2 className="text-2xl font-bold">Bedroom Layout</h2>
+                        <h2 className="text-2xl font-bold">BEDROOM LAYOUT:</h2>
                       </div>
 
-                      <p className="font-bold mb-2">BEDROOM LAYOUT:</p>
                       <p className="mb-4">
-                        Nine bedrooms are arranged across four levels. Bedroom 7 is a
-                        private, windowed hybrid office and twin bedroom adjoining
-                        bedroom 2, with its own hallway entrance and a shared bathroom.
+                        Full 8+1 bedroom home.
                       </p>
 
                       <p className="font-bold mb-2">UPPER LEVEL (level located below the main floor):</p>
@@ -170,10 +157,9 @@ export default function ChaletLaForjaKadenwoodDetails({ photos }: ListingDetails
                         <span className="font-medium">•Bedroom 9 -</span> Has a Queen bed and is located on the Main Floor. Bathroom & shower located adjacent to the bedroom, and is not a private ensuite. This bathroom is shared with others on the main kitchen/living room level. Perfect for elderly looking to walk less steps to their bedroom, as there are only 5 steps to enter the house & this floor.
                       </p>
 
-                      <p className="font-bold mb-2">Bonus & optional:</p>
+                      <p className="font-bold mb-2">Bonus (optional):</p>
                       <p className="mb-4">
-                        For a small daily fee, the pool can be heated to hot-tub
-                        temperature at 104°F.
+                        For a small daily fee, the pool can be set to hot tub temperatures.
                       </p>
                     </div>
                   </div>
@@ -195,34 +181,33 @@ export default function ChaletLaForjaKadenwoodDetails({ photos }: ListingDetails
                           />
                         </svg>
                       </div>
-                      <h2 className="text-2xl font-bold">Location</h2>
+                      <h2 className="text-2xl font-bold">Guest access</h2>
                     </div>
                     
                     <div className="flex flex-col md:flex-row gap-8 mb-6">
                       <div className="md:w-1/2">
                         <p className="text-gray-800 mb-6">
-                          <strong>Guest access:</strong> Guests have access to the
-                          entire home, including the garage, pool, hot tub, sauna, and
-                          gym.
+                          Guest have access to the entire private home to themselves including all amenities such as the heated pool, hot tub, sauna, garage, gym, etc..
+                        </p>
+                        <h3 className="text-xl font-bold mb-4">Neighbourhood highlights</h3>
+                        <p className="text-gray-800 mb-6">
+                          Sitting almost 1,000 feet above the valley floor, Kadenwood is one of Whistler’s most exclusive ski-in/ski-out neighbourhoods. Set high above Creekside on Whistler Mountain, it offers incredible privacy, old-growth forest, beautiful mountain views and access to the private Kadenwood Gondola for residents and guests.
                         </p>
                         <p className="text-gray-800 mb-6">
-                          Kadenwood is perched almost 1,000 feet above the valley floor
-                          on Whistler Mountain&apos;s south side, beside old-growth
-                          forest and ski-in/ski-out trails. Its private
-                          residents-and-guests-only gondola reaches Creekside in about
-                          five minutes, while the drive down the private road takes
-                          about 10 minutes.
+                          The private gondola connects Kadenwood directly with Creekside Village in approximately five minutes. Creekside can also be reached by a short drive or, during ski season, directly from the mountain.
                         </p>
                         <p className="text-gray-800 mb-6">
-                          <strong>Creekside Village:</strong> Nearby restaurants and
-                          shops include Rockit Coffee, BReD, Red Door Bistro, Rimrock
-                          Cafe, Cure Lounge, Creekbread, Dusty&apos;s, Mekong, 122 West,
-                          Bask &amp; Co, and Creekside Market.
+                          For skiers, Creekside is an excellent place to start the day. While many visitors naturally begin from the main Whistler Village base, Creekside provides direct access to Whistler Mountain without needing to travel into the Village each morning. The upgraded 10-person Creekside Gondola increased out-of-base capacity by approximately 35%, while the upgraded Big Red Express increased uphill capacity by approximately 30%, helping improve mountain access and wait times.
                         </p>
+                        <p className="text-gray-800 mb-6">
+                          Creekside Village has everything needed close to home, including Creekside Market for groceries and some of Whistler’s favourite restaurants and cafés, including Red Door Bistro, Rimrock Café, Creekbread, Dusty’s, BReD and Rockit Coffee.
+                        </p>
+                        <p className="text-gray-800 mb-6">
+                          Whistler Village is approximately a 10-minute drive away, giving guests easy access to the main Village while enjoying the privacy and peaceful mountain setting of Kadenwood.
+                        </p>
+                        <h3 className="text-xl font-bold mb-4">Getting around</h3>
                         <p className="text-gray-800">
-                          <strong>Getting around:</strong> Reach Creekside by private
-                          gondola, ski trail, or car. Whistler Village is accessible by
-                          car, private driver or shuttle, taxi, or ride app.
+                          Can access Creekside &amp; Whistler village via the private gondola, taxi, ride app, private driver, or vehicle rentals. Transportation is not necessary to ski since the property is located right on Whistler mountain.
                         </p>
                       </div>
                       <div className="md:w-1/2">
@@ -256,36 +241,49 @@ export default function ChaletLaForjaKadenwoodDetails({ photos }: ListingDetails
                           />
                         </svg>
                       </div>
-                      <h2 className="text-2xl font-bold">Concierge &amp; Services</h2>
+                      <h2 className="text-2xl font-bold">Other things to note</h2>
                     </div>
 
                     <p className="text-gray-800 mb-6">
-                      Complimentary AceHost concierge support includes restaurant
-                      reservations and recommendations, pre-arrival food and beverage
-                      stocking coordination, and help arranging transportation,
-                      private chefs, childcare, rentals, instructors, and experiences.
-                      Ski-pass pickup and delivery is included only when passes are
-                      booked through AceHost. Third-party services and requested
-                      groceries are charged separately.
+                      Complimentary AceHost VIP concierge planning is included with every stay. Our local Whistler team is available to help make your trip seamless, from restaurant reservations and local recommendations to coordinating private chefs, airport transfers, private drivers, grocery pre-stocking, ski and snowboard rentals, instructors, childcare, in-home massage, snowmobiling, helicopter experiences and more.
+                    </p>
+                    <p className="text-gray-800 mb-6">
+                      Ben is happy to join you on the first day to show you the ski in ski out trail, as well as show you the mountain, if time permits.
+                    </p>
+                    <p className="text-gray-800 mb-6">
+                      Ski lift pass booking &amp; delivery: One of the perks of booking with AceHost is complimentary ski pass delivery directly to your door. We can arrange day passes, multi-day passes, season passes and more, helping you skip the ticket office, paperwork and extra stop upon arrival. Please reach out to us before purchasing your passes, as the booking will need to be made through our team in order for us to arrange delivery. We’re happy to guide you through the process and make it as easy as possible.
+                    </p>
+                    <p className="text-gray-800 mb-6">
+                      Optional third-party services are charged separately unless specifically stated as included with your reservation.
+                    </p>
+                    <p className="text-gray-800 mb-6">
+                      Please don&apos;t hesitate to reach out if you need anything!
                     </p>
 
                     <div className="grid md:grid-cols-2 gap-6 mb-6">
                       <div className="bg-gray-50 p-6 rounded-lg">
-                        <h3 className="text-xl font-bold mb-4">Included in price:</h3>
+                        <h3 className="text-xl font-bold mb-4">Included in your stay:</h3>
                         <ul className="list-disc pl-6 space-y-2 text-gray-800">
-                          <li>Daily winter butler service, December 1–April 30</li>
-                          <li>Housekeeping every other day</li>
-                          <li>Complimentary VIP concierge support</li>
-                          <li>Pre-arrival food and beverage stocking coordination</li>
+                          <li>Host/Butler for the whole stay (10-12 hours per day). December 1-April 30.</li>
+                          <li>Full complimentary VIP concierge service</li>
+                          <li>Restaurant reservations and recommendations</li>
+                          <li>Ski lift pass pick up and delivery</li>
+                          <li>Chalet food &amp; beverage stocking upon arrival</li>
+                          <li>Complimentary housekeeping is included every other day throughout the year.</li>
                         </ul>
                       </div>
                       <div className="bg-gray-50 p-6 rounded-lg">
-                        <h3 className="text-xl font-bold mb-4">Additional at-cost services:</h3>
+                        <h3 className="text-xl font-bold mb-4">Additional at cost services:</h3>
                         <ul className="list-disc pl-6 space-y-2 text-gray-800">
-                          <li>Summer butler service and additional housekeeping</li>
-                          <li>Airport transfers, private drivers, and private chefs</li>
-                          <li>Childcare, massages, equipment rentals, and ski instructors</li>
-                          <li>Helicopter, snowmobile, and other private experiences</li>
+                          <li>Airport Transfers</li>
+                          <li>Private Chef (Highly recommended)</li>
+                          <li>Private Driver</li>
+                          <li>Massages</li>
+                          <li>Ski equipment rental delivery</li>
+                          <li>Childcare</li>
+                          <li>Ski Instructors</li>
+                          <li>Helicopter/snowmobile experiences</li>
+                          <li>Absolutely anything you need, you let us know and we will arrange for you</li>
                         </ul>
                       </div>
                     </div>

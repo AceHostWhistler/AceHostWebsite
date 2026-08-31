@@ -87,7 +87,7 @@ const listing: ListingData = {
 ],
   seo: {
     title: "Timber Haven - Luxury Ski in Ski out - Kadenwood - AceHost",
-    description: "Timber Haven is an 8-bedroom Kadenwood ski-in/ski-out estate for 16 guests with 11 beds, 6.5 baths, a private hot tub, sauna, central AC, and private gondola access.",
+    description: "Welcome to your private Kadenwood mountain estate, an 8-bedroom luxury home with stunning views, ski-in/ski-out access, a private hot tub, beautiful furnishings, curated artwork, and access to Kadenwood’s private residents-only gondola. With spacious living areas, outdoor dining, a ping pong table, multiple lounge spaces, and a main floor with 2 bedrooms including the Master Bedroom suite, this home is perfect for families, large groups, and guests who prefer minimal stairs during their stay.",
   },
   header:   {
       "title": "Timber Haven - Luxury Ski in Ski out - Kadenwood",
@@ -100,7 +100,7 @@ const listing: ListingData = {
       "holidayPrice": "$12,000-$16,500 Nightly | Christmas & NY",
       "airbnbLink": "https://www.airbnb.ca/rooms/1684937418405220715?guests=1&adults=1&s=67&unique_share_id=07a60c93-180c-4b37-be0a-dd512adb2808"
   },
-  galleryTitle: "Timber Haven - Luxury Ski in Ski out - Kadenwood - AceHost",
+  galleryTitle: "Timber Haven - Luxury Ski in Ski out - Kadenwood",
   photoAltPrefix: "Timber Haven - Luxury Ski in Ski out - Kadenwood - AceHost",
 };
 

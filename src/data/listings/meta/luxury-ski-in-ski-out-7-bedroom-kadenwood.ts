@@ -86,7 +86,7 @@ const listing: ListingData = {
 ],
   seo: {
     title: "The Mountaintop in Kadenwood | Ski in Ski out - AceHost",
-    description: "Located in Whistler's most prestigious true ski-in ski-out neighbourhood, Kadenwood, this 7-bedroom, 6.5-bath retreat offers 6200 square feet of refined mountain living with chef's kitchen, hot tub, fire pits, and more.",
+    description: "Located in the most prestigious true ski-in ski-out neighbourhood, Kadenwood, this home offers 6200 square feet of refined mountain living, with the best views in all of Whistler! The open-concept main level features a chef’s kitchen with Wolf, Subzero & Miele appliances, quartz countertops, generous prep space & a separate prep kitchen, perfect for entertaining. Enjoy a hot tub, fire pits, ping pong table, wet bar, steam room, and two 90-inch TVs for the ultimate year-round Whistler escape.",
   },
   header:   {
       "title": "The Mountaintop in Kadenwood | Ski in Ski out",

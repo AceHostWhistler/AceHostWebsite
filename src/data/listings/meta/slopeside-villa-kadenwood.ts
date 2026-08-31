@@ -46,7 +46,7 @@ const listing: ListingData = {
 ],
   seo: {
     title: "Slope Side Chalet | Ski-In/Out | Hot Tub - AceHost",
-    description: "Stay at Slope Side Chalet, a 7-bedroom Kadenwood ski-in/ski-out retreat for 16 guests with 12 beds, 7.5 baths, a private hot tub, steam shower, gym, and mountain views.",
+    description: "Welcome to Slope Side Chalet in Kadenwood, a true Whistler luxury log chalet with exceptional ski-in/ski-out access directly beside the patio and ski room. Inside, soaring timber ceilings, warm wood finishes, heated stone floors, a grand fireplace and expansive windows create the classic alpine atmosphere. After a day on the mountain, unwind in the private outdoor hot tub, steam shower or home gym, with everything designed for an effortless and memorable Whistler stay with family and friends.",
   },
   header:   {
       "title": "Slope Side Chalet | Ski-In/Out | Hot Tub",

@@ -51,7 +51,7 @@ const listing: ListingData = {
 ],
   seo: {
     title: "Falcon | Whistler Village Chalet | Hot tub + Sauna - AceHost",
-    description: "Falcon is a 7-bedroom Blueberry Hill chalet for 15 guests with 9 beds, 3.5 baths, central AC, a private hot tub, sauna, deck, and easy access to Whistler Village.",
+    description: "Welcome to Falcon, a spacious 7-bedroom Whistler chalet in prestigious Blueberry Hill, minutes from Whistler Village and the slopes. Perfect for one or two families and groups of up to 15, the home features mountain views, a wood-burning fireplace, central A/C, outdoor sauna, private hot tub and large deck. Walk the scenic Valley Trail to the Village in about 25 minutes, drive in 3–4 minutes, or take the Route 6 public bus from a stop steps from the home for easy access into Whistler Village.",
   },
   header:   {
       "title": "Falcon | Whistler Village Chalet | Hot tub + Sauna",
@@ -65,7 +65,7 @@ const listing: ListingData = {
       "airbnbLink": "https://www.airbnb.ca/rooms/18060329?preview_for_ml=true&source_impression_id=p3_1684112119_tL0LL7QnYLFGOCBI",
       "contactLink": "/contact"
   },
-  galleryTitle: "Falcon",
+  galleryTitle: "Falcon | Whistler Village Chalet | Hot tub + Sauna",
   photoAltPrefix: "Falcon",
 };
 

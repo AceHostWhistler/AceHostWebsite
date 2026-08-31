@@ -9,9 +9,9 @@ export default function LuxurySkiInSkiOut7BedroomKadenwoodDetails({ photos }: Li
     <>
       <div className="max-w-6xl mx-auto px-4" id="details">
                   <p className="text-gray-800 mb-16 max-w-4xl">
-                    Located in Kadenwood, Whistler's prestigious ski-in/ski-out neighbourhood, this home offers 6,200 square feet of refined mountain living with expansive mountain and valley views.
+                    Located in the most prestigious true ski-in ski-out neighbourhood, Kadenwood, this home offers 6200 square feet of refined mountain living, with the best views in all of Whistler!
                     <br /><br />
-                    The open-concept main level features a chef's kitchen with Wolf, Sub-Zero and Miele appliances, quartz countertops, generous prep space and a separate prep kitchen. A hot tub, fire pits, ping pong table, wet bar, steam room and two 90-inch TVs make the home an inviting year-round Whistler retreat.
+                    The open-concept main level features a chef’s kitchen with Wolf, Subzero & Miele appliances, quartz countertops, generous prep space & a separate prep kitchen, perfect for entertaining. Enjoy a hot tub, fire pits, ping pong table, wet bar, steam room, and two 90-inch TVs for the ultimate year-round Whistler escape.
                   </p>
 
                   {/* The Space Section */}
@@ -41,22 +41,28 @@ export default function LuxurySkiInSkiOut7BedroomKadenwoodDetails({ photos }: Li
                             />
                           </svg>
                         </div>
-                        <h2 className="text-2xl font-bold">The Space</h2>
+                        <h2 className="text-2xl font-bold">The space</h2>
                       </div>
                       <p className="text-gray-800 mb-6">
-                        Sleeping Arrangements & Layout:
-                        <br /><br />
                         Designed for comfort, privacy and flexibility, the home is thoughtfully laid out across multiple levels, making it ideal for families, groups and multi-generational stays. Each bedroom offers beautiful mountain views, and several feature private ensuite bathrooms or deck access. The mix of primary suites, queen rooms and bunk accommodations ensures everyone has their own space while still feeling connected.
                         <br /><br />
-                        <strong>Top Floor-</strong>
+                        Brand new outdoor Sauna (XL size) located next to the hot tub! Convenient and easy to use, feels great after a long day on the hill!
+                        <br /><br />
+                        <strong>Location & Kadenwood Access:</strong>
                         <br />
-                        -Bedroom 7: 1 Murphy queen bed in the office space
+                        The Mountaintop sits high above Creekside in Kadenwood, creating the expansive mountain and valley views that define the home. Despite the peaceful alpine setting, Kadenwood’s private gondola provides convenient access to Creekside Village in approximately five minutes, where you will find the Creekside Gondola, ski school, restaurants, cafés and groceries. Whistler Village is also approximately a 10-minute drive away, making the setting feel secluded without being remote.
+                        <br /><br />
+                        <strong>Sleeping Arrangements & Layout:</strong>
+                        <br />
+                        <strong>Top Floor:</strong>
+                        <br />
+                        -Bedroom 7: 1 Murphy Queen size bed in office space. Known as Bedroom 7.
                         <br />
                         -1 powder bathroom
                         <br />
-                        -Large ski boot dryer located in the garage
+                        -Large luxe ski boot dryer located in garage.
                         <br /><br />
-                        <strong>Main Floor-</strong>
+                        <strong>Main Floor:</strong>
                         <br />
                         -1 detached bathroom, 1 shower, 1 sink
                         <br />
@@ -70,7 +76,7 @@ export default function LuxurySkiInSkiOut7BedroomKadenwoodDetails({ photos }: Li
                         <br />
                         -Laundry, 1 washer, 1 dryer
                         <br /><br />
-                        <strong>Lower Floor-</strong>
+                        <strong>Lower Floor:</strong>
                         <br />
                         -Steam shower, 2 sink bathroom
                         <br />
@@ -79,14 +85,12 @@ export default function LuxurySkiInSkiOut7BedroomKadenwoodDetails({ photos }: Li
                         -Bedroom 6: 2 queen bunk beds, shared ensuite
                         <br />
                         *Bedroom 5 & Bedroom 6 share/connected bathrooms
-                        <br /><br />
+                        <br />
                         <strong>Outdoor Amenities</strong>
                         <br />
-                        After a day on the slopes, relax in the outdoor hot tub or unwind in the XL wood-barrel sauna located beside it.
+                        After a day on the slopes or trails, relax in the outdoor hot tub or unwind in the brand new wood barrel sauna, perfectly positioned for alpine après moments.
                         <br /><br />
-                        <strong>Air Conditioning</strong>
-                        <br />
-                        A powerful air-conditioning system serves the main living area, providing a refreshing escape and helping maintain a comfortable temperature throughout the home during summer.
+                        *Air Conditioning/AC: The home features a powerful air conditioning system in the main living area, providing a refreshing escape and helping maintain a comfortable temperature throughout the home during the summer months.*
                       </p>
                     </div>
                   </div>
@@ -108,10 +112,10 @@ export default function LuxurySkiInSkiOut7BedroomKadenwoodDetails({ photos }: Li
                           />
                         </svg>
                       </div>
-                      <h2 className="text-2xl font-bold">Guest Access</h2>
+                      <h2 className="text-2xl font-bold">Guest access</h2>
                     </div>
                     <p className="text-gray-800 max-w-4xl">
-                      Guests have private access to the entire home, including the garage, driveway, hot tub, sauna, ski room, gym and all advertised living spaces and amenities.
+                      Guests have private access to the entire home, including the garage, driveway, private hot tub, private sauna, ski room, gym, and all advertised living spaces and amenities.
                     </p>
                   </div>
 
@@ -132,16 +136,20 @@ export default function LuxurySkiInSkiOut7BedroomKadenwoodDetails({ photos }: Li
                           />
                         </svg>
                       </div>
-                      <h2 className="text-2xl font-bold">Location</h2>
+                      <h2 className="text-2xl font-bold">Neighbourhood highlights</h2>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                       <div>
                         <p className="text-gray-800">
-                          Sitting almost 1,000 feet above the valley floor, Kadenwood is one of Whistler's most exclusive ski-in/ski-out neighbourhoods. Set high above Creekside on Whistler Mountain, it offers privacy, old-growth forest, mountain views and access to the private Kadenwood Gondola for residents and guests.
+                          Sitting almost 1,000 feet above the valley floor, Kadenwood is one of Whistler’s most exclusive ski-in/ski-out neighbourhoods. Set high above Creekside on Whistler Mountain, it offers incredible privacy, old-growth forest, beautiful mountain views and access to the private Kadenwood Gondola for residents and guests.
                           <br /><br />
-                          The gondola reaches Creekside Village in approximately five minutes, while Whistler Village is about a 10-minute drive away. Creekside provides direct access to Whistler Mountain; its upgraded 10-person gondola increased out-of-base capacity by approximately 35%, and the upgraded Big Red Express increased uphill capacity by approximately 30%.
+                          The private gondola connects Kadenwood directly with Creekside Village in approximately five minutes. Creekside can also be reached by a short drive or, during ski season, directly from the mountain.
                           <br /><br />
-                          Creekside Village offers groceries at Creekside Market along with restaurants and cafés including Red Door Bistro, Rimrock Café, Creekbread, Dusty's, BReD and Rockit Coffee.
+                          For skiers, Creekside is an excellent place to start the day. While many visitors naturally begin from the main Whistler Village base, Creekside provides direct access to Whistler Mountain without needing to travel into the Village each morning. The upgraded 10-person Creekside Gondola increased out-of-base capacity by approximately 35%, while the upgraded Big Red Express increased uphill capacity by approximately 30%, helping improve mountain access and wait times.
+                          <br /><br />
+                          Creekside Village has everything needed close to home, including Creekside Market for groceries and some of Whistler’s favourite restaurants and cafés, including Red Door Bistro, Rimrock Café, Creekbread, Dusty’s, BReD and Rockit Coffee.
+                          <br /><br />
+                          Whistler Village is approximately a 10-minute drive away, giving guests easy access to the main Village while enjoying the privacy and peaceful mountain setting of Kadenwood.
                         </p>
                       </div>
                       <div className="relative aspect-[4/3]">
@@ -154,7 +162,7 @@ export default function LuxurySkiInSkiOut7BedroomKadenwoodDetails({ photos }: Li
                     </div>
                   </div>
 
-                  {/* Concierge Services Section */}
+                  {/* Other Things to Note Section */}
                   <div className="mb-16">
                     <div className="flex items-center mb-6">
                       <div className="bg-black text-white p-4 rounded-full mr-4">
@@ -171,7 +179,7 @@ export default function LuxurySkiInSkiOut7BedroomKadenwoodDetails({ photos }: Li
                           />
                         </svg>
                       </div>
-                      <h2 className="text-2xl font-bold">***Concierge Services***</h2>
+                      <h2 className="text-2xl font-bold">Other things to note</h2>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                       <div className="relative aspect-[4/3]">
@@ -183,15 +191,19 @@ export default function LuxurySkiInSkiOut7BedroomKadenwoodDetails({ photos }: Li
                       </div>
                       <div>
                         <p className="text-gray-800">
-                          Complimentary AceHost VIP concierge planning is included with every stay. Our local Whistler team can assist with restaurant reservations and recommendations, private chefs, airport transfers, private drivers, grocery pre-stocking, ski and snowboard rentals, instructors, childcare, in-home massage, snowmobiling, helicopter experiences and more.
+                          Complimentary AceHost VIP concierge planning is included with every stay. Our local Whistler team is available to help make your trip seamless, from restaurant reservations and local recommendations to coordinating private chefs, airport transfers, private drivers, grocery pre-stocking, ski and snowboard rentals, instructors, childcare, in-home massage, snowmobiling, helicopter experiences and more.
                           <br /><br />
-                          We can also arrange complimentary ski-pass delivery directly to the home for day, multi-day or season passes booked through our team. Please contact us before purchasing so we can coordinate delivery. Optional third-party services are charged separately unless specifically stated as included with your reservation.
+                          Ski lift pass booking & delivery: One of the perks of booking with AceHost is complimentary ski pass delivery directly to your door. We can arrange day passes, multi-day passes, season passes and more, helping you skip the ticket office, paperwork and extra stop upon arrival. Please reach out to us before purchasing your passes, as the booking will need to be made through our team in order for us to arrange delivery. We’re happy to guide you through the process and make it as easy as possible.
+                          <br /><br />
+                          Optional third-party services are charged separately unless specifically stated as included with your reservation.
+                          <br /><br />
+                          Please don't hesitate to reach out if you need anything!
                         </p>
                       </div>
                     </div>
                   </div>
 
-                  {/* Additional Features Section */}
+                  {/* Getting Around Section */}
                   <div className="mb-16">
                     <div className="flex items-center mb-6">
                       <div className="bg-black text-white p-4 rounded-full mr-4">
@@ -216,31 +228,18 @@ export default function LuxurySkiInSkiOut7BedroomKadenwoodDetails({ photos }: Li
                           />
                         </svg>
                       </div>
-                      <h2 className="text-2xl font-bold">Additional Features</h2>
+                      <h2 className="text-2xl font-bold">Getting around</h2>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                       <div>
-                        <p className="text-gray-800 mb-4">
-                          This 6,200-square-foot mountain retreat offers a wealth of premium amenities:
+                        <p className="text-gray-800">
+                          Can access Creekside & Whistler village via the private gondola, taxi, ride app, private driver, or vehicle rentals. Transportation is not necessary to ski since the property is located right on Whistler mountain.
                         </p>
-                        <ul className="list-disc pl-5 space-y-2 text-gray-800">
-                          <li>Renovated chef's kitchen with Wolf, Subzero & Miele appliances</li>
-                          <li>Quartz countertops and separate prep kitchen</li>
-                          <li>Outdoor hot tub</li>
-                          <li>XL outdoor wood-barrel sauna beside the hot tub</li>
-                          <li>Fire pits</li>
-                          <li>Ping pong table</li>
-                          <li>Wet bar</li>
-                          <li>Steam room</li>
-                          <li>Two 90-inch TVs</li>
-                          <li>Garage ski boot dryer</li>
-                          <li>Private Kadenwood Gondola access for residents and guests</li>
-                        </ul>
                       </div>
                       <div className="relative aspect-[4/3]">
                         <img
                           src="/optimized/2919-Heritage/description-4.jpg"
-                          alt="Additional Features"
+                          alt="Getting around"
                           className="w-full h-full object-cover rounded-lg"
                         />
                       </div>
@@ -264,7 +263,7 @@ export default function LuxurySkiInSkiOut7BedroomKadenwoodDetails({ photos }: Li
                           />
                         </svg>
                       </div>
-                      <h2 className="text-2xl font-bold">Registration Details</h2>
+                      <h2 className="text-2xl font-bold">Registration details</h2>
                     </div>
                     <p className="text-gray-800 max-w-4xl">
                       <strong>Municipal registration number:</strong> 00015634

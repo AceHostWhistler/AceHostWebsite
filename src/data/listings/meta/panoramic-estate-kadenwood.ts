@@ -67,7 +67,7 @@ const listing: ListingData = {
 ],
   seo: {
     title: "Panoramic Estate | Kadenwood | Ski In Ski Out - AceHost",
-    description: "A timber chalet in Kadenwood with 8 bedrooms, 7 baths, mountain-view decks, hot tub, sauna, media room, gym and private gondola access.",
+    description: "Welcome to Panoramic Estate in Kadenwood, a true Whistler-style luxury log chalet with soaring timber ceilings, warm wood finishes, stone fireplaces and incredible mountain views. This expansive 8-bedroom ski-in/ski-out home is perfect for families and groups, with multiple living spaces, large outdoor decks, a private elevator, hot tub, sauna and media room, all surrounded by the peaceful mountain setting of exclusive Kadenwood.",
   },
   header:   {
       "title": "Panoramic Estate | Kadenwood | Ski In Ski Out",

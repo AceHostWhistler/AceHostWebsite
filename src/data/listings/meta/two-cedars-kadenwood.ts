@@ -52,7 +52,7 @@ const listing: ListingData = {
   seo: {
     title: "Two Cedars - Ski in-Ski out, Kadenwood Estate | AceHost",
     description:
-      "Two Cedars is a 10,000-square-foot OpenSpace-designed Kadenwood estate for 17 guests, with ski-in/ski-out access, seven ensuite bedrooms, private gondola access, and a winter butler.",
+      "Welcome to Two Cedars, a one-of-a-kind architectural masterpiece in Whistler’s prestigious Kadenwood neighbourhood. Designed by OpenSpace, this striking modern chalet blends dramatic mountain architecture, warm natural materials, soaring spaces, and refined luxury in a way rarely found in vacation rentals. Sleeps 17 with ski-in/ski-out access and private Kadenwood Gondola service to Creekside. Daily Butler Included in Winter",
   },
   header: {
     title: "Two Cedars - Ski in-Ski out, Kadenwood Estate",

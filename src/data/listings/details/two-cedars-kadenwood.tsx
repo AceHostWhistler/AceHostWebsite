@@ -9,14 +9,10 @@ export default function TwoCedarsKadenwoodDetails({ photos }: ListingDetailsProp
     <>
       <div className="max-w-6xl mx-auto px-4" id="details">
                   <p className="text-gray-800 mb-8 max-w-4xl">
-                    Two Cedars is a 10,000-square-foot architectural estate designed
-                    by OpenSpace in Whistler&apos;s exclusive Kadenwood neighbourhood.
-                    The home welcomes up to 17 guests across seven ensuite bedrooms,
-                    with true ski-in/ski-out access and use of Kadenwood&apos;s private
-                    gondola to Creekside.
+                    Welcome to Two Cedars, a one-of-a-kind architectural masterpiece in Whistler’s prestigious Kadenwood neighbourhood. Designed by OpenSpace, this striking modern chalet blends dramatic mountain architecture, warm natural materials, soaring spaces, and refined luxury in a way rarely found in vacation rentals. Sleeps 17 with ski-in/ski-out access and private Kadenwood Gondola service to Creekside.
                   </p>
                   <p className="text-gray-800 mb-16 max-w-4xl font-semibold">
-                    Daily butler included December 1–April 30
+                    Daily Butler Included in Winter
                   </p>
 
                   {/* The Space Section */}
@@ -37,25 +33,26 @@ export default function TwoCedarsKadenwoodDetails({ photos }: ListingDetailsProp
                             />
                           </svg>
                         </div>
-                        <h2 className="text-2xl font-bold">The Space</h2>
+                        <h2 className="text-2xl font-bold">The space</h2>
                       </div>
                       <p className="text-gray-800 mb-6">
-                        <strong>Private butler:</strong> A butler is included for 10–12
-                        hours per day from December 1 through April 30 and is available
-                        in summer for an additional charge. The butler serves breakfast,
-                        lunch, and dinner, looks after food and drink service, sets and
-                        clears the dining table, keeps the kitchen tidy, prepares the
-                        hot tubs and fire, and can adjust the home&apos;s music and
-                        functions.
+                        Designed by OpenSpace, Two Cedars is one of Kadenwood’s most distinctive private residences, combining bold contemporary architecture with the warmth of a true mountain home.
                       </p>
                       <p className="text-gray-800 mb-6">
-                        Contemporary architecture, floor-to-ceiling windows, curated
-                        artwork, and warm natural finishes make the expansive home feel
-                        both dramatic and intimate. Its seven bedrooms each have a
-                        private ensuite, while 12 beds provide flexible accommodation
-                        for families and groups. Amenities include a home theatre,
-                        equipped gym, infrared sauna, indoor and outdoor hot tubs, and
-                        a foosball table.
+                        Across approximately 10,000 sq. ft., soaring ceilings, expansive glass, natural materials, curated artwork and beautifully considered interiors create spaces that feel dramatic yet inviting. Floor-to-ceiling windows frame the surrounding mountains and forest, while generous living and entertaining areas give larger groups the ability to gather without sacrificing privacy.
+                      </p>
+                      <p className="text-gray-800 mb-6">
+                        7 bedrooms are spread throughout the residence, each with access to a private ensuite bathroom. The home also features a private theatre, fully equipped gym, infrared sauna, indoor hot tub, outdoor hot tub, foosball and multiple spaces for relaxing after a day on the mountain.
+                      </p>
+                      <p className="text-gray-800 mb-6">
+                        True ski-in/ski-out access connects the home directly to Whistler Mountain, while Kadenwood’s private gondola provides convenient access to Creekside Village.
+                      </p>
+                      <p className="text-gray-800 mb-6">
+                        Winter stays include private butler service from December 1 through April 30.
+                      </p>
+                      <p className="text-gray-800 mb-6">
+                        <strong>Location &amp; Kadenwood Access:</strong><br />
+                        Two Cedars sits high above Creekside in Kadenwood, one of Whistler’s most exclusive ski-in/ski-out neighbourhoods. Guests have access to the private Kadenwood Gondola, connecting the neighbourhood with Creekside Village in approximately five minutes. This gives you the privacy of a secluded mountain estate while keeping the Creekside Gondola, restaurants, cafés and groceries conveniently close, with Whistler Village approximately a 10-minute drive away.
                       </p>
                       <div className="flex items-center space-x-6 mb-6">
                         <div className="flex items-center">
@@ -98,40 +95,41 @@ export default function TwoCedarsKadenwoodDetails({ photos }: ListingDetailsProp
                             />
                           </svg>
                         </div>
-                        <h2 className="text-2xl font-bold">Bedroom Layout</h2>
+                        <h2 className="text-2xl font-bold">Bed Configuration (12 beds total):</h2>
                       </div>
 
                       <p className="font-bold mb-2">UPPER LEVEL:</p>
                       <p className="mb-4">
-                        <span className="font-medium">Master bedroom 1-</span> has a plush king bed, located at the end of the top floor corridor for ultimate privacy. With an en-suite shower and bathtub and walk-in wardrobe.
+                        •Master bedroom 1- has a plush king bed, located at the end of the top floor corridor for ultimate privacy. With an en-suite shower and bathtub and walk-in wardrobe.
                       </p>
                       <p className="mb-4">
-                        <span className="font-medium">Bedroom 6-</span> has a queen bed, room is located on the top floor at the other end of the corridor to the master bedroom and next to bedroom 7.
+                        •Bedroom 6- has a queen bed, room is located on the top floor at the other end of the corridor to the master bedroom and next to bedroom 7.
                       </p>
                       <p className="mb-4">
-                        <span className="font-medium">Bedroom 7-</span> has a king bed, this room is located at the other end of the corridor to the Master bedroom on the top floor. En-suite bathroom with a shower and bath. Very near to bedroom 6.
+                        •Bedroom 7- has a king bed, this room is located at the other end of the corridor to the Master bedroom on the top floor. En-suite bathroom with a shower and bath. Very near to bedroom 6.
                       </p>
                       <p className="mb-4">
-                        <span className="font-medium">Additionally</span> a powder room on the main floor.
+                        •Additionally a powder room on the main floor.
                       </p>
 
                       <p className="font-bold mb-2">MID-LEVEL:</p>
                       <p className="mb-4">
-                        <span className="font-medium">Bedroom 2-</span> is located on the main floor at the end of the corridor, far away from the kitchen and living room. It's the room on the left, with a king bed an en-suite bathroom, and a bathtub.
+                        •Bedroom 2-is located on the main floor at the end of the corridor, far away from the kitchen and living room. It&apos;s the room on the left, with a king bed an en-suite bathroom, and a bathtub.
                       </p>
                       <p className="mb-4">
-                        <span className="font-medium">Bedroom 3-</span> is on the main floor at the end of the corridor, opposite bedroom 2. With a queen bed with an en-suite bathroom that has a shower.
+                        •Bedroom 3- is on the main floor at the end of the corridor, opposite bedroom 2. With a queen bed with an en-suite bathroom that has a shower.
                       </p>
 
                       <p className="font-bold mb-2">LOWER LEVEL:</p>
                       <p className="mb-4">
-                        <span className="font-medium">Bedroom 4-</span> includes 2 x double beds, 2 x twin beds above. Located on the basement level at the opposite end of the corridor to the media room. It has an en-suite bathroom with a shower.
+                        •Bedroom 4- includes 2 x double beds, 2 x twin beds above. Located on the basement level at the opposite end of the corridor to the media room. It has an en-suite bathroom with a shower.
                       </p>
                       <p className="mb-4">
-                        <span className="font-medium">Bedroom 5-</span> is on the basement level and opens into bedroom 4 through a sliding door partition. 1 x double bed and 1 x twin bunk bed. With an en-suite shower with a bath.
+                        •Bedroom 5- is on the basement level and opens into bedroom 4 through a sliding door partition. 1 x double bed and 1 x twin bunk bed. With an en-suite shower with a bath.
                       </p>
                       <p className="mb-4">
-                        <span className="font-medium">Additional bathroom-</span> There is an additional full bathroom on the basement level with a large bathroom with a walk-in shower.
+                        •There is an additional full bathroom on the basement level with a large<br />
+                        bathroom with a walk-in shower.
                       </p>
                     </div>
                   </div>
@@ -153,40 +151,33 @@ export default function TwoCedarsKadenwoodDetails({ photos }: ListingDetailsProp
                           />
                         </svg>
                       </div>
-                      <h2 className="text-2xl font-bold">Location</h2>
+                      <h2 className="text-2xl font-bold">Guest access</h2>
                     </div>
 
                     <div className="flex flex-col md:flex-row gap-8 mb-6">
                       <div className="md:w-1/2">
                         <p className="text-gray-800 mb-6">
-                          <strong>Guest access:</strong> Guests have access to the entire
-                          home except the garage, which is unavailable.
+                          Guests have private access to the residence and its advertised amenities. Please note that the garage is not available for guest use.
+                        </p>
+                        <h3 className="text-xl font-bold mb-4">Neighbourhood highlights</h3>
+                        <p className="text-gray-800 mb-6">
+                          Sitting almost 1,000 feet above the valley floor, Kadenwood is one of Whistler’s most exclusive ski-in/ski-out neighbourhoods. Set high above Creekside on Whistler Mountain, it offers incredible privacy, old-growth forest, beautiful mountain views and access to the private Kadenwood Gondola for residents and guests.
                         </p>
                         <p className="text-gray-800 mb-6">
-                          Kadenwood sits almost 1,000 feet above the valley floor on
-                          Whistler Mountain&apos;s south side, beside old-growth forest
-                          and ski-in/ski-out trails. The residents-and-guests-only
-                          gondola reaches Creekside in about five minutes; the drive
-                          down the private road takes about 10 minutes.
+                          The private gondola connects Kadenwood directly with Creekside Village in approximately five minutes. Creekside can also be reached by a short drive or, during ski season, directly from the mountain.
                         </p>
                         <p className="text-gray-800 mb-6">
-                          Creekside&apos;s upgraded gondola carries 10 passengers per
-                          cabin, and the upgraded Big Red Express carries six passengers
-                          per chair. Together they provide high-capacity access from
-                          Creekside to Whistler Mountain, while Kadenwood&apos;s trails
-                          connect the neighbourhood directly to the slopes.
+                          For skiers, Creekside is an excellent place to start the day. While many visitors naturally begin from the main Whistler Village base, Creekside provides direct access to Whistler Mountain without needing to travel into the Village each morning. The upgraded 10-person Creekside Gondola increased out-of-base capacity by approximately 35%, while the upgraded Big Red Express increased uphill capacity by approximately 30%, helping improve mountain access and wait times.
                         </p>
                         <p className="text-gray-800 mb-6">
-                          <strong>Creekside Village:</strong> Nearby favourites include
-                          Rockit Coffee, BReD, Red Door Bistro, Rimrock Cafe, Cure
-                          Lounge, Creekbread, Dusty&apos;s, and Mekong. Shop at 122 West
-                          and Bask &amp; Co, or pick up groceries at Creekside Market.
-                          Whistler Village is a short drive away.
+                          Creekside Village has everything needed close to home, including Creekside Market for groceries and some of Whistler’s favourite restaurants and cafés, including Red Door Bistro, Rimrock Café, Creekbread, Dusty’s, BReD and Rockit Coffee.
                         </p>
                         <p className="text-gray-800 mb-6">
-                          <strong>Getting around:</strong> Reach Creekside by private
-                          gondola, ski trail, or car. Whistler Village is accessible by
-                          car, private driver or shuttle, taxi, or ride app.
+                          Whistler Village is approximately a 10-minute drive away, giving guests easy access to the main Village while enjoying the privacy and peaceful mountain setting of Kadenwood.
+                        </p>
+                        <h3 className="text-xl font-bold mb-4">Getting around</h3>
+                        <p className="text-gray-800 mb-6">
+                          Access the main Whistler village via car, private driver/shuttle, taxi, ride app, or access Creekside village via your own private gondola exclusively for Kadenwood residents and guests.
                         </p>
                       </div>
                       <div className="md:w-1/2">
@@ -199,38 +190,6 @@ export default function TwoCedarsKadenwoodDetails({ photos }: ListingDetailsProp
                             sizes="(max-width: 768px) 100vw, 50vw"
                           />
                         </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Property Video Tour Section */}
-                  <div className="mb-20">
-                    <div className="flex items-center mb-6">
-                      <div className="bg-black text-white p-4 rounded-full mr-4">
-                        <svg
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
-                            fill="white"
-                          />
-                        </svg>
-                      </div>
-                      <h2 className="text-2xl font-bold">Experience Two Cedars</h2>
-                    </div>
-                    
-                    <div className="mb-6">
-                      <div>
-                        <p className="text-gray-800 mb-6">
-                          Take a virtual tour of this stunning property with our video showcase. Experience the elegance and luxury of Two Cedars Kadenwood, from its breathtaking mountain views to its meticulously designed interior spaces.
-                        </p>
-                        <p className="text-gray-800 mb-6">
-                          The video highlights the property's exceptional features including the spacious living areas, gourmet kitchen, private bedrooms, and outdoor spaces - all designed to provide the ultimate luxury Whistler experience. See firsthand why Two Cedars is one of Whistler's most prestigious vacation properties.
-                        </p>
                       </div>
                     </div>
                   </div>
@@ -252,49 +211,53 @@ export default function TwoCedarsKadenwoodDetails({ photos }: ListingDetailsProp
                           />
                         </svg>
                       </div>
-                      <h2 className="text-2xl font-bold">Additional Services</h2>
+                      <h2 className="text-2xl font-bold">Other things to note</h2>
                     </div>
                     
-                    <p className="text-gray-800 mb-4">
-                      Complimentary AceHost concierge support is included throughout
-                      your stay. We can make restaurant reservations, recommend and
-                      coordinate private chefs, arrange transportation and
-                      experiences, and help guests become familiar with the home and
-                      its ski-in/ski-out route. Third-party suppliers bill their
-                      services separately.
+                    <p className="text-gray-800 mb-6">
+                      Complimentary AceHost VIP concierge planning is included with every stay. Our local Whistler team is available to help make your trip seamless, from restaurant reservations and local recommendations to coordinating private chefs, airport transfers, private drivers, grocery pre-stocking, ski and snowboard rentals, instructors, childcare, in-home massage, snowmobiling, helicopter experiences and more.
+                    </p>
+                    <p className="text-gray-800 mb-6">
+                      Ben is happy to join you on the first day to show you the ski in ski out trail, as well as show you the mountain, if time permits.
+                    </p>
+                    <p className="text-gray-800 mb-6">
+                      Ski lift pass booking &amp; delivery: One of the perks of booking with AceHost is complimentary ski pass delivery directly to your door. We can arrange day passes, multi-day passes, season passes and more, helping you skip the ticket office, paperwork and extra stop upon arrival. Please reach out to us before purchasing your passes, as the booking will need to be made through our team in order for us to arrange delivery. We’re happy to guide you through the process and make it as easy as possible.
+                    </p>
+                    <p className="text-gray-800 mb-6">
+                      Optional third-party services are charged separately unless specifically stated as included with your reservation.
+                    </p>
+                    <p className="text-gray-800 mb-6">
+                      Please don&apos;t hesitate to reach out if you need anything!
                     </p>
                     
                     <div className="bg-gray-50 p-6 rounded-lg mb-6">
-                      <h3 className="text-xl font-bold mb-4">Included in price:</h3>
+                      <h3 className="text-xl font-bold mb-4">Included in your stay:</h3>
                       <ul className="list-disc pl-6 space-y-2 text-gray-800">
-                        <li>Host/butler for 10–12 hours per day from December 1–April 30; optional in summer at additional cost</li>
+                        <li>Host/Butler for the whole stay (10-12 hours per day). December 1-April 30.</li>
                         <li>Full complimentary VIP concierge service</li>
                         <li>Restaurant reservations and recommendations</li>
-                        <li>Pre-arrival food and beverage stocking coordination</li>
-                        <li>Ski-pass pickup and delivery when passes are booked through AceHost</li>
+                        <li>Ski lift pass pick up and delivery</li>
+                        <li>Chalet food &amp; beverage stocking upon arrival</li>
                       </ul>
                     </div>
                     
                     <div className="bg-gray-50 p-6 rounded-lg">
-                      <h3 className="text-xl font-bold mb-4">Additional at-cost services:</h3>
+                      <h3 className="text-xl font-bold mb-4">Additional at cost services:</h3>
                       <ul className="list-disc pl-6 space-y-2 text-gray-800">
-                        <li>Groceries and beverages requested for pre-arrival stocking</li>
-                        <li>Airport transfers</li>
+                        <li>Airport Transfers</li>
                         <li>Private Chef (Highly recommended)</li>
                         <li>Private Driver</li>
-                        <li>Daily cleaning</li>
                         <li>Massages</li>
-                        <li>Ski equipment rental</li>
+                        <li>Ski equipment rental delivery</li>
                         <li>Childcare</li>
                         <li>Ski Instructors</li>
-                        <li>Heli/snowmobile Experiences</li>
+                        <li>Helicopter/snowmobile experiences</li>
+                        <li>Daily cleaning</li>
+                        <li>Absolutely anything you need, you let us know and we will arrange for you</li>
                       </ul>
                     </div>
                     
                     <div className="mt-6">
-                      <p className="text-gray-800 mb-6">
-                        <strong>Interaction with guests:</strong> Your host will be there to greet you in person and give you a tour of the property.
-                      </p>
                       <p className="text-gray-800">
                         <strong>Registration details:</strong><br />
                         Municipal registration number: 00013206<br />
