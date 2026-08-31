@@ -20,6 +20,7 @@ import {
 } from "@/lib/editorialPropertyLayout";
 import { getWorldwideAmenities } from "@/data/worldwideAmenities";
 import { airbnbButtonLg } from "@/lib/airbnbButtonStyles";
+import { GALLERY_PREVIEW_LIMIT } from "@/lib/galleryPhotoOrder";
 import {
   COTSWOLDS_COVER_GALLERY,
   COTSWOLDS_FULL_PHOTOS,
@@ -164,7 +165,7 @@ const CotswoldsUKSohoFarmHouse = ({
           {/* Photo Grid */}
           <div className={editorialGalleryWrapperClass} id="photos">
             <div className={editorialGalleryGridClass}>
-              {galleryPhotos.slice(0, 18).map((photo, index) => (
+              {galleryPhotos.slice(0, GALLERY_PREVIEW_LIMIT).map((photo, index) => (
                 <div
                   key={photo}
                   className={editorialGalleryTileClass}
@@ -184,7 +185,7 @@ const CotswoldsUKSohoFarmHouse = ({
                 </div>
               ))}
             </div>
-            {photos.length > 18 && (
+            {photos.length > GALLERY_PREVIEW_LIMIT && (
               <div className="text-center mt-6">
                 <button
                   onClick={() => setShowAllPhotos(true)}

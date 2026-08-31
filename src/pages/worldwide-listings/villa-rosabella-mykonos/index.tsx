@@ -19,6 +19,10 @@ import {
 } from "@/lib/editorialPropertyLayout";
 import { getWorldwideAmenities } from "@/data/worldwideAmenities";
 import { getFullPhotoSrc, getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
+import {
+  GALLERY_PREVIEW_LIMIT,
+  getGalleryPhotoOrder,
+} from "@/lib/galleryPhotoOrder";
 
 const VillaRosabellaMykonos = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -87,6 +91,10 @@ const VillaRosabellaMykonos = () => {
     "/photos/properties/Villa Rosabella Mykonos/Villa Rosabella (58).jpg",
     "/photos/properties/Villa Rosabella Mykonos/Villa Rosabella (59).jpg"
   ];
+  const galleryPhotos = getGalleryPhotoOrder(
+    photos,
+    "villa-rosabella-mykonos"
+  );
 
   const handlePhotoClick = (index: number) => {
     setIsImageLoading(false);
@@ -108,11 +116,15 @@ const VillaRosabellaMykonos = () => {
 
     if (direction === "prev") {
       setSelectedPhotoIndex(
-        selectedPhotoIndex === 0 ? photos.length - 1 : selectedPhotoIndex - 1
+        selectedPhotoIndex === 0
+          ? galleryPhotos.length - 1
+          : selectedPhotoIndex - 1
       );
     } else {
       setSelectedPhotoIndex(
-        selectedPhotoIndex === photos.length - 1 ? 0 : selectedPhotoIndex + 1
+        selectedPhotoIndex === galleryPhotos.length - 1
+          ? 0
+          : selectedPhotoIndex + 1
       );
     }
   };
@@ -157,7 +169,7 @@ const VillaRosabellaMykonos = () => {
           {/* Photo Grid */}
           <div className={editorialGalleryWrapperClass} id="photos">
             <div className={editorialGalleryGridClass}>
-              {photos.slice(0, 28).map((photo, index) => (
+              {galleryPhotos.slice(0, GALLERY_PREVIEW_LIMIT).map((photo, index) => (
                 <div
                   key={index}
                   className={editorialGalleryTileClass}
@@ -177,13 +189,13 @@ const VillaRosabellaMykonos = () => {
                 </div>
               ))}
             </div>
-            {photos.length > 28 && (
+            {galleryPhotos.length > GALLERY_PREVIEW_LIMIT && (
               <div className="text-center mt-6">
                 <button
                   onClick={() => setShowAllPhotos(true)}
                   className="inline-flex items-center px-6 py-2 bg-black hover:bg-gray-900 text-white rounded-full text-sm font-medium"
                 >
-                  View all {photos.length} photos
+                  View all {galleryPhotos.length} photos
                 </button>
               </div>
             )}
@@ -472,7 +484,7 @@ const VillaRosabellaMykonos = () => {
             </button>
             <div className="relative w-full h-full flex items-center justify-center">
               <Image
-                src={getFullPhotoSrc(photos[selectedPhotoIndex])}
+                src={getFullPhotoSrc(galleryPhotos[selectedPhotoIndex])}
                 alt={`Villa Rosabella Mykonos photo ${selectedPhotoIndex + 1}`}
                 className="object-contain max-h-screen max-w-full"
                 width={1200}
@@ -506,7 +518,7 @@ const VillaRosabellaMykonos = () => {
             </div>
             <div className="container mx-auto py-8 px-4">
               <div className={`${editorialGalleryModalWrapperClass} ${editorialGalleryGridClass}`}>
-                {photos.map((photo, index) => (
+                {galleryPhotos.map((photo, index) => (
                   <div
                     key={index}
                     className="relative aspect-[4/3] cursor-pointer rounded-lg overflow-hidden"

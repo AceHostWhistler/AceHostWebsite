@@ -21,6 +21,7 @@ import {
 import { getWorldwideAmenities } from "@/data/worldwideAmenities";
 import { SCANDINAVE_PHOTOS } from "@/data/scandinavePhotos";
 import { airbnbButtonLg } from "@/lib/airbnbButtonStyles";
+import { GALLERY_PREVIEW_LIMIT } from "@/lib/galleryPhotoOrder";
 import { getFullPhotoSrc, getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 
 const BLUR_PLACEHOLDER =
@@ -149,7 +150,7 @@ const LuxeScandinaveRetreat = () => {
 
           <div className={editorialGalleryWrapperClass} id="photos">
             <div className={editorialGalleryGridClass}>
-              {photos.slice(0, 12).map((photo, index) => (
+              {photos.slice(0, GALLERY_PREVIEW_LIMIT).map((photo, index) => (
                 <div
                   key={photo}
                   className={editorialGalleryTileClass}
@@ -169,7 +170,7 @@ const LuxeScandinaveRetreat = () => {
                 </div>
               ))}
             </div>
-            {photos.length > 12 && (
+            {photos.length > GALLERY_PREVIEW_LIMIT && (
               <div className="text-center mt-6">
                 <button
                   onClick={() => setShowAllPhotos(true)}

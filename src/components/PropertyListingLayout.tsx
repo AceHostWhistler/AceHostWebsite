@@ -28,6 +28,10 @@ import {
 import { getPropertyGeoBySlug } from "@/data/seo/propertyGeo";
 import { buildVacationRentalSchema } from "@/lib/seo/schema";
 import { SITE_URL } from "@/data/seo/business";
+import {
+  GALLERY_PREVIEW_LIMIT,
+  getGalleryPhotoOrder,
+} from "@/lib/galleryPhotoOrder";
 
 /** Listings with a custom in-description photo strip — skip the shared one. */
 const CUSTOM_INSIDE_PHOTO_STRIP_SLUGS = new Set([
@@ -56,6 +60,7 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
     photoAltPrefix,
     videoUrl,
   } = listing;
+  const galleryPhotos = getGalleryPhotoOrder(photos, listing.slug);
 
   const [showAllPhotos, setShowAllPhotos] = useState(false);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(
@@ -80,17 +85,17 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
     setIsImageLoading(true);
     setSelectedPhotoIndex((current) => {
       if (current === null) return null;
-      return current === photos.length - 1 ? 0 : current + 1;
+      return current === galleryPhotos.length - 1 ? 0 : current + 1;
     });
-  }, [photos.length]);
+  }, [galleryPhotos.length]);
 
   const goToPrevPhoto = useCallback(() => {
     setIsImageLoading(true);
     setSelectedPhotoIndex((current) => {
       if (current === null) return null;
-      return current === 0 ? photos.length - 1 : current - 1;
+      return current === 0 ? galleryPhotos.length - 1 : current - 1;
     });
-  }, [photos.length]);
+  }, [galleryPhotos.length]);
 
   const navigatePhoto = (direction: "prev" | "next") => {
     if (direction === "prev") goToPrevPhoto();
@@ -189,9 +194,11 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
 
           <div className={editorialGalleryWrapperClass} id="photos">
             <div className={editorialGalleryGridClass}>
-              {photos.slice(0, 28).map((photo, index) => (
+              {galleryPhotos
+                .slice(0, GALLERY_PREVIEW_LIMIT)
+                .map((photo, index) => (
                 <div
-                  key={index}
+                  key={`${photo}-${index}`}
                   className={editorialGalleryTileClass}
                   onClick={() => handlePhotoClick(index)}
                 >
@@ -207,15 +214,15 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
                     blurDataURL={BLUR_DATA_URL}
                   />
                 </div>
-              ))}
+                ))}
             </div>
-            {photos.length > 28 && (
+            {galleryPhotos.length > GALLERY_PREVIEW_LIMIT && (
               <div className="text-center mt-6">
                 <button
                   onClick={() => setShowAllPhotos(true)}
                   className="inline-flex items-center px-6 py-2 bg-black hover:bg-gray-900 text-white rounded-full text-sm font-medium"
                 >
-                  View all {photos.length} photos
+                  View all {galleryPhotos.length} photos
                 </button>
               </div>
             )}
@@ -260,8 +267,8 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
 
             <div className={editorialGalleryModalWrapperClass}>
               <div className={editorialGalleryGridClass}>
-                {photos.map((photo, index) => (
-                  <div key={index} className="mb-6">
+                {galleryPhotos.map((photo, index) => (
+                  <div key={`${photo}-${index}`} className="mb-6">
                     <div
                       className={editorialGalleryModalTileClass}
                       onClick={() => handlePhotoClick(index)}
@@ -277,7 +284,7 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
                     </div>
                     <div className="mt-1 text-center">
                       <span className="text-white text-xs">
-                        {index + 1} / {photos.length}
+                        {index + 1} / {galleryPhotos.length}
                       </span>
                     </div>
                   </div>
@@ -325,7 +332,7 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
                 {...blockGalleryTouchPropagation}
               >
                 <Image
-                  src={getFullPhotoSrc(photos[selectedPhotoIndex])}
+                  src={getFullPhotoSrc(galleryPhotos[selectedPhotoIndex])}
                   alt={`${photoAltPrefix} full view ${selectedPhotoIndex + 1}`}
                   fill
                   priority
@@ -350,7 +357,7 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
 
             <div className="absolute bottom-4 left-0 right-0 text-center z-20">
               <p className="text-white text-sm bg-black bg-opacity-50 inline-block px-4 py-2 rounded-full">
-                {selectedPhotoIndex + 1} / {photos.length}
+                {selectedPhotoIndex + 1} / {galleryPhotos.length}
               </p>
             </div>
           </div>

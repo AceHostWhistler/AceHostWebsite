@@ -16,6 +16,10 @@ import {
   editorialMainClass,
 } from "@/lib/editorialPropertyLayout";
 import { getWorldwideAmenities } from "@/data/worldwideAmenities";
+import {
+  GALLERY_PREVIEW_LIMIT,
+  getGalleryPhotoOrder,
+} from "@/lib/galleryPhotoOrder";
 import { getFullPhotoSrc, getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Footer from "@/components/Footer";
 import VimeoEmbed from "@/components/VimeoEmbed";
@@ -79,6 +83,7 @@ const PuntaMitaCasaJuntos = () => {
     "/photos/properties/Punta Mita/DSC_2122 copy.jpg",
     "/photos/properties/Punta Mita/DSC_2275 copy.jpg",
   ];
+  const galleryPhotos = getGalleryPhotoOrder(photos, "punta-mita---casa-juntos");
 
   const amenities = [
     "Beachfront",
@@ -116,11 +121,11 @@ const PuntaMitaCasaJuntos = () => {
 
     if (direction === "prev") {
       setSelectedPhotoIndex(
-        selectedPhotoIndex === 0 ? photos.length - 1 : selectedPhotoIndex - 1
+        selectedPhotoIndex === 0 ? galleryPhotos.length - 1 : selectedPhotoIndex - 1
       );
     } else {
       setSelectedPhotoIndex(
-        selectedPhotoIndex === photos.length - 1 ? 0 : selectedPhotoIndex + 1
+        selectedPhotoIndex === galleryPhotos.length - 1 ? 0 : selectedPhotoIndex + 1
       );
     }
   };
@@ -174,7 +179,7 @@ const PuntaMitaCasaJuntos = () => {
           {/* Photo Grid */}
           <div className={editorialGalleryWrapperClass} id="photos">
             <div className={editorialGalleryGridClass}>
-              {photos.slice(0, 28).map((photo, index) => (
+              {galleryPhotos.slice(0, GALLERY_PREVIEW_LIMIT).map((photo, index) => (
                 <div
                   key={index}
                   className={editorialGalleryTileClass}
@@ -194,13 +199,13 @@ const PuntaMitaCasaJuntos = () => {
                 </div>
               ))}
             </div>
-            {photos.length > 28 && (
+            {galleryPhotos.length > GALLERY_PREVIEW_LIMIT && (
               <div className="text-center mt-6">
                 <button
                   onClick={() => setShowAllPhotos(true)}
                   className="inline-flex items-center px-6 py-2 bg-black hover:bg-gray-900 text-white rounded-full text-sm font-medium"
                 >
-                  View all {photos.length} photos
+                  View all {galleryPhotos.length} photos
                 </button>
               </div>
             )}
@@ -254,7 +259,7 @@ const PuntaMitaCasaJuntos = () => {
           <div className="fixed inset-0 z-50 bg-black overflow-y-auto">
             <div className="sticky top-0 z-10 bg-black p-4 flex justify-between items-center">
               <h2 className="text-lg sm:text-xl text-white font-medium">
-                Punta Mita - Casa Juntos - All Photos ({photos.length})
+                Punta Mita - Casa Juntos - All Photos ({galleryPhotos.length})
               </h2>
               <button
                 onClick={closeAllPhotos}
@@ -266,7 +271,7 @@ const PuntaMitaCasaJuntos = () => {
 
             <div className={editorialGalleryModalWrapperClass}>
               <div className={editorialGalleryGridClass}>
-                {photos.map((photo, index) => (
+                {galleryPhotos.map((photo, index) => (
                   <div key={index} className="mb-6">
                     <div
                       className={editorialGalleryModalTileClass}
@@ -319,7 +324,7 @@ const PuntaMitaCasaJuntos = () => {
               )}
               <div className="relative w-full h-full touch-pinch-zoom">
                 <Image
-                  src={getFullPhotoSrc(photos[selectedPhotoIndex])}
+                  src={getFullPhotoSrc(galleryPhotos[selectedPhotoIndex])}
                   alt={`Punta Mita Casa Juntos photo ${selectedPhotoIndex + 1}`}
                   fill
                   priority
@@ -341,7 +346,7 @@ const PuntaMitaCasaJuntos = () => {
 
             <div className="absolute bottom-4 left-0 right-0 text-center z-20">
               <p className="text-white text-sm bg-black bg-opacity-50 inline-block px-4 py-2 rounded-full">
-                {selectedPhotoIndex + 1} / {photos.length}
+                {selectedPhotoIndex + 1} / {galleryPhotos.length}
               </p>
             </div>
           </div>

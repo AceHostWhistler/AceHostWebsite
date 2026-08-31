@@ -20,6 +20,10 @@ import {
 } from "@/lib/editorialPropertyLayout";
 import { getWorldwideAmenities } from "@/data/worldwideAmenities";
 import { getFullPhotoSrc, getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
+import {
+  GALLERY_PREVIEW_LIMIT,
+  getGalleryPhotoOrder,
+} from "@/lib/galleryPhotoOrder";
 
 const VillaOineasGreeceMykonos = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -114,6 +118,10 @@ const VillaOineasGreeceMykonos = () => {
     "/photos/properties/Oineas Villa - Greece Mykonos/VILLA OINEAS - 26.jpg",
     "/photos/properties/Oineas Villa - Greece Mykonos/VILLA OINEAS - 27.jpg",
   ];
+  const galleryPhotos = getGalleryPhotoOrder(
+    photos,
+    "villa-oineas-greece-mykonos"
+  );
 
   const handlePhotoClick = (index: number) => {
     setIsImageLoading(false);
@@ -135,11 +143,15 @@ const VillaOineasGreeceMykonos = () => {
 
     if (direction === "prev") {
       setSelectedPhotoIndex(
-        selectedPhotoIndex === 0 ? photos.length - 1 : selectedPhotoIndex - 1
+        selectedPhotoIndex === 0
+          ? galleryPhotos.length - 1
+          : selectedPhotoIndex - 1
       );
     } else {
       setSelectedPhotoIndex(
-        selectedPhotoIndex === photos.length - 1 ? 0 : selectedPhotoIndex + 1
+        selectedPhotoIndex === galleryPhotos.length - 1
+          ? 0
+          : selectedPhotoIndex + 1
       );
     }
   };
@@ -159,17 +171,17 @@ const VillaOineasGreeceMykonos = () => {
     setIsImageLoading(true);
     setSelectedPhotoIndex((current) => {
       if (current === null) return null;
-      return current === photos.length - 1 ? 0 : current + 1;
+      return current === galleryPhotos.length - 1 ? 0 : current + 1;
     });
-  }, [photos.length]);
+  }, [galleryPhotos.length]);
 
   const goToPrevPhoto = useCallback(() => {
     setIsImageLoading(true);
     setSelectedPhotoIndex((current) => {
       if (current === null) return null;
-      return current === 0 ? photos.length - 1 : current - 1;
+      return current === 0 ? galleryPhotos.length - 1 : current - 1;
     });
-  }, [photos.length]);
+  }, [galleryPhotos.length]);
 
   const { handleTouchStart, handleTouchMove, handleTouchEnd, handleTouchCancel } =
     usePhotoSwipeNavigation(goToNextPhoto, goToPrevPhoto);
@@ -203,7 +215,7 @@ const VillaOineasGreeceMykonos = () => {
           {/* Photo Grid */}
           <div className={editorialGalleryWrapperClass} id="photos">
             <div className={editorialGalleryGridClass}>
-              {photos.slice(0, 28).map((photo, index) => (
+              {galleryPhotos.slice(0, GALLERY_PREVIEW_LIMIT).map((photo, index) => (
                 <div
                   key={index}
                   className={editorialGalleryTileClass}
@@ -223,13 +235,13 @@ const VillaOineasGreeceMykonos = () => {
                 </div>
               ))}
             </div>
-            {photos.length > 28 && (
+            {galleryPhotos.length > GALLERY_PREVIEW_LIMIT && (
               <div className="text-center mt-6">
                 <button
                   onClick={() => setShowAllPhotos(true)}
                   className="inline-flex items-center px-6 py-2 bg-black hover:bg-gray-900 text-white rounded-full text-sm font-medium"
                 >
-                  View all {photos.length} photos
+                  View all {galleryPhotos.length} photos
                 </button>
               </div>
             )}
@@ -550,7 +562,7 @@ const VillaOineasGreeceMykonos = () => {
             <div className="fixed inset-0 bg-black z-50 overflow-y-auto">
               <div className="flex justify-between items-center p-4 sticky top-0 bg-black bg-opacity-75 z-10">
                 <h3 className="text-white font-medium">
-                  Villa Oineas | All Photos ({photos.length})
+                  Villa Oineas | All Photos ({galleryPhotos.length})
                 </h3>
                 <button
                   onClick={closeAllPhotos}
@@ -560,7 +572,7 @@ const VillaOineasGreeceMykonos = () => {
                 </button>
               </div>
               <div className={`${editorialGalleryModalWrapperClass} ${editorialGalleryGridClass}`}>
-                {photos.map((photo, index) => (
+                {galleryPhotos.map((photo, index) => (
                   <div
                     key={index}
                     className={editorialGalleryModalTileClass}
@@ -646,7 +658,7 @@ const VillaOineasGreeceMykonos = () => {
                 {...blockGalleryTouchPropagation}
               >
                 <Image
-                  src={getFullPhotoSrc(photos[selectedPhotoIndex])}
+                  src={getFullPhotoSrc(galleryPhotos[selectedPhotoIndex])}
                   alt={`Villa Oineas photo ${selectedPhotoIndex + 1}`}
                   fill
                   priority
@@ -662,7 +674,7 @@ const VillaOineasGreeceMykonos = () => {
                 )}
               </div>
               <div className="absolute bottom-4 left-0 right-0 text-center text-white">
-                {selectedPhotoIndex + 1} / {photos.length}
+                {selectedPhotoIndex + 1} / {galleryPhotos.length}
               </div>
             </div>
           )}

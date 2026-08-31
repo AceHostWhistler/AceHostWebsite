@@ -18,6 +18,10 @@ import {
   editorialMainClass,
 } from "@/lib/editorialPropertyLayout";
 import { getWorldwideAmenities } from "@/data/worldwideAmenities";
+import {
+  GALLERY_PREVIEW_LIMIT,
+  getGalleryPhotoOrder,
+} from "@/lib/galleryPhotoOrder";
 import { getFullPhotoSrc, getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 
 const HeliosEstateMykonos = () => {
@@ -109,6 +113,7 @@ const HeliosEstateMykonos = () => {
     "/photos/properties/Helios Estate - Mykonos/02.jpg",
     "/photos/properties/Helios Estate - Mykonos/03.jpg",
   ];
+  const galleryPhotos = getGalleryPhotoOrder(photos, "helios-estate-mykonos");
 
   const handlePhotoClick = (index: number) => {
     setIsImageLoading(false);
@@ -130,11 +135,11 @@ const HeliosEstateMykonos = () => {
 
     if (direction === "prev") {
       setSelectedPhotoIndex(
-        selectedPhotoIndex === 0 ? photos.length - 1 : selectedPhotoIndex - 1
+        selectedPhotoIndex === 0 ? galleryPhotos.length - 1 : selectedPhotoIndex - 1
       );
     } else {
       setSelectedPhotoIndex(
-        selectedPhotoIndex === photos.length - 1 ? 0 : selectedPhotoIndex + 1
+        selectedPhotoIndex === galleryPhotos.length - 1 ? 0 : selectedPhotoIndex + 1
       );
     }
   };
@@ -179,7 +184,7 @@ const HeliosEstateMykonos = () => {
           {/* Photo Grid */}
           <div className={editorialGalleryWrapperClass} id="photos">
             <div className={editorialGalleryGridClass}>
-              {photos.slice(0, 28).map((photo, index) => (
+              {galleryPhotos.slice(0, GALLERY_PREVIEW_LIMIT).map((photo, index) => (
                 <div
                   key={index}
                   className={editorialGalleryTileClass}
@@ -199,13 +204,13 @@ const HeliosEstateMykonos = () => {
                 </div>
               ))}
             </div>
-            {photos.length > 28 && (
+            {galleryPhotos.length > GALLERY_PREVIEW_LIMIT && (
               <div className="text-center mt-6">
                 <button
                   onClick={() => setShowAllPhotos(true)}
                   className="inline-flex items-center px-6 py-2 bg-black hover:bg-gray-900 text-white rounded-full text-sm font-medium"
                 >
-                  View all {photos.length} photos
+                  View all {galleryPhotos.length} photos
                 </button>
               </div>
             )}
@@ -423,7 +428,7 @@ const HeliosEstateMykonos = () => {
             </button>
             <div className="relative w-full h-full flex items-center justify-center">
               <Image
-                src={getFullPhotoSrc(photos[selectedPhotoIndex])}
+                src={getFullPhotoSrc(galleryPhotos[selectedPhotoIndex])}
                 alt={`Helios Estate Mykonos photo ${selectedPhotoIndex + 1}`}
                 className="object-contain max-h-screen max-w-full"
                 width={1200}
@@ -457,7 +462,7 @@ const HeliosEstateMykonos = () => {
             </div>
             <div className={editorialGalleryModalWrapperClass}>
               <div className={editorialGalleryGridClass}>
-                {photos.map((photo, index) => (
+                {galleryPhotos.map((photo, index) => (
                   <div key={index} className="mb-6">
                     <div
                       className={editorialGalleryModalTileClass}

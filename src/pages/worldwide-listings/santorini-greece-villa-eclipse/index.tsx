@@ -20,6 +20,10 @@ import {
 } from "@/lib/editorialPropertyLayout";
 import { getWorldwideAmenities } from "@/data/worldwideAmenities";
 import { getFullPhotoSrc, getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
+import {
+  GALLERY_PREVIEW_LIMIT,
+  getGalleryPhotoOrder,
+} from "@/lib/galleryPhotoOrder";
 
 const SantoriniGreeceVillaEclipse = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -53,6 +57,10 @@ const SantoriniGreeceVillaEclipse = () => {
     "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(24 of 25).jpg",
     "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(25 of 25).jpg",
   ];
+  const galleryPhotos = getGalleryPhotoOrder(
+    photos,
+    "santorini-greece-villa-eclipse"
+  );
 
   const handlePhotoClick = (index: number) => {
     setIsImageLoading(false);
@@ -74,11 +82,15 @@ const SantoriniGreeceVillaEclipse = () => {
 
     if (direction === "prev") {
       setSelectedPhotoIndex(
-        selectedPhotoIndex === 0 ? photos.length - 1 : selectedPhotoIndex - 1
+        selectedPhotoIndex === 0
+          ? galleryPhotos.length - 1
+          : selectedPhotoIndex - 1
       );
     } else {
       setSelectedPhotoIndex(
-        selectedPhotoIndex === photos.length - 1 ? 0 : selectedPhotoIndex + 1
+        selectedPhotoIndex === galleryPhotos.length - 1
+          ? 0
+          : selectedPhotoIndex + 1
       );
     }
   };
@@ -98,17 +110,17 @@ const SantoriniGreeceVillaEclipse = () => {
     setIsImageLoading(true);
     setSelectedPhotoIndex((current) => {
       if (current === null) return null;
-      return current === photos.length - 1 ? 0 : current + 1;
+      return current === galleryPhotos.length - 1 ? 0 : current + 1;
     });
-  }, [photos.length]);
+  }, [galleryPhotos.length]);
 
   const goToPrevPhoto = useCallback(() => {
     setIsImageLoading(true);
     setSelectedPhotoIndex((current) => {
       if (current === null) return null;
-      return current === 0 ? photos.length - 1 : current - 1;
+      return current === 0 ? galleryPhotos.length - 1 : current - 1;
     });
-  }, [photos.length]);
+  }, [galleryPhotos.length]);
 
   const { handleTouchStart, handleTouchMove, handleTouchEnd, handleTouchCancel } =
     usePhotoSwipeNavigation(goToNextPhoto, goToPrevPhoto);
@@ -142,7 +154,7 @@ const SantoriniGreeceVillaEclipse = () => {
           {/* Photo Grid */}
           <div className={editorialGalleryWrapperClass} id="photos">
             <div className={editorialGalleryGridClass}>
-              {photos.slice(0, 28).map((photo, index) => (
+              {galleryPhotos.slice(0, GALLERY_PREVIEW_LIMIT).map((photo, index) => (
                 <div
                   key={index}
                   className={editorialGalleryTileClass}
@@ -162,13 +174,13 @@ const SantoriniGreeceVillaEclipse = () => {
                 </div>
               ))}
             </div>
-            {photos.length > 28 && (
+            {galleryPhotos.length > GALLERY_PREVIEW_LIMIT && (
               <div className="text-center mt-6">
                 <button
                   onClick={() => setShowAllPhotos(true)}
                   className="inline-flex items-center px-6 py-2 bg-black hover:bg-gray-900 text-white rounded-full text-sm font-medium"
                 >
-                  View all {photos.length} photos
+                  View all {galleryPhotos.length} photos
                 </button>
               </div>
             )}
@@ -441,7 +453,7 @@ const SantoriniGreeceVillaEclipse = () => {
             <div className="fixed inset-0 bg-black z-50 overflow-y-auto">
               <div className="flex justify-between items-center p-4 sticky top-0 bg-black bg-opacity-75 z-10">
                 <h3 className="text-white font-medium">
-                  Villa Eclipse | All Photos ({photos.length})
+                  Villa Eclipse | All Photos ({galleryPhotos.length})
                 </h3>
                 <button
                   onClick={closeAllPhotos}
@@ -451,7 +463,7 @@ const SantoriniGreeceVillaEclipse = () => {
                 </button>
               </div>
               <div className={`${editorialGalleryModalWrapperClass} ${editorialGalleryGridClass}`}>
-                {photos.map((photo, index) => (
+                {galleryPhotos.map((photo, index) => (
                   <div
                     key={index}
                     className={editorialGalleryModalTileClass}
@@ -537,7 +549,7 @@ const SantoriniGreeceVillaEclipse = () => {
                 {...blockGalleryTouchPropagation}
               >
                 <Image
-                  src={getFullPhotoSrc(photos[selectedPhotoIndex])}
+                  src={getFullPhotoSrc(galleryPhotos[selectedPhotoIndex])}
                   alt={`Villa Eclipse photo ${selectedPhotoIndex + 1}`}
                   fill
                   priority
@@ -553,7 +565,7 @@ const SantoriniGreeceVillaEclipse = () => {
                 )}
               </div>
               <div className="absolute bottom-4 left-0 right-0 text-center text-white">
-                {selectedPhotoIndex + 1} / {photos.length}
+                {selectedPhotoIndex + 1} / {galleryPhotos.length}
               </div>
             </div>
           )}

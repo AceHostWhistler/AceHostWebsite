@@ -19,6 +19,10 @@ import Footer from "@/components/Footer";
 import { X } from "lucide-react";
 import { FaBed, FaBath } from "react-icons/fa";
 import { blockGalleryTouchPropagation, usePhotoSwipeNavigation } from "@/hooks/usePhotoSwipeNavigation";
+import {
+  GALLERY_PREVIEW_LIMIT,
+  getGalleryPhotoOrder,
+} from "@/lib/galleryPhotoOrder";
 
 const VancouverHouseCornerUnit = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -42,6 +46,10 @@ const VancouverHouseCornerUnit = () => {
     "/photos/properties/vancouver-house/645adc4aca79d28dfd76348b_Vancouver_House-27.jpg",
     "/photos/properties/vancouver-house/645add450dd1f71139a57bb7_Vancouver_House-45.jpg",
   ];
+  const galleryPhotos = getGalleryPhotoOrder(
+    photos,
+    "vancouver-house-corner-unit-30th-floor"
+  );
 
   const handlePhotoClick = (index: number) => {
     setSelectedPhotoIndex(index);
@@ -58,16 +66,16 @@ const VancouverHouseCornerUnit = () => {
   const goToNextPhoto = useCallback(() => {
     setSelectedPhotoIndex((current) => {
       if (current === null) return null;
-      return current === photos.length - 1 ? 0 : current + 1;
+      return current === galleryPhotos.length - 1 ? 0 : current + 1;
     });
-  }, [photos.length]);
+  }, [galleryPhotos.length]);
 
   const goToPrevPhoto = useCallback(() => {
     setSelectedPhotoIndex((current) => {
       if (current === null) return null;
-      return current === 0 ? photos.length - 1 : current - 1;
+      return current === 0 ? galleryPhotos.length - 1 : current - 1;
     });
-  }, [photos.length]);
+  }, [galleryPhotos.length]);
 
   const navigatePhoto = (direction: "prev" | "next") => {
     if (direction === "prev") goToPrevPhoto();
@@ -117,7 +125,7 @@ const VancouverHouseCornerUnit = () => {
           {/* Photo Grid */}
           <div className={editorialGalleryWrapperClass} id="photos">
             <div className={editorialGalleryGridClass}>
-              {photos.slice(0, 8).map((photo, index) => (
+              {galleryPhotos.slice(0, GALLERY_PREVIEW_LIMIT).map((photo, index) => (
                 <div
                   key={index}
                   className={editorialGalleryTileClass}
@@ -137,13 +145,13 @@ const VancouverHouseCornerUnit = () => {
                 </div>
               ))}
             </div>
-            {photos.length > 8 && (
+            {galleryPhotos.length > GALLERY_PREVIEW_LIMIT && (
               <div className="text-center mt-6">
                 <button
                   onClick={() => setShowAllPhotos(true)}
                   className="inline-flex items-center px-6 py-2 bg-black hover:bg-gray-900 text-white rounded-full text-sm font-medium"
                 >
-                  View all {photos.length} photos
+                  View all {galleryPhotos.length} photos
                 </button>
               </div>
             )}
@@ -486,10 +494,10 @@ const VancouverHouseCornerUnit = () => {
               </button>
               <div className="p-4 sm:p-8">
                 <h2 className="text-white text-2xl font-bold mb-6">
-                  All Photos ({photos.length})
+                  All Photos ({galleryPhotos.length})
                 </h2>
                 <div className={editorialGalleryGridClass}>
-                  {photos.map((photo, index) => (
+                  {galleryPhotos.map((photo, index) => (
                     <div
                       key={index}
                       className="aspect-[4/3] relative cursor-pointer"
@@ -545,7 +553,7 @@ const VancouverHouseCornerUnit = () => {
               )}
               <div className="relative w-full h-full touch-pinch-zoom" {...blockGalleryTouchPropagation}>
                 <Image
-                  src={photos[selectedPhotoIndex]}
+                  src={galleryPhotos[selectedPhotoIndex]}
                   alt={`Property full view ${selectedPhotoIndex + 1}`}
                   fill
                   priority
@@ -567,7 +575,7 @@ const VancouverHouseCornerUnit = () => {
 
             <div className="absolute bottom-4 left-0 right-0 text-center z-20">
               <p className="text-white text-sm bg-black bg-opacity-50 inline-block px-4 py-2 rounded-full">
-                {selectedPhotoIndex + 1} / {photos.length}
+                {selectedPhotoIndex + 1} / {galleryPhotos.length}
               </p>
             </div>
           </div>

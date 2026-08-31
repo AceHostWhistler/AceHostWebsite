@@ -15,6 +15,10 @@ import {
   editorialMainClass,
 } from "@/lib/editorialPropertyLayout";
 import { getWorldwideAmenities } from "@/data/worldwideAmenities";
+import {
+  GALLERY_PREVIEW_LIMIT,
+  getGalleryPhotoOrder,
+} from "@/lib/galleryPhotoOrder";
 import { getFullPhotoSrc, getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Footer from "@/components/Footer";
 import { X } from "lucide-react";
@@ -71,6 +75,7 @@ const HoodRiverLuxuryHome = () => {
     "/photos/properties/hood-river-luxury-home/Interior 31 - Garage.jpg",
     "/photos/properties/hood-river-luxury-home/Interior 32 - Garage.jpg",
   ];
+  const galleryPhotos = getGalleryPhotoOrder(photos, "hood-river-luxury-home");
 
   const handlePhotoClick = (index: number) => {
     setIsImageLoading(false);
@@ -92,11 +97,11 @@ const HoodRiverLuxuryHome = () => {
 
     if (direction === "prev") {
       setSelectedPhotoIndex(
-        selectedPhotoIndex === 0 ? photos.length - 1 : selectedPhotoIndex - 1
+        selectedPhotoIndex === 0 ? galleryPhotos.length - 1 : selectedPhotoIndex - 1
       );
     } else {
       setSelectedPhotoIndex(
-        selectedPhotoIndex === photos.length - 1 ? 0 : selectedPhotoIndex + 1
+        selectedPhotoIndex === galleryPhotos.length - 1 ? 0 : selectedPhotoIndex + 1
       );
     }
   };
@@ -139,7 +144,7 @@ const HoodRiverLuxuryHome = () => {
           {/* Photo Grid */}
           <div className={editorialGalleryWrapperClass} id="photos">
             <div className={editorialGalleryGridClass}>
-              {photos.slice(0, 28).map((photo, index) => (
+              {galleryPhotos.slice(0, GALLERY_PREVIEW_LIMIT).map((photo, index) => (
                 <div
                   key={index}
                   className={editorialGalleryTileClass}
@@ -159,13 +164,13 @@ const HoodRiverLuxuryHome = () => {
                 </div>
               ))}
             </div>
-            {photos.length > 28 && (
+            {galleryPhotos.length > GALLERY_PREVIEW_LIMIT && (
               <div className="text-center mt-6">
                 <button
                   onClick={() => setShowAllPhotos(true)}
                   className="inline-flex items-center px-6 py-2 bg-black hover:bg-gray-900 text-white rounded-full text-sm font-medium"
                 >
-                  View all {photos.length} photos
+                  View all {galleryPhotos.length} photos
                 </button>
               </div>
             )}
@@ -262,7 +267,7 @@ const HoodRiverLuxuryHome = () => {
 
             <div className="max-w-7xl mx-auto py-6 px-4">
               <div className={editorialGalleryGridClass}>
-                {photos.map((photo, index) => (
+                {galleryPhotos.map((photo, index) => (
                   <div key={index} className="mb-6">
                     <div
                       className={editorialGalleryModalTileClass}
@@ -315,7 +320,7 @@ const HoodRiverLuxuryHome = () => {
               )}
               <div className="relative w-full h-full touch-pinch-zoom">
                 <Image
-                  src={getFullPhotoSrc(photos[selectedPhotoIndex])}
+                  src={getFullPhotoSrc(galleryPhotos[selectedPhotoIndex])}
                   alt={`Hood River Home photo ${selectedPhotoIndex + 1}`}
                   fill
                   priority
@@ -337,7 +342,7 @@ const HoodRiverLuxuryHome = () => {
 
             <div className="absolute bottom-4 left-0 right-0 text-center z-20">
               <p className="text-white text-sm bg-black bg-opacity-50 inline-block px-4 py-2 rounded-full">
-                {selectedPhotoIndex + 1} / {photos.length}
+                {selectedPhotoIndex + 1} / {galleryPhotos.length}
               </p>
             </div>
           </div>
