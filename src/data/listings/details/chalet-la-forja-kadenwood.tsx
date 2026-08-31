@@ -1,7 +1,6 @@
 import React from "react";
 import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Image from "next/image";
-import Link from "next/link";
 import type { ListingDetailsProps } from "../types";
 
 export default function ChaletLaForjaKadenwoodDetails({ photos }: ListingDetailsProps) {
@@ -9,19 +8,18 @@ export default function ChaletLaForjaKadenwoodDetails({ photos }: ListingDetails
     <>
       <div className="max-w-6xl mx-auto px-4" id="details">
                   <p className="text-gray-800 mb-8 max-w-4xl">
-                    Luxury Ski-In/Out | Pool | Hot tub | Gym | Gondola; Welcome to
-                    Chalet La Forja in Kadenwood. This 10,000+ square foot home
-                    amongst the locals is considered one of, if not the most
-                    prestigious luxury rental in all of Whistler. Perfect for 1 or 2
-                    families seeking their own bedrooms, with the option to host more
-                    people.
+                    Chalet La Forja is a 10,000-plus-square-foot ski-in/ski-out
+                    estate in Kadenwood for up to 16 guests. The home combines nine
+                    bedrooms with a heated pool, hot tub, sauna, gym, and access to
+                    Kadenwood&apos;s private gondola.
                     <br />
                     <br />
                     Ranked one of VRBO&apos;s Top 10 vacation rentals in 2023.
                     <br />
                     <br />
-                    Housekeeping included in price every other day. Butler included
-                    daily in winter.
+                    Housekeeping is included every other day. Daily butler service is
+                    included in winter from December 1 through April 30 and is
+                    available in summer for an additional charge.
                   </p>
 
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-10">
@@ -77,34 +75,24 @@ export default function ChaletLaForjaKadenwoodDetails({ photos }: ListingDetails
                         <h2 className="text-2xl font-bold">The Space</h2>
                       </div>
                       <p className="text-gray-800 mb-6">
-                        <span className="font-bold">Private Butler &amp; Daily Cleaning:</span>{" "}
-                        (Private butler included December 1 through April 30 and
-                        optional in summer at extra cost, please inquire). In addition
-                        to serving breakfast, lunch, and dinner, the butler is
-                        responsible for all food and drink service throughout the day as
-                        well as cleanup and set up of dining table and kitchen area. To
-                        create the perfect ambiance, they will set up the hot tub, light
-                        the fire, and adjust the music and household functions. Get your
-                        daily dose of caffeine from your own personal barista. Overall,
-                        the butler is there to make your stay as smooth and comfortable
-                        as possible. Daily cleaning is included in your stay, every other
-                        day.
+                        <span className="font-bold">Butler and housekeeping:</span>{" "}
+                        Daily butler service is included from December 1 through April
+                        30 and can be added in summer at extra cost. The butler handles
+                        food and drink service, dining setup and clearing, and kitchen
+                        tidying, and can prepare the hot tub and fire. Housekeeping is
+                        included every other day.
                       </p>
                       <p className="text-gray-800 mb-6">
-                        This luxurious home includes a gourmet chefs kitchen with a
-                        butlers pantry, two private offices, state of the art
-                        electronics with built in Sonos speaker systems in every room,
-                        gym, hot-tub, heated pool, steam shower, private gondola, and
-                        access to and from the ski-hill from your front door. Full 9
-                        bedroom home (8+1 layout), with an additional single bed in a
-                        smaller private room with a window.
+                        The home features a gourmet chef&apos;s kitchen with a
+                        butler&apos;s pantry, two private offices, integrated Sonos
+                        audio, a gym, hot tub, heated pool, sauna, and steam shower.
+                        Ski directly to and from the property, then use the private
+                        Kadenwood gondola for convenient Creekside access.
                       </p>
                       <p className="text-gray-800">
-                        Included when booking this property, we will help you with all
-                        your VIP experiences such as coordinating chefs, chalet
-                        hosts/servers, helicopter experiences, transportation to and
-                        from airport, snowmobiling, restaurant reservations and
-                        recommendations, hiking recommendations, and more.
+                        Nine bedrooms and 16 beds span the home&apos;s levels, giving
+                        families and groups a mix of private suites, a large bunk room,
+                        and flexible adjoining rooms.
                       </p>
                     </div>
                   </div>
@@ -142,7 +130,9 @@ export default function ChaletLaForjaKadenwoodDetails({ photos }: ListingDetails
 
                       <p className="font-bold mb-2">BEDROOM LAYOUT:</p>
                       <p className="mb-4">
-                        Full 8+1 bedroom home, with an additional single bed in bedroom 7, a smaller private room with a window. Converted office space that adjoins bedroom 2 and shares the same bathroom. Able to access through own door leading to the hallway.
+                        Nine bedrooms are arranged across four levels. Bedroom 7 is a
+                        private, windowed hybrid office and twin bedroom adjoining
+                        bedroom 2, with its own hallway entrance and a shared bathroom.
                       </p>
 
                       <p className="font-bold mb-2">UPPER LEVEL (level located below the main floor):</p>
@@ -182,7 +172,8 @@ export default function ChaletLaForjaKadenwoodDetails({ photos }: ListingDetails
 
                       <p className="font-bold mb-2">Bonus & optional:</p>
                       <p className="mb-4">
-                        For a small daily fee, the pool can be set to hot tub temperatures at 104 degrees.
+                        For a small daily fee, the pool can be heated to hot-tub
+                        temperature at 104°F.
                       </p>
                     </div>
                   </div>
@@ -210,19 +201,28 @@ export default function ChaletLaForjaKadenwoodDetails({ photos }: ListingDetails
                     <div className="flex flex-col md:flex-row gap-8 mb-6">
                       <div className="md:w-1/2">
                         <p className="text-gray-800 mb-6">
-                          The Kadenwood neighbourhood is perched on the south side of
-                          Whistler Mountain, high above Whistler Creekside and is easily
-                          accessible by road or 5 minutes by private gondola from the base
-                          of Creekside. Kadenwood provides easy access to ski-in/ski-out
-                          trails on the edge of an old-growth forest and offers astounding
-                          Coastal Range views.
+                          <strong>Guest access:</strong> Guests have access to the
+                          entire home, including the garage, pool, hot tub, sauna, and
+                          gym.
+                        </p>
+                        <p className="text-gray-800 mb-6">
+                          Kadenwood is perched almost 1,000 feet above the valley floor
+                          on Whistler Mountain&apos;s south side, beside old-growth
+                          forest and ski-in/ski-out trails. Its private
+                          residents-and-guests-only gondola reaches Creekside in about
+                          five minutes, while the drive down the private road takes
+                          about 10 minutes.
+                        </p>
+                        <p className="text-gray-800 mb-6">
+                          <strong>Creekside Village:</strong> Nearby restaurants and
+                          shops include Rockit Coffee, BReD, Red Door Bistro, Rimrock
+                          Cafe, Cure Lounge, Creekbread, Dusty&apos;s, Mekong, 122 West,
+                          Bask &amp; Co, and Creekside Market.
                         </p>
                         <p className="text-gray-800">
-                          Take the 5-minute gondola ride, a 5-minute drive, or a quick ski
-                          ride down will bring you to all the amenities in Creekside
-                          Village. Take advantage of some of Whistler's best
-                          restaurants and shops. Enjoy quality coffee and delicious breads
-                          and pastries at Rockit Coffee and Bred.
+                          <strong>Getting around:</strong> Reach Creekside by private
+                          gondola, ski trail, or car. Whistler Village is accessible by
+                          car, private driver or shuttle, taxi, or ride app.
                         </p>
                       </div>
                       <div className="md:w-1/2">
@@ -237,22 +237,63 @@ export default function ChaletLaForjaKadenwoodDetails({ photos }: ListingDetails
                         </div>
                       </div>
                     </div>
-                    
-                    <p className="text-gray-800 max-w-4xl">
-                      Red Door Bistro, Rimrock
-                      Cafe, Cure Lounge (my favorite), Creekbread, and Dusty's.
-                      Enjoy Creekside's newest restaurant Mekong, this
-                      fine-dining Thai restaurant and gorgeous patio is a local
-                      favorite. Tuck into delicious authentic food and imaginative
-                      cocktails. Shop at 122 West for beautiful home decor and
-                      Abigail's for stylish clothing. The Cop-Op gas station in
-                      Creekside has a convenience store and is open until 10 pm. For
-                      groceries, the Creekside Market is also within walking distance.
-                      Included when booking this property, we will help you with all
-                      your VIP experiences such as coordinating chefs, chalet
-                      hosts/servers, helicopter experiences, transportation to and
-                      from the airport, snowmobiling, restaurant reservations and
-                      recommendations, hiking recommendations, and more.
+                  </div>
+
+                  {/* Additional Services Section */}
+                  <div className="mb-20">
+                    <div className="flex items-center mb-6">
+                      <div className="bg-black text-white p-4 rounded-full mr-4">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM11 7H13V13H11V7ZM11 15H13V17H11V15Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </div>
+                      <h2 className="text-2xl font-bold">Concierge &amp; Services</h2>
+                    </div>
+
+                    <p className="text-gray-800 mb-6">
+                      Complimentary AceHost concierge support includes restaurant
+                      reservations and recommendations, pre-arrival food and beverage
+                      stocking coordination, and help arranging transportation,
+                      private chefs, childcare, rentals, instructors, and experiences.
+                      Ski-pass pickup and delivery is included only when passes are
+                      booked through AceHost. Third-party services and requested
+                      groceries are charged separately.
+                    </p>
+
+                    <div className="grid md:grid-cols-2 gap-6 mb-6">
+                      <div className="bg-gray-50 p-6 rounded-lg">
+                        <h3 className="text-xl font-bold mb-4">Included in price:</h3>
+                        <ul className="list-disc pl-6 space-y-2 text-gray-800">
+                          <li>Daily winter butler service, December 1–April 30</li>
+                          <li>Housekeeping every other day</li>
+                          <li>Complimentary VIP concierge support</li>
+                          <li>Pre-arrival food and beverage stocking coordination</li>
+                        </ul>
+                      </div>
+                      <div className="bg-gray-50 p-6 rounded-lg">
+                        <h3 className="text-xl font-bold mb-4">Additional at-cost services:</h3>
+                        <ul className="list-disc pl-6 space-y-2 text-gray-800">
+                          <li>Summer butler service and additional housekeeping</li>
+                          <li>Airport transfers, private drivers, and private chefs</li>
+                          <li>Childcare, massages, equipment rentals, and ski instructors</li>
+                          <li>Helicopter, snowmobile, and other private experiences</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <p className="text-gray-800">
+                      <strong>Registration details:</strong><br />
+                      Municipal registration number: 00013213<br />
+                      Provincial registration number: PM244679712
                     </p>
                   </div>
                 </div>

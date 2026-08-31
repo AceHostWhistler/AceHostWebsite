@@ -9,10 +9,14 @@ export default function TwoCedarsKadenwoodDetails({ photos }: ListingDetailsProp
     <>
       <div className="max-w-6xl mx-auto px-4" id="details">
                   <p className="text-gray-800 mb-8 max-w-4xl">
-                    Welcome to Two Cedars, a one-of-a-kind architectural masterpiece in Whistler&apos;s prestigious Kadenwood neighbourhood. Designed by OpenSpace, this striking modern chalet blends dramatic mountain architecture, warm natural materials, soaring spaces, and refined luxury in a way rarely found in vacation rentals. Sleeps 17 with ski-in/ski-out access and private Kadenwood Gondola service to Creekside.
+                    Two Cedars is a 10,000-square-foot architectural estate designed
+                    by OpenSpace in Whistler&apos;s exclusive Kadenwood neighbourhood.
+                    The home welcomes up to 17 guests across seven ensuite bedrooms,
+                    with true ski-in/ski-out access and use of Kadenwood&apos;s private
+                    gondola to Creekside.
                   </p>
                   <p className="text-gray-800 mb-16 max-w-4xl font-semibold">
-                    Daily Butler Included in Winter
+                    Daily butler included December 1–April 30
                   </p>
 
                   {/* The Space Section */}
@@ -36,10 +40,22 @@ export default function TwoCedarsKadenwoodDetails({ photos }: ListingDetailsProp
                         <h2 className="text-2xl font-bold">The Space</h2>
                       </div>
                       <p className="text-gray-800 mb-6">
-                        <strong>Private Butler:</strong> (Private butler included December 1 through April 30 and optional in summer at extra cost, please inquire). In addition to serving breakfast, lunch, and dinner, the butler is responsible for all food and drink service throughout the day, as well as dining table set up/takedown, and cleanup around the kitchen areas. To create the perfect ambiance, they will set up the hot tub, light the fire, and adjust the music and household functions. Get your daily dose of caffeine from your own personal barista. Overall, the butler is there to make your stay as smooth and comfortable as possible.
+                        <strong>Private butler:</strong> A butler is included for 10–12
+                        hours per day from December 1 through April 30 and is available
+                        in summer for an additional charge. The butler serves breakfast,
+                        lunch, and dinner, looks after food and drink service, sets and
+                        clears the dining table, keeps the kitchen tidy, prepares the
+                        hot tubs and fire, and can adjust the home&apos;s music and
+                        functions.
                       </p>
                       <p className="text-gray-800 mb-6">
-                        This 10,000 square ft property blends contemporary architecture with tasteful interior design, offering luxurious hospitality in one of Whistler's finest homes. The high-end furniture, floor-to-ceiling windows, and stunning artwork showcase an award-winning home that is vast yet intimate. Two Cedars has 7 bedrooms, each with a private en suite bathroom. With 12 beds in total, this home offers the perfect stay for a large group of family or friends, combining an open-plan living space with bedroom privacy. Amenities at Two Cedars include a large home theatre, an equipped gym, an outdoor & indoor hot tub, an infrared sauna, and foosball table.
+                        Contemporary architecture, floor-to-ceiling windows, curated
+                        artwork, and warm natural finishes make the expansive home feel
+                        both dramatic and intimate. Its seven bedrooms each have a
+                        private ensuite, while 12 beds provide flexible accommodation
+                        for families and groups. Amenities include a home theatre,
+                        equipped gym, infrared sauna, indoor and outdoor hot tubs, and
+                        a foosball table.
                       </p>
                       <div className="flex items-center space-x-6 mb-6">
                         <div className="flex items-center">
@@ -143,25 +159,34 @@ export default function TwoCedarsKadenwoodDetails({ photos }: ListingDetailsProp
                     <div className="flex flex-col md:flex-row gap-8 mb-6">
                       <div className="md:w-1/2">
                         <p className="text-gray-800 mb-6">
-                          <strong>Guest access:</strong> Access to the entire house. Please note the garage is not available for use.
+                          <strong>Guest access:</strong> Guests have access to the entire
+                          home except the garage, which is unavailable.
                         </p>
                         <p className="text-gray-800 mb-6">
-                          Kadenwood is considered the most exclusive area to rent or own in all of Whistler. You have direct access to the ski hill, surrounded by some of the most stunning homes in all of Canada, your own private gondola, and easy access to the new and improved Creekside Gondola. There are less than 20 homes on the rental market in this neighbourhood and they tend to book fast.
+                          Kadenwood sits almost 1,000 feet above the valley floor on
+                          Whistler Mountain&apos;s south side, beside old-growth forest
+                          and ski-in/ski-out trails. The residents-and-guests-only
+                          gondola reaches Creekside in about five minutes; the drive
+                          down the private road takes about 10 minutes.
                         </p>
                         <p className="text-gray-800 mb-6">
-                          Vail has spent $320 million in renovations which include the new Creekside Gondola and Red Chair (located at the top of Creekside Gondola). If you are looking to avoid lines, this is the side of Whistler that you will want to have easy access to. The lines tend to get very busy near the village because of all surrounding hotels and condo rentals. Kadenwood has easy ski-in ski-out access to the new and improved lifts.
+                          Creekside&apos;s upgraded gondola carries 10 passengers per
+                          cabin, and the upgraded Big Red Express carries six passengers
+                          per chair. Together they provide high-capacity access from
+                          Creekside to Whistler Mountain, while Kadenwood&apos;s trails
+                          connect the neighbourhood directly to the slopes.
                         </p>
                         <p className="text-gray-800 mb-6">
-                          The Kadenwood neighborhood is perched on the south side of Whistler Mountain, high above Whistler Creekside and is easily accessible by road or by private gondola from the base of Creekside. Kadenwood provides easy access to ski-in/ski-out trails on the edge of an old-growth forest and offers astounding Coastal Range views. The 5-minute gondola ride, 4-minute drive, or a quick ski ride down will bring you to all the amenities in Creekside Village, including access to Whistler Mountain ski hill.
+                          <strong>Creekside Village:</strong> Nearby favourites include
+                          Rockit Coffee, BReD, Red Door Bistro, Rimrock Cafe, Cure
+                          Lounge, Creekbread, Dusty&apos;s, and Mekong. Shop at 122 West
+                          and Bask &amp; Co, or pick up groceries at Creekside Market.
+                          Whistler Village is a short drive away.
                         </p>
                         <p className="text-gray-800 mb-6">
-                          <strong>Restaurants &amp; shops:</strong> Take advantage of some of Whistler&apos;s best restaurants and shops. Enjoy quality coffee and delicious breads and pastries at Rockit and Bred coffee shops. Red Door Bistro, Rimrock Cafe (AceHost Favourite), Cure Lounge, Creekbread, and Dusty&apos;s. Mekong fine-dining Thai restaurant is now open. Shop at 122 West for beautiful home decor and Bask &amp; Co for stylish clothing. The Husky gas station has a 24-hour convenience store. For groceries, the Creekside Market is also walking distance. The main village is also a short drive away where you can find some of the best restaurants in all of Canada — WildBlue, Bearfoot Bistro, Il Caminetto, Bar Oso, Araxi, and many more!
-                        </p>
-                        <p className="text-gray-800 mb-6">
-                          <strong>Getting around:</strong> Access the main Whistler village via car, private driver/shuttle, taxi, ride app, or access Creekside village via your own private gondola exclusively for Kadenwood residents and guests.
-                        </p>
-                        <p className="text-gray-800 mb-6">
-                          Sitting almost 1,000 feet above the valley floor, Kadenwood is undoubtedly Whistler&apos;s top SKI IN/SKI OUT neighborhood. Guests have access to the Kadenwood residents and &quot;guests only&quot; private Kadenwood Gondola. The neighborhood is located a 5-minute drive up a private road. Can also be accessed via the private gondola, and a quick ski ride down will bring you to all the amenities in Creekside Village, including the ski gondola.
+                          <strong>Getting around:</strong> Reach Creekside by private
+                          gondola, ski trail, or car. Whistler Village is accessible by
+                          car, private driver or shuttle, taxi, or ride app.
                         </p>
                       </div>
                       <div className="md:w-1/2">
@@ -231,26 +256,33 @@ export default function TwoCedarsKadenwoodDetails({ photos }: ListingDetailsProp
                     </div>
                     
                     <p className="text-gray-800 mb-4">
-                      We will cater to ANYTHING you need. Included VIP Concierge service is provided for any special requests such as the top private chefs in Whistler, restaurant reservations, assistance with vehicles and shuttle service, bookings with extra experiences, etc... Ben is happy to join you on the hill to show you the mountain as well as show the ski in ski out.
+                      Complimentary AceHost concierge support is included throughout
+                      your stay. We can make restaurant reservations, recommend and
+                      coordinate private chefs, arrange transportation and
+                      experiences, and help guests become familiar with the home and
+                      its ski-in/ski-out route. Third-party suppliers bill their
+                      services separately.
                     </p>
                     
                     <div className="bg-gray-50 p-6 rounded-lg mb-6">
                       <h3 className="text-xl font-bold mb-4">Included in price:</h3>
                       <ul className="list-disc pl-6 space-y-2 text-gray-800">
-                        <li>Host/Butler for the whole stay (10-12 hours per day)</li>
+                        <li>Host/butler for 10–12 hours per day from December 1–April 30; optional in summer at additional cost</li>
                         <li>Full complimentary VIP concierge service</li>
                         <li>Restaurant reservations and recommendations</li>
-                        <li>Ski lift pass pick up and delivery</li>
+                        <li>Pre-arrival food and beverage stocking coordination</li>
+                        <li>Ski-pass pickup and delivery when passes are booked through AceHost</li>
                       </ul>
                     </div>
                     
                     <div className="bg-gray-50 p-6 rounded-lg">
                       <h3 className="text-xl font-bold mb-4">Additional at-cost services:</h3>
                       <ul className="list-disc pl-6 space-y-2 text-gray-800">
-                        <li>Airport Transfers</li>
+                        <li>Groceries and beverages requested for pre-arrival stocking</li>
+                        <li>Airport transfers</li>
                         <li>Private Chef (Highly recommended)</li>
-                        <li>Chalet food & beverage stocking upon arrival</li>
                         <li>Private Driver</li>
+                        <li>Daily cleaning</li>
                         <li>Massages</li>
                         <li>Ski equipment rental</li>
                         <li>Childcare</li>

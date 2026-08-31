@@ -50,11 +50,11 @@ const listing: ListingData = {
   "/photos/properties/Falcon/47 - 20250827 A7M4 01 DSC00617.jpg"
 ],
   seo: {
-    title: "\n          Falcon | Blueberry Drive - Luxury Property in Whistler | AceHost\n        ",
-    description: "Experience Whistler luxury at its finest. This beautiful 7-bedroom chalet on Blueberry Drive offers spectacular mountain views, spacious accommodations for up to 15 guests, and is only minutes from Whistler Village.",
+    title: "Falcon | Whistler Village Chalet | Hot tub + Sauna - AceHost",
+    description: "Falcon is a 7-bedroom Blueberry Hill chalet for 15 guests with 9 beds, 3.5 baths, central AC, a private hot tub, sauna, deck, and easy access to Whistler Village.",
   },
   header:   {
-      "title": "Falcon | Blueberry Drive",
+      "title": "Falcon | Whistler Village Chalet | Hot tub + Sauna",
       "guests": 15,
       "bedrooms": 7,
       "bathrooms": 3.5,

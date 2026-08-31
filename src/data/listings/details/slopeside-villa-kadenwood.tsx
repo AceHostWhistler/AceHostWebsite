@@ -10,14 +10,13 @@ export default function SlopesideVillaKadenwoodDetails({ photos }: ListingDetail
     <>
       <div className="max-w-6xl mx-auto px-4" id="details">
                   <p className="text-gray-800 mb-16 max-w-4xl">
-                    This luxurious and cozy home provides a warm comforting space for
-                    your group, offering ski-in, ski-out access directly from your
-                    door step (the ski trail literally runs off of the stairs from the
-                    ski room in the home). Magnificent views can be enjoyed from every
-                    floor with its soaring high ceilings and large picture windows.
-                    The warmth from the stone heated floors and indoor fireplace make
-                    it the ideal space to curl up and relax after a long day on the
-                    hill.
+                    Set high above Creekside in exclusive Kadenwood, Slope Side
+                    Chalet is a warm and spacious ski-in/ski-out retreat for up to 16
+                    guests. The private trail meets the home&apos;s ski-room stairs,
+                    while soaring ceilings and picture windows frame mountain, valley,
+                    and lake views. Heated stone floors, an indoor fireplace, a
+                    private hot tub, a steam shower, and a home gym make the chalet an
+                    inviting base after a day in Whistler.
                   </p>
 
                   {/* The Space Section */}
@@ -51,11 +50,11 @@ export default function SlopesideVillaKadenwoodDetails({ photos }: ListingDetail
                         <h2 className="text-2xl font-bold">The Space</h2>
                       </div>
                       <p className="text-gray-800 mb-6">
-                        This sprawling luxury chalet is the perfect mountain retreat.
-                        With 7 bedrooms, 12 beds and 7.5 bathrooms this property is
-                        the perfect choice for large groups and families. Unwind and
-                        enjoy the large steam shower and take a soak in the outdoor
-                        hot tub after a day of skiing with direct views overlooking
+                        This sprawling 7-bedroom chalet offers 12 beds and 7.5
+                        bathrooms across multiple levels, giving large families and
+                        groups room to gather and recharge. The fully equipped kitchen
+                        and generous living areas are complemented by a dedicated ski
+                        room, a large steam shower, and an outdoor hot tub overlooking
                         the valley and lake.
                       </p>
                       <p className="text-gray-800 mb-6">
@@ -64,9 +63,9 @@ export default function SlopesideVillaKadenwoodDetails({ photos }: ListingDetail
                         weights and cardio machines.
                       </p>
                       <p className="text-gray-800">
-                        NEW*: There is now a very large HD screen TV located in the
-                        living room, with access to Netflix, Amazon Prime, and a TSN
-                        subscription for live sports.
+                        A large HD screen TV in the living room includes access to
+                        Netflix, Amazon Prime, and a TSN subscription for live sports.
+                        Please note that air conditioning is not available.
                       </p>
                     </div>
                   </div>
@@ -118,13 +117,17 @@ export default function SlopesideVillaKadenwoodDetails({ photos }: ListingDetail
                         accessed through the den room and next to bedroom 3.
                       </p>
                       <p className="mb-4">
-                        <span className="font-medium">Bedroom 3 -</span> Has a queen
-                        and a bunk bed with a twin bed on top and a queen below.
-                        Ensuite bathroom with a shower and bathtub.
+                        <span className="font-medium">Bedroom 3 -</span> Has one
+                        single bed plus a bunk bed with a twin on top and a queen
+                        below. Ensuite bathroom with a shower and bathtub.
                       </p>
                       <p className="mb-4">
-                        <span className="font-medium">Additional -</span> cozy queen
-                        bed on the mezzanine loft above the den room.
+                        <span className="font-medium">
+                          Additional loft sleeping area -
+                        </span>{" "}
+                        A cozy queen bed sits in the open mezzanine above the den,
+                        providing extra sleeping space without being counted as an
+                        eighth bedroom.
                       </p>
 
                       <p className="font-bold mb-2">MAIN LEVEL:</p>
@@ -140,7 +143,7 @@ export default function SlopesideVillaKadenwoodDetails({ photos }: ListingDetail
                         <span className="font-medium">Bedroom 5 -</span> Located on
                         the ground floor, it has a bunk bed with a bottom double bed
                         and a top twin bed with an ensuite bathroom with a shower. It
-                        is next to bedroom 5.
+                        is next to Bedroom 6.
                       </p>
                       <p className="mb-4">
                         <span className="font-medium">Bedroom 6 -</span> Has a queen
@@ -181,11 +184,12 @@ export default function SlopesideVillaKadenwoodDetails({ photos }: ListingDetail
                       <h2 className="text-2xl font-bold">Location</h2>
                     </div>
                     <p className="text-gray-800 max-w-4xl mb-6">
-                      Located in the exclusive Kadenwood neighbourhood, high on the
-                      Southside of Whistler mountain. All of the amenities in
-                      Creekside Village are just a 5-minute gondola ride, a 5-minute
-                      drive, or a quick ski ride down will bring you to all the
-                      amenities in Creekside Village.
+                      Located in exclusive Kadenwood high on Whistler Mountain&apos;s
+                      south side, the chalet offers privacy with convenient access to
+                      Creekside Village. Restaurants, shops, groceries, and the
+                      Creekside Gondola are approximately a 5-minute drive or private
+                      gondola ride away; in winter, experienced skiers can follow the
+                      neighbourhood trail down to Creekside.
                     </p>
                     <p className="text-gray-800 max-w-4xl mb-6">
                       Take advantage of some of Whistler's best restaurants and
@@ -198,14 +202,9 @@ export default function SlopesideVillaKadenwoodDetails({ photos }: ListingDetail
                     </p>
                     <p className="text-gray-800 max-w-4xl">
                       Shop at 122 West for beautiful home decor and Abigail's for
-                      stylish clothing. The Cop-Op gas station in Creekside has a
+                      stylish clothing. The Co-Op gas station in Creekside has a
                       convenience store and is open until 10 pm. For groceries, the
-                      Creekside Market is also within walking distance. Included when
-                      booking this property, we will help you with all your VIP
-                      experiences such as coordinating chefs, chalet hosts/servers,
-                      helicopter experiences, transportation to and from the airport,
-                      snowmobiling, restaurant reservations and recommendations,
-                      hiking recommendations, and more.
+                      Creekside Market is also nearby.
                     </p>
                   </div>
 
@@ -273,6 +272,10 @@ export default function SlopesideVillaKadenwoodDetails({ photos }: ListingDetail
                             <span className="mr-2">•</span>
                             <span>Large HD screen TV</span>
                           </li>
+                          <li className="flex items-center">
+                            <span className="mr-2">•</span>
+                            <span>Media room and built-in Sonos</span>
+                          </li>
                         </ul>
                       </div>
                       <div>
@@ -294,9 +297,46 @@ export default function SlopesideVillaKadenwoodDetails({ photos }: ListingDetail
                             <span className="mr-2">•</span>
                             <span>Dedicated ski room</span>
                           </li>
+                          <li className="flex items-center">
+                            <span className="mr-2">•</span>
+                            <span>Heating (no air conditioning)</span>
+                          </li>
+                          <li className="flex items-center">
+                            <span className="mr-2">•</span>
+                            <span>Private Kadenwood gondola access</span>
+                          </li>
                         </ul>
                       </div>
                     </div>
+                  </div>
+
+                  {/* Guest Access and Services */}
+                  <div className="mb-16">
+                    <h2 className="text-2xl font-bold mb-4">Guest Access</h2>
+                    <p className="text-gray-800 max-w-4xl mb-6">
+                      Guests have private access to the entire home, including the hot
+                      tub, gym, steam shower, ski room, decks, and driveway. One pet
+                      may be considered with advance request and host approval; an
+                      additional pet fee applies.
+                    </p>
+                    <h2 className="text-2xl font-bold mb-4">
+                      Concierge and Additional Services
+                    </h2>
+                    <p className="text-gray-800 max-w-4xl mb-6">
+                      Complimentary concierge assistance is included. AceHost can
+                      help coordinate private chefs, chalet hosts, airport transfers,
+                      restaurant reservations, equipment rentals, instructors, and
+                      Whistler activities. Ski-pass booking and delivery can be
+                      arranged when passes are purchased through AceHost in advance.
+                      Third-party services, activities, rentals, and provider charges
+                      are not included in the accommodation rate and are billed
+                      separately.
+                    </p>
+                    <p className="text-gray-800 max-w-4xl">
+                      Municipal registration number: 00013203
+                      <br />
+                      Provincial registration number: PM667513563
+                    </p>
                   </div>
 
                   {/* Booking Info */}

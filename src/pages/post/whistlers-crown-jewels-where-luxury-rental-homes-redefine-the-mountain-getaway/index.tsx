@@ -194,7 +194,7 @@ export default function BlogPost() {
                 />
               </div>
               <p>
-                A showstopper tucked in the private Kadenwood enclave. This 10,000+ square foot home accommodates 12+4 guests across 9 bedrooms, 16 beds, and 8 bathrooms. Ranked one of VRBO's Top 10 vacation rentals in 2023, it features a pool, hot tub, gym, and daily cleaning. With ski-in/ski-out access via the private Kadenwood gondola, a gourmet kitchen, private butler service (Dec 1–Apr 30), and breathtaking mountain views, Chalet La Forja is basically a luxury resort... that you don't have to share.
+                A showstopper tucked in the private Kadenwood enclave. This 10,000+ square foot home accommodates 16 guests across 9 bedrooms, 16 beds, and 8 bathrooms. Ranked one of VRBO's Top 10 vacation rentals in 2023, it features a pool, hot tub, gym, and housekeeping every other day. With ski-in/ski-out access via the private Kadenwood gondola, a gourmet kitchen, daily winter butler service (Dec 1–Apr 30), and breathtaking mountain views, Chalet La Forja is basically a luxury resort... that you don't have to share.
               </p>
               <div className="mt-6 mb-8">
                 <Link
@@ -334,7 +334,7 @@ export default function BlogPost() {
                 />
               </div>
               <p>
-                A true entertainer's dream. Located in Kadenwood, this 8-bedroom architectural delight accommodates up to 17 guests across 10 beds and 7 baths. With expansive decks, multiple gathering spaces, and a wall of windows overlooking Whistler Valley, Panoramic Estate lives up to its name. Featuring an open-plan kitchen, multiple indoor fireplaces, a ping pong table, a sleek hot tub, indoor sauna, basement media room, built-in sound system, and private elevator access to all levels, this is the ultimate retreat for large groups or multi-gen families looking for a luxury yet log feel of a classic ski resort.
+                A true entertainer's dream. Located in Kadenwood, this 8-bedroom architectural delight accommodates up to 17 guests across 11 beds and 7 baths. With expansive decks, multiple gathering spaces, and a wall of windows overlooking Whistler Valley, Panoramic Estate lives up to its name. Featuring an open-plan kitchen, multiple indoor fireplaces, a ping pong table, a sleek hot tub, indoor sauna, basement media room, built-in sound system, and private elevator access to all levels, this is the ultimate retreat for large groups or multi-gen families looking for a luxury yet log feel of a classic ski resort.
               </p>
               <div className="mt-6 mb-8">
                 <Link

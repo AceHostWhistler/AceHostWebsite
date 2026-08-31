@@ -8,23 +8,23 @@ export default function TimberHavenLuxurySkiInSkiOutKadenwoodDetails({ photos }:
     <>
       <div className="max-w-6xl mx-auto px-4" id="details">
                   <p className="text-gray-800 mb-8 max-w-4xl">
-                    Welcome to your private Kadenwood mountain estate, an 8-bedroom luxury home with stunning views, ski-in/ski-out access, a private hot tub, beautiful furnishings, curated artwork, and access to Kadenwood's private residents-only gondola.
+                    Welcome to your private Kadenwood mountain estate, an 8-bedroom luxury home for up to 16 guests with stunning views, ski-in/ski-out access, a private hot tub, sauna, central air conditioning, beautiful furnishings, curated artwork, and access to Kadenwood&apos;s private residents-only gondola.
                   </p>
                   <p className="text-gray-800 mb-8 max-w-4xl">
-                    With spacious living areas, outdoor dining, a ping pong table, multiple lounge spaces, and a main floor with 2 bedrooms including the Master Bedroom suite, this home is perfect for families, large groups, and guests who prefer minimal stairs during their stay.
+                    With spacious living areas, outdoor dining, a ping pong table, multiple lounge spaces, a main-floor primary suite, and step-free access to the mid-level bedrooms through the garage, this home is well suited to families, large groups, and guests who prefer minimal stairs.
                   </p>
                   <p className="text-gray-800 mb-8 max-w-4xl font-semibold">The space</p>
                   <p className="text-gray-800 mb-6 max-w-4xl">
-                    Located in Kadenwood, Whistler's favourite luxury ski-in/ski-out neighbourhood, this 8-bedroom mountain estate offers the perfect blend of privacy, comfort, and convenience. Perched high above Creekside and surrounded by old growth forest, the home features one-of-a-kind mountain views, elegant interiors, and plenty of room for groups to relax, gather, and enjoy Whistler in every season.
+                    Located in Kadenwood high above Creekside, this 8-bedroom mountain estate offers privacy, comfort, and convenient access to the slopes and village. Surrounded by old-growth forest, the home features expansive mountain views, elegant interiors, central air conditioning, and plenty of room for groups to relax in every season. Creekside&apos;s gondola, restaurants, shops, and groceries are reached by a short drive or the private Kadenwood gondola.
                   </p>
                   <p className="text-gray-800 mb-6 max-w-4xl">
-                    The main floor is especially convenient, with 2 bedrooms including a primary suite, making it ideal for elderly guests or anyone who prefers to avoid stairs when coming in and out of the home. Across the 3 well-designed levels, guests can enjoy multiple living areas, a TV lounge, home office space, recreation room, ping pong table, and beautifully furnished spaces with tasteful artwork throughout.
+                    The main-floor primary suite is especially convenient for guests who prefer to avoid stairs. The mid-level bedroom floor can also be entered without steps through the garage or side door. Across the 3 well-designed levels, guests can enjoy multiple living areas, a TV lounge, home office space, recreation room, ping pong table, and beautifully furnished spaces with tasteful artwork throughout.
                   </p>
                   <p className="text-gray-800 mb-6 max-w-4xl">
-                    The open-concept living and dining area is designed for entertaining, with a warm mountain atmosphere, large windows, and plenty of space for everyone to come together. For larger groups, a spare dining table extension allows up to 16 guests to dine comfortably in the same room, perfect for family dinners, chef-prepared meals, and holiday gatherings.
+                    The open-concept living and dining area is designed for entertaining, with a warm mountain atmosphere, large windows, and plenty of space to come together. The standard dining setup seats 8; adding the table extension and 4 extra chairs seats 12 or more comfortably for family dinners and chef-prepared meals.
                   </p>
                   <p className="text-gray-800 mb-6 max-w-4xl">
-                    Outside, enjoy a private hot tub, outdoor dining area, and peaceful alpine surroundings. In the winter, guests can take advantage of Kadenwood's exceptional ski-in/ski-out access via the Peak to Creek run, along with the private residents-only gondola and groomed ski trail access. In the summer, the home is a beautiful base for hiking, biking, golfing, lake days, and relaxing in one of Whistler's most exclusive communities.
+                    Outside, enjoy a private hot tub, outdoor dining area, and peaceful alpine surroundings. Inside, unwind in the sauna or enjoy the recreation spaces. In winter, guests can use Kadenwood&apos;s ski-in/ski-out access via the Peak to Creek run, the private residents-only gondola, and groomed neighbourhood ski trails. In summer, the home is a beautiful base for hiking, biking, golfing, and lake days.
                   </p>
 
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-10">Inside Timber Haven</h3>
@@ -102,6 +102,16 @@ export default function TimberHavenLuxurySkiInSkiOutKadenwoodDetails({ photos }:
                   </p>
                   <p className="text-gray-800 mb-8 max-w-4xl">
                     This lower level is well-suited for additional guests, families with children, or anyone looking for a bit more separation from the main living areas. A very comfy couch to enjoy the TV!
+                  </p>
+
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-10">Guest Access</h3>
+                  <p className="text-gray-800 mb-8 max-w-4xl">
+                    Guests have private access to the entire home, including the 2-car garage, driveway, hot tub, sauna, ski room, decks, and indoor living and recreation spaces.
+                  </p>
+
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-10">Concierge and Additional Services</h3>
+                  <p className="text-gray-800 mb-8 max-w-4xl">
+                    Complimentary concierge assistance is included. AceHost can help coordinate private chefs, airport transfers, restaurant reservations, equipment rentals, instructors, and Whistler activities. Ski-pass booking and delivery can be arranged when passes are purchased through AceHost in advance. Third-party services, activities, rentals, and provider charges are not included in the accommodation rate and are billed separately.
                   </p>
 
                   <div className="bg-gray-100 p-8 rounded-xl mb-20">

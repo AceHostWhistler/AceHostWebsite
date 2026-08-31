@@ -35,7 +35,7 @@ export const MANSION_RENTAL_PROPERTIES: MansionRentalProperty[] = [
     area: "Kadenwood",
     bedrooms: 7,
     guests: 17,
-    standout: "10,000 sq ft, private butler, theatre, gym, indoor and outdoor hot tubs",
+    standout: "10,000 sq ft, daily winter butler, theatre, gym, indoor and outdoor hot tubs",
     headline: true,
     images: [
       {
@@ -55,7 +55,7 @@ export const MANSION_RENTAL_PROPERTIES: MansionRentalProperty[] = [
     area: "Kadenwood",
     bedrooms: 9,
     guests: 16,
-    standout: "10,000+ sq ft, heated pool, hot tub, gym, butler and housekeeping",
+    standout: "10,000+ sq ft, heated pool, hot tub, gym, daily winter butler and housekeeping every other day",
     headline: true,
     images: [
       {
@@ -69,7 +69,7 @@ export const MANSION_RENTAL_PROPERTIES: MansionRentalProperty[] = [
     ],
   },
   {
-    name: "The Mountaintop at Kadenwood",
+    name: "The Mountaintop in Kadenwood",
     listingHref: "/listings/luxury-ski-in-ski-out-7-bedroom-kadenwood",
     airbnbHref: listingAirbnb("luxury-ski-in-ski-out-7-bedroom-kadenwood"),
     area: "Kadenwood",
@@ -115,7 +115,7 @@ export const MANSION_RENTAL_PROPERTIES: MansionRentalProperty[] = [
     area: "Kadenwood",
     bedrooms: 8,
     guests: 16,
-    standout: "Private gondola access, hot tub, outdoor dining and multiple lounges",
+    standout: "Private gondola access, hot tub, sauna, central air conditioning and multiple lounges",
     headline: true,
     images: [
       {
@@ -150,7 +150,7 @@ export const MANSION_RENTAL_PROPERTIES: MansionRentalProperty[] = [
     area: "Blueberry Hill",
     bedrooms: 7,
     guests: 15,
-    standout: "Hot tub, barrel sauna, fireplace and mountain views",
+    standout: "Hot tub, barrel sauna, central air conditioning, fireplace and mountain views",
     images: [
       {
         src: "/photos/properties/Falcon/Cover photo Falcon.png",

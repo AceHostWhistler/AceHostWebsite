@@ -12,9 +12,9 @@ export type Whistler28Property = {
 export const kadenwoodProperties: Whistler28Property[] = [
   {
     number: 1,
-    name: "Two Cedars | Kadenwood | Private Butler",
+    name: "Two Cedars - Ski in-Ski out, Kadenwood Estate",
     description:
-      "A seven-bedroom showpiece with true ski-in, ski-out access, indoor and outdoor hot tubs, a theatre, gym, infrared sauna, and daily private butler service.",
+      "A seven-bedroom showpiece with true ski-in/ski-out access, indoor and outdoor hot tubs, a theatre, gym, infrared sauna, and daily winter butler service.",
     image: "/photos/properties/Two Cedars New/Two Cedars Cover photo snow.png",
     listingHref: "/listings/two-cedars-kadenwood",
     bookUrl:
@@ -22,9 +22,9 @@ export const kadenwoodProperties: Whistler28Property[] = [
   },
   {
     number: 2,
-    name: "Chalet La Forja | Kadenwood | Private Butler",
+    name: "Chalet La Forja - Ski in Ski out Kadenwood Estate",
     description:
-      "One of Whistler's grandest private homes, with nine bedrooms, a heated pool, hot tub, sauna, gym, ski access, and a private butler included.",
+      "A nine-bedroom Kadenwood estate with a heated pool, hot tub, sauna, gym, ski access, housekeeping every other day, and daily winter butler service.",
     image: "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
     listingHref: "/listings/chalet-la-forja-kadenwood",
     bookUrl:
@@ -32,7 +32,7 @@ export const kadenwoodProperties: Whistler28Property[] = [
   },
   {
     number: 3,
-    name: "The Mountaintop at Kadenwood | Ski in Ski out",
+    name: "The Mountaintop in Kadenwood | Ski in Ski out",
     description:
       "A dramatic seven-bedroom mountain retreat with exceptional views, private wellness amenities, and direct ski access.",
     image: "/photos/properties/2919 Heritage/Mountaintop Snow cover.png",
@@ -42,7 +42,7 @@ export const kadenwoodProperties: Whistler28Property[] = [
   },
   {
     number: 4,
-    name: "Panoramic Estate | Kadenwood",
+    name: "Panoramic Estate | Kadenwood | Ski In Ski Out",
     description:
       "An eight-bedroom estate with an elevator, sauna, hot tub, media room, games, and plenty of room for large families and groups.",
     image: "/photos/properties/Panoramic Estate/Panoramic Estate.jpg",
@@ -52,9 +52,9 @@ export const kadenwoodProperties: Whistler28Property[] = [
   },
   {
     number: 5,
-    name: "Slope Side Chalet | Kadenwood",
+    name: "Slope Side Chalet | Ski-In/Out | Hot Tub",
     description:
-      "A warm seven-bedroom Kadenwood chalet with a private hot tub, ski access, and the classic luxury mountain-home atmosphere.",
+      "A warm seven-bedroom Kadenwood chalet with direct ski access, a private hot tub, steam shower, gym, and classic luxury mountain-home atmosphere.",
     image: "/photos/properties/Slopeside Kadenwood/01-2945 Kadenwood Dr 01.jpg",
     listingHref: "/listings/slopeside-villa-kadenwood",
     bookUrl:
@@ -62,9 +62,9 @@ export const kadenwoodProperties: Whistler28Property[] = [
   },
   {
     number: 6,
-    name: "Timber Haven | Luxury Ski in Ski out | Kadenwood",
+    name: "Timber Haven - Luxury Ski in Ski out - Kadenwood",
     description:
-      "A modern eight-bedroom ski home with beautiful interiors, generous gathering spaces, and premium mountain access.",
+      "An eight-bedroom ski home with beautiful interiors, central air conditioning, a hot tub, sauna, generous gathering spaces, and private gondola access.",
     image: "/photos/properties/Timber Haven John Harris/Timber Haven cover.png",
     listingHref: "/listings/timber-haven-luxury-ski-in-ski-out-kadenwood",
     bookUrl:
@@ -85,9 +85,9 @@ export const largeHomeProperties: Whistler28Property[] = [
   },
   {
     number: 8,
-    name: "Falcon | Blueberry Drive",
+    name: "Falcon | Whistler Village Chalet | Hot tub + Sauna",
     description:
-      "A large seven-bedroom Blueberry chalet that works especially well for extended families and groups who want space near the Village.",
+      "A seven-bedroom Blueberry Hill chalet with central air conditioning, a private hot tub, outdoor sauna, and easy access to Whistler Village.",
     image: "/photos/properties/Falcon/Cover photo Falcon.png",
     listingHref: "/listings/falcon-blueberry-drive",
     bookUrl:

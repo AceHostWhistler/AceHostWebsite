@@ -17,7 +17,7 @@ export const HERO_SERVICE_STRIP = [
 
 export const TRUST_STATS = [
   { value: "4.92", label: "Guest Rating on Airbnb", airbnbAccent: true },
-  { value: "900+", label: "Guest Airbnb Reviews", airbnbAccent: true },
+  { value: "1050+", label: "Guest Airbnb Reviews", airbnbAccent: true },
   { value: "Superhost", label: "Airbnb Status", airbnbAccent: true },
   { value: "Premier Host", label: "Vrbo Status", vrboAccent: true },
   { value: "Local", label: "Whistler Team" },

@@ -9,15 +9,13 @@ export default function FalconBlueberryDriveDetails({ photos }: ListingDetailsPr
     <>
       <div className="max-w-6xl mx-auto px-4" id="details">
                   <p className="text-gray-800 mb-16 max-w-4xl">
-                    Cozy chalet in an amazing location! Beautiful views of the
-                    mountain in the prestigious, quiet and family orientated Blueberry
-                    Hill. Perfect for a large group or one family.{" "}
-                    <strong>
-                      ***New Outdoor Wood Barrel Sauna & Hot tub for ultimate relaxation!*** Easy to use, and a great way to relax after a long day.
-                    </strong>{" "}
-                    25 minute walk to the village through the most beautiful trails or catch the local
-                    bus just two steps away from the front door, which comes by every
-                    15 minutes.
+                    Falcon is a spacious 7-bedroom Blueberry Hill chalet for up to 15
+                    guests, combining a peaceful mountain setting with easy access to
+                    Whistler Village. Central air conditioning keeps the home
+                    comfortable in summer, while the private hot tub, outdoor barrel
+                    sauna, and generous deck create an inviting place to unwind
+                    year-round. The Village is about a 25-minute walk, a 3–4-minute
+                    drive, or a convenient ride on the Route 6 local bus.
                   </p>
 
                   {/* The Space Section */}
@@ -55,19 +53,16 @@ export default function FalconBlueberryDriveDetails({ photos }: ListingDetailsPr
                         front door, you'll be greeted by a heated slate entrance.
                         This remarkable property boasts 7 spacious bedrooms, providing
                         ample space and comfort for your stay, with 9 stylish beds and
-                        3.5 well-appointed bathrooms. Find comfort and warmth by the
+                        3.5 well-appointed bathrooms, plus central air conditioning.
+                        Find comfort and warmth by the
                         crackling wood-burning natural fireplace in the spacious
                         living room, creating an inviting and welcoming ambiance for
                         relaxing after a day of enjoying Whistler's outdoors.
                         Savour the outdoors with a generous and inviting outdoor
                         dining space with a spacious deck, a dining table, and a
-                        barbecue. There is plenty of space in the driveway to fit 4-5
-                        vehicles. The garage is not available for use in winter, the
-                        garage is available for up to 7 bikes as storage only in the
-                        Summer. Not large enough for a vehicle. Whether you opt for al
-                        fresco dining, unwind in the hot tub, or gather around the
-                        fireplace, this exceptional property offers the perfect spaces
-                        for memorable moments.
+                        barbecue. Whether you dine al fresco, unwind in the hot tub or
+                        barrel sauna, or gather around the fireplace, the home offers
+                        comfortable spaces for memorable group stays.
                       </p>
                     </div>
                   </div>
@@ -113,20 +108,20 @@ export default function FalconBlueberryDriveDetails({ photos }: ListingDetailsPr
                       <p className="mb-4">
                         <span className="font-medium">Bedroom 2-</span> At the other
                         end of the floor to the master, this beautiful bright and
-                        spacious room has a queen bed and large windows allowing for
+                        spacious room has a king bed and large windows allowing for
                         ample natural light.
                       </p>
                       <p className="mb-4">
                         <span className="font-medium">Bedroom 3-</span> A stylish
-                        queen bed and vast windows with gorgeous views, the room is
-                        the same size as bedroom 3. Both bedrooms 2 and 3 share a
+                        king bed and vast windows with gorgeous views. This room is
+                        the same size as Bedroom 2. Both bedrooms 2 and 3 share a
                         bathroom with a shower and bath tub.
                       </p>
 
                       <p className="font-bold mb-2">MID LEVEL:</p>
                       <p className="mb-4">
                         <span className="font-medium">Bedroom 4-</span> A lovely large
-                        bedroom equipped with a gorgeous queen bed, with a sofa for
+                        bedroom equipped with a gorgeous king bed, with a sofa for
                         lounging and desk space. Adjacent to the room is a powder
                         bathroom and the outdoor hot tub is accessed through this room
                         on the back deck.
@@ -149,7 +144,10 @@ export default function FalconBlueberryDriveDetails({ photos }: ListingDetailsPr
                         All three bedrooms share a spacious bathroom, 1 sink, and a
                         large shower.
                       </p>
-                      <p className="mb-4 italic">* No pets allowed*</p>
+                      <p className="mb-4 italic">
+                        One pet is allowed with advance notice; an additional pet fee
+                        applies.
+                      </p>
                     </div>
                   </div>
 
@@ -226,9 +224,30 @@ export default function FalconBlueberryDriveDetails({ photos }: ListingDetailsPr
                         The inviting interior features an open-concept design with plenty of natural light. The spacious living area is perfect for gathering with family and friends, with comfortable furnishings and a warm, welcoming atmosphere.
                       </p>
                       <p className="text-gray-800 mt-4">
-                        High ceilings and large windows create a sense of space and connection to the beautiful mountain surroundings. The wood-burning fireplace serves as a cozy focal point, perfect for relaxing after a day of outdoor adventures.
+                        High ceilings and large windows create a sense of space and connection to the beautiful mountain surroundings. The wood-burning fireplace serves as a cozy focal point, while central air conditioning provides summer comfort.
                       </p>
                     </div>
+                  </div>
+
+                  {/* Guest Access Section */}
+                  <div className="mb-16">
+                    <h2 className="text-2xl font-bold mb-4">Guest Access</h2>
+                    <p className="text-gray-800 max-w-4xl mb-6">
+                      Guests have private access to the entire home, hot tub, sauna,
+                      deck, and driveway, which accommodates 4–5 vehicles. The garage
+                      may be used to store up to 7 bikes or ski gear, but it cannot
+                      accommodate a vehicle.
+                    </p>
+                    <h2 className="text-2xl font-bold mb-4">Additional Services</h2>
+                    <p className="text-gray-800 max-w-4xl mb-6">
+                      Ski-pass booking and delivery can be arranged when passes are
+                      purchased through AceHost in advance.
+                    </p>
+                    <p className="text-gray-800 max-w-4xl">
+                      Municipal registration number: 00013305
+                      <br />
+                      Provincial registration number: PM665790127
+                    </p>
                   </div>
 
                   {/* Location Section */}
@@ -251,13 +270,11 @@ export default function FalconBlueberryDriveDetails({ photos }: ListingDetailsPr
                       <h2 className="text-2xl font-bold">Location</h2>
                     </div>
                     <p className="text-gray-800 max-w-4xl">
-                      The best part of this chalet is the location! A scenic 25-minute
-                      stroll around the Whistler Golf course brings you straight into
-                      Whistler Village. Alternatively, it's a 3-4 minute drive to
-                      the village, or hop on the local bus a stone's throw away
-                      from the front door, running every 10-15 minutes. The drive to
-                      the village is just 3 minutes away. This is the ideal home for
-                      your holiday!
+                      Blueberry Hill offers a quiet residential setting close to
+                      Whistler Village. Follow the scenic route by the Whistler Golf
+                      Course for an approximately 25-minute walk, drive to the Village
+                      in about 3–4 minutes, or take the Route 6 local bus from the
+                      nearby stop.
                     </p>
                   </div>
                 </div>

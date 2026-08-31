@@ -85,11 +85,11 @@ const listing: ListingData = {
   "/photos/properties/2919 Heritage/Drone Mountaintop.png"
 ],
   seo: {
-    title: "The Mountaintop at Kadenwood | Ski in Ski out - AceHost",
+    title: "The Mountaintop in Kadenwood | Ski in Ski out - AceHost",
     description: "Located in Whistler's most prestigious true ski-in ski-out neighbourhood, Kadenwood, this 7-bedroom, 6.5-bath retreat offers 6200 square feet of refined mountain living with chef's kitchen, hot tub, fire pits, and more.",
   },
   header:   {
-      "title": "The Mountaintop at Kadenwood | Ski in Ski out",
+      "title": "The Mountaintop in Kadenwood | Ski in Ski out",
       "guests": 16,
       "bedrooms": 7,
       "bathrooms": 6.5,
@@ -97,8 +97,8 @@ const listing: ListingData = {
       "beds": 8,
       "airbnbLink": "https://www.airbnb.ca/rooms/1599369454342102375?guests=1&adults=1&s=67&unique_share_id=07a4f082-1dec-4a06-bf97-05638b3b71ef"
   },
-  galleryTitle: "The Mountaintop at Kadenwood",
-  photoAltPrefix: "The Mountaintop at Kadenwood",
+  galleryTitle: "The Mountaintop in Kadenwood",
+  photoAltPrefix: "The Mountaintop in Kadenwood",
 };
 
 export default listing;

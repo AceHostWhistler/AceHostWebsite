@@ -429,7 +429,7 @@ export default function BlogPost() {
               </div>
               <p>
                 Panoramic Estate is a fantastic option for families who want a large Whistler
-                Airbnb with lots of flexibility. It sleeps up to 17 guests with 8 bedrooms, 10 beds,
+                Airbnb with lots of flexibility. It sleeps up to 17 guests with 8 bedrooms, 11 beds,
                 and 7 bathrooms.
               </p>
               <p>

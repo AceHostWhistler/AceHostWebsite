@@ -9,9 +9,9 @@ export default function LuxurySkiInSkiOut7BedroomKadenwoodDetails({ photos }: Li
     <>
       <div className="max-w-6xl mx-auto px-4" id="details">
                   <p className="text-gray-800 mb-16 max-w-4xl">
-                    Located in the most prestigious true ski-in ski-out neighbourhood, Kadenwood, this home offers 6200 square feet of refined mountain living, with the best views in all of Whistler!
+                    Located in Kadenwood, Whistler's prestigious ski-in/ski-out neighbourhood, this home offers 6,200 square feet of refined mountain living with expansive mountain and valley views.
                     <br /><br />
-                    The open-concept main level features a chef's kitchen with Wolf, Subzero & Miele appliances, quartz countertops, generous prep space & a separate prep kitchen, perfect for entertaining. Enjoy a hot tub, fire pits, ping pong table, wet bar, steam room, and two 90-inch TVs for the ultimate year-round Whistler escape.
+                    The open-concept main level features a chef's kitchen with Wolf, Sub-Zero and Miele appliances, quartz countertops, generous prep space and a separate prep kitchen. A hot tub, fire pits, ping pong table, wet bar, steam room and two 90-inch TVs make the home an inviting year-round Whistler retreat.
                   </p>
 
                   {/* The Space Section */}
@@ -50,9 +50,11 @@ export default function LuxurySkiInSkiOut7BedroomKadenwoodDetails({ photos }: Li
                         <br /><br />
                         <strong>Top Floor-</strong>
                         <br />
-                        -1 murphy queen size bed in office space
+                        -Bedroom 7: 1 Murphy queen bed in the office space
                         <br />
                         -1 powder bathroom
+                        <br />
+                        -Large ski boot dryer located in the garage
                         <br /><br />
                         <strong>Main Floor-</strong>
                         <br />
@@ -80,9 +82,37 @@ export default function LuxurySkiInSkiOut7BedroomKadenwoodDetails({ photos }: Li
                         <br /><br />
                         <strong>Outdoor Amenities</strong>
                         <br />
-                        After a day on the slopes or trails, relax in the outdoor hot tub or unwind in the brand new wood barrel sauna, perfectly positioned for alpine après moments.
+                        After a day on the slopes, relax in the outdoor hot tub or unwind in the XL wood-barrel sauna located beside it.
+                        <br /><br />
+                        <strong>Air Conditioning</strong>
+                        <br />
+                        A powerful air-conditioning system serves the main living area, providing a refreshing escape and helping maintain a comfortable temperature throughout the home during summer.
                       </p>
                     </div>
+                  </div>
+
+                  {/* Guest Access Section */}
+                  <div className="mb-16">
+                    <div className="flex items-center mb-6">
+                      <div className="bg-black text-white p-4 rounded-full mr-4">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 5C13.66 5 15 6.34 15 8C15 9.66 13.66 11 12 11C10.34 11 9 9.66 9 8C9 6.34 10.34 5 12 5ZM12 19.2C9.5 19.2 7.29 17.92 6 15.98C6.03 13.99 10 12.9 12 12.9C13.99 12.9 17.97 13.99 18 15.98C16.71 17.92 14.5 19.2 12 19.2Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </div>
+                      <h2 className="text-2xl font-bold">Guest Access</h2>
+                    </div>
+                    <p className="text-gray-800 max-w-4xl">
+                      Guests have private access to the entire home, including the garage, driveway, hot tub, sauna, ski room, gym and all advertised living spaces and amenities.
+                    </p>
                   </div>
 
                   {/* Location Section */}
@@ -107,7 +137,11 @@ export default function LuxurySkiInSkiOut7BedroomKadenwoodDetails({ photos }: Li
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                       <div>
                         <p className="text-gray-800">
-                          Kadenwood is Whistler's most prestigious ski-in ski-out neighbourhood, perched nearly 1,000 feet above the valley floor. Surrounded by old-growth forest and snow-covered ridgelines, it offers private ski trails, breathtaking views and exclusive gondola access connecting directly to Whistler and Blackcomb mountains, as well as Creekside Village. Home to some of Whistler's most luxurious estates, Kadenwood delivers unmatched privacy, scenery and convenience.
+                          Sitting almost 1,000 feet above the valley floor, Kadenwood is one of Whistler's most exclusive ski-in/ski-out neighbourhoods. Set high above Creekside on Whistler Mountain, it offers privacy, old-growth forest, mountain views and access to the private Kadenwood Gondola for residents and guests.
+                          <br /><br />
+                          The gondola reaches Creekside Village in approximately five minutes, while Whistler Village is about a 10-minute drive away. Creekside provides direct access to Whistler Mountain; its upgraded 10-person gondola increased out-of-base capacity by approximately 35%, and the upgraded Big Red Express increased uphill capacity by approximately 30%.
+                          <br /><br />
+                          Creekside Village offers groceries at Creekside Market along with restaurants and cafés including Red Door Bistro, Rimrock Café, Creekbread, Dusty's, BReD and Rockit Coffee.
                         </p>
                       </div>
                       <div className="relative aspect-[4/3]">
@@ -149,36 +183,12 @@ export default function LuxurySkiInSkiOut7BedroomKadenwoodDetails({ photos }: Li
                       </div>
                       <div>
                         <p className="text-gray-800">
-                          VIP concierge services are included with every booking at no cost. Here at AceHost we have the best recommendations and contacts to make your trip seamless and special. From ski rental delivery, ski pass & instructor bookings/delivery, airport transportation, daily cleaning, priority restaurant reservations, and absolutely anything else you might need. We have you covered and would love to help you.
+                          Complimentary AceHost VIP concierge planning is included with every stay. Our local Whistler team can assist with restaurant reservations and recommendations, private chefs, airport transfers, private drivers, grocery pre-stocking, ski and snowboard rentals, instructors, childcare, in-home massage, snowmobiling, helicopter experiences and more.
+                          <br /><br />
+                          We can also arrange complimentary ski-pass delivery directly to the home for day, multi-day or season passes booked through our team. Please contact us before purchasing so we can coordinate delivery. Optional third-party services are charged separately unless specifically stated as included with your reservation.
                         </p>
                       </div>
                     </div>
-                  </div>
-
-                  {/* Optional Private Chalet Host/Butler Section */}
-                  <div className="mb-16">
-                    <div className="flex items-center mb-6">
-                      <div className="bg-black text-white p-4 rounded-full mr-4">
-                        <svg
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 5C13.66 5 15 6.34 15 8C15 9.66 13.66 11 12 11C10.34 11 9 9.66 9 8C9 6.34 10.34 5 12 5ZM12 19.2C9.5 19.2 7.29 17.92 6 15.98C6.03 13.99 10 12.9 12 12.9C13.99 12.9 17.97 13.99 18 15.98C16.71 17.92 14.5 19.2 12 19.2Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </div>
-                      <h2 className="text-2xl font-bold">Optional Addition | Private Chalet Host/Butler</h2>
-                    </div>
-                    <p className="text-gray-800 max-w-4xl">
-                      Optional but highly recommended, a daily butler/chalet host to help make your stay more comfortable. They do not live in the home, rather come in the morning and evening for an average of 10 hours daily. Helping clean up around the kitchen/dining tables, your own personal barista in the mornings, and if a chef is arranged, they can act as a fine dining server for a plated meal experience. Familiar with the home for any quick questions so you can focus on enjoying yourself!
-                      <br /><br />
-                      <strong>-Cost 330 USD daily.</strong>
-                    </p>
                   </div>
 
                   {/* Additional Features Section */}
@@ -211,20 +221,20 @@ export default function LuxurySkiInSkiOut7BedroomKadenwoodDetails({ photos }: Li
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                       <div>
                         <p className="text-gray-800 mb-4">
-                          This stunning 6200 square foot mountain retreat offers a wealth of premium amenities:
+                          This 6,200-square-foot mountain retreat offers a wealth of premium amenities:
                         </p>
                         <ul className="list-disc pl-5 space-y-2 text-gray-800">
                           <li>Renovated chef's kitchen with Wolf, Subzero & Miele appliances</li>
                           <li>Quartz countertops and separate prep kitchen</li>
                           <li>Outdoor hot tub</li>
-                          <li>Brand new wood barrel sauna</li>
+                          <li>XL outdoor wood-barrel sauna beside the hot tub</li>
                           <li>Fire pits</li>
                           <li>Ping pong table</li>
                           <li>Wet bar</li>
                           <li>Steam room</li>
                           <li>Two 90-inch TVs</li>
-                          <li>Private ski trails</li>
-                          <li>Exclusive gondola access</li>
+                          <li>Garage ski boot dryer</li>
+                          <li>Private Kadenwood Gondola access for residents and guests</li>
                         </ul>
                       </div>
                       <div className="relative aspect-[4/3]">

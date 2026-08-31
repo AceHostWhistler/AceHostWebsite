@@ -50,12 +50,12 @@ const listing: ListingData = {
     `${base}/OSA_AncientCW1437-Panorama.jpg`,
   ],
   seo: {
-    title: "Two Cedars | Kadenwood | Private Butler - AceHost",
+    title: "Two Cedars - Ski in-Ski out, Kadenwood Estate | AceHost",
     description:
-      "Welcome to Two Cedars, an OpenSpace-designed architectural masterpiece in Kadenwood. Sleeps 17 with ski-in/ski-out access, private Kadenwood Gondola service, and daily butler included in winter.",
+      "Two Cedars is a 10,000-square-foot OpenSpace-designed Kadenwood estate for 17 guests, with ski-in/ski-out access, seven ensuite bedrooms, private gondola access, and a winter butler.",
   },
   header: {
-    title: "Two Cedars | Kadenwood",
+    title: "Two Cedars - Ski in-Ski out, Kadenwood Estate",
     guests: 17,
     bedrooms: 7,
     bathrooms: 8.5,

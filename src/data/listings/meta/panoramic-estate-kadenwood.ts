@@ -66,14 +66,15 @@ const listing: ListingData = {
   "/photos/properties/Panoramic Estate/Panoramic Estate.jpg"
 ],
   seo: {
-    title: "Panoramic Estate | Kadenwood | Luxury Whistler Rental",
-    description: "Experience unparalleled luxury at Panoramic Estate in Kadenwood, Whistler's most exclusive ski-in/ski-out neighborhood. 8 bedrooms, panoramic mountain views, and private gondola access.",
+    title: "Panoramic Estate | Kadenwood | Ski In Ski Out - AceHost",
+    description: "A timber chalet in Kadenwood with 8 bedrooms, 7 baths, mountain-view decks, hot tub, sauna, media room, gym and private gondola access.",
   },
   header:   {
-      "title": "Panoramic Estate | Kadenwood",
+      "title": "Panoramic Estate | Kadenwood | Ski In Ski Out",
       "guests": 17,
       "bedrooms": 8,
       "bathrooms": 7,
+      "beds": 11,
       "priceRange": "$5,800-$9,000+ per night",
       "winterPrice": "$8,500-$10,000+ | Winter",
       "holidayPrice": "$16,000+ Nightly | Christmas & NY",

@@ -472,7 +472,7 @@ export default function BlogPost() {
                 4. Panoramic Estate | Kadenwood
               </h3>
               <p className="text-gray-700 font-medium not-prose text-base mb-4">
-                17 guests | 8 bedrooms | 10 beds | 7 bathrooms
+                17 guests | 8 bedrooms | 11 beds | 7 bathrooms
               </p>
               <PropertyImages images={HEADLINE_PROPERTIES[3].images} />
               <p>

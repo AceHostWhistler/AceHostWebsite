@@ -112,9 +112,9 @@ const LuxuryChristmasRentals = () => {
                     <p className="font-medium text-gray-900">Property Details</p>
                     <ul className="mt-2 space-y-1 text-gray-700">
                       <li><strong>Ski-in/Ski-out access</strong></li>
-                      <li><strong>Sleeps 18</strong></li>
+                      <li><strong>Sleeps 17</strong></li>
                       <li><strong>8 Bedrooms</strong></li>
-                      <li><strong>10 Beds</strong></li>
+                      <li><strong>11 Beds</strong></li>
                       <li><strong>7 Baths</strong></li>
                       <li><strong>XL Hot Tub</strong></li>
                       <li><strong>Infrared Sauna</strong></li>
@@ -147,8 +147,8 @@ const LuxuryChristmasRentals = () => {
                     iconic mountains. This magnificent home features expansive
                     living spaces, high ceilings, and floor-to-ceiling windows that
                     frame the surrounding landscape. Welcome to this ski in ski out
-                    architectural delight! With 8 bedrooms, 10 beds, and 7 baths,
-                    accommodating up to 18 guests, it offers panoramic mountain
+                    architectural delight! With 8 bedrooms, 11 beds, and 7 baths,
+                    accommodating up to 17 guests, it offers panoramic mountain
                     views, an open-plan kitchen, multiple indoor fireplaces, a ping
                     pong table, a sleek hot tub, an indoor sauna, basement media
                     room, and built-in sound system.
@@ -183,8 +183,7 @@ const LuxuryChristmasRentals = () => {
               {/* Property 2 */}
               <div className="bg-gray-50 p-6 rounded-lg mb-14">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                  2) Two Cedars | Kadenwood | Private Butler & cleaning every
-                  other day included
+                  2) Two Cedars - Ski in-Ski out, Kadenwood Estate | Daily Winter Butler
                 </h2>
 
                 <div className="flex flex-col md:flex-row gap-4 mb-6">
@@ -201,7 +200,7 @@ const LuxuryChristmasRentals = () => {
                       <li><strong>Infrared Sauna</strong></li>
                       <li><strong>Gym</strong></li>
                       <li><strong>Movie Theatre</strong></li>
-                      <li><strong>Private butler included</strong></li>
+                      <li><strong>Daily winter butler included (December 1–April 30)</strong></li>
                     </ul>
                   </div>
                   
@@ -233,8 +232,9 @@ const LuxuryChristmasRentals = () => {
                     is the ultimate ski-in/ski-out chalet. This luxurious home
                     offers direct access to some of Whistler's best slopes,
                     making it perfect for those who want to maximize their time on
-                    the mountain. The property features five beautifully appointed
-                    bedrooms, a state-of-the-art media room, and a private hot tub
+                    the mountain. The property features seven beautifully appointed
+                    bedrooms, a state-of-the-art media room, and private indoor and
+                    outdoor hot tubs
                     with stunning mountain views. After a day of skiing, relax by
                     the grand stone fireplace or enjoy a gourmet meal in the
                     fully-equipped kitchen.
@@ -295,7 +295,7 @@ const LuxuryChristmasRentals = () => {
                       <li><strong>Private Kadenwood gondola</strong></li>
                       <li><strong>Sleeps 16</strong></li>
                       <li><strong>8 Bedrooms</strong></li>
-                      <li><strong>10 Beds</strong></li>
+                      <li><strong>11 Beds</strong></li>
                       <li><strong>6.5 Baths</strong></li>
                       <li><strong>Hot Tub</strong></li>
                       <li><strong>Outdoor dining</strong></li>
@@ -360,7 +360,7 @@ const LuxuryChristmasRentals = () => {
 
               {/* Properties 4-7 with similar structure */}
               <div className="bg-gray-50 p-6 rounded-lg mb-14">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">4) Chalet La Forja | Kadenwood | Private Butler & cleaning every other day included</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">4) Chalet La Forja - Ski in Ski out Kadenwood Estate</h2>
 
                 <div className="flex flex-col md:flex-row gap-4 mb-6">
                   <div className="flex-1 bg-white p-4 rounded-lg shadow-sm">
@@ -369,13 +369,13 @@ const LuxuryChristmasRentals = () => {
                       <li><strong>10,000+ SQ FT</strong></li>
                       <li><strong>Ski-in/Ski-out access</strong></li>
                       <li><strong>Sleeps 16</strong></li>
-                      <li><strong>7.5 Bedrooms</strong></li>
-                      <li><strong>14 Beds</strong></li>
+                      <li><strong>9 Bedrooms</strong></li>
+                      <li><strong>16 Beds</strong></li>
                       <li><strong>8 Bathrooms</strong></li>
                       <li><strong>Hot Tub</strong></li>
                       <li><strong>Pool</strong></li>
                       <li><strong>Gym</strong></li>
-                      <li><strong>Private butler included + Cleaning every other day</strong></li>
+                      <li><strong>Daily winter butler + housekeeping every other day</strong></li>
                     </ul>
                   </div>
                   
@@ -404,7 +404,7 @@ const LuxuryChristmasRentals = () => {
                     foot luxurious Ski in Ski out home amongst the locals is
                     considered one of, if not the most prestigious luxury rental in
                     all of Whistler. This ski-in/ski-out property located in the
-                    Kadenwood neighbourhood features 7.5 beautifully designed
+                    Kadenwood neighbourhood features 9 beautifully designed
                     bedrooms, a spacious living area with a grand fireplace, and a
                     fully-equipped gourmet kitchen.
                   </p>
@@ -432,7 +432,7 @@ const LuxuryChristmasRentals = () => {
               </div>
 
               <div className="bg-gray-50 p-6 rounded-lg mb-14">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">5) Slope Side Chalet | Kadenwood</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">5) Slope Side Chalet | Ski-In/Out | Hot Tub</h2>
 
                 <div className="flex flex-col md:flex-row gap-4 mb-6">
                   <div className="flex-1 bg-white p-4 rounded-lg shadow-sm">
@@ -446,7 +446,7 @@ const LuxuryChristmasRentals = () => {
                       <li><strong>Sleeps 16</strong></li>
                       <li><strong>7 Bedrooms</strong></li>
                       <li><strong>12 Beds</strong></li>
-                      <li><strong>8 Baths</strong></li>
+                      <li><strong>7.5 Baths</strong></li>
                       <li><strong>Hot Tub</strong></li>
                       <li><strong>Gym</strong></li>
                       <li><strong>Steam Shower</strong></li>
@@ -477,7 +477,7 @@ const LuxuryChristmasRentals = () => {
                     Kadenwood neighborhood. This ski-in/ski-out chalet offers
                     unparalleled convenience for winter sports enthusiasts as the
                     property lies directly on the ski slopes. Ski to and from your
-                    front door. With 7.5 bedrooms, a sleek modern design, and large
+                    front door. With 7 bedrooms, a sleek modern design, and large
                     windows that offer breathtaking views, SlopeSide is the epitome
                     of luxury living. The property features a private hot tub, a
                     cozy fireplace, a brand new TV in the living room, and a gourmet
@@ -562,7 +562,7 @@ const LuxuryChristmasRentals = () => {
               </div>
 
               <div className="bg-gray-50 p-6 rounded-lg mb-14">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">7) Falcon | Blueberry Neighbourhood</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">7) Falcon | Whistler Village Chalet | Hot tub + Sauna</h2>
 
                 <div className="flex flex-col md:flex-row gap-4 mb-6">
                   <div className="flex-1 bg-white p-4 rounded-lg shadow-sm">
@@ -571,9 +571,11 @@ const LuxuryChristmasRentals = () => {
                       <li><strong>3000 + SQ FT</strong></li>
                       <li><strong>Sleeps 15</strong></li>
                       <li><strong>7 bedrooms</strong></li>
-                      <li><strong>13 beds</strong></li>
+                      <li><strong>9 beds</strong></li>
                       <li><strong>3.5 baths</strong></li>
                       <li><strong>Hot tub</strong></li>
+                      <li><strong>Outdoor sauna</strong></li>
+                      <li><strong>Central air conditioning</strong></li>
                       <li><strong>BBQ</strong></li>
                     </ul>
                   </div>

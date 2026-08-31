@@ -45,11 +45,11 @@ const listing: ListingData = {
   "/photos/properties/Slopeside Kadenwood/42-2945 Kadenwood Dr 42.jpg"
 ],
   seo: {
-    title: "Slope Side Chalet | Kadenwood | Ski-in/Ski-out - AceHost",
-    description: "Experience luxury at Slope Side Chalet in Kadenwood. This 7-bedroom chalet offers ski-in/ski-out access, stunning valley views, hot tub, steam shower, and home gym. Perfect for large groups with 12 beds accommodating up to 16 guests.",
+    title: "Slope Side Chalet | Ski-In/Out | Hot Tub - AceHost",
+    description: "Stay at Slope Side Chalet, a 7-bedroom Kadenwood ski-in/ski-out retreat for 16 guests with 12 beds, 7.5 baths, a private hot tub, steam shower, gym, and mountain views.",
   },
   header:   {
-      "title": "Slope Side Chalet | Kadenwood",
+      "title": "Slope Side Chalet | Ski-In/Out | Hot Tub",
       "guests": 16,
       "bedrooms": 7,
       "bathrooms": 7.5,
@@ -59,7 +59,7 @@ const listing: ListingData = {
       "holidayPrice": "$10,000+ Nightly | Christmas & NY",
       "airbnbLink": "https://www.airbnb.ca/rooms/826226399590812184?guests=1&adults=1&s=67&unique_share_id=aab7fbd3-669a-461d-b913-c15cf257b4c0"
   },
-  galleryTitle: "Slope Side Chalet",
+  galleryTitle: "Slope Side Chalet | Ski-In/Out | Hot Tub",
   photoAltPrefix: "Slope Side Chalet",
 };
 

@@ -76,7 +76,7 @@ export default function BlogPost() {
 
               {/* Property 1 */}
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
-                1) Slope Side Chalet | Kadenwood
+                1) Slope Side Chalet | Ski-In/Out | Hot Tub
               </h2>
 
               <div className="bg-gray-50 p-5 rounded-lg mb-6">
@@ -85,7 +85,7 @@ export default function BlogPost() {
                 </p>
                 <p className="mt-4">
                   5025+ SQ FT | Ski-in/Ski-out access | Sleeps 16 | 7 Bedrooms |
-                  12 Beds | 8 Baths | Hot Tub | Gym | Steam Shower
+                  12 Beds | 7.5 Baths | Hot Tub | Gym | Steam Shower
                 </p>
               </div>
 
@@ -93,7 +93,7 @@ export default function BlogPost() {
                 Introducing AceHost's Slope Side Chalet in Kadenwood, their
                 top property featuring luxurious amenities and a convenient
                 ski-in/ski-out access. This cozy home boasts a generous 5025+ sq
-                ft space with 7 bedrooms, 12 beds, and 8 baths, perfect for
+                ft space with 7 bedrooms, 12 beds, and 7.5 baths, perfect for
                 accommodating groups of up to 16 people. Relax in the hot tub,
                 enjoy the gym facilities, or indulge in a steam shower after a
                 long day on the slopes.
@@ -125,8 +125,7 @@ export default function BlogPost() {
 
               {/* Property 2 */}
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
-                2) Two Cedars | Kadenwood | Private Butler & cleaning every
-                other day included
+                2) Two Cedars - Ski in-Ski out, Kadenwood Estate
               </h2>
 
               <div className="bg-gray-50 p-5 rounded-lg mb-6">
@@ -137,7 +136,7 @@ export default function BlogPost() {
                 <p className="mt-4">
                   10,000+ SQ FT | Ski-in/Ski-out access | Sleeps 17 | 7 Bedrooms
                   | 12 Beds | 8.5 Baths | Hot Tub | Infrared Sauna | Gym | Movie
-                  theatre | Private butler included
+                  theatre | Daily winter butler included
                 </p>
               </div>
 
@@ -149,8 +148,8 @@ export default function BlogPost() {
                 tub and infrared sauna, and maintain your fitness routine in the
                 state-of-the-art gym. When it's time to unwind, enjoy a
                 private movie theatre. The exclusive residence-only gondola
-                ensures easy access to the slopes, while a dedicated butler
-                enhances your stay with personalized service.
+                ensures easy access to the slopes, while a daily butler
+                enhances winter stays with personalized service.
               </p>
 
               <p className="text-blue-600 font-medium mt-2 mb-6">
@@ -189,7 +188,7 @@ export default function BlogPost() {
                 </p>
                 <p className="mt-4">
                   Ski-in/Ski-out access | Private Kadenwood gondola | Sleeps 16 | 8 Bedrooms
-                  | 10 Beds | 6.5 Baths | Hot Tub | Outdoor dining | Curated artwork
+                  | 11 Beds | 6.5 Baths | Hot Tub | Sauna | Outdoor dining
                 </p>
               </div>
 
@@ -232,8 +231,7 @@ export default function BlogPost() {
 
               {/* Property 4 */}
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
-                4) Chalet La Forja | Kadenwood | Private Butler & cleaning every
-                other day included
+                4) Chalet La Forja - Ski in Ski out Kadenwood Estate
               </h2>
 
               <div className="bg-gray-50 p-5 rounded-lg mb-6">
@@ -242,9 +240,9 @@ export default function BlogPost() {
                   $22,000+
                 </p>
                 <p className="mt-4">
-                  10,000+ SQ FT | Ski-in/Ski-out access | Sleeps 12+4 | 8
-                  Bedrooms | 14 Beds | 8 Bathrooms | Hot Tub | Pool | Gym |
-                  Private butler included + Cleaning every other day
+                  10,000+ SQ FT | Ski-in/Ski-out access | Sleeps 16 | 9
+                  Bedrooms | 16 Beds | 8 Bathrooms | Hot Tub | Pool | Gym |
+                  Daily winter butler + housekeeping every other day
                 </p>
               </div>
 
@@ -257,9 +255,8 @@ export default function BlogPost() {
               </p>
 
               <p className="mt-4">
-                To make your stay truly exceptional, we offer a complimentary
-                butler service, dedicated to ensuring your every need is met and
-                that your stay is nothing short of five-star.
+                Daily butler service is included during winter, while
+                housekeeping is included every other day throughout the stay.
               </p>
 
               <p className="mt-4">
@@ -308,8 +305,8 @@ export default function BlogPost() {
               <div className="bg-gray-50 p-5 rounded-lg mb-6">
                 <p className="font-semibold">Price per night: $1,000-$3,200</p>
                 <p className="mt-4">
-                  3000+ SQ FT | Sleeps 15 | 7 bedrooms | 13 beds | 3.5 baths |
-                  Hot tub | BBQ
+                  3000+ SQ FT | Sleeps 15 | 7 bedrooms | 9 beds | 3.5 baths |
+                  Hot tub | Sauna | Central A/C | BBQ
                 </p>
               </div>
 
@@ -325,7 +322,7 @@ export default function BlogPost() {
               <p className="mt-4">
                 Inside the chalet, guests will find a heated slate entrance with
                 a unique West Coast native hand-carved front door. There are 7
-                spacious bedrooms with 8 stylish beds and three and a half
+                spacious bedrooms with 9 beds and three and a half
                 well-appointed bathrooms. The living room features a cozy
                 fireplace, perfect for relaxing after a day of outdoor
                 activities in Whistler.
@@ -429,7 +426,7 @@ export default function BlogPost() {
 
               {/* Property 7 */}
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
-                7) The Mountaintop at Kadenwood | Ski in Ski out
+                7) The Mountaintop in Kadenwood | Ski in Ski out
               </h2>
 
               <div className="bg-gray-50 p-5 rounded-lg mb-6">
@@ -439,16 +436,16 @@ export default function BlogPost() {
                 </p>
                 <p className="mt-4">
                   6200+ SQ FT | Ski-in/Ski-out access | Sleeps 16 | 7 Bedrooms |
-                  6.5 Baths | Hot Tub | Wood Barrel Sauna | Fire Pits | Steam Room
+                  8 Beds | 6.5 Baths | Hot Tub | Wood Barrel Sauna | Fire Pits | Steam Room
                 </p>
               </div>
 
               <p>
                 Located in Whistler&apos;s most prestigious true ski-in ski-out
-                neighbourhood, The Mountaintop at Kadenwood is a refined 7-bedroom
+                neighbourhood, The Mountaintop in Kadenwood is a refined 7-bedroom
                 retreat with 6,200 square feet of mountain living. A renovated
                 chef&apos;s kitchen, hot tub, wood barrel sauna, fire pits, and
-                private ski trails make it ideal for groups who want seamless
+                private Kadenwood gondola access make it ideal for groups who want seamless
                 slope access without sacrificing luxury.
               </p>
 
@@ -496,17 +493,17 @@ export default function BlogPost() {
                   $16,000+
                 </p>
                 <p className="mt-4">
-                  6500+ SQ FT | Ski-in/Ski-out access | Sleeps 17 | 8 Bedrooms |
-                  10 Beds | 7 Baths | Hot Tub | Cinema Room | Wine Cellar | Elevator
+                  Ski-in/Ski-out access | Sleeps 17 | 8 Bedrooms | 11 Beds |
+                  7 Baths | Hot Tub | Sauna | Media Room | Elevator
                 </p>
               </div>
 
               <p>
                 Panoramic Estate lives up to its name from its exclusive Kadenwood
                 setting, offering breathtaking views across Whistler Valley. This
-                8-bedroom architectural masterpiece spans over 6,500 square feet
-                with high-end finishes, a gourmet kitchen, private hot tub, cinema
-                room, wine cellar, and a private elevator connecting every level.
+                8-bedroom timber chalet combines high-end finishes, a gourmet
+                kitchen, private hot tub, sauna, media room, and a private elevator
+                connecting every level.
               </p>
 
               <p className="mt-4">

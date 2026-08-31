@@ -87,7 +87,7 @@ const listing: ListingData = {
 ],
   seo: {
     title: "Timber Haven - Luxury Ski in Ski out - Kadenwood - AceHost",
-    description: "Welcome to your private Kadenwood mountain estate, an 8-bedroom luxury home with stunning views, ski-in/ski-out access, private residents-only gondola access, and premium amenities for large groups.",
+    description: "Timber Haven is an 8-bedroom Kadenwood ski-in/ski-out estate for 16 guests with 11 beds, 6.5 baths, a private hot tub, sauna, central AC, and private gondola access.",
   },
   header:   {
       "title": "Timber Haven - Luxury Ski in Ski out - Kadenwood",

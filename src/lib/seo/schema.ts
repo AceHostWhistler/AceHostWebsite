@@ -77,7 +77,7 @@ export function buildHomepageOrganizationSchema() {
           "@type": "Offer",
           itemOffered: {
             "@type": "Product",
-            name: "Chalet La Forja | Kadenwood | Private Butler",
+            name: "Chalet La Forja - Ski in Ski out Kadenwood Estate",
             url: `${SITE_URL}/listings/chalet-la-forja-kadenwood`,
           },
         },
