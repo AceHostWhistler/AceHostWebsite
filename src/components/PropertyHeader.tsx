@@ -4,6 +4,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { airbnbButtonHeader } from "@/lib/airbnbButtonStyles";
+import { getPrimaryPricePeriodLabel } from "@/lib/pricePeriodLabel";
 
 interface PropertyHeaderProps {
   title: string;
@@ -259,7 +260,7 @@ const PropertyHeader: React.FC<PropertyHeaderProps> = ({
   const statCols = beds ? "grid-cols-2 sm:grid-cols-4" : "grid-cols-2 sm:grid-cols-3";
 
   const priceTiers = [
-    { label: "Nightly", value: priceRange },
+    { label: getPrimaryPricePeriodLabel(priceRange), value: priceRange },
     ...(winterPrice ? [{ label: "Winter", value: winterPrice }] : []),
     ...(holidayPrice ? [{ label: "Holidays", value: holidayPrice }] : []),
   ];

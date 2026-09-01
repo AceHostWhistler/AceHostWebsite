@@ -11,6 +11,7 @@ import {
   buildVacationRentalSchema,
 } from "@/lib/seo/schema";
 import { SITE_URL } from "@/data/seo/business";
+import { getPrimaryPricePeriodLabel } from "@/lib/pricePeriodLabel";
 
 interface PropertyHeaderEditorialProps {
   title: string;
@@ -271,7 +272,10 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
                 Rates
               </h2>
               <div className="mt-1">
-                <PriceRow season="Nightly" value={priceRange} />
+                <PriceRow
+                  season={getPrimaryPricePeriodLabel(priceRange)}
+                  value={priceRange}
+                />
                 {winterPrice && <PriceRow season="Winter" value={winterPrice} />}
                 {holidayPrice && (
                   <PriceRow
