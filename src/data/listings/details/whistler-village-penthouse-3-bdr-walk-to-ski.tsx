@@ -53,6 +53,8 @@ export default function WhistlerVillagePenthouse3BdrWalkToSkiDetails({ photos }:
                         Enjoy a fully equipped kitchen for home-cooked dinners, a spacious living room for evening hangouts and movie nights, and complimentary parking included with your stay. This is the ideal base for families, friends or small groups looking to enjoy Whistler with comfort, style and convenience.
                         <br /><br />
                         Ski in Ski out Access: No need to enter a vehicle to access the slopes, though the condo is about an 8-10 minute walk to and from the slopes.
+                        <br /><br />
+                        Air Coolant Units: Not Central AC, rather we have 1 coolant unit in the living room and Master. Keeping the house nice and cool on the hottest summer days. Fill units with water and ice like a humidifier, and refill every 24-48 hours. They work very well and brand new!
                       </p>
                       <ul className="list-disc pl-5 space-y-2 text-gray-800 mb-6">
                         <li>Sleeps up to 8 guests</li>
@@ -115,7 +117,11 @@ export default function WhistlerVillagePenthouse3BdrWalkToSkiDetails({ photos }:
                       <h2 className="text-2xl font-bold">Guest Access</h2>
                     </div>
                     <p className="text-gray-800 max-w-4xl">
-                      Access via code sent out 1 day prior to arrival.
+                      Guests have private access to the entire penthouse for the duration of their stay, including all bedrooms, living spaces and the fully equipped kitchen.
+                      <br /><br />
+                      You will also have access to the building&apos;s shared pool and hot tub, one complimentary underground parking space and the common ski and gear storage areas.
+                      <br /><br />
+                      The home uses keyless entry, with access instructions provided prior to arrival. Access via code which will be sent out 1 day prior to arrival.
                     </p>
                   </div>
 

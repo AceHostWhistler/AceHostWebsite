@@ -171,9 +171,9 @@ export const townhomeProperties: Whistler28Property[] = [
   },
   {
     number: 16,
-    name: "The Aspens | 2-Bed Ski in/Out",
+    name: "The Aspens | On-Hill Ski-In/Out | Hot Tubs | 2 BDR",
     description:
-      "A true slopeside two-bedroom condo close to the pool, three hot tubs, ski rentals, and Blackcomb Mountain.",
+      "Ground-floor ski-in/ski-out at The Aspens — the closest unit to the pool, three hot tubs, and Blackcomb slopes.",
     image: "/photos/properties/The Aspens/4800-Spearhead-Drive-1.JPG",
     listingHref: "/listings/whispering-pines-ski-in-ski-out",
     bookUrl:
@@ -181,9 +181,9 @@ export const townhomeProperties: Whistler28Property[] = [
   },
   {
     number: 17,
-    name: "Marquise | Ski-in Ski-out",
+    name: "Marquise 2 Bed | Ski-In/Ski-Out | Whistler Village",
     description:
-      "A comfortable Blackcomb condo with a king bedroom, additional sleeping space, pool, hot tub, gym, and ski storage.",
+      "Main-floor Marquise condo with Puffy Royal King bed, free parking, pool, hot tub, gym, and ski storage on Blackcomb.",
     image: "/photos/properties/Marquise 2-bed/Marquise-15.jpg",
     listingHref: "/listings/marquise-2-bed-ski-in-ski-out",
     bookUrl:
@@ -263,9 +263,9 @@ export const townhomeProperties: Whistler28Property[] = [
   },
   {
     number: 25,
-    name: "Luxury 3-Bed | Stunning Views",
+    name: "Marquise Penthouse | Ski-In/Out | 3-Bed | Views",
     description:
-      "A spacious penthouse-style condo with Fairmont and mountain views, plus a pool, hot tub, sauna, gym, and fireplace.",
+      "A 1,100 sq. ft. Marquise penthouse with Fairmont views, glass-domed hot tub, pool, sauna, gym, and private patio on Blackcomb.",
     image: "/optimized/luxury-3-bed-views/cover.jpg",
     listingHref: "/listings/luxury-3-bed-stunning-views",
     bookUrl:
@@ -293,9 +293,9 @@ export const townhomeProperties: Whistler28Property[] = [
   },
   {
     number: 27,
-    name: "Whistler Village Penthouse | 3 BDR | Walk to Ski",
+    name: "Whistler Village Penthouse - 3 BDR - Walk to Ski",
     description:
-      "A Tyndall Lodge penthouse with three sleeping areas, high ceilings, a fun loft, Olympic Plaza views, and underground parking.",
+      "Tyndall Lodge penthouse in the heart of Whistler Village with loft bunks, 5 beds, pool and hot tub access, and free parking.",
     image: "/optimized/303-Tyndall-Lodge/new-cover.jpg",
     listingHref: "/listings/whistler-village-penthouse-3-bdr-walk-to-ski",
     bookUrl:

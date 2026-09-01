@@ -1018,7 +1018,7 @@ export const propertyCategories: PropertyCategory[] = [
 
           {
             id: "whispering-pines",
-            name: "The Aspens | 2-Bed Ski in/Out",
+            name: "The Aspens | On-Hill Ski-In/Out | Hot Tubs | 2 BDR",
             images: [
               "/photos/properties/The Aspens/4800-Spearhead-Drive-1.JPG",
             ],
@@ -1027,16 +1027,16 @@ export const propertyCategories: PropertyCategory[] = [
             bathrooms: 2,
             location: "Upper Village, Whistler",
             description:
-              "Located in prestigious Horstman Estates on Blackcomb Mountain, this luxury ski-in/ski-out chalet offers direct access to the slopes and stunning views. Features include a private hot tub, vaulted ceilings, and elegant alpine design.",
+              "Ground-floor ski-in/ski-out at The Aspens on Blackcomb Mountain. Closest unit to the pool and three hot tubs, with a king primary suite, twin bedroom, patio BBQ and easy walk to Upper Village and Whistler Village.",
             features: [
               "Ski-in/Ski-out Access",
-              "Private Hot Tub",
-              "Mountain Views",
-              "Vaulted Ceilings",
-              "Stone Fireplace",
-              "Gourmet Kitchen",
-              "Heated Floors",
-              "Large Deck",
+              "Pool & Three Hot Tubs",
+              "Ground-Floor Unit",
+              "King Primary Suite",
+              "Patio & BBQ",
+              "Fireplace",
+              "Fully Equipped Kitchen",
+              "Walk to Whistler Village",
             ],
             highlights: [
               "True Ski-in/Ski-out",
@@ -1051,7 +1051,7 @@ export const propertyCategories: PropertyCategory[] = [
           },
           {
             id: "marquise-2-bed",
-            name: "Marquise 2-Bed-Ski in Ski out",
+            name: "Marquise 2 Bed | Ski-In/Ski-Out | Whistler Village",
             images: [
               "/photos/properties/Marquise 2-bed/Marquise-15.jpg",
             ],
@@ -1060,16 +1060,16 @@ export const propertyCategories: PropertyCategory[] = [
             bathrooms: 1,
             location: "Upper Village, Whistler",
             description:
-              "Enjoy true ski-in/ski-out convenience at this welcoming 2-bedroom condo in the desirable Marquise complex at Blackcomb Base. Features a private balcony, gas fireplace, and access to shared pool and hot tub.",
+              "Main-floor ski-in/ski-out Marquise condo on Blackcomb Mountain with a brand-new Puffy Royal King bed, Queen pullout, fireplace, free parking, pool, hot tub and gym. Upper Village is about a 5-minute walk away.",
             features: [
               "Ski-in/Ski-out Access",
               "Shared Pool & Hot Tub",
-              "Private Balcony",
+              "Fitness Gym",
+              "Main-Floor Unit",
+              "Free Parking Included",
               "Gas Fireplace",
               "Fully Equipped Kitchen",
-              "Mountain Views",
-              "Secure Underground Parking",
-              "Ideal Blackcomb Location",
+              "Secure Ski Storage",
             ],
             highlights: [
               "True Ski-in/Ski-out",
@@ -1582,32 +1582,32 @@ export const propertyCategories: PropertyCategory[] = [
           },
           {
             id: "luxury-3-bed-stunning-views",
-            name: "Luxury 3-Bed | Stunning Views",
+            name: "Marquise Penthouse | Ski-In/Out | 3-Bed | Views",
             images: [
               "/optimized/luxury-3-bed-views/cover.jpg",
               "/optimized/luxury-3-bed-views/image-01.jpg",
               "/optimized/luxury-3-bed-views/image-07.jpg",
             ],
             guests: 6,
-            bedrooms: 2.5,
+            bedrooms: 2,
             bathrooms: 2,
-            location: "Whistler Village, Whistler",
+            location: "Blackcomb Benchlands, Whistler",
             description:
-              "Contemporary 3 bed, 2 bath retreat with stunning views of Chateau Fairmont and mountains, steps from Whistler Village and slopes. Features hot tub, sauna, gym, pool, and more.",
+              "Spacious 1,100 sq. ft. Marquise penthouse on Blackcomb with Fairmont and mountain views, 2 bedrooms, fireplace, private patio, A/C, glass-domed hot tub, pool, sauna and gym.",
             features: [
-              "Hot Tub & Pool",
-              "Sauna",
+              "Fairmont & Mountain Views",
+              "Glass-Domed Hot Tub",
+              "Heated Pool & Sauna",
               "Fitness Center",
               "Gas Fireplace",
-              "Fully Equipped Kitchen",
-              "Covered Parking",
-              "Gear Storage",
-              "Mountain Views",
+              "Private Patio",
+              "Summer A/C",
+              "Ski Access on Blackcomb",
             ],
             highlights: [
-              "Stunning Mountain Views",
-              "Steps from Whistler Village",
-              "Resort Amenities",
+              "Fairmont & Mountain Views",
+              "Marquise Penthouse on Blackcomb",
+              "Resort Pool, Hot Tub & Sauna",
               "Spacious 1,100 sq ft Condo",
             ],
             priceRange: "Nightly Price Range: $400-$1,150+",
@@ -1697,7 +1697,7 @@ export const propertyCategories: PropertyCategory[] = [
           },
           {
             id: "whistler-village-penthouse-3-bdr",
-            name: "Whistler Village PentHouse | 3 BDR | Walk to Ski",
+            name: "Whistler Village Penthouse - 3 BDR - Walk to Ski",
             images: [
               "/optimized/303-Tyndall-Lodge/new-cover.jpg",
               "/optimized/303-Tyndall-Lodge/01---20260107-A7M4-01-A1_03798.jpg",
@@ -1709,7 +1709,7 @@ export const propertyCategories: PropertyCategory[] = [
             beds: 5,
             location: "Whistler Village, Whistler",
             description:
-              "Welcome to Penthouse unit, in the iconic Tyndall Lodge building in the heart of Whistler Village. This bright and spacious unit sits right in the centre of Whistler Village, steps from the famous Olympic Rings and only a short walk to both Whistler and Blackcomb gondolas.",
+              "Penthouse in Tyndall Lodge in the heart of Whistler Village. 3 sleeping areas, 5 beds, loft bunk room, pool and hot tub access, and complimentary underground parking steps from Olympic Plaza.",
             features: [
               "Penthouse Unit",
               "High Ceilings",

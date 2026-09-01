@@ -12,21 +12,20 @@ export interface CondoRentalProperty {
 /** All AceHost Whistler condo and condo-style rentals for the best-condo-rentals blog */
 export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
   {
-    name: "Luxury 3-Bed | Stunning Views",
+    name: "Marquise Penthouse | Ski-In/Out | 3-Bed | Views",
     priceRange: "$650-$1,280+ per night (seasonal)",
     stats:
-      "1,100 sq ft | Sleeps 6 | 2.5 Bedrooms | 3 Beds | 2 Bathrooms | Hot Tub & Pool Access | Mountain Views",
+      "1,100 sq ft | Sleeps 6 | 2 Bedrooms | 3 Beds | 2 Bathrooms | Glass-Domed Hot Tub & Pool | Fairmont Views",
     paragraphs: [
-      "Our crown jewel – this contemporary retreat delivers what might be the most spectacular views you'll find in any Whistler apartment! Just steps from the village and slopes, this 1,100 sq ft sanctuary offers the perfect blend of luxury and location.",
-      "The spacious living area features floor-to-ceiling windows that frame breathtaking vistas of Chateau Fairmont and the surrounding mountains. After an exhilarating day on the slopes, warm up by the cozy gas fireplace or soak away your cares in the building's glass-domed hot tub. The gourmet kitchen comes fully equipped for everything from quick breakfasts to gourmet dinners.",
-      "The primary bedroom is a true retreat, featuring a king bed, private patio with views, vanity sink, and direct access to a full ensuite bathroom. The second bedroom offers a queen bed and private ensuite with a bathtub, while a queen pullout sofa in the living room accommodates additional guests.",
-      "With covered parking, gear storage, fast Wi-Fi, and Netflix included, this stunning property offers everything you need for an unforgettable Whistler experience – all within walking distance to the slopes, lakes, shops, and dining.",
+      "Welcome to this spacious 1,100 sq. ft. Marquise penthouse-style retreat with some of the best Fairmont and mountain views in Whistler. Enjoy 2 bedrooms, 2 bathrooms, a cozy fireplace, private patio, full kitchen and A/C, with room for up to 6 guests.",
+      "The main living area features a cozy gas fireplace, comfortable seating and views toward the Fairmont Chateau Whistler. After skiing, relax in the building's glass-domed hot tub, outdoor pool, sauna or gym.",
+      "The primary bedroom offers a king bed, private patio access with views, vanity area and direct access to a full bathroom. Bedroom 2 has a queen bed with private ensuite bathroom and bathtub, while a queen pullout sofa in the living room accommodates additional guests.",
     ],
     airbnbHref:
       "https://www.airbnb.ca/rooms/1461637483646115205?guests=1&adults=1&s=67&unique_share_id=9b6640b9-138d-4627-bea4-cb2155e32c72",
     listingHref: "/listings/luxury-3-bed-stunning-views",
     imageSrc: "/optimized/luxury-3-bed-views/cover.jpg",
-    imageAlt: "Luxury 3-Bed Whistler condo with stunning mountain views",
+    imageAlt: "Marquise Penthouse Whistler condo with Fairmont views",
   },
   {
     name: "Luxe Cozy 3-Bed Whistler Village",
@@ -78,14 +77,14 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     imageAlt: "Raven's Nest | Ski in Ski out townhome with mountain views",
   },
   {
-    name: "The Aspens | 2-Bed Ski in/Out",
+    name: "The Aspens | On-Hill Ski-In/Out | Hot Tubs | 2 BDR",
     priceRange: "$350-$1,300 per night (seasonal)",
     stats:
-      "Sleeps 4 | 2 Bedrooms | 2 Beds | 2 Bathrooms | Ski-in/Ski-out | Hot Tub & Pool Access | Upper Village Location",
+      "Sleeps 4 | 2 Bedrooms | 3 Beds | 2 Bathrooms | Ski-in/Ski-out | Pool & Three Hot Tubs | Upper Village Location",
     paragraphs: [
-      "For the ultimate in ski-in, ski-out convenience, The Aspens is hard to beat. This ground-level unit puts you just steps from both the hot tub/pool area and the slopes of Blackcomb Mountain. Wake up, grab your gear, and be carving turns in minutes – no shuttle buses or long walks required!",
-      "The thoughtfully designed interior offers comfortable accommodations for up to 4 guests, with two well-appointed bedrooms and bathrooms providing privacy and convenience. After exhilarating days on the mountain, the building's three inviting hot tubs create the perfect ambiance for relaxation and reflection on your Whistler adventures.",
-      "Located in Upper Village, you'll enjoy easy access to restaurants, shops, and après-ski options, while both Main and Upper Whistler Village are within walking distance. During summer months, nearby biking trails, golf courses, and Lost Lake provide endless outdoor enjoyment, truly making this location perfect for year-round mountain adventures.",
+      "Welcome to one of the most convenient ski-in/ski-out locations on Blackcomb Mountain. This ground-floor 2-bedroom home at The Aspens sits just steps from the slopes and is the closest unit in the building to the pool and three hot tubs.",
+      "Inside, enjoy a king primary suite, twin bedroom, fireplace, full kitchen, patio and BBQ. Ski rentals are available right in the building, while Upper Village, Whistler Village, Lost Lake and year-round trails are all within easy reach.",
+      "The pool and hot tub area is only steps from this particular unit, making it incredibly easy to head out for a soak after skiing and return home without crossing the entire building.",
     ],
     airbnbHref:
       "https://www.airbnb.com/rooms/1072474554447345991?guests=1&adults=1&s=67&unique_share_id=e556b35c-05b5-40b6-91e1-5304ffafc23b",
@@ -109,20 +108,20 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     imageAlt: "Le Chamois | 2 Bed condo walking distance to lifts",
   },
   {
-    name: "Marquise 2-Bed-Ski in Ski out",
+    name: "Marquise 2 Bed | Ski-In/Ski-Out | Whistler Village",
     priceRange: "$160-450 per night (seasonal)",
     stats:
-      "Sleeps 4 | 1 Bedroom | 1 Bed | 1 Bathroom | Ski-in/Ski-out | Pet-Friendly | Upper Village",
+      "Sleeps 4 | 1 Bedroom | 2 Beds | 1 Bathroom | Ski-in/Ski-out | Free Parking | Upper Village",
     paragraphs: [
-      "Don't let the modest price point fool you – this gem in the Marquise complex delivers incredible value with true ski-in/ski-out access to Blackcomb Mountain. Perfect for couples or small families looking to maximize their time on the slopes without breaking the bank, this cozy retreat offers everything you need for an authentic Whistler experience.",
-      "What makes this property truly special is its remarkable location combined with pet-friendly policies – a rare combination in Whistler's rental market. After exciting days exploring the mountains, you'll appreciate returning to this welcoming space where both you and your furry companion can relax in comfort.",
-      "The Marquise building itself offers excellent amenities, including an outdoor heated pool and hot tub where you can soothe tired muscles while planning the next day's adventures. With its incredible combination of affordability, location, and pet-friendly policies, this property consistently ranks as one of Whistler's best-kept secrets for savvy travelers.",
+      "Welcome to this ski-in/ski-out retreat at The Marquise, perfectly positioned on Blackcomb Mountain. This main-floor condo features a brand-new Puffy Royal King bed, Queen pullout sofa, fireplace, private ski storage and free parking.",
+      "After skiing, unwind in the heated outdoor pool, hot tub or gym, then walk to Upper Village, the Fairmont and Four Seasons in about 5 minutes. In summer, Whistler Village, Lost Lake, biking trails and mountain adventures are all close by.",
+      "Secure ski storage is included, and one complimentary parking space is included with your stay — a rare combination for a ski-in/ski-out Whistler condo.",
     ],
     airbnbHref:
       "https://www.airbnb.ca/rooms/1370367404602078616?guests=1&adults=1&s=67&unique_share_id=eb381b39-e67d-44ea-9d7c-2de2e1b5fa20",
     listingHref: "/listings/marquise-2-bed-ski-in-ski-out",
     imageSrc: "/photos/properties/Marquise 2-bed/Marquise-15.jpg",
-    imageAlt: "Marquise 2-Bed-Ski in Ski out pet-friendly condo",
+    imageAlt: "Marquise 2 Bed ski-in ski-out condo on Blackcomb",
   },
   {
     name: "Luxury 6-Bedroom | Whistler Village | Blueberry",
@@ -175,14 +174,14 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     imageAlt: "Whistler Village penthouse with private hot tub near the gondola",
   },
   {
-    name: "Whistler Village PentHouse | 3 BDR | Walk to Ski",
+    name: "Whistler Village Penthouse - 3 BDR - Walk to Ski",
     priceRange: "$500-$1,200 Summer | $750-$1,500 Winter (seasonal)",
     stats:
-      "Sleeps 8 | 3 Bedrooms | 5 Beds | 2 Bathrooms | Penthouse | Walk to Gondolas | Pet-Friendly",
+      "Sleeps 8 | 3 Bedrooms | 5 Beds | 2 Bathrooms | Penthouse | Walk to Gondolas | Free Parking",
     paragraphs: [
-      "Set in the iconic Tyndall Lodge building, this bright penthouse sits in the centre of Whistler Village – steps from the Olympic Rings and a short walk to both Whistler and Blackcomb gondolas. High ceilings and an open living area give the unit a loft-like feel rare for village condos.",
-      "Three sleeping areas including a loft bedroom with bunk beds make this a flexible pick for families and friend groups. A fully equipped kitchen, free underground parking, and pet-friendly policies add everyday convenience to an unbeatable location.",
-      "Book here when you want penthouse volume, village walkability, and enough beds to comfortably host a full group without splitting across multiple units.",
+      "Welcome to the Penthouse unit in the iconic Tyndall Lodge building, located in the heart of Whistler Village. This bright and spacious home sits right in the centre of the main Whistler Village, steps from the famous Olympic Rings and only a short walk to both Whistler and Blackcomb gondolas.",
+      "Hosting up to 8 guests comfortably, the home features 3 sleeping areas, 5 beds, and two full bathrooms. One of the highlights is the unique loft bedroom with bunkbeds, tall ceilings and a cozy chalet feel that kids and extra guests absolutely love.",
+      "Enjoy a fully equipped kitchen, spacious living room, complimentary underground parking, and access to the building's shared pool and hot tub — location and layout doesn't get any better than this.",
     ],
     airbnbHref:
       "https://www.airbnb.ca/rooms/1595039212030139605?guests=1&adults=1&s=67&unique_share_id=dc75c08b-e1ae-46ae-8b17-0587b742fa45",

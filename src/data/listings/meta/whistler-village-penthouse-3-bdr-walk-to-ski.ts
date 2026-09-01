@@ -38,11 +38,11 @@ const listing: ListingData = {
   "/optimized/303-Tyndall-Lodge/36---20260107-A7M4-01-A1_03832.jpg"
 ],
   seo: {
-    title: "Whistler Village PentHouse | 3 BDR | Walk to Ski - AceHost",
-    description: "Penthouse unit in the iconic Tyndall Lodge building in the heart of Whistler Village. This bright and spacious unit features 3 sleeping areas, 4 beds, and 2 full bathrooms, just steps from the Olympic Rings and a short walk to both Whistler and Blackcomb gondolas.",
+    title: "Whistler Village Penthouse - 3 BDR - Walk to Ski - AceHost",
+    description: "Penthouse in Tyndall Lodge in the heart of Whistler Village. 3 sleeping areas, 5 beds, 2 baths, loft bunk room, pool and hot tub access, and complimentary underground parking steps from Olympic Plaza.",
   },
   header:   {
-      "title": "Whistler Village PentHouse | 3 BDR | Walk to Ski",
+      "title": "Whistler Village Penthouse - 3 BDR - Walk to Ski",
       "guests": 8,
       "bedrooms": 3,
       "bathrooms": 2,
@@ -50,8 +50,8 @@ const listing: ListingData = {
       "beds": 5,
       "airbnbLink": "https://www.airbnb.ca/rooms/1595039212030139605?guests=1&adults=1&s=67&unique_share_id=dc75c08b-e1ae-46ae-8b17-0587b742fa45"
   },
-  galleryTitle: "Whistler Village PentHouse",
-  photoAltPrefix: "Whistler Village PentHouse",
+  galleryTitle: "Whistler Village Penthouse",
+  photoAltPrefix: "Whistler Village Penthouse",
 };
 
 export default listing;

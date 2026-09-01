@@ -20,11 +20,11 @@ const listing: ListingData = {
   "/photos/properties/Marquise 2-bed/Marquise-15.jpg"
 ],
   seo: {
-    title: "Marquise 2-Bed Ski-in Ski-out - AceHost",
-    description: "Experience luxury & prime location at this ski-in/ski-out condo in the Marquise. Located on the main floor with brand-new Puffy Royal King bed, Queen pull-out couch, and access to gym, hot tub, and heated pool.",
+    title: "Marquise 2 Bed | Ski-In/Ski-Out | Whistler Village - AceHost",
+    description: "Main-floor ski-in/ski-out Marquise condo on Blackcomb Mountain with Puffy Royal King bed, Queen pullout, fireplace, free parking, pool, hot tub and gym. Walk to Upper Village in about 5 minutes.",
   },
   header:   {
-      "title": "Marquise 2-Bed Ski-in Ski-out",
+      "title": "Marquise 2 Bed | Ski-In/Ski-Out | Whistler Village",
       "guests": 4,
       "bedrooms": 1,
       "bathrooms": 1,
@@ -32,8 +32,8 @@ const listing: ListingData = {
       "beds": 2,
       "airbnbLink": "https://www.airbnb.ca/rooms/1370367404602078616?guests=1&adults=1&s=67&unique_share_id=eb381b39-e67d-44ea-9d7c-2de2e1b5fa20"
   },
-  galleryTitle: "Marquise 2-Bed Ski-in Ski-out - AceHost",
-  photoAltPrefix: "Marquise 2-Bed Ski-in Ski-out - AceHost",
+  galleryTitle: "Marquise 2 Bed | Ski-In/Ski-Out",
+  photoAltPrefix: "Marquise 2 Bed | Ski-In/Ski-Out",
 };
 
 export default listing;

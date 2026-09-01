@@ -21,13 +21,13 @@ const listing: ListingData = {
   "/optimized/luxury-3-bed-views/image-16.jpg"
 ],
   seo: {
-    title: "Luxury 3-Bed | Stunning Views - AceHost",
-    description: "Contemporary 3-bedroom retreat with stunning views of Chateau Fairmont and mountains, steps from Whistler Village and slopes. Features hot tub, sauna, gym, pool, and more.",
+    title: "Marquise Penthouse | Ski-In/Out | 3-Bed | Views - AceHost",
+    description: "Spacious 1,100 sq. ft. Marquise penthouse on Blackcomb with Fairmont and mountain views, 2 bedrooms, fireplace, private patio, A/C, glass-domed hot tub, pool, sauna and gym.",
   },
   header:   {
-      "title": "Luxury 3-Bed | Stunning Views",
+      "title": "Marquise Penthouse | Ski-In/Out | 3-Bed | Views",
       "guests": 6,
-      "bedrooms": 2.5,
+      "bedrooms": 2,
       "bathrooms": 2,
       "priceRange": "Nightly Price Range: $400-$1,150+",
       "beds": 3,
@@ -35,8 +35,8 @@ const listing: ListingData = {
       "holidayPrice": "$1000-$1280+ Nightly | Christmas & NY",
       "airbnbLink": "https://www.airbnb.ca/rooms/1461637483646115205?guests=1&adults=1&s=67&unique_share_id=9b6640b9-138d-4627-bea4-cb2155e32c72"
   },
-  galleryTitle: "Luxury 3-Bed",
-  photoAltPrefix: "Luxury 3-Bed",
+  galleryTitle: "Marquise Penthouse",
+  photoAltPrefix: "Marquise Penthouse",
 };
 
 export default listing;

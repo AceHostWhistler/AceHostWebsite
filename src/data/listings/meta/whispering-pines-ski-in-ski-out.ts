@@ -40,11 +40,11 @@ const listing: ListingData = {
   "/photos/properties/The Aspens/4800-Spearhead-Drive-35.JPG"
 ],
   seo: {
-    title: "The Aspens | 2-Bed Ski in/Out - AceHost",
-    description: "Ultimate ski-in, ski-out in Aspens. Ground-level unit steps from hot tub/pool, Blackcomb Mountain, and ski lifts. Main & Upper Whistler Village within walking distance. Nearby biking trails, 2 golf courses, and Lost Lake.",
+    title: "The Aspens | On-Hill Ski-In/Out | Hot Tubs | 2 BDR - AceHost",
+    description: "Ground-floor ski-in/ski-out at The Aspens on Blackcomb Mountain. Closest unit to pool and three hot tubs, king primary suite, twin bedroom, patio BBQ, and easy walk to Upper Village and Whistler Village.",
   },
   header:   {
-      "title": "The Aspens | 2-Bed Ski in/Out",
+      "title": "The Aspens | On-Hill Ski-In/Out | Hot Tubs | 2 BDR",
       "guests": 4,
       "bedrooms": 2,
       "bathrooms": 2,
