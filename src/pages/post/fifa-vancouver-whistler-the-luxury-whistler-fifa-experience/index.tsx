@@ -78,7 +78,7 @@ const kadenwoodHomes: FeaturedProperty[] = [
     description:
       "A beautiful Kadenwood option that blends a warm mountain feel with elevated design and privacy.",
     photos: [
-      "/photos/properties/Slopeside Kadenwood/01-2945 Kadenwood Dr 01.jpg",
+      "/photos/properties/Slopeside Kadenwood/01-2945 Slope Side 01.jpg",
       "/photos/properties/Slopeside Kadenwood/02-2945 Kadenwood Dr 02.jpg",
       "/photos/properties/Slopeside Kadenwood/03-2945 Kadenwood Dr 03.jpg",
       "/photos/properties/Slopeside Kadenwood/04-2945 Kadenwood Dr 04.jpg",

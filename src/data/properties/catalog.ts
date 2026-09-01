@@ -424,7 +424,7 @@ export const propertyCategories: PropertyCategory[] = [
             id: "slopeside-villa",
             name: "Slope Side Chalet | Ski-In/Out | Hot Tub",
             images: [
-              "/photos/properties/Slopeside Kadenwood/01-2945 Kadenwood Dr 01.jpg",
+              "/photos/properties/Slopeside Kadenwood/01-2945 Slope Side 01.jpg",
               "/photos/properties/Slopeside Kadenwood/03-2945 Kadenwood Dr 03.jpg",
               "/photos/properties/Slopeside Kadenwood/10-2945 Kadenwood Dr 10.jpg",
             ],

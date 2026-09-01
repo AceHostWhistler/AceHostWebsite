@@ -55,7 +55,7 @@ export const kadenwoodProperties: Whistler28Property[] = [
     name: "Slope Side Chalet | Ski-In/Out | Hot Tub",
     description:
       "A warm seven-bedroom Kadenwood chalet with direct ski access, a private hot tub, steam shower, gym, and classic luxury mountain-home atmosphere.",
-    image: "/photos/properties/Slopeside Kadenwood/01-2945 Kadenwood Dr 01.jpg",
+    image: "/photos/properties/Slopeside Kadenwood/01-2945 Slope Side 01.jpg",
     listingHref: "/listings/slopeside-villa-kadenwood",
     bookUrl:
       "https://www.airbnb.ca/rooms/826226399590812184?guests=1&adults=1&s=67&unique_share_id=aab7fbd3-669a-461d-b913-c15cf257b4c0",

@@ -453,7 +453,7 @@ export default function BlogPost() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 not-prose">
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Slopeside Kadenwood/01-2945 Kadenwood Dr 01.jpg"
+                    src="/photos/properties/Slopeside Kadenwood/01-2945 Slope Side 01.jpg"
                     alt="Slope Side Chalet Kadenwood"
                     fill
                     className="object-cover"
