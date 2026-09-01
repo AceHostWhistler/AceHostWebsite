@@ -1,8 +1,7 @@
 import React from "react";
-import Image from "next/image";
 import type { ListingDetailsProps } from "../types";
 
-export default function TimberHavenLuxurySkiInSkiOutKadenwoodDetails({ photos }: ListingDetailsProps) {
+export default function TimberHavenLuxurySkiInSkiOutKadenwoodDetails(_props: ListingDetailsProps) {
   return (
     <>
       <div className="max-w-6xl mx-auto px-4" id="details">
@@ -25,27 +24,6 @@ export default function TimberHavenLuxurySkiInSkiOutKadenwoodDetails({ photos }:
         <p className="text-gray-800 mb-6 max-w-4xl">
           Outside, enjoy a private hot tub, outdoor dining area, and peaceful alpine surroundings. In the winter, guests can take advantage of Kadenwood’s exceptional ski-in/ski-out access via the Peak to Creek run, along with the private residents-only gondola and groomed ski trail access. In the summer, the home is a beautiful base for hiking, biking, golfing, lake days, and relaxing in one of Whistler’s most exclusive communities.
         </p>
-
-        <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-10">Inside Timber Haven</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 max-w-5xl">
-          {[
-            "/photos/properties/Timber Haven John Harris/Timber Haven cover.png",
-            "/photos/properties/Timber Haven John Harris/03 - 20260506 A7M4 03 A1_00165.jpg",
-            "/photos/properties/Timber Haven John Harris/20 - 20260506 A7M4 02 A1_09946.jpg",
-            "/photos/properties/Timber Haven John Harris/8D487CA0-D240-4A51-AC47-9B142E4DEE05.PNG.jpg",
-          ].map((photo, index) => (
-            <div key={photo} className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-md bg-gray-100">
-              <Image
-                src={photo}
-                alt={`Timber Haven description photo ${index + 1}`}
-                fill
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 560px"
-                className="object-cover"
-                loading="lazy"
-              />
-            </div>
-          ))}
-        </div>
 
         <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-10">Bedroom/Home Layout:</h3>
         <p className="text-gray-800 mb-6 max-w-4xl">
