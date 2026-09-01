@@ -142,14 +142,14 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     imageAlt: "Luxury six-bedroom Ravencrest condo rental in Blueberry Hill Whistler",
   },
   {
-    name: "Luxury 3-Bed Whistler Village | Private Hot Tub",
+    name: "Whistler Village - Private Hot Tub - Walk to Hill",
     priceRange: "$500-$2,000 per night (seasonal)",
     stats:
-      "Sleeps 8 | 3 Bedrooms | 5 Beds | 3 Bathrooms | Private Hot Tub | Ski-in/Ski-out | Village Location",
+      "Sleeps 8 | 3 Bedrooms | 5 Beds | 3 Bathrooms | Private Hot Tub | Walk to Gondola | Village Location",
     paragraphs: [
-      "Valhalla Peaks puts you in the heart of Whistler Village with ski-in/ski-out access, a private balcony hot tub, and three full bedrooms – a rare combination for a village apartment. Chef's kitchen, gas fireplace, and two underground parking stalls make this feel more like a boutique residence than a standard rental.",
-      "After skiing, soak in your private hot tub with peak views, then walk to dinner without touching your car. In-suite laundry, ski and bike storage, and portable AC for summer months round out a setup built for longer stays and discerning groups who want village energy without sacrificing privacy.",
-      "With keyless entry and AceHost support throughout your stay, Valhalla Peaks is ideal for families or friends who want lift access, hot tub time, and village nightlife all within a few minutes' walk.",
+      "Valhalla Peaks is a spacious 3-bedroom Whistler Village townhome at the north end of the Village, directly across from Marketplace and Fresh St. Market. A private balcony hot tub, gas fireplace, and three full bathrooms give groups the space and privacy of a home with everything just outside the door.",
+      "The Village Stroll begins steps away, with restaurants, shops, après-ski, and the Whistler Village Gondola approximately a 12-minute walk. After skiing, soak in your private hot tub with peak views, then walk to dinner without touching your car.",
+      "With underground parking, ski and bike storage, portable AC for summer months, and AceHost support throughout your stay, Valhalla Peaks is ideal for families or friends who want village convenience, hot tub time, and a quieter residential feel.",
     ],
     airbnbHref:
       "https://www.airbnb.ca/rooms/1693450379764005787?guests=1&adults=1&s=67&unique_share_id=bd20bf84-b138-4958-9dc8-9128130a2028",

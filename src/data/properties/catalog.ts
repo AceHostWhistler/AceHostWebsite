@@ -1542,7 +1542,7 @@ export const propertyCategories: PropertyCategory[] = [
           },
           {
             id: "valhalla-unit-33-village",
-            name: "Luxury 3-Bed Whistler Village | Private Hot Tub",
+            name: "Whistler Village - Private Hot Tub - Walk to Hill",
             images: [
               "/photos/properties/Valhalla Unit 33 Village/Living room angle 3.png",
               "/photos/properties/Valhalla Unit 33 Village/Living room brighter.png",
@@ -1554,19 +1554,19 @@ export const propertyCategories: PropertyCategory[] = [
             beds: 5,
             location: "Whistler Village, Whistler",
             description:
-              "Experience the ultimate Whistler escape at Valhalla Peaks! This apartment offers ski-in/ski-out access and is steps from the lifts, shops, and restaurants. Enjoy a private hot tub, a cozy fireplace, and a chef's kitchen.",
+              "Welcome to Valhalla Peaks, a spacious 3-bedroom Whistler Village townhome with a private hot tub, gas fireplace, underground parking, and room for up to 8 guests. Marketplace and Fresh St. Market are across the street, with the Village Stroll and lifts nearby.",
             features: [
-              "Ski-in/Ski-out Access",
+              "Walk to Whistler Village Gondola",
               "Private Balcony Hot Tub",
               "Gas Fireplace",
-              "Chef's Kitchen",
-              "Underground Parking (2 stalls)",
+              "Fully Equipped Kitchen",
+              "Underground Parking",
               "Ski & Bike Storage",
               "In-Suite Laundry",
-              "Portable AC (May–Nov)",
+              "Portable AC (May 15–Oct 15)",
             ],
             highlights: [
-              "Heart of Whistler Village",
+              "North End of Whistler Village",
               "Private Hot Tub with Peak Views",
               "Three Bedrooms & Three Bathrooms",
               "Keyless Entry & AceHost Support",
@@ -1578,7 +1578,7 @@ export const propertyCategories: PropertyCategory[] = [
             airbnbLink:
               "https://www.airbnb.ca/rooms/1693450379764005787?guests=1&adults=1&s=67&unique_share_id=bd20bf84-b138-4958-9dc8-9128130a2028",
             isPetFriendly: false,
-            isSkiInSkiOut: true,
+            isSkiInSkiOut: false,
           },
           {
             id: "luxury-3-bed-stunning-views",

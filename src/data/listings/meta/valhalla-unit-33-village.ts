@@ -38,12 +38,12 @@ const listing: ListingData = {
     `${base}/32 - 20260522 A7M4 01 A1_06218.jpg`,
   ],
   seo: {
-    title: "Luxury 3-Bed Whistler Village | Private Hot Tub | AceHost",
+    title: "Whistler Village - Private Hot Tub - Walk to Hill | AceHost",
     description:
-      "Experience the ultimate Whistler escape at Valhalla Peaks. Ski-in/ski-out access, private hot tub, chef's kitchen, and three bedrooms in the heart of Whistler Village.",
+      "Welcome to Valhalla Peaks, a spacious 3-bedroom Whistler Village townhome with a private hot tub, gas fireplace, underground parking, and room for up to 8 guests.",
   },
   header: {
-    title: "Luxury 3-Bed Whistler Village | Private Hot Tub",
+    title: "Whistler Village - Private Hot Tub - Walk to Hill",
     guests: 8,
     bedrooms: 3,
     beds: 5,
@@ -59,10 +59,10 @@ const listing: ListingData = {
   structuredData: {
     "@context": "https://schema.org/",
     "@type": "Product",
-    name: "Luxury 3-Bed Whistler Village | Private Hot Tub",
+    name: "Whistler Village - Private Hot Tub - Walk to Hill",
     image: `${base}/Living room angle 3.png`,
     description:
-      "Valhalla Peaks apartment in Whistler Village with ski-in/ski-out access, private hot tub, and three bedrooms.",
+      "Valhalla Peaks townhome in Whistler Village with a private hot tub, three bedrooms, underground parking, and walk-to-lift access.",
     sku: "valhalla-unit-33-village",
     brand: {
       "@type": "Brand",
@@ -102,8 +102,8 @@ const listing: ListingData = {
     },
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "12",
+      ratingValue: "4.85",
+      reviewCount: "13",
     },
   },
 };

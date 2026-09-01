@@ -258,11 +258,11 @@ export const listingAmenities: Record<string, string[]> = {
     "AceHost VIP concierge",
   ],
   "valhalla-unit-33-village": [
-    "Ski-in / ski-out",
+    "Walk to Village gondola",
     "Private hot tub",
     "Whistler Village centre",
     "Fireplace",
-    "Chef's kitchen",
+    "Fully equipped kitchen",
     "3 bed · 3 bath · parking",
   ],
   "wedge-mountain-lodge-spa": [

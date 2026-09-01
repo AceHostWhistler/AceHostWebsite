@@ -253,9 +253,9 @@ export const townhomeProperties: Whistler28Property[] = [
   },
   {
     number: 24,
-    name: "Luxury 3-Bed Whistler Village | Private Hot Tub",
+    name: "Whistler Village - Private Hot Tub - Walk to Hill",
     description:
-      "A central three-bedroom Valhalla townhome with a private hot tub, three bathrooms, underground parking, and the Village Stroll nearby.",
+      "A spacious three-bedroom Valhalla townhome at the north end of Whistler Village with a private hot tub, three bathrooms, underground parking, and walk-to-lift access.",
     image: "/photos/properties/Valhalla Unit 33 Village/Living room angle 3.png",
     listingHref: "/listings/valhalla-unit-33-village",
     bookUrl:
