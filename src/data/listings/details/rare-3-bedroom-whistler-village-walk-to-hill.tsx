@@ -1,206 +1,583 @@
 import React from "react";
 import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Image from "next/image";
-import Link from "next/link";
 import { FaBed, FaBath } from "react-icons/fa";
 import type { ListingDetailsProps } from "../types";
 
-export default function Rare3BedroomWhistlerVillageWalkToHillDetails({ photos }: ListingDetailsProps) {
+const photoTourRooms: Array<{ title: string; detail?: string }> = [
+  { title: "Living room", detail: "Queen bed" },
+  { title: "Full kitchen" },
+  { title: "Dining area" },
+  { title: "Bedroom 1", detail: "Queen bed" },
+  { title: "Bedroom 2", detail: "Double bed" },
+  { title: "Bedroom 3", detail: "King bed" },
+  { title: "Full bathroom 1" },
+  { title: "Full bathroom 2" },
+  { title: "Full bathroom 3" },
+  { title: "Laundry area" },
+  { title: "Exterior", detail: "Balcony Private Hot Tub with Mountain Views" },
+  { title: "Additional photos" },
+];
+
+const amenityGroups: Array<{
+  title: string;
+  items: Array<{ title: string; subtitle?: string }>;
+}> = [
+  {
+    title: "Scenic views",
+    items: [{ title: "City skyline view" }],
+  },
+  {
+    title: "Bathroom",
+    items: [
+      { title: "Hair dryer" },
+      { title: "Cleaning products" },
+      { title: "Shampoo" },
+      { title: "Conditioner" },
+      { title: "Body soap" },
+      { title: "Hot water" },
+      { title: "Shower gel" },
+    ],
+  },
+  {
+    title: "Bedroom and laundry",
+    items: [
+      { title: "Washer" },
+      { title: "Free dryer – In unit" },
+      {
+        title: "Essentials",
+        subtitle: "Towels, bed sheets, soap, and toilet paper",
+      },
+      { title: "Hangers" },
+      { title: "Bed linens" },
+      { title: "Extra pillows and blankets" },
+      { title: "Iron" },
+      { title: "Drying rack for clothing" },
+      { title: "Mosquito net" },
+      { title: "Clothing storage: closet" },
+    ],
+  },
+  {
+    title: "Entertainment",
+    items: [{ title: "TV" }],
+  },
+  {
+    title: "Family",
+    items: [
+      { title: "Pack ’n play / Travel crib" },
+      { title: "Children’s dinnerware" },
+      { title: "Fireplace guards" },
+    ],
+  },
+  {
+    title: "Heating and cooling",
+    items: [
+      { title: "Portable air conditioning" },
+      { title: "Indoor fireplace" },
+      { title: "Ceiling fan" },
+      { title: "Central heating" },
+    ],
+  },
+  {
+    title: "Home safety",
+    items: [
+      { title: "Smoke alarm" },
+      { title: "Carbon monoxide alarm" },
+      { title: "Fire extinguisher" },
+      { title: "First aid kit" },
+    ],
+  },
+  {
+    title: "Internet and office",
+    items: [{ title: "Wifi" }, { title: "Dedicated workspace" }],
+  },
+  {
+    title: "Kitchen and dining",
+    items: [
+      {
+        title: "Kitchen",
+        subtitle: "Space where guests can cook their own meals",
+      },
+      { title: "Refrigerator" },
+      { title: "Microwave" },
+      {
+        title: "Cooking basics",
+        subtitle: "Pots and pans, oil, salt, and pepper",
+      },
+      {
+        title: "Dishes and silverware",
+        subtitle: "Bowls, chopsticks, plates, cups, etc.",
+      },
+      { title: "Mini fridge" },
+      { title: "Freezer" },
+      { title: "Dishwasher" },
+      { title: "Stove" },
+      { title: "Oven" },
+      { title: "Hot water kettle" },
+      {
+        title: "Coffee maker: drip coffee maker, espresso machine, Nespresso",
+      },
+      { title: "Wine glasses" },
+      { title: "Toaster" },
+      { title: "Blender" },
+      { title: "Rice cooker" },
+      { title: "Dining table" },
+    ],
+  },
+  {
+    title: "Location features",
+    items: [
+      {
+        title: "Ski-in/Ski-out",
+        subtitle:
+          "Guests can access ski lifts without driving or taking paid transportation",
+      },
+      {
+        title: "Private entrance",
+        subtitle: "Separate street or building entrance",
+      },
+      { title: "Laundromat nearby" },
+    ],
+  },
+  {
+    title: "Outdoor",
+    items: [
+      { title: "Private patio or balcony" },
+      { title: "Fire pit" },
+      { title: "Outdoor furniture" },
+      { title: "Outdoor dining area" },
+    ],
+  },
+  {
+    title: "Parking and facilities",
+    items: [
+      { title: "Free parking garage on premises" },
+      { title: "Hot tub" },
+    ],
+  },
+  {
+    title: "Services",
+    items: [
+      {
+        title: "Luggage drop-off allowed",
+        subtitle:
+          "For guests' convenience when they have early arrival or late departure",
+      },
+      {
+        title: "Long-term stays allowed",
+        subtitle: "Allow stay for 28 days or more",
+      },
+      { title: "Self check-in" },
+      { title: "Smart lock" },
+      { title: "Cleaning available during stay" },
+    ],
+  },
+];
+
+export default function Rare3BedroomWhistlerVillageWalkToHillDetails({
+  photos,
+}: ListingDetailsProps) {
   return (
     <>
       <div className="max-w-6xl mx-auto px-4" id="details">
-                  <p className="text-gray-800 mb-16 max-w-4xl">
-                    A rare gem in the heart of Whistler Village! This 3-bedroom chalet-style retreat offers two oversized wraparound balconies with breathtaking mountain views, your own private hot tub (the only one in the entire complex), and 2 guaranteed underground parking spots.
-                    <br /><br />
-                    Spread across two spacious floors, you'll enjoy the cozy charm of a log chalet paired with modern luxury furnishings, a fireplace, and unbeatable convenience, all just steps from restaurants, lifts, and shops.
-                  </p>
+        <p className="text-gray-800 mb-16 max-w-4xl">
+          A rare Whistler Village chalet with the space and privacy of a home,
+          just steps from restaurants, shops and the mountain. Spread across two
+          levels, this 3-bedroom retreat features oversized wraparound
+          balconies, mountain views, a private hot tub and cozy fireplace. One
+          of its standout features is two guaranteed designated underground
+          parking spaces, exceptionally rare for a central Village property, so
+          groups arriving in multiple vehicles can park with ease and walk
+          almost everywhere.
+        </p>
 
-                  {/* The Space Section */}
-                  <div className="flex flex-col mb-20">
-                    <div className="flex flex-col md:flex-row mb-10">
-                      <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
-                        <div className="relative aspect-[4/3] mb-2">
-                          <Image
-                            src={getGalleryPhotoSrc(photos[0])}
-                            alt="Rare 3-bedroom Interior"
-                            width={1920}
-                            height={1080}
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </div>
-                      <div className="md:w-1/2">
-                        <div className="flex items-center mb-6">
-                          <div className="bg-black text-white p-4 rounded-full mr-4">
-                            <svg
-                              width="24"
-                              height="24"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z"
-                                fill="white"
-                              />
-                            </svg>
-                          </div>
-                          <h2 className="text-2xl font-bold">The Space</h2>
-                        </div>
-                        <p className="text-gray-800 mb-6">
-                          Step into a true Whistler classic reimagined for modern comfort. This spacious two-level home features an inviting open-concept living and dining area, a warm indoor fireplace, and two massive wraparound balconies perfect for morning coffee or après-ski lounging.
-                          <br /><br />
-                          The highlight? Your own private hot tub with unobstructed Whistler Mountain views, a feature you won't find anywhere else in this complex.
-                        </p>
-                        <div className="flex items-center space-x-6 mb-6">
-                          <div className="flex items-center">
-                            <FaBed className="text-gray-600 mr-2" size={20} />
-                            <span className="text-gray-800">3 Bedrooms</span>
-                          </div>
-                          <div className="flex items-center">
-                            <FaBath className="text-gray-600 mr-2" size={20} />
-                            <span className="text-gray-800">3 Bathrooms</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    {/* Additional photos in description */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-                      <div className="relative aspect-[4/3]">
-                        <Image
-                          src={getGalleryPhotoSrc(photos[8])}
-                          alt="Living space"
-                          width={1920}
-                          height={1080}
-                          className="w-full h-full object-cover rounded-lg"
-                        />
-                      </div>
-                      <div className="relative aspect-[4/3]">
-                        <Image
-                          src={getGalleryPhotoSrc(photos[16])}
-                          alt="Hot tub view"
-                          width={1920}
-                          height={1080}
-                          className="w-full h-full object-cover rounded-lg"
-                        />
-                      </div>
-                      <div className="relative aspect-[4/3]">
-                        <Image
-                          src={getGalleryPhotoSrc(photos[24])}
-                          alt="Bedroom"
-                          width={1920}
-                          height={1080}
-                          className="w-full h-full object-cover rounded-lg"
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Bedroom Layout Section */}
-                  <div className="mb-20">
-                    <h2 className="text-2xl font-bold mb-6">Bedroom Layout</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                      <div>
-                        <ul className="list-disc pl-5 space-y-2 max-w-4xl">
-                          <li>Primary Bedroom: King bed</li>
-                          <li>Second Bedroom: Queen bed</li>
-                          <li>Third Bedroom: Full bed</li>
-                          <li>Living Room: Queen pullout sofa</li>
-                        </ul>
-                        <div className="mt-6 relative aspect-[4/3]">
-                          <Image
-                            src={getGalleryPhotoSrc(photos[33])}
-                            alt="Primary bedroom"
-                            width={1920}
-                            height={1080}
-                            className="w-full h-full object-cover rounded-lg"
-                          />
-                        </div>
-                      </div>
-                      <div>
-                        <p className="text-gray-800 mb-6">
-                          With luxury touches throughout, this home offers everything you need for an unforgettable Whistler stay, style, comfort, and location all in one.
-                        </p>
-                        <div className="mt-6 relative aspect-[4/3]">
-                          <Image
-                            src={getGalleryPhotoSrc(photos[37])}
-                            alt="Second bedroom"
-                            width={1920}
-                            height={1080}
-                            className="w-full h-full object-cover rounded-lg"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Features Section */}
-                  <div className="mb-20">
-                    <h2 className="text-2xl font-bold mb-6">Features</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                      <div className="md:col-span-2">
-                        <ul className="list-disc pl-5 space-y-2 max-w-4xl">
-                          <li>Private hot tub (the only one in the entire complex)</li>
-                          <li>Two oversized wraparound balconies</li>
-                          <li>Breathtaking mountain views</li>
-                          <li>2 guaranteed underground parking spots</li>
-                          <li>Two spacious floors</li>
-                          <li>Cozy fireplace</li>
-                          <li>Modern luxury furnishings</li>
-                          <li>Steps from restaurants, lifts, and shops</li>
-                        </ul>
-                      </div>
-                      <div className="md:col-span-1">
-                        <div className="relative aspect-[3/4] h-full">
-                          <Image
-                            src={getGalleryPhotoSrc(photos[12])}
-                            alt="Balcony view"
-                            width={1920}
-                            height={1080}
-                            className="w-full h-full object-cover rounded-lg"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Location Section */}
-                  <div className="mb-20">
-                    <h2 className="text-2xl font-bold mb-6">Location</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                      <div className="md:col-span-2">
-                        <p className="text-gray-800">
-                          Located in the heart of Whistler Village, this property offers unbeatable convenience. You'll be just steps away from the best restaurants, shops, and most importantly, the ski lifts.
-                          <br /><br />
-                          Enjoy the perfect balance of village energy and mountain tranquility, with easy access to all that Whistler has to offer while still having your own private retreat to return to.
-                        </p>
-                      </div>
-                      <div className="md:col-span-1">
-                        <div className="relative aspect-[3/4] h-full">
-                          <Image
-                            src={getGalleryPhotoSrc(photos[20])}
-                            alt="View from property"
-                            width={1920}
-                            height={1080}
-                            className="w-full h-full object-cover rounded-lg"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Registration Details Section */}
-                  <div className="mb-20">
-                    <h2 className="text-2xl font-bold mb-6">Registration Details</h2>
-                    <p className="text-gray-800">
-                      <strong>Municipal registration number:</strong> 00015503<br />
-                      <strong>Provincial registration number:</strong> PM526794239
-                    </p>
-                  </div>
+        {/* The Space Section */}
+        <div className="flex flex-col mb-20">
+          <div className="flex flex-col md:flex-row mb-10">
+            <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
+              <div className="relative aspect-[4/3] mb-2">
+                <Image
+                  src={getGalleryPhotoSrc(photos[0])}
+                  alt="3-BDRM | Whistler Village | Walk to Hill | Hot Tub"
+                  width={1920}
+                  height={1080}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div className="md:w-1/2">
+              <div className="flex items-center mb-6">
+                <div className="bg-black text-white p-4 rounded-full mr-4">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z"
+                      fill="white"
+                    />
+                  </svg>
                 </div>
+                <h2 className="text-2xl font-bold">The space</h2>
+              </div>
+              <p className="text-gray-800 mb-6">
+                Step into a true Whistler classic reimagined for modern comfort.
+                Spread across two spacious levels, the home combines the privacy
+                and space of a chalet with one of the most convenient locations
+                in Whistler Village.
+                <br />
+                <br />
+                The main living level features an open-concept living and dining
+                area, cozy indoor fireplace and large windows that bring in
+                plenty of natural light. Comfortable furnishings create an easy
+                gathering space for families and groups after a day on the
+                mountain.
+                <br />
+                <br />
+                Two oversized wraparound balconies provide exceptional outdoor
+                living space with views over Whistler Village and the
+                surrounding mountains. The highlight is your own private hot
+                tub (with the best views), the only private hot tub in the
+                complex, creating the perfect place to unwind after skiing,
+                biking or exploring Whistler.
+              </p>
+              <div className="flex items-center space-x-6 mb-6">
+                <div className="flex items-center">
+                  <FaBed className="text-gray-600 mr-2" size={20} />
+                  <span className="text-gray-800">3 bedrooms</span>
+                </div>
+                <div className="flex items-center">
+                  <FaBath className="text-gray-600 mr-2" size={20} />
+                  <span className="text-gray-800">3 baths</span>
+                </div>
+              </div>
+              <p className="text-gray-800">
+                <strong>LOCATION:</strong>
+                <br />
+                One of the biggest advantages of this home is its location
+                directly in Whistler Village. Restaurants, cafés, shops and
+                groceries are all within easy walking distance, while the ski
+                lifts are approximately 7–10 minutes away on foot. Once you
+                arrive, most guests rarely need to use a vehicle during their
+                stay.
+                <br />
+                <br />
+                <strong>PARKING:</strong>
+                <br />
+                An especially rare feature for a 3-bedroom home in central
+                Whistler Village is that two designated underground parking
+                spaces are guaranteed with every stay. Many Village properties
+                offer only one stall, visitor parking subject to availability
+                or paid public parking, making two guaranteed stalls
+                particularly valuable for families and groups arriving in
+                multiple vehicles.
+                <br />
+                <br />
+                Both vehicles can remain securely parked underground while you
+                walk to the lifts, restaurants, shops and other Village
+                amenities. The underground parkade has approximately 7 feet of
+                clearance.
+                <br />
+                <br />
+                Private locked ski and bike storage is also available for guest
+                use.
+              </p>
+            </div>
+          </div>
 
-                {/* Photos Modal - Show all photos */}
+          {/* Additional photos in description */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+            <div className="relative aspect-[4/3]">
+              <Image
+                src={getGalleryPhotoSrc(photos[8])}
+                alt="Living room"
+                width={1920}
+                height={1080}
+                className="w-full h-full object-cover rounded-lg"
+              />
+            </div>
+            <div className="relative aspect-[4/3]">
+              <Image
+                src={getGalleryPhotoSrc(photos[16])}
+                alt="Exterior"
+                width={1920}
+                height={1080}
+                className="w-full h-full object-cover rounded-lg"
+              />
+            </div>
+            <div className="relative aspect-[4/3]">
+              <Image
+                src={getGalleryPhotoSrc(photos[24])}
+                alt="Bedroom 1"
+                width={1920}
+                height={1080}
+                className="w-full h-full object-cover rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Photo Tour Section */}
+        <div className="mb-20">
+          <h2 className="text-2xl font-bold mb-6">Photo tour</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-gray-800">
+            {photoTourRooms.map((room) => (
+              <div key={room.title}>
+                <strong>{room.title}</strong>
+                {room.detail ? (
+                  <span className="block text-sm text-gray-600">
+                    {room.detail}
+                  </span>
+                ) : null}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Bedroom Layout Section */}
+        <div className="mb-20">
+          <h2 className="text-2xl font-bold mb-6">BEDROOM LAYOUT:</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <p className="text-gray-800 max-w-4xl">
+                Primary Bedroom:
+                <br />
+                Queen bed with private ensuite bathroom.
+                <br />
+                <br />
+                Bedroom 2:
+                <br />
+                King bed.
+                <br />
+                <br />
+                Bedroom 3:
+                <br />
+                Double bed.
+                <br />
+                <br />
+                Living Room:
+                <br />
+                Queen pullout sofa.
+              </p>
+              <div className="mt-6 relative aspect-[4/3]">
+                <Image
+                  src={getGalleryPhotoSrc(photos[33])}
+                  alt="Bedroom 3"
+                  width={1920}
+                  height={1080}
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
+            </div>
+            <div>
+              <p className="text-gray-800 mb-6">
+                <strong>SUMMER A/C:</strong>
+                <br />
+                Portable air-conditioning units are available from May 15
+                through October 15, with one located in the main living area and
+                one in the primary bedroom. Whistler evenings are generally
+                cooler, and the units provide additional comfort during warmer
+                summer periods.
+              </p>
+              <div className="mt-6 relative aspect-[4/3]">
+                <Image
+                  src={getGalleryPhotoSrc(photos[37])}
+                  alt="Bedroom 2"
+                  width={1920}
+                  height={1080}
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Guest Access Section */}
+        <div className="mb-20">
+          <h2 className="text-2xl font-bold mb-6">Guest access</h2>
+          <p className="text-gray-800 max-w-4xl">
+            Staircase: Please note there is one flight of stairs to enter the
+            unit. It is manageable and convenient for nearly all guests,
+            including most elderly guests, but we like to be upfront so there
+            are no surprises for anyone with mobility limitations or personal
+            preferences. The benefit here is that the home sits slightly
+            elevated, allowing for beautiful scenic views over Whistler Village
+            and the surrounding mountains.
+            <br />
+            <br />
+            The entire home and hot tub is private to your group/booking.
+          </p>
+        </div>
+
+        {/* Amenities and Services Section */}
+        <div className="mb-20">
+          <h2 className="text-2xl font-bold mb-6">What this place offers</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+              {amenityGroups.map((group) => (
+                <div key={group.title}>
+                  <h3 className="text-lg font-semibold mb-3">{group.title}</h3>
+                  <ul className="space-y-2 text-gray-800">
+                    {group.items.map((item) => (
+                      <li key={item.title}>
+                        <span>{item.title}</span>
+                        {item.subtitle ? (
+                          <span className="block text-sm text-gray-600">
+                            {item.subtitle}
+                          </span>
+                        ) : null}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <div className="md:col-span-1">
+              <div className="relative aspect-[3/4] h-full">
+                <Image
+                  src={getGalleryPhotoSrc(photos[12])}
+                  alt="City skyline view"
+                  width={1920}
+                  height={1080}
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Location Section */}
+        <div className="mb-20">
+          <h2 className="text-2xl font-bold mb-6">
+            Neighbourhood highlights
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="md:col-span-2">
+              <p className="text-gray-800">
+                Granite Court is ideally located in the heart of Whistler
+                Village, offering the convenience of a central location with a
+                quieter residential feel. Restaurants, cafés, shops and Village
+                amenities are all within easy walking distance, while the
+                Whistler and Blackcomb gondolas are approximately a 7–10 minute
+                walk from the home.
+                <br />
+                <br />
+                Fresh St. Market, Whistler’s largest and best full-service
+                grocery store, is directly across the street, making it
+                incredibly convenient to stock up on groceries, drinks, snacks
+                and anything else needed during your stay without having to
+                drive.
+                <br />
+                <br />
+                The location makes it especially easy to enjoy Whistler without
+                relying on a vehicle. Guests can walk to breakfast, après-ski,
+                dinner, shopping and the lifts, then return to a more peaceful
+                setting away from the busiest parts of the Village.
+                <br />
+                <br />
+                The Valley Trail and nearby pedestrian paths also make it easy
+                to explore Whistler on foot or by bike, with quick connections
+                toward Lost Lake, the golf course and surrounding
+                neighbourhoods. For guests arriving by car, the home’s two
+                guaranteed underground parking spaces are an especially
+                valuable bonus in such a central Village location.
+              </p>
+            </div>
+            <div className="md:col-span-1">
+              <div className="relative aspect-[3/4] h-full">
+                <Image
+                  src={getGalleryPhotoSrc(photos[20])}
+                  alt="Whistler, British Columbia, Canada"
+                  width={1920}
+                  height={1080}
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* House Rules Section */}
+        <div className="mb-20">
+          <h2 className="text-2xl font-bold mb-3">House rules</h2>
+          <p className="text-gray-800 max-w-4xl mb-6">
+            You’ll be staying in someone’s home, so please treat it with care
+            and respect.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-800">
+            <div>
+              <h3 className="text-lg font-semibold mb-3">
+                Checking in and out
+              </h3>
+              <ul className="space-y-2">
+                <li>Check-in after 4:00 p.m.</li>
+                <li>Checkout before 10:00 a.m.</li>
+                <li>Self check-in with smart lock</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-3">During your stay</h3>
+              <ul className="space-y-2">
+                <li>8 guests maximum</li>
+                <li>No pets</li>
+                <li>
+                  Quiet hours
+                  <span className="block text-sm text-gray-600">
+                    11:00 p.m.–7:00 a.m.
+                  </span>
+                </li>
+                <li>No parties or events</li>
+                <li>Commercial photography allowed</li>
+                <li>No smoking</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-3">Before you leave</h3>
+              <ul className="space-y-2">
+                <li>Throw trash away</li>
+                <li>Lock up</li>
+                <li>
+                  Additional requests
+                  <span className="block text-sm text-gray-600">
+                    We kindly ask that you place all dirty dishes and glassware
+                    into the dishwasher and leave the unit in a tidy condition
+                    upon departure.{" "}
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Safety and Property Section */}
+        <div className="mb-20">
+          <h2 className="text-2xl font-bold mb-3">Safety &amp; property</h2>
+          <p className="text-gray-800 max-w-4xl mb-6">
+            Avoid surprises by looking over these important details about your
+            host’s property.
+          </p>
+          <h3 className="text-lg font-semibold mb-3">Safety devices</h3>
+          <ul className="space-y-2 text-gray-800">
+            <li>Carbon monoxide alarm installed</li>
+            <li>Smoke alarm installed</li>
+          </ul>
+        </div>
+
+        {/* Registration Details Section */}
+        <div className="mb-20">
+          <h2 className="text-2xl font-bold mb-6">Registration details</h2>
+          <p className="text-gray-800">
+            Municipal registration number: 00015503
+            <br />
+            Provincial registration number: PM526794239
+          </p>
+        </div>
+      </div>
+
+      {/* Photos Modal - Show all photos */}
     </>
   );
 }

@@ -50,11 +50,11 @@ const listing: ListingData = {
   "/photos/properties/John 3-bed Granite Court/45 - 20251125 A7M4 01 A1_02251.jpg"
 ],
   seo: {
-    title: "Rare 3-bedroom | Whistler Village | Walk to Hill - AceHost",
-    description: "A rare gem in the heart of Whistler Village! This 3-bedroom chalet-style retreat offers two oversized wraparound balconies with breathtaking mountain views, your own private hot tub, and 2 guaranteed underground parking spots.",
+    title: "3-BDRM | Whistler Village | Walk to Hill | Hot Tub",
+    description: "A rare Whistler Village chalet with the space and privacy of a home, just steps from restaurants, shops and the mountain. Spread across two levels, this 3-bedroom retreat features oversized wraparound balconies, mountain views, a private hot tub and cozy fireplace. One of its standout features is two guaranteed designated underground parking spaces, exceptionally rare for a central Village property, so groups arriving in multiple vehicles can park with ease and walk almost everywhere.",
   },
   header:   {
-      "title": "Rare 3-bedroom | Whistler Village | Walk to Hill",
+      "title": "3-BDRM | Whistler Village | Walk to Hill | Hot Tub",
       "guests": 8,
       "bedrooms": 3,
       "bathrooms": 3,
@@ -64,8 +64,8 @@ const listing: ListingData = {
       "holidayPrice": "$2000-3400 Nightly | Christmas & NY",
       "airbnbLink": "https://www.airbnb.ca/rooms/1565322561889624431?guests=1&adults=1&s=67&unique_share_id=bcb85131-d1b0-4d39-9975-7580fd94a5d9"
   },
-  galleryTitle: "Rare 3-bedroom",
-  photoAltPrefix: "Rare 3-bedroom",
+  galleryTitle: "3-BDRM | Whistler Village | Walk to Hill | Hot Tub",
+  photoAltPrefix: "3-BDRM | Whistler Village | Walk to Hill | Hot Tub",
 };
 
 export default listing;

@@ -72,11 +72,11 @@ const listing: ListingData = {
   "/photos/properties/Wolverine Crescent/67 - 20251220 MM4P 01 0096.jpg"
 ],
   seo: {
-    title: "The Nest | Ski in-Ski out - AceHost",
-    description: "Welcome to The Nest, this newly renovated 5-bedroom home is located right next to the ski hill. It's only a short walk to the mountain, and you can ski back to your front door.",
+    title: "The Nest | Ski-In-Out | 5BR | Prime Spot | Hot Tub",
+    description: "Welcome to The Nest, a newly renovated 5-bedroom mountain home in Whistler’s peaceful Nordic neighbourhood, ideally positioned between Creekside and Whistler Village. Enjoy mountain views, beautiful sunsets, spacious living areas, high-end furnishings and a private hot tub after a day on the slopes. Ski access is only a short walk away, with the option to ski back toward the home, while Creekside Village, restaurants, cafés, groceries and the gondola are just a few minutes away by car.",
   },
   header:   {
-      "title": "The Nest | Ski-in/Ski-out",
+      "title": "The Nest | Ski-In-Out | 5BR | Prime Spot | Hot Tub",
       "guests": 11,
       "bedrooms": 5,
       "bathrooms": 4.5,
@@ -84,8 +84,8 @@ const listing: ListingData = {
       "priceRange": "Monthly Price Range: $18,000-$29,000",
       "airbnbLink": "https://www.airbnb.ca/rooms/763259660349118016?guests=1&adults=1&s=67&unique_share_id=b5240c14-ecb8-4f5a-9c3c-f3861874c7e0"
   },
-  galleryTitle: "The Nest",
-  photoAltPrefix: "The Nest",
+  galleryTitle: "The Nest | Ski-In-Out | 5BR | Prime Spot | Hot Tub",
+  photoAltPrefix: "The Nest | Ski-In-Out | 5BR | Prime Spot | Hot Tub",
 };
 
 export default listing;

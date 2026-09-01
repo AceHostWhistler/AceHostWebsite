@@ -1,24 +1,260 @@
 import React from "react";
 import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Image from "next/image";
-import Link from "next/link";
 import type { ListingDetailsProps } from "../types";
+
+const photoTourEntries = [
+  { name: "Living room", details: [] },
+  { name: "Full kitchen", details: [] },
+  { name: "Dining area", details: [] },
+  { name: "Bedroom 1", details: ["King bed"] },
+  { name: "Bedroom 2", details: ["King bed"] },
+  { name: "Bedroom 3", details: ["King bed"] },
+  { name: "Bedroom 4", details: ["2 single beds"] },
+  { name: "Bedroom 5", details: ["King bed", "Single bed"] },
+  { name: "Full bathroom 1", details: [] },
+  { name: "Full bathroom 2", details: [] },
+  { name: "Full bathroom 3", details: [] },
+  { name: "Full bathroom 4", details: [] },
+  { name: "Half bathroom", details: [] },
+  { name: "Patio", details: [] },
+  { name: "Balcony", details: [] },
+  { name: "Laundry area", details: [] },
+  { name: "Garage", details: [] },
+  { name: "Exterior", details: [] },
+  { name: "Hot tub", details: [] },
+  { name: "Additional photos", details: [] },
+] as const;
+
+const listingHighlights = [
+  {
+    headline: "Self check-in",
+    body: "Check yourself in with the smartlock.",
+  },
+  {
+    headline: "Beautiful area",
+    body: "This home is in a scenic location.",
+  },
+  {
+    headline: "Dedicated workspace",
+    body: "A room with wifi that’s well-suited for working.",
+  },
+] as const;
+
+const amenityGroups = [
+  {
+    name: "Bathroom",
+    amenities: [
+      { label: "Bathtub" },
+      { label: "Hair dryer" },
+      { label: "Cleaning products" },
+      { label: "Shampoo" },
+      { label: "Conditioner" },
+      { label: "Body soap" },
+      { label: "Hot water" },
+      { label: "Shower gel" },
+    ],
+  },
+  {
+    name: "Bedroom and laundry",
+    amenities: [
+      { label: "Washer" },
+      { label: "Free dryer – In unit" },
+      {
+        label: "Essentials",
+        subtitle: "Towels, bed sheets, soap, and toilet paper",
+      },
+      { label: "Hangers" },
+      { label: "Bed linens" },
+      { label: "Extra pillows and blankets" },
+      { label: "Room-darkening shades" },
+      { label: "Iron" },
+      { label: "Drying rack for clothing" },
+      { label: "Clothing storage" },
+    ],
+  },
+  { name: "Entertainment", amenities: [{ label: "TV" }] },
+  {
+    name: "Family",
+    amenities: [
+      { label: "Crib" },
+      { label: "High chair" },
+      { label: "Children’s dinnerware" },
+    ],
+  },
+  {
+    name: "Heating and cooling",
+    amenities: [
+      { label: "Portable air conditioning" },
+      { label: "Indoor fireplace: electric, gas" },
+      { label: "Ceiling fan" },
+      { label: "Central heating" },
+    ],
+  },
+  {
+    name: "Home safety",
+    amenities: [
+      { label: "Smoke alarm" },
+      { label: "Carbon monoxide alarm" },
+      { label: "Fire extinguisher" },
+      { label: "First aid kit" },
+    ],
+  },
+  {
+    name: "Internet and office",
+    amenities: [
+      { label: "Wifi" },
+      { label: "Dedicated workspace", subtitle: "In a room with a door" },
+    ],
+  },
+  {
+    name: "Kitchen and dining",
+    amenities: [
+      {
+        label: "Kitchen",
+        subtitle: "Space where guests can cook their own meals",
+      },
+      { label: "Refrigerator" },
+      { label: "Microwave" },
+      {
+        label: "Cooking basics",
+        subtitle: "Pots and pans, oil, salt, and pepper",
+      },
+      {
+        label: "Dishes and silverware",
+        subtitle: "Bowls, chopsticks, plates, cups, etc.",
+      },
+      { label: "Freezer" },
+      { label: "Dishwasher" },
+      { label: "Stove" },
+      { label: "Oven" },
+      { label: "Hot water kettle" },
+      { label: "Coffee maker: drip coffee maker, Nespresso" },
+      { label: "Wine glasses" },
+      { label: "Toaster" },
+      {
+        label: "Barbecue utensils",
+        subtitle: "Grill, charcoal, bamboo skewers/iron skewers, etc.",
+      },
+      { label: "Dining table" },
+    ],
+  },
+  {
+    name: "Location features",
+    amenities: [
+      {
+        label: "Ski-in/ski-out – on a ski run",
+        subtitle:
+          "Guests can access ski lifts without driving or taking paid transportation",
+      },
+    ],
+  },
+  {
+    name: "Outdoor",
+    amenities: [
+      { label: "Private patio or balcony" },
+      {
+        label: "Private backyard",
+        subtitle: "An open space on the property usually covered in grass",
+      },
+      { label: "Fire pit" },
+      { label: "Outdoor furniture" },
+      { label: "Outdoor dining area" },
+      { label: "BBQ grill" },
+    ],
+  },
+  {
+    name: "Parking and facilities",
+    amenities: [
+      { label: "Free parking garage on premises" },
+      { label: "Free street parking" },
+      { label: "Private hot tub" },
+    ],
+  },
+  {
+    name: "Services",
+    amenities: [
+      {
+        label: "Pets allowed",
+        subtitle: "Assistance animals are always allowed",
+      },
+      {
+        label: "Luggage drop-off allowed",
+        subtitle:
+          "For guests' convenience when they have early arrival or late departure",
+      },
+      {
+        label: "Long-term stays allowed",
+        subtitle: "Allow stay for 28 days or more",
+      },
+      { label: "Self check-in" },
+      { label: "Smart lock" },
+    ],
+  },
+  { name: "Not included", amenities: [{ label: "Private entrance" }] },
+] as const;
+
+const houseRuleGroups = [
+  {
+    name: "Checking in and out",
+    rules: [
+      { label: "Check-in after 4:00 p.m." },
+      { label: "Checkout before 10:00 a.m." },
+      { label: "Self check-in with smart lock" },
+    ],
+  },
+  {
+    name: "During your stay",
+    rules: [
+      { label: "11 guests maximum" },
+      { label: "Pets allowed" },
+      { label: "Quiet hours", subtitle: "10:00 p.m.–7:00 a.m." },
+      { label: "No parties or events" },
+      { label: "Commercial photography allowed" },
+      { label: "No smoking" },
+    ],
+  },
+  {
+    name: "Before you leave",
+    rules: [
+      { label: "Throw trash away" },
+      { label: "Turn things off" },
+      { label: "Lock up" },
+      {
+        label: "Additional requests",
+        subtitle:
+          "We kindly ask that you place all dirty dishes and glassware into the dishwasher and leave the home in a tidy condition upon departure.",
+      },
+    ],
+  },
+] as const;
 
 export default function TheNestSkiInSkiOutDetails({ photos }: ListingDetailsProps) {
   return (
     <>
       <div className="max-w-6xl mx-auto px-4" id="details">
                   <p className="text-gray-800 mb-16 max-w-4xl">
-                    Welcome to The Nest, this newly renovated 5-bedroom home is
-                    located right next to the ski hill. It's only a short walk to
-                    the mountain, and you can ski back to your front door. This rare
-                    find is situated in the prestigious and quiet neighborhood of
-                    Nordic. Experience majestic mountain views and a gorgeous sunset,
-                    while soaking in the hot tub after skiing.
-                    <br />
-                    <br />
-                    <span className="font-bold">Long-term rentals 90+ days only</span>
+                    Welcome to The Nest, a newly renovated 5-bedroom mountain home in
+                    Whistler’s peaceful Nordic neighbourhood, ideally positioned
+                    between Creekside and Whistler Village. Enjoy mountain views,
+                    beautiful sunsets, spacious living areas, high-end furnishings
+                    and a private hot tub after a day on the slopes. Ski access is
+                    only a short walk away, with the option to ski back toward the
+                    home, while Creekside Village, restaurants, cafés, groceries and
+                    the gondola are just a few minutes away by car.
                   </p>
+
+                  <div className="grid gap-4 sm:grid-cols-3 mb-16">
+                    {listingHighlights.map((highlight) => (
+                      <div
+                        key={highlight.headline}
+                        className="rounded-lg border border-gray-200 p-4"
+                      >
+                        <h2 className="font-bold">{highlight.headline}</h2>
+                        <p className="text-gray-800 mt-1">{highlight.body}</p>
+                      </div>
+                    ))}
+                  </div>
 
                   {/* The Space Section */}
                   <div className="flex flex-col md:flex-row mb-20">
@@ -48,14 +284,37 @@ export default function TheNestSkiInSkiOutDetails({ photos }: ListingDetailsProp
                             />
                           </svg>
                         </div>
-                        <h2 className="text-2xl font-bold">The Space</h2>
+                        <h2 className="text-2xl font-bold">The space</h2>
                       </div>
                       <p className="text-gray-800 mb-6">
-                        Lounge on brand-new high-end furniture, ideal for entertaining
-                        a large group or big family. Enjoy ample space in the
-                        open-plan living room with a fireplace that adds a touch of
-                        coziness for an evening well spent. Finish your day on the
-                        mountain with a soak in the private hot tub!
+                        The Nest is designed for families and groups who want plenty
+                        of space while staying close to the mountain. The open-concept
+                        main living area features high-end furnishings, a gas
+                        fireplace and generous seating, creating a comfortable
+                        gathering space after a day of skiing or exploring Whistler.
+                      </p>
+                      <p className="text-gray-800 mb-6">
+                        Step outside to the private hot tub and take in the
+                        surrounding mountain setting and evening sunsets. Multiple
+                        patios and large windows throughout the home bring in natural
+                        light and make the most of the alpine surroundings.
+                      </p>
+                      <p className="font-bold mb-2">
+                        LOCATION &amp; SKI ACCESS
+                      </p>
+                      <p className="text-gray-800 mb-6">
+                        The Nest is located in Nordic, a peaceful residential
+                        neighbourhood positioned between Creekside and Whistler
+                        Village. Ski access to the Dave Murray trail is approximately
+                        a 7-minute walk from the home, with the ability to ski toward
+                        Creekside and return close to the property.
+                      </p>
+                      <p className="text-gray-800 mb-6">
+                        Creekside Village is approximately a 3-minute drive away and
+                        offers the Creekside Gondola, groceries, cafés, restaurants,
+                        ski rentals and après-ski options. Whistler Village is
+                        approximately a 7-minute drive away. Local bus connections
+                        are also available for guests who prefer not to drive.
                       </p>
                     </div>
                   </div>
@@ -88,48 +347,58 @@ export default function TheNestSkiInSkiOutDetails({ photos }: ListingDetailsProp
                             />
                           </svg>
                         </div>
-                        <h2 className="text-2xl font-bold">Bedroom Layout</h2>
+                        <h2 className="text-2xl font-bold">BEDROOM LAYOUT:</h2>
                       </div>
 
                       <p className="font-bold mb-2">UPPER LEVEL:</p>
                       <p className="mb-4">
-                        <span className="font-medium">Bedroom 1:</span> Master
-                        bedroom, located at the end of the top floor corridor. It
-                        features a beautiful king-sized bed, large floor-to-ceiling
-                        windows that provide ample natural light, and a quaint outdoor
-                        private patio. The room also includes a cozy gas fireplace for
-                        added warmth and ambiance. The ensuite bathroom in this
-                        bedroom is modern and spacious, featuring a light-filled
-                        bathtub and a large shower.
+                        <span className="font-medium">
+                          Bedroom 1, Primary Suite:
+                        </span>
+                        <br />
+                        King bed, floor-to-ceiling windows, private patio and gas
+                        fireplace. The spacious ensuite bathroom includes a bathtub,
+                        large walk-in shower and double vanity.
                       </p>
                       <p className="mb-4">
-                        <span className="font-medium">Bedroom 2:</span> Situated next
-                        to the master bedroom, this tastefully furnished room also
-                        offers a stylish king-sized bed. It has private patio access
-                        so you can soak up the mountain views. The ensuite bathroom in
-                        this room features both a shower and a bath.
+                        <span className="font-medium">Bedroom 2:</span>
+                        <br />
+                        King bed with private patio access and ensuite bathroom
+                        featuring both a bathtub and shower.
                       </p>
                       <p className="mb-4">
-                        <span className="font-medium">Bedroom 3:</span> Adjacent to
-                        bedroom 2, this room boasts a comfortable king-sized bed. It
-                        also has an ensuite bathroom with a shower and a bathtub,
-                        providing convenience and privacy.
+                        <span className="font-medium">Bedroom 3:</span>
+                        <br />
+                        King bed with private ensuite bathroom featuring a bathtub
+                        and shower.
+                      </p>
+                      <p className="font-bold mb-2">LOWER LEVEL:</p>
+                      <p className="mb-4">
+                        <span className="font-medium">Bedroom 4:</span>
+                        <br />
+                        Two twin beds. This bedroom shares a full bathroom located
+                        just outside the room with Bedroom 5.
                       </p>
                       <p className="mb-4">
-                        <span className="font-medium">Bedroom 4:</span> Is located on
-                        the lower floor, this bedroom features two twin beds. It is
-                        decorated with welcoming and bright furnishings, creating a
-                        cheery atmosphere. This room shares a spacious bathroom with
-                        bedroom 5, which includes both a shower and a bathtub.
+                        <span className="font-medium">Bedroom 5:</span>
+                        <br />
+                        King bed plus one twin bed, providing a flexible sleeping
+                        arrangement for families or groups. This bedroom also
+                        features a gas fireplace and shares the nearby full bathroom
+                        with Bedroom 4.
                       </p>
+                      <p className="font-bold mb-2">MAIN LIVING LEVEL:</p>
                       <p className="mb-4">
-                        <span className="font-medium">Bedroom 5:</span> Is situated
-                        next to bedroom 4, this room offers a king-sized bed and a
-                        twin bed, providing flexible sleeping arrangements. It has a
-                        beautiful gas fireplace that adds a homely touch to the space.
+                        A powder room is conveniently located beside the main living
+                        area.
                       </p>
+                      <p className="font-bold mb-2">PARKING:</p>
                       <p className="mb-4">
-                        Additionally, there is a powder bathroom on the ground floor.
+                        The driveway accommodates two vehicles. Additional vehicles
+                        can be parked using the garage, allowing approximately 3–4
+                        vehicles between the driveway and garage depending on vehicle
+                        size. One additional visitor parking space may also be
+                        available with the supplied parking pass.
                       </p>
                     </div>
                   </div>
@@ -151,30 +420,32 @@ export default function TheNestSkiInSkiOutDetails({ photos }: ListingDetailsProp
                           />
                         </svg>
                       </div>
-                      <h2 className="text-2xl font-bold">Location</h2>
+                      <h2 className="text-2xl font-bold">
+                        Neighbourhood highlights
+                      </h2>
                     </div>
-                    <p className="text-gray-800 max-w-4xl mb-6">
-                      Prime ski-in/ski-out location in the prestigious and quiet
-                      Nordic neighborhood, providing easy access to the mountain and
-                      stunning views. Ride the local bus if you don't want to use
-                      your car. For Whistler Village it's an 8-minute walk to the
-                      Eva Lake Road bus stop, catch the 20, 21, or 25 and the journey
-                      is only 7 minutes. For Creekside Village walk 9 minutes to
-                      Highlands bus stop and catch the 20 and 21 buses. The buses come
-                      every 10 or 15 minutes.
-                    </p>
-                    <p className="text-gray-800 max-w-4xl">
+                    <p className="text-gray-800 max-w-4xl mb-8">
                       The best part of this chalet is the location! Nordic is a real
-                      gem. It's just a short distance from both Creekside and
-                      Whistler Village! Enjoy just a 7 minute stroll to access the
-                      Dave Murray Ski trail and ski out to the Creekside Gondola and
-                      village. The house is just a 3-minute drive to Creekside Village
-                      or a 17 minutes walk. Easy access to the lakes in the Summer.
-                      Stroll into Creekside and enjoy delicious coffee and pastries at
-                      Bred Bakery and Rock-It Coffee co, the creekside market for
-                      groceries, BC liquor stores, and Dusty's for Après. Great
-                      restaurants Rim Rock, Red door, Creekbread and Nita Lake lodge
-                      located in Creekside. This is the ideal home for your holiday!
+                      gem. It’s just a short distance from both Creekside and Whistler
+                      Village! Enjoy just a 7 minute stroll to access the Dave Murray
+                      Ski trail and ski out to the Creekside Gondola and village. The
+                      house is just a 3-minute drive to Creekside Village or a 17
+                      minutes walk. For Whistler Village, the drive is 7 minutes. Easy
+                      access to the lakes in the Summer. Stroll into Creekside and
+                      enjoy delicious coffee and pastries at Bred Bakery and Rock-It
+                      Coffee co, the creekside market for groceries, BC liquor stores,
+                      and Dusty’s for Après. Great restaurants Rim Rock, Red door,
+                      Creekbread and Nita Lake lodge located in Creekside. This is the
+                      ideal home for your holiday!
+                    </p>
+                    <h2 className="text-2xl font-bold mb-4">Getting around</h2>
+                    <p className="text-gray-800 max-w-4xl">
+                      Ride the local bus if you don’t want to use your car. For
+                      Whistler Village it’s an 8-minute walk to the Eva Lake Road bus
+                      stop, catch the 20, 21, or 25 and the journey is only 7 minutes.
+                      For Creekside village walk 9 minutes to Highlands bus stop and
+                      catch the 20 and 21 buses. The buses come every 10 or 15
+                      minutes.
                     </p>
                   </div>
                   
@@ -206,12 +477,113 @@ export default function TheNestSkiInSkiOutDetails({ photos }: ListingDetailsProp
                             />
                           </svg>
                         </div>
-                        <h2 className="text-2xl font-bold">Exterior Features</h2>
+                        <h2 className="text-2xl font-bold">Guest access</h2>
                       </div>
                       <p className="text-gray-800 mb-6">
-                        The Nest offers beautiful outdoor spaces for you to enjoy. Relax on the spacious deck with mountain views, perfect for morning coffee or evening drinks. The private hot tub is ideally positioned for soaking while enjoying the alpine scenery. During winter, experience true ski-in/ski-out convenience, while summer offers easy access to hiking and biking trails.
+                        Guests have full access to the entire home, including garage
+                        parking, private hot tub, and all amenities.
+                      </p>
+                      <h2 className="text-2xl font-bold mb-4">
+                        Other things to note
+                      </h2>
+                      <p className="text-gray-800">
+                        **Utilities fully included! Heat, gas, water, Hot tub weekly
+                        cleaning, wifi, etc.**
                       </p>
                     </div>
+                  </div>
+
+                  <div className="mb-16 border-t border-gray-200 pt-8">
+                    <h2 className="text-2xl font-bold mb-6">Photo tour</h2>
+                    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                      {photoTourEntries.map((entry) => (
+                        <div
+                          key={entry.name}
+                          className="rounded-lg border border-gray-200 p-4"
+                        >
+                          <h3 className="font-bold">{entry.name}</h3>
+                          {entry.details.map((detail) => (
+                            <p key={detail} className="text-gray-800 mt-1">
+                              {detail}
+                            </p>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mb-16 border-t border-gray-200 pt-8">
+                    <h2 className="text-2xl font-bold mb-6">
+                      What this place offers
+                    </h2>
+                    <div className="grid gap-x-12 gap-y-10 md:grid-cols-2">
+                      {amenityGroups.map((group) => (
+                        <section key={group.name}>
+                          <h3 className="text-xl font-bold mb-4">{group.name}</h3>
+                          <ul className="text-gray-800 list-disc pl-6 space-y-3">
+                            {group.amenities.map((amenity) => (
+                              <li key={amenity.label}>
+                                <span className="font-medium">
+                                  {amenity.label}
+                                </span>
+                                {"subtitle" in amenity && amenity.subtitle ? (
+                                  <p className="mt-1">{amenity.subtitle}</p>
+                                ) : null}
+                              </li>
+                            ))}
+                          </ul>
+                        </section>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mb-16 border-t border-gray-200 pt-8">
+                    <h2 className="text-2xl font-bold mb-4">House rules</h2>
+                    <p className="text-gray-800 max-w-4xl mb-6">
+                      You’ll be staying in someone’s home, so please treat it with
+                      care and respect.
+                    </p>
+                    <div className="grid gap-x-12 gap-y-10 md:grid-cols-2">
+                      {houseRuleGroups.map((group) => (
+                        <section key={group.name}>
+                          <h3 className="text-xl font-bold mb-4">{group.name}</h3>
+                          <ul className="text-gray-800 list-disc pl-6 space-y-3">
+                            {group.rules.map((rule) => (
+                              <li key={rule.label}>
+                                <span className="font-medium">{rule.label}</span>
+                                {"subtitle" in rule && rule.subtitle ? (
+                                  <p className="mt-1">{rule.subtitle}</p>
+                                ) : null}
+                              </li>
+                            ))}
+                          </ul>
+                        </section>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mb-16 border-t border-gray-200 pt-8">
+                    <h2 className="text-2xl font-bold mb-4">
+                      Safety &amp; property
+                    </h2>
+                    <p className="text-gray-800 max-w-4xl mb-6">
+                      Avoid surprises by looking over these important details about
+                      your host’s property.
+                    </p>
+                    <h3 className="text-xl font-bold mb-4">Safety devices</h3>
+                    <ul className="text-gray-800 list-disc pl-6 space-y-3">
+                      <li>Carbon monoxide alarm installed</li>
+                      <li>Smoke alarm installed</li>
+                    </ul>
+                  </div>
+
+                  <div className="mb-16 border-t border-gray-200 pt-8">
+                    <h2 className="text-2xl font-bold mb-4">
+                      Registration details
+                    </h2>
+                    <p className="text-gray-800">
+                      Municipal registration number: 00011803
+                    </p>
                   </div>
                 </div>
     </>
