@@ -506,7 +506,7 @@ export const propertyCategories: PropertyCategory[] = [
           },
           {
             id: "heron-views-whistler",
-            name: "Heron Views | Whistler Village",
+            name: "Heron Views | Whistler Village | Stunning Views",
             images: [
               "/photos/properties/3445-Heron-Place/68-3445 Heron Place 53-Edit.jpg",
               "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05831-Edit.jpg",
@@ -514,25 +514,27 @@ export const propertyCategories: PropertyCategory[] = [
             ],
             guests: 11,
             bedrooms: 5,
+            beds: 6,
             bathrooms: 5.5,
-            location: "Whistler Village, Whistler",
+            location: "Blueberry Hill, Whistler",
             description:
-              "Located in the heart of Whistler Village, this beautifully updated condo offers unparalleled convenience with stunning mountain views. Just steps away from the lifts, restaurants, and village attractions.",
+              "Welcome to Heron Views, a 7,800 sq. ft. traditional log chalet in prestigious Blueberry Hill, with sweeping views across Whistler Golf Course toward Whistler and Blackcomb mountains. Just a 3–4 minute drive from the Village and ski lifts, or a scenic walk along the Valley Trail, the home combines privacy with convenience. Enjoy two expansive decks, summer air conditioning, a 14-person hot tub, fire pit, theatre room, wet bar and generous living spaces for families and groups.",
             features: [
-              "Village Central Location",
+              "Blueberry Hill",
               "Mountain Views",
-              "Walk to Lifts",
-              "Balcony",
-              "Gas Fireplace",
-              "Updated Kitchen",
-              "Secure Underground Parking",
-              "Shared Hot Tub",
+              "Whistler Golf Course Views",
+              "Two Expansive Decks",
+              "Summer Air Conditioning",
+              "14-Person Hot Tub",
+              "Fire Pit",
+              "Theatre Room",
+              "Wet Bar",
             ],
             highlights: [
-              "Walk to Whistler & Blackcomb Lifts",
-              "Heart of Whistler Village",
-              "Mountain Views",
-              "Recently Renovated",
+              "7,800 sq. ft. Traditional Log Chalet",
+              "3–4 Minute Drive to Village & Lifts",
+              "Scenic Valley Trail Access",
+              "Whistler & Blackcomb Views",
             ],
             priceRange: "$1,200-$3,500 per night",
             winterPrice: "",
@@ -623,7 +625,7 @@ export const propertyCategories: PropertyCategory[] = [
           },
           {
             id: "luxury-6-bedroom-blueberry",
-            name: "Luxury 6-Bedroom | Whistler Village | Blueberry",
+            name: "Luxury 6-Bedroom - Whistler Village - Blueberry",
             images: [
               "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry living room.png",
               "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/13 - 20251108 A7M4 02 A1_07868.jpg",
@@ -694,10 +696,11 @@ export const propertyCategories: PropertyCategory[] = [
             ],
             guests: 12,
             bedrooms: 6,
+            beds: 10,
             bathrooms: 3,
             location: "Blueberry Hill, Whistler",
             description:
-              "Experience Whistler luxury in this newly renovated 6-bedroom, 3-bath Ravencrest condo in prestigious Blueberry Hill. Sleeping 12 guests across 10 beds, it features Restoration Hardware and Rove Concepts furnishings, just minutes from Whistler Village.",
+              "Welcome to this beautifully renovated 6-bedroom retreat in Whistler’s peaceful Blueberry Hill neighbourhood. Designed with Restoration Hardware and Rove Concepts furnishings, the home sleeps 12 across 10 beds and offers forest views, premium Puffy mattresses, ski and bike storage, summer A/C, and free EV charging. Whistler Village, the ski lifts and nearby lakes are only a 3–4 minute drive away, combining a quiet residential setting with exceptionally convenient access for families and groups.",
             features: [
               "Newly Renovated",
               "Forest Views",
@@ -711,7 +714,7 @@ export const propertyCategories: PropertyCategory[] = [
             highlights: [
               "Prestigious Blueberry Hill Location",
               "Restoration Hardware Furnishings",
-              "10 Beds for 15+ Guests",
+              "10 Beds for 12 Guests",
               "3-4 Min Drive to Village",
             ],
             priceRange: "$750-1800 per night Summer",
@@ -724,7 +727,7 @@ export const propertyCategories: PropertyCategory[] = [
           },
           {
             id: "luxe-5-bed-scandinave-retreat",
-            name: "Luxe 5-BED Scandinave Retreat | Walk to Slopes",
+            name: "Luxe 5-BED Scandinave Retreat - Walk to Slopes",
             images: [
               SCANDINAVE_COVER,
               SCANDINAVE_PHOTOS[1],
@@ -736,7 +739,7 @@ export const propertyCategories: PropertyCategory[] = [
             bathrooms: 3,
             location: "Creekside, Whistler",
             description:
-              "An ideal family ski home just 400m (8 min walk) to Whistler Creekside Gondola. Stunning, unobstructed views of the Tantalus Range, Alpha & Nita Lakes. Perfect for 1 large family, 3 couples, or 2 families (up to 4 adults & 6 kids).",
+              "An ideal family ski home just 400m (8 min walk) to Whistler Creekside Gondola. Stunning, unobstructed views of the Tantalus Range, Alpha & Nita Lakes. Perfect for 1 large family, 3 couples, or 2 families. This 1,450 sqft, 3-bedroom, 5-bed, architecturally designed home features; vaulted ceilings, a steam shower, kids’ triple bunk room, heated floors, a cozy living area with fireplace, and a kitchen for family dinners. Enjoy 2 free parking spots, A/C, & ski storage!",
             features: [
               "Walk to Creekside Gondola",
               "Heated Floors",
@@ -763,7 +766,7 @@ export const propertyCategories: PropertyCategory[] = [
           },
           {
             id: "bluffs-unit-8",
-            name: "Bluffs #8 - Luxury 3 Bed - Ski in Ski out - Views!",
+            name: "Bluffs Penthouse - Luxe 3-Bedroom - Ski-in Ski-out",
             images: [
               "/photos/properties/Bluffs Unit 8/Bluffs 8 edit 4.png",
               "/photos/properties/Bluffs Unit 8/01 - 20260805 MM4P 010149.jpg",
@@ -775,10 +778,10 @@ export const propertyCategories: PropertyCategory[] = [
             bathrooms: 3,
             location: "Taluswood, Whistler",
             description:
-              "Perched in Taluswood's Bluffs, this 3-bedroom retreat puts you right on the Dave Murray Downhill for true ski-in ski-out days and beautiful mountain-view evenings. Sleeps up to 10 guests.",
+              "Perched in Taluswood's Bluffs, this 3-bedroom retreat puts you right on the Dave Murray Downhill for true ski-in ski-out days and beautiful mountain-view evenings. With a King suite, Queen bedroom, 4 Twin bunk beds, and a Queen sofa bed, the home is ideal for families and groups. A neighbourhood hot tub with stunning views, AC, Smart TVs, gas fireplace, BBQ, gorgeous patio view, chef-ready kitchen, generous parking, and secure ski & bike storage make every season comfortable and effortless.",
             features: [
               "True Ski-in/Ski-out",
-              "Hot Tub",
+              "Neighbourhood Hot Tub",
               "Gas Fireplace",
               "Chef-Ready Kitchen",
               "Underground Parking (2 stalls)",

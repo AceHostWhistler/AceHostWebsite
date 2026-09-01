@@ -39,12 +39,12 @@ const listing: ListingData = {
   ],
   seo: {
     title:
-      "Bluffs #8 - Luxury 3 Bed - Ski in Ski out - Views! | AceHost",
+      "Bluffs Penthouse - Luxe 3-Bedroom - Ski-in Ski-out | AceHost",
     description:
-      "Perched in Taluswood's Bluffs, this 3-bedroom ski-in ski-out retreat offers a King suite, bunk room, hot tub, mountain views, and space for up to 10 guests in Whistler.",
+      "Perched in Taluswood's Bluffs, this 3-bedroom retreat puts you right on the Dave Murray Downhill for true ski-in ski-out days and beautiful mountain-view evenings. With a King suite, Queen bedroom, 4 Twin bunk beds, and a Queen sofa bed, the home is ideal for families and groups. A neighbourhood hot tub with stunning views, AC, Smart TVs, gas fireplace, BBQ, gorgeous patio view, chef-ready kitchen, generous parking, and secure ski & bike storage make every season comfortable and effortless.",
   },
   header: {
-    title: "Bluffs #8 - Luxury 3 Bed - Ski in Ski out - Views!",
+    title: "Bluffs Penthouse - Luxe 3-Bedroom - Ski-in Ski-out",
     guests: 10,
     bedrooms: 3,
     beds: 7,
@@ -54,15 +54,15 @@ const listing: ListingData = {
     holidayPrice: "$2,300-$3,100+ Nightly | Christmas & NY",
     airbnbLink: BLUFFS_UNIT_8_AIRBNB_LINK,
   },
-  galleryTitle: "Bluffs #8 - Luxury 3 Bed - Ski in Ski out - Views!",
+  galleryTitle: "Bluffs Penthouse - Luxe 3-Bedroom - Ski-in Ski-out",
   photoAltPrefix: "Bluffs Unit 8 Taluswood",
   structuredData: {
     "@context": "https://schema.org/",
     "@type": "Product",
-    name: "Bluffs #8 - Luxury 3 Bed - Ski in Ski out - Views!",
+    name: "Bluffs Penthouse - Luxe 3-Bedroom - Ski-in Ski-out",
     image: "/photos/properties/Bluffs Unit 8/Bluffs 8 edit 4.png",
     description:
-      "Perched in Taluswood's Bluffs, this 3-bedroom ski-in ski-out retreat offers mountain views, a hot tub, and space for up to 10 guests in Whistler.",
+      "Perched in Taluswood's Bluffs, this 3-bedroom retreat puts you right on the Dave Murray Downhill for true ski-in ski-out days and beautiful mountain-view evenings. With a King suite, Queen bedroom, 4 Twin bunk beds, and a Queen sofa bed, the home is ideal for families and groups. A neighbourhood hot tub with stunning views, AC, Smart TVs, gas fireplace, BBQ, gorgeous patio view, chef-ready kitchen, generous parking, and secure ski & bike storage make every season comfortable and effortless.",
     sku: "bluffs-unit-8-taluswood",
     brand: {
       "@type": "Brand",
@@ -99,11 +99,6 @@ const listing: ListingData = {
           availability: "https://schema.org/LimitedAvailability",
         },
       ],
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5.0",
-      reviewCount: "1",
     },
   },
 };

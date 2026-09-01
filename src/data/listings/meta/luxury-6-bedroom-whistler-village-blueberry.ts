@@ -71,11 +71,11 @@ const listing: ListingData = {
   "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Drone Blueberry shot.png"
 ],
   seo: {
-    title: "Luxury 6-Bedroom | Whistler Village | Blueberry - AceHost",
-    description: "Experience Whistler luxury in this newly renovated 6-bedroom, 3-bath Ravencrest condo in prestigious Blueberry Hill. Sleeps 12 guests across 10 beds with Restoration Hardware and Rove Concepts furnishings, just minutes from Whistler Village.",
+    title: "Luxury 6-Bedroom - Whistler Village - Blueberry",
+    description: "Welcome to this beautifully renovated 6-bedroom retreat in Whistler’s peaceful Blueberry Hill neighbourhood. Designed with Restoration Hardware and Rove Concepts furnishings, the home sleeps 12 across 10 beds and offers forest views, premium Puffy mattresses, ski and bike storage, summer A/C, and free EV charging. Whistler Village, the ski lifts and nearby lakes are only a 3–4 minute drive away, combining a quiet residential setting with exceptionally convenient access for families and groups.",
   },
   header:   {
-      "title": "Luxury 6-Bedroom | Whistler Village | Blueberry",
+      "title": "Luxury 6-Bedroom - Whistler Village - Blueberry",
       "guests": 12,
       "bedrooms": 6,
       "bathrooms": 3,
@@ -85,8 +85,8 @@ const listing: ListingData = {
       "holidayPrice": "$3500-6000 Nightly | Christmas & NY",
       "airbnbLink": "https://www.airbnb.ca/rooms/1551638001847968788?guests=1&adults=1&s=67&unique_share_id=ff68258e-d89f-4493-8e79-fd85820e6872"
   },
-  galleryTitle: "Luxury 6-Bedroom",
-  photoAltPrefix: "Luxury 6-Bedroom",
+  galleryTitle: "Luxury 6-Bedroom - Whistler Village - Blueberry",
+  photoAltPrefix: "Luxury 6-Bedroom - Whistler Village - Blueberry",
 };
 
 export default listing;

@@ -80,13 +80,14 @@ const listing: ListingData = {
   "/photos/properties/3445-Heron-Place/01-3445 Heron Place 01.jpg"
 ],
   seo: {
-    title: "Heron Views | Whistler Village - AceHost",
-    description: "Experience Whistler luxury at Heron Views, a beautiful 7,800 sq ft log chalet in Blueberry Hill with breathtaking mountain views, 5 bedrooms, 5.5 baths, and spectacular outdoor spaces including a 14-person hot tub and fire pit.",
+    title: "Heron Views | Whistler Village | Stunning Views - AceHost",
+    description: "Welcome to Heron Views, a 7,800 sq. ft. traditional log chalet in prestigious Blueberry Hill, with sweeping views across Whistler Golf Course toward Whistler and Blackcomb mountains. Just a 3–4 minute drive from the Village and ski lifts, or a scenic walk along the Valley Trail, the home combines privacy with convenience. Enjoy two expansive decks, summer air conditioning, a 14-person hot tub, fire pit, theatre room, wet bar and generous living spaces for families and groups.",
   },
   header:   {
-      "title": "Heron Views | Whistler Village",
+      "title": "Heron Views | Whistler Village | Stunning Views",
       "guests": 11,
       "bedrooms": 5,
+      "beds": 6,
       "bathrooms": 5.5,
       "priceRange": "$1,200-$3,500 per night",
       "holidayPrice": "$4,000-$6,800+ Nightly | Christmas & NY",

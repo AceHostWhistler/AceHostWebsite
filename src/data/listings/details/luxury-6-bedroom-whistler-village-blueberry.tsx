@@ -5,17 +5,122 @@ import Link from "next/link";
 import { FaBed, FaBath } from "react-icons/fa";
 import type { ListingDetailsProps } from "../types";
 
+const photoTourLayout = [
+  { name: "Living room", details: [] },
+  { name: "Full kitchen", details: [] },
+  { name: "Dining area", details: [] },
+  {
+    name: "Bedroom 1",
+    details: ["King bed", "Bed linens", "Essentials", "Extra pillows and blankets", "Hangers", "Heating", "Iron"],
+  },
+  { name: "Bedroom 2", details: ["King bed"] },
+  { name: "Bedroom 3", details: ["King bed"] },
+  {
+    name: "Bedroom 4",
+    details: ["2 queen beds", "Bed linens", "Clothing storage", "Extra pillows and blankets", "Hangers", "Heating", "Iron", "Essentials"],
+  },
+  { name: "Bedroom 5", details: ["King bed"] },
+  { name: "Bedroom 6", details: ["2 bunk beds"] },
+  {
+    name: "Full bathroom 1",
+    details: ["Bathtub", "Body soap", "Cleaning products", "Conditioner", "Hair dryer", "Heating", "Shower gel", "Shampoo", "Hot water"],
+  },
+  {
+    name: "Full bathroom 2",
+    details: ["Bathtub", "Body soap", "Conditioner", "Hair dryer", "Heating", "Hot water", "Shower gel", "Shampoo"],
+  },
+  {
+    name: "Full bathroom 3",
+    details: ["Bathtub", "Body soap", "Conditioner", "Hair dryer", "Heating", "Hot water", "Shampoo", "Shower gel"],
+  },
+  { name: "Balcony", details: [] },
+  { name: "Garage", details: [] },
+  { name: "Exterior", details: [] },
+  { name: "Additional photos", details: [] },
+];
+
+const amenityGroups = [
+  { title: "Scenic views", items: ["Garden view"] },
+  {
+    title: "Bathroom",
+    items: ["Bathtub", "Hair dryer", "Cleaning products", "Shampoo", "Conditioner", "Body soap", "Hot water", "Shower gel"],
+  },
+  {
+    title: "Bedroom and laundry",
+    items: [
+      "Free washer – In unit",
+      "Free dryer – In unit",
+      "Essentials — Towels, bed sheets, soap, and toilet paper",
+      "Hangers",
+      "Bed linens",
+      "Extra pillows and blankets",
+      "Room-darkening shades",
+      "Iron",
+      "Drying rack for clothing",
+      "Clothing storage",
+    ],
+  },
+  { title: "Entertainment", items: ["TV"] },
+  {
+    title: "Family",
+    items: ["Crib", "Pack ’n play / Travel crib – always at the listing", "Children’s dinnerware", "Fireplace guards", "Window guards"],
+  },
+  {
+    title: "Heating and cooling",
+    items: ["Central air conditioning", "Indoor fireplace", "Portable fans", "Central heating"],
+  },
+  {
+    title: "Home safety",
+    items: ["Smoke alarm", "Carbon monoxide alarm", "Fire extinguisher", "First aid kit"],
+  },
+  { title: "Internet and office", items: ["Wifi", "Dedicated workspace"] },
+  {
+    title: "Kitchen and dining",
+    items: [
+      "Kitchen — Space where guests can cook their own meals",
+      "Refrigerator",
+      "Microwave",
+      "Cooking basics — Pots and pans, oil, salt, and pepper",
+      "Dishes and silverware — Bowls, chopsticks, plates, cups, etc.",
+      "Freezer",
+      "Dishwasher",
+      "Stove",
+      "Stainless steel oven",
+      "Hot water kettle",
+      "Coffee maker: drip coffee maker, Nespresso",
+      "Wine glasses",
+      "Toaster",
+      "Blender",
+      "Barbecue utensils — Grill, charcoal, bamboo skewers/iron skewers, etc.",
+      "Dining table",
+    ],
+  },
+  { title: "Location features", items: ["Laundromat nearby"] },
+  { title: "Outdoor", items: ["Private patio or balcony", "Outdoor furniture", "BBQ grill"] },
+  {
+    title: "Parking and facilities",
+    items: ["Free parking garage on premises", "EV charger – level 2 — 220 volts, 12-35 miles per hour"],
+  },
+  {
+    title: "Services",
+    items: [
+      "Luggage drop-off allowed — For guests' convenience when they have early arrival or late departure",
+      "Long-term stays allowed — Allow stay for 28 days or more",
+      "Self check-in",
+      "Smart lock",
+      "Housekeeping available 24 hours, every day - available at extra cost",
+    ],
+  },
+  { title: "Not included", items: ["Private entrance"] },
+];
+
 export default function Luxury6BedroomWhistlerVillageBlueberryDetails({ photos }: ListingDetailsProps) {
   const getDescriptionPhoto = (index: number) => photos[index] ?? photos[0];
   return (
     <>
       <div className="max-w-6xl mx-auto px-4" id="details">
                   <p className="text-gray-800 mb-16 max-w-4xl">
-                    Welcome to this luxurious 6-bedroom, 3-bath Ravencrest condo in Whistler's exclusive Blueberry neighbourhood.
-                    <br /><br />
-                    Newly renovated and designed with Restoration Hardware and Rove Concepts furnishings, it sleeps 12 with 10 premium Puffy beds. Enjoy forest views, ski and bike storage, EV parking, and a new BBQ.
-                    <br /><br />
-                    Just a 3-4 minute drive or short taxi ride to Whistler Village, slopes, and lakes, offering tranquility and convenience in one.
+                    Welcome to this beautifully renovated 6-bedroom retreat in Whistler’s peaceful Blueberry Hill neighbourhood. Designed with Restoration Hardware and Rove Concepts furnishings, the home sleeps 12 across 10 beds and offers forest views, premium Puffy mattresses, ski and bike storage, summer A/C, and free EV charging. Whistler Village, the ski lifts and nearby lakes are only a 3–4 minute drive away, combining a quiet residential setting with exceptionally convenient access for families and groups.
                   </p>
 
                   {/* The Space Section */}
@@ -48,7 +153,7 @@ export default function Luxury6BedroomWhistlerVillageBlueberryDetails({ photos }
                               />
                             </svg>
                           </div>
-                          <h2 className="text-2xl font-bold">The Space</h2>
+                          <h2 className="text-2xl font-bold">The space</h2>
                         </div>
                         <p className="text-gray-800 mb-6">
                           Step into a bright and inviting alpine-inspired retreat where every detail has been curated for relaxation and style. The open-concept living room features a cozy fireplace, plush seating, and large windows framing lush forest views. The fully equipped kitchen is ideal for group dining, complete with a brand-new fridge, oven, and BBQ, plus all the cookware you need for family meals or après-ski dinners.
@@ -58,11 +163,11 @@ export default function Luxury6BedroomWhistlerVillageBlueberryDetails({ photos }
                         <div className="flex items-center space-x-6 mb-6">
                           <div className="flex items-center">
                             <FaBed className="text-gray-600 mr-2" size={20} />
-                            <span className="text-gray-800">6 Bedrooms</span>
+                            <span className="text-gray-800">6 bedrooms</span>
                           </div>
                           <div className="flex items-center">
                             <FaBath className="text-gray-600 mr-2" size={20} />
-                            <span className="text-gray-800">3 Bathrooms</span>
+                            <span className="text-gray-800">3 baths</span>
                           </div>
                         </div>
                       </div>
@@ -102,10 +207,10 @@ export default function Luxury6BedroomWhistlerVillageBlueberryDetails({ photos }
 
                   {/* Sleeping Arrangements Section */}
                   <div className="mb-20">
-                    <h2 className="text-2xl font-bold mb-6">Sleeping Arrangements</h2>
+                    <h2 className="text-2xl font-bold mb-6">Sleeping arrangements:</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                       <div>
-                        <h3 className="text-xl font-semibold mb-4">Lower Level:</h3>
+                        <h3 className="text-xl font-semibold mb-4">Lower/main level Level</h3>
                         <ul className="list-disc pl-5 space-y-2">
                           <li>Primary Bedroom: King bed, ensuite with shower/tub combo, Smart TV</li>
                           <li>Bedroom 2: King bed</li>
@@ -121,14 +226,14 @@ export default function Luxury6BedroomWhistlerVillageBlueberryDetails({ photos }
                         </div>
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold mb-4">Upper Level:</h3>
+                        <h3 className="text-xl font-semibold mb-4">Upper Level</h3>
                         <ul className="list-disc pl-5 space-y-2">
-                          <li>Bedroom 3: Two Queen beds, large office desk with forest views, perfect for remote work</li>
-                          <li>Bedroom 4: King bed with TV</li>
-                          <li>Bedroom 5: King bed</li>
-                          <li>Bedroom 6: Two single bunk beds (adult-friendly but perfect for kids)</li>
+                          <li>Bedroom 3: King bed</li>
+                          <li>Bedroom 4: Two Queen beds, large office desk with forest views, perfect for remote work</li>
+                          <li>Bedroom 5: King bed with Smart TV</li>
+                          <li>Bedroom 6: Two single bunk beds (kid-friendly but perfect for adults too!)</li>
                         </ul>
-                        <p className="mt-4 text-gray-800">Each of the three full bathrooms includes both a shower and a bathtub, providing convenience and comfort for large groups.</p>
+                        <p className="mt-4 text-gray-800">Each of the 3 full bathrooms includes both a shower and a bathtub, providing convenience and comfort for large groups.</p>
                         <div className="mt-6 relative aspect-[4/3]">
                           <Image
                           src={getDescriptionPhoto(6)}
@@ -144,46 +249,51 @@ export default function Luxury6BedroomWhistlerVillageBlueberryDetails({ photos }
 
                   {/* Parking & Transportation Section */}
                   <div className="mb-20">
-                    <h2 className="text-2xl font-bold mb-6">Parking & Transportation</h2>
+                    <h2 className="text-2xl font-bold mb-6">Parking & Transportation:</h2>
                     <div>
                       <ul className="list-disc pl-5 space-y-2 max-w-4xl">
-                        <li>1 guaranteed extra-large private parking spot (fits vehicles 6'6" and under)</li>
-                        <li>EV charger included, one of the few in the building</li>
-                        <li>1 visitor spot available first-come, first-serve (busier on winter/holiday weekends, usually more available during summer or shoulder seasons). There are 10 visitor spots on a first-come, first-serve basis, with permission to use any of 1 of the 10 at a given time.</li>
-                        <li>VIP taxi reservation code provided for priority service in Whistler, rare and convenient for evenings out</li>
-                        <li>Roughly a 4-minute taxi ride to the Village</li>
-                        <li>Recommended: arrive in one large vehicle, shuttle, or bus. Extra vehicles can park nearby if required.</li>
+                        <li>2 Parking spots included in the garage. 1 being a Private parking spot (fits vehicles 6'6" and under). Free EV charger included (we pay for the charging), one of the few in the building. And 1 visitor spot available. 2 spots total (rare find in Whistler)!</li>
+                        <li>Roughly a 4-minute taxi or Uber ride to the main Whistler Village</li>
+                        <li>Recommended: Arrive in one or 2 large vehicles, shuttle, or bus from airport.<br />Extra vehicles can park nearby in the village if required.</li>
+                        <li>Shuttle to main Whistler Village & Ski Slopes, comes every 15 minutes right out front of the building.</li>
                       </ul>
                     </div>
                   </div>
 
                   {/* Location Section */}
                   <div className="mb-20">
-                    <h2 className="text-2xl font-bold mb-6">Location</h2>
+                    <h2 className="text-2xl font-bold mb-6">Location:</h2>
                     <div>
                       <p className="text-gray-800">
-                        Set in the prestigious Blueberry Hill neighbourhood, this home combines tranquility and proximity. You're just a few minutes from both Whistler Village and Creekside, while surrounded by nature and scenic trails. The Valley Trail and Whistler Golf Course Loop are right at your doorstep, perfect for morning walks or bike rides in summer.
+                        Set in the prestigious Blueberry Hill neighbourhood, this home combines tranquility and proximity. You’re just a few minutes from both Whistler Village and Creekside, while surrounded by nature and scenic trails. The Valley Trail and Whistler Golf Course Loop are right at your doorstep, perfect for morning walks or bike rides in summer.
                         <br /><br />
-                        In winter, the slopes are a quick drive away, and you'll appreciate coming home to your peaceful retreat away from the busy village. Alta Lake is within walking distance for paddle boarding, picnics, or ice skating, depending on the season.
+                        In winter, the slopes are a quick drive away, and you’ll appreciate coming home to your peaceful retreat away from the busy village. In summer, Alta Lake is within walking distance for paddle boarding, picnics, or ice skating, depending on the season.
+                        <br /><br />
+                        Walking distance to the village: Optional and a bit long with skis/boots, but possible! About a 20 minute walk with boots in the winter months, and about a 15 minute walk to the village in summer months.
+                        <br /><br />
+                        *Yes we have Air Conditioning for the summer months! Available May 1-November 1.*
                       </p>
                     </div>
                   </div>
 
                   {/* Additional Features Section */}
                   <div className="mb-20">
-                    <h2 className="text-2xl font-bold mb-6">Additional Features</h2>
+                    <h2 className="text-2xl font-bold mb-6">Additional Features:</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                       <div>
                         <ul className="list-disc pl-5 space-y-2 max-w-4xl">
                           <li>Fully renovated luxury condo with Restoration Hardware and Rove Concepts furnishings</li>
                           <li>10 beds / 6 bedrooms / 3 full bathrooms</li>
-                          <li>Puffy luxury mattresses throughout</li>
-                          <li>Ski and bike storage included—no need to bring gear inside the unit</li>
+                          <li>High end Puffy luxury mattresses throughout</li>
+                          <li>Ski and bike storage included, no need to bring gear inside the unit</li>
                           <li>Brand-new BBQ, fridge, and stove/oven</li>
                           <li>High-speed Wi-Fi and Smart TVs</li>
-                          <li>Washer and dryer in unit</li>
+                          <li>Level 2 J1772 EV charging (free of charge)</li>
                           <li>Forest-view balcony for morning coffee or evening wine</li>
                           <li>Steps to Valley Trail and golf course loop</li>
+                          <li>Fully functional brand new washer + dryer in the unit. Private for guest usage.</li>
+                          <li>Pack and play included and always at the condo. Please bring your own sheets.</li>
+                          <li>*AC | Air Conditioning for summer rentals, we have AC units in the living room, bedroom 3 & bedroom 5. AC units cool the entire house comfortably, for those hot summer days.*</li>
                         </ul>
                       </div>
                       <div className="grid grid-cols-2 gap-4">
@@ -209,9 +319,41 @@ export default function Luxury6BedroomWhistlerVillageBlueberryDetails({ photos }
                     </div>
                   </div>
 
+                  {/* Photo Tour Layout Section */}
+                  <div className="mb-20">
+                    <h2 className="text-2xl font-bold mb-6">Photo tour</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      {photoTourLayout.map((area) => (
+                        <div key={area.name}>
+                          <h3 className="text-xl font-semibold mb-2">{area.name}</h3>
+                          {area.details.length > 0 && (
+                            <ul className="list-disc pl-5 space-y-2">
+                              {area.details.map((detail) => <li key={detail}>{detail}</li>)}
+                            </ul>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Amenities Section */}
+                  <div className="mb-20">
+                    <h2 className="text-2xl font-bold mb-6">What this place offers</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      {amenityGroups.map((group) => (
+                        <div key={group.title}>
+                          <h3 className="text-xl font-semibold mb-4">{group.title}</h3>
+                          <ul className="list-disc pl-5 space-y-2">
+                            {group.items.map((item) => <li key={item}>{item}</li>)}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
                   {/* Guest Access Section */}
                   <div className="mb-20">
-                    <h2 className="text-2xl font-bold mb-6">Guest Access</h2>
+                    <h2 className="text-2xl font-bold mb-6">Guest access</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                       <div className="md:col-span-2">
                         <p className="text-gray-800">
@@ -236,12 +378,20 @@ export default function Luxury6BedroomWhistlerVillageBlueberryDetails({ photos }
                     </div>
                   </div>
 
+                  {/* Other Things to Note Section */}
+                  <div className="mb-20">
+                    <h2 className="text-2xl font-bold mb-6">Other things to note</h2>
+                    <p className="text-gray-800 max-w-4xl">
+                      Ski lift pass booking & delivery: One of the perks of booking with us is complimentary ski pass delivery directly to your door. We can arrange day passes, multi-day passes, season passes and more, helping you skip the ticket office, paperwork and extra stop upon arrival. Please reach out to us before purchasing your passes, as the booking will need to be made through our team in order for us to arrange delivery. We’re happy to guide you through the process and make it as easy as possible.
+                    </p>
+                  </div>
+
                   {/* Registration Details Section */}
                   <div className="mb-20">
-                    <h2 className="text-2xl font-bold mb-6">Registration Details</h2>
+                    <h2 className="text-2xl font-bold mb-6">Registration details</h2>
                     <p className="text-gray-800">
-                      <strong>Municipal registration number:</strong> 00015309<br />
-                      <strong>Provincial registration number:</strong> PM743639153
+                      Municipal registration number: 00015309<br />
+                      Provincial registration number: PM743639153
                     </p>
                   </div>
                 </div>

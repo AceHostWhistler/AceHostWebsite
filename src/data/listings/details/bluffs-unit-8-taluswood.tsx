@@ -9,6 +9,185 @@ import {
 } from "../bluffsUnit8AirbnbLink";
 import { airbnbButtonSm } from "@/lib/airbnbButtonStyles";
 
+const photoTourEntries = [
+  { name: "Living room", details: ["Sofa bed"] },
+  { name: "Full kitchen", details: [] },
+  { name: "Dining area", details: [] },
+  { name: "Bedroom 1", details: ["King bed"] },
+  { name: "Bedroom 2", details: ["Queen bed"] },
+  { name: "Bedroom 3", details: ["4 single beds"] },
+  { name: "Full bathroom 1", details: [] },
+  { name: "Full bathroom 2", details: [] },
+  { name: "Full bathroom 3", details: [] },
+  {
+    name: "Exterior",
+    details: ["The property + ski in ski out main run"],
+  },
+  { name: "Additional photos", details: [] },
+] as const;
+
+const amenityGroups = [
+  {
+    name: "Scenic views",
+    amenities: [
+      { label: "City skyline view" },
+      { label: "Garden view" },
+    ],
+  },
+  {
+    name: "Bathroom",
+    amenities: [
+      { label: "Bathtub" },
+      { label: "Hair dryer" },
+      { label: "Cleaning products" },
+      { label: "Shampoo" },
+      { label: "Conditioner" },
+      { label: "Body soap" },
+      { label: "Hot water" },
+      { label: "Shower gel" },
+    ],
+  },
+  {
+    name: "Bedroom and laundry",
+    amenities: [
+      { label: "Washer" },
+      { label: "Dryer" },
+      {
+        label: "Essentials",
+        subtitle: "Towels, bed sheets, soap, and toilet paper",
+      },
+      { label: "Hangers" },
+      { label: "Bed linens" },
+      { label: "Extra pillows and blankets" },
+      { label: "Room-darkening shades" },
+      { label: "Iron" },
+      { label: "Mosquito net" },
+      { label: "Clothing storage" },
+    ],
+  },
+  {
+    name: "Entertainment",
+    amenities: [{ label: "TV" }],
+  },
+  {
+    name: "Family",
+    amenities: [
+      { label: "Crib" },
+      { label: "Pack ’n play / Travel crib" },
+      { label: "Children’s dinnerware" },
+      { label: "Fireplace guards" },
+      { label: "Babysitter recommendations" },
+    ],
+  },
+  {
+    name: "Heating and cooling",
+    amenities: [
+      { label: "Portable air conditioning" },
+      { label: "Indoor fireplace" },
+      { label: "Ceiling fan" },
+      { label: "Heating" },
+    ],
+  },
+  {
+    name: "Home safety",
+    amenities: [
+      { label: "Smoke alarm" },
+      { label: "Carbon monoxide alarm" },
+      { label: "Fire extinguisher" },
+      { label: "First aid kit" },
+    ],
+  },
+  {
+    name: "Internet and office",
+    amenities: [
+      { label: "Wifi" },
+      { label: "Dedicated workspace" },
+    ],
+  },
+  {
+    name: "Kitchen and dining",
+    amenities: [
+      {
+        label: "Kitchen",
+        subtitle: "Space where guests can cook their own meals",
+      },
+      { label: "Refrigerator" },
+      { label: "Microwave" },
+      {
+        label: "Cooking basics",
+        subtitle: "Pots and pans, oil, salt, and pepper",
+      },
+      {
+        label: "Dishes and silverware",
+        subtitle: "Bowls, chopsticks, plates, cups, etc.",
+      },
+      { label: "Freezer" },
+      { label: "Dishwasher" },
+      { label: "Stove" },
+      { label: "Oven" },
+      { label: "Hot water kettle" },
+      { label: "Coffee maker" },
+      { label: "Wine glasses" },
+      { label: "Toaster" },
+      { label: "Blender" },
+      { label: "Rice cooker" },
+      {
+        label: "Barbecue utensils",
+        subtitle: "Grill, charcoal, bamboo skewers/iron skewers, etc.",
+      },
+      { label: "Dining table" },
+    ],
+  },
+  {
+    name: "Location features",
+    amenities: [
+      {
+        label: "Ski-in/Ski-out",
+        subtitle:
+          "Guests can access ski lifts without driving or taking paid transportation",
+      },
+      {
+        label: "Private entrance",
+        subtitle: "Separate street or building entrance",
+      },
+      { label: "Laundromat nearby" },
+    ],
+  },
+  {
+    name: "Outdoor",
+    amenities: [
+      { label: "Patio or balcony" },
+      { label: "Outdoor furniture" },
+      { label: "Outdoor dining area" },
+      { label: "BBQ grill" },
+    ],
+  },
+  {
+    name: "Parking and facilities",
+    amenities: [
+      { label: "Free parking garage on premises" },
+      { label: "Free street parking" },
+      { label: "Hot tub" },
+    ],
+  },
+  {
+    name: "Services",
+    amenities: [
+      {
+        label: "Luggage drop-off allowed",
+        subtitle:
+          "For guests' convenience when they have early arrival or late departure",
+      },
+      {
+        label: "Long-term stays allowed",
+        subtitle: "Allow stay for 28 days or more",
+      },
+      { label: "Self check-in" },
+      { label: "Smart lock" },
+    ],
+  },
+] as const;
+
 export default function BluffsUnit8TaluswoodDetails({ photos }: ListingDetailsProps) {
   return (
     <>
@@ -16,12 +195,11 @@ export default function BluffsUnit8TaluswoodDetails({ photos }: ListingDetailsPr
         <p className="text-gray-800 mb-16 max-w-4xl">
           Perched in Taluswood&apos;s Bluffs, this 3-bedroom retreat puts you right
           on the Dave Murray Downhill for true ski-in ski-out days and beautiful
-          mountain-view evenings. With a King suite, Queen bedroom, four Twin bunk
-          beds, and a Queen sofa bed, the home sleeps up to 10 guests and is ideal for
-          families and groups. A
-          common-area hot tub, portable AC, Smart TVs, gas fireplace, BBQ,
-          chef-ready kitchen, generous parking, and secure ski &amp; bike storage
-          make every season comfortable and effortless.
+          mountain-view evenings. With a King suite, Queen bedroom, 4 Twin bunk
+          beds, and a Queen sofa bed, the home is ideal for families and groups. A
+          neighbourhood hot tub with stunning views, AC, Smart TVs, gas fireplace,
+          BBQ, gorgeous patio view, chef-ready kitchen, generous parking, and secure
+          ski &amp; bike storage make every season comfortable and effortless.
         </p>
 
         <div className="flex justify-center mb-16">
@@ -75,7 +253,7 @@ export default function BluffsUnit8TaluswoodDetails({ photos }: ListingDetailsPr
                   />
                 </svg>
               </div>
-              <h2 className="text-2xl font-bold">The Space</h2>
+              <h2 className="text-2xl font-bold">The space</h2>
             </div>
             <p className="text-gray-800 mb-6">
               Step inside to a warm and welcoming mountain home designed for easy
@@ -83,40 +261,45 @@ export default function BluffsUnit8TaluswoodDetails({ photos }: ListingDetailsPr
               combines comfortable bedrooms, an open-concept living area, a fully
               equipped kitchen, beautiful views, and convenient access to the slopes.
             </p>
-            <p className="font-bold mb-2">Main Living Level</p>
+            <p className="font-bold mb-2">Main Living Level:</p>
             <p className="text-gray-800 mb-6">
               The main floor features the open-concept kitchen, dining, and living
               area, along with the Queen bedroom and bunk room. The living room
               includes a Queen pull-out sofa, gas fireplace, Smart TV, and a portable
-              AC unit from May 1 to November 1. Sliding doors open to the covered
-              balcony, where you can enjoy the mountain air, BBQ, and outdoor dining
-              space.
+              AC unit from May 1 to November 1.
             </p>
-            <p className="font-bold mb-2">Kitchen &amp; Dining</p>
+            <p className="text-gray-800 mb-6">
+              Sliding doors open to the covered balcony, where you can enjoy the
+              mountain air, BBQ, and outdoor dining space.
+            </p>
+            <p className="font-bold mb-2">Kitchen &amp; Dining:</p>
             <p className="text-gray-800 mb-4">
-              The chef&apos;s kitchen is fully stocked for longer stays:
+              The chef’s kitchen is fully stocked for longer stays:
             </p>
             <ul className="text-gray-800 mb-6 list-disc pl-6 space-y-1">
-              <li>Full-size fridge and freezer</li>
-              <li>Electric range, oven, microwave, and dishwasher</li>
-              <li>Nespresso Original machine &amp; drip coffee machine</li>
+              <li>✓ Full-size fridge and freezer</li>
+              <li>✓ Electric range, oven, microwave, and dishwasher</li>
+              <li>✓ Nespresso Original machine &amp; drip coffee machine</li>
               <li>
-                High-end cookware, chef&apos;s knives, spice rack, baking basics,
-                and ample glassware
+                ✓ High-end cookware, chef’s knives, spice rack, baking basics, and
+                ample glassware
               </li>
             </ul>
             <p className="text-gray-800 mb-6">
               The dining area provides plenty of room for the group to gather for
               meals after a day on the mountain.
             </p>
-            <p className="font-bold mb-2">Climate &amp; Comfort</p>
+            <p className="font-bold mb-2">Climate &amp; Comfort:</p>
             <p className="text-gray-800 mb-6">
               Portable, whisper-quiet AC helps keep the main living area cool from
               May 1 to November 1. Thanks to Whistler&apos;s cooler evenings and
               mountain climate, the home remains comfortable throughout the summer
-              season. Bathrooms feature in-floor heating, with efficient baseboard
-              heating throughout the rest of the home. High-speed Wi-Fi is included
-              for remote work, streaming, and staying connected during your stay.
+              season.
+            </p>
+            <p className="text-gray-800 mb-6">
+              Bathrooms feature in-floor heating, with efficient baseboard heating
+              throughout the rest of the home. High-speed Wi-Fi is included for
+              remote work, streaming, and staying connected during your stay.
             </p>
           </div>
         </div>
@@ -148,7 +331,7 @@ export default function BluffsUnit8TaluswoodDetails({ photos }: ListingDetailsPr
                   />
                 </svg>
               </div>
-              <h2 className="text-2xl font-bold">Bedroom Layout &amp; Beds</h2>
+              <h2 className="text-2xl font-bold">Bedroom Layout &amp; Beds:</h2>
             </div>
             <p className="text-gray-800 mb-4">
               All of our beds come with premium sheets and bedding.
@@ -169,6 +352,23 @@ export default function BluffsUnit8TaluswoodDetails({ photos }: ListingDetailsPr
               <span className="font-medium">Living Room:</span> Queen pull-out sofa
               with comfortable bedding.
             </p>
+            <h3 className="text-xl font-bold mt-8 mb-4">Where you&apos;ll sleep</h3>
+            <p className="text-gray-800 mb-4">
+              <span className="font-medium">Bedroom 1</span>
+              <br />1 king bed
+            </p>
+            <p className="text-gray-800 mb-4">
+              <span className="font-medium">Bedroom 2</span>
+              <br />1 queen bed
+            </p>
+            <p className="text-gray-800 mb-4">
+              <span className="font-medium">Bedroom 3</span>
+              <br />4 single beds
+            </p>
+            <p className="text-gray-800 mb-4">
+              <span className="font-medium">Living room</span>
+              <br />1 sofa bed
+            </p>
           </div>
         </div>
 
@@ -188,7 +388,7 @@ export default function BluffsUnit8TaluswoodDetails({ photos }: ListingDetailsPr
                 />
               </svg>
             </div>
-            <h2 className="text-2xl font-bold">Outdoor Space</h2>
+            <h2 className="text-2xl font-bold">Outdoor Space:</h2>
           </div>
           <p className="text-gray-800 max-w-4xl mb-8">
             The hot tub is private to the complex and looks toward the surrounding
@@ -198,7 +398,7 @@ export default function BluffsUnit8TaluswoodDetails({ photos }: ListingDetailsPr
         </div>
 
         <div className="mb-16">
-          <h2 className="text-2xl font-bold mb-4">Parking &amp; Storage</h2>
+          <h2 className="text-2xl font-bold mb-4">Parking &amp; Storage:</h2>
           <p className="text-gray-800 max-w-4xl mb-6">
             The unit includes two guaranteed underground parking spaces, with a
             maximum garage clearance of 6 feet 8 inches. In addition to the
@@ -216,7 +416,7 @@ export default function BluffsUnit8TaluswoodDetails({ photos }: ListingDetailsPr
         </div>
 
         <div className="mb-16">
-          <h2 className="text-2xl font-bold mb-4">Laundry &amp; Essentials</h2>
+          <h2 className="text-2xl font-bold mb-4">Laundry &amp; Essentials:</h2>
           <p className="text-gray-800 max-w-4xl mb-6">
             A full-size washer and dryer are provided along with detergent, an
             iron, and drying rack. We stock eco-friendly toiletries, basic cleaning
@@ -226,7 +426,9 @@ export default function BluffsUnit8TaluswoodDetails({ photos }: ListingDetailsPr
         </div>
 
         <div className="mb-16">
-          <h2 className="text-2xl font-bold mb-4">Please Note About the Stairs</h2>
+          <h2 className="text-2xl font-bold mb-4">
+            Please Note About the Stairs:
+          </h2>
           <p className="text-gray-800 max-w-4xl mb-6">
             There is one flight of stairs to enter the unit. It is manageable for
             nearly all guests, including many elderly guests, but we like to be
@@ -244,7 +446,70 @@ export default function BluffsUnit8TaluswoodDetails({ photos }: ListingDetailsPr
         </div>
 
         <div className="mb-16 border-t border-gray-200 pt-8">
-          <h2 className="text-2xl font-bold mb-4">Registration Details</h2>
+          <h2 className="text-2xl font-bold mb-4">Neighbourhood highlights</h2>
+          <p className="text-gray-800 max-w-4xl mb-6">
+            Taluswood is one of Whistler’s most desirable mountainside
+            neighbourhoods, set above Creekside in a peaceful alpine setting
+            surrounded by forest and mountain views. The area is especially popular
+            with skiers because of its convenient access to Whistler Mountain and
+            the Dave Murray ski run.
+          </p>
+          <p className="text-gray-800 max-w-4xl mb-6">
+            Creekside Village is only a short drive away and offers the Creekside
+            Gondola, restaurants, cafés, grocery shopping, ski rentals and other
+            essentials. Whistler Village is also easily accessible by car or taxi,
+            making Taluswood a great choice for guests who want a quieter mountain
+            setting while still being close to Whistler’s main attractions.
+          </p>
+          <p className="text-gray-800 max-w-4xl">
+            In summer, the area provides easy access to hiking, biking and nearby
+            lakes, while the elevated setting offers a more relaxed residential
+            atmosphere away from the busiest parts of the resort.
+          </p>
+        </div>
+
+        <div className="mb-16 border-t border-gray-200 pt-8">
+          <h2 className="text-2xl font-bold mb-6">Photo tour</h2>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {photoTourEntries.map((entry) => (
+              <div
+                key={entry.name}
+                className="rounded-lg border border-gray-200 p-4"
+              >
+                <h3 className="font-bold">{entry.name}</h3>
+                {entry.details.map((detail) => (
+                  <p key={detail} className="text-gray-800 mt-1">
+                    {detail}
+                  </p>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mb-16 border-t border-gray-200 pt-8">
+          <h2 className="text-2xl font-bold mb-6">What this place offers</h2>
+          <div className="grid gap-x-12 gap-y-10 md:grid-cols-2">
+            {amenityGroups.map((group) => (
+              <section key={group.name}>
+                <h3 className="text-xl font-bold mb-4">{group.name}</h3>
+                <ul className="text-gray-800 list-disc pl-6 space-y-3">
+                  {group.amenities.map((amenity) => (
+                    <li key={amenity.label}>
+                      <span className="font-medium">{amenity.label}</span>
+                      {"subtitle" in amenity && amenity.subtitle ? (
+                        <p className="mt-1">{amenity.subtitle}</p>
+                      ) : null}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ))}
+          </div>
+        </div>
+
+        <div className="mb-16 border-t border-gray-200 pt-8">
+          <h2 className="text-2xl font-bold mb-4">Registration details</h2>
           <p className="text-gray-800">
             Municipal registration number: 00015954
             <br />

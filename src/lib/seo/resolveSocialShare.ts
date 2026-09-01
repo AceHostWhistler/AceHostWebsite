@@ -120,8 +120,9 @@ const WORLDWIDE_LISTING_TITLES: Record<string, Pick<StaticPageMeta, "title" | "d
     description: businessInfo.description,
   },
   "luxe-5-bed-scandinave-retreat": {
-    title: "Luxe 5-BED Scandinave Retreat | Walk to Slopes - AceHost",
-    description: businessInfo.description,
+    title: "Luxe 5-BED Scandinave Retreat - Walk to Slopes - AceHost",
+    description:
+      "An ideal family ski home just 400m (8 min walk) to Whistler Creekside Gondola. Stunning, unobstructed views of the Tantalus Range, Alpha & Nita Lakes. Perfect for 1 large family, 3 couples, or 2 families. This 1,450 sqft, 3-bedroom, 5-bed, architecturally designed home features; vaulted ceilings, a steam shower, kids’ triple bunk room, heated floors, a cozy living area with fireplace, and a kitchen for family dinners. Enjoy 2 free parking spots, A/C, & ski storage!",
   },
   "cotswolds-uk-soho-farm-house": {
     title: "Luxury Cotswolds Estate Near Soho Farmhouse | Pool, Tennis & Spa | AceHost",

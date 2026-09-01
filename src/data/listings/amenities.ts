@@ -20,7 +20,7 @@ export const listingAmenities: Record<string, string[]> = {
   "bluffs-unit-8-taluswood": [
     "Ski-in / ski-out on Dave Murray",
     "Taluswood mountain views",
-    "Private complex hot tub",
+    "Neighbourhood hot tub",
     "King suite on top floor",
     "Four Twin bunk beds",
     "Portable AC (May–Nov)",
@@ -94,9 +94,10 @@ export const listingAmenities: Record<string, string[]> = {
     "7,800 sq ft log chalet",
     "Golf course & mountain views",
     "Air conditioning (summer)",
-    "5 bedrooms · 5.5 baths",
+    "5 bedrooms · 6 beds · 5.5 baths",
+    "14-person hot tub",
+    "Theatre room & wet bar",
     "Blueberry Hill",
-    "Drive or walk to village",
   ],
   "luxe-cozy-3-bed-whistler-village": [
     "Ski-in / ski-out",
@@ -116,11 +117,11 @@ export const listingAmenities: Record<string, string[]> = {
   ],
   "luxury-6-bedroom-whistler-village-blueberry": [
     "Blueberry neighbourhood",
-    "6 bedrooms · sleeps 12",
+    "6 bedrooms · 10 beds · sleeps 12",
     "Premium Puffy beds",
     "Ski & bike storage",
-    "EV parking",
-    "New BBQ & renovation",
+    "Free EV charging",
+    "Summer A/C",
   ],
   "luxury-ski-in-ski-out-7-bedroom-kadenwood": [
     "Ski-in / ski-out · Kadenwood",
