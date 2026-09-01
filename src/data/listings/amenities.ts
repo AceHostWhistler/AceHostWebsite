@@ -142,11 +142,12 @@ export const listingAmenities: Record<string, string[]> = {
     "Blackcomb gondola access",
   ],
   "northlands-walk-to-village-slopes-luxury-4-bed": [
-    "Heart of Whistler Village",
+    "Symphony Building · Village North",
     "Walk to slopes & lifts",
-    "4-bed townhome-style layout",
+    "3 full bathrooms",
+    "Shared hot tub",
     "Private exterior entrance",
-    "Steps to dining & shops",
+    "Underground parking",
   ],
   "panoramic-estate-kadenwood": [
     "Ski-in / ski-out · Kadenwood",
@@ -281,12 +282,12 @@ export const listingAmenities: Record<string, string[]> = {
     "Lost Lake trails nearby",
   ],
   "whistler-village-penthouse": [
-    "Village penthouse",
+    "Hearthstone Lodge penthouse",
     "Private hot tub",
-    "Steps to Blackcomb Gondola",
-    "Fire pit & mountain views",
+    "Steps to gondolas",
+    "Stone fireplace & log beams",
     "Air conditioning",
-    "4 bedrooms",
+    "Free parking",
   ],
   "whistler-village-penthouse-3-bdr-walk-to-ski": [
     "Tyndall Lodge penthouse",

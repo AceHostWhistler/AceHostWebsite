@@ -158,14 +158,14 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     imageAlt: "Valhalla Peaks luxury 3-bed Whistler Village condo with private hot tub",
   },
   {
-    name: "Whistler Village | Penthouse | 4-Bed",
+    name: "Whistler Village Penthouse 4-Bed - Ski in Ski out",
     priceRange: "$450-$1,700 per night (seasonal)",
     stats:
-      "Sleeps 7 | 2 Bedrooms | 4 Beds | 2 Bathrooms | Private Hot Tub | Ski-in/Ski-out | Village Location",
+      "Sleeps 7 | 2 Bedrooms | 4 Beds | 2 Bathrooms | Private Hot Tub | Walk to Gondolas | Village Location",
     paragraphs: [
-      "This Hearthstone penthouse puts you steps from the Whistler Blackcomb gondola with a private hot tub, air conditioning, and free parking – a combination that is increasingly hard to find in the Village core. High ceilings, log beams, and a fireplace create a gathering space built for après-ski celebrations.",
-      "Pop champagne in the hot tub, roast marshmallows on the fire, and watch the mountain light change from your living room. The layout was designed for friends and family to spread out comfortably while staying in the absolute center of Whistler's restaurants, shops, and lift access.",
-      "If you want a penthouse feel with true village convenience and slope-side access, this is one of the most iconic addresses in the AceHost condo collection.",
+      "This Hearthstone Lodge penthouse is a 2-level alpine retreat steps from the Whistler and Blackcomb gondolas, with a private balcony hot tub, stone fireplace, exposed log beams, and free parking in the Rainbow Parkade below.",
+      "High ceilings, mountain views, and classic Whistler character make it an ideal gathering space after skiing. The grocery store and BC Liquor are directly downstairs, with top Village restaurants and après-ski just outside the door.",
+      "Once you arrive and park, you can walk almost everywhere – from morning lift lines to evening dinners – without needing your car again.",
     ],
     airbnbHref:
       "https://www.airbnb.ca/rooms/1471251206220643818?guests=1&adults=1&s=67&unique_share_id=0ec28644-49fa-4b63-9276-7e5f5c6a1153",
@@ -191,14 +191,14 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     imageAlt: "Whistler Village Tyndall Lodge penthouse walk to ski",
   },
   {
-    name: "Northlands Walk to village/slopes | Luxury 4-bed",
+    name: "Symphony - Walk to village & slopes - Luxury 4-bed",
     priceRange: "$500-$1,200 Summer | $750-$1,500 Winter (seasonal)",
     stats:
-      "Sleeps 6 | 2 Bedrooms | 4 Beds | 3 Bathrooms | Village Location | Private Exterior Entrance",
+      "Sleeps 6 | 2 Bedrooms | 4 Beds | 3 Bathrooms | Shared Hot Tub | Village Location | Private Exterior Entrance",
     paragraphs: [
-      "This Symphony Building townhome-style condo delivers a private three-level layout with its own exterior entrance – a village rarity. Three full bathrooms, free underground parking, and a fully equipped kitchen give larger groups room to spread out while staying minutes from restaurants, shops, and the slopes.",
-      "Located next to the Whistler Racquet & Pickleball Club with a grocery store across the street, everyday errands are effortless. A 12–15 minute walk to the lifts keeps you close to the action without the noise of the village core.",
-      "Choose Northlands when you want condo convenience with townhome privacy – ideal for families who need multiple bathrooms and a true front door in the Village.",
+      "This Symphony Building townhome-style retreat offers a private three-level layout with its own exterior entrance – more space and privacy than a typical Village condo. Three full bathrooms, a shared hot tub steps from the door, and complimentary underground parking make it ideal for families and small groups.",
+      "Fresh St. Market is directly across the street, with Marketplace, restaurants, and the Racquet & Pickleball Club all nearby. The gondolas and ski lifts are an easy 12–15 minute walk, so a car is rarely needed once you arrive.",
+      "Choose Symphony when you want townhome privacy with central Village access – especially if multiple bathrooms and a true front door matter for your group.",
     ],
     airbnbHref:
       "https://www.airbnb.ca/rooms/1566952897757488737?guests=1&adults=1&s=67&unique_share_id=70d8a9c5-be29-49cb-a1de-03c1e0ec667b",

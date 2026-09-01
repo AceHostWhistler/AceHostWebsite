@@ -1178,7 +1178,7 @@ export const propertyCategories: PropertyCategory[] = [
           },
           {
             id: "whistler-village-penthouse",
-            name: "Whistler Village | Penthouse | 4-Bed",
+            name: "Whistler Village Penthouse 4-Bed - Ski in Ski out",
             images: [
               "/photos/properties/3-Bed PH Whistler Village/snowy-room-blinds-only Hearthstone.png",
               "/photos/properties/3-Bed PH Whistler Village/Hearthstone Hot tub.png",
@@ -1189,23 +1189,23 @@ export const propertyCategories: PropertyCategory[] = [
             bathrooms: 2,
             location: "Whistler Village",
             description:
-              "Penthouse with private hot tub steps from Whistler Blackcomb gondola. Step out your door into Whistler's finest amenities. Located at the base of Whistler mountain, you are in the heart of iconic Whistler Village. This space was designed to gather family and friends. Pop champagne in the hot tub, roast marshmallows on the fire, and enjoy the mountain view.",
+              "Welcome to this Whistler Village penthouse at Hearthstone Lodge, a 2-level alpine retreat steps from the gondolas with a private balcony hot tub, stone fireplace, and free parking.",
             features: [
               "Private Hot Tub",
-              "Ski-in/Ski-out Access",
+              "Walk to Gondolas",
               "Air Conditioning",
-              "FREE Parking",
+              "Free Parking",
               "High Ceilings",
               "Log Beams",
-              "Fireplace",
+              "Stone Fireplace",
               "Mountain Views",
               "Fully Equipped Kitchen",
             ],
             highlights: [
-              "Heart of Whistler Village",
-              "Private Hot Tub",
-              "Steps from Gondola",
-              "FREE Parking",
+              "Hearthstone Lodge · Whistler Village",
+              "Private Balcony Hot Tub",
+              "Steps from Gondolas",
+              "Free Parking",
             ],
             priceRange: "$450-$1,700 per night",
             winterPrice: "$650-$1,700 Nightly | Winter",
@@ -1736,7 +1736,7 @@ export const propertyCategories: PropertyCategory[] = [
           },
           {
             id: "northlands-walk-to-village-slopes-luxury-4-bed",
-            name: "Northlands Walk to village/slopes | Luxury 4-bed",
+            name: "Symphony - Walk to village & slopes - Luxury 4-bed",
             images: [
               "/photos/properties/Northlands Symphony 29/01 - 20251128 A7M4 02 A1_02882_.jpg",
               "/photos/properties/Northlands Symphony 29/02 - 20251128 A7M4 02 A1_02752.jpg",
@@ -1748,22 +1748,22 @@ export const propertyCategories: PropertyCategory[] = [
             beds: 4,
             location: "Whistler Village, Whistler",
             description:
-              "Welcome to this beautifully located townhome-style condo in the Symphony Building, right in the heart of Whistler Village. This unique 3-level home offers a private entrance from the outside, 3 full bathrooms, and sits next to the Whistler Racquet & Pickleball Club, with restaurants, shops, and village amenities all around you.",
+              "Unique 3-level townhome-style retreat in the Symphony Building with 2 bedrooms, 4 beds, 3 full bathrooms, shared hot tub, private exterior entrance, and free underground parking in Whistler Village.",
             features: [
               "Private Exterior Entrance",
               "Three-Level Townhome Layout",
               "3 Full Bathrooms",
+              "Shared Hot Tub",
               "Free Underground Parking",
               "Fully Equipped Kitchen",
-              "Cozy Living Area",
-              "Walk to Slopes (12-15 min)",
-              "Next to Racquet & Pickleball Club"
+              "Summer Air Conditioning",
+              "Walk to Slopes (12–15 min)",
             ],
             highlights: [
-              "Heart of Whistler Village",
+              "Symphony Building · Village North",
               "Private Townhome Feel",
-              "Grocery Store Across Street",
-              "Walk to Slopes & Amenities"
+              "Fresh St. Market Across Street",
+              "Walk to Slopes & Amenities",
             ],
             priceRange: "$500-1200 per night Summer",
             winterPrice: "$750-1500 Nightly | Winter",

@@ -35,11 +35,12 @@ const listing: ListingData = {
   "/photos/properties/Northlands Symphony 29/31 - 20251128 A7M4 02 A1_02855.jpg"
 ],
   seo: {
-    title: "Northlands Walk to village/slopes | Luxury 4-bed - AceHost",
-    description: "Beautifully located townhome-style condo in the Symphony Building, right in the heart of Whistler Village. This unique 3-level home offers a private entrance and easy access to slopes, restaurants, and shops.",
+    title: "Symphony - Walk to village & slopes - Luxury 4-bed | AceHost",
+    description:
+      "Unique 3-level townhome-style retreat in Whistler Village with 2 bedrooms, 4 beds, 3 full bathrooms, shared hot tub, private exterior entrance, and free underground parking.",
   },
   header:   {
-      "title": "Northlands Walk to village/slopes | Luxury 4-bed",
+      "title": "Symphony - Walk to village & slopes - Luxury 4-bed",
       "guests": 6,
       "bedrooms": 2,
       "bathrooms": 3,
@@ -49,8 +50,8 @@ const listing: ListingData = {
       "holidayPrice": "$2500-3500+ for Christmas/NYE",
       "airbnbLink": "https://www.airbnb.ca/rooms/1566952897757488737?guests=1&adults=1&s=67&unique_share_id=70d8a9c5-be29-49cb-a1de-03c1e0ec667b"
   },
-  galleryTitle: "Northlands Walk to village/slopes",
-  photoAltPrefix: "Northlands Walk to village/slopes",
+  galleryTitle: "Symphony - Walk to village & slopes",
+  photoAltPrefix: "Symphony Whistler Village",
 };
 
 export default listing;

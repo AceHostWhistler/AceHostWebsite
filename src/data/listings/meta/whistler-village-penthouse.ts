@@ -26,11 +26,12 @@ const listing: ListingData = {
   "/photos/properties/3-Bed PH Whistler Village/Hearthstone living room:hot tub.png"
 ],
   seo: {
-    title: "Whistler Village | Penthouse | 4-Bed - AceHost",
-    description: "Penthouse with private hot tub steps from Whistler Blackcomb gondola. Step out your door into Whistler's finest amenities. Located at the base of Whistler mountain, you are in the heart of iconic Whistler Village.",
+    title: "Whistler Village Penthouse 4-Bed - Ski in Ski out | AceHost",
+    description:
+      "Hearthstone Lodge penthouse with private balcony hot tub, stone fireplace, log beams, and steps-from-gondola access in the heart of Whistler Village.",
   },
   header:   {
-      "title": "Whistler Village | Penthouse | 4-Bed",
+      "title": "Whistler Village Penthouse 4-Bed - Ski in Ski out",
       "guests": 7,
       "bedrooms": 2,
       "bathrooms": 2,
@@ -39,8 +40,8 @@ const listing: ListingData = {
       "holidayPrice": "$1,300-$1,700+ Nightly | Christmas & NY",
       "airbnbLink": "https://www.airbnb.ca/rooms/1471251206220643818?guests=1&adults=1&s=67&unique_share_id=0ec28644-49fa-4b63-9276-7e5f5c6a1153"
   },
-  galleryTitle: "Whistler Village",
-  photoAltPrefix: "Whistler Village",
+  galleryTitle: "Hearthstone Lodge Penthouse",
+  photoAltPrefix: "Hearthstone Lodge Whistler Village",
 };
 
 export default listing;

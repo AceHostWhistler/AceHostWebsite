@@ -232,9 +232,9 @@ export const townhomeProperties: Whistler28Property[] = [
   },
   {
     number: 22,
-    name: "Whistler Village | Penthouse | 4-Bed",
+    name: "Whistler Village Penthouse 4-Bed - Ski in Ski out",
     description:
-      "A bright two-bedroom Village penthouse with four beds and a comfortable central base for families and smaller groups.",
+      "A 2-level Hearthstone Lodge penthouse with four beds, a private balcony hot tub, stone fireplace, and steps-from-gondola access in Whistler Village.",
     image:
       "/photos/properties/3-Bed PH Whistler Village/snowy-room-blinds-only Hearthstone.png",
     listingHref: "/listings/whistler-village-penthouse",
@@ -303,9 +303,9 @@ export const townhomeProperties: Whistler28Property[] = [
   },
   {
     number: 28,
-    name: "Northlands | Walk to Village and Slopes | Luxury 4-Bed",
+    name: "Symphony - Walk to village & slopes - Luxury 4-bed",
     description:
-      "A two-bedroom, four-bed townhome-style condo with three bathrooms, a private entrance, parking, and excellent Village access.",
+      "A three-level Symphony townhome-style retreat with four beds, three bathrooms, a shared hot tub, private exterior entrance, and excellent Village walkability.",
     image: "/photos/properties/Northlands Symphony 29/01 - 20251128 A7M4 02 A1_02882_.jpg",
     listingHref: "/listings/northlands-walk-to-village-slopes-luxury-4-bed",
     bookUrl:
