@@ -188,12 +188,12 @@ export const listingAmenities: Record<string, string[]> = {
     "Total privacy",
   ],
   "ski-in-ski-out-walk-to-lifts-2-bed": [
+    "2-min walk to Blackcomb Gondola",
+    "King suite & Murphy bedroom",
+    "Free parking & EV charger",
+    "Pool · hot tub · gym",
+    "Personal ski locker",
     "Upper Village location",
-    "Walk to Blackcomb Gondola",
-    "Le Chamois residence",
-    "Pool & hot tub (building)",
-    "Fireplace",
-    "Full kitchen",
   ],
   "slopeside-villa-kadenwood": [
     "Ski-in / ski-out from ski room",
@@ -299,12 +299,12 @@ export const listingAmenities: Record<string, string[]> = {
     "Free underground parking",
   ],
   "whistler-village-views-luxury-2-5-bedroom": [
-    "Walk to ski lifts",
+    "Tyndall Stone Lodge · Village North",
     "Olympic Plaza views",
-    "Complex pool & hot tub",
-    "Full kitchen",
-    "In-suite laundry",
-    "Sleeps families comfortably",
+    "Walk to gondolas",
+    "A/C & in-suite laundry",
+    "Pool & hot tub access",
+    "Guaranteed underground parking",
   ],
 };
 

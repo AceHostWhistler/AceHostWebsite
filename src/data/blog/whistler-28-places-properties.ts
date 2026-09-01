@@ -201,9 +201,9 @@ export const townhomeProperties: Whistler28Property[] = [
   },
   {
     number: 19,
-    name: "Le Chamois | 2 Bed | Walk to Lifts",
+    name: "Le Chamois | Ski-In/Out | 2 Bed | Blackcomb",
     description:
-      "A two-bedroom Upper Village condo directly across from the Blackcomb Gondola, with a pool, hot tub, gym, and excellent walkability.",
+      "Upper Village ski base with a 2-minute walk to the Blackcomb Gondola, king suite, Murphy bedroom, free parking, EV charger, pool, hot tub and gym.",
     image: "/photos/properties/ski-in-ski-out-walk-to-lifts-2-bed/Le chamois-4.jpg",
     listingHref: "/listings/ski-in-ski-out-walk-to-lifts-2-bed",
     bookUrl:
@@ -211,9 +211,9 @@ export const townhomeProperties: Whistler28Property[] = [
   },
   {
     number: 20,
-    name: "Whistler Village Views | Luxury 2.5 Bedroom",
+    name: "Tyndall - Luxe 2 bedroom, Main Whistler Village",
     description:
-      "A renovated Village North condo overlooking Olympic Plaza, with extra sleeping space, a shared pool and hot tub, laundry, and parking.",
+      "Freshly renovated Tyndall Stone Lodge retreat overlooking Olympic Plaza with A/C, in-suite laundry, pool, hot tub, and guaranteed parking.",
     image:
       "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-14.jpg",
     listingHref: "/listings/whistler-village-views-luxury-2-5-bedroom",

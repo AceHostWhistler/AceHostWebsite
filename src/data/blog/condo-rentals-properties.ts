@@ -44,21 +44,21 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     imageAlt: "Luxe Cozy 3-Bed condo in Whistler Village",
   },
   {
-    name: "Whistler Village Views | Luxury 2.5 Bedroom",
+    name: "Tyndall - Luxe 2 bedroom, Main Whistler Village",
     priceRange: "$400-$1,150+ per night (seasonal)",
     stats:
-      "Sleeps 6 | 2.5 Bedrooms | 4 Beds | 2 Bathrooms | Village Location | Mountain Views",
+      "Sleeps 6 | 2.5 Bedrooms | 4 Beds | 2 Bathrooms | Olympic Plaza Views | A/C | In-Suite Laundry",
     paragraphs: [
-      "This stylish 2.5-bedroom haven in Tyndall Stone Lodge puts you front-row center to all the Whistler action while offering a peaceful sanctuary when it's time to unwind. The intelligently designed floor plan makes the most of every square inch, with the half-bedroom providing extra flexibility for families or small groups.",
-      "Step onto your private balcony and take in sweeping village and mountain views – the perfect backdrop for morning coffee or evening cocktails. Inside, contemporary furnishings and thoughtful touches create a welcoming atmosphere that strikes the perfect balance between luxury and comfort.",
-      "Located just moments from Whistler's world-class restaurants, shops, and activities, you'll enjoy the convenience of having everything at your doorstep year-round. During winter, you're just a short walk from both Whistler and Blackcomb gondolas, while summer brings easy access to hiking trails, the bike park, and Alpine adventures.",
+      "Welcome to this freshly renovated 2.5-bedroom retreat in the heart of Whistler Village, overlooking Olympic Plaza and the surrounding mountains. Sleeping up to 6 guests, the home features two bathrooms, A/C, a full kitchen, in-suite laundry and a cozy living area.",
+      "Step outside to restaurants, cafés, shops and après-ski, with Fresh St. Market nearby and the gondolas an easy walk or free shuttle away. Guests also enjoy a shared pool and hot tub, plus one guaranteed underground parking space.",
+      "The primary bedroom offers a queen bed with Olympic Plaza views, bedroom 2 has two singles, and a queen pullout sofa in the living room provides additional sleeping space for up to 6 guests.",
     ],
     airbnbHref:
-      "https://www.airbnb.ca/rooms/50025973?preview_for_ml=true&source_impression_id=p3_1699290307_SHcNx7EoXySmn6j5",
+      "https://www.airbnb.ca/rooms/50025973?guests=1&adults=1&s=67&unique_share_id=04ceb090-1b8e-4e32-972f-d616b380a0a8",
     listingHref: "/listings/whistler-village-views-luxury-2-5-bedroom",
     imageSrc:
       "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-14.jpg",
-    imageAlt: "Whistler Village Views | Luxury 2.5 Bedroom condo",
+    imageAlt: "Tyndall Stone Lodge luxe 2 bedroom Whistler Village condo",
   },
   {
     name: "Raven's Nest | Ski in Ski out | Views",
@@ -93,19 +93,20 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     imageAlt: "The Aspens | 2-Bed Ski in/Out condo in Upper Village",
   },
   {
-    name: "Le Chamois | 2 Bed | Walk to Lifts",
+    name: "Le Chamois | Ski-In/Out | 2 Bed | Blackcomb",
     priceRange: "$350-$1,200 per night (seasonal)",
-    stats: "Sleeps 4 | 2 Bedrooms | 2 Beds | 2 Bathrooms | Walk to Lifts | Upper Village Location",
+    stats:
+      "Sleeps 4 | 2 Bedrooms | 2 Beds | 2 Bathrooms | Walk to Gondola | Free Parking & EV Charger",
     paragraphs: [
-      "Welcome to this modern apartment in the prestigious Le Chamois hotel, perfectly positioned in the heart of Upper Village and just across the street from the Blackcomb Gondola. This stylish retreat offers the ideal combination of comfort and convenience for your Whistler adventure.",
-      "Inside, you'll find a thoughtfully designed space with contemporary touches throughout. The living area features a Murphy double bed that can be easily stowed away when not in use, while the master bedroom boasts a comfortable queen bed, ensuite bathroom with spacious walk-in shower, and high-tech touches including a Japanese Toto toilet and a large smart TV.",
-      "The fully equipped kitchen, though compact, includes everything you need with its stove top hob, refrigerator, air fryer, and microwave. After a day exploring Whistler's endless activities, you'll appreciate returning to this welcoming space where every detail has been considered to enhance your mountain getaway.",
+      "Welcome to Le Chamois, one of Whistler's most sought-after ski locations at the base of Blackcomb Mountain. The Blackcomb Gondola and ski-out are only about a 2-minute walk away, making mountain days effortless.",
+      "This contemporary 2-bedroom, 2-bath retreat features a king suite, flexible Murphy bedroom, free underground parking and an EV charger. After skiing, enjoy the outdoor pool, hot tub and gym, with the Fairmont, Upper Village dining and Whistler Village all within easy walking distance.",
+      "A personal ski locker is included, and one complimentary underground parking space makes this one of the most convenient Upper Village bases for ski-focused trips.",
     ],
     airbnbHref:
-      "https://www.airbnb.ca/rooms/1015303987589924725?guests=1&adults=1&s=67&unique_share_id=5e912eb5-5445-4797-81ec-df21817dd143",
+      "https://www.airbnb.ca/rooms/1015303987589924725?guests=1&adults=1&s=67&unique_share_id=1d282b7d-e5fc-4539-b272-d5d4809bf789",
     listingHref: "/listings/ski-in-ski-out-walk-to-lifts-2-bed",
     imageSrc: "/photos/properties/ski-in-ski-out-walk-to-lifts-2-bed/Le chamois-4.jpg",
-    imageAlt: "Le Chamois | 2 Bed condo walking distance to lifts",
+    imageAlt: "Le Chamois ski-in ski-out condo at Blackcomb base",
   },
   {
     name: "Marquise 2 Bed | Ski-In/Ski-Out | Whistler Village",

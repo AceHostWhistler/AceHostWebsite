@@ -22,19 +22,20 @@ const listing: ListingData = {
   "/photos/properties/ski-in-ski-out-walk-to-lifts-2-bed/Le chamois-17.jpg"
 ],
   seo: {
-    title: "Le Chamois Apartment | Ski-in Ski-out - AceHost",
-    description: "Experience the perfect ski-in ski-out location at Le Chamois Apartment in Whistler. This 2-bedroom unit offers direct access to lifts, stunning mountain views, and modern amenities.",
+    title: "Le Chamois | Ski-In/Out | 2 Bed | Blackcomb - AceHost",
+    description: "Le Chamois at the base of Blackcomb Mountain with a 2-minute walk to the gondola and ski-out. King suite, Murphy bedroom, free parking, EV charger, pool, hot tub and gym.",
   },
   header:   {
-      "title": "Ski-in/Ski-out | Walk to Lifts | 2 Bed",
+      "title": "Le Chamois | Ski-In/Out | 2 Bed | Blackcomb",
       "guests": 4,
       "bedrooms": 2,
       "bathrooms": 2,
       "priceRange": "$350-$1,200 per night",
+      "beds": 2,
       "airbnbLink": "https://www.airbnb.ca/rooms/1015303987589924725?guests=1&adults=1&s=67&unique_share_id=1d282b7d-e5fc-4539-b272-d5d4809bf789"
   },
-  galleryTitle: "Le Chamois Apartment",
-  photoAltPrefix: "Le Chamois Apartment",
+  galleryTitle: "Le Chamois",
+  photoAltPrefix: "Le Chamois",
 };
 
 export default listing;
