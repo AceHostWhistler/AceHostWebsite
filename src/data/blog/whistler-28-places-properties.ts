@@ -136,13 +136,14 @@ export const largeHomeProperties: Whistler28Property[] = [
   },
   {
     number: 13,
-    name: "Snow Pine | Creekside | Ski-in/Ski-out",
+    name: "Snowpine | Walk to Ski | 3 BDR | Private Hot Tub",
     description:
-      "A three-bedroom Creekside home for longer stays, with a private hot tub, garage, EV charging, ski storage, and a short walk to the gondola.",
+      "A three-bedroom Creekside home with private hot tub, fireplace, BBQ and fire pit, three ensuite bedrooms, garage with Tesla charging, and a 5-minute walk to the Creekside Gondola.",
     footnote: "This home is offered for longer stays. Contact AceHost for availability.",
     image: "/photos/properties/Snowpine 3-bed Saul/02-2040 Karen Cres-02.jpg",
     listingHref: "/listings/snow-pine",
-    contactOnly: true,
+    bookUrl:
+      "https://www.airbnb.ca/rooms/744832560480313027?guests=1&adults=1&s=67&unique_share_id=50412c76-d839-4753-bf56-19310f38a4ef",
   },
   {
     number: 14,

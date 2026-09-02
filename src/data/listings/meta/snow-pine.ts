@@ -28,14 +28,16 @@ const listing: ListingData = {
   "/photos/properties/Snowpine 3-bed Saul/23-2040 Karen Cres-23.jpg"
 ],
   seo: {
-    title: "Snowpine | Creekside Modern Ski Chalet | AceHost",
-    description: "Experience the perfect Whistler getaway at Snowpine. This modern ski chalet in Creekside features a hot tub, BBQ, and fire pit, just 7 min walk to gondola.",
+    title: "Snowpine | Walk to Ski | 3 BDR | Private Hot Tub | AceHost",
+    description:
+      "Snowpine is a modern 3-bedroom Creekside retreat with a private hot tub, fireplace, BBQ and fire pit, just a 5-minute walk from the Creekside Gondola.",
   },
   header:   {
-      "title": "Snow Pine | Creekside | Ski-in/Ski-out",
+      "title": "Snowpine | Walk to Ski | 3 BDR | Private Hot Tub",
       "guests": 6,
       "bedrooms": 3,
       "bathrooms": 3.5,
+      "beds": 3,
       priceRange: "Monthly Price Range: $10,000-$12,000",
       airbnbLink:
         "https://www.airbnb.ca/rooms/744832560480313027?guests=1&adults=1&s=67&unique_share_id=50412c76-d839-4753-bf56-19310f38a4ef",
@@ -45,9 +47,10 @@ const listing: ListingData = {
   structuredData: {
     "@context": "https://schema.org/",
     "@type": "Product",
-    "name": "Snowpine | Creekside Modern Ski Chalet",
+    "name": "Snowpine | Walk to Ski | 3 BDR | Private Hot Tub",
     "image": "/photos/properties/Snowpine 3-bed Saul/01-2040 Karen Cres-01.jpg",
-    "description": "This modern ski chalet in Creekside features a hot tub, BBQ, and fire pit, just 7 min walk to gondola.",
+    "description":
+      "A modern 3-bedroom Creekside retreat with private hot tub, fireplace, BBQ and fire pit, just a 5-minute walk from the Creekside Gondola.",
     "sku": "snowpine-creekside",
     "brand": {
       "@type": "Brand",
@@ -87,8 +90,8 @@ const listing: ListingData = {
     },
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "15"
+      "ratingValue": "5.0",
+      "reviewCount": "6"
     }
   },
 };
