@@ -21,7 +21,7 @@ export default function ChaletLaForjaKadenwoodDetails({ photos }: ListingDetails
                     <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
                       <div className="relative aspect-[4/3] mb-2">
                         <Image
-                          src={getGalleryPhotoSrc(photos[11])}
+                          src={getGalleryPhotoSrc(photos[10])}
                           alt="Chalet La Forja living space and kitchen"
                           fill
                           className="object-cover hover:scale-105 transition-transform duration-300"
@@ -70,7 +70,7 @@ export default function ChaletLaForjaKadenwoodDetails({ photos }: ListingDetails
                     <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0 order-1 md:order-2">
                       <div className="relative aspect-[4/3] mb-2">
                         <Image
-                          src={getGalleryPhotoSrc(photos[15])}
+                          src={getGalleryPhotoSrc(photos[14])}
                           alt="Chalet La Forja bedroom suite"
                           fill
                           className="object-cover hover:scale-105 transition-transform duration-300"
