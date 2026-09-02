@@ -171,6 +171,7 @@ export const propertyCategories: PropertyCategory[] = [
             isPetFriendly: true,
             isSkiInSkiOut: true,
           },
+
           {
             id: "chalet-la-forja",
             name: "Chalet La Forja - Ski in Ski out Kadenwood Estate",
@@ -265,6 +266,7 @@ export const propertyCategories: PropertyCategory[] = [
             isPetFriendly: true,
             isSkiInSkiOut: true,
           },
+
           {
             id: "luxury-ski-in-ski-out-7-bedroom-kadenwood",
             name: "The Mountaintop in Kadenwood | Ski in Ski out",
@@ -381,6 +383,7 @@ export const propertyCategories: PropertyCategory[] = [
             isSkiInSkiOut: true,
             isPetFriendly: false,
           },
+
           {
             id: "panoramic-estate",
             name: "Panoramic Estate | Kadenwood | Ski In Ski Out",
@@ -420,6 +423,7 @@ export const propertyCategories: PropertyCategory[] = [
             isSkiInSkiOut: true,
             isPetFriendly: true,
           },
+
           {
             id: "slopeside-villa",
             name: "Slope Side Chalet | Ski-In/Out | Hot Tub",
@@ -461,6 +465,7 @@ export const propertyCategories: PropertyCategory[] = [
             isSkiInSkiOut: true,
             isPetFriendly: true,
           },
+
           {
             id: "timber-haven-luxury-ski-in-ski-out-kadenwood",
             name: "Timber Haven - Luxury Ski in Ski out - Kadenwood",
@@ -504,6 +509,7 @@ export const propertyCategories: PropertyCategory[] = [
             isSkiInSkiOut: true,
             isPetFriendly: false,
           },
+
           {
             id: "heron-views-whistler",
             name: "Heron Views | Whistler Village | Stunning Views",
@@ -542,6 +548,7 @@ export const propertyCategories: PropertyCategory[] = [
             isPetFriendly: false,
             isSkiInSkiOut: false,
           },
+
           {
             id: "falcon-blueberry-drive",
             name: "Falcon | Whistler Village Chalet | Hot tub + Sauna",
@@ -623,6 +630,7 @@ export const propertyCategories: PropertyCategory[] = [
             isSkiInSkiOut: false,
             link: "/listings/falcon-blueberry-drive",
           },
+
           {
             id: "luxury-6-bedroom-blueberry",
             name: "Luxury 6-Bedroom - Whistler Village - Blueberry",
@@ -725,6 +733,7 @@ export const propertyCategories: PropertyCategory[] = [
             isPetFriendly: false,
             isSkiInSkiOut: false,
           },
+
           {
             id: "luxe-5-bed-scandinave-retreat",
             name: "Luxe 5-BED Scandinave Retreat - Walk to Slopes",
@@ -764,6 +773,7 @@ export const propertyCategories: PropertyCategory[] = [
             isPetFriendly: false,
             isSkiInSkiOut: false,
           },
+
           {
             id: "bluffs-unit-8",
             name: "Bluffs Penthouse - Luxe 3-Bedroom - Ski-in Ski-out",
@@ -803,6 +813,165 @@ export const propertyCategories: PropertyCategory[] = [
             isPetFriendly: false,
             isSkiInSkiOut: true,
           },
+
+          {
+            id: "valhalla-unit-33-village",
+            name: "Whistler Village - Private Hot Tub - Walk to Hill",
+            images: [
+              "/photos/properties/Valhalla Unit 33 Village/Living room angle 3.png",
+              "/photos/properties/Valhalla Unit 33 Village/Living room brighter.png",
+              "/photos/properties/Valhalla Unit 33 Village/Hot tub Northlands snow.png",
+            ],
+            guests: 8,
+            bedrooms: 3,
+            bathrooms: 3,
+            beds: 5,
+            location: "Whistler Village, Whistler",
+            description:
+              "Welcome to Valhalla Peaks, a spacious 3-bedroom Whistler Village townhome with a private hot tub, gas fireplace, underground parking, and room for up to 8 guests. Marketplace and Fresh St. Market are across the street, with the Village Stroll and lifts nearby.",
+            features: [
+              "Walk to Whistler Village Gondola",
+              "Private Balcony Hot Tub",
+              "Gas Fireplace",
+              "Fully Equipped Kitchen",
+              "Underground Parking",
+              "Ski & Bike Storage",
+              "In-Suite Laundry",
+              "Portable AC (May 15–Oct 15)",
+            ],
+            highlights: [
+              "North End of Whistler Village",
+              "Private Hot Tub with Peak Views",
+              "Three Bedrooms & Three Bathrooms",
+              "Keyless Entry & AceHost Support",
+            ],
+            priceRange: "$500-$2000 per night",
+            winterPrice: "$650-$1,700 Nightly | Winter",
+            holidayPrice: "$2,000-$3,000 Nightly | Christmas & NY",
+            link: "/listings/valhalla-unit-33-village",
+            airbnbLink:
+              "https://www.airbnb.ca/rooms/1693450379764005787?guests=1&adults=1&s=67&unique_share_id=bd20bf84-b138-4958-9dc8-9128130a2028",
+            isPetFriendly: false,
+            isSkiInSkiOut: false,
+          },
+
+          {
+            id: "whistler-village-penthouse-3-bdr",
+            name: "Whistler Village Penthouse - 3 BDR - Walk to Ski",
+            images: [
+              "/optimized/303-Tyndall-Lodge/new-cover.jpg",
+              "/optimized/303-Tyndall-Lodge/01---20260107-A7M4-01-A1_03798.jpg",
+              "/optimized/303-Tyndall-Lodge/03---20260107-A7M4-01-A1_03441.jpg"
+            ],
+            guests: 8,
+            bedrooms: 3,
+            bathrooms: 2,
+            beds: 5,
+            location: "Whistler Village, Whistler",
+            description:
+              "Penthouse in Tyndall Lodge in the heart of Whistler Village. 3 sleeping areas, 5 beds, loft bunk room, pool and hot tub access, and complimentary underground parking steps from Olympic Plaza.",
+            features: [
+              "Penthouse Unit",
+              "High Ceilings",
+              "Fully Equipped Kitchen",
+              "Free Underground Parking",
+              "Central Village Location",
+              "Walk to Gondolas",
+              "Loft Bedroom with Bunkbeds",
+              "Spacious Living Area"
+            ],
+            highlights: [
+              "Heart of Whistler Village",
+              "Short Walk to Gondolas",
+              "Penthouse with High Ceilings",
+              "Free Underground Parking"
+            ],
+            priceRange: "$500-1200 per night Summer",
+            winterPrice: "$750-1500 Nightly | Winter",
+            holidayPrice: "$2500-3500+ Nightly | Christmas & NY",
+            link: "/listings/whistler-village-penthouse-3-bdr-walk-to-ski",
+            airbnbLink: "https://www.airbnb.ca/rooms/1595039212030139605?guests=1&adults=1&s=67&unique_share_id=dc75c08b-e1ae-46ae-8b17-0587b742fa45",
+            isPetFriendly: true,
+            isSkiInSkiOut: false,
+          },
+
+          {
+            id: "whistler-village-penthouse",
+            name: "Whistler Village Penthouse 4-Bed - Ski in Ski out",
+            images: [
+              "/photos/properties/3-Bed PH Whistler Village/snowy-room-blinds-only Hearthstone.png",
+              "/photos/properties/3-Bed PH Whistler Village/Hearthstone Hot tub.png",
+              "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-2.jpg"
+            ],
+            guests: 7,
+            bedrooms: 2,
+            bathrooms: 2,
+            location: "Whistler Village",
+            description:
+              "Welcome to this Whistler Village penthouse at Hearthstone Lodge, a 2-level alpine retreat steps from the gondolas with a private balcony hot tub, stone fireplace, and free parking.",
+            features: [
+              "Private Hot Tub",
+              "Walk to Gondolas",
+              "Air Conditioning",
+              "Free Parking",
+              "High Ceilings",
+              "Log Beams",
+              "Stone Fireplace",
+              "Mountain Views",
+              "Fully Equipped Kitchen",
+            ],
+            highlights: [
+              "Hearthstone Lodge · Whistler Village",
+              "Private Balcony Hot Tub",
+              "Steps from Gondolas",
+              "Free Parking",
+            ],
+            priceRange: "$450-$1,700 per night",
+            winterPrice: "$650-$1,700 Nightly | Winter",
+            holidayPrice: "$2,000-$2,700 Nightly | Christmas & NY",
+            link: "/listings/whistler-village-penthouse",
+            airbnbLink: "https://www.airbnb.ca/rooms/1471251206220643818?guests=1&adults=1&s=67&unique_share_id=0ec28644-49fa-4b63-9276-7e5f5c6a1153",
+            isPetFriendly: false,
+            isSkiInSkiOut: true,
+          },
+
+          {
+            id: "rare-3-bedroom-whistler-village",
+            name: "3-BDRM | Whistler Village | Walk to Hill | Hot Tub",
+            images: [
+              "/photos/properties/John 3-bed Granite Court/03 - 20251125 A7M4 01 A1_01852.jpg",
+              "/photos/properties/John 3-bed Granite Court/01 - 20251125 A7M4 01 A1_02152.jpg",
+              "/photos/properties/John 3-bed Granite Court/02 - 20251125 A7M4 01 A1_02202.jpg"
+            ],
+            guests: 8,
+            bedrooms: 3,
+            bathrooms: 3,
+            beds: 4,
+            location: "Whistler Village, Whistler",
+            description:
+              "A rare Whistler Village chalet with the space and privacy of a home, just steps from restaurants, shops and the mountain. Spread across two levels, this 3-bedroom retreat features oversized wraparound balconies, mountain views, a private hot tub and cozy fireplace. One of its standout features is two guaranteed designated underground parking spaces, exceptionally rare for a central Village property, so groups arriving in multiple vehicles can park with ease and walk almost everywhere.",
+            features: [
+              "City skyline view",
+              "Ski-in/Ski-out",
+              "Kitchen",
+              "Wifi",
+              "Dedicated workspace",
+              "Free parking garage on premises",
+              "Hot tub",
+              "TV",
+              "Washer",
+              "Free dryer – In unit",
+            ],
+            highlights: [],
+            priceRange: "$450-1450 per night Summer",
+            winterPrice: "$750-1600 Nightly | Winter",
+            holidayPrice: "$2000-3400 Nightly | Christmas & NY",
+            link: "/listings/rare-3-bedroom-whistler-village-walk-to-hill",
+            airbnbLink: "https://www.airbnb.ca/rooms/1565322561889624431?guests=1&adults=1&s=67&unique_share_id=bcb85131-d1b0-4d39-9975-7580fd94a5d9",
+            isPetFriendly: false,
+            isSkiInSkiOut: true,
+          },
+
           {
             id: "golf-course-views",
             name: "Golf Course Views | Luxury 4-bed Whistler Village",
@@ -844,42 +1013,7 @@ export const propertyCategories: PropertyCategory[] = [
             isPetFriendly: false,
             isSkiInSkiOut: false,
           },
-          {
-            id: "rare-3-bedroom-whistler-village",
-            name: "3-BDRM | Whistler Village | Walk to Hill | Hot Tub",
-            images: [
-              "/photos/properties/John 3-bed Granite Court/03 - 20251125 A7M4 01 A1_01852.jpg",
-              "/photos/properties/John 3-bed Granite Court/01 - 20251125 A7M4 01 A1_02152.jpg",
-              "/photos/properties/John 3-bed Granite Court/02 - 20251125 A7M4 01 A1_02202.jpg"
-            ],
-            guests: 8,
-            bedrooms: 3,
-            bathrooms: 3,
-            beds: 4,
-            location: "Whistler Village, Whistler",
-            description:
-              "A rare Whistler Village chalet with the space and privacy of a home, just steps from restaurants, shops and the mountain. Spread across two levels, this 3-bedroom retreat features oversized wraparound balconies, mountain views, a private hot tub and cozy fireplace. One of its standout features is two guaranteed designated underground parking spaces, exceptionally rare for a central Village property, so groups arriving in multiple vehicles can park with ease and walk almost everywhere.",
-            features: [
-              "City skyline view",
-              "Ski-in/Ski-out",
-              "Kitchen",
-              "Wifi",
-              "Dedicated workspace",
-              "Free parking garage on premises",
-              "Hot tub",
-              "TV",
-              "Washer",
-              "Free dryer – In unit",
-            ],
-            highlights: [],
-            priceRange: "$450-1450 per night Summer",
-            winterPrice: "$750-1600 Nightly | Winter",
-            holidayPrice: "$2000-3400 Nightly | Christmas & NY",
-            link: "/listings/rare-3-bedroom-whistler-village-walk-to-hill",
-            airbnbLink: "https://www.airbnb.ca/rooms/1565322561889624431?guests=1&adults=1&s=67&unique_share_id=bcb85131-d1b0-4d39-9975-7580fd94a5d9",
-            isPetFriendly: false,
-            isSkiInSkiOut: true,
-          },
+
           {
             id: "ravens-nest",
             name: "Raven's Nest | Ski in Ski out | Views",
@@ -910,6 +1044,7 @@ export const propertyCategories: PropertyCategory[] = [
             isSkiInSkiOut: true,
             isPetFriendly: false,
           },
+
           {
             id: "snow-pine",
             name: "Snowpine | Walk to Ski | 3 BDR | Private Hot Tub",
@@ -949,6 +1084,7 @@ export const propertyCategories: PropertyCategory[] = [
             isSkiInSkiOut: false,
             isPetFriendly: true,
           },
+
           {
             id: "wedge-mountain-lodge-spa",
             name: "Wedge Mountain Lodge & Spa",
@@ -984,6 +1120,7 @@ export const propertyCategories: PropertyCategory[] = [
             holidayPrice: "Request for Nightly rates",
             contactLink: "/contact",
           },
+
           {
             id: "luxe-cozy-3-bed-whistler-village",
             name: "Luxe Cozy 3-Bed Whistler Village",
@@ -1052,6 +1189,7 @@ export const propertyCategories: PropertyCategory[] = [
             holidayPrice: "",
             isSkiInSkiOut: true,
           },
+
           {
             id: "marquise-2-bed",
             name: "Marquise 2 Bed | Ski-In/Ski-Out | Whistler Village",
@@ -1086,6 +1224,7 @@ export const propertyCategories: PropertyCategory[] = [
             isPetFriendly: true,
             isSkiInSkiOut: true,
           },
+
           {
             id: "the-nest",
             name: "The Nest | Ski-In-Out | 5BR | Prime Spot | Hot Tub",
@@ -1119,6 +1258,7 @@ export const propertyCategories: PropertyCategory[] = [
             isPetFriendly: true,
             isSkiInSkiOut: true,
           },
+
           {
             id: "ski-in-ski-out-walk-to-lifts-2-bed",
             name: "Le Chamois | Ski-In/Out | 2 Bed | Blackcomb",
@@ -1149,6 +1289,7 @@ export const propertyCategories: PropertyCategory[] = [
             isSkiInSkiOut: true,
             isPetFriendly: false,
           },
+
           {
             id: "whistler-village-views-luxury-2-5-bedroom",
             name: "Tyndall - Luxe 2 bedroom, Main Whistler Village",
@@ -1184,45 +1325,7 @@ export const propertyCategories: PropertyCategory[] = [
             isPetFriendly: false,
             isSkiInSkiOut: false,
           },
-          {
-            id: "whistler-village-penthouse",
-            name: "Whistler Village Penthouse 4-Bed - Ski in Ski out",
-            images: [
-              "/photos/properties/3-Bed PH Whistler Village/snowy-room-blinds-only Hearthstone.png",
-              "/photos/properties/3-Bed PH Whistler Village/Hearthstone Hot tub.png",
-              "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-2.jpg"
-            ],
-            guests: 7,
-            bedrooms: 2,
-            bathrooms: 2,
-            location: "Whistler Village",
-            description:
-              "Welcome to this Whistler Village penthouse at Hearthstone Lodge, a 2-level alpine retreat steps from the gondolas with a private balcony hot tub, stone fireplace, and free parking.",
-            features: [
-              "Private Hot Tub",
-              "Walk to Gondolas",
-              "Air Conditioning",
-              "Free Parking",
-              "High Ceilings",
-              "Log Beams",
-              "Stone Fireplace",
-              "Mountain Views",
-              "Fully Equipped Kitchen",
-            ],
-            highlights: [
-              "Hearthstone Lodge · Whistler Village",
-              "Private Balcony Hot Tub",
-              "Steps from Gondolas",
-              "Free Parking",
-            ],
-            priceRange: "$450-$1,700 per night",
-            winterPrice: "$650-$1,700 Nightly | Winter",
-            holidayPrice: "$2,000-$2,700 Nightly | Christmas & NY",
-            link: "/listings/whistler-village-penthouse",
-            airbnbLink: "https://www.airbnb.ca/rooms/1471251206220643818?guests=1&adults=1&s=67&unique_share_id=0ec28644-49fa-4b63-9276-7e5f5c6a1153",
-            isPetFriendly: false,
-            isSkiInSkiOut: true,
-          },
+
           {
             id: "cozy-lakefront-whistler-condo",
             name: "Cozy Lakefront Whistler Condo | Mountain View",
@@ -1261,6 +1364,7 @@ export const propertyCategories: PropertyCategory[] = [
             isPetFriendly: false,
             isSkiInSkiOut: false,
           },
+
           {
             id: "scandinavian-mountainside-retreat-pemberton-meadows-50-acres",
             name: "Pemberton Escape | 50 Acres | Wellness & Heli Retreat",
@@ -1296,6 +1400,7 @@ export const propertyCategories: PropertyCategory[] = [
             winterPrice: "Availability for Heli & Wellness Retreats coming soon",
             holidayPrice: "Includes 2 Night Accommodation",
           },
+
           {
             id: "villa-rosabella-mykonos",
             name: "Villa Rosabella | Mykonos",
@@ -1331,6 +1436,7 @@ export const propertyCategories: PropertyCategory[] = [
             isPetFriendly: false,
             country: "greece"
           },
+
           {
             id: "cotswolds-uk-soho-farm-house",
             name: "Cotswolds UK - Soho Farm House",
@@ -1370,6 +1476,7 @@ export const propertyCategories: PropertyCategory[] = [
             isPetFriendly: false,
             country: "uk"
           },
+
           {
             id: "vancouver-house-corner",
             name: "Vancouver House Corner Unit | 30th Floor",
@@ -1403,6 +1510,7 @@ export const propertyCategories: PropertyCategory[] = [
             priceRange: "$12,000 per month | 3 month minimum",
             link: "/vancouver-listings/vancouver-house-corner-unit-30th-floor"
           },
+
           {
             id: "mykonos-crystal-villa",
             name: "Mykonos Crystal Villa | Infinity Pool | Sea Views",
@@ -1439,6 +1547,7 @@ export const propertyCategories: PropertyCategory[] = [
             isSkiInSkiOut: false,
             country: "greece"
           },
+
           {
             id: "super-yacht-thailand",
             name: "Super Yacht Thailand | Luxury Charter | Full Crew",
@@ -1476,6 +1585,7 @@ export const propertyCategories: PropertyCategory[] = [
             isSkiInSkiOut: false,
             country: "thailand"
           },
+
           {
             id: "punta-mita---casa-juntos",
             name: "Punta Mita - Casa Juntos | Beachfront | Full Staff",
@@ -1512,6 +1622,7 @@ export const propertyCategories: PropertyCategory[] = [
             isSkiInSkiOut: false,
             country: "mexico"
           },
+
           {
             id: "hood-river-luxury-home",
             name: "Hood River Luxury Home",
@@ -1548,46 +1659,7 @@ export const propertyCategories: PropertyCategory[] = [
             isSkiInSkiOut: false,
             country: "usa"
           },
-          {
-            id: "valhalla-unit-33-village",
-            name: "Whistler Village - Private Hot Tub - Walk to Hill",
-            images: [
-              "/photos/properties/Valhalla Unit 33 Village/Living room angle 3.png",
-              "/photos/properties/Valhalla Unit 33 Village/Living room brighter.png",
-              "/photos/properties/Valhalla Unit 33 Village/Hot tub Northlands snow.png",
-            ],
-            guests: 8,
-            bedrooms: 3,
-            bathrooms: 3,
-            beds: 5,
-            location: "Whistler Village, Whistler",
-            description:
-              "Welcome to Valhalla Peaks, a spacious 3-bedroom Whistler Village townhome with a private hot tub, gas fireplace, underground parking, and room for up to 8 guests. Marketplace and Fresh St. Market are across the street, with the Village Stroll and lifts nearby.",
-            features: [
-              "Walk to Whistler Village Gondola",
-              "Private Balcony Hot Tub",
-              "Gas Fireplace",
-              "Fully Equipped Kitchen",
-              "Underground Parking",
-              "Ski & Bike Storage",
-              "In-Suite Laundry",
-              "Portable AC (May 15–Oct 15)",
-            ],
-            highlights: [
-              "North End of Whistler Village",
-              "Private Hot Tub with Peak Views",
-              "Three Bedrooms & Three Bathrooms",
-              "Keyless Entry & AceHost Support",
-            ],
-            priceRange: "$500-$2000 per night",
-            winterPrice: "$650-$1,700 Nightly | Winter",
-            holidayPrice: "$2,000-$3,000 Nightly | Christmas & NY",
-            link: "/listings/valhalla-unit-33-village",
-            airbnbLink:
-              "https://www.airbnb.ca/rooms/1693450379764005787?guests=1&adults=1&s=67&unique_share_id=bd20bf84-b138-4958-9dc8-9128130a2028",
-            isPetFriendly: false,
-            isSkiInSkiOut: false,
-          },
+
           {
             id: "luxury-3-bed-stunning-views",
             name: "Marquise Penthouse | Ski-In/Out | 3-Bed | Views",
@@ -1626,6 +1698,7 @@ export const propertyCategories: PropertyCategory[] = [
             airbnbLink: "https://www.airbnb.ca/rooms/1461637483646115205?guests=1&adults=1&s=67&unique_share_id=9b6640b9-138d-4627-bea4-cb2155e32c72",
             link: "/listings/luxury-3-bed-stunning-views",
           },
+
           {
             id: "bluffs-unit-4",
             name: "Bluffs - Luxury 2 Bed Ski in Ski out in Creeksside - Views!",
@@ -1665,6 +1738,7 @@ export const propertyCategories: PropertyCategory[] = [
             isPetFriendly: false,
             isSkiInSkiOut: true,
           },
+
           {
             id: "squamish-retreat",
             name: "Squamish Retreat With The Best View!",
@@ -1703,45 +1777,7 @@ export const propertyCategories: PropertyCategory[] = [
             isPetFriendly: false,
             isSkiInSkiOut: false,
           },
-          {
-            id: "whistler-village-penthouse-3-bdr",
-            name: "Whistler Village Penthouse - 3 BDR - Walk to Ski",
-            images: [
-              "/optimized/303-Tyndall-Lodge/new-cover.jpg",
-              "/optimized/303-Tyndall-Lodge/01---20260107-A7M4-01-A1_03798.jpg",
-              "/optimized/303-Tyndall-Lodge/03---20260107-A7M4-01-A1_03441.jpg"
-            ],
-            guests: 8,
-            bedrooms: 3,
-            bathrooms: 2,
-            beds: 5,
-            location: "Whistler Village, Whistler",
-            description:
-              "Penthouse in Tyndall Lodge in the heart of Whistler Village. 3 sleeping areas, 5 beds, loft bunk room, pool and hot tub access, and complimentary underground parking steps from Olympic Plaza.",
-            features: [
-              "Penthouse Unit",
-              "High Ceilings",
-              "Fully Equipped Kitchen",
-              "Free Underground Parking",
-              "Central Village Location",
-              "Walk to Gondolas",
-              "Loft Bedroom with Bunkbeds",
-              "Spacious Living Area"
-            ],
-            highlights: [
-              "Heart of Whistler Village",
-              "Short Walk to Gondolas",
-              "Penthouse with High Ceilings",
-              "Free Underground Parking"
-            ],
-            priceRange: "$500-1200 per night Summer",
-            winterPrice: "$750-1500 Nightly | Winter",
-            holidayPrice: "$2500-3500+ Nightly | Christmas & NY",
-            link: "/listings/whistler-village-penthouse-3-bdr-walk-to-ski",
-            airbnbLink: "https://www.airbnb.ca/rooms/1595039212030139605?guests=1&adults=1&s=67&unique_share_id=dc75c08b-e1ae-46ae-8b17-0587b742fa45",
-            isPetFriendly: true,
-            isSkiInSkiOut: false,
-          },
+
           {
             id: "northlands-walk-to-village-slopes-luxury-4-bed",
             name: "Symphony - Walk to village & slopes - Luxury 4-bed",
@@ -1781,6 +1817,7 @@ export const propertyCategories: PropertyCategory[] = [
             isPetFriendly: false,
             isSkiInSkiOut: false,
           },
+
           {
             id: "hotel-booking-assistance",
             name: "Hotel Booking Assistance & Concierge Services | Four Seasons, Fairmont, The Westin",
@@ -1817,8 +1854,7 @@ export const propertyCategories: PropertyCategory[] = [
             isPetFriendly: false,
             isSkiInSkiOut: false,
             link: "/listings/hotel-booking-assistance"
-          },
-        ],
+          }],
       },
       {
         id: "worldwide",

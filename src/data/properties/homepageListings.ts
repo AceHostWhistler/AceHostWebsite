@@ -39,9 +39,12 @@ export const HOMEPAGE_PROPERTY_ORDER: readonly string[] = [
   "luxury-6-bedroom-blueberry",
   "luxe-5-bed-scandinave-retreat",
   "bluffs-unit-8",
+  "valhalla-unit-33-village",
+  "whistler-village-penthouse-3-bdr",
+  "whistler-village-penthouse",
+  "rare-3-bedroom-whistler-village",
   "golf-course-views",
   "scandinavian-mountainside-retreat-pemberton-meadows-50-acres",
-  "rare-3-bedroom-whistler-village",
   "ravens-nest",
   "the-nest",
   "snow-pine",
@@ -62,15 +65,26 @@ export const HOMEPAGE_PROPERTY_ORDER: readonly string[] = [
   "punta-mita---casa-juntos",
   "cozy-lakefront-whistler-condo",
   "hood-river-luxury-home",
-  "valhalla-unit-33-village",
-  "whistler-village-penthouse",
   "vancouver-house-corner",
   "bluffs-unit-4",
   "squamish-retreat",
-  "whistler-village-penthouse-3-bdr",
   "northlands-walk-to-village-slopes-luxury-4-bed",
   "hotel-booking-assistance",
 ];
+
+/** Sort property cards to match homepage / properties page display order. */
+export function sortPropertiesByDisplayOrder<T extends { id: string }>(
+  properties: T[]
+): T[] {
+  const orderIndex = new Map(
+    HOMEPAGE_PROPERTY_ORDER.map((id, index) => [id, index])
+  );
+  return [...properties].sort((a, b) => {
+    const aIndex = orderIndex.get(a.id) ?? Number.MAX_SAFE_INTEGER;
+    const bIndex = orderIndex.get(b.id) ?? Number.MAX_SAFE_INTEGER;
+    return aIndex - bIndex;
+  });
+}
 
 function getCatalogPropertyMap(): Map<string, PropertyFeature> {
   const map = new Map<string, PropertyFeature>();

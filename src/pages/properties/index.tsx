@@ -36,6 +36,7 @@ import {
   type PropertyFeature,
   type PropertyCategory,
 } from "@/data/properties/catalog";
+import { sortPropertiesByDisplayOrder } from "@/data/properties/homepageListings";
 import { getPropertyListingPath } from "@/data/properties/listingPath";
 import { buildPropertiesItemListSchema } from "@/lib/seo/schema";
 import { SITE_URL } from "@/data/seo/business";
@@ -137,7 +138,7 @@ export default function Properties() {
           return bedroomsMatch && guestsMatch && petFriendlyMatch && skiInSkiOutMatch && amenitiesMatch && locationMatch && typeMatch && quickCategoryMatch;
     });
 
-    return { ...category, properties: filteredProperties };
+    return { ...category, properties: sortPropertiesByDisplayOrder(filteredProperties) };
   });
   }, [propertyCategories, activeCategory, filters]);
 
