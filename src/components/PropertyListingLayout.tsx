@@ -53,7 +53,10 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
     photoAltPrefix,
     videoUrl,
   } = listing;
-  const galleryPhotos = getGalleryPhotoOrder(photos, listing.slug);
+  const galleryPhotos = getGalleryPhotoOrder(photos, listing.slug, {
+    preserveOrder: listing.galleryPreserveOrder,
+    deferPhotos: listing.galleryDeferPhotos,
+  });
 
   const [showAllPhotos, setShowAllPhotos] = useState(false);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(

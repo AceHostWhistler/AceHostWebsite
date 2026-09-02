@@ -32,6 +32,10 @@ export interface ListingData {
   photoAltPrefix: string;
   /** Optional video URL shown above details */
   videoUrl?: string;
+  /** Keep gallery in source order instead of seeded shuffle. */
+  galleryPreserveOrder?: boolean;
+  /** Photo paths excluded from the first preview grid and shown at the end. */
+  galleryDeferPhotos?: string[];
 }
 
 export interface ListingDetailsProps {

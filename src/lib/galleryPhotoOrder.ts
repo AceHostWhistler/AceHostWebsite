@@ -3,6 +3,8 @@ export const GALLERY_PREVIEW_LIMIT = 18;
 interface GalleryPhotoOrderOptions {
   preserveOrder?: boolean;
   pinFirstPhoto?: boolean;
+  /** Photo paths kept out of the preview grid and appended at the end. */
+  deferPhotos?: readonly string[];
 }
 
 function hashSeed(seed: string): number {
@@ -29,17 +31,21 @@ function createSeededRandom(seed: string): () => number {
  * Returns a display-only photo order without mutating the canonical photo list.
  * The seeded shuffle is stable across server and client renders.
  */
-export function getGalleryPhotoOrder<T>(
+export function getGalleryPhotoOrder<T extends string>(
   photos: readonly T[],
   seed: string,
   {
     preserveOrder = false,
     pinFirstPhoto = true,
+    deferPhotos = [],
   }: GalleryPhotoOrderOptions = {}
 ): T[] {
-  const orderedPhotos = [...photos];
+  const deferSet = new Set(deferPhotos);
+  const deferredPhotos = photos.filter((photo) => deferSet.has(photo));
+  const orderedPhotos = photos.filter((photo) => !deferSet.has(photo));
+
   if (preserveOrder || orderedPhotos.length < 3) {
-    return orderedPhotos;
+    return [...orderedPhotos, ...deferredPhotos];
   }
 
   const pinnedPhotos = pinFirstPhoto ? orderedPhotos.splice(0, 1) : [];
@@ -53,5 +59,5 @@ export function getGalleryPhotoOrder<T>(
     ];
   }
 
-  return [...pinnedPhotos, ...orderedPhotos];
+  return [...pinnedPhotos, ...orderedPhotos, ...deferredPhotos];
 }
