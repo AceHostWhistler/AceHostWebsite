@@ -32,7 +32,8 @@ const listing: ListingData = {
   "/photos/properties/Northlands Symphony 29/28 - 20251128 A7M4 02 A1_02957.jpg",
   "/photos/properties/Northlands Symphony 29/29 - 20251128 A7M4 02 A1_02962.jpg",
   "/photos/properties/Northlands Symphony 29/30 - 20251128 A7M4 02 A1_02861.jpg",
-  "/photos/properties/Northlands Symphony 29/31 - 20251128 A7M4 02 A1_02855.jpg"
+  "/photos/properties/Northlands Symphony 29/31 - 20251128 A7M4 02 A1_02855.jpg",
+  "/photos/properties/Northlands Symphony 29/Symphony Hot Tub.png"
 ],
   seo: {
     title: "Symphony - Walk to village & slopes - Luxury 4-bed | AceHost",
