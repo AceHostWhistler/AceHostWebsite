@@ -17,7 +17,9 @@ const listing: ListingData = {
   "/photos/properties/Marquise 2-bed/Marquise-12.jpg",
   "/photos/properties/Marquise 2-bed/Marquise-13.jpg",
   "/photos/properties/Marquise 2-bed/Marquise-14.jpg",
-  "/photos/properties/Marquise 2-bed/Marquise-15.jpg"
+  "/photos/properties/Marquise 2-bed/Marquise-15.jpg",
+  "/photos/properties/Marquise 2-bed/Marquise-16-communal-pool.jpg",
+  "/photos/properties/Marquise 2-bed/Marquise-17-communal-hot-tub.jpg"
 ],
   seo: {
     title: "Marquise 2 Bed | Ski-In/Ski-Out | Whistler Village - AceHost",

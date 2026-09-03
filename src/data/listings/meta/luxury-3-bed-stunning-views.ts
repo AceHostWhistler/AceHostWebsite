@@ -18,7 +18,9 @@ const listing: ListingData = {
   "/optimized/luxury-3-bed-views/image-13.jpg",
   "/optimized/luxury-3-bed-views/image-14.jpg",
   "/optimized/luxury-3-bed-views/image-15.jpg",
-  "/optimized/luxury-3-bed-views/image-16.jpg"
+  "/optimized/luxury-3-bed-views/image-16.jpg",
+  "/photos/properties/Marquise 2-bed/Marquise-16-communal-pool.jpg",
+  "/photos/properties/Marquise 2-bed/Marquise-17-communal-hot-tub.jpg"
 ],
   seo: {
     title: "Marquise Penthouse | Ski-In/Out | 3-Bed | Views - AceHost",
