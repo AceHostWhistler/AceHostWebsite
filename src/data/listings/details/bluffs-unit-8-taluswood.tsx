@@ -1,11 +1,9 @@
 import React from "react";
 import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Image from "next/image";
-import Script from "next/script";
 import type { ListingDetailsProps } from "../types";
 import {
   BLUFFS_UNIT_8_AIRBNB_LINK,
-  BLUFFS_UNIT_8_AIRBNB_ROOM_ID,
 } from "../bluffsUnit8AirbnbLink";
 import { airbnbButtonSm } from "@/lib/airbnbButtonStyles";
 
@@ -24,28 +22,15 @@ export default function BluffsUnit8TaluswoodDetails({ photos }: ListingDetailsPr
         </p>
 
         <div className="flex justify-center mb-16">
-          <div className="w-full max-w-md text-center">
-            <div
-              className="airbnb-embed-frame mx-auto"
-              data-id={BLUFFS_UNIT_8_AIRBNB_ROOM_ID}
-              data-view="home"
-              data-hide-price="true"
-              style={{ width: "450px", height: "300px", margin: "auto" }}
-            />
-            <a
-              href={BLUFFS_UNIT_8_AIRBNB_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`mt-4 inline-block ${airbnbButtonSm}`}
-            >
-              View on Airbnb
-            </a>
-          </div>
+          <a
+            href={BLUFFS_UNIT_8_AIRBNB_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={airbnbButtonSm}
+          >
+            View on Airbnb
+          </a>
         </div>
-        <Script
-          src="https://www.airbnb.ca/embeddable/airbnb_jssdk"
-          strategy="afterInteractive"
-        />
 
         <div className="flex flex-col md:flex-row mb-20">
           <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
