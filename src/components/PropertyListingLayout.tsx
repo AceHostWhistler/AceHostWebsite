@@ -9,6 +9,7 @@ import { X } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import PropertyHeaderEditorial from "@/components/PropertyHeaderEditorial";
 import Footer from "@/components/Footer";
+import VimeoEmbed from "@/components/VimeoEmbed";
 import type { ListingData } from "@/data/listings/types";
 import {
   editorialGalleryGridClass,
@@ -51,6 +52,8 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
     structuredData,
     galleryTitle,
     photoAltPrefix,
+    vimeoVideoId,
+    vimeoTitle,
     videoUrl,
   } = listing;
   const galleryPhotos = getGalleryPhotoOrder(photos, listing.slug, {
@@ -188,6 +191,18 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
             schemaImages={photos.slice(0, 3)}
           />
 
+          {vimeoVideoId && (
+            <div className="max-w-6xl mx-auto px-4 mb-10 sm:mb-14">
+              <div className="relative overflow-hidden rounded-2xl bg-black shadow-2xl ring-1 ring-black/10">
+                <VimeoEmbed
+                  videoId={vimeoVideoId}
+                  title={vimeoTitle ?? `${header.title} video tour`}
+                  className="w-full"
+                />
+              </div>
+            </div>
+          )}
+
           <div className={editorialGalleryWrapperClass} id="photos">
             <div className={editorialGalleryGridClass}>
               {galleryPhotos
@@ -224,7 +239,7 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
             )}
           </div>
 
-          {videoUrl && (
+          {videoUrl && !vimeoVideoId && (
             <div className="max-w-6xl mx-auto px-4 mb-16">
               <video
                 className="w-full rounded-lg"

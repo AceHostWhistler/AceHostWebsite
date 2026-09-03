@@ -99,6 +99,8 @@ const listing: ListingData = {
   },
   galleryTitle: "The Mountaintop in Kadenwood",
   photoAltPrefix: "The Mountaintop in Kadenwood",
+  vimeoVideoId: "1174594797",
+  vimeoTitle: "2919 Heritage Peaks Trail - Mountaintop Kadenwood - AceHost",
 };
 
 export default listing;

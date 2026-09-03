@@ -83,6 +83,8 @@ const listing: ListingData = {
   },
   galleryTitle: "Chalet La Forja",
   photoAltPrefix: "Chalet La Forja",
+  vimeoVideoId: "922794848",
+  vimeoTitle: "Chalet La Forja Property Walkthrough",
 };
 
 export default listing;

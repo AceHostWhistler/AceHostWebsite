@@ -30,7 +30,11 @@ export interface ListingData {
   structuredData?: Record<string, unknown>;
   galleryTitle: string;
   photoAltPrefix: string;
-  /** Optional video URL shown above details */
+  /** Optional Vimeo video id shown above the gallery */
+  vimeoVideoId?: string;
+  /** Accessible title for the Vimeo embed */
+  vimeoTitle?: string;
+  /** Optional direct MP4 fallback (legacy) */
   videoUrl?: string;
   /** Keep gallery in source order instead of seeded shuffle. */
   galleryPreserveOrder?: boolean;
