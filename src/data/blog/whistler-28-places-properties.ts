@@ -99,7 +99,7 @@ export const largeHomeProperties: Whistler28Property[] = [
     description:
       "A renovated six-bedroom retreat with high-end furnishings, ten beds, forest views, summer air conditioning, and EV charging.",
     image:
-      "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry living room.png",
+      "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Cover Blueberry 306 snow.png",
     listingHref: "/listings/luxury-6-bedroom-whistler-village-blueberry",
     bookUrl:
       "https://www.airbnb.ca/rooms/1551638001847968788?guests=1&adults=1&s=67&unique_share_id=ff68258e-d89f-4493-8e79-fd85820e6872",

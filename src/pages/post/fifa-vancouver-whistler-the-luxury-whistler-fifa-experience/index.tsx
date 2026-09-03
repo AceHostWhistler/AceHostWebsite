@@ -94,7 +94,7 @@ const luxuryHomesBeyondKadenwood: FeaturedProperty[] = [
     description:
       "A standout luxury home option for larger groups wanting space, comfort, and a beautiful setting for a Whistler summer stay.",
     photos: [
-      "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry living room.png",
+      "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Cover Blueberry 306 snow.png",
       "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry balcony shot.png",
       "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Deck snow shot blueberry.png",
       "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Drone Blueberry shot.png",

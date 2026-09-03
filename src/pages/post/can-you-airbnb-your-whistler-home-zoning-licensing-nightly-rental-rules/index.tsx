@@ -15,7 +15,7 @@ const CANONICAL_URL = `https://www.acehost.ca/post/${SLUG}`;
 const HERO =
   "/photos/properties/3445-Heron-Place/68-3445 Heron Place 53-Edit.jpg";
 const SUPPORTING_IMAGE =
-  "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/15 - 20251108 MM4P 01 0011.jpg";
+  "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Living blueberry 306.png";
 const HERO_URL = `https://www.acehost.ca${encodeURI(HERO)}`;
 const PUBLISH_DATE = "August 1, 2026";
 const ISO_MOD = "2026-08-01T10:00:00-07:00";

@@ -633,7 +633,7 @@ export default function BlogPost() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 not-prose">
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry living room.png"
+                    src="/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Cover Blueberry 306 snow.png"
                     alt="Luxury 6-bedroom Blueberry home exterior"
                     fill
                     className="object-cover"
@@ -641,7 +641,7 @@ export default function BlogPost() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/15 - 20251108 MM4P 01 0011.jpg"
+                    src="/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Living blueberry 306.png"
                     alt="Luxury 6-bedroom Blueberry home exterior in snow"
                     fill
                     className="object-cover"
@@ -649,7 +649,7 @@ export default function BlogPost() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/20 - 20251108 A7M4 02 A1_08158.jpg"
+                    src="/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry 306 Snow 7.png"
                     alt="Luxury 6-bedroom primary suite"
                     fill
                     className="object-cover"
@@ -657,7 +657,7 @@ export default function BlogPost() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/51 - 20251108 MM4P 01 0006.jpg"
+                    src="/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry 306 Snow 10.png"
                     alt="Luxury 6-bedroom kitchen and dining space"
                     fill
                     className="object-cover"
