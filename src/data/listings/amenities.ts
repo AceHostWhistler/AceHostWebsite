@@ -143,6 +143,7 @@ export const listingAmenities: Record<string, string[]> = {
   ],
   "northlands-walk-to-village-slopes-luxury-4-bed": [
     "Symphony Building · Village North",
+    "King primary bedroom",
     "Walk to slopes & lifts",
     "3 full bathrooms",
     "Shared hot tub",

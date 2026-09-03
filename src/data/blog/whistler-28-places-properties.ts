@@ -306,7 +306,7 @@ export const townhomeProperties: Whistler28Property[] = [
     number: 28,
     name: "Symphony - Walk to village & slopes - Luxury 4-bed",
     description:
-      "A three-level Symphony townhome-style retreat with four beds, three bathrooms, a shared hot tub, private exterior entrance, and excellent Village walkability.",
+      "A three-level Symphony townhome-style retreat with a king primary bedroom, four beds, three bathrooms, a shared hot tub, private exterior entrance, and excellent Village walkability.",
     image: "/photos/properties/Northlands Symphony 29/01 - 20251128 A7M4 02 A1_02882_.jpg",
     listingHref: "/listings/northlands-walk-to-village-slopes-luxury-4-bed",
     bookUrl:

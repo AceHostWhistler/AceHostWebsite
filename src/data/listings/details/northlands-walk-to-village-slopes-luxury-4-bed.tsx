@@ -183,6 +183,7 @@ export default function NorthlandsWalkToVillageSlopesLuxury4BedDetails({
         <div className="mb-20">
           <h2 className="text-2xl font-bold mb-6">Additional features</h2>
           <ul className="text-gray-800 list-disc pl-6 space-y-1 max-w-4xl">
+            <li>Primary bedroom with king bed and ensuite bathroom</li>
             <li>Private exterior entrance</li>
             <li>Three-level townhome-style layout</li>
             <li>3 full bathrooms</li>

@@ -196,7 +196,7 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     stats:
       "Sleeps 6 | 2 Bedrooms | 4 Beds | 3 Bathrooms | Shared Hot Tub | Village Location | Private Exterior Entrance",
     paragraphs: [
-      "This Symphony Building townhome-style retreat offers a private three-level layout with its own exterior entrance – more space and privacy than a typical Village condo. Three full bathrooms, a shared hot tub steps from the door, and complimentary underground parking make it ideal for families and small groups.",
+      "This Symphony Building townhome-style retreat offers a private three-level layout with its own exterior entrance – more space and privacy than a typical Village condo. The primary bedroom has a king bed with ensuite bathroom, bedroom two offers two Murphy singles with its own ensuite, and a pullout sofa in the living room adds flexibility. Three full bathrooms, a shared hot tub steps from the door, and complimentary underground parking make it ideal for families and small groups.",
       "Fresh St. Market is directly across the street, with Marketplace, restaurants, and the Racquet & Pickleball Club all nearby. The gondolas and ski lifts are an easy 12–15 minute walk, so a car is rarely needed once you arrive.",
       "Choose Symphony when you want townhome privacy with central Village access – especially if multiple bathrooms and a true front door matter for your group.",
     ],

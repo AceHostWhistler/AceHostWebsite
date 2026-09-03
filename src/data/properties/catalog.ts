@@ -1794,6 +1794,7 @@ export const propertyCategories: PropertyCategory[] = [
             description:
               "Unique 3-level townhome-style retreat in the Symphony Building with 2 bedrooms, 4 beds, 3 full bathrooms, shared hot tub, private exterior entrance, and free underground parking in Whistler Village.",
             features: [
+              "King Primary Bedroom",
               "Private Exterior Entrance",
               "Three-Level Townhome Layout",
               "3 Full Bathrooms",
