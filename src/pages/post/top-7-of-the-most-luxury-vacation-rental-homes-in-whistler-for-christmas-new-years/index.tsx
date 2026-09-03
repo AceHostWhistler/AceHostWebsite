@@ -527,7 +527,7 @@ const LuxuryChristmasRentals = () => {
 
                 <div className="my-6 relative aspect-[16/9] rounded-xl overflow-hidden shadow-md">
                   <Image
-                    src="/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05891.jpg"
+                    src="/photos/properties/3445-Heron-Place/Heron Snow cover.png"
                     alt="Modern Alpine Residence"
                     fill
                     className="object-cover"

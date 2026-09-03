@@ -11,7 +11,7 @@ import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
 const SLUG =
   "self-managing-vs-hiring-a-whistler-property-manager-what-owners-need-to-know";
 const HERO =
-  "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05891.jpg";
+  "/photos/properties/3445-Heron-Place/Heron Snow cover.png";
 const HERO_URL = `https://www.acehost.ca${HERO.replace(/ /g, "%20")}`;
 const PUBLISH_DATE = "April 23, 2026";
 const ISO_MOD = "2026-04-23T14:00:00-07:00";

@@ -78,7 +78,7 @@ export const largeHomeProperties: Whistler28Property[] = [
     name: "Heron Views | Whistler Village",
     description:
       "A spacious five-bedroom home with huge decks, mountain views, a private hot tub, and quick access to Whistler Village.",
-    image: "/photos/properties/3445-Heron-Place/68-3445 Heron Place 53-Edit.jpg",
+    image: "/photos/properties/3445-Heron-Place/Heron Snow cover.png",
     listingHref: "/listings/heron-views-whistler-village",
     bookUrl:
       "https://www.airbnb.ca/rooms/1168163637007998550?guests=1&adults=1&s=67&unique_share_id=8227e964-920d-4bc0-8073-13043963151f",

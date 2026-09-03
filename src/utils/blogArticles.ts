@@ -46,7 +46,7 @@ export const allArticles: Article[] = [
     readTime: "12 min read",
     link: "/post/can-you-airbnb-your-whistler-home-zoning-licensing-nightly-rental-rules",
     coverImage:
-      "/photos/properties/3445-Heron-Place/68-3445 Heron Place 53-Edit.jpg",
+      "/photos/properties/3445-Heron-Place/Heron Snow cover.png",
     publishedAt: "2026-08-01T17:00:00.000Z",
     headline: "Can You Airbnb Your Whistler Home? Zoning, Licensing and Nightly Rental Rules Explained",
   },
@@ -127,7 +127,7 @@ export const allArticles: Article[] = [
     readTime: "12 min read",
     link: "/post/self-managing-vs-hiring-a-whistler-property-manager-what-owners-need-to-know",
     coverImage:
-      "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05891.jpg",
+      "/photos/properties/3445-Heron-Place/Heron Snow cover.png",
     publishedAt: "2026-04-23T21:00:00.000Z",
   },
   {

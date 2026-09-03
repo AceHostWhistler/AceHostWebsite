@@ -120,10 +120,10 @@ const luxuryHomesBeyondKadenwood: FeaturedProperty[] = [
     description:
       "Beautifully positioned and well designed, this is a great option for guests wanting a high-end Whistler stay close to everything.",
     photos: [
-      "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05891.jpg",
+      "/photos/properties/3445-Heron-Place/Heron Snow cover.png",
       "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05831-Edit.jpg",
       "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05851.jpg",
-      "/photos/properties/3445-Heron-Place/68-3445 Heron Place 53-Edit.jpg",
+      "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05891.jpg",
     ],
     bookUrl:
       "https://www.airbnb.ca/rooms/1168163637007998550?guests=1&adults=1&s=67&unique_share_id=8227e964-920d-4bc0-8073-13043963151f",

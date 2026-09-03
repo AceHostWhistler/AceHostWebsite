@@ -364,7 +364,7 @@ export default function BlogPost() {
               </h3>
               <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05851.jpg"
+                  src="/photos/properties/3445-Heron-Place/Heron Snow cover.png"
                   alt="Heron Views luxury property in Whistler Village"
                   fill
                   className="object-cover"
