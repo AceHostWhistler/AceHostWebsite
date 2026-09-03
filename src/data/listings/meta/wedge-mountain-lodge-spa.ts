@@ -70,6 +70,8 @@ const listing: ListingData = {
   },
   galleryTitle: "Wedge Mountain Lodge & Spa - AceHost",
   photoAltPrefix: "Wedge Mountain Lodge & Spa - AceHost",
+  vimeoVideoId: "982089217",
+  vimeoTitle: "Wedge Mountain Lodge & Spa Property Walkthrough",
 };
 
 export default listing;

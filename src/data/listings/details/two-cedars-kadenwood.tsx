@@ -2,6 +2,7 @@ import React from "react";
 import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Image from "next/image";
 import { FaBed, FaBath } from "react-icons/fa";
+import LazyInstagramEmbed from "@/components/LazyInstagramEmbed";
 import type { ListingDetailsProps } from "../types";
 
 export default function TwoCedarsKadenwoodDetails({ photos }: ListingDetailsProps) {
@@ -14,6 +15,44 @@ export default function TwoCedarsKadenwoodDetails({ photos }: ListingDetailsProp
                   <p className="text-gray-800 mb-16 max-w-4xl font-semibold">
                     Daily Butler Included in Winter
                   </p>
+
+                  {/* Instagram Reel Video - Centered and Smaller */}
+                  <div className="flex justify-center mb-16">
+                    <div className="w-full max-w-sm">
+                      <div className="rounded-xl overflow-hidden shadow-2xl bg-white">
+                        <div className="flex flex-col h-full">
+                          <div className="p-6 border-b bg-gradient-to-r from-gray-50 to-white">
+                            <h3 className="text-xl font-bold text-center text-gray-900">
+                              Two Cedars Walk Through
+                            </h3>
+                          </div>
+
+                          <div
+                            className="aspect-w-9 aspect-h-16 relative"
+                            style={{ minHeight: "480px" }}
+                          >
+                            <LazyInstagramEmbed
+                              reelId="C0slAOvLmII"
+                              title="Two Cedars Walk Through Video"
+                              loadStrategy="inView"
+                              className="absolute inset-0 h-full w-full"
+                            />
+                          </div>
+
+                          <div className="p-4 border-t bg-gradient-to-r from-gray-50 to-white">
+                            <a
+                              href="https://www.instagram.com/reel/C0slAOvLmII/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                              className="text-blue-600 text-sm font-medium block text-center hover:text-blue-800 transition-colors"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              View more on Instagram
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
                   {/* The Space Section */}
                   <div className="mb-20">
