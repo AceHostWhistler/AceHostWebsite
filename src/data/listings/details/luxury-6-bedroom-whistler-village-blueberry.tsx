@@ -7,7 +7,8 @@ import type { ListingDetailsProps } from "../types";
 
 
 export default function Luxury6BedroomWhistlerVillageBlueberryDetails({ photos }: ListingDetailsProps) {
-  const getDescriptionPhoto = (index: number) => photos[index] ?? photos[0];
+  const getDescriptionPhoto = (index: number) =>
+    getGalleryPhotoSrc(photos[index] ?? photos[0]);
   return (
     <>
       <div className="max-w-6xl mx-auto px-4" id="details">
@@ -69,8 +70,8 @@ export default function Luxury6BedroomWhistlerVillageBlueberryDetails({ photos }
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
                       <div className="relative aspect-[4/3]">
                         <Image
-                          src={getDescriptionPhoto(1)}
-                          alt="Luxury living space"
+                          src={getDescriptionPhoto(10)}
+                          alt="Blueberry balcony view"
                           width={1920}
                           height={1080}
                           className="w-full h-full object-cover rounded-lg"
@@ -78,8 +79,8 @@ export default function Luxury6BedroomWhistlerVillageBlueberryDetails({ photos }
                       </div>
                       <div className="relative aspect-[4/3]">
                         <Image
-                          src={getDescriptionPhoto(2)}
-                          alt="Modern kitchen"
+                          src={getDescriptionPhoto(11)}
+                          alt="Deck snow view"
                           width={1920}
                           height={1080}
                           className="w-full h-full object-cover rounded-lg"
@@ -87,8 +88,8 @@ export default function Luxury6BedroomWhistlerVillageBlueberryDetails({ photos }
                       </div>
                       <div className="relative aspect-[4/3]">
                         <Image
-                          src={getDescriptionPhoto(3)}
-                          alt="Cozy bedroom"
+                          src={getDescriptionPhoto(12)}
+                          alt="Drone view of Blueberry Hill"
                           width={1920}
                           height={1080}
                           className="w-full h-full object-cover rounded-lg"
@@ -109,7 +110,7 @@ export default function Luxury6BedroomWhistlerVillageBlueberryDetails({ photos }
                         </ul>
                         <div className="mt-6 relative aspect-[4/3]">
                           <Image
-                          src={getDescriptionPhoto(5)}
+                          src={getDescriptionPhoto(2)}
                           alt="Primary bedroom"
                             width={1920}
                             height={1080}
@@ -128,8 +129,8 @@ export default function Luxury6BedroomWhistlerVillageBlueberryDetails({ photos }
                         <p className="mt-4 text-gray-800">Each of the 3 full bathrooms includes both a shower and a bathtub, providing convenience and comfort for large groups.</p>
                         <div className="mt-6 relative aspect-[4/3]">
                           <Image
-                          src={getDescriptionPhoto(6)}
-                          alt="Bunk bedroom"
+                          src={getDescriptionPhoto(4)}
+                          alt="Upper level bedroom"
                             width={1920}
                             height={1080}
                             className="w-full h-full object-cover rounded-lg"
@@ -191,8 +192,8 @@ export default function Luxury6BedroomWhistlerVillageBlueberryDetails({ photos }
                       <div className="grid grid-cols-2 gap-4">
                         <div className="relative aspect-[4/3]">
                           <Image
-                            src={getDescriptionPhoto(7)}
-                            alt="Modern kitchen appliances"
+                            src={getDescriptionPhoto(1)}
+                            alt="Living room interior"
                             width={1920}
                             height={1080}
                             className="w-full h-full object-cover rounded-lg"
@@ -200,8 +201,8 @@ export default function Luxury6BedroomWhistlerVillageBlueberryDetails({ photos }
                         </div>
                         <div className="relative aspect-[4/3]">
                           <Image
-                            src={getDescriptionPhoto(8)}
-                            alt="Forest view from balcony"
+                            src={getDescriptionPhoto(6)}
+                            alt="Snow interior detail"
                             width={1920}
                             height={1080}
                             className="w-full h-full object-cover rounded-lg"
@@ -227,8 +228,8 @@ export default function Luxury6BedroomWhistlerVillageBlueberryDetails({ photos }
                       <div className="md:col-span-1">
                         <div className="relative aspect-[3/4] h-full">
                           <Image
-                            src={getDescriptionPhoto(9)}
-                            alt="Living area with mountain views"
+                            src={getDescriptionPhoto(8)}
+                            alt="Renovated interior"
                             width={1920}
                             height={1080}
                             className="w-full h-full object-cover rounded-lg"
