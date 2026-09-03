@@ -28,9 +28,9 @@ export interface HomepageListing {
 
 /** Homepage display order — ids must exist in the property catalog. */
 export const HOMEPAGE_PROPERTY_ORDER: readonly string[] = [
-  "two-cedars",
-  "chalet-la-forja",
   "luxury-ski-in-ski-out-7-bedroom-kadenwood",
+  "chalet-la-forja",
+  "two-cedars",
   "panoramic-estate",
   "slopeside-villa",
   "timber-haven-luxury-ski-in-ski-out-kadenwood",
