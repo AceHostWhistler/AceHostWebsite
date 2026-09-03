@@ -1,9 +1,39 @@
 import type { PropertyFeature } from "@/data/properties/catalog";
 
+/** Catalog/homepage property IDs that differ from listing slugs */
+const PROPERTY_ID_TO_LISTING_SLUG: Record<string, string> = {
+  "two-cedars": "two-cedars-kadenwood",
+  "chalet-la-forja": "chalet-la-forja-kadenwood",
+  "panoramic-estate": "panoramic-estate-kadenwood",
+  "slopeside-villa": "slopeside-villa-kadenwood",
+  "heron-views-whistler": "heron-views-whistler-village",
+  "luxury-6-bedroom-blueberry": "luxury-6-bedroom-whistler-village-blueberry",
+  "golf-course-views": "golf-course-views-luxury-4-bed-whistler-village",
+  "rare-3-bedroom-whistler-village":
+    "rare-3-bedroom-whistler-village-walk-to-hill",
+  "ravens-nest": "ravens-nest-ski-in-ski-out-views",
+  "bluffs-unit-4": "bluffs-unit-4-taluswood",
+  "bluffs-unit-8": "bluffs-unit-8-taluswood",
+  "cozy-lakefront-whistler-condo":
+    "cozy-lakefront-whistler-condo-mountain-view",
+  "squamish-retreat": "squamish-retreat-with-the-best-view",
+  "whistler-village-penthouse-3-bdr":
+    "whistler-village-penthouse-3-bdr-walk-to-ski",
+  "wedge-mountain-lodge": "wedge-mountain-lodge-spa",
+  "whispering-pines": "whispering-pines-ski-in-ski-out",
+  "marquise-2-bed": "marquise-2-bed-ski-in-ski-out",
+  "the-nest": "the-nest-ski-in-ski-out",
+};
+
 /** Resolves the listing URL used by property cards on /properties. */
 export function getPropertyListingPath(property: PropertyFeature): string {
   if (property.link) {
     return property.link;
+  }
+
+  const mappedSlug = PROPERTY_ID_TO_LISTING_SLUG[property.id];
+  if (mappedSlug) {
+    return `/listings/${mappedSlug}`;
   }
 
   switch (property.id) {

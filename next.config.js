@@ -66,6 +66,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/listings/luxury-6-bedroom-blueberry',
+        destination: '/listings/luxury-6-bedroom-whistler-village-blueberry',
+        permanent: true,
+      },
+      {
         source: '/listings/punta-mita',
         destination: '/worldwide-listings/punta-mita---casa-juntos',
         permanent: true,

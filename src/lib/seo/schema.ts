@@ -1,6 +1,7 @@
 import { businessInfo, SITE_URL } from "@/data/seo/business";
 import type { PropertyGeo } from "@/data/seo/propertyGeo";
 import type { PropertyCategory, PropertyFeature } from "@/data/properties/catalog";
+import { getPropertyListingPath } from "@/data/properties/listingPath";
 
 export function buildLocalBusinessSchema() {
   return {
@@ -329,12 +330,8 @@ export function buildBlogBreadcrumbSchema(
 }
 
 function propertyUrl(property: PropertyFeature): string {
-  if (property.link) {
-    return property.link.startsWith("http")
-      ? property.link
-      : `${SITE_URL}${property.link}`;
-  }
-  return `${SITE_URL}/listings/${property.id}`;
+  const path = getPropertyListingPath(property);
+  return path.startsWith("http") ? path : `${SITE_URL}${path}`;
 }
 
 export function buildPropertiesItemListSchema(

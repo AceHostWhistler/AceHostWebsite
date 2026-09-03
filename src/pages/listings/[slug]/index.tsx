@@ -26,7 +26,9 @@ export default function ListingPage({ slug, listingData }: ListingPageProps) {
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: listingSlugs.map((slug) => ({ params: { slug } })),
-    fallback: false,
+    // blocking: pre-render all slugs at build time, but still generate on
+    // first request in dev and for legacy id-based URLs redirected below
+    fallback: "blocking",
   };
 };
 
