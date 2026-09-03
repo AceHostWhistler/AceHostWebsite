@@ -70,7 +70,7 @@ export const allArticles: Article[] = [
     readTime: "20 min read",
     link: "/post/where-to-stay-in-whistler-winter",
     coverImage:
-      "/photos/properties/Falcon/Falcon Master snow.png",
+      "/photos/properties/Falcon/Falcon Master snow.webp",
     publishedAt: "2026-07-28T19:00:00.000Z",
     headline: "Where to Stay in Whistler in Winter: The Best Neighbourhood for Every Type of Ski Trip",
   },

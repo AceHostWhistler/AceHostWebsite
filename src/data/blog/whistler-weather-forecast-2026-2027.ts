@@ -37,7 +37,7 @@ export const IMAGES = {
     alt: "Pacific storm clouds over the Coast Mountains near Whistler",
   },
   alpineValley: {
-    src: "/photos/properties/Falcon/Falcon Master snow.png",
+    src: "/photos/properties/Falcon/Falcon Master snow.webp",
     alt: "Whistler alpine terrain overlooking the valley in winter",
   },
   worldComparison: {
@@ -65,7 +65,7 @@ export const IMAGES = {
     alt: "Fresh snow around a Whistler Granite Court residence in winter",
   },
   falconSnowExterior: {
-    src: "/photos/properties/Falcon/Outdoor shot falcon zoomed out.png",
+    src: "/photos/properties/Falcon/Outdoor shot falcon zoomed out.webp",
     alt: "Luxury Whistler home surrounded by snow-covered trees and mountains",
   },
 } as const;

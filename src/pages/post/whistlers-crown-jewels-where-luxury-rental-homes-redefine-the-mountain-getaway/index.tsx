@@ -257,7 +257,7 @@ export default function BlogPost() {
               </h3>
               <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/Falcon/Cover photo Falcon.png"
+                  src="/photos/properties/Falcon/Cover photo Falcon.webp"
                   alt="Falcon luxury chalet in Blueberry Hill, Whistler"
                   fill
                   className="object-cover"

@@ -23,7 +23,7 @@ import {
 
 const SLUG = "where-to-stay-in-whistler-winter";
 const CANONICAL_URL = `https://www.acehost.ca/post/${SLUG}`;
-const HERO = "/photos/properties/Falcon/Falcon Master snow.png";
+const HERO = "/photos/properties/Falcon/Falcon Master snow.webp";
 const HERO_URL = `https://www.acehost.ca${encodeURI(HERO)}`;
 const PUBLISH_DATE = "July 28, 2026";
 const ISO_MOD = "2026-07-28T12:00:00-07:00";
@@ -607,7 +607,7 @@ export default function BlogPost() {
                 more space than most properties located directly in Whistler Village.
               </p>
               <SectionImage
-                src="/photos/properties/Falcon/Cover photo Falcon.png"
+                src="/photos/properties/Falcon/Cover photo Falcon.webp"
                 alt="Falcon luxury chalet in Blueberry Whistler with mountain views"
               />
               <p>

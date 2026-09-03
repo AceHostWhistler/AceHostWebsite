@@ -591,7 +591,7 @@ const LuxuryChristmasRentals = () => {
 
                 <div className="my-6 relative aspect-[16/9] rounded-xl overflow-hidden shadow-md">
                   <Image
-                    src="/photos/properties/Falcon/Cover photo Falcon.png"
+                    src="/photos/properties/Falcon/Cover photo Falcon.webp"
                     alt="Luxury Ski Chalet"
                     fill
                     className="object-cover"
