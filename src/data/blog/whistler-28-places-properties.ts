@@ -267,7 +267,7 @@ export const townhomeProperties: Whistler28Property[] = [
     name: "Marquise Penthouse | Ski-In/Out | 3-Bed | Views",
     description:
       "A 1,100 sq. ft. Marquise penthouse with Fairmont views, glass-domed hot tub, pool, sauna, gym, and private patio on Blackcomb.",
-    image: "/optimized/luxury-3-bed-views/cover.jpg",
+    image: "/photos/properties/Luxury 3-Bed | Stunning Views/04 - 20250707 A7M3 03 A1_07325.jpg",
     listingHref: "/listings/luxury-3-bed-stunning-views",
     bookUrl:
       "https://www.airbnb.ca/rooms/1461637483646115205?guests=1&adults=1&s=67&unique_share_id=9b6640b9-138d-4627-bea4-cb2155e32c72",

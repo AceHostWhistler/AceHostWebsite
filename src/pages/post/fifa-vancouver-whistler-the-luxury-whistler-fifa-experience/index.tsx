@@ -240,10 +240,10 @@ const condoTownhomeOptions: FeaturedProperty[] = [
     description:
       "A strong choice for families or small groups looking for great views, comfort, and a relaxed summer base in Whistler.",
     photos: [
-      "/optimized/luxury-3-bed-views/cover.jpg",
-      "/optimized/luxury-3-bed-views/image-01.jpg",
-      "/optimized/luxury-3-bed-views/image-02.jpg",
-      "/optimized/luxury-3-bed-views/image-03.jpg",
+      "/photos/properties/Luxury 3-Bed | Stunning Views/04 - 20250707 A7M3 03 A1_07325.jpg",
+      "/photos/properties/Luxury 3-Bed | Stunning Views/01 - 20250707 A7M3 03 A1_07650-Edit.jpg",
+      "/photos/properties/Luxury 3-Bed | Stunning Views/02 - 20250707 A7M3 02 A1_07212.jpg",
+      "/photos/properties/Luxury 3-Bed | Stunning Views/03 - 20250707 A7M3 03 A1_07314.jpg",
     ],
     bookUrl:
       "https://www.airbnb.ca/rooms/1461637483646115205?guests=1&adults=1&s=67&unique_share_id=9b6640b9-138d-4627-bea4-cb2155e32c72",
