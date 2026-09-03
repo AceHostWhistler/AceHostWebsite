@@ -42,6 +42,7 @@ function collectSourceFiles(dirPath, files = []) {
 }
 
 function main() {
+  console.log("Running video embed verification...");
   const csp = buildContentSecurityPolicy();
   const allowedHostnames = new Set(
     EMBED_FRAME_SOURCES.map(hostnameFromSource).filter(Boolean)
