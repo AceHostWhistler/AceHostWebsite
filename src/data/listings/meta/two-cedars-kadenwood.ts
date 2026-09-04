@@ -69,6 +69,8 @@ const listing: ListingData = {
   },
   galleryTitle: "Two Cedars",
   photoAltPrefix: "Two Cedars",
+  vimeoVideoId: "1224014246",
+  vimeoTitle: "Two Cedars Summer Video",
 };
 
 export default listing;
