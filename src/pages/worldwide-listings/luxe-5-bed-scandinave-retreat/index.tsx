@@ -367,7 +367,7 @@ const LuxeScandinaveRetreat = () => {
           <div className="max-w-4xl mx-auto px-6 md:px-10 lg:px-8 text-center mb-24">
             <h2 className="text-2xl sm:text-3xl font-bold mb-6">Other things to note</h2>
             <p className="text-gray-700 max-w-3xl mx-auto mb-8 leading-relaxed text-lg">
-              No pets, no smoking (allergy-friendly).
+              No pets, no smoking.
               <br /><br />
               The road to Creekside Village/Gondola is downhill. After a long ski day, it may be a challenge for younger kids or tired adults to walk.
             </p>
