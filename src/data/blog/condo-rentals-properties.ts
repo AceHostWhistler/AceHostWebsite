@@ -236,7 +236,7 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     airbnbHref:
       "https://www.airbnb.ca/rooms/1747927495845801389?guests=1&adults=1&s=67&unique_share_id=99456c1e-0b4a-4b30-933f-0c8270cc0adb",
     listingHref: "/listings/bluffs-unit-8-taluswood",
-    imageSrc: "/photos/properties/Bluffs Unit 8/Bluffs 8 edit 4.png",
+    imageSrc: "/photos/properties/Bluffs Unit 8/ChatGPT Image Sep 4, 2026, 04_35_38 PM (8).png",
     imageAlt: "Bluffs #8 luxury 3-bed ski-in ski-out condo in Taluswood Whistler",
   },
   {

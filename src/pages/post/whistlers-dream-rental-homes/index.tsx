@@ -800,7 +800,7 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/Bluffs Unit 8/Bluffs 8 edit 4.png"
+                  src="/photos/properties/Bluffs Unit 8/ChatGPT Image Sep 4, 2026, 04_35_38 PM (8).png"
                   alt="Bluffs #8 luxury 3-bed ski-in ski-out condo in Taluswood"
                   fill
                   className="object-cover"

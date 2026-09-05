@@ -726,7 +726,7 @@ export const propertyCategories: PropertyCategory[] = [
             id: "bluffs-unit-8",
             name: "Bluffs Penthouse - Luxe 3-Bedroom - Ski-in Ski-out",
             images: [
-              "/photos/properties/Bluffs Unit 8/Bluffs 8 edit 4.png",
+              "/photos/properties/Bluffs Unit 8/ChatGPT Image Sep 4, 2026, 04_35_38 PM (8).png",
               "/photos/properties/Bluffs Unit 8/01 - 20260805 MM4P 010149.jpg",
               "/photos/properties/Bluffs Unit 8/Hot tub snow bluffs.png",
             ],

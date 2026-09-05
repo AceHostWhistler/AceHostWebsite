@@ -3,15 +3,16 @@ import {
   BLUFFS_UNIT_8_AIRBNB_LINK,
 } from "../bluffsUnit8AirbnbLink";
 
+export const BLUFFS_UNIT_8_COVER =
+  "/photos/properties/Bluffs Unit 8/ChatGPT Image Sep 4, 2026, 04_35_38 PM (8).png";
+
 const listing: ListingData = {
   slug: "bluffs-unit-8-taluswood",
   photos: [
-    "/photos/properties/Bluffs Unit 8/Bluffs 8 edit 4.png",
+    BLUFFS_UNIT_8_COVER,
     "/photos/properties/Bluffs Unit 8/01 - 20260805 MM4P 010149.jpg",
-    "/photos/properties/Bluffs Unit 8/04 - 20260805 A7M4 02 A1_09717.jpg",
-    "/photos/properties/Bluffs Unit 8/05 - 20260805 A7M4 02 A1_09723.jpg",
+    "/photos/properties/Bluffs Unit 8/Front door Bluffs 8.png",
     "/photos/properties/Bluffs Unit 8/08 - 20260805 A7M4 02 A1_09747.jpg",
-    "/photos/properties/Bluffs Unit 8/09 - 20260805 A7M4 02 A1_09757.jpg",
     "/photos/properties/Bluffs Unit 8/12 - 20260805 A7M4 02 A1_09779.jpg",
     "/photos/properties/Bluffs Unit 8/14 - 20260805 A7M4 02 A1_09876.jpg",
     "/photos/properties/Bluffs Unit 8/18 - 20260805 A7M4 02 A1_09912.jpg",
@@ -20,13 +21,15 @@ const listing: ListingData = {
     "/photos/properties/Bluffs Unit 8/21 - 20260805 A7M4 02 A1_09905.jpg",
     "/photos/properties/Bluffs Unit 8/28 - 20260805 A7M4 02 A1_09884.jpg",
     "/photos/properties/Bluffs Unit 8/29 - 20260805 A7M4 02 A1_09898.jpg",
-    "/photos/properties/Bluffs Unit 8/30 - 20260805 A7M4 02 A1_09891.jpg",
-    "/photos/properties/Bluffs Unit 8/Bluffs 8 edit.png",
-    "/photos/properties/Bluffs Unit 8/Bluffs 8 edit 1.png",
-    "/photos/properties/Bluffs Unit 8/Bluffs 8 edit 2.png",
-    "/photos/properties/Bluffs Unit 8/Bluffs 8 edit 3.png",
-    "/photos/properties/Bluffs Unit 8/Bluffs 8 edit 5.png",
-    "/photos/properties/Bluffs Unit 8/Bluffs 8 edit 6.png",
+    "/photos/properties/Bluffs Unit 8/ChatGPT Image Sep 4, 2026, 04_35_37 PM (1).png",
+    "/photos/properties/Bluffs Unit 8/ChatGPT Image Sep 4, 2026, 04_35_38 PM (2).png",
+    "/photos/properties/Bluffs Unit 8/ChatGPT Image Sep 4, 2026, 04_35_38 PM (3).png",
+    "/photos/properties/Bluffs Unit 8/ChatGPT Image Sep 4, 2026, 04_35_38 PM (4).png",
+    "/photos/properties/Bluffs Unit 8/ChatGPT Image Sep 4, 2026, 04_35_38 PM (5).png",
+    "/photos/properties/Bluffs Unit 8/ChatGPT Image Sep 4, 2026, 04_35_38 PM (7).png",
+    "/photos/properties/Bluffs Unit 8/ChatGPT Image Sep 4, 2026, 04_35_39 PM (10).png",
+    "/photos/properties/Bluffs Unit 8/ChatGPT Image Sep 4, 2026, 04_35_39 PM (11).png",
+    "/photos/properties/Bluffs Unit 8/ChatGPT Image Sep 4, 2026, 04_50_52 PM.png",
     "/photos/properties/Bluffs Unit 8/Bluffs 8 Master.png",
     "/photos/properties/Bluffs Unit 8/Bluffs 8 Master 3.png",
     "/photos/properties/Bluffs Unit 8/Bluffs 8 white bed.png",
@@ -60,7 +63,7 @@ const listing: ListingData = {
     "@context": "https://schema.org/",
     "@type": "Product",
     name: "Bluffs Penthouse - Luxe 3-Bedroom - Ski-in Ski-out",
-    image: "/photos/properties/Bluffs Unit 8/Bluffs 8 edit 4.png",
+    image: BLUFFS_UNIT_8_COVER,
     description:
       "Perched in Taluswood's Bluffs, this 3-bedroom retreat puts you right on the Dave Murray Downhill for true ski-in ski-out days and beautiful mountain-view evenings. With a King suite, Queen bedroom, 4 Twin bunk beds, and a Queen sofa bed, the home is ideal for families and groups. A neighbourhood hot tub with stunning views, AC, Smart TVs, gas fireplace, BBQ, gorgeous patio view, chef-ready kitchen, generous parking, and secure ski & bike storage make every season comfortable and effortless.",
     sku: "bluffs-unit-8-taluswood",
