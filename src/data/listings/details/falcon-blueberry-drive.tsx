@@ -8,10 +8,10 @@ export default function FalconBlueberryDriveDetails({ photos }: ListingDetailsPr
     <>
       <div className="max-w-6xl mx-auto px-4" id="details">
         <p className="text-gray-800 mb-8 max-w-4xl">
-          Welcome to Falcon, a spacious 7-bedroom Whistler chalet in prestigious Blueberry Hill, minutes from Whistler Village and the slopes. Perfect for one or two families and groups of up to 15, the home features mountain views, a wood-burning fireplace, central A/C, outdoor sauna, private hot tub and large deck.
+          Welcome to Falcon, a spacious 7-bedroom Whistler chalet in prestigious Blueberry Hill, minutes from Whistler Village and the slopes. Designed for families and groups of up to 15, the home features a large indoor dining table seating 14, mountain views, a wood-burning fireplace, central A/C, outdoor sauna, private hot tub and large deck.
         </p>
         <p className="text-gray-800 mb-16 max-w-4xl">
-          Walk the scenic Valley Trail to the Village in about 25 minutes, drive in 3–4 minutes, or take the Route 6 public bus from a stop steps from the home for easy access into Whistler Village.
+          Walk the Valley Trail to the Village in about 25 minutes, drive in 3–4 minutes, or take the Route 6 bus from a stop steps away.
         </p>
 
         {/* The Space Section */}
@@ -45,12 +45,11 @@ export default function FalconBlueberryDriveDetails({ photos }: ListingDetailsPr
               <h2 className="text-2xl font-bold">The space</h2>
             </div>
             <p className="text-gray-800 mb-6">
-              Falcon is a spacious Whistler chalet designed for families and groups to enjoy time together while still having plenty of room to spread out across three levels. Enter through the unique hand-carved West Coast front door into a heated slate entrance. The main living area is warm and inviting, with high ceilings, large windows, mountain views and a beautiful wood-burning fireplace at the centre of the room. The home features seven generous bedrooms, multiple gathering spaces and central air conditioning throughout for comfortable summer stays.
+              Falcon is a spacious Whistler chalet designed for families and groups to enjoy time together while still having plenty of room to spread out across three levels. Enter through the unique hand-carved West Coast front door into a heated slate entrance. The main living area is warm and inviting, with high ceilings, large windows, mountain views and a beautiful wood-burning fireplace at the centre of the room. The home features seven generous bedrooms, multiple gathering spaces and central air conditioning throughout for comfortable summer stays. At the heart of the main level, the oversized dining table seats 14 guests, making Falcon especially well suited to group meals, celebrations and private-chef dinners.
             </p>
             <p className="text-gray-800 mb-6">
               Outside, the large deck offers plenty of room to enjoy Whistler year-round, with a private hot tub, outdoor wood-barrel sauna, dining area and barbecue. After a day skiing, biking or exploring the mountains, relax in the sauna, soak in the hot tub or gather around the fireplace inside.
             </p>
-            <p className="text-gray-800 mb-6">Dining table</p>
             <p className="text-gray-800 mb-6">
               Falcon is particularly well suited for both small or larger groups with bedrooms spread across the upper, main and lower levels.
             </p>

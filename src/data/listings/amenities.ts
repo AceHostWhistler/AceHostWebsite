@@ -74,6 +74,7 @@ export const listingAmenities: Record<string, string[]> = {
   ],
   "falcon-blueberry-drive": [
     "Blueberry Hill location",
+    "Dining table seats 14",
     "Outdoor barrel sauna",
     "Hot tub",
     "Central air conditioning",

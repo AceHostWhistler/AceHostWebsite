@@ -604,11 +604,12 @@ export const propertyCategories: PropertyCategory[] = [
             bathrooms: 3.5,
             location: "Blueberry Hill, Whistler",
             description:
-              "A spacious 7-bedroom Blueberry Hill chalet with mountain views, central air conditioning, an outdoor sauna, private hot tub, and convenient access to Whistler Village.",
+              "A spacious 7-bedroom Blueberry Hill chalet with a large indoor dining table seating 14, mountain views, central air conditioning, an outdoor sauna, private hot tub, and convenient access to Whistler Village.",
             features: [
               "Hot Tub",
               "Outdoor Barrel Sauna",
               "Central Air Conditioning",
+              "Dining Table Seats 14",
               "Mountain Views",
               "Spacious Deck",
               "BBQ",
@@ -618,6 +619,7 @@ export const propertyCategories: PropertyCategory[] = [
             ],
             highlights: [
               "7 Spacious Bedrooms",
+              "Dining Table Seats 14",
               "Family-Friendly Area",
               "Beautiful Mountain Views",
               "25-Minute Walk to Village",
