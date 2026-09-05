@@ -347,7 +347,7 @@ export default function BlogPost() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/2919 Heritage/05 - 20260301 A7M4 01 A1_01862-Edit.jpg"
+                    src="/photos/properties/2919 Heritage/Mountaintop living snow 5.png"
                     alt="The Mountaintop chef kitchen and dining area"
                     fill
                     className="object-cover"
@@ -355,7 +355,7 @@ export default function BlogPost() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/2919 Heritage/104 - 20260301 MM4P 01 DJI_20260301104740_0208_D.jpg"
+                    src="/photos/properties/2919 Heritage/Drone Mountaintop.png"
                     alt="The Mountaintop Kadenwood estate aerial view"
                     fill
                     className="object-cover"
@@ -363,7 +363,7 @@ export default function BlogPost() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/2919 Heritage/38 - 20260301 A7M4 01 A1_02799-Edit.jpg"
+                    src="/photos/properties/2919 Heritage/Mountaintop living snow 10.png"
                     alt="The Mountaintop outdoor hot tub and mountain views"
                     fill
                     className="object-cover"
