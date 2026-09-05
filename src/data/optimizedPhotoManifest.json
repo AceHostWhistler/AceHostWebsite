@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-05T15:07:20.048Z",
+  "generatedAt": "2026-09-05T15:27:08.756Z",
   "gallery": {
     "/photos/properties/3445-Heron-Place/01-3445 Heron Place 01.jpg": "/high-quality/property-gallery/3445-Heron-Place/01-3445 Heron Place 01.webp",
     "/photos/properties/3445-Heron-Place/02-3445 Heron Place 02 2.jpg": "/high-quality/property-gallery/3445-Heron-Place/02-3445 Heron Place 02 2.webp",
@@ -134,7 +134,6 @@
     "/photos/properties/Altitude New Photos Best/tall1.jpg": "/high-quality/property-gallery/Altitude New Photos Best/tall1.webp",
     "/photos/properties/Altitude New Photos Best/tall2.jpg": "/high-quality/property-gallery/Altitude New Photos Best/tall2.webp",
     "/photos/properties/Altitude New Photos Best/tall3.jpg": "/high-quality/property-gallery/Altitude New Photos Best/tall3.webp",
-    "/photos/properties/Bluffs Unit 8/01 - 20260805 MM4P 010149.jpg": "/high-quality/property-gallery/Bluffs Unit 8/01 - 20260805 MM4P 010149.webp",
     "/photos/properties/Bluffs Unit 8/08 - 20260805 A7M4 02 A1_09747.jpg": "/high-quality/property-gallery/Bluffs Unit 8/08 - 20260805 A7M4 02 A1_09747.webp",
     "/photos/properties/Bluffs Unit 8/12 - 20260805 A7M4 02 A1_09779.jpg": "/high-quality/property-gallery/Bluffs Unit 8/12 - 20260805 A7M4 02 A1_09779.webp",
     "/photos/properties/Bluffs Unit 8/14 - 20260805 A7M4 02 A1_09876.jpg": "/high-quality/property-gallery/Bluffs Unit 8/14 - 20260805 A7M4 02 A1_09876.webp",
@@ -1184,7 +1183,8 @@
     "/photos/properties/2919 Heritage/Mountaintop living snow 8.png": "/high-quality/property-gallery/2919 Heritage/Mountaintop living snow 8.webp",
     "/photos/properties/2919 Heritage/Mountaintop living snow 9.png": "/high-quality/property-gallery/2919 Heritage/Mountaintop living snow 9.webp",
     "/photos/properties/2919 Heritage/Mountaintop living snow.png": "/high-quality/property-gallery/2919 Heritage/Mountaintop living snow.webp",
-    "/photos/properties/2919 Heritage/Mountaintop living snow18.png": "/high-quality/property-gallery/2919 Heritage/Mountaintop living snow18.webp"
+    "/photos/properties/2919 Heritage/Mountaintop living snow18.png": "/high-quality/property-gallery/2919 Heritage/Mountaintop living snow18.webp",
+    "/photos/properties/Bluffs Unit 8/Bluffs 8 drone snow.avif": "/high-quality/property-gallery/Bluffs Unit 8/Bluffs 8 drone snow.webp"
   },
   "full": {
     "/photos/properties/3445-Heron-Place/01-3445 Heron Place 01.jpg": "/high-quality/property-full/3445-Heron-Place/01-3445 Heron Place 01.webp",
@@ -1320,7 +1320,6 @@
     "/photos/properties/Altitude New Photos Best/tall1.jpg": "/high-quality/property-full/Altitude New Photos Best/tall1.webp",
     "/photos/properties/Altitude New Photos Best/tall2.jpg": "/high-quality/property-full/Altitude New Photos Best/tall2.webp",
     "/photos/properties/Altitude New Photos Best/tall3.jpg": "/high-quality/property-full/Altitude New Photos Best/tall3.webp",
-    "/photos/properties/Bluffs Unit 8/01 - 20260805 MM4P 010149.jpg": "/high-quality/property-full/Bluffs Unit 8/01 - 20260805 MM4P 010149.webp",
     "/photos/properties/Bluffs Unit 8/08 - 20260805 A7M4 02 A1_09747.jpg": "/high-quality/property-full/Bluffs Unit 8/08 - 20260805 A7M4 02 A1_09747.webp",
     "/photos/properties/Bluffs Unit 8/12 - 20260805 A7M4 02 A1_09779.jpg": "/high-quality/property-full/Bluffs Unit 8/12 - 20260805 A7M4 02 A1_09779.webp",
     "/photos/properties/Bluffs Unit 8/14 - 20260805 A7M4 02 A1_09876.jpg": "/high-quality/property-full/Bluffs Unit 8/14 - 20260805 A7M4 02 A1_09876.webp",
@@ -2370,6 +2369,7 @@
     "/photos/properties/2919 Heritage/Mountaintop living snow 8.png": "/high-quality/property-full/2919 Heritage/Mountaintop living snow 8.webp",
     "/photos/properties/2919 Heritage/Mountaintop living snow 9.png": "/high-quality/property-full/2919 Heritage/Mountaintop living snow 9.webp",
     "/photos/properties/2919 Heritage/Mountaintop living snow.png": "/high-quality/property-full/2919 Heritage/Mountaintop living snow.webp",
-    "/photos/properties/2919 Heritage/Mountaintop living snow18.png": "/high-quality/property-full/2919 Heritage/Mountaintop living snow18.webp"
+    "/photos/properties/2919 Heritage/Mountaintop living snow18.png": "/high-quality/property-full/2919 Heritage/Mountaintop living snow18.webp",
+    "/photos/properties/Bluffs Unit 8/Bluffs 8 drone snow.avif": "/high-quality/property-full/Bluffs Unit 8/Bluffs 8 drone snow.webp"
   }
 }

@@ -10,7 +10,7 @@ const listing: ListingData = {
   slug: "bluffs-unit-8-taluswood",
   photos: [
     BLUFFS_UNIT_8_COVER,
-    "/photos/properties/Bluffs Unit 8/01 - 20260805 MM4P 010149.jpg",
+    "/photos/properties/Bluffs Unit 8/Bluffs 8 drone snow.avif",
     "/photos/properties/Bluffs Unit 8/Front door Bluffs 8.png",
     "/photos/properties/Bluffs Unit 8/08 - 20260805 A7M4 02 A1_09747.jpg",
     "/photos/properties/Bluffs Unit 8/12 - 20260805 A7M4 02 A1_09779.jpg",
