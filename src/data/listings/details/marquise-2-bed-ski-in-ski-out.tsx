@@ -70,6 +70,10 @@ export default function Marquise2BedSkiInSkiOutDetails({
               place to unwind after the mountain, while the full kitchen gives
               you the option of cooking at home when you are not exploring
               Whistler&apos;s restaurants.
+              <br />
+              <br />
+              A full-size washer and dryer are included in the unit, making it
+              easy to handle laundry during your stay.
             </p>
             <div className="flex items-center space-x-6 mb-6">
               <div className="flex items-center">

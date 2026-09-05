@@ -136,6 +136,7 @@ export const listingAmenities: Record<string, string[]> = {
   ],
   "marquise-2-bed-ski-in-ski-out": [
     "True ski-in / ski-out",
+    "In-unit washer & dryer",
     "Heated pool & hot tub",
     "Fitness gym",
     "Main-floor Marquise unit",

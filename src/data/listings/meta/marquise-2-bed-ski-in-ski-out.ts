@@ -23,7 +23,7 @@ const listing: ListingData = {
 ],
   seo: {
     title: "Marquise 2 Bed | Ski-In/Ski-Out | Whistler Village - AceHost",
-    description: "Main-floor ski-in/ski-out Marquise condo on Blackcomb Mountain with Puffy Royal King bed, Queen pullout, fireplace, free parking, pool, hot tub and gym. Walk to Upper Village in about 5 minutes.",
+    description: "Main-floor ski-in/ski-out Marquise condo on Blackcomb Mountain with Puffy Royal King bed, Queen pullout, fireplace, in-unit washer and dryer, free parking, pool, hot tub and gym. Walk to Upper Village in about 5 minutes.",
   },
   header:   {
       "title": "Marquise 2 Bed | Ski-In/Ski-Out | Whistler Village",

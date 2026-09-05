@@ -1149,9 +1149,10 @@ export const propertyCategories: PropertyCategory[] = [
             bathrooms: 1,
             location: "Upper Village, Whistler",
             description:
-              "Main-floor ski-in/ski-out Marquise condo on Blackcomb Mountain with a brand-new Puffy Royal King bed, Queen pullout, fireplace, free parking, pool, hot tub and gym. Upper Village is about a 5-minute walk away.",
+              "Main-floor ski-in/ski-out Marquise condo on Blackcomb Mountain with a brand-new Puffy Royal King bed, Queen pullout, fireplace, in-unit washer and dryer, free parking, pool, hot tub and gym. Upper Village is about a 5-minute walk away.",
             features: [
               "Ski-in/Ski-out Access",
+              "In-Unit Washer & Dryer",
               "Shared Pool & Hot Tub",
               "Fitness Gym",
               "Main-Floor Unit",

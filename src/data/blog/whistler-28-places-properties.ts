@@ -184,7 +184,7 @@ export const townhomeProperties: Whistler28Property[] = [
     number: 17,
     name: "Marquise 2 Bed | Ski-In/Ski-Out | Whistler Village",
     description:
-      "Main-floor Marquise condo with Puffy Royal King bed, free parking, pool, hot tub, gym, and ski storage on Blackcomb.",
+      "Main-floor Marquise condo with Puffy Royal King bed, in-unit washer and dryer, free parking, pool, hot tub, gym, and ski storage on Blackcomb.",
     image: "/photos/properties/Marquise 2-bed/Marquise-15.jpg",
     listingHref: "/listings/marquise-2-bed-ski-in-ski-out",
     bookUrl:

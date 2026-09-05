@@ -114,7 +114,7 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     stats:
       "Sleeps 4 | 1 Bedroom | 2 Beds | 1 Bathroom | Ski-in/Ski-out | Free Parking | Upper Village",
     paragraphs: [
-      "Welcome to this ski-in/ski-out retreat at The Marquise, perfectly positioned on Blackcomb Mountain. This main-floor condo features a brand-new Puffy Royal King bed, Queen pullout sofa, fireplace, private ski storage and free parking.",
+      "Welcome to this ski-in/ski-out retreat at The Marquise, perfectly positioned on Blackcomb Mountain. This main-floor condo features a brand-new Puffy Royal King bed, Queen pullout sofa, fireplace, in-unit washer and dryer, private ski storage and free parking.",
       "After skiing, unwind in the heated outdoor pool, hot tub or gym, then walk to Upper Village, the Fairmont and Four Seasons in about 5 minutes. In summer, Whistler Village, Lost Lake, biking trails and mountain adventures are all close by.",
       "Secure ski storage is included, and one complimentary parking space is included with your stay — a rare combination for a ski-in/ski-out Whistler condo.",
     ],
