@@ -63,6 +63,15 @@ export const listingAmenities: Record<string, string[]> = {
     "7-minute drive to Whistler Village",
     "Modern renovated interiors",
   ],
+  "cascade-lodge-615-premium-view": [
+    "Premium forest & mountain views",
+    "Sixth-floor Cascade Lodge condo",
+    "Private balcony",
+    "Gas fireplace",
+    "In-unit washer & dryer",
+    "Shared pool, hot tubs & saunas",
+    "Walk to Whistler Village",
+  ],
   "dream-log-chalet-5-bedroom-4-bath-creekside": [
     "5 bed · 4 bath log chalet",
     "5,000+ sq ft living space",

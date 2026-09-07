@@ -1,3 +1,5 @@
+import CascadeLodge615PremiumViewDetails from "./details/cascade-lodge-615-premium-view";
+import cascade_lodge_615_premium_viewMeta from "./meta/cascade-lodge-615-premium-view";
 import BluffsUnit4TaluswoodDetails from "./details/bluffs-unit-4-taluswood";
 import bluffs_unit_4_taluswoodMeta from "./meta/bluffs-unit-4-taluswood";
 import BluffsUnit8TaluswoodDetails from "./details/bluffs-unit-8-taluswood";
@@ -69,6 +71,7 @@ import { getListingAmenities } from "./amenities";
 export const listingSlugs = [
   "bluffs-unit-4-taluswood",
   "bluffs-unit-8-taluswood",
+  "cascade-lodge-615-premium-view",
   "cedarhof-kadenwood",
   "chalet-la-forja-kadenwood",
   "cozy-lakefront-whistler-condo-mountain-view",
@@ -106,6 +109,7 @@ export type ListingSlug = (typeof listingSlugs)[number];
 export const listings: Record<string, ListingEntry> = {
   "bluffs-unit-4-taluswood": { ...bluffs_unit_4_taluswoodMeta, Details: BluffsUnit4TaluswoodDetails },
   "bluffs-unit-8-taluswood": { ...bluffs_unit_8_taluswoodMeta, Details: BluffsUnit8TaluswoodDetails },
+  "cascade-lodge-615-premium-view": { ...cascade_lodge_615_premium_viewMeta, Details: CascadeLodge615PremiumViewDetails },
   "cedarhof-kadenwood": { ...cedarhof_kadenwoodMeta, Details: CedarhofKadenwoodDetails },
   "chalet-la-forja-kadenwood": { ...chalet_la_forja_kadenwoodMeta, Details: ChaletLaForjaKadenwoodDetails },
   "cozy-lakefront-whistler-condo-mountain-view": { ...cozy_lakefront_whistler_condo_mountain_viewMeta, Details: CozyLakefrontWhistlerCondoMountainViewDetails },

@@ -69,6 +69,7 @@ export const HOMEPAGE_PROPERTY_ORDER: readonly string[] = [
   "bluffs-unit-4",
   "squamish-retreat",
   "northlands-walk-to-village-slopes-luxury-4-bed",
+  "cascade-lodge-615",
   "hotel-booking-assistance",
 ];
 

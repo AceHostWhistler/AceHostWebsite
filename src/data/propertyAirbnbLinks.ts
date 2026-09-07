@@ -31,6 +31,7 @@ const PROPERTY_ID_TO_LISTING_SLUG: Record<string, string> = {
   "bluffs-unit-4": "bluffs-unit-4-taluswood",
   "bluffs-unit-8": "bluffs-unit-8-taluswood",
   "cozy-lakefront-whistler-condo": "cozy-lakefront-whistler-condo-mountain-view",
+  "cascade-lodge-615": "cascade-lodge-615-premium-view",
   "squamish-retreat": "squamish-retreat-with-the-best-view",
   "whistler-village-penthouse-3-bdr": "whistler-village-penthouse-3-bdr-walk-to-ski",
   "wedge-mountain-lodge": "wedge-mountain-lodge-spa",
