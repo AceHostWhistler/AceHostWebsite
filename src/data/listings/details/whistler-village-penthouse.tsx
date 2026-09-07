@@ -172,7 +172,7 @@ export default function WhistlerVillagePenthouseDetails({
               </p>
               <div className="relative aspect-[4/3]">
                 <Image
-                  src={getGalleryPhotoSrc(photos[19])}
+                  src={getGalleryPhotoSrc(photos[6])}
                   alt="Hearthstone private hot tub"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"

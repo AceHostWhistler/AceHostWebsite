@@ -791,8 +791,8 @@ export const propertyCategories: PropertyCategory[] = [
             name: "Whistler Village Penthouse 4-Bed - Ski in Ski out",
             images: [
               "/photos/properties/3-Bed PH Whistler Village/snowy-room-blinds-only Hearthstone.png",
+              "/photos/properties/3-Bed PH Whistler Village/Hearthstone snow 1.png",
               "/photos/properties/3-Bed PH Whistler Village/Hearthstone Hot tub.png",
-              "/photos/properties/3-Bed PH Whistler Village/19 - 4211 sunshine pl-2.jpg"
             ],
             guests: 7,
             bedrooms: 2,
