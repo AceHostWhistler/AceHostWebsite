@@ -1787,7 +1787,9 @@ export const propertyCategories: PropertyCategory[] = [
             id: "cascade-lodge-514",
             name: "Luxe Mountain View Studio # 514 Cascade Lodge",
             images: [
-              "/photos/properties/Cascade 615/615 snow.png",
+              "/photos/properties/Cascade 514/514 Snow 3.png",
+              "/photos/properties/Cascade 514/514 Snow.png",
+              "/photos/properties/Cascade 514/514 Snow 1.png",
             ],
             guests: 4,
             bedrooms: 1,
