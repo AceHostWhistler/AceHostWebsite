@@ -8,7 +8,6 @@ import Image from "next/image";
 import { X } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import PropertyHeaderEditorial from "@/components/PropertyHeaderEditorial";
-import PropertyAmenitiesSection from "@/components/PropertyAmenitiesSection";
 import Footer from "@/components/Footer";
 import VimeoEmbed from "@/components/VimeoEmbed";
 import type { ListingData } from "@/data/listings/types";
@@ -186,6 +185,7 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
             airbnbLink={header.airbnbLink}
             contactLink={header.contactLink}
             contactText={header.contactText}
+            amenities={amenities}
             onMorePhotosClick={openGallery}
             geo={listingGeo}
             schemaImages={photos.slice(0, 3)}
@@ -253,8 +253,6 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
           )}
 
           {children}
-
-          <PropertyAmenitiesSection amenities={amenities} />
         </main>
 
         {showAllPhotos && (

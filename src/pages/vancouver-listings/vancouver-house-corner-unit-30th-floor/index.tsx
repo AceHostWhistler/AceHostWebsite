@@ -6,7 +6,6 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import PropertyHeaderEditorial from "@/components/PropertyHeaderEditorial";
-import PropertyAmenitiesSection from "@/components/PropertyAmenitiesSection";
 import {
   editorialGalleryGridClass,
   editorialGalleryImageSizes,
@@ -119,6 +118,7 @@ const VancouverHouseCornerUnit = () => {
             bathrooms={2}
             priceRange="$12,000 per month | 3 month minimum"
             airbnbLink="https://www.airbnb.ca/rooms/561767409786915919?guests=1&adults=1&s=67&unique_share_id=7a6e7b88-1a8b-4352-acca-56db762955cd"
+            amenities={getWorldwideAmenities("vancouver-house-corner-unit-30th-floor")}
             onMorePhotosClick={openGallery}
           />
 
@@ -480,12 +480,6 @@ const VancouverHouseCornerUnit = () => {
               </ul>
             </div>
           </div>
-
-          <PropertyAmenitiesSection
-            amenities={getWorldwideAmenities(
-              "vancouver-house-corner-unit-30th-floor"
-            )}
-          />
         </main>
 
         {/* Photo Modal */}

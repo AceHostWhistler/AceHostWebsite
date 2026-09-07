@@ -7,7 +7,6 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import PropertyHeaderEditorial from "@/components/PropertyHeaderEditorial";
-import PropertyAmenitiesSection from "@/components/PropertyAmenitiesSection";
 import {
   editorialGalleryGridClass,
   editorialGalleryImageSizes,
@@ -134,6 +133,7 @@ const MykonosCrystalVilla = () => {
             bedrooms={6}
             bathrooms={7}
             priceRange="€2,000-€4,000 per night"
+            amenities={getWorldwideAmenities("mykonos-crystal-villa")}
             onMorePhotosClick={openGallery}
           />
 
@@ -344,10 +344,6 @@ const MykonosCrystalVilla = () => {
               </p>
             </div>
           </div>
-
-          <PropertyAmenitiesSection
-            amenities={getWorldwideAmenities("mykonos-crystal-villa")}
-          />
         </main>
 
         {/* Photo Gallery Modal */}

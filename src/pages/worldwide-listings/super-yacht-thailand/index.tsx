@@ -7,7 +7,6 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import PropertyHeaderEditorial from "@/components/PropertyHeaderEditorial";
-import PropertyAmenitiesSection from "@/components/PropertyAmenitiesSection";
 import {
   editorialGalleryGridClass,
   editorialGalleryImageSizes,
@@ -165,6 +164,7 @@ const SuperYachtThailand = () => {
             bedrooms={5}
             bathrooms={5}
             priceRange="$11,000-$13,000 per night"
+            amenities={getWorldwideAmenities("super-yacht-thailand")}
             onMorePhotosClick={openGallery}
           />
 
@@ -276,10 +276,6 @@ const SuperYachtThailand = () => {
               </div>
             </div>
           </div>
-
-          <PropertyAmenitiesSection
-            amenities={getWorldwideAmenities("super-yacht-thailand")}
-          />
         </main>
 
         {/* Photo Gallery Modal */}

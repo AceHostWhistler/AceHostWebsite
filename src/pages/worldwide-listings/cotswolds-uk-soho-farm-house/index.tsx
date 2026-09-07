@@ -9,7 +9,6 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { X } from "lucide-react";
 import PropertyHeaderEditorial from "@/components/PropertyHeaderEditorial";
-import PropertyAmenitiesSection from "@/components/PropertyAmenitiesSection";
 import {
   editorialGalleryGridClass,
   editorialGalleryImageSizes,
@@ -159,6 +158,7 @@ const CotswoldsUKSohoFarmHouse = ({
             priceRange="2-3 night minimum. £1,200-£3,100 per night | Dependent on season, day of week, holidays, etc."
             contactLink="/contact"
             airbnbLink={AIRBNB_LINK}
+            amenities={getWorldwideAmenities("cotswolds-uk-soho-farm-house")}
             onMorePhotosClick={openGallery}
           />
 
@@ -565,10 +565,6 @@ const CotswoldsUKSohoFarmHouse = ({
               </a>
             </div>
           </div>
-
-          <PropertyAmenitiesSection
-            amenities={getWorldwideAmenities("cotswolds-uk-soho-farm-house")}
-          />
 
           {/* All Photos Modal - Optimized and Simplified */}
           {showAllPhotos && (
