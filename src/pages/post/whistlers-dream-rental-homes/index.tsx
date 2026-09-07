@@ -737,7 +737,7 @@ export default function BlogPost() {
 
               <p className="text-blue-600 font-medium mt-2 mb-6">
                 <Link 
-                  href="/worldwide-listings/luxe-5-bed-scandinave-retreat" 
+                  href="/listings/luxe-5-bed-scandinave-retreat" 
                   className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   View Property Details

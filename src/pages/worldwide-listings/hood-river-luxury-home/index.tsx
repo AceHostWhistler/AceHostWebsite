@@ -6,6 +6,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import PropertyHeaderEditorial from "@/components/PropertyHeaderEditorial";
+import PropertyAmenitiesSection from "@/components/PropertyAmenitiesSection";
 import {
   editorialGalleryGridClass,
   editorialGalleryImageSizes,
@@ -137,7 +138,6 @@ const HoodRiverLuxuryHome = () => {
             bedrooms={4}
             bathrooms={3.5}
             priceRange="$800-$1,200 per night"
-            amenities={getWorldwideAmenities("hood-river-luxury-home")}
             onMorePhotosClick={openGallery}
           />
 
@@ -248,6 +248,10 @@ const HoodRiverLuxuryHome = () => {
               </p>
             </div>
           </div>
+
+          <PropertyAmenitiesSection
+            amenities={getWorldwideAmenities("hood-river-luxury-home")}
+          />
         </main>
 
         {/* Photo Gallery Modal */}

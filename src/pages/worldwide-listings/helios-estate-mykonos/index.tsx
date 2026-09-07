@@ -8,6 +8,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { X } from "lucide-react";
 import PropertyHeaderEditorial from "@/components/PropertyHeaderEditorial";
+import PropertyAmenitiesSection from "@/components/PropertyAmenitiesSection";
 import {
   editorialGalleryGridClass,
   editorialGalleryImageSizes,
@@ -177,7 +178,6 @@ const HeliosEstateMykonos = () => {
             bathrooms={9}
             priceRange="€15,000-€26,000 per night"
             contactLink="/contact"
-            amenities={getWorldwideAmenities("helios-estate-mykonos")}
             onMorePhotosClick={openGallery}
           />
 
@@ -376,6 +376,10 @@ const HeliosEstateMykonos = () => {
               </Link>
             </div>
           </div>
+
+          <PropertyAmenitiesSection
+            amenities={getWorldwideAmenities("helios-estate-mykonos")}
+          />
         </main>
 
         <Footer />

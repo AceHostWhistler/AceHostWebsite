@@ -175,7 +175,7 @@ export const MANSION_RENTAL_PROPERTIES: MansionRentalProperty[] = [
   },
   {
     name: "Luxe 5-BED Scandinave Retreat",
-    listingHref: "/worldwide-listings/luxe-5-bed-scandinave-retreat",
+    listingHref: "/listings/luxe-5-bed-scandinave-retreat",
     airbnbHref: getPropertyAirbnbLink("luxe-5-bed-scandinave-retreat"),
     area: "Creekside",
     bedrooms: 3,

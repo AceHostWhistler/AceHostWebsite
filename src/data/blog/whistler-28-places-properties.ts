@@ -227,7 +227,7 @@ export const townhomeProperties: Whistler28Property[] = [
     description:
       "A stylish Creekside retreat with three bedrooms, five beds, a private hot tub, and easy access to the slopes.",
     image: "/high-quality/scandinave-fixed/scandinave-26.jpg",
-    listingHref: "/worldwide-listings/luxe-5-bed-scandinave-retreat",
+    listingHref: "/listings/luxe-5-bed-scandinave-retreat",
     bookUrl:
       "https://www.airbnb.ca/rooms/1313847204355627326?guests=1&adults=1&s=67&unique_share_id=507dffd6-1f84-49a3-99eb-d10f493a65a6",
   },

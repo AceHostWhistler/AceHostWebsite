@@ -71,6 +71,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/worldwide-listings/luxe-5-bed-scandinave-retreat',
+        destination: '/listings/luxe-5-bed-scandinave-retreat',
+        permanent: true,
+      },
+      {
         source: '/listings/punta-mita',
         destination: '/worldwide-listings/punta-mita---casa-juntos',
         permanent: true,

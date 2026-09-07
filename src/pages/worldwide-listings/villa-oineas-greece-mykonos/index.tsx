@@ -9,6 +9,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { X } from "lucide-react";
 import PropertyHeaderEditorial from "@/components/PropertyHeaderEditorial";
+import PropertyAmenitiesSection from "@/components/PropertyAmenitiesSection";
 import {
   editorialGalleryGridClass,
   editorialGalleryImageSizes,
@@ -208,7 +209,6 @@ const VillaOineasGreeceMykonos = () => {
             bathrooms={5}
             priceRange="€1,450-€2,550 per night"
             contactLink="/contact"
-            amenities={getWorldwideAmenities("villa-oineas-greece-mykonos")}
             onMorePhotosClick={openGallery}
           />
 
@@ -556,6 +556,10 @@ const VillaOineasGreeceMykonos = () => {
               Contact Us to Book
             </Link>
           </div>
+
+          <PropertyAmenitiesSection
+            amenities={getWorldwideAmenities("villa-oineas-greece-mykonos")}
+          />
 
           {/* All Photos Modal */}
           {showAllPhotos && (

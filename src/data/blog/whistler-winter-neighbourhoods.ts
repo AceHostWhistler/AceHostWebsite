@@ -69,7 +69,7 @@ export const upperVillagePropertyRefs: WinterNeighbourhoodPropertyRef[] = [
 
 export const creeksidePropertyRefs: WinterNeighbourhoodPropertyRef[] = [
   {
-    listingHref: "/worldwide-listings/luxe-5-bed-scandinave-retreat",
+    listingHref: "/listings/luxe-5-bed-scandinave-retreat",
     name: "Luxe 5-BED Scandinave Retreat | Walk to Slopes",
     image: "/high-quality/scandinave-fixed/scandinave-26.jpg",
   },

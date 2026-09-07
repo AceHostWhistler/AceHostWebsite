@@ -9,6 +9,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { X } from "lucide-react";
 import PropertyHeaderEditorial from "@/components/PropertyHeaderEditorial";
+import PropertyAmenitiesSection from "@/components/PropertyAmenitiesSection";
 import {
   editorialGalleryGridClass,
   editorialGalleryImageSizes,
@@ -147,7 +148,6 @@ const SantoriniGreeceVillaEclipse = () => {
             bathrooms={5}
             priceRange="€1,300-€1,920 per night"
             contactLink="/contact"
-            amenities={getWorldwideAmenities("santorini-greece-villa-eclipse")}
             onMorePhotosClick={openGallery}
           />
 
@@ -447,6 +447,10 @@ const SantoriniGreeceVillaEclipse = () => {
               </Link>
             </div>
           </div>
+
+          <PropertyAmenitiesSection
+            amenities={getWorldwideAmenities("santorini-greece-villa-eclipse")}
+          />
 
           {/* All Photos Modal */}
           {showAllPhotos && (

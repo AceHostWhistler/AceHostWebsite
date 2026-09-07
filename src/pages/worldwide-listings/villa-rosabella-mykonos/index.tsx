@@ -8,6 +8,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { X } from "lucide-react";
 import PropertyHeaderEditorial from "@/components/PropertyHeaderEditorial";
+import PropertyAmenitiesSection from "@/components/PropertyAmenitiesSection";
 import {
   editorialGalleryGridClass,
   editorialGalleryImageSizes,
@@ -162,7 +163,6 @@ const VillaRosabellaMykonos = () => {
             bathrooms={8}
             priceRange="€3,500-€5,800 per night"
             contactLink="/contact"
-            amenities={getWorldwideAmenities("villa-rosabella-mykonos")}
             onMorePhotosClick={openGallery}
           />
 
@@ -432,6 +432,10 @@ const VillaRosabellaMykonos = () => {
               </Link>
             </div>
           </div>
+
+          <PropertyAmenitiesSection
+            amenities={getWorldwideAmenities("villa-rosabella-mykonos")}
+          />
         </main>
 
         <Footer />

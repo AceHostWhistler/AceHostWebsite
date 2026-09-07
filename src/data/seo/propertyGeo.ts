@@ -103,7 +103,6 @@ const PATH_GEO: Record<string, PropertyGeo> = {
   "punta-mita---casa-juntos": PUNTA_MITA,
   "super-yacht-thailand": PHUKET,
   "hood-river-luxury-home": HOOD_RIVER,
-  "luxe-5-bed-scandinave-retreat": WHISTLER,
   "vancouver-house-corner-unit-30th-floor": VANCOUVER,
 };
 

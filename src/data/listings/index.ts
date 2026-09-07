@@ -20,6 +20,8 @@ import GolfCourseViewsLuxury4BedWhistlerVillageDetails from "./details/golf-cour
 import golf_course_views_luxury_4_bed_whistler_villageMeta from "./meta/golf-course-views-luxury-4-bed-whistler-village";
 import HeronViewsWhistlerVillageDetails from "./details/heron-views-whistler-village";
 import heron_views_whistler_villageMeta from "./meta/heron-views-whistler-village";
+import Luxe5BedScandinaveRetreatDetails from "./details/luxe-5-bed-scandinave-retreat";
+import luxe_5_bed_scandinave_retreatMeta from "./meta/luxe-5-bed-scandinave-retreat";
 import LuxeCozy3BedWhistlerVillageDetails from "./details/luxe-cozy-3-bed-whistler-village";
 import luxe_cozy_3_bed_whistler_villageMeta from "./meta/luxe-cozy-3-bed-whistler-village";
 import Luxury3BedStunningViewsDetails from "./details/luxury-3-bed-stunning-views";
@@ -82,6 +84,7 @@ export const listingSlugs = [
   "falcon-blueberry-drive",
   "golf-course-views-luxury-4-bed-whistler-village",
   "heron-views-whistler-village",
+  "luxe-5-bed-scandinave-retreat",
   "luxe-cozy-3-bed-whistler-village",
   "luxury-3-bed-stunning-views",
   "luxury-6-bedroom-whistler-village-blueberry",
@@ -121,6 +124,7 @@ export const listings: Record<string, ListingEntry> = {
   "falcon-blueberry-drive": { ...falcon_blueberry_driveMeta, Details: FalconBlueberryDriveDetails },
   "golf-course-views-luxury-4-bed-whistler-village": { ...golf_course_views_luxury_4_bed_whistler_villageMeta, Details: GolfCourseViewsLuxury4BedWhistlerVillageDetails },
   "heron-views-whistler-village": { ...heron_views_whistler_villageMeta, Details: HeronViewsWhistlerVillageDetails },
+  "luxe-5-bed-scandinave-retreat": { ...luxe_5_bed_scandinave_retreatMeta, Details: Luxe5BedScandinaveRetreatDetails },
   "luxe-cozy-3-bed-whistler-village": { ...luxe_cozy_3_bed_whistler_villageMeta, Details: LuxeCozy3BedWhistlerVillageDetails },
   "luxury-3-bed-stunning-views": { ...luxury_3_bed_stunning_viewsMeta, Details: Luxury3BedStunningViewsDetails },
   "luxury-6-bedroom-whistler-village-blueberry": { ...luxury_6_bedroom_whistler_village_blueberryMeta, Details: Luxury6BedroomWhistlerVillageBlueberryDetails },

@@ -125,6 +125,14 @@ export const listingAmenities: Record<string, string[]> = {
     "Lost Lake trails nearby",
     "Fireplace",
   ],
+  "luxe-5-bed-scandinave-retreat": [
+    "Creekside, Whistler",
+    "3 bedrooms · 5 beds",
+    "Whistler Creekside · 400 m to gondola",
+    "8-minute walk to Creekside Gondola",
+    "Tantalus Range & lake views",
+    "Heated floors & steam shower",
+  ],
   "luxury-3-bed-stunning-views": [
     "Marquise penthouse on Blackcomb",
     "Fairmont & mountain views",

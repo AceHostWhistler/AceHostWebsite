@@ -25,7 +25,6 @@ interface PropertyHeaderEditorialProps {
   airbnbLink?: string;
   contactLink?: string;
   contactText?: string;
-  amenities?: string[];
   onMorePhotosClick?: () => void;
   geo?: PropertyGeo;
   schemaImages?: string[];
@@ -138,7 +137,6 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
   airbnbLink,
   contactLink,
   contactText = "Contact Us",
-  amenities = [],
   onMorePhotosClick,
   geo: geoProp,
   schemaImages,
@@ -238,31 +236,6 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
             ))}
           </div>
         </div>
-
-        {/* Amenities */}
-        {amenities.length > 0 && (
-          <div className="border-b border-stone-300/50 bg-[#f6f3ed]">
-            <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6 sm:py-5">
-              <h2 className="text-[10px] font-semibold uppercase tracking-[0.24em] text-stone-500">
-                Amenities
-              </h2>
-              <ul className="mt-2 grid gap-x-6 gap-y-1.5 sm:grid-cols-2 lg:grid-cols-3">
-                {amenities.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-2 text-[12px] leading-snug text-stone-800"
-                  >
-                    <span
-                      className="mt-[0.35rem] h-1 w-1 shrink-0 rounded-full bg-stone-800"
-                      aria-hidden
-                    />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        )}
 
         {/* Pricing + actions */}
         <div className="mx-auto max-w-6xl px-4 py-5 sm:px-6 sm:py-6">
