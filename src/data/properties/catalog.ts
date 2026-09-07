@@ -53,6 +53,7 @@ export const CONDO_IDS = new Set([
   "bluffs-unit-8",
   "cozy-lakefront-whistler-condo",
   "cascade-lodge-615",
+  "cascade-lodge-514",
   "whistler-village-penthouse",
   "whistler-village-penthouse-3-bdr",
   "blackcomb-greens",
@@ -1778,6 +1779,45 @@ export const propertyCategories: PropertyCategory[] = [
             link: "/listings/cascade-lodge-615-premium-view",
             airbnbLink:
               "https://www.airbnb.ca/rooms/1151559188640677466?guests=1&adults=1&s=67&unique_share_id=2e3dc34d-7ab2-4698-884c-11838031da54",
+            isPetFriendly: false,
+            isSkiInSkiOut: false,
+          },
+
+          {
+            id: "cascade-lodge-514",
+            name: "Luxe Mountain View Studio # 514 Cascade Lodge",
+            images: [
+              "/photos/properties/Cascade 615/615 snow.png",
+            ],
+            guests: 4,
+            bedrooms: 1,
+            beds: 2,
+            bathrooms: 1,
+            location: "Whistler Village, Whistler",
+            description:
+              "Newly renovated luxe mountain-view studio at Cascade Lodge with queen bed, sofa bed, kitchenette, Smart TV, and shared pool, hot tubs, saunas and fitness room at the gateway to Whistler Village.",
+            features: [
+              "Luxe Mountain Views",
+              "Queen Bed & Sofa Bed",
+              "Kitchenette",
+              "Smart TV",
+              "Shared Pool & Hot Tubs",
+              "Saunas & Fitness Room",
+              "Ski Valet in Lobby",
+              "Walk to Whistler Mountain",
+            ],
+            highlights: [
+              "Newly Renovated Studio",
+              "Alpine Mountain Views",
+              "Gateway to Whistler Village",
+              "Pool & Hot Tub Access",
+            ],
+            priceRange: "$250-850 CAD per night",
+            winterPrice: "",
+            holidayPrice: "",
+            link: "/listings/cascade-lodge-514-luxe-mountain-view-studio",
+            airbnbLink:
+              "https://www.airbnb.ca/rooms/1698669698880515260?guests=1&adults=1&s=67&unique_share_id=c50ee5ca-2a60-44f8-98a9-dcce220de545",
             isPetFriendly: false,
             isSkiInSkiOut: false,
           },

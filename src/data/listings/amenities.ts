@@ -72,6 +72,14 @@ export const listingAmenities: Record<string, string[]> = {
     "Shared pool, hot tubs & saunas",
     "Walk to Whistler Village",
   ],
+  "cascade-lodge-514-luxe-mountain-view-studio": [
+    "Luxe mountain-view studio",
+    "Queen bed & sofa bed",
+    "Kitchenette & Smart TV",
+    "Newly renovated interiors",
+    "Shared pool, hot tubs & saunas",
+    "Walk to Whistler Mountain",
+  ],
   "dream-log-chalet-5-bedroom-4-bath-creekside": [
     "5 bed · 4 bath log chalet",
     "5,000+ sq ft living space",

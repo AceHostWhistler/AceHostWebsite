@@ -1,3 +1,5 @@
+import CascadeLodge514LuxeMountainViewStudioDetails from "./details/cascade-lodge-514-luxe-mountain-view-studio";
+import cascade_lodge_514_luxe_mountain_view_studioMeta from "./meta/cascade-lodge-514-luxe-mountain-view-studio";
 import CascadeLodge615PremiumViewDetails from "./details/cascade-lodge-615-premium-view";
 import cascade_lodge_615_premium_viewMeta from "./meta/cascade-lodge-615-premium-view";
 import BluffsUnit4TaluswoodDetails from "./details/bluffs-unit-4-taluswood";
@@ -71,6 +73,7 @@ import { getListingAmenities } from "./amenities";
 export const listingSlugs = [
   "bluffs-unit-4-taluswood",
   "bluffs-unit-8-taluswood",
+  "cascade-lodge-514-luxe-mountain-view-studio",
   "cascade-lodge-615-premium-view",
   "cedarhof-kadenwood",
   "chalet-la-forja-kadenwood",
@@ -109,6 +112,7 @@ export type ListingSlug = (typeof listingSlugs)[number];
 export const listings: Record<string, ListingEntry> = {
   "bluffs-unit-4-taluswood": { ...bluffs_unit_4_taluswoodMeta, Details: BluffsUnit4TaluswoodDetails },
   "bluffs-unit-8-taluswood": { ...bluffs_unit_8_taluswoodMeta, Details: BluffsUnit8TaluswoodDetails },
+  "cascade-lodge-514-luxe-mountain-view-studio": { ...cascade_lodge_514_luxe_mountain_view_studioMeta, Details: CascadeLodge514LuxeMountainViewStudioDetails },
   "cascade-lodge-615-premium-view": { ...cascade_lodge_615_premium_viewMeta, Details: CascadeLodge615PremiumViewDetails },
   "cedarhof-kadenwood": { ...cedarhof_kadenwoodMeta, Details: CedarhofKadenwoodDetails },
   "chalet-la-forja-kadenwood": { ...chalet_la_forja_kadenwoodMeta, Details: ChaletLaForjaKadenwoodDetails },
