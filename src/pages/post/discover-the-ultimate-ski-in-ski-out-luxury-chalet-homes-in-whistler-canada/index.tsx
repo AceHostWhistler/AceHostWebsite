@@ -288,7 +288,7 @@ export default function BlogPost() {
                 Raven's Nest
               </h3>
               <p>
-                This luxurious 3-bedroom ski-in/ski-out property offers direct
+                This luxurious 4-bedroom ski-in/ski-out property sleeping 8 offers direct
                 access to Whistler Mountain. Featuring contemporary mountain
                 design, an open concept living area, state-of-the-art kitchen,
                 and private outdoor hot tub with stunning views of the

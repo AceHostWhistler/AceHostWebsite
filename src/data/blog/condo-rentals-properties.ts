@@ -64,11 +64,11 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     name: "Raven's Nest | Ski in Ski out | Views",
     priceRange: "$2,000-$4,000 per night (seasonal)",
     stats:
-      "Sleeps 6 | 3 Bedrooms | 3 Beds | 3 Bathrooms | Ski-in/Ski-out | Private Hot Tub | Mountain Views",
+      "Sleeps 8 | 4 Bedrooms | 4 Beds | 3 Bathrooms | Ski-in/Ski-out | Private Hot Tub | Mountain Views",
     paragraphs: [
-      "Perched perfectly on Blackcomb Mountain, Raven's Nest offers that rare combination of true ski-in/ski-out access and breathtaking panoramic views that will leave you speechless. This exquisite 3-bedroom townhome brings luxury slope-side living to new heights, with stylish interiors that complement – rather than compete with – the stunning natural beauty outside.",
+      "Perched perfectly on Blackcomb Mountain, Raven's Nest offers that rare combination of true ski-in/ski-out access and breathtaking panoramic views that will leave you speechless. This exquisite 4-bedroom townhome brings luxury slope-side living to new heights, with stylish interiors that complement – rather than compete with – the stunning natural beauty outside.",
       "After a day conquering the slopes (which are literally at your doorstep), soothe tired muscles in your private hot tub while gazing at snowcapped peaks and alpenglow sunsets. The spacious, light-filled living areas create a warm gathering place for recounting the day's adventures, while the gourmet kitchen makes meal preparation a joy.",
-      "Each of the three bedrooms serves as a private retreat, with comfortable beds and premium linens ensuring restful sleep before another day of mountain adventures. With ski storage, a garage, and proximity to Blackcomb's base amenities, Raven's Nest delivers the quintessential ski property experience for those who refuse to compromise on location or luxury.",
+      "Four bedrooms sleep up to eight guests, including an additional 4th bedroom den, with comfortable beds and premium linens ensuring restful sleep before another day of mountain adventures. With ski storage, a garage, and proximity to Blackcomb's base amenities, Raven's Nest delivers the quintessential ski property experience for those who refuse to compromise on location or luxury.",
     ],
     airbnbHref:
       "https://www.airbnb.ca/rooms/1300258964918876012?guests=1&adults=1&s=67&unique_share_id=41b635e9-00a9-441c-a134-056b2b3814ac",

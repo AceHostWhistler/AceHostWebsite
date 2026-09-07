@@ -51,12 +51,12 @@ const listing: ListingData = {
 ],
   seo: {
     title: "Raven's Nest | Ski in Ski out | Views - AceHost",
-    description: "Escape to luxury in this newly renovated 3-king bedroom chalet in Tantalus, offering ski-in/ski-out convenience and breathtaking mountain views. Features private hot tub, sauna, and garage parking.",
+    description: "Escape to luxury in this newly renovated 4-bedroom chalet in Tantalus, sleeping 8 with ski-in/ski-out convenience and breathtaking mountain views. Features private hot tub, sauna, and garage parking.",
   },
   header:   {
       "title": "Raven's Nest | Ski in Ski out | Views",
-      "guests": 6,
-      "bedrooms": 3,
+      "guests": 8,
+      "bedrooms": 4,
       "bathrooms": 3,
       "priceRange": "$2,000-$3,500 per night",
       "holidayPrice": "$2,300-$4,000 Nightly | Christmas & NY",

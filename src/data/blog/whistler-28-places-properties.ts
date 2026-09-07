@@ -128,7 +128,7 @@ export const largeHomeProperties: Whistler28Property[] = [
     number: 12,
     name: "Raven's Nest | Ski in Ski out | Views",
     description:
-      "A three-bedroom Blackcomb retreat with ski-in, ski-out access, mountain views, and a peaceful alpine setting.",
+      "A four-bedroom Blackcomb retreat sleeping 8, with ski-in, ski-out access, mountain views, and a peaceful alpine setting.",
     image: "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05349.jpg",
     listingHref: "/listings/ravens-nest-ski-in-ski-out-views",
     bookUrl:

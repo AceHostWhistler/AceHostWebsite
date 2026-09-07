@@ -9,14 +9,15 @@ export default function RavensNestSkiInSkiOutViewsDetails({ photos }: ListingDet
     <>
       <div className="max-w-6xl mx-auto px-4" id="details">
                   <p className="text-gray-800 mb-16 max-w-4xl">
-                    Escape to luxury in this newly renovated 3-king bedroom chalet in
-                    Tantalus, offering ski-in/ski-out convenience and breathtaking
-                    mountain views. Each bedroom features a plush brand-new bed for
-                    ultimate comfort. Enjoy top-of-the-line finishings, a private hot
-                    tub, and a relaxing sauna after a day on the slopes. With garage
-                    parking and a prime central location, this home is perfect for
-                    both adventure and relaxation. Experience mountain living at its
-                    finest!
+                    Escape to luxury in this newly renovated 4-bedroom chalet in
+                    Tantalus, sleeping 8 with ski-in/ski-out convenience and
+                    breathtaking mountain views. Each bedroom features a plush
+                    brand-new bed for ultimate comfort, including an additional
+                    4th bedroom den. Enjoy top-of-the-line finishings, a private
+                    hot tub, and a relaxing sauna after a day on the slopes.
+                    With garage parking and a prime central location, this home
+                    is perfect for both adventure and relaxation. Experience
+                    mountain living at its finest!
                   </p>
 
                   {/* The Space Section */}
@@ -119,14 +120,16 @@ export default function RavensNestSkiInSkiOutViewsDetails({ photos }: ListingDet
                         <br />• Back deck with hot tub
                       </p>
                       <p className="mb-4">
-                        <span className="font-bold">Main floor:</span>
+                        <span className="font-bold">Bedrooms:</span>
                         <br />
-                        • Bedroom 1 (Master) with king bed, Smart TV, ensuite bathroom
-                        with double vanity, walk-in shower, and sauna.
+                        • Primary bedroom with king bed, Smart TV, ensuite bathroom
+                        with double vanity, walk-in shower, and sauna
                         <br />
-                        • Bedroom 2<br />
-                        • Bedroom 3<br />
-                        • Sauna through master bathroom
+                        • Bedroom 2 with king bed
+                        <br />
+                        • Bedroom 3 with king bed
+                        <br />
+                        • Additional 4th bedroom den
                         <br />• Washer & dryer
                       </p>
                       <p className="mb-4">

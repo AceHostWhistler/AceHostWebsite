@@ -913,12 +913,12 @@ export const propertyCategories: PropertyCategory[] = [
               "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05358.jpg",
               "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05364.jpg",
             ],
-            guests: 6,
-            bedrooms: 3,
+            guests: 8,
+            bedrooms: 4,
             bathrooms: 3,
             location: "Blackcomb, Whistler",
             description:
-              "Ravens Nest is a beautiful ski-in/ski-out townhome on Blackcomb Mountain, offering stunning views and luxury accommodations for your Whistler getaway.",
+              "Raven's Nest is a beautiful ski-in/ski-out townhome on Blackcomb Mountain with 4 bedrooms sleeping 8, stunning views, and luxury accommodations for your Whistler getaway.",
             features: [
               "Ski-in/Ski-out Access",
               "Mountain Views",
