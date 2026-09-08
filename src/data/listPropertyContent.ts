@@ -1,4 +1,5 @@
 import type { FaqItem } from "@/lib/seo/schema";
+import type { TestimonialItem } from "@/data/homepageTestimonials";
 
 export const LIST_PROPERTY_CANONICAL = "https://www.acehost.ca/list-property";
 
@@ -142,7 +143,7 @@ export const MARKETING_CHANNELS = [
   "Social Media",
 ];
 
-export const LIST_PROPERTY_TESTIMONIALS = [
+export const LIST_PROPERTY_TESTIMONIALS: TestimonialItem[] = [
   {
     name: "Saul K.",
     role: "Property Owner",

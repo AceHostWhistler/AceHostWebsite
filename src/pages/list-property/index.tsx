@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import ListPropertyServiceCard from "@/components/listProperty/ListPropertyServiceCard";
 import ListPropertyTestimonialsSection from "@/components/listProperty/ListPropertyTestimonialsSection";
 import ListPropertyPortfolioSection from "@/components/listProperty/ListPropertyPortfolioSection";
-import VimeoEmbed from "@/components/VimeoEmbed";
 import {
   ArrowRight,
   Mail,
@@ -358,34 +357,7 @@ const ListProperty = () => {
           </div>
         </section>
 
-        {/* 5. Video / brand */}
-        <section className="py-20 sm:py-24 bg-stone-950 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-              <div className="lg:col-span-5">
-                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
-                  Your Home. Our Responsibility.
-                </h2>
-                <p className="text-lg text-stone-300 leading-relaxed">
-                  See what full-service property management with AceHost looks
-                  like behind the scenes.
-                </p>
-              </div>
-              <div className="lg:col-span-7">
-                <div className="relative overflow-hidden rounded-2xl bg-black shadow-2xl ring-1 ring-white/15">
-                  <VimeoEmbed
-                    videoId="1122267050"
-                    title="AceHost Whistler property management"
-                    loop
-                    className="w-full"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* 6. How it works */}
+        {/* 5. How it works */}
         <section id="how-it-works" className="py-20 sm:py-24 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-14 text-center max-w-3xl mx-auto">

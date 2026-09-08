@@ -510,15 +510,8 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Testimonials Section */}
-        <section className="py-24 bg-gray-50">
-          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-light mb-6 text-gray-900">
-              What Our Guests Say
-            </h2>
-            <Testimonials />
-          </div>
-        </section>
+        {/* Testimonials */}
+        <Testimonials />
 
         {/* FAQ Section */}
         <section className="py-24 bg-gray-50">
