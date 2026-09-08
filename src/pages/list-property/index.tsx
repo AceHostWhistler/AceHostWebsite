@@ -5,17 +5,17 @@ import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ListPropertyServiceCard from "@/components/listProperty/ListPropertyServiceCard";
+import ListPropertyTestimonialsSection from "@/components/listProperty/ListPropertyTestimonialsSection";
+import ListPropertyPortfolioSection from "@/components/listProperty/ListPropertyPortfolioSection";
 import VimeoEmbed from "@/components/VimeoEmbed";
 import {
   ArrowRight,
   Mail,
   Phone,
-  Star,
   Check,
 } from "lucide-react";
 import { propertyCategories } from "@/data/properties/catalog";
 import type { PropertyFeature } from "@/data/properties/catalog";
-import { getPropertyListingPath } from "@/data/properties/listingPath";
 import { buildFaqPageSchema } from "@/lib/seo/schema";
 import {
   ACEHOST_AIRBNB_PROFILE_URL,
@@ -24,7 +24,6 @@ import {
   HOW_IT_WORKS_STEPS,
   LIST_PROPERTY_CANONICAL,
   LIST_PROPERTY_FAQS,
-  LIST_PROPERTY_TESTIMONIALS,
   MARKETING_CHANNELS,
   OWNER_BENEFIT_CARDS,
   REVENUE_VALUE_COLUMNS,
@@ -45,56 +44,6 @@ function resolveShowcaseProperties(ids: string[]) {
 
 const showcaseProperties = resolveShowcaseProperties(SHOWCASE_PROPERTY_IDS);
 const showcaseCondos = resolveShowcaseProperties(SHOWCASE_CONDO_PROPERTY_IDS);
-
-function formatGuestReviewName(fullName: string): string {
-  const parts = fullName.trim().split(/\s+/);
-  if (parts.length < 2) return fullName;
-  return `${parts[0]} ${parts[parts.length - 1].charAt(0)}`;
-}
-
-function PropertyShowcaseCard({ property }: { property: PropertyFeature }) {
-  const href = getPropertyListingPath(property);
-
-  return (
-    <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow flex flex-col h-full">
-      <div className="relative h-64">
-        <Link href={href}>
-          <Image
-            src={property.images[0]}
-            alt={`${property.name} — Whistler property managed by AceHost`}
-            fill
-            className="object-cover"
-          />
-        </Link>
-      </div>
-      <div className="p-6 flex-grow flex flex-col">
-        <div className="flex flex-wrap gap-2 mb-4">
-          {property.guests != null && (
-            <span className="bg-gray-900 text-white px-3 py-1 text-sm font-medium rounded-md">
-              {property.guests} Guests
-            </span>
-          )}
-          {property.bedrooms != null && (
-            <span className="bg-gray-200 text-gray-900 px-3 py-1 text-sm font-medium rounded-md">
-              {property.bedrooms} Bedrooms
-            </span>
-          )}
-        </div>
-        <h3 className="text-xl font-medium text-gray-900 mb-4 line-clamp-2">
-          {property.name}
-        </h3>
-        <p className="text-sm text-gray-500 mb-4">{property.location}</p>
-        <Link
-          href={href}
-          className="mt-auto inline-flex items-center text-gray-900 font-medium hover:text-gray-600 transition-colors"
-        >
-          View Property
-          <ArrowRight size={18} className="ml-2" />
-        </Link>
-      </div>
-    </div>
-  );
-}
 
 const faqSchema = buildFaqPageSchema(LIST_PROPERTY_FAQS);
 
@@ -504,42 +453,7 @@ const ListProperty = () => {
           </div>
         </section>
 
-        {/* 8. Managed property showcase */}
-        <section className="py-20 sm:py-24 bg-gray-50">
-          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="mb-14 text-center max-w-3xl mx-auto">
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 mb-4">
-                Properties Managed by AceHost
-              </h2>
-              <p className="text-lg text-gray-600">
-                A selection of premium Whistler homes and condos already entrusted
-                to our local property management team.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {showcaseProperties.map((property) => (
-                <PropertyShowcaseCard key={property.id} property={property} />
-              ))}
-            </div>
-
-            <div className="mt-16 mb-10 text-center max-w-3xl mx-auto">
-              <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 mb-3">
-                Condos &amp; Apartments
-              </h3>
-              <p className="text-lg text-gray-600">
-                From Creekside and Blueberry to Whistler Village penthouses —
-                AceHost manages a wide range of condo rentals across Whistler.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {showcaseCondos.map((property) => (
-                <PropertyShowcaseCard key={property.id} property={property} />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* 9. Marketing reach */}
+        {/* 8. Marketing reach */}
         <section className="py-20 sm:py-24 bg-white border-t border-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12 text-center max-w-3xl mx-auto">
@@ -576,47 +490,8 @@ const ListProperty = () => {
           </div>
         </section>
 
-        {/* 10. Testimonials */}
+        {/* 9. Investment consultation */}
         <section className="py-20 sm:py-24 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="mb-12 text-center">
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 mb-4">
-                Trusted homeowners and guests
-              </h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {LIST_PROPERTY_TESTIMONIALS.map((item) => (
-                <blockquote
-                  key={item.name}
-                  className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100"
-                >
-                  <div className="flex mb-3">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="h-4 w-4 text-yellow-400 fill-current"
-                      />
-                    ))}
-                  </div>
-                  <p className="text-gray-700 leading-relaxed mb-6">
-                    &ldquo;{item.text}&rdquo;
-                  </p>
-                  <footer>
-                    <p className="font-semibold text-gray-900">
-                      {item.role.includes("Guest")
-                        ? formatGuestReviewName(item.name)
-                        : item.name}
-                    </p>
-                    <p className="text-sm text-gray-500">{item.role}</p>
-                  </footer>
-                </blockquote>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* 11. Investment consultation */}
-        <section className="py-20 sm:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg order-2 lg:order-1">
@@ -666,45 +541,26 @@ const ListProperty = () => {
           </div>
         </section>
 
-        {/* Investment blog link — preserved internal link */}
-        <section className="py-10 bg-gray-50 border-y border-gray-100">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="text-gray-700 text-lg leading-relaxed mb-5">
-              For a detailed breakdown on investing in Whistler or renting your
-              own home, explore our guide to vacation rental ownership in
-              Whistler.
-            </p>
-            <Link
-              href="/post/is-owning-a-vacation-rental-in-whistler-worth-it-2026"
-              className="inline-flex items-center justify-center rounded-lg border border-gray-900 px-6 py-3 text-sm font-semibold text-gray-900 transition-colors hover:bg-gray-900 hover:text-white"
-            >
-              Whistler property investment guide
-            </Link>
-          </div>
-        </section>
-
-        {/* Supplemental SEO content — always in DOM */}
-        <section className="py-16 bg-gray-50 border-t border-gray-100">
+        {/* Investment blog link */}
+        <section className="py-12 bg-white border-y border-gray-100">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="sr-only">
-              Whistler vacation rental management services
-            </h2>
-            <div className="space-y-10">
-              {SEO_SUPPLEMENT_SECTIONS.map((section) => (
-                <div key={section.title}>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {section.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {section.description}
-                  </p>
-                </div>
-              ))}
+            <div className="rounded-2xl bg-gradient-to-br from-stone-50 to-amber-50/40 p-8 sm:p-10 text-center ring-1 ring-stone-200/80">
+              <p className="text-gray-800 text-lg leading-relaxed mb-6 max-w-2xl mx-auto">
+                Thinking about buying in Whistler? Our guide covers rental
+                ownership, zoning, and what to expect before you invest.
+              </p>
+              <Link
+                href="/post/is-owning-a-vacation-rental-in-whistler-worth-it-2026"
+                className="inline-flex items-center justify-center rounded-full border border-stone-900 px-6 py-3 text-sm font-semibold text-stone-900 transition-colors hover:bg-stone-900 hover:text-white"
+              >
+                Whistler property investment guide
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </div>
           </div>
         </section>
 
-        {/* 13. Final conversion / form */}
+        {/* Contact form */}
         <section id="contact" className="py-20 sm:py-28 bg-stone-950 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-14 text-center max-w-3xl mx-auto">
@@ -868,7 +724,7 @@ const ListProperty = () => {
           </div>
         </section>
 
-        {/* FAQ — after contact form */}
+        {/* FAQ */}
         <section className="py-20 sm:py-24 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12 text-center">
@@ -900,6 +756,37 @@ const ListProperty = () => {
             </div>
           </div>
         </section>
+
+        {/* Supplemental SEO content */}
+        <section className="py-14 bg-gray-50 border-t border-gray-100">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="sr-only">
+              Whistler vacation rental management services
+            </h2>
+            <div className="grid sm:grid-cols-2 gap-8">
+              {SEO_SUPPLEMENT_SECTIONS.map((section) => (
+                <div
+                  key={section.title}
+                  className="rounded-xl bg-white p-6 ring-1 ring-gray-100"
+                >
+                  <h3 className="text-base font-bold text-gray-900 mb-2">
+                    {section.title}
+                  </h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    {section.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <ListPropertyTestimonialsSection />
+
+        <ListPropertyPortfolioSection
+          homes={showcaseProperties}
+          condos={showcaseCondos}
+        />
 
         <Footer />
       </div>
