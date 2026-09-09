@@ -23,12 +23,12 @@ const listing: ListingData = {
 ],
   seo: {
     title: "Le Chamois | Ski-In/Out | 2 Bed | Blackcomb - AceHost",
-    description: "Le Chamois at the base of Blackcomb Mountain with a 2-minute walk to the gondola and ski-out. King suite, Murphy bedroom, free parking, EV charger, pool, hot tub and gym.",
+    description: "Le Chamois at the base of Blackcomb Mountain with a 2-minute walk to the gondola and ski-out. King suite, Murphy bedroom, free parking, pool, hot tub and gym.",
   },
   header:   {
       "title": "Le Chamois | Ski-In/Out | 2 Bed | Blackcomb",
       "guests": 4,
-      "bedrooms": 2,
+      "bedrooms": 1,
       "bathrooms": 2,
       "priceRange": "$350-$1,200 per night",
       "beds": 2,

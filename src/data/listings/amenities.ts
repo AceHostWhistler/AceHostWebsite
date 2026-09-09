@@ -219,7 +219,7 @@ export const listingAmenities: Record<string, string[]> = {
   "ski-in-ski-out-walk-to-lifts-2-bed": [
     "2-min walk to Blackcomb Gondola",
     "King suite & Murphy bedroom",
-    "Free parking & EV charger",
+    "Free underground parking",
     "Pool · hot tub · gym",
     "Personal ski locker",
     "Upper Village location",

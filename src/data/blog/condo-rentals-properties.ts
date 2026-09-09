@@ -96,10 +96,10 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     name: "Le Chamois | Ski-In/Out | 2 Bed | Blackcomb",
     priceRange: "$350-$1,200 per night (seasonal)",
     stats:
-      "Sleeps 4 | 2 Bedrooms | 2 Beds | 2 Bathrooms | Walk to Gondola | Free Parking & EV Charger",
+      "Sleeps 4 | 1 Bedroom | 2 Beds | 2 Bathrooms | Walk to Gondola | Free Parking",
     paragraphs: [
       "Welcome to Le Chamois, one of Whistler's most sought-after ski locations at the base of Blackcomb Mountain. The Blackcomb Gondola and ski-out are only about a 2-minute walk away, making mountain days effortless.",
-      "This contemporary 2-bedroom, 2-bath retreat features a king suite, flexible Murphy bedroom, free underground parking and an EV charger. After skiing, enjoy the outdoor pool, hot tub and gym, with the Fairmont, Upper Village dining and Whistler Village all within easy walking distance.",
+      "This contemporary 1-bedroom, 2-bath retreat features a king suite, flexible Murphy bedroom and free underground parking. After skiing, enjoy the outdoor pool, hot tub and gym, with the Fairmont, Upper Village dining and Whistler Village all within easy walking distance.",
       "A personal ski locker is included, and one complimentary underground parking space makes this one of the most convenient Upper Village bases for ski-focused trips.",
     ],
     airbnbHref:

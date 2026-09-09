@@ -204,7 +204,7 @@ export const townhomeProperties: Whistler28Property[] = [
     number: 19,
     name: "Le Chamois | Ski-In/Out | 2 Bed | Blackcomb",
     description:
-      "Upper Village ski base with a 2-minute walk to the Blackcomb Gondola, king suite, Murphy bedroom, free parking, EV charger, pool, hot tub and gym.",
+      "Upper Village ski base with a 2-minute walk to the Blackcomb Gondola, king suite, Murphy bedroom, free parking, pool, hot tub and gym.",
     image: "/photos/properties/ski-in-ski-out-walk-to-lifts-2-bed/Le chamois-4.jpg",
     listingHref: "/listings/ski-in-ski-out-walk-to-lifts-2-bed",
     bookUrl:

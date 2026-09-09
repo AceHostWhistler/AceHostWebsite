@@ -14,9 +14,8 @@ export default function SkiInSkiOutWalkToLifts2BedDetails({
           Welcome to Le Chamois, one of Whistler&apos;s most sought-after ski
           locations at the base of Blackcomb Mountain. The Blackcomb Gondola and
           ski-out are only about a 2-minute walk away, making mountain days
-          effortless. This contemporary 2-bedroom, 2-bath retreat features a king
-          suite, flexible Murphy bedroom, free underground parking and an EV
-          charger.
+          effortless. This contemporary 1-bedroom, 2-bath retreat features a king
+          suite, flexible Murphy bedroom and free underground parking.
           <br />
           <br />
           After skiing, enjoy the outdoor pool, hot tub and gym, with the
@@ -73,7 +72,7 @@ export default function SkiInSkiOutWalkToLifts2BedDetails({
             <div className="flex items-center space-x-6 mb-6">
               <div className="flex items-center">
                 <FaBed className="text-gray-600 mr-2" size={20} />
-                <span className="text-gray-800">2 bedrooms · 2 beds</span>
+                <span className="text-gray-800">1 bedroom · 2 beds</span>
               </div>
               <div className="flex items-center">
                 <FaBath className="text-gray-600 mr-2" size={20} />
@@ -93,14 +92,14 @@ export default function SkiInSkiOutWalkToLifts2BedDetails({
             Japanese toilet.
             <br />
             <br />
-            <strong>Bedroom 2:</strong>
+            <strong>Bedroom 2 (living room):</strong>
             <br />
             Double Murphy bed that folds conveniently into the wall when not in
             use, allowing the room to function as additional living space during
             the day.
             <br />
-            <br />A second full bathroom is located directly off the main living
-            area and includes a bathtub and shower.
+            A second full bathroom is located directly off the main living area
+            and includes a bathtub and shower.
             <br />
             <br />
             The home accommodates up to 4 guests across two sleeping areas and two
@@ -162,14 +161,10 @@ export default function SkiInSkiOutWalkToLifts2BedDetails({
             Blackcomb&apos;s alpine adventures are also easily accessible.
           </p>
           <p className="text-gray-800 max-w-4xl mb-6">
-            <strong>PARKING &amp; EV CHARGING:</strong>
+            <strong>PARKING:</strong>
             <br />
             One complimentary underground parking space is included with your stay,
             another valuable feature in such a central location.
-            <br />
-            <br />
-            An EV charger is also available in the underground garage for guests
-            travelling with an electric vehicle.
             <br />
             <br />
             Because skiing, dining and both Upper Village and Whistler Village are
@@ -204,8 +199,7 @@ export default function SkiInSkiOutWalkToLifts2BedDetails({
             parking garage.
             <br />
             <br />
-            One complimentary underground parking space is included, along with
-            access to the building&apos;s EV charger.
+            One complimentary underground parking space is included.
             <br />
             <br />
             The home uses self check-in, with access instructions provided prior
