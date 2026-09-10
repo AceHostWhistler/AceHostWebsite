@@ -5,6 +5,7 @@ const base = "/photos/properties/Two Cedars New";
 const listing: ListingData = {
   slug: "two-cedars-kadenwood",
   photos: [
+    `${base}/Two Cedars New`,
     `${base}/Two Cedars Cover photo snow.png`,
     `${base}/OSA_AncientCW1002 Panorama.jpg`,
     `${base}/02-2934 Ancient Cedars-02.jpg`,
@@ -48,6 +49,13 @@ const listing: ListingData = {
     `${base}/OSA_AncientCW0864-.jpg`,
     `${base}/OSA_AncientCW1129.jpg`,
     `${base}/OSA_AncientCW1437-Panorama.jpg`,
+    `${base}/_J3A8869.JPG`,
+    `${base}/09-2934 Ancient Cedars-09.jpg`,
+    `${base}/10-2934 Ancient Cedars-10.jpg`,
+    `${base}/29-2934 Ancient Cedars-29.jpg`,
+    `${base}/44-2934 Ancient Cedars-44.jpg`,
+    `${base}/47-2934 Ancient Cedars-47.jpg`,
+    `${base}/OSA_AncientCW1248.jpg`
   ],
   seo: {
     title: "Two Cedars - Ski in-Ski out, Kadenwood Estate | AceHost",

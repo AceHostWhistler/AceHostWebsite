@@ -63,7 +63,9 @@ const listing: ListingData = {
   "/photos/properties/Panoramic Estate/20241127 A7M3 02 A1_07145.jpg",
   "/photos/properties/Panoramic Estate/20241127 MM4P 01 0196-Edit.jpg",
   "/photos/properties/Panoramic Estate/20241127 MM4P 01 0225-Edit.jpg",
-  "/photos/properties/Panoramic Estate/Panoramic Estate.jpg"
+  "/photos/properties/Panoramic Estate/Panoramic Estate.jpg",
+  "/photos/properties/Panoramic Estate/IMG_0645(1).jpg",
+  "/photos/properties/Panoramic Estate/IMG_9611(1).JPG"
 ],
   seo: {
     title: "Panoramic Estate | Kadenwood | Ski In Ski Out - AceHost",

@@ -45,7 +45,10 @@ const listing: ListingData = {
   "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KJ14032-Edit-2.jpg",
   "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KJ14026-Editcopy.jpg",
   "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KJ13990-Edit.jpg",
-  "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KJ13981-Edit.jpg"
+  "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KJ13981-Edit.jpg",
+  "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ1498-Edit. rsjpg.jpg",
+  "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ1498-Edit.jpg",
+  "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ1518-Edit rs.jpg"
 ],
   seo: {
     title: "Pemberton Escape | 50 Acres | Wellness & Heli Retreat - AceHost",

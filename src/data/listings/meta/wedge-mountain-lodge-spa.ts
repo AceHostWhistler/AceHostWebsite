@@ -54,7 +54,8 @@ const listing: ListingData = {
   "/photos/properties/Wedge Mountain Lodge Spa/WML Great Room (Looking South).jpg",
   "/photos/properties/Wedge Mountain Lodge Spa/WML Pool Deck (Looking South).jpg",
   "/photos/properties/Wedge Mountain Lodge Spa/WML Pool Deck (Looking South West).jpg",
-  "/photos/properties/Wedge Mountain Lodge Spa/WML Spa Room (Looking South).jpg"
+  "/photos/properties/Wedge Mountain Lodge Spa/WML Spa Room (Looking South).jpg",
+  "/photos/properties/Wedge Mountain Lodge Spa/Wedge Mountain Lodge & Spa - Exterior 3 with model.jpg"
 ],
   seo: {
     title: "Wedge Mountain Lodge & Spa - AceHost",

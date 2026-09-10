@@ -5,6 +5,8 @@ const base = "/photos/properties/Valhalla Unit 33 Village";
 const listing: ListingData = {
   slug: "valhalla-unit-33-village",
   photos: [
+    `${base}/Valhalla Unit 33 Village`,
+    `${base}/Valhalla Unit 33 Village`,
     `${base}/Living room angle 3.png`,
     `${base}/Living room angle 2.png`,
     `${base}/Living room brighter.png`,
@@ -35,7 +37,7 @@ const listing: ListingData = {
     `${base}/22 - 20260522 A7M4 01 A1_06076.jpg`,
     `${base}/30 - 20260522 A7M4 01 A1_06159.jpg`,
     `${base}/31 - 20260522 A7M4 01 A1_06086.jpg`,
-    `${base}/32 - 20260522 A7M4 01 A1_06218.jpg`,
+    `${base}/32 - 20260522 A7M4 01 A1_06218.jpg`
   ],
   seo: {
     title: "Whistler Village - Private Hot Tub - Walk to Hill | AceHost",

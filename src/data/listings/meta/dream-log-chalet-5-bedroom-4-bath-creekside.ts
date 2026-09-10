@@ -43,7 +43,8 @@ const listing: ListingData = {
   "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00342.jpg",
   "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00333.jpg",
   "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00322.jpg",
-  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00316.jpg"
+  "/photos/properties/Dream Log 5-bedroom Chalet/20240930 A7M3 01 A1_00316.jpg",
+  "/photos/properties/Dream Log 5-bedroom Chalet/Dream Log Chalet interior 33.jpg"
 ],
   seo: {
     title: "\n          Dream Log Chalet | 5 Bedroom | 4 Bath | Creekside - AceHost\n        ",

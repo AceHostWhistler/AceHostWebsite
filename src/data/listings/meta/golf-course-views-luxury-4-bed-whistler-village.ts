@@ -49,7 +49,6 @@ const listing: ListingData = {
   "/photos/properties/Muirfield Golf Course/41 - 20250820 A7M4 01 A1_00461.jpg",
   "/photos/properties/Muirfield Golf Course/42 - 20250820 A7M4 01 A1_00468.jpg",
   "/photos/properties/Muirfield Golf Course/43 - 20250820 MM4P 01 0011.jpg",
-  "/photos/properties/Muirfield Golf Course/44 - 20250820 MM4P 01 0016.jpg",
   "/photos/properties/Muirfield Golf Course/45 - 20250820 A7M4 01 A1_00521.jpg"
 ],
   seo: {

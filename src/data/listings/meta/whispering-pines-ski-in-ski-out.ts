@@ -37,7 +37,8 @@ const listing: ListingData = {
   "/photos/properties/The Aspens/4800-Spearhead-Drive-32.JPG",
   "/photos/properties/The Aspens/4800-Spearhead-Drive-33.JPG",
   "/photos/properties/The Aspens/4800-Spearhead-Drive-34.JPG",
-  "/photos/properties/The Aspens/4800-Spearhead-Drive-35.JPG"
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-35.JPG",
+  "/photos/properties/The Aspens/4800-Spearhead-Drive-9 2.JPG"
 ],
   seo: {
     title: "The Aspens | On-Hill Ski-In/Out | Hot Tubs | 2 BDR - AceHost",
