@@ -13,14 +13,18 @@ export default function SocialShareMeta({
   type = "website",
   publishedAt,
   modifiedAt,
+  socialTitle,
+  socialDescription,
 }: SocialShareMetaProps) {
   const imageUrl = toAbsoluteImageUrl(image);
+  const ogTitle = socialTitle ?? title;
+  const ogDescription = socialDescription ?? description;
 
   return (
     <Head>
       <meta name="description" content={description} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
+      <meta property="og:title" content={ogTitle} />
+      <meta property="og:description" content={ogDescription} />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:image:secure_url" content={imageUrl} />
       <meta property="og:type" content={type} />
@@ -31,8 +35,8 @@ export default function SocialShareMeta({
         <meta property="article:modified_time" content={modifiedAt} />
       ) : null}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
+      <meta name="twitter:title" content={ogTitle} />
+      <meta name="twitter:description" content={ogDescription} />
       <meta name="twitter:image" content={imageUrl} />
     </Head>
   );

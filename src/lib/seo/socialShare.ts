@@ -7,6 +7,10 @@ export type SocialSharePayload = {
   type?: "website" | "article";
   publishedAt?: string;
   modifiedAt?: string;
+  /** Overrides og:title and twitter:title when set. */
+  socialTitle?: string;
+  /** Overrides og:description and twitter:description when set. */
+  socialDescription?: string;
 };
 
 export const ACEHOST_LOGO_IMAGE = "/logo.png";

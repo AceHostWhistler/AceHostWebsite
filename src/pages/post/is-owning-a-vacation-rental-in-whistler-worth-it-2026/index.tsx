@@ -91,6 +91,14 @@ export default function BlogPost() {
               <p>
                 In our opinion, yes, if you buy the right property.
               </p>
+              <p>
+                International buyer? Read our{" "}
+                <Link href="/post/can-foreigners-buy-property-in-whistler">
+                  2026 guide to buying Whistler property as a non-resident
+                </Link>
+                , including the federal ban, B.C. foreign buyer tax and
+                vacation-rental rules.
+              </p>
 
               <div className="relative aspect-[16/9] my-8 rounded-lg overflow-hidden not-prose max-w-full">
                 <Image

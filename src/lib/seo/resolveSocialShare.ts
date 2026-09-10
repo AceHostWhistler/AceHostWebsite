@@ -186,6 +186,8 @@ export function resolveSocialShare(
       return {
         title: article.title,
         description: article.description ?? article.title,
+        socialTitle: article.socialTitle,
+        socialDescription: article.socialDescription,
         image: article.coverImage,
         type: "article",
         publishedAt: article.publishedAt,

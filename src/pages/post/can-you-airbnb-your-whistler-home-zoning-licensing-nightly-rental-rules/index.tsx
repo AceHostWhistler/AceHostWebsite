@@ -217,6 +217,14 @@ export default function BlogPost() {
                 explains the main checks you should complete before accepting nightly
                 bookings.
               </p>
+              <p>
+                International buyer? Read our{" "}
+                <Link href="/post/can-foreigners-buy-property-in-whistler">
+                  2026 guide to buying Whistler property as a non-resident
+                </Link>
+                , including the federal ban, B.C. foreign buyer tax and
+                vacation-rental rules.
+              </p>
 
               <div
                 className="bg-blue-50 border-l-4 border-blue-700 rounded-r-xl p-6 my-8 not-prose shadow-sm"

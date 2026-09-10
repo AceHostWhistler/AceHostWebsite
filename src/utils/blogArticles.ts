@@ -3,6 +3,10 @@ export interface Article {
   title: string;
   category: string;
   description?: string;
+  /** Open Graph / X card title when different from the document title. */
+  socialTitle?: string;
+  /** Open Graph / X card description when different from meta description. */
+  socialDescription?: string;
   readTime: string;
   link: string;
   coverImage: string;
@@ -25,6 +29,33 @@ export const allArticles: Article[] = [
       "/photos/properties/Chalet La Forja/2950 Heritage Peaks Trail 4 Large 2.png",
     publishedAt: "2026-07-31T19:00:00.000Z",
     headline: "Justin Tse's Luxury Whistler Experience with AceHost in Kadenwood",
+  },
+  {
+    title: "Can Foreigners Buy Property in Whistler? 2026 Guide | AceHost",
+    socialTitle: "Yes, Foreigners Can Buy Property in Whistler: The 2026 Guide",
+    socialDescription:
+      "A clear guide to Whistler real estate for American, British, Mexican, European and other international buyers.",
+    category: "Whistler Real Estate",
+    description:
+      "Americans and other international buyers can purchase Whistler real estate. Learn how the foreign buyer ban, taxes and rental rules apply in 2026.",
+    readTime: "14 min read",
+    link: "/post/can-foreigners-buy-property-in-whistler",
+    coverImage:
+      "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
+    publishedAt: "2026-09-10T17:00:00.000Z",
+    modifiedAt: "2026-09-10T17:00:00.000Z",
+    headline:
+      "Can Foreigners Buy Property in Whistler? A 2026 Guide for American and International Buyers",
+    keywords: [
+      "can foreigners buy property in Whistler",
+      "can Americans buy property in Whistler",
+      "Whistler real estate foreign buyers",
+      "Canada foreign buyer ban Whistler",
+      "Whistler foreign buyer tax",
+      "buy Airbnb in Whistler",
+      "Whistler Phase 1 property",
+      "Whistler investment property",
+    ],
   },
   {
     title: "Whistler Weather Forecast 2026/2027: El Niño & Snow | AceHost",
