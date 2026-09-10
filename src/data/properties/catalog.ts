@@ -603,6 +603,7 @@ export const propertyCategories: PropertyCategory[] = [
             features: [
               "Newly Renovated",
               "Forest Views",
+              "Shared Games Lounge",
               "Luxury Mattresses",
               "EV Charging",
               "Ski & Bike Storage",
