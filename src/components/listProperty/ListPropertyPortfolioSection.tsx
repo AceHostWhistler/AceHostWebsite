@@ -42,7 +42,7 @@ function PropertyShowcaseCard({
 
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow flex flex-col h-full">
-      <div className="relative h-64">
+      <div className="relative h-56">
         <Link href={href} className="block relative h-full w-full">
           <PropertyCoverImage
             src={property.images[0]}
@@ -83,8 +83,8 @@ function PropertyShowcaseCard({
         </div>
       </div>
 
-      <div className="p-6 flex-grow flex flex-col">
-        <div className="flex flex-wrap gap-2 mb-4">
+      <div className="px-4 pt-3 pb-4 flex-grow flex flex-col">
+        <div className="flex flex-wrap gap-2 mb-2.5">
           {property.guests != null && (
             <span className="bg-gray-900 text-white px-3 py-1 text-sm font-medium rounded-md">
               {property.guests}{" "}
@@ -104,10 +104,10 @@ function PropertyShowcaseCard({
           )}
         </div>
 
-        <h3 className="text-xl font-medium text-gray-900 mb-2 line-clamp-2">
+        <h3 className="text-xl font-medium text-gray-900 mb-1.5 leading-snug line-clamp-2">
           {property.name}
         </h3>
-        <p className="text-sm text-gray-500 mb-4">{property.location}</p>
+        <p className="text-sm text-gray-500 mb-2.5">{property.location}</p>
 
         <Link
           href={href}

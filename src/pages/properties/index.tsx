@@ -202,7 +202,7 @@ export default function Properties() {
 
     return (
       <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow h-full">
-        <div className="relative h-64 sm:h-72 overflow-hidden">
+        <div className="relative h-56 sm:h-64 overflow-hidden">
           {/* Pet Friendly Badge */}
           {property.isPetFriendly && (
             <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 text-xs font-medium rounded-md z-10">
@@ -251,9 +251,9 @@ export default function Properties() {
           </div>
         </div>
 
-        <div className="p-6">
+        <div className="px-4 pt-3 pb-4">
           {/* Property details */}
-          <div className="flex flex-wrap gap-2 mb-4">
+          <div className="flex flex-wrap gap-2 mb-2.5">
             <div className="flex items-center text-xs bg-gray-900 text-white px-3 py-1 rounded-md">
               <Users className="w-3 h-3 mr-1" /> {property.guests} {property.guests === 1 ? "Guest" : "Guests"}
             </div>
@@ -266,18 +266,18 @@ export default function Properties() {
           </div>
 
           {/* Property name */}
-          <h3 className={`text-xl font-medium mb-2 text-gray-900 ${property.id === "hotel-booking-assistance" ? "" : "line-clamp-2"}`}>
+          <h3 className={`text-xl font-medium mb-1.5 text-gray-900 leading-snug ${property.id === "hotel-booking-assistance" ? "" : "line-clamp-2"}`}>
             {property.name}
           </h3>
 
           {/* Location */}
-          <p className="flex items-center text-sm text-gray-600 mb-4">
+          <p className="flex items-center text-sm text-gray-600 mb-2">
             <MapPin className="w-4 h-4 mr-1 flex-shrink-0" />
             <span className="line-clamp-1">{property.location}</span>
           </p>
 
           {/* Price range */}
-          <div className="space-y-2 mb-4">
+          <div className="space-y-1 mb-2.5">
             {property.priceRange && (
               <p className="text-gray-600">{property.priceRange}</p>
             )}

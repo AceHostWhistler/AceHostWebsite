@@ -74,7 +74,7 @@ const Home = () => {
         key={property.id}
         className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow flex flex-col h-full"
       >
-        <div className="relative h-64">
+        <div className="relative h-56">
           <Link href={cardLink} className="block relative h-full w-full">
             <PropertyCoverImage
               src={coverSrc}
@@ -116,9 +116,9 @@ const Home = () => {
             )}
           </div>
         </div>
-        <div className="p-6 flex-grow flex flex-col">
+        <div className="px-4 pt-3 pb-4 flex-grow flex flex-col">
           {/* Property details */}
-          <div className="flex flex-wrap gap-2 mb-4">
+          <div className="flex flex-wrap gap-2 mb-2.5">
             {property.guests && (
               <span className="bg-gray-900 text-white px-3 py-1 text-sm font-medium rounded-md">
                 {property.guests}{" "}
@@ -155,12 +155,12 @@ const Home = () => {
           </div>
 
           {/* Property name */}
-          <h3 className={`text-xl font-medium mb-4 text-gray-900 ${property.id === "hotel-booking-assistance" ? "" : "line-clamp-2"} ${property.id === "hotel-booking-assistance" ? "h-auto" : "h-14"}`}>
+          <h3 className={`text-xl font-medium mb-2 text-gray-900 leading-snug ${property.id === "hotel-booking-assistance" ? "" : "line-clamp-2"} ${property.id === "hotel-booking-assistance" ? "h-auto" : "min-h-[2.75rem]"}`}>
             {property.name}
           </h3>
 
           {/* Pricing information */}
-          <div className="space-y-2 mb-6 min-h-[80px]">
+          <div className="space-y-1 mb-3">
             {property.priceRange && (
               <p className="text-gray-600">{property.priceRange}</p>
             )}
