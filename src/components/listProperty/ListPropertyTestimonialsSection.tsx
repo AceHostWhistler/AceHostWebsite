@@ -9,7 +9,7 @@ export default function ListPropertyTestimonialsSection() {
     <GuestOwnerTestimonialsSection
       testimonials={LIST_PROPERTY_TESTIMONIALS}
       footerLink={{
-        helperText: "Swipe to read more — or see every review on Airbnb.",
+        helperText: "Use the arrows to browse — or see every review on Airbnb.",
         href: ACEHOST_AIRBNB_PROFILE_URL,
         label: "Read all reviews",
       }}

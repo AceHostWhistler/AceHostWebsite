@@ -9,7 +9,7 @@ export default function Testimonials() {
     <GuestOwnerTestimonialsSection
       testimonials={HOMEPAGE_TESTIMONIALS}
       footerLink={{
-        helperText: "Swipe to read more — or see every review on Google.",
+        helperText: "Use the arrows to browse — or see every review on Google.",
         href: GOOGLE_REVIEWS_URL,
         label: "View all reviews",
       }}
