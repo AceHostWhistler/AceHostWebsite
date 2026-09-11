@@ -97,7 +97,7 @@ export const largeHomeProperties: Whistler28Property[] = [
     number: 9,
     name: "Luxury 6-Bedroom | Whistler Village | Blueberry",
     description:
-      "A renovated six-bedroom retreat with high-end furnishings, ten beds, forest views, shared games lounge, summer air conditioning, and EV charging.",
+      "A renovated six-bedroom retreat with high-end furnishings, ten beds, forest views, summer air conditioning, and EV charging.",
     image:
       "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Cover Blueberry 306 snow.png",
     listingHref: "/listings/luxury-6-bedroom-whistler-village-blueberry",

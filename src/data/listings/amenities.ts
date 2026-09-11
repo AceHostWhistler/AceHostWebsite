@@ -144,7 +144,7 @@ export const listingAmenities: Record<string, string[]> = {
   "luxury-6-bedroom-whistler-village-blueberry": [
     "Blueberry neighbourhood",
     "6 bedrooms · 10 beds · sleeps 12",
-    "Shared games lounge",
+    "Forest-view balcony",
     "Premium Puffy beds",
     "Ski & bike storage",
     "Free EV charging",

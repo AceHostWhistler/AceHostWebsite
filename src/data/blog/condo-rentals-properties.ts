@@ -128,7 +128,7 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     name: "Luxury 6-Bedroom | Whistler Village | Blueberry",
     priceRange: "$750-$1,800 per night Summer | $1,200-$2,600 Winter (seasonal)",
     stats:
-      "Sleeps 12 | 6 Bedrooms | 10 Beds | 3 Bathrooms | Blueberry Hill | Shared Games Lounge | EV Charging | Forest Views",
+      "Sleeps 12 | 6 Bedrooms | 10 Beds | 3 Bathrooms | Blueberry Hill | EV Charging | Forest Views | Summer A/C",
     paragraphs: [
       "When your group outgrows a typical condo but still wants the convenience of a professionally managed rental, this newly renovated six-bedroom Ravencrest home on Blueberry Hill is the answer. Sleeping 12 guests across 10 beds, it delivers serious space without sacrificing the polished, move-in-ready feel AceHost is known for.",
       "Restoration Hardware and Rove Concepts furnishings set a refined tone throughout, while a brand-new BBQ, ski and bike storage, high-speed WiFi, and smart TVs make everyday Whistler logistics effortless. Forest views and a short drive to the Village give you privacy with quick access to slopes, dining, and nightlife.",

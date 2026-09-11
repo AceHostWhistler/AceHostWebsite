@@ -52,8 +52,6 @@ export default function Luxury6BedroomWhistlerVillageBlueberryDetails({ photos }
                           Step into a bright and inviting alpine-inspired retreat where every detail has been curated for relaxation and style. The open-concept living room features a cozy fireplace, plush seating, and large windows framing lush forest views. The fully equipped kitchen is ideal for group dining, complete with a brand-new fridge, oven, and BBQ, plus all the cookware you need for family meals or après-ski dinners.
                           <br /><br />
                           Across multiple levels, the home offers ample space for gathering and privacy, making it ideal for multi-family getaways or larger groups wanting a true Whistler experience.
-                          <br /><br />
-                          Guests also have access to a shared games lounge on the building&apos;s second floor. Featuring a pool table, comfortable couches and beautiful mountain-facing views, it provides another welcoming space for your group to relax after skiing, biking or exploring Whistler.
                         </p>
                         <div className="flex items-center space-x-6 mb-6">
                           <div className="flex items-center">
@@ -186,7 +184,6 @@ export default function Luxury6BedroomWhistlerVillageBlueberryDetails({ photos }
                           <li>Level 2 J1772 EV charging (free of charge)</li>
                           <li>Forest-view balcony for morning coffee or evening wine</li>
                           <li>Steps to Valley Trail and golf course loop</li>
-                          <li>Access to the shared second-floor games lounge with a pool table, comfortable couches and mountain views</li>
                           <li>Fully functional brand new washer + dryer in the unit. Private for guest usage.</li>
                           <li>Pack and play included and always at the condo. Please bring your own sheets.</li>
                           <li>*AC | Air Conditioning for summer rentals, we have AC units in the living room, bedroom 3 & bedroom 5. AC units cool the entire house comfortably, for those hot summer days.*</li>
@@ -215,24 +212,13 @@ export default function Luxury6BedroomWhistlerVillageBlueberryDetails({ photos }
                     </div>
                   </div>
 
-                  {/* Shared Games Lounge Section */}
-                  <div className="mb-20">
-                    <h2 className="text-2xl font-bold mb-6">Shared Building Games Lounge, 2nd Floor of building:</h2>
-                    <ul className="list-disc pl-5 space-y-2 max-w-4xl">
-                      <li>Pool table</li>
-                      <li>Comfortable couch seating</li>
-                      <li>Mountain-facing views</li>
-                      <li>Shared with other residents and building guests</li>
-                    </ul>
-                  </div>
-
                   {/* Guest Access Section */}
                   <div className="mb-20">
                     <h2 className="text-2xl font-bold mb-6">Guest access</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                       <div className="md:col-span-2">
                         <p className="text-gray-800">
-                          Guests have full access to the entire home, private parking, ski and bike storage, and the building&apos;s shared second-floor games lounge. The games lounge includes a pool table, comfortable couches and mountain-facing views. The condo offers privacy and serenity while still being close to everything Whistler has to offer.
+                          Guests have full access to the entire home, private parking, and ski and bike storage. The condo offers privacy and serenity while still being close to everything Whistler has to offer.
                           <br /><br />
                           This home is perfect for families, groups, or corporate getaways seeking refined comfort near the mountains. Guests love the quiet setting, the easy access to the Village, and the attention to every detail, from high-end furniture to the luxurious mattresses and EV parking.
                           <br /><br />
