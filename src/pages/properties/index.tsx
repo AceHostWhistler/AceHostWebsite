@@ -406,7 +406,7 @@ export default function Properties() {
         <section className="bg-[#f6f3ed] border-b border-stone-300/50 py-10 sm:py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-lg md:text-xl lg:text-2xl font-semibold text-stone-900 tracking-tight leading-snug mb-6 max-w-3xl">
-              Ski-in Ski-out Luxury Chalets in Whistler, 7+ Bedroom Villas, and Exclusive VIP Concierge Services
+              Ski-in Ski-out Luxury Chalets in Whistler, 7 or 8+ Bedroom Villas, and Exclusive VIP Concierge Services
             </h2>
 
             <div className="mb-8 grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-10 lg:items-start">
