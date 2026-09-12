@@ -132,15 +132,28 @@ const Navigation = ({
     setShowResourcesDropdown(false);
   };
 
+  const overlay = Boolean(transparent && !isScrolled);
+  const navLinkClass = (active: boolean) =>
+    overlay
+      ? active
+        ? "text-white border-b-2 border-white"
+        : "text-white/90 hover:text-white transition-colors duration-300 group"
+      : active
+        ? "text-black border-b-2 border-black"
+        : "text-gray-700 hover:text-black transition-colors duration-300 group";
+  const navUnderlineClass = overlay
+    ? "absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300 ease-in-out"
+    : "absolute bottom-0 left-0 w-0 h-0.5 bg-black group-hover:w-full transition-all duration-300 ease-in-out";
+
   return (
     <nav
       className={`${
-        transparent && !isScrolled ? "bg-transparent" : "bg-white"
-      } sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? "shadow-lg backdrop-blur-sm bg-white/90" 
-          : "shadow-md"
-      }`}
+        overlay
+          ? "bg-transparent shadow-none"
+          : isScrolled
+            ? "bg-white/90 shadow-lg backdrop-blur-sm"
+            : "bg-white shadow-md"
+      } ${transparent ? "fixed inset-x-0 top-0" : "sticky top-0"} z-50 transition-all duration-300`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`flex items-center justify-between ${isScrolled ? 'h-16' : 'h-20'} transition-all duration-300`}>
@@ -153,7 +166,7 @@ const Navigation = ({
                   alt="AceHost Logo"
                   fill
                   sizes="160px"
-                  className="object-contain"
+                  className={`object-contain ${overlay ? "brightness-0 invert" : ""}`}
                   priority
                 />
               </div>
@@ -168,11 +181,9 @@ const Navigation = ({
                   <div key={index} className="relative" ref={rentalsRef}>
                     <div
                       onMouseEnter={() => setShowRentalsDropdown(true)}
-                      className={`px-4 py-2 rounded-md text-sm font-semibold flex items-center relative ${
+                      className={`px-4 py-2 rounded-md text-sm font-semibold flex items-center relative ${navLinkClass(
                         currentPage === link.url
-                          ? "text-black border-b-2 border-black"
-                          : "text-gray-700 hover:text-black transition-colors duration-300 group"
-                      }`}
+                      )}`}
                     >
                       <Link
                         href="/properties?category=whistler"
@@ -190,7 +201,7 @@ const Navigation = ({
                         <ChevronDown className="h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
                       </button>
                       {currentPage !== link.url && (
-                        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black group-hover:w-full transition-all duration-300 ease-in-out"></span>
+                        <span className={navUnderlineClass}></span>
                       )}
                     </div>
 
@@ -215,15 +226,13 @@ const Navigation = ({
                     href={link.url}
                     onMouseEnter={closePrimaryDropdowns}
                     onClick={closePrimaryDropdowns}
-                    className={`px-4 py-2 rounded-md text-sm font-semibold relative ${
+                    className={`px-4 py-2 rounded-md text-sm font-semibold relative ${navLinkClass(
                       currentPage === link.url
-                        ? "text-black border-b-2 border-black"
-                        : "text-gray-700 hover:text-black transition-colors duration-300 group"
-                    }`}
+                    )}`}
                   >
                     {link.text}
                     {currentPage !== link.url && (
-                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black group-hover:w-full transition-all duration-300 ease-in-out"></span>
+                      <span className={navUnderlineClass}></span>
                     )}
                   </Link>
                 )
@@ -239,16 +248,14 @@ const Navigation = ({
                   onClick={() =>
                     setShowResourcesDropdown(!showResourcesDropdown)
                   }
-                  className={`px-4 py-2 rounded-md text-sm font-semibold flex items-center relative ${
+                  className={`px-4 py-2 rounded-md text-sm font-semibold flex items-center relative ${navLinkClass(
                     currentPage === "/resources"
-                      ? "text-black border-b-2 border-black"
-                      : "text-gray-700 hover:text-black transition-colors duration-300 group"
-                  }`}
+                  )}`}
                 >
                   Resources
                   <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
                   {currentPage !== "/resources" && (
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black group-hover:w-full transition-all duration-300 ease-in-out"></span>
+                    <span className={navUnderlineClass}></span>
                   )}
                 </button>
 
@@ -452,7 +459,11 @@ const Navigation = ({
                 href="/contact"
                 onMouseEnter={closePrimaryDropdowns}
                 onClick={closePrimaryDropdowns}
-                className="ml-2 px-5 py-2 bg-black text-white rounded-md text-sm font-semibold hover:bg-gray-800 transition-colors whitespace-nowrap"
+                className={`ml-2 px-5 py-2 rounded-md text-sm font-semibold transition-colors whitespace-nowrap ${
+                  overlay
+                    ? "bg-white text-stone-950 hover:bg-stone-100"
+                    : "bg-black text-white hover:bg-gray-800"
+                }`}
               >
                 Contact Us
               </Link>
@@ -463,7 +474,11 @@ const Navigation = ({
           <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-3 rounded-md text-gray-700 hover:bg-gray-100 transition-colors"
+              className={`p-3 rounded-md transition-colors ${
+                overlay
+                  ? "text-white hover:bg-white/10"
+                  : "text-gray-700 hover:bg-gray-100"
+              }`}
               aria-label="Toggle menu"
               aria-expanded={isMenuOpen}
             >

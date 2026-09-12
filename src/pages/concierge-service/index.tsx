@@ -5,7 +5,7 @@ import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import VimeoEmbed from "@/components/VimeoEmbed";
+import ConciergeReel from "@/components/ConciergeReel";
 import Link from "next/link";
 import { IoIosArrowBack, IoIosArrowForward, IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import {
@@ -230,27 +230,36 @@ const ConciergeService = () => {
       </Head>
 
       <div className="min-h-screen bg-white">
-        <Navigation transparent={false} />
+        <Navigation transparent currentPage="/concierge-service" />
 
         <main className="pb-20">
           {/* Hero Section */}
-          <section className="relative overflow-hidden bg-stone-950 text-white">
-            <div
-              className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_70%_0%,rgba(180,83,9,0.18),transparent_55%)]"
+          <section className="relative flex min-h-[100svh] items-end overflow-hidden text-white">
+            <Image
+              src="/videos/concierge-cover.jpg"
+              alt=""
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover animate-kenburns motion-reduce:animate-none"
               aria-hidden="true"
             />
             <div
-              className="pointer-events-none absolute inset-0 bg-gradient-to-b from-stone-900/40 via-transparent to-stone-950"
+              className="absolute inset-0 bg-gradient-to-b from-stone-950/55 via-stone-950/20 to-stone-950/80"
               aria-hidden="true"
             />
+            <div className="film-grain absolute inset-0" aria-hidden="true" />
 
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-14">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-                <div className="concierge-hero-copy lg:col-span-6 xl:col-span-7">
-                  <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.08] text-white mb-5">
+            <div className="relative z-10 w-full px-4 pb-16 pt-32 sm:px-6 sm:pb-20 lg:px-8">
+              <div className="mx-auto grid max-w-7xl items-end gap-10 lg:grid-cols-12">
+                <div className="concierge-hero-copy lg:col-span-7">
+                  <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-white/70">
+                    AceHost
+                  </p>
+                  <h1 className="mb-5 text-3xl font-bold tracking-tight leading-[1.08] sm:text-4xl lg:text-5xl">
                     Whistler VIP Concierge Services
                   </h1>
-                  <p className="text-base sm:text-lg text-white leading-relaxed max-w-xl mb-6">
+                  <p className="mb-6 max-w-xl text-base leading-relaxed text-white/85 sm:text-lg">
                     When you book Luxury Accommodations with AceHost, VIP Concierge Services are included to elevate your stay.
                   </p>
 
@@ -292,47 +301,8 @@ const ConciergeService = () => {
                   </div>
                 </div>
 
-                <div className="lg:col-span-6 xl:col-span-5 flex justify-center lg:justify-end">
-                  <div className="relative w-full max-w-[280px] sm:max-w-[300px]">
-                    <div
-                      className="pointer-events-none absolute -inset-6 rounded-[2.5rem] bg-amber-500/20 blur-3xl"
-                      aria-hidden="true"
-                    />
-                    <div className="relative overflow-hidden rounded-[1.75rem] bg-black shadow-2xl ring-1 ring-white/15">
-                      <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
-                        <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-stone-400">
-                          Concierge Reel
-                        </span>
-                        <a
-                          href="https://www.instagram.com/acehost_whistler/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-xs font-medium text-amber-200/90 transition-colors hover:text-amber-100"
-                        >
-                          @acehost_whistler
-                        </a>
-                      </div>
-
-                      <VimeoEmbed
-                        videoId="1122268553"
-                        title="The AceHost Concierge Reel"
-                        aspectRatio="portrait"
-                        showPortrait
-                        className="w-full bg-black"
-                      />
-
-                      <div className="border-t border-white/10 px-4 py-3">
-                        <a
-                          href="https://www.instagram.com/acehost_whistler/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-sm font-medium text-stone-300 transition-colors hover:text-white"
-                        >
-                          Watch more on Instagram →
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+                <div className="flex justify-center lg:col-span-5 lg:justify-end">
+                  <ConciergeReel />
                 </div>
               </div>
             </div>

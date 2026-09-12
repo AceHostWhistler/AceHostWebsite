@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
-import { ArrowRight, Instagram, Youtube } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, useReducedMotion } from "framer-motion";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import GuestySearchWidget from "@/components/GuestySearchWidget";
 import PropertyCoverImage from "@/components/PropertyCoverImage";
-import VimeoEmbed from "@/components/VimeoEmbed";
+import AutoplayMutedVideo from "@/components/AutoplayMutedVideo";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { FaUser, FaBed, FaBath } from "react-icons/fa";
@@ -36,7 +37,14 @@ const Testimonials = dynamic(() => import("@/components/Testimonials"), {
 
 const Home = () => {
   const [activeFilter, setActiveFilter] = useState("whistler"); // Set Whistler as default
-  const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
+  const reduceMotion = useReducedMotion();
+  const riseIn = reduceMotion
+    ? undefined
+    : {
+        initial: { opacity: 0, y: 28 },
+        animate: { opacity: 1, y: 0 },
+        transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] as const },
+      };
 
   // Structured data for rich snippets - Enhanced for better SEO
   const structuredData = buildOrganizationSchema();
@@ -323,115 +331,124 @@ const Home = () => {
       </Head>
 
       <div className="min-h-screen bg-white text-gray-900 overflow-x-hidden max-w-full">
-        <Navigation transparent={false} />
+        <Navigation transparent />
 
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-stone-950 text-white">
-          <div
-            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_75%_0%,rgba(180,83,9,0.16),transparent_55%)]"
-            aria-hidden="true"
-          />
-          <div
-            className="pointer-events-none absolute inset-0 bg-gradient-to-b from-stone-900/40 via-transparent to-stone-950"
-            aria-hidden="true"
-          />
+        <section className="relative min-h-[100svh] flex items-end overflow-hidden text-white">
+          <div className="absolute inset-0 bg-stone-950">
+            <img
+              src="/videos/hero-poster.jpg"
+              alt=""
+              className="absolute inset-0 h-full w-full object-cover"
+              aria-hidden="true"
+            />
+            <AutoplayMutedVideo
+              src="/videos/hero.mp4"
+              poster="/videos/hero-poster.jpg"
+              className="absolute inset-0 h-full w-full object-cover"
+              preload="auto"
+            />
+            <div
+              className="absolute inset-0 bg-gradient-to-b from-stone-950/55 via-stone-950/15 to-stone-950/75"
+              aria-hidden="true"
+            />
+          </div>
 
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-14">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-              {/* Text first in DOM for SEO; stacks above video on mobile */}
-              <div className="lg:col-span-5 xl:col-span-5">
-                <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.08] text-white mb-4">
-                  Luxury Vacation
-                  <br />
-                  Rental Properties in
-                  <br />
-                  Whistler Canada
-                </h1>
-                <p className="text-base sm:text-lg font-semibold text-white mb-4">
-                  Property Management &amp; VIP Concierge Services
-                </p>
-                <p className="text-base sm:text-lg text-white leading-relaxed max-w-xl mb-8">
-                  AceHost is a leading Whistler luxury Airbnb property management
-                  company. We proudly offer an array of magnificent vacation
-                  rental homes in Whistler, British Columbia. Offering a seamless
-                  experience for property owners looking to rent out their homes
-                  and earn, while offering guests the perfect vacation in a
-                  luxurious property. Explore our exclusive collection of luxury
-                  ski chalets, and ask us how we can make your next stay
-                  exceptional!
-                </p>
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-28 pt-36 sm:pb-32 sm:pt-40">
+            <motion.div className="max-w-3xl" {...riseIn}>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-white/70 mb-5">
+                Property Management &amp; VIP Concierge Services
+              </p>
+              <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.08] text-white mb-4">
+                Luxury Vacation
+                <br />
+                Rental Properties in
+                <br />
+                Whistler Canada
+              </h1>
+              <p className="text-base sm:text-lg text-white/90 leading-relaxed max-w-xl mb-8">
+                AceHost is a leading Whistler luxury Airbnb property management
+                company. We proudly offer an array of magnificent vacation
+                rental homes in Whistler, British Columbia. Offering a seamless
+                experience for property owners looking to rent out their homes
+                and earn, while offering guests the perfect vacation in a
+                luxurious property. Explore our exclusive collection of luxury
+                ski chalets, and ask us how we can make your next stay
+                exceptional!
+              </p>
 
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Link
-                    href="/properties"
-                    className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3.5 text-sm font-semibold text-stone-950 transition-colors hover:bg-stone-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-stone-950"
-                  >
-                    View Luxury Rental Properties
-                  </Link>
-                  <Link
-                    href="/list-property"
-                    className="inline-flex items-center justify-center rounded-lg border border-white/40 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:border-white/60 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-stone-950"
-                  >
-                    List Your Property
-                  </Link>
-                </div>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link
+                  href="/properties"
+                  className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3.5 text-sm font-semibold text-stone-950 transition-colors hover:bg-stone-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-stone-950"
+                >
+                  View Luxury Rental Properties
+                </Link>
+                <Link
+                  href="/list-property"
+                  className="inline-flex items-center justify-center rounded-lg border border-white/40 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:border-white/60 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-stone-950"
+                >
+                  List Your Property
+                </Link>
               </div>
-
-              <div className="lg:col-span-7 xl:col-span-7">
-                <div className="relative w-full">
-                  <div
-                    className="pointer-events-none absolute -inset-4 rounded-3xl bg-amber-500/15 blur-3xl"
-                    aria-hidden="true"
-                  />
-                  <div className="relative overflow-hidden rounded-2xl bg-black shadow-2xl ring-1 ring-white/15">
-                    <VimeoEmbed
-                      videoId="1122267050"
-                      title="The AceHost Whistler Vacation Experience"
-                      priority
-                      loop
-                      className="w-full"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+            </motion.div>
           </div>
         </section>
 
         {/* Services Section */}
         <section className="bg-white pt-20 pb-10">
-          <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 sm:px-6 lg:px-8">
-            {sections.map((section, index) => (
-              <div key={index} className="bg-white p-8 rounded-lg shadow-lg">
-                <div className="mb-6 h-48 relative overflow-hidden rounded-lg">
-                  <Link href={index === 0 ? "/properties" : index === 1 ? "/list-property" : "/concierge-service"}>
-                    <div className="relative w-full h-full">
-                      <Image
-                        src={section.image}
-                        alt={section.title}
-                        fill
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 400px"
-                        className="object-cover cursor-pointer"
-                        loading="lazy"
-                        quality={75}
-                        placeholder="blur"
-                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAEhAI/w5RW4AAAAABJRU5ErkJggg=="
-                      />
+          <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 px-4 sm:px-6 lg:px-8">
+            {sections.map((section, index) => {
+              const href =
+                index === 0
+                  ? "/properties"
+                  : index === 1
+                    ? "/list-property"
+                    : "/concierge-service";
+
+              return (
+                <motion.div
+                  key={section.title}
+                  initial={reduceMotion ? false : { opacity: 0, y: 28 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{
+                    duration: 0.7,
+                    delay: reduceMotion ? 0 : index * 0.08,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                >
+                  <Link
+                    href={href}
+                    className="group relative flex min-h-[28rem] overflow-hidden rounded-2xl"
+                  >
+                    <Image
+                      src={section.image}
+                      alt={section.title}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 440px"
+                      className="object-cover image-zoom"
+                      quality={80}
+                    />
+                    <div
+                      className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"
+                      aria-hidden="true"
+                    />
+                    <div className="relative z-10 mt-auto p-6 sm:p-7">
+                      <h3 className="text-2xl font-medium mb-3 text-white">
+                        {section.title}
+                      </h3>
+                      <p className="text-white/75 mb-4 text-sm leading-relaxed line-clamp-5">
+                        {section.description}
+                      </p>
+                      <span className="inline-block text-white font-medium border-b border-white/80">
+                        {section.linkText}
+                      </span>
                     </div>
                   </Link>
-                </div>
-                <h3 className="text-2xl font-medium mb-4 text-gray-900">
-                  {section.title}
-                </h3>
-                <p className="text-gray-600 mb-6">{section.description}</p>
-                <Link
-                  href={index === 0 ? "/properties" : index === 1 ? "/list-property" : "/concierge-service"}
-                  className="inline-block text-gray-900 font-medium border-b-2 border-gray-900 hover:border-gray-600 hover:text-gray-600 transition-colors"
-                >
-                  {section.linkText}
-                </Link>
-              </div>
-            ))}
+                </motion.div>
+              );
+            })}
           </div>
         </section>
 
