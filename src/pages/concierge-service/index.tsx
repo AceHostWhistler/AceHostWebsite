@@ -621,7 +621,7 @@ const ConciergeService = () => {
                   icon={<GiBabyBottle className="text-lg" />}
                   title="Baby & Child Rental Equipment"
                   description="Baby gates and child equipment rentals such as high chairs, cribs, etc. are available for your convenience."
-                  imageSrc="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.28.52 AM.png"
+                  imageSrc="/photos/homepage/concierge-service/baby-equipment.jpg"
                   imageAlt="Baby & Child Rental Equipment"
                 />
 
