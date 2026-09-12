@@ -33,6 +33,12 @@ const teamMembers: TeamMember[] = [
     initials: "EC",
     bio: "Hi, I'm Emma! I'm originally from Ancaster, Ontario, and I moved to Whistler in the spring of 2019. From the moment I arrived, I knew this place was special and would become my forever home. Spring is one of my favourite seasons here because you can snowboard in a T-shirt, play a full 18 holes of golf, and even go for a hike all in the same day if you're up for it!\n\nWith over ten years of experience in luxury customer service and retail, I've had the privilege of working in many parts of Whistler. This has allowed me to build meaningful connections with the incredible local community that makes this town so unique.\n\nOutside of work, you'll often find me hiking in the alpine or snowboarding with friends. I'm also passionate about travel and have explored destinations such as Italy, Spain, Hawaii, and New Zealand. My experiences have ranged from tent camping in Hana, Hawaii to enjoying five-star accommodations in the mountains of Banff, Alberta. These journeys have shown me how much thoughtful details can shape lasting memories.\n\nWhat I love most about my work is creating genuine relationships and hearing from guests about how much they enjoyed their time in Whistler. I take pride in ensuring your experience with AceHost is seamless, personalized, and truly memorable. I can't wait to welcome you to Whistler!",
   },
+  {
+    name: "Scott Hooper",
+    role: "Lead Property Manager",
+    initials: "SH",
+    bio: "Hi, I'm Scott. I've called Whistler home for over eight years and still love this place as much as the day I arrived. Before joining AceHost, I worked in contracting and as a handyman, looking after property maintenance for high-end homes. That hands-on background is what I bring to every property I manage — keeping luxury homes in excellent shape for owners and guests.",
+  },
 ];
 
 const values = [
