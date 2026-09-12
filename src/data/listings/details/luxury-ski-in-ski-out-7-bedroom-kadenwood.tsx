@@ -74,7 +74,7 @@ export default function LuxurySkiInSkiOut7BedroomKadenwoodDetails({ photos }: Li
                         <br />
                         <strong>Top level</strong>
                         <br />
-                        - Bedroom 7 / Office: Flexible office and sleeping space with a queen Murphy bed. A powder room is located on this level.
+                        - Bedroom 7 / Office: Flexible office and sleeping space with a Queen Murphy bed. A powder room is located on this level.
                         <br /><br />
                         <strong>Main level</strong>
                         <br />
@@ -101,8 +101,6 @@ export default function LuxurySkiInSkiOut7BedroomKadenwoodDetails({ photos }: Li
                         The Mountaintop sits high above Creekside in Kadenwood, approximately 1,000 feet above the valley floor. The elevated position creates the expansive mountain views and peaceful sense of privacy that define the home.
                         <br /><br />
                         Kadenwood’s private residents-and-guests-only gondola connects the neighbourhood with Creekside Village in approximately five minutes. Creekside offers direct access to Whistler Mountain, ski school, restaurants, cafés, groceries and equipment rentals. Whistler Village is approximately a 10-minute drive away.
-                        <br /><br />
-                        Ski-in/ski-out access is available during the winter when snow and trail conditions permit.
                         <br /><br />
                         <strong>Air conditioning</strong>
                         <br />
@@ -209,7 +207,7 @@ export default function LuxurySkiInSkiOut7BedroomKadenwoodDetails({ photos }: Li
                         <p className="text-gray-800">
                           Complimentary AceHost VIP concierge planning is included with every stay. Our local Whistler team can assist with restaurant reservations, private chefs, airport transfers, private drivers, grocery pre-stocking, ski and snowboard rentals, instructors, childcare, in-home massage, snowmobiling, helicopter experiences and personalized itinerary planning.
                           <br /><br />
-                          One of the benefits of booking your Whistler stay with AceHost is that we can help arrange Whistler Blackcomb lift tickets, Epic Passes and season passes directly through Vail Resorts. Provided everything is purchased and completed at least seven days before arrival, we can arrange for passes to be delivered directly to the home.
+                          One of the benefits of booking your Whistler stay with AceHost is that we can help arrange Whistler Blackcomb lift tickets, Epic Passes and season passes directly through Vail Resorts. Provided everything is purchased and completed at least seven days before arrival, we can arrange for passes to be delivered directly to the home, so guests can avoid waiting in line to sign a form and pick up their passes, which is a perk only a handful of operators are able to do, and something Vail does not offer as a service.
                           <br /><br />
                           Optional third-party services are charged separately unless specifically stated as included with your reservation. Please reach out before arrival so our team can help plan your stay.
                         </p>
