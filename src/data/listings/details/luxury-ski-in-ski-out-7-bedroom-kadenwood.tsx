@@ -9,9 +9,9 @@ export default function LuxurySkiInSkiOut7BedroomKadenwoodDetails({ photos }: Li
     <>
       <div className="max-w-6xl mx-auto px-4" id="details">
                   <p className="text-gray-800 mb-16 max-w-4xl">
-                    Located in the most prestigious true ski-in ski-out neighbourhood, Kadenwood, this home offers 6200 square feet of refined mountain living, with the best views in all of Whistler!
+                    Set high above Creekside in exclusive Kadenwood, The Mountaintop is a 7,500 sq. ft. ski-in/ski-out estate designed for groups of 16 or more. The home offers panoramic mountain views, seven bedrooms, a chef’s kitchen and exceptional entertaining spaces.
                     <br /><br />
-                    The open-concept main level features a chef’s kitchen with Wolf, Subzero & Miele appliances, quartz countertops, generous prep space & a separate prep kitchen, perfect for entertaining. Enjoy a hot tub, fire pits, ping pong table, wet bar, steam room, and two 90-inch TVs for the ultimate year-round Whistler escape.
+                    After skiing, relax in the private hot tub, extra-large outdoor sauna or steam room, then gather around the fire pits, wet bar, ping-pong table or two 90-inch TVs. Private Kadenwood Gondola access makes reaching Creekside effortless.
                   </p>
 
                   {/* The Space Section */}
@@ -44,53 +44,69 @@ export default function LuxurySkiInSkiOut7BedroomKadenwoodDetails({ photos }: Li
                         <h2 className="text-2xl font-bold">The space</h2>
                       </div>
                       <p className="text-gray-800 mb-6">
-                        Designed for comfort, privacy and flexibility, the home is thoughtfully laid out across multiple levels, making it ideal for families, groups and multi-generational stays. Each bedroom offers beautiful mountain views, and several feature private ensuite bathrooms or deck access. The mix of primary suites, queen rooms and bunk accommodations ensures everyone has their own space while still feeling connected.
+                        The Mountaintop combines refined contemporary design with the privacy and natural beauty of one of Whistler’s most prestigious mountainside neighbourhoods. With 7500 square feet of living space arranged across three levels, the home provides plenty of room for families and groups to spend time together while still enjoying privacy.
                         <br /><br />
-                        Brand new outdoor Sauna (XL size) located next to the hot tub! Convenient and easy to use, feels great after a long day on the hill!
+                        Each bedroom enjoys beautiful mountain scenery, while multiple king suites, queen bedrooms and flexible sleeping spaces make the layout especially well suited to extended families, groups of couples and multi-generational stays.
                         <br /><br />
-                        <strong>Location & Kadenwood Access:</strong>
+                        <strong>Living, dining and entertaining</strong>
                         <br />
-                        The Mountaintop sits high above Creekside in Kadenwood, creating the expansive mountain and valley views that define the home. Despite the peaceful alpine setting, Kadenwood’s private gondola provides convenient access to Creekside Village in approximately five minutes, where you will find the Creekside Gondola, ski school, restaurants, cafés and groceries. Whistler Village is also approximately a 10-minute drive away, making the setting feel secluded without being remote.
+                        The open-concept main living level is framed by expansive windows showcasing incredible mountain and valley views. Comfortable lounge areas and two 90-inch televisions provide plenty of space for relaxed evenings, sports or movie nights.
                         <br /><br />
-                        <strong>Sleeping Arrangements & Layout:</strong>
-                        <br />
-                        <strong>Top Floor:</strong>
-                        <br />
-                        -Bedroom 7: 1 Murphy Queen size bed in office space. Known as Bedroom 7.
-                        <br />
-                        -1 powder bathroom
-                        <br />
-                        -Large luxe ski boot dryer located in garage.
+                        The gourmet kitchen is equipped with Wolf, Sub-Zero and Miele appliances, quartz countertops, generous preparation areas and a separate prep kitchen. It is ideal for everything from family breakfasts to professionally catered dinners and private chef experiences.
                         <br /><br />
-                        <strong>Main Floor:</strong>
+                        The home offers several connected dining and entertaining areas:
                         <br />
-                        -1 detached bathroom, 1 shower, 1 sink
+                        - The main dining table comfortably seats 12 or more guests
                         <br />
-                        -Master Bedroom 1: 1 King bed, ensuite, 1 bath, 1 shower, 2 sinks
+                        - The bar-height dining table seats an additional 8 guests
                         <br />
-                        -Bedroom 2: Queen size bed, no ensuite, no closet, 1 dresser
-                        <br />
-                        -Bedroom 3: 1 King bed, ensuite, 1 shower, 2 sink
-                        <br />
-                        -Bedroom 4: 1 King bed, ensuite, 1 shower, 1 sink
-                        <br />
-                        -Laundry, 1 washer, 1 dryer
+                        - The separate bar offers seating for 4 guests
                         <br /><br />
-                        <strong>Lower Floor:</strong>
-                        <br />
-                        -Steam shower, 2 sink bathroom
-                        <br />
-                        -Bedroom 5: 1 queen bed, ensuite, 2 sink, 1 shower
-                        <br />
-                        -Bedroom 6: 2 queen bunk beds, shared ensuite
-                        <br />
-                        *Bedroom 5 & Bedroom 6 share/connected bathrooms
-                        <br />
-                        <strong>Outdoor Amenities</strong>
-                        <br />
-                        After a day on the slopes or trails, relax in the outdoor hot tub or unwind in the brand new wood barrel sauna, perfectly positioned for alpine après moments.
+                        This gives larger groups excellent flexibility for seated dinners, children’s dining, cocktails and casual meals, without separating guests from the main entertaining area.
                         <br /><br />
-                        *Air Conditioning/AC: The home features a powerful air conditioning system in the main living area, providing a refreshing escape and helping maintain a comfortable temperature throughout the home during the summer months.*
+                        Additional indoor amenities include a wet bar, ping-pong table, fitness space, steam room, ski and mudroom, laundry facilities and a large ski-boot drying system in the garage.
+                        <br /><br />
+                        <strong>Outdoor amenities</strong>
+                        <br />
+                        After a day on Whistler Mountain, step outside to the private hot tub or extra-large outdoor barrel sauna. Outdoor fire pits create an inviting setting for après-ski drinks, evening conversations and enjoying the peaceful alpine surroundings.
+                        <br /><br />
+                        <strong>Bedroom and bathroom layout</strong>
+                        <br />
+                        <strong>Top level</strong>
+                        <br />
+                        - Bedroom 7 / Office: Flexible office and sleeping space with a queen Murphy bed. A powder room is located on this level.
+                        <br /><br />
+                        <strong>Main level</strong>
+                        <br />
+                        - Bedroom 1, Primary Suite: King bed, private ensuite bathroom with a bathtub, separate shower and double vanity.
+                        <br />
+                        - Bedroom 2: Queen bed with a dresser. This bedroom uses the detached full bathroom on the main level, which includes a shower and single vanity. Please note that this room does not have a closet.
+                        <br />
+                        - Bedroom 3: King bed with a private ensuite bathroom featuring a walk-in shower and double vanity.
+                        <br />
+                        - Bedroom 4: King bed with a private ensuite bathroom featuring a walk-in shower and single vanity.
+                        <br />
+                        - A washer and dryer are also located on this level.
+                        <br /><br />
+                        <strong>Lower level</strong>
+                        <br />
+                        - Bedroom 5: Queen bed with access to the connected shared bathroom arrangement serving Bedrooms 5 and 6. The bathroom includes a shower and double vanity.
+                        <br />
+                        - Bedroom 6, Bunk Room: Queen-over-queen bunk bed, providing two queen beds. This bedroom shares the connected bathroom arrangement with Bedroom 5.
+                        <br />
+                        - An additional full bathroom with a steam shower and double vanity is located on the lower level.
+                        <br /><br />
+                        <strong>Location and Kadenwood access</strong>
+                        <br />
+                        The Mountaintop sits high above Creekside in Kadenwood, approximately 1,000 feet above the valley floor. The elevated position creates the expansive mountain views and peaceful sense of privacy that define the home.
+                        <br /><br />
+                        Kadenwood’s private residents-and-guests-only gondola connects the neighbourhood with Creekside Village in approximately five minutes. Creekside offers direct access to Whistler Mountain, ski school, restaurants, cafés, groceries and equipment rentals. Whistler Village is approximately a 10-minute drive away.
+                        <br /><br />
+                        Ski-in/ski-out access is available during the winter when snow and trail conditions permit.
+                        <br /><br />
+                        <strong>Air conditioning</strong>
+                        <br />
+                        The home has a powerful air-conditioning system in the main living area. It provides a refreshing escape during the summer and helps maintain a comfortable temperature throughout the home, although individual bedrooms do not have separate air-conditioning units.
                       </p>
                     </div>
                   </div>
@@ -115,7 +131,7 @@ export default function LuxurySkiInSkiOut7BedroomKadenwoodDetails({ photos }: Li
                       <h2 className="text-2xl font-bold">Guest access</h2>
                     </div>
                     <p className="text-gray-800 max-w-4xl">
-                      Guests have private access to the entire home, including the garage, driveway, private hot tub, private sauna, ski room, gym, and all advertised living spaces and amenities.
+                      Guests have private access to the entire home and all advertised amenities, including the garage, driveway, private hot tub, outdoor sauna, steam room, gym, ski and mudroom, laundry facilities, entertaining spaces and outdoor areas.
                     </p>
                   </div>
 
@@ -191,13 +207,11 @@ export default function LuxurySkiInSkiOut7BedroomKadenwoodDetails({ photos }: Li
                       </div>
                       <div>
                         <p className="text-gray-800">
-                          Complimentary AceHost VIP concierge planning is included with every stay. Our local Whistler team is available to help make your trip seamless, from restaurant reservations and local recommendations to coordinating private chefs, airport transfers, private drivers, grocery pre-stocking, ski and snowboard rentals, instructors, childcare, in-home massage, snowmobiling, helicopter experiences and more.
+                          Complimentary AceHost VIP concierge planning is included with every stay. Our local Whistler team can assist with restaurant reservations, private chefs, airport transfers, private drivers, grocery pre-stocking, ski and snowboard rentals, instructors, childcare, in-home massage, snowmobiling, helicopter experiences and personalized itinerary planning.
                           <br /><br />
-                          Ski lift pass booking & delivery: One of the perks of booking with AceHost is complimentary ski pass delivery directly to your door. We can arrange day passes, multi-day passes, season passes and more, helping you skip the ticket office, paperwork and extra stop upon arrival. Please reach out to us before purchasing your passes, as the booking will need to be made through our team in order for us to arrange delivery. We’re happy to guide you through the process and make it as easy as possible.
+                          One of the benefits of booking your Whistler stay with AceHost is that we can help arrange Whistler Blackcomb lift tickets, Epic Passes and season passes directly through Vail Resorts. Provided everything is purchased and completed at least seven days before arrival, we can arrange for passes to be delivered directly to the home.
                           <br /><br />
-                          Optional third-party services are charged separately unless specifically stated as included with your reservation.
-                          <br /><br />
-                          Please don't hesitate to reach out if you need anything!
+                          Optional third-party services are charged separately unless specifically stated as included with your reservation. Please reach out before arrival so our team can help plan your stay.
                         </p>
                       </div>
                     </div>

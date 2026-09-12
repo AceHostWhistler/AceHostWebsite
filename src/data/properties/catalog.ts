@@ -301,7 +301,7 @@ export const propertyCategories: PropertyCategory[] = [
             bathrooms: 6.5,
             location: "Kadenwood, Whistler",
             description:
-              "A 6,200-square-foot Kadenwood ski-in/ski-out retreat with a chef's kitchen, hot tub, XL outdoor sauna, fire pits, gym, steam room, and private gondola access.",
+              "A 7,500-square-foot Kadenwood ski-in/ski-out estate with a chef's kitchen, hot tub, XL outdoor sauna, fire pits, gym, steam room, and private gondola access.",
             features: [
               "Renovated Chef's Kitchen",
               "Hot Tub",
@@ -316,7 +316,7 @@ export const propertyCategories: PropertyCategory[] = [
             ],
             highlights: [
               "Exclusive Kadenwood Location",
-              "6200 Square Feet",
+              "7500 Square Feet",
               "Ski-in/Ski-out Access",
               "Premium Appliances",
             ],

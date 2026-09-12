@@ -435,7 +435,7 @@ export default function BlogPost() {
                   $14,900-$19,000+
                 </p>
                 <p className="mt-4">
-                  6200+ SQ FT | Ski-in/Ski-out access | Sleeps 16 | 7 Bedrooms |
+                  7500+ SQ FT | Ski-in/Ski-out access | Sleeps 16 | 7 Bedrooms |
                   8 Beds | 6.5 Baths | Hot Tub | Wood Barrel Sauna | Fire Pits | Steam Room
                 </p>
               </div>
@@ -443,7 +443,7 @@ export default function BlogPost() {
               <p>
                 Located in Whistler&apos;s most prestigious true ski-in ski-out
                 neighbourhood, The Mountaintop in Kadenwood is a refined 7-bedroom
-                retreat with 6,200 square feet of mountain living. A renovated
+                retreat with 7,500 square feet of mountain living. A renovated
                 chef&apos;s kitchen, hot tub, wood barrel sauna, fire pits, and
                 private Kadenwood gondola access make it ideal for groups who want seamless
                 slope access without sacrificing luxury.
