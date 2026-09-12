@@ -37,7 +37,7 @@ const teamMembers: TeamMember[] = [
     name: "Scott Hooper",
     role: "Lead Property Manager",
     initials: "SH",
-    bio: "Hi, I'm Scott. I've called Whistler home for over eight years and still love this place as much as the day I arrived. Before joining AceHost, I worked in contracting and as a handyman, looking after property maintenance for high-end homes. That hands-on background is what I bring to every property I manage, keeping luxury homes in excellent shape for owners and guests.",
+    bio: "Hi, I'm Scott. I've called Whistler home for more than eight years and still love it as much as the day I arrived. Before joining AceHost, I worked as a contractor managing construction projects and gained extensive hands-on experience as a handyman. This background allows me to identify maintenance issues early, coordinate repairs efficiently and understand what is required to properly care for a high-end home. When time and scope permit, I can also complete smaller repairs in-house, helping our homeowners avoid unnecessary contractor costs and delays. I bring that practical, detail-oriented approach to every property I manage, keeping each home in excellent condition for owners and guests.",
   },
 ];
 
