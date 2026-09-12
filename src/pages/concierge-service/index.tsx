@@ -236,7 +236,7 @@ const ConciergeService = () => {
           {/* Hero Section */}
           <section className="relative flex min-h-[100svh] items-end overflow-hidden text-white">
             <Image
-              src="/videos/concierge-cover.jpg"
+              src="/photos/homepage/WhistlerVipConcierge.jpg"
               alt=""
               fill
               priority

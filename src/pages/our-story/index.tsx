@@ -160,7 +160,7 @@ const OurStory = () => {
             <div className="lg:col-span-7">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/15 aspect-[4/3] lg:aspect-video">
                 <Image
-                  src="/photos/homepage/WhistlerVacationRental.jpg"
+                  src="/high-quality/property-gallery/3445-Heron-Place/20241125 A7M3 02 A1_05891.webp"
                   alt="Whistler mountain view, AceHost luxury vacation rentals"
                   fill
                   className="object-cover"
@@ -239,7 +239,7 @@ const OurStory = () => {
             </div>
             <div className="relative aspect-[4/5] sm:aspect-[4/3] lg:aspect-[4/5] rounded-2xl overflow-hidden shadow-lg ring-1 ring-stone-200">
               <Image
-                src="/high-quality/property-gallery/3445-Heron-Place/20241125 A7M3 02 A1_05891.webp"
+                src="/photos/homepage/ViewOurCollection.jpg"
                 alt="AceHost luxury Whistler vacation rental"
                 fill
                 className="object-cover"

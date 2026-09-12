@@ -9,7 +9,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import GuestySearchWidget from "@/components/GuestySearchWidget";
 import PropertyCoverImage from "@/components/PropertyCoverImage";
-import AutoplayMutedVideo from "@/components/AutoplayMutedVideo";
+import VimeoEmbed from "@/components/VimeoEmbed";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { FaUser, FaBed, FaBath } from "react-icons/fa";
@@ -331,67 +331,78 @@ const Home = () => {
       </Head>
 
       <div className="min-h-screen bg-white text-gray-900 overflow-x-hidden max-w-full">
-        <Navigation transparent />
+        <Navigation transparent={false} />
 
         {/* Hero Section */}
-        <section className="relative min-h-[100svh] flex items-end overflow-hidden text-white">
-          <div className="absolute inset-0 bg-stone-950">
-            <img
-              src="/videos/hero-poster.jpg"
-              alt=""
-              className="absolute inset-0 h-full w-full object-cover"
-              aria-hidden="true"
-            />
-            <AutoplayMutedVideo
-              src="/videos/hero.mp4"
-              poster="/videos/hero-poster.jpg"
-              className="absolute inset-0 h-full w-full object-cover"
-              preload="auto"
-            />
-            <div
-              className="absolute inset-0 bg-gradient-to-b from-stone-950/55 via-stone-950/15 to-stone-950/75"
-              aria-hidden="true"
-            />
-          </div>
+        <section className="relative overflow-hidden bg-stone-950 text-white">
+          <div
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_75%_0%,rgba(180,83,9,0.16),transparent_55%)]"
+            aria-hidden="true"
+          />
+          <div
+            className="pointer-events-none absolute inset-0 bg-gradient-to-b from-stone-900/40 via-transparent to-stone-950"
+            aria-hidden="true"
+          />
 
-          <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-28 pt-36 sm:pb-32 sm:pt-40">
-            <motion.div className="max-w-3xl" {...riseIn}>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-white/70 mb-5">
-                Property Management &amp; VIP Concierge Services
-              </p>
-              <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.08] text-white mb-4">
-                Luxury Vacation
-                <br />
-                Rental Properties in
-                <br />
-                Whistler Canada
-              </h1>
-              <p className="text-base sm:text-lg text-white/90 leading-relaxed max-w-xl mb-8">
-                AceHost is a leading Whistler luxury Airbnb property management
-                company. We proudly offer an array of magnificent vacation
-                rental homes in Whistler, British Columbia. Offering a seamless
-                experience for property owners looking to rent out their homes
-                and earn, while offering guests the perfect vacation in a
-                luxurious property. Explore our exclusive collection of luxury
-                ski chalets, and ask us how we can make your next stay
-                exceptional!
-              </p>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-14">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+              {/* Text first in DOM for SEO; stacks above video on mobile */}
+              <motion.div className="lg:col-span-5 xl:col-span-5" {...riseIn}>
+                <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.08] text-white mb-4">
+                  Luxury Vacation
+                  <br />
+                  Rental Properties in
+                  <br />
+                  Whistler Canada
+                </h1>
+                <p className="text-base sm:text-lg font-semibold text-white mb-4">
+                  Property Management &amp; VIP Concierge Services
+                </p>
+                <p className="text-base sm:text-lg text-white leading-relaxed max-w-xl mb-8">
+                  AceHost is a leading Whistler luxury Airbnb property management
+                  company. We proudly offer an array of magnificent vacation
+                  rental homes in Whistler, British Columbia. Offering a seamless
+                  experience for property owners looking to rent out their homes
+                  and earn, while offering guests the perfect vacation in a
+                  luxurious property. Explore our exclusive collection of luxury
+                  ski chalets, and ask us how we can make your next stay
+                  exceptional!
+                </p>
 
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Link
-                  href="/properties"
-                  className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3.5 text-sm font-semibold text-stone-950 transition-colors hover:bg-stone-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-stone-950"
-                >
-                  View Luxury Rental Properties
-                </Link>
-                <Link
-                  href="/list-property"
-                  className="inline-flex items-center justify-center rounded-lg border border-white/40 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:border-white/60 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-stone-950"
-                >
-                  List Your Property
-                </Link>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Link
+                    href="/properties"
+                    className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3.5 text-sm font-semibold text-stone-950 transition-colors hover:bg-stone-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-stone-950"
+                  >
+                    View Luxury Rental Properties
+                  </Link>
+                  <Link
+                    href="/list-property"
+                    className="inline-flex items-center justify-center rounded-lg border border-white/40 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:border-white/60 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-stone-950"
+                  >
+                    List Your Property
+                  </Link>
+                </div>
+              </motion.div>
+
+              <div className="lg:col-span-7 xl:col-span-7">
+                <div className="relative w-full">
+                  <div
+                    className="pointer-events-none absolute -inset-4 rounded-3xl bg-amber-500/15 blur-3xl"
+                    aria-hidden="true"
+                  />
+                  <div className="relative overflow-hidden rounded-2xl bg-black shadow-2xl ring-1 ring-white/15">
+                    <VimeoEmbed
+                      videoId="1122267050"
+                      title="The AceHost Whistler Vacation Experience"
+                      priority
+                      loop
+                      className="w-full"
+                    />
+                  </div>
+                </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
