@@ -260,7 +260,7 @@ const Home = () => {
       title: "Property Management Services",
       description:
         "AceHost offers vacation rental property management services in Whistler, specializing in, but not limited to, luxury homes. We handle everything from guest management to property maintenance, while leveraging our Airbnb SuperHost & Premier VRBO status, in addition to our unique and modern marketing strategies to increase your bookings.",
-      image: "/photos/homepage/WhistlerVacationRental.jpg",
+      image: "/photos/properties/2919 Heritage/Mountaintop living snow 3.png",
       linkText: "Explore Our Management",
     },
     {
@@ -438,18 +438,18 @@ const Home = () => {
                       alt={section.title}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 440px"
-                      className="object-cover image-zoom"
+                      className="object-cover image-zoom brightness-[0.62]"
                       quality={80}
                     />
                     <div
-                      className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"
+                      className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/30"
                       aria-hidden="true"
                     />
                     <div className="relative z-10 mt-auto p-6 sm:p-7">
                       <h3 className="text-2xl font-medium mb-3 text-white">
                         {section.title}
                       </h3>
-                      <p className="text-white/75 mb-4 text-sm leading-relaxed line-clamp-5">
+                      <p className="text-white/90 mb-4 text-sm leading-relaxed line-clamp-5">
                         {section.description}
                       </p>
                       <span className="inline-block text-white font-medium border-b border-white/80">
