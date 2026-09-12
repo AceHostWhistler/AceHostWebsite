@@ -70,7 +70,7 @@ const LuxuryWhistlerVacation = () => {
               <h2 className="text-xl font-semibold mb-3">Summary</h2>
               <p className="text-gray-700">
                 In recent years, a different kind of traveler has made Whistler
-                their go-to destination—one seeking not just the thrill of
+                their go-to destination - one seeking not just the thrill of
                 alpine sports, but the finest luxury experiences Canada has to
                 offer. Leading the charge in this transformation is AceHost
                 Whistler, a bespoke property management and concierge service
@@ -101,7 +101,7 @@ const LuxuryWhistlerVacation = () => {
                 Tucked away in the mountains of British Columbia, Whistler has
                 long been a playground for adventurers, nature lovers, and
                 outdoor enthusiasts. But in recent years, a different kind of
-                traveler has made Whistler their go-to destination—one seeking
+                traveler has made Whistler their go-to destination - one seeking
                 not just the thrill of alpine sports, but the finest luxury
                 experiences Canada has to offer. Leading the charge in this
                 transformation is AceHost Whistler, a bespoke property
@@ -138,7 +138,7 @@ const LuxuryWhistlerVacation = () => {
                 extraordinary. From the moment a client steps off the plane,
                 AceHost takes charge. Their VIP transportation services ensure
                 smooth, comfortable transfers in the finest luxury
-                vehicles—whether it's a sleek, black SUV waiting at the
+                vehicles - whether it's a sleek, black SUV waiting at the
                 airport or a private shuttle whisking guests to the ski lifts.
                 Every transfer, every reservation, and every logistical detail
                 is handled with precision, allowing their guests to enjoy
@@ -201,7 +201,7 @@ const LuxuryWhistlerVacation = () => {
               <p>
                 Whistler's world-renowned slopes often attract large
                 crowds, but with AceHost, you'll have access to private ski
-                instructors who can help you navigate the mountain with ease—and
+                instructors who can help you navigate the mountain with ease - and
                 most importantly, skip the long lines. From expert ski lessons
                 to guided snowshoeing adventures, your winter sports experience
                 will be tailored to your preferences.
@@ -262,7 +262,7 @@ const LuxuryWhistlerVacation = () => {
               <p>
                 Turn your living room into a cocktail lounge with our expert
                 bartenders, who specialize in everything from classic cocktails
-                to personalized creations—whether it's an Old Fashioned or
+                to personalized creations - whether it's an Old Fashioned or
                 a daring new concoction, your wish is their command.
               </p>
 
@@ -270,7 +270,7 @@ const LuxuryWhistlerVacation = () => {
               <p>
                 Step into a world of ancient beauty by exploring ice caves
                 formed 12,000–20,000 years ago. Arrive via helicopter for a
-                guided tour through these natural wonders—an awe-inspiring mix
+                guided tour through these natural wonders - an awe-inspiring mix
                 of adventure and serenity.
               </p>
 
@@ -351,7 +351,7 @@ const LuxuryWhistlerVacation = () => {
               <p>
                 Through cinematic, visually captivating content, AceHost has
                 been able to showcase the full breadth of what they offer. But
-                these aren't just promotional videos—they tell a story,
+                these aren't just promotional videos - they tell a story,
                 capturing the magic of Whistler through the eyes of those who
                 call it home, and those who visit seeking something
                 extraordinary.
@@ -387,7 +387,7 @@ const LuxuryWhistlerVacation = () => {
                 While Whistler has always been famous for its breathtaking
                 scenery and incredible outdoor activities, AceHost has tapped
                 into a growing demand for ultra-luxury travel. Increasingly,
-                Whistler is attracting a new kind of traveler—those seeking a
+                Whistler is attracting a new kind of traveler - those seeking a
                 curated experience that balances the rugged beauty of nature
                 with the indulgent comfort and privacy of high-end living.
                 Unlike older ski resorts, Whistler boasts newly built modern
@@ -409,7 +409,7 @@ const LuxuryWhistlerVacation = () => {
                 Michelin-level dining, world-class spas, and ample opportunities
                 for shopping and après-ski activities. The true magic of
                 Whistler, however, lies in how seamlessly the town transitions
-                between raw wilderness and urban sophistication—something
+                between raw wilderness and urban sophistication - something
                 AceHost expertly curates for its guests.
               </p>
 
@@ -433,7 +433,7 @@ const LuxuryWhistlerVacation = () => {
                 for those seeking more than just a getaway. It's about
                 crafting moments that are as unforgettable as they are
                 luxurious. At the core of their success is an unwavering
-                commitment to personalized service—helping guests not only
+                commitment to personalized service - helping guests not only
                 discover hidden gems in Whistler, but also benefit from
                 AceHost's insider knowledge and connections to ensure the
                 finest experience possible

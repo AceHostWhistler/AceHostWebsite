@@ -174,7 +174,7 @@ export const townhomeProperties: Whistler28Property[] = [
     number: 16,
     name: "The Aspens | On-Hill Ski-In/Out | Hot Tubs | 2 BDR",
     description:
-      "Ground-floor ski-in/ski-out at The Aspens — the closest unit to the pool, three hot tubs, and Blackcomb slopes.",
+      "Ground-floor ski-in/ski-out at The Aspens, the closest unit to the pool, three hot tubs, and Blackcomb slopes.",
     image: "/photos/properties/The Aspens/4800-Spearhead-Drive-1.JPG",
     listingHref: "/listings/whispering-pines-ski-in-ski-out",
     bookUrl:

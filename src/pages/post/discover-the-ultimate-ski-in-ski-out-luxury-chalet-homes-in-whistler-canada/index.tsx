@@ -69,7 +69,7 @@ export default function BlogPost() {
                 Imagine waking up to the pristine snow-covered peaks of Whistler
                 Blackcomb, stepping outside your door, clicking into your skis,
                 and gliding directly onto the slopes. This isn't just a
-                skier's fantasy—it's the daily reality for those who
+                skier's fantasy - it's the daily reality for those who
                 choose to stay in Whistler's exclusive ski-in/ski-out
                 luxury chalets.
               </p>

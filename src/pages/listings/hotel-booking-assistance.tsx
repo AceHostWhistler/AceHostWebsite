@@ -59,7 +59,7 @@ const HotelBookingAssistance = () => {
               </h2>
               
               <p className="text-lg text-gray-700 mb-8">
-                <strong>"Don't need any concierge, but still want our help finding the best room? No problem!"</strong> We can help you secure the perfect hotel stay in Whistler with exclusive perks and benefits. Through our local partnerships with premium hotels, we can get you the best deal, priority for room upgrades, dining credit, early/late checkout guarantees, included breakfast, and other perks you can't get otherwise—all at no extra cost!
+                <strong>"Don't need any concierge, but still want our help finding the best room? No problem!"</strong> We can help you secure the perfect hotel stay in Whistler with exclusive perks and benefits. Through our local partnerships with premium hotels, we can get you the best deal, priority for room upgrades, dining credit, early/late checkout guarantees, included breakfast, and other perks you can't get otherwise - all at no extra cost!
               </p>
 
               <div className="my-12 grid grid-cols-1 md:grid-cols-2 gap-8">

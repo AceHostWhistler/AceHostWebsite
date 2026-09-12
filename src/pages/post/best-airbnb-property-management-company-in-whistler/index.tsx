@@ -64,7 +64,7 @@ const BestPropertyManagementBlog = () => {
             <article className="prose prose-lg max-w-none">
               <div className="not-prose">
                 <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                  Whistler isn't just a world-renowned destination for skiers and outdoor enthusiasts—it's also a thriving luxury vacation rental market. For property owners looking to capitalize on this demand while avoiding the headaches of day-to-day management, choosing the right property management company is crucial. In this article, we'll explore what makes AceHost the premier choice for luxury Airbnb property management in Whistler and how our specialized approach maximizes returns while providing a truly hands-off ownership experience.
+                  Whistler isn't just a world-renowned destination for skiers and outdoor enthusiasts - it's also a thriving luxury vacation rental market. For property owners looking to capitalize on this demand while avoiding the headaches of day-to-day management, choosing the right property management company is crucial. In this article, we'll explore what makes AceHost the premier choice for luxury Airbnb property management in Whistler and how our specialized approach maximizes returns while providing a truly hands-off ownership experience.
                 </p>
               </div>
 
@@ -202,7 +202,7 @@ const BestPropertyManagementBlog = () => {
 
               <div className="not-prose">
                 <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                  AceHost isn't just a property management company—we're your partner in maximizing your investment's potential. Our boutique team takes a personalized approach to each property, considering its unique features, location advantages, and target market. This individualized strategy allows us to position your home for optimal performance rather than applying a one-size-fits-all management approach.
+                  AceHost isn't just a property management company - we're your partner in maximizing your investment's potential. Our boutique team takes a personalized approach to each property, considering its unique features, location advantages, and target market. This individualized strategy allows us to position your home for optimal performance rather than applying a one-size-fits-all management approach.
                 </p>
               </div>
 
@@ -218,7 +218,7 @@ const BestPropertyManagementBlog = () => {
                   2. Rental Flexibility
                 </h3>
                 <p className="mb-6">
-                  We understand that many property owners want to enjoy their Whistler homes while also generating rental income. AceHost offers flexible management arrangements that accommodate your personal usage needs—whether you want year-round rentals, seasonal availability, or blocked dates for your own stays. Our management systems make it easy to update your availability and coordinate cleaning services around your schedule.
+                  We understand that many property owners want to enjoy their Whistler homes while also generating rental income. AceHost offers flexible management arrangements that accommodate your personal usage needs - whether you want year-round rentals, seasonal availability, or blocked dates for your own stays. Our management systems make it easy to update your availability and coordinate cleaning services around your schedule.
                 </p>
 
                 <div className="relative aspect-video rounded-lg overflow-hidden">

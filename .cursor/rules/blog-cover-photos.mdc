@@ -21,16 +21,16 @@ Each blog post needs its own cover image. Do not reuse a cover photo that anothe
 
 Update **both** places so `/blogs` and the post page stay in sync:
 
-- `src/pages/post/<slug>/index.tsx` — `HERO` constant (and `og:image` / structured data derived from it)
-- `src/utils/blogArticles.ts` — matching `coverImage` for that slug
+- `src/pages/post/<slug>/index.tsx`, `HERO` constant (and `og:image` / structured data derived from it)
+- `src/utils/blogArticles.ts`, matching `coverImage` for that slug
 
 ## Example
 
 ```tsx
-// ✅ GOOD — unique cover
+// ✅ GOOD, unique cover
 const HERO = "/photos/properties/Muirfield Golf Course/Muirfield Snow shot.png";
 
-// ❌ BAD — already used by fifa-vancouver-whistler-the-luxury-whistler-fifa-experience
+// ❌ BAD, already used by fifa-vancouver-whistler-the-luxury-whistler-fifa-experience
 const HERO = "/photos/properties/2919 Heritage/Mountaintop Snow cover.png";
 ```
 

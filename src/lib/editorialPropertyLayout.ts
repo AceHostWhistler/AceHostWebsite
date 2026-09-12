@@ -1,7 +1,7 @@
 /** Shared layout tokens for editorial property pages (header + gallery) */
 
 /**
- * Mobile / iPhone gallery — matches the original pre-editorial layout exactly.
+ * Mobile / iPhone gallery, matches the original pre-editorial layout exactly.
  * Desktop overrides (md+) add wider 3-column tiles only.
  */
 

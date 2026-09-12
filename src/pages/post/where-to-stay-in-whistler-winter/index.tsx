@@ -655,7 +655,7 @@ export default function BlogPost() {
               <p>
                 Nordic and Taluswood sit between Whistler Village and Creekside and
                 include some excellent ski-access properties. Exact ski access varies
-                considerably by home — never assume that every property in Nordic or
+                considerably by home, never assume that every property in Nordic or
                 Taluswood is ski-in, ski-out simply because another property nearby
                 is.
               </p>

@@ -71,11 +71,11 @@ export default function BlogPost() {
             {/* Blog Content */}
             <div className="prose prose-lg max-w-none">
               <p className="text-xl text-gray-700 mb-8">
-                If you thought Whistler was all about the slopes, think again. Sure, the skiing is legendary, but tucked among the towering pines and snowy peaks are some of the most jaw-dropping luxury rental homes in Canada—and AceHost is your golden ticket to all of them.
+                If you thought Whistler was all about the slopes, think again. Sure, the skiing is legendary, but tucked among the towering pines and snowy peaks are some of the most jaw-dropping luxury rental homes in Canada - and AceHost is your golden ticket to all of them.
               </p>
 
               <p>
-                This isn't your average Airbnb game. We're talking architecturally stunning estates, private chefs whipping up truffle risottos, and ski-in/ski-out chalets where you can roll out of bed and glide straight onto a powdery run. Whether you're planning a lavish family reunion, a New Year's Eve you'll never forget, or just want a holiday where someone else makes your morning cappuccino while you soak in a mountainside hot tub—AceHost has your name on it.
+                This isn't your average Airbnb game. We're talking architecturally stunning estates, private chefs whipping up truffle risottos, and ski-in/ski-out chalets where you can roll out of bed and glide straight onto a powdery run. Whether you're planning a lavish family reunion, a New Year's Eve you'll never forget, or just want a holiday where someone else makes your morning cappuccino while you soak in a mountainside hot tub - AceHost has your name on it.
               </p>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
@@ -86,7 +86,7 @@ export default function BlogPost() {
               </p>
 
               <p>
-                AceHost curates Whistler's most exclusive, high-end homes—many of which you won't even find publicly listed. We're talking about places with 7+ bedrooms, private theatres, wine cellars, stone fireplaces big enough to roast a small elk (not recommended), and decks that practically hover over the valley. These aren't just places to stay—they're destinations.
+                AceHost curates Whistler's most exclusive, high-end homes - many of which you won't even find publicly listed. We're talking about places with 7+ bedrooms, private theatres, wine cellars, stone fireplaces big enough to roast a small elk (not recommended), and decks that practically hover over the valley. These aren't just places to stay - they're destinations.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
@@ -229,7 +229,7 @@ export default function BlogPost() {
                 />
               </div>
               <p>
-                Perched in the exclusive Kadenwood neighborhood with direct ski access, Slope Side Chalet delivers prime access and timeless design. This luxurious and cozy 7-bedroom home accommodates up to 16 guests and offers ski-in/ski-out access directly from your doorstep—the ski trail literally runs off the stairs from the ski room. With magnificent views from every floor, soaring high ceilings, large picture windows, and stone heated floors, this property provides the perfect blend of cozy-luxe interiors and serious comfort for ski-focused families.
+                Perched in the exclusive Kadenwood neighborhood with direct ski access, Slope Side Chalet delivers prime access and timeless design. This luxurious and cozy 7-bedroom home accommodates up to 16 guests and offers ski-in/ski-out access directly from your doorstep - the ski trail literally runs off the stairs from the ski room. With magnificent views from every floor, soaring high ceilings, large picture windows, and stone heated floors, this property provides the perfect blend of cozy-luxe interiors and serious comfort for ski-focused families.
               </p>
               <div className="mt-6 mb-8">
                 <Link
@@ -299,7 +299,7 @@ export default function BlogPost() {
                 />
               </div>
               <p>
-                A more affordable smaller option. This modern gem delivers the ultimate ski-in/ski-out convenience—just a short stroll from the slopes and right in the heart of the Upper Village. Located on the main floor, this retreat features a brand-new Puffy Royal King bed, a Queen pull-out couch, and access to building facilities including a heated outdoor pool, hot tub, and gym. In winter, ski right to Blackcomb gondola, and in summer, walk to the village in under 15 minutes to explore Whistler's best restaurants. It's perfect for families or groups wanting luxury close to the action.
+                A more affordable smaller option. This modern gem delivers the ultimate ski-in/ski-out convenience - just a short stroll from the slopes and right in the heart of the Upper Village. Located on the main floor, this retreat features a brand-new Puffy Royal King bed, a Queen pull-out couch, and access to building facilities including a heated outdoor pool, hot tub, and gym. In winter, ski right to Blackcomb gondola, and in summer, walk to the village in under 15 minutes to explore Whistler's best restaurants. It's perfect for families or groups wanting luxury close to the action.
               </p>
               <div className="mt-6 mb-8">
                 <Link
@@ -369,7 +369,7 @@ export default function BlogPost() {
                 />
               </div>
               <p>
-                This spacious hideaway in the prestigious Blueberry Hill neighborhood is warm, inviting, and beautifully designed with elegant wood and stone finishes. Spanning 7,800 sq ft, this traditional log chalet offers breathtaking views of the Whistler Golf Course, Blackcomb, and Whistler Mountain. With 5 large bedrooms, 5.5 baths, and space for 11 guests, it's just a 3-4 minute drive to the village and slopes, or a 15-minute walk through trails. Ideal for families who want space, style, and serenity—all just minutes from the village.
+                This spacious hideaway in the prestigious Blueberry Hill neighborhood is warm, inviting, and beautifully designed with elegant wood and stone finishes. Spanning 7,800 sq ft, this traditional log chalet offers breathtaking views of the Whistler Golf Course, Blackcomb, and Whistler Mountain. With 5 large bedrooms, 5.5 baths, and space for 11 guests, it's just a 3-4 minute drive to the village and slopes, or a 15-minute walk through trails. Ideal for families who want space, style, and serenity - all just minutes from the village.
               </p>
               <div className="mt-6 mb-8">
                 <Link
@@ -405,10 +405,10 @@ export default function BlogPost() {
                 Planning a Trip to Whistler? Skip the Stress.
               </h2>
               <p>
-                If the idea of coordinating a luxury getaway for 10+ people makes you break into a cold sweat—don't worry. AceHost's concierge team lives for this stuff.
+                If the idea of coordinating a luxury getaway for 10+ people makes you break into a cold sweat - don't worry. AceHost's concierge team lives for this stuff.
               </p>
               <p>
-                We've got all the priority bookings your heart desires: heli-skiing, dog sledding, exclusive tables at Wild Blue, last-minute ski instructors, luxury SUVs with snow tires, even a snowmobile fondue experience (it's a thing—and it's awesome).
+                We've got all the priority bookings your heart desires: heli-skiing, dog sledding, exclusive tables at Wild Blue, last-minute ski instructors, luxury SUVs with snow tires, even a snowmobile fondue experience (it's a thing - and it's awesome).
               </p>
               <p>
                 Need a private chef for a gourmet Christmas dinner? Done. Want a full fridge before your group arrives? Consider it stocked. Looking for a massage therapist to ease those post-ski legs? We'll send them straight to your chalet.
@@ -448,10 +448,10 @@ export default function BlogPost() {
                   Ready to Book the Best Stay of Your Life?
                 </h2>
                 <p className="mb-6">
-                  Whistler isn't just for skiing—it's for living large, and no one does it better than AceHost. Every home we offer has been hand-selected for its design, location, and ability to make jaws drop. We specialize in Whistler luxury rental homes for high-budget guests who expect the best—and don't want to lift a finger while getting it.
+                  Whistler isn't just for skiing - it's for living large, and no one does it better than AceHost. Every home we offer has been hand-selected for its design, location, and ability to make jaws drop. We specialize in Whistler luxury rental homes for high-budget guests who expect the best - and don't want to lift a finger while getting it.
                 </p>
                 <p className="mb-6">
-                  So go ahead—dream big, bring the whole family, and let AceHost handle the rest.
+                  So go ahead - dream big, bring the whole family, and let AceHost handle the rest.
                 </p>
                 <Link
                   href="/concierge-service"

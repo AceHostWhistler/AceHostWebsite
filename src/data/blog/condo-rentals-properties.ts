@@ -116,7 +116,7 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     paragraphs: [
       "Welcome to this ski-in/ski-out retreat at The Marquise, perfectly positioned on Blackcomb Mountain. This main-floor condo features a brand-new Puffy Royal King bed, Queen pullout sofa, fireplace, in-unit washer and dryer, private ski storage and free parking.",
       "After skiing, unwind in the heated outdoor pool, hot tub or gym, then walk to Upper Village, the Fairmont and Four Seasons in about 5 minutes. In summer, Whistler Village, Lost Lake, biking trails and mountain adventures are all close by.",
-      "Secure ski storage is included, and one complimentary parking space is included with your stay — a rare combination for a ski-in/ski-out Whistler condo.",
+      "Secure ski storage is included, and one complimentary parking space is included with your stay, a rare combination for a ski-in/ski-out Whistler condo.",
     ],
     airbnbHref:
       "https://www.airbnb.ca/rooms/1370367404602078616?guests=1&adults=1&s=67&unique_share_id=eb381b39-e67d-44ea-9d7c-2de2e1b5fa20",
@@ -182,7 +182,7 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     paragraphs: [
       "Welcome to the Penthouse unit in the iconic Tyndall Lodge building, located in the heart of Whistler Village. This bright and spacious home sits right in the centre of the main Whistler Village, steps from the famous Olympic Rings and only a short walk to both Whistler and Blackcomb gondolas.",
       "Hosting up to 8 guests comfortably, the home features 3 sleeping areas, 5 beds, and two full bathrooms. One of the highlights is the unique loft bedroom with bunkbeds, tall ceilings and a cozy chalet feel that kids and extra guests absolutely love.",
-      "Enjoy a fully equipped kitchen, spacious living room, complimentary underground parking, and access to the building's shared pool and hot tub — location and layout doesn't get any better than this.",
+      "Enjoy a fully equipped kitchen, spacious living room, complimentary underground parking, and access to the building's shared pool and hot tub, location and layout doesn't get any better than this.",
     ],
     airbnbHref:
       "https://www.airbnb.ca/rooms/1595039212030139605?guests=1&adults=1&s=67&unique_share_id=dc75c08b-e1ae-46ae-8b17-0587b742fa45",

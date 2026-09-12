@@ -186,9 +186,9 @@ function migrate() {
       header: {
         title:
           extractProp(headerBlock, "title") || h1Title || galleryTitle,
-        guests: extractProp(headerBlock, "guests") ?? "—",
-        bedrooms: extractProp(headerBlock, "bedrooms") ?? "—",
-        bathrooms: extractProp(headerBlock, "bathrooms") ?? "—",
+        guests: extractProp(headerBlock, "guests") ?? " - ",
+        bedrooms: extractProp(headerBlock, "bedrooms") ?? " - ",
+        bathrooms: extractProp(headerBlock, "bathrooms") ?? " - ",
         priceRange:
           extractProp(headerBlock, "priceRange") || "Contact for pricing",
         ...(extractProp(headerBlock, "beds") !== undefined

@@ -71,7 +71,7 @@ export default function BlogPost() {
             {/* Blog Content */}
             <div className="prose prose-lg max-w-none">
               <p className="text-xl text-gray-700 mb-8">
-                While Whistler might be world-renowned as a winter wonderland, summer in these mountains is arguably the region's best-kept secret. From May through September, the landscape transforms into a lush paradise of emerald forests, crystal-clear lakes, and wildflower-dotted alpine meadows—all under the perfect blue skies and comfortable temperatures that make summer in Whistler absolutely magical.
+                While Whistler might be world-renowned as a winter wonderland, summer in these mountains is arguably the region's best-kept secret. From May through September, the landscape transforms into a lush paradise of emerald forests, crystal-clear lakes, and wildflower-dotted alpine meadows - all under the perfect blue skies and comfortable temperatures that make summer in Whistler absolutely magical.
               </p>
 
               <p>
@@ -82,7 +82,7 @@ export default function BlogPost() {
                 Summer in Whistler: The Ultimate Mountain Playground
               </h2>
               <p>
-                When the snow melts, Whistler unveils its incredible diversity as a summer destination. The village buzzes with energy as cafés spill onto sun-drenched patios, hiking trails reveal breathtaking vistas, and the valley's five lakes offer refreshing swimming and paddleboarding opportunities. All this comes with significantly fewer crowds than winter—making it the perfect time to truly experience Whistler like a local.
+                When the snow melts, Whistler unveils its incredible diversity as a summer destination. The village buzzes with energy as cafés spill onto sun-drenched patios, hiking trails reveal breathtaking vistas, and the valley's five lakes offer refreshing swimming and paddleboarding opportunities. All this comes with significantly fewer crowds than winter - making it the perfect time to truly experience Whistler like a local.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
@@ -333,10 +333,10 @@ export default function BlogPost() {
                 />
               </div>
               <p>
-                Panoramic Estate lives up to its name in summer, offering some of the most spectacular views in Whistler from its prime Kadenwood location. This architectural masterpiece features walls of glass that frame postcard-perfect views of Whistler Valley and the surrounding mountains dressed in their summer splendor. The estate's name is no exaggeration—from sunrise to sunset, guests are treated to an ever-changing panorama of mountain peaks, alpine meadows, and the vibrant Whistler Village nestled in the valley below.
+                Panoramic Estate lives up to its name in summer, offering some of the most spectacular views in Whistler from its prime Kadenwood location. This architectural masterpiece features walls of glass that frame postcard-perfect views of Whistler Valley and the surrounding mountains dressed in their summer splendor. The estate's name is no exaggeration - from sunrise to sunset, guests are treated to an ever-changing panorama of mountain peaks, alpine meadows, and the vibrant Whistler Village nestled in the valley below.
               </p>
               <p>
-                The outdoor living spaces at Panoramic Estate are designed to maximize the summer experience, with multiple decks and terraces oriented to capture the best views and sunshine throughout the day. The heated outdoor living area allows for comfortable evenings even when mountain temperatures drop, while the hot tub offers perhaps the most spectacular viewpoint on the property—perfect for stargazing on clear summer nights. During summer stays, guests can easily access hiking trails that lead to alpine meadows carpeted with wildflowers, or mountain bike on Whistler's legendary trail network before returning to the estate to relax and soak in the incomparable mountain views.
+                The outdoor living spaces at Panoramic Estate are designed to maximize the summer experience, with multiple decks and terraces oriented to capture the best views and sunshine throughout the day. The heated outdoor living area allows for comfortable evenings even when mountain temperatures drop, while the hot tub offers perhaps the most spectacular viewpoint on the property - perfect for stargazing on clear summer nights. During summer stays, guests can easily access hiking trails that lead to alpine meadows carpeted with wildflowers, or mountain bike on Whistler's legendary trail network before returning to the estate to relax and soak in the incomparable mountain views.
               </p>
               <div className="mt-6 mb-8">
                 <Link
@@ -421,11 +421,11 @@ export default function BlogPost() {
               </div>
               
               <p>
-                What truly sets Whistler apart as a summer destination is the incredible diversity and beauty of its views. From any of our luxury properties, guests are treated to an ever-changing panorama that captures the essence of mountain living in its most spectacular form. Morning brings misty valleys with sunlight gradually illuminating the mountain peaks, while evenings offer the famous "alpenglow"—when the setting sun bathes the mountains in hues of pink and gold.
+                What truly sets Whistler apart as a summer destination is the incredible diversity and beauty of its views. From any of our luxury properties, guests are treated to an ever-changing panorama that captures the essence of mountain living in its most spectacular form. Morning brings misty valleys with sunlight gradually illuminating the mountain peaks, while evenings offer the famous "alpenglow" - when the setting sun bathes the mountains in hues of pink and gold.
               </p>
               
               <p>
-                Each of our properties offers a unique vantage point to appreciate Whistler's natural splendor. The elevated position of our Kadenwood properties—including Panoramic Estate, Slope Side Chalet, Chalet La Forja, and Timber Haven—provides sweeping views of the entire valley, while our Blueberry Hill property, Falcon, offers a perfect perspective of Alpha Lake framed by mountain peaks. Even our village property, Heron Views, delivers stunning mountain vistas from a convenient central location.
+                Each of our properties offers a unique vantage point to appreciate Whistler's natural splendor. The elevated position of our Kadenwood properties - including Panoramic Estate, Slope Side Chalet, Chalet La Forja, and Timber Haven - provides sweeping views of the entire valley, while our Blueberry Hill property, Falcon, offers a perfect perspective of Alpha Lake framed by mountain peaks. Even our village property, Heron Views, delivers stunning mountain vistas from a convenient central location.
               </p>
               
               <p>
@@ -456,7 +456,7 @@ export default function BlogPost() {
               </div>
               
               <p>
-                Summer in Whistler is about embracing outdoor living, and our luxury properties are designed to maximize this experience. Each home features thoughtfully designed outdoor spaces that become natural extensions of the indoor living areas—creating perfect settings for everything from morning yoga to evening stargazing.
+                Summer in Whistler is about embracing outdoor living, and our luxury properties are designed to maximize this experience. Each home features thoughtfully designed outdoor spaces that become natural extensions of the indoor living areas - creating perfect settings for everything from morning yoga to evening stargazing.
               </p>
               
               <p>

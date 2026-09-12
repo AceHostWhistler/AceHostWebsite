@@ -40,7 +40,7 @@ const CelebritiesInfluencersBlog = () => {
             <div className="bg-gray-50 p-6 rounded-xl shadow-sm mb-10">
               <h2 className="text-xl font-semibold mb-3">Summary</h2>
               <p className="text-gray-700">
-                Whistler isn't just a playground for winter sports enthusiasts—it's also a hotspot for celebrities and influencers seeking luxury mountain escapes. In this blog, we reveal some of the biggest stars who've chosen AceHost's luxury properties for their Whistler adventures, from Hollywood actors to social media sensations.
+                Whistler isn't just a playground for winter sports enthusiasts - it's also a hotspot for celebrities and influencers seeking luxury mountain escapes. In this blog, we reveal some of the biggest stars who've chosen AceHost's luxury properties for their Whistler adventures, from Hollywood actors to social media sensations.
               </p>
             </div>
           </div>

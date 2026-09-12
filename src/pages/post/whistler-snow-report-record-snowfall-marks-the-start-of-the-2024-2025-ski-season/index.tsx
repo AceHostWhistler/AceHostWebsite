@@ -193,8 +193,8 @@ const WhistlerSnowReport = () => {
                 to experience its world-class skiing and festive charm.
               </p>
               <p>
-                With plenty of activities both on and off the slopes—think ice
-                skating, snowshoeing, and après-ski adventures—Whistler is the
+                With plenty of activities both on and off the slopes - think ice
+                skating, snowshoeing, and après-ski adventures - Whistler is the
                 ultimate winter destination this holiday season.
               </p>
 
@@ -223,7 +223,7 @@ const WhistlerSnowReport = () => {
               </p>
               <p>
                 Don't miss your chance to experience Whistler's record
-                snowfall this season—book your stay with AceHost Whistler and
+                snowfall this season - book your stay with AceHost Whistler and
                 start creating memories in the mountains!
               </p>
             </article>

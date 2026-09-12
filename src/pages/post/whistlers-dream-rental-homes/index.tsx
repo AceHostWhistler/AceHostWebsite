@@ -451,7 +451,7 @@ export default function BlogPost() {
 
               <p className="mt-4">
                 For bigger families and ski groups, true ski-in/ski-out access
-                makes all the difference—no morning logistics, no splitting the
+                makes all the difference - no morning logistics, no splitting the
                 group across hotels. Wake up, get ready, and get straight onto
                 the mountain from one of Kadenwood&apos;s most spectacular homes.
               </p>
@@ -731,7 +731,7 @@ export default function BlogPost() {
                 The unique six half-level layout is perfect for one large family,
                 three couples, or two families travelling together. Enjoy heated
                 floors, a gas fireplace, steam shower, kids&apos; triple bunk room,
-                air conditioning, a private deck, and secure ski and bike storage—all
+                air conditioning, a private deck, and secure ski and bike storage - all
                 within easy walking distance of Creekside Village and the slopes.
               </p>
 

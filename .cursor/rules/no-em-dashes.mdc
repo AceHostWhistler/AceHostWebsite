@@ -1,0 +1,30 @@
+---
+description: Never use em dashes in copy, comments, or UI text
+alwaysApply: true
+---
+
+# No em dashes
+
+Never use the em dash character (U+2014) anywhere on this site: page copy, bios, blogs, listings, alt text, meta, comments, or commit messages.
+
+It reads as AI-generated. Write like a person.
+
+Use a comma, a period, a colon, or a spaced hyphen (` - `) instead.
+
+```
+# BAD
+That hands-on background is what I bring to every property I manage — keeping luxury homes in excellent shape.
+
+# GOOD
+That hands-on background is what I bring to every property I manage, keeping luxury homes in excellent shape.
+```
+
+```
+# BAD
+Use the arrows to browse — or see every review on Airbnb.
+
+# GOOD
+Use the arrows to browse, or see every review on Airbnb.
+```
+
+Do not use en dashes (U+2013) as a substitute for the same pause.

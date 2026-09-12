@@ -1,6 +1,6 @@
 /** Shared Content-Security-Policy for Next.js headers (CommonJS). */
 
-/** Explicit iframe/embed hosts — keep in sync with src/lib/videoEmbeds.ts */
+/** Explicit iframe/embed hosts, keep in sync with src/lib/videoEmbeds.ts */
 const EMBED_FRAME_SOURCES = [
   "'self'",
   "https://player.vimeo.com",

@@ -165,19 +165,19 @@ export const LIST_PROPERTY_TESTIMONIALS: TestimonialItem[] = [
   {
     name: "Clifford Baughn",
     role: "Guest at Chalet La Forja",
-    text: "As a retired U.S. Marine, I am not inclined to heap an exorbitant amount of praise on someone for just doing their job, but I must make an exception in the case of Ben and his team (Ben, Max, Marta, Emma and Stevie). From the time we booked until the time we left for home, Ben and his team were there for us. Their communication was outstanding, every question was answered promptly, and every detail was handled professionally. They made us feel like valued guests rather than just another reservation. Chalet La Forja was amazing — the house was spotless, beautifully maintained, and had everything our party of 12 needed for a comfortable stay.",
+    text: "As a retired U.S. Marine, I am not inclined to heap an exorbitant amount of praise on someone for just doing their job, but I must make an exception in the case of Ben and his team (Ben, Max, Marta, Emma and Stevie). From the time we booked until the time we left for home, Ben and his team were there for us. Their communication was outstanding, every question was answered promptly, and every detail was handled professionally. They made us feel like valued guests rather than just another reservation. Chalet La Forja was amazing, the house was spotless, beautifully maintained, and had everything our party of 12 needed for a comfortable stay.",
     date: "6 weeks ago",
   },
   {
     name: "Maryam Sarmadi",
     role: "Guest at Bluffs",
-    text: "I was very satisfied with my stay at Bluffs — Luxury 2 Bed Ski in Ski out at Whistler. Since this was my first trip traveling with my three-month-old baby, having a comfortable and stress-free experience meant a lot to me. Everything was extremely clean and exactly as described. The villa was very well equipped, especially the kitchen amenities, and the view was absolutely stunning. Ben was incredibly responsive, and we sincerely hope to stay here again.",
+    text: "I was very satisfied with my stay at Bluffs, Luxury 2 Bed Ski in Ski out at Whistler. Since this was my first trip traveling with my three-month-old baby, having a comfortable and stress-free experience meant a lot to me. Everything was extremely clean and exactly as described. The villa was very well equipped, especially the kitchen amenities, and the view was absolutely stunning. Ben was incredibly responsive, and we sincerely hope to stay here again.",
     date: "6 weeks ago",
   },
   {
     name: "Mark Leyser",
     role: "Guest",
-    text: "I rarely write reviews but AceHost Whistler deserves one. We were sourcing two homes for an artist and crew coming into town and Ben + Max absolutely nailed it. The level of care here was seriously impressive — late night grocery runs, wine deliveries, chefs, bartenders, airport transfers, and help with bags and logistics the whole way through. Felt way more like having a private concierge team than a rental company.",
+    text: "I rarely write reviews but AceHost Whistler deserves one. We were sourcing two homes for an artist and crew coming into town and Ben + Max absolutely nailed it. The level of care here was seriously impressive, late night grocery runs, wine deliveries, chefs, bartenders, airport transfers, and help with bags and logistics the whole way through. Felt way more like having a private concierge team than a rental company.",
     date: "13 weeks ago",
   },
   {
@@ -189,18 +189,18 @@ export const LIST_PROPERTY_TESTIMONIALS: TestimonialItem[] = [
   {
     name: "Mauricio",
     role: "Guest at The Mountaintop",
-    text: "Ben was an outstanding host. His responsiveness was exceptional. We had an unexpected issue with another property we had rented and urgently needed a new place within hours. Ben made it happen seamlessly and accommodated us on very short notice. The house is absolutely perfect — exactly as described. It was impeccably clean, spacious, beautifully designed, and located in a fantastic private area with stunning views. The amenities were excellent, and everything felt brand new and truly luxurious. Although we may have been among the first guests to stay there, the home felt professionally managed and very well prepared, as if it had years of hosting experience. We would definitely stay here again without hesitation. Thank you so much, Ben!",
+    text: "Ben was an outstanding host. His responsiveness was exceptional. We had an unexpected issue with another property we had rented and urgently needed a new place within hours. Ben made it happen seamlessly and accommodated us on very short notice. The house is absolutely perfect, exactly as described. It was impeccably clean, spacious, beautifully designed, and located in a fantastic private area with stunning views. The amenities were excellent, and everything felt brand new and truly luxurious. Although we may have been among the first guests to stay there, the home felt professionally managed and very well prepared, as if it had years of hosting experience. We would definitely stay here again without hesitation. Thank you so much, Ben!",
     date: "February 2026",
   },
   {
     name: "Jody L",
     role: "Property Owner",
-    text: "AceHost Whistler vacation rentals aren't just dealing with luxury properties — they are a high-end management team as well. They have been managing our property with high standards, receiving 5-star both owner and guest reviews. As an owner, my rental returns and vacancy rates have been the best ever. Bonus: they use WhatsApp, which is a game changer for clients around the world.",
+    text: "AceHost Whistler vacation rentals aren't just dealing with luxury properties, they are a high-end management team as well. They have been managing our property with high standards, receiving 5-star both owner and guest reviews. As an owner, my rental returns and vacancy rates have been the best ever. Bonus: they use WhatsApp, which is a game changer for clients around the world.",
     date: "May 6, 2025",
   },
 ];
 
-/** Full FAQ set — rendered in SSR-friendly markup for SEO */
+/** Full FAQ set, rendered in SSR-friendly markup for SEO */
 export const LIST_PROPERTY_FAQS: FaqItem[] = [
   {
     question:
@@ -221,7 +221,7 @@ export const LIST_PROPERTY_FAQS: FaqItem[] = [
   {
     question: "Which booking platforms do you use?",
     answer:
-      "We distribute properties across Airbnb, Vrbo, Booking.com, Expedia, AceHost.ca, direct booking channels, returning guests, and luxury travel-agent relationships — not a single platform alone.",
+      "We distribute properties across Airbnb, Vrbo, Booking.com, Expedia, AceHost.ca, direct booking channels, returning guests, and luxury travel-agent relationships, not a single platform alone.",
   },
   {
     question: "Can owners still use their property?",

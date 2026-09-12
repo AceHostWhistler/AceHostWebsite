@@ -26,7 +26,7 @@ export interface HomepageListing {
   isSkiInSkiOut?: boolean;
 }
 
-/** Homepage display order — ids must exist in the property catalog. */
+/** Homepage display order, ids must exist in the property catalog. */
 export const HOMEPAGE_PROPERTY_ORDER: readonly string[] = [
   "luxury-ski-in-ski-out-7-bedroom-kadenwood",
   "chalet-la-forja",

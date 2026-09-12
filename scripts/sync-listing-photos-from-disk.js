@@ -11,7 +11,7 @@ const META_DIR = path.join(process.cwd(), "src/data/listings/meta");
 const PROPERTIES_DIR = path.join(process.cwd(), "public/photos/properties");
 const IMAGE_EXT = /\.(avif|jpe?g|png|webp|gif)$/i;
 
-/** Listings that use /optimized/ paths — sync via optimize scripts instead */
+/** Listings that use /optimized/ paths, sync via optimize scripts instead */
 const SKIP_SLUGS = new Set(["whistler-village-penthouse-3-bdr-walk-to-ski"]);
 
 function getActiveSlugs() {

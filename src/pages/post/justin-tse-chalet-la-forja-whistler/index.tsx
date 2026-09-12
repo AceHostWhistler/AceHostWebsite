@@ -226,7 +226,7 @@ export default function BlogPost() {
                 From skiing Whistler Blackcomb and ice fishing to dining in
                 Whistler and heading into the mountains by helicopter,
                 Justin&apos;s itinerary shows why we believe a great Whistler
-                trip should be about the entire experience — not just where you
+                trip should be about the entire experience, not just where you
                 sleep.
               </p>
 
@@ -252,7 +252,7 @@ export default function BlogPost() {
               <p>
                 Many of our guests choose Kadenwood because they want a large
                 luxury chalet where several families or a big group can stay
-                together — without spending the week driving back and forth from
+                together, without spending the week driving back and forth from
                 the Village. Access to Kadenwood&apos;s private gondola connects
                 the neighbourhood with Creekside below, making it easy to reach
                 restaurants, groceries and the base area while still feeling
@@ -272,7 +272,7 @@ export default function BlogPost() {
                 in Kadenwood, from seven-bedroom ski chalets with private butler
                 service to larger estates built for multi-generational trips.
                 Homes in the neighbourhood typically feature hot tubs, expansive
-                great rooms, gourmet kitchens, and direct mountain access — the
+                great rooms, gourmet kitchens, and direct mountain access, the
                 kind of setup that makes a Whistler vacation feel effortless from
                 the moment you arrive.
               </p>
@@ -373,7 +373,7 @@ export default function BlogPost() {
                 You can ski all morning, return to an incredible private chalet
                 in the afternoon, head out for an entirely different adventure,
                 and finish the evening around a beautiful dinner with friends or
-                family. No two trips need to look the same — and that is exactly
+                family. No two trips need to look the same, and that is exactly
                 the kind of itinerary our concierge team loves building.
               </p>
 
@@ -414,7 +414,7 @@ export default function BlogPost() {
 
               <p>
                 Justin&apos;s trip included ice fishing, followed later by a
-                helicopter experience in the mountains — both arranged as part of
+                helicopter experience in the mountains, both arranged as part of
                 a broader AceHost itinerary.
               </p>
 
@@ -461,7 +461,7 @@ export default function BlogPost() {
               />
 
               <p>
-                Many of our Kadenwood homes are built for entertaining — large
+                Many of our Kadenwood homes are built for entertaining, large
                 kitchens, long dining tables, and great rooms designed for
                 groups. For some trips, having dinner prepared at the property
                 is every bit as memorable as going into town. For others, a mix
@@ -481,7 +481,7 @@ export default function BlogPost() {
                 Justin has built his audience around highly polished content
                 spanning technology, lifestyle, automotive, and travel, and his
                 cinematic style made him a perfect fit for showcasing what an
-                AceHost stay in Kadenwood can feel like — from the home itself to
+                AceHost stay in Kadenwood can feel like, from the home itself to
                 the adventures beyond it.
               </p>
 
@@ -504,7 +504,7 @@ export default function BlogPost() {
                 <Link href={PROPERTIES_HREF}>
                   luxury Whistler vacation rentals
                 </Link>{" "}
-                we manage — all available to book directly on Airbnb or through
+                we manage, all available to book directly on Airbnb or through
                 our team.
               </p>
 

@@ -241,7 +241,7 @@ const VillaRosabellaMykonos = () => {
                 </div>
                 <div className="space-y-6 leading-relaxed">
                   <p className="text-gray-800">
-                    Spanning 440 sqm across multiple levels, Villa Rosabella offers 8 luxurious bedroom suites, an open-plan designer living area, and multiple outdoor relaxation zones—all meticulously designed for sophisticated comfort and exclusivity.
+                    Spanning 440 sqm across multiple levels, Villa Rosabella offers 8 luxurious bedroom suites, an open-plan designer living area, and multiple outdoor relaxation zones - all meticulously designed for sophisticated comfort and exclusivity.
                   </p>
                   <p className="text-gray-800">
                     The top floor features an ultra-luxury suite with a king bed, lounge area, en-suite bathroom, private terrace, and stunning sea views. The first floor houses 4 luxurious suites with king/twin beds, en-suite bathrooms, private terraces, and sea & pool views.

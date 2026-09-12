@@ -212,7 +212,7 @@ const condoTownhomeOptions: FeaturedProperty[] = [
   {
     name: "Bluffs #8 - Luxury 3 Bed - Ski in Ski out - Views!",
     description:
-      "A three-bedroom Taluswood ski-in/ski-out retreat with a King suite, bunk room, hot tub, and elevated views — sleeps up to 10 guests and is ideal for families and groups who want Dave Murray access in Creekside.",
+      "A three-bedroom Taluswood ski-in/ski-out retreat with a King suite, bunk room, hot tub, and elevated views, sleeps up to 10 guests and is ideal for families and groups who want Dave Murray access in Creekside.",
     photos: [
       "/photos/properties/Bluffs Unit 8/ChatGPT Image Sep 4, 2026, 04_35_38 PM (8).png",
       "/photos/properties/Bluffs Unit 8/Bluffs 8 drone snow.avif",

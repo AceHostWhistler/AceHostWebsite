@@ -1,7 +1,7 @@
 import React from "react";
 import BookWhistlerWinterButton from "@/components/blog/BookWhistlerWinterButton";
 
-/** Full-width banner before related articles — end-of-article booking prompt */
+/** Full-width banner before related articles, end-of-article booking prompt */
 export function BlogGuestyPreRelatedBanner() {
   return (
     <div className="relative w-screen left-1/2 -translate-x-1/2 bg-gray-900 text-white border-t border-gray-800">
@@ -33,7 +33,7 @@ export function BlogGuestyPostRelatedBanner() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 rounded-xl border border-gray-200 bg-gray-50 px-5 py-5 sm:px-6">
           <p className="text-gray-800 text-sm sm:text-base leading-relaxed text-center sm:text-left">
-            See what&apos;s available for your dates — Whistler winter homes,
+            See what&apos;s available for your dates, Whistler winter homes,
             updated in real time.
           </p>
           <BookWhistlerWinterButton
@@ -86,7 +86,7 @@ export function BlogGuestyInlineBanner({
         Find your perfect mountain home
       </p>
       <p className="text-gray-300 text-sm leading-relaxed mb-6 max-w-md mx-auto">
-        Luxury vacation rentals in Whistler — chalets, condos, and ski-in/ski-out
+        Luxury vacation rentals in Whistler, chalets, condos, and ski-in/ski-out
         properties bookable online.
       </p>
       <BookWhistlerWinterButton variant="hero" label="Browse & Book Stays" />

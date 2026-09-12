@@ -92,7 +92,7 @@ export function resolveVimeoVideo({
   return null;
 }
 
-/** Standard Vimeo iframe URL — no autoplay; visitor uses Vimeo's native Play button. */
+/** Standard Vimeo iframe URL, no autoplay; visitor uses Vimeo's native Play button. */
 export function buildVimeoEmbedUrl(
   videoId: string,
   { hash, loop = false, showPortrait = false }: VimeoEmbedOptions = {}

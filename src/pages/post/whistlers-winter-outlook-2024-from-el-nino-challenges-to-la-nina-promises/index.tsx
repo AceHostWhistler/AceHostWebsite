@@ -133,7 +133,7 @@ const WhistlerWinterOutlook = () => {
                   Pacific regions, which has an inverse effect on winter weather
                   in British Columbia. La Niña typically strengthens the Pacific
                   jet stream and directs it over the Pacific Northwest, bringing
-                  cooler temperatures and increased precipitation—ideal
+                  cooler temperatures and increased precipitation - ideal
                   conditions for snowfall in Whistler.
                 </p>
 

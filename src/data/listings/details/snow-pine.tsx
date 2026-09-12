@@ -209,7 +209,7 @@ export default function SnowPineDetails({ photos }: ListingDetailsProps) {
             <br />
             <br />
             The Valley Trail is nearby, with Nita Lake approximately a 2-minute
-            walk away and Alpha Lake only a few minutes farther — excellent for
+            walk away and Alpha Lake only a few minutes farther, excellent for
             walking, biking and summer days on the water.
           </p>
         </div>

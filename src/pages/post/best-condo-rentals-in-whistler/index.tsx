@@ -90,7 +90,7 @@ export default function BlogPost() {
   const publishDate = "October 15, 2025";
   const currentArticleLink = "/post/best-condo-rentals-in-whistler";
   const metaDescription =
-    "Discover Whistler's best condo and apartment rentals from AceHost — ski-in/ski-out units, village penthouses, Creekside retreats, and the six-bedroom Blueberry Ravencrest home for large groups.";
+    "Discover Whistler's best condo and apartment rentals from AceHost, ski-in/ski-out units, village penthouses, Creekside retreats, and the six-bedroom Blueberry Ravencrest home for large groups.";
 
   return (
     <>

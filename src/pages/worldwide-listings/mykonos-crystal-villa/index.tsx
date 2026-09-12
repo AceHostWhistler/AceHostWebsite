@@ -217,7 +217,7 @@ const MykonosCrystalVilla = () => {
                 <p className="text-gray-800 mb-6">
                   The villa opens into ample bright spaces with all-white walls,
                   wooden floors and ceilings, large windows with stunning
-                  vistas, exquisite décor, and state-of-the-art furniture — the
+                  vistas, exquisite décor, and state-of-the-art furniture, the
                   perfect place to withdraw and relax after a full day exploring
                   Mykonos' treasures.
                 </p>

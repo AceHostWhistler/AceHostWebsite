@@ -12,7 +12,7 @@ export default function Document() {
         {/* Preload critical assets */}
         <link rel="preload" href="/logo.png" as="image" />
 
-        {/* Favicon — canonical file in /favicons/ */}
+        {/* Favicon, canonical file in /favicons/ */}
         <link rel="icon" href="/favicons/favicon.ico" sizes="any" />
         <link rel="shortcut icon" href="/favicons/favicon.ico" />
         <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
@@ -40,7 +40,7 @@ export default function Document() {
         {/* OpenGraph metadata for social sharing and search results */}
         <meta property="og:site_name" content="AceHost Whistler" />
         
-        {/* Twitter Card defaults — per-page images set in _app SocialShareMeta */}
+        {/* Twitter Card defaults, per-page images set in _app SocialShareMeta */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@acehost_whistler" />
 

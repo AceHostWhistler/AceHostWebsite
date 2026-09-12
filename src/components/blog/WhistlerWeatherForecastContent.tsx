@@ -224,7 +224,7 @@ export default function WhistlerWeatherForecastContent() {
         </p>
       
         <p>
-          That sounds dramatic — so does it mean a bad Whistler ski season?{" "}
+          That sounds dramatic, so does it mean a bad Whistler ski season?{" "}
           <strong>Not necessarily.</strong> Whistler&apos;s historical El Niño
           snowfall numbers are considerably more encouraging than most skiers would
           expect.
@@ -244,7 +244,7 @@ export default function WhistlerWeatherForecastContent() {
       
         <p>
           The most interesting part? Some of Whistler&apos;s historical El Niño
-          statistics are surprisingly good — and this guide breaks them down month
+          statistics are surprisingly good, and this guide breaks them down month
           by month so you can skim, plan, and actually enjoy reading the forecast.
         </p>
       </TextBlock>
@@ -1160,7 +1160,7 @@ export default function WhistlerWeatherForecastContent() {
         <p>
           This may be the most useful way to think about winter 2026/2027.
           Whistler Blackcomb officially averages{" "}
-          <strong>422 inches, or 1,072 cm, of snowfall</strong> — so even a
+          <strong>422 inches, or 1,072 cm, of snowfall</strong>, so even a
           below-average season can still deliver enormous totals:
         </p>
       </TextBlock>
@@ -1177,7 +1177,7 @@ export default function WhistlerWeatherForecastContent() {
 
       <TextBlock>
         <p>
-          Again, these are illustrations rather than forecasts — but they
+          Again, these are illustrations rather than forecasts, but they
           demonstrate something important:
         </p>
 
@@ -1396,7 +1396,7 @@ export default function WhistlerWeatherForecastContent() {
       <TextBlock>
         <p>
           March snowfall during significant El Niño winters averaged approximately{" "}
-          <strong>96% of normal</strong> in the OpenSnow analysis — essentially
+          <strong>96% of normal</strong> in the OpenSnow analysis, essentially
           normal. March also offers longer days, a deep accumulated snowpack and
           the chance to combine winter storms with increasingly sunny periods.
         </p>
@@ -1416,7 +1416,7 @@ export default function WhistlerWeatherForecastContent() {
           April historically has a weaker El Niño snowfall signal, at
           approximately <strong>81% of normal</strong> in the seven-season
           Whistler dataset. With a warmer seasonal background, spring conditions
-          could arrive earlier at lower elevations — but the alpine can remain
+          could arrive earlier at lower elevations, but the alpine can remain
           completely different.
         </p>
       </TextBlock>
@@ -1773,14 +1773,14 @@ export default function WhistlerWeatherForecastContent() {
         <p>
           We are heading into a fascinating winter. Earlier in the year, the
           discussion was whether <strong>La Niña, neutral conditions or El Niño</strong>{" "}
-          would dominate — we now have clarity: El Niño is here, strengthening, and
+          would dominate, we now have clarity: El Niño is here, strengthening, and
           NOAA says there is a greater than{" "}
           <strong>90% chance it becomes very strong during fall and winter
           2026/2027</strong>.
         </p>
         <p>
           That should increase expectations for a{" "}
-          <strong>warmer and more variable Whistler winter</strong> — but it should
+          <strong>warmer and more variable Whistler winter</strong>, but it should
           not automatically scare skiers away. Whistler&apos;s enormous elevation
           range, Pacific moisture, Coast Mountain topography and historical El Niño
           resilience give the resort unusual protection when patterns get
@@ -1792,7 +1792,7 @@ export default function WhistlerWeatherForecastContent() {
         title="Historical El Niño highlights (OpenSnow, 7 seasons)"
         items={[
           "Whistler snowfall through March 31 averaged ~959 cm vs. 914 cm normal",
-          "January averaged 138% of normal snowfall — five of seven Januaries above average",
+          "January averaged 138% of normal snowfall, five of seven Januaries above average",
           "February averaged 127% of normal",
           "Four of seven seasons finished above the 30-year normal by March 31",
         ]}
@@ -1800,7 +1800,7 @@ export default function WhistlerWeatherForecastContent() {
 
       <TextBlock>
         <p>
-          None of that guarantees another huge season — weather does not work that
+          None of that guarantees another huge season, weather does not work that
           way. But they do tell us something important:
         </p>
       </TextBlock>
@@ -1815,7 +1815,7 @@ export default function WhistlerWeatherForecastContent() {
       <KeyPoints
         title="Our cautiously optimistic take"
         items={[
-          "More weather drama — and the freezing level becoming everyone&apos;s favourite number",
+          "More weather drama, and the freezing level becoming everyone&apos;s favourite number",
           "Occasional rain in the Village while snow piles up higher on the mountain",
           "Warmer stretches mixed with cold Pacific storm cycles",
           "January or February could deliver the kind of Coast Mountain dump that makes everyone forget the August forecast",
@@ -1826,7 +1826,7 @@ export default function WhistlerWeatherForecastContent() {
         <p>
           So our early <strong>Whistler snow forecast for winter 2026/2027</strong>{" "}
           is cautiously optimistic, particularly for the heart of the season. El
-          Niño can influence Whistler&apos;s winter — it just does not get to write
+          Niño can influence Whistler&apos;s winter, it just does not get to write
           every day&apos;s weather forecast.
         </p>
       </TextBlock>

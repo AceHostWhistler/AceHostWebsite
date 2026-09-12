@@ -19,9 +19,9 @@ const listing: ListingData = {
   },
   header:   {
       "title": "\n                Raven's Nest | Ski-in/Ski-out with Views\n              ",
-      "guests": "—",
-      "bedrooms": "—",
-      "bathrooms": "—",
+      "guests": " - ",
+      "bedrooms": " - ",
+      "bathrooms": " - ",
       "priceRange": "Contact for pricing"
   },
   galleryTitle: "Raven's Nest",

@@ -9,7 +9,7 @@ import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
 
 const SLUG = "best-time-to-visit-whistler-for-luxury-travelers";
-/** Filenames use U+202F (narrow no-break space) before "PM" — matches files in /public */
+/** Filenames use U+202F (narrow no-break space) before "PM", matches files in /public */
 const IMG_SNOW = "/Screenshot 2026-04-23 at 5.17.22\u202fPM.png";
 const IMG_RESTAURANT = "/Screenshot 2026-04-23 at 5.17.44\u202fPM.png";
 const IMG_SUMMER_VILLAGE = "/Screenshot 2026-04-23 at 5.18.12\u202fPM.png";

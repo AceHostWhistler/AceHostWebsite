@@ -46,7 +46,7 @@ function PropertyShowcaseCard({
         <Link href={href} className="block relative h-full w-full">
           <PropertyCoverImage
             src={property.images[0]}
-            alt={`${property.name} — Whistler property managed by AceHost`}
+            alt={`${property.name}, Whistler property managed by AceHost`}
             priority={imagePriority}
             className="object-cover"
           />

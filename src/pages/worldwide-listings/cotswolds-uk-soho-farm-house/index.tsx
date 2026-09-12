@@ -500,7 +500,7 @@ const CotswoldsUKSohoFarmHouse = ({
             <div className="mb-10">
               <h3 className="text-2xl font-bold mb-3">Annex House (40m²)</h3>
               <p className="text-gray-700 mb-8">
-                Tucked away behind the newly surfaced private tennis court, the annex is a peaceful escape of its own — perfect for families or guests who want their own quarters, privacy, or step-free access to two bedrooms and a bathroom. It features a full bathroom and a compact kitchenette, ideal for early risers or night owls who want their own space.
+                Tucked away behind the newly surfaced private tennis court, the annex is a peaceful escape of its own, perfect for families or guests who want their own quarters, privacy, or step-free access to two bedrooms and a bathroom. It features a full bathroom and a compact kitchenette, ideal for early risers or night owls who want their own space.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -546,7 +546,7 @@ const CotswoldsUKSohoFarmHouse = ({
           <div className="max-w-4xl mx-auto px-6 md:px-10 lg:px-8 text-center mb-24">
             <h2 className="text-2xl sm:text-3xl font-bold mb-6">Experience countryside luxury at its finest</h2>
             <p className="text-gray-700 max-w-3xl mx-auto mb-8 leading-relaxed text-lg">
-              This is not just a house—it's an experience. A rare blend of country charm and modern luxury, all within striking distance of Soho Farmhouse and the Cotswolds' best attractions. Perfect for family gatherings, corporate retreats, or special celebrations.
+              This is not just a house - it's an experience. A rare blend of country charm and modern luxury, all within striking distance of Soho Farmhouse and the Cotswolds' best attractions. Perfect for family gatherings, corporate retreats, or special celebrations.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link

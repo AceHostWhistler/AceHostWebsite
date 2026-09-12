@@ -287,13 +287,13 @@ const VillaOineasGreeceMykonos = () => {
                 </div>
                 <div className="space-y-6 leading-relaxed">
                   <p className="text-gray-800">
-                    This private estate features a main villa and a guest house, offering five spacious bedrooms—each with en-suite bathrooms and high-end amenities. Every room is thoughtfully designed for comfort and relaxation, making Villa Oineas perfect for families, friends, or high-profile guests.
+                    This private estate features a main villa and a guest house, offering five spacious bedrooms - each with en-suite bathrooms and high-end amenities. Every room is thoughtfully designed for comfort and relaxation, making Villa Oineas perfect for families, friends, or high-profile guests.
                   </p>
                   <p className="text-gray-800">
                     The Master Suite includes a king-size bed, walk-in wardrobe, and an en-suite with Jacuzzi & waterfall shower, plus private verandas. All other bedrooms feature king-size beds, with some offering additional sofa beds and luxury bathroom amenities.
                   </p>
                   <p className="text-gray-800">
-                    The Guest House is a separate maisonette with a king-size bed, double sofa bed, full kitchen, living room, and en-suite bathroom—perfect for those seeking additional privacy.
+                    The Guest House is a separate maisonette with a king-size bed, double sofa bed, full kitchen, living room, and en-suite bathroom - perfect for those seeking additional privacy.
                   </p>
                 </div>
               </div>
@@ -320,7 +320,7 @@ const VillaOineasGreeceMykonos = () => {
                 </div>
                 <div className="space-y-6 leading-relaxed">
                   <p className="text-gray-800">
-                    The main villa includes two stylish living rooms, a designer dining area, and a fully equipped kitchen. At the heart of the estate lies a unique stone-built underground wine cellar—perfect for private tastings or intimate dinners in an unforgettable setting.
+                    The main villa includes two stylish living rooms, a designer dining area, and a fully equipped kitchen. At the heart of the estate lies a unique stone-built underground wine cellar - perfect for private tastings or intimate dinners in an unforgettable setting.
                   </p>
                   <p className="text-gray-800">
                     Step outside to a world of open-air luxury, ideal for relaxation or events for up to 200 guests. The estate features a heated seawater infinity pool with waterfall function & reverse swimming current, Jacuzzi, BBQ area, and a detachable glass-roofed patio for day lounging or elegant evenings.
@@ -547,7 +547,7 @@ const VillaOineasGreeceMykonos = () => {
           <div className="max-w-4xl mx-auto px-6 md:px-10 lg:px-8 text-center mb-24">
             <h2 className="text-2xl sm:text-3xl font-bold mb-6">Experience the ultimate luxury escape in Mykonos</h2>
             <p className="text-gray-700 max-w-3xl mx-auto mb-8 leading-relaxed text-lg">
-              Whether you're planning a luxury vacation in Greece, a destination wedding, or a private island escape, Villa Oineas delivers unmatched privacy, impeccable design, and curated service. With its Cycladic charm, expansive grounds, and modern comforts, this is not just a stay—it's a once-in-a-lifetime experience.
+              Whether you're planning a luxury vacation in Greece, a destination wedding, or a private island escape, Villa Oineas delivers unmatched privacy, impeccable design, and curated service. With its Cycladic charm, expansive grounds, and modern comforts, this is not just a stay - it's a once-in-a-lifetime experience.
             </p>
             <Link
               href="/contact"
