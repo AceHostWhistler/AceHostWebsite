@@ -234,14 +234,14 @@ const ConciergeService = () => {
 
         <main className="pb-20">
           {/* Hero Section */}
-          <section className="relative flex min-h-[100svh] items-end overflow-hidden text-white">
+          <section className="relative flex overflow-hidden text-white">
             <Image
-              src="/photos/homepage/WhistlerVipConcierge.jpg"
+              src="/photos/homepage/WhistlerVipConcierge-hero.jpg"
               alt=""
               fill
               priority
               sizes="100vw"
-              className="object-cover animate-kenburns motion-reduce:animate-none"
+              className="object-cover object-center animate-kenburns motion-reduce:animate-none"
               aria-hidden="true"
             />
             <div
@@ -250,12 +250,9 @@ const ConciergeService = () => {
             />
             <div className="film-grain absolute inset-0" aria-hidden="true" />
 
-            <div className="relative z-10 w-full px-4 pb-16 pt-32 sm:px-6 sm:pb-20 lg:px-8">
-              <div className="mx-auto grid max-w-7xl items-end gap-10 lg:grid-cols-12">
+            <div className="relative z-10 w-full px-4 pb-10 pt-24 sm:px-6 sm:pb-12 lg:px-8">
+              <div className="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-12">
                 <div className="concierge-hero-copy lg:col-span-7">
-                  <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-white/70">
-                    AceHost
-                  </p>
                   <h1 className="mb-5 text-3xl font-bold tracking-tight leading-[1.08] sm:text-4xl lg:text-5xl">
                     Whistler VIP Concierge Services
                   </h1>
