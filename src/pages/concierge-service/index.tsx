@@ -6,6 +6,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ConciergeReel from "@/components/ConciergeReel";
+import PageCoverBackground from "@/components/PageCoverBackground";
 import Link from "next/link";
 import { IoIosArrowBack, IoIosArrowForward, IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import {
@@ -236,20 +237,7 @@ const ConciergeService = () => {
         <main className="pb-12">
           {/* Hero Section */}
           <section className="relative flex overflow-hidden text-white">
-            <Image
-              src="/photos/homepage/WhistlerVipConcierge-hero.jpg"
-              alt=""
-              fill
-              priority
-              sizes="100vw"
-              className="object-cover object-center animate-kenburns motion-reduce:animate-none"
-              aria-hidden="true"
-            />
-            <div
-              className="absolute inset-0 bg-gradient-to-b from-stone-950/55 via-stone-950/20 to-stone-950/80"
-              aria-hidden="true"
-            />
-            <div className="film-grain absolute inset-0" aria-hidden="true" />
+            <PageCoverBackground src="/photos/homepage/WhistlerVipConcierge-hero.jpg" />
 
             <div className="relative z-10 w-full px-4 pb-8 pt-24 sm:px-6 sm:pb-10 lg:px-8">
               <div className="mx-auto grid max-w-7xl items-center gap-6 lg:grid-cols-12">

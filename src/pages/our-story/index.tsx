@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
+import PageCoverBackground from "@/components/PageCoverBackground";
 import Footer from "@/components/Footer";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { TRUST_STATS } from "@/data/listPropertyContent";
@@ -133,16 +134,13 @@ const OurStory = () => {
         <link rel="canonical" href="https://www.acehost.ca/our-story" />
       </Head>
 
-      <Navigation transparent={false} />
+      <Navigation transparent />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-stone-950 text-white">
-        <div
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_75%_0%,rgba(255,255,255,0.06),transparent_55%)]"
-          aria-hidden
-        />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 lg:py-24">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <PageCoverBackground src="/photos/page-covers/about.jpg" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8 sm:pb-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
             <div className="lg:col-span-5">
               <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-stone-400 mb-4">
                 About AceHost

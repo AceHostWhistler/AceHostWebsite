@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import GuestySearchWidget from "@/components/GuestySearchWidget";
 import PropertyCoverImage from "@/components/PropertyCoverImage";
 import VimeoEmbed from "@/components/VimeoEmbed";
+import PageCoverBackground from "@/components/PageCoverBackground";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { FaUser, FaBed, FaBath } from "react-icons/fa";
@@ -331,21 +332,14 @@ const Home = () => {
       </Head>
 
       <div className="min-h-screen bg-white text-gray-900 overflow-x-hidden max-w-full">
-        <Navigation transparent={false} />
+        <Navigation transparent />
 
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-stone-950 text-white">
-          <div
-            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_75%_0%,rgba(180,83,9,0.16),transparent_55%)]"
-            aria-hidden="true"
-          />
-          <div
-            className="pointer-events-none absolute inset-0 bg-gradient-to-b from-stone-900/40 via-transparent to-stone-950"
-            aria-hidden="true"
-          />
+          <PageCoverBackground src="/photos/page-covers/home.jpg" />
 
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-14">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8 sm:pb-10">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
               {/* Text first in DOM for SEO; stacks above video on mobile */}
               <motion.div className="lg:col-span-5 xl:col-span-5" {...riseIn}>
                 <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.08] text-white mb-4">

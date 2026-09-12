@@ -5,6 +5,7 @@ import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import Navigation from "@/components/Navigation";
+import PageCoverBackground from "@/components/PageCoverBackground";
 import Footer from "@/components/Footer";
 import { ArrowRight, Plus, Minus } from "lucide-react";
 import { buildFaqPageSchema } from "@/lib/seo/schema";
@@ -192,23 +193,22 @@ const FAQPage = () => {
       </Head>
 
       <div className="min-h-screen bg-white">
-        <Navigation transparent={false} />
+        <Navigation transparent />
 
         <main>
           {/* Hero Section */}
-          <section className="py-16 bg-gray-50">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto text-center">
-                <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-                  AceHost FAQ
-                </h1>
-                <p className="text-xl text-gray-600">
-                  Everything you need to know about booking with AceHost,
-                  our luxury vacation homes, VIP concierge services, and
-                  property management in Whistler. Can't find the answer
-                  you're looking for? Please chat to our team.
-                </p>
-              </div>
+          <section className="relative overflow-hidden bg-stone-950 text-white">
+            <PageCoverBackground src="/photos/page-covers/faq.jpg" />
+            <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8 sm:pb-10 text-center">
+              <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-3">
+                AceHost FAQ
+              </h1>
+              <p className="text-sm sm:text-base text-white/85 max-w-2xl mx-auto">
+                Everything you need to know about booking with AceHost,
+                our luxury vacation homes, VIP concierge services, and
+                property management in Whistler. Can&apos;t find the answer
+                you&apos;re looking for? Please chat to our team.
+              </p>
             </div>
           </section>
 
