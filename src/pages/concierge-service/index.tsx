@@ -603,7 +603,7 @@ const ConciergeService = () => {
                   icon={<MdChildCare className="text-lg" />}
                   title="Childcare Services"
                   description="Enjoy some adult time while knowing your children are in good hands with our professional childcare providers. All our babysitters and nannies are experienced, background-checked, and trained in first aid, ensuring the highest level of care and fun for your little ones."
-                  imageSrc="/photos/homepage/concierge-service/BabySitting.jpg"
+                  imageSrc="/photos/homepage/concierge-service/babysitting.jpg"
                   imageAlt="Childcare Services"
                 />
 
