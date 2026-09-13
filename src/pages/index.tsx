@@ -433,7 +433,7 @@ const Home = () => {
                     href={href}
                     className="group relative flex min-h-[28rem] overflow-hidden rounded-2xl"
                   >
-                    <div className="absolute inset-x-0 -top-1/4 h-[125%]">
+                    <div className="absolute inset-x-0 -top-1/3 h-[133.333%]">
                       <Image
                         src={section.image}
                         alt={section.title}
