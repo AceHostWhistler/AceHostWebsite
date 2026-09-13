@@ -7,6 +7,12 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
+import {
+  getPropertyAirbnbLink,
+  shouldUseContactForBooking,
+} from "@/data/propertyAirbnbLinks";
+import { getWhistlerCondoAndTownhomeProperties } from "@/data/properties/homepageListings";
+import { getPropertyListingPath } from "@/data/properties/listingPath";
 import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
 
 const SLUG = "best-luxury-airbnb-ski-in-ski-out-vacation-rentals-in-whistler-for-large-groups";
@@ -88,7 +94,7 @@ export default function BlogPost() {
 
   return (
     <>
-      <BlogSeoHead keywords="Whistler large group rental, luxury Airbnb Whistler, ski in ski out Whistler, Kadenwood chalet, Whistler family vacation, AceHost, Whistler hot tub, Whistler Blueberry, Whistler Village chalet, group trip Whistler" />
+      <BlogSeoHead keywords="Whistler large group rental, luxury Airbnb Whistler, ski in ski out Whistler, Kadenwood chalet, Whistler family vacation, AceHost, Whistler hot tub, Whistler Blueberry, Whistler Village chalet, Whistler condos, Whistler townhomes, group trip Whistler" />
 
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
@@ -104,7 +110,7 @@ export default function BlogPost() {
               <div className="flex items-center text-sm text-gray-600 mb-8 flex-wrap gap-2">
                 <span>Published: {PUBLISH_DATE}</span>
                 <span className="hidden sm:inline">|</span>
-                <span>16 min read</span>
+                <span>24 min read</span>
               </div>
               <div className="relative w-full aspect-[16/9] mb-8 rounded-xl overflow-hidden">
                 <Image
@@ -141,7 +147,9 @@ export default function BlogPost() {
               <p>
                 Below are some of the best luxury Airbnb ski in ski out vacation rentals in Whistler
                 for large groups, especially if you want big kitchens, hot tubs, multiple bedrooms,
-                and concierge help to make the trip smooth from start to finish.
+                and concierge help to make the trip smooth from start to finish. After the large
+                chalets, there is a separate Condos and Townhomes section with every Whistler condo
+                and townhome currently on the AceHost properties page.
               </p>
 
               <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">
@@ -682,6 +690,81 @@ export default function BlogPost() {
                 listingHref="/listings/luxury-6-bedroom-whistler-village-blueberry"
                 airbnbHref={AIRBNB.luxury6}
               />
+
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">
+                Condos and Townhomes
+              </h2>
+              <p>
+                Not every group needs a nine-bedroom Kadenwood estate. If you want ski access,
+                Village walkability, a hot tub, and an easier price point, these Whistler condos
+                and townhomes are a strong fit. This list includes every AceHost condo and townhome
+                currently shown on our properties page, from Scandinave Retreat and Granite Court
+                to Valhalla, Le Chamois, Marquise, and the rest of the Whistler collection.
+              </p>
+
+              {getWhistlerCondoAndTownhomeProperties().map((property, index) => {
+                const listingHref = getPropertyListingPath(property);
+                const airbnbHref = getPropertyAirbnbLink(
+                  property.id,
+                  property.airbnbLink
+                );
+                const useContact = shouldUseContactForBooking(
+                  property.id,
+                  property.contactLink,
+                  property.airbnbLink
+                );
+                const stats = [
+                  property.guests ? `Sleeps ${property.guests}` : null,
+                  property.bedrooms
+                    ? `${property.bedrooms} bedroom${property.bedrooms === 1 ? "" : "s"}`
+                    : null,
+                  property.beds
+                    ? `${property.beds} bed${property.beds === 1 ? "" : "s"}`
+                    : null,
+                  property.bathrooms
+                    ? `${property.bathrooms} bath${property.bathrooms === 1 ? "" : "s"}`
+                    : null,
+                  property.isSkiInSkiOut ? "Ski-in/ski-out" : null,
+                ]
+                  .filter(Boolean)
+                  .join(" | ");
+
+                return (
+                  <div key={property.id}>
+                    <h3 className="text-xl font-bold text-gray-900 mt-10 mb-4">
+                      {index + 10}. {property.name}
+                    </h3>
+                    {property.images[0] ? (
+                      <div className="relative aspect-[16/9] rounded-lg overflow-hidden my-6 not-prose">
+                        <Image
+                          src={property.images[0]}
+                          alt={property.name}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, 896px"
+                        />
+                      </div>
+                    ) : null}
+                    {stats ? (
+                      <p className="text-gray-700 font-medium not-prose text-base mb-4">
+                        {stats}
+                      </p>
+                    ) : null}
+                    <p>{property.description}</p>
+                    <CtaBlock
+                      listingHref={listingHref}
+                      airbnbHref={
+                        useContact || !airbnbHref ? "/contact" : airbnbHref
+                      }
+                      airbnbLabel={
+                        useContact || !airbnbHref
+                          ? "Contact AceHost"
+                          : "View on Airbnb"
+                      }
+                    />
+                  </div>
+                );
+              })}
 
               <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">
                 What to look for in a large group Airbnb in Whistler

@@ -1,4 +1,6 @@
 import {
+  CONDO_IDS,
+  TOWNHOME_IDS,
   isWhistlerAreaLocation,
   propertyCategories,
   type PropertyFeature,
@@ -136,4 +138,17 @@ export function getHomepageListings(): HomepageListing[] {
     }
     return [toHomepageListing(property)];
   });
+}
+
+/** Whistler condos and townhomes shown on the properties page, in display order. */
+export function getWhistlerCondoAndTownhomeProperties(): PropertyFeature[] {
+  const byId = getCatalogPropertyMap();
+  const ids = new Set([...TOWNHOME_IDS, ...CONDO_IDS]);
+  const properties = [...ids]
+    .map((id) => byId.get(id))
+    .filter((property): property is PropertyFeature => {
+      if (!property) return false;
+      return isWhistlerAreaLocation(property.location);
+    });
+  return sortPropertiesByDisplayOrder(properties);
 }
