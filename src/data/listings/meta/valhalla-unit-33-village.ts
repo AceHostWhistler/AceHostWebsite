@@ -42,7 +42,7 @@ const listing: ListingData = {
   seo: {
     title: "Whistler Village - Private Hot Tub - Walk to Hill | AceHost",
     description:
-      "Welcome to Valhalla Peaks, a spacious 3-bedroom Whistler Village townhome with a private hot tub, gas fireplace, underground parking, and room for up to 8 guests.",
+      "Stay in the centre of main Whistler Village at Valhalla, a rare 3-bedroom townhouse with your own private hot tub. Steps from Marketplace, Olympic Plaza and the Village Stroll, you can walk to coffee shops, the ski hill and lifts, restaurants, groceries and après without a car.",
   },
   header: {
     title: "Whistler Village - Private Hot Tub - Walk to Hill",
@@ -64,7 +64,7 @@ const listing: ListingData = {
     name: "Whistler Village - Private Hot Tub - Walk to Hill",
     image: `${base}/Living room angle 3.png`,
     description:
-      "Valhalla Peaks townhome in Whistler Village with a private hot tub, three bedrooms, underground parking, and walk-to-lift access.",
+      "Stay in the centre of main Whistler Village at Valhalla, a rare 3-bedroom townhouse with your own private hot tub. Walk to the ski hill, Marketplace, Olympic Plaza and the Village Stroll.",
     sku: "valhalla-unit-33-village",
     brand: {
       "@type": "Brand",

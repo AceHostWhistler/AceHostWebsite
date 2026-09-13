@@ -720,7 +720,7 @@ export const propertyCategories: PropertyCategory[] = [
             beds: 5,
             location: "Whistler Village, Whistler",
             description:
-              "Welcome to Valhalla Peaks, a spacious 3-bedroom Whistler Village townhome with a private hot tub, gas fireplace, underground parking, and room for up to 8 guests. Marketplace and Fresh St. Market are across the street, with the Village Stroll and lifts nearby.",
+              "Stay in the centre of main Whistler Village at Valhalla, a rare 3-bedroom townhouse with your own private hot tub. Steps from Marketplace, Olympic Plaza and the Village Stroll, you can walk to the ski hill, restaurants, groceries and après without a car.",
             features: [
               "Walk to Whistler Village Gondola",
               "Private Balcony Hot Tub",
