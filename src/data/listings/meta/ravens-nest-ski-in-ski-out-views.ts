@@ -50,17 +50,18 @@ const listing: ListingData = {
   "/photos/properties/Raven_s Nest 3-Bedroom/20241125 MM2 01 DJI_0371-Edit.jpg"
 ],
   seo: {
-    title: "Raven's Nest | Ski in Ski out | Views - AceHost",
-    description: "Escape to luxury in this newly renovated 4-bedroom chalet in Tantalus, sleeping 8 with ski-in/ski-out convenience and breathtaking mountain views. Features private hot tub, sauna, and garage parking.",
+    title: "Raven's Nest | Ski-In/Out | Hot Tub | Views - AceHost",
+    description: "Stay at Raven's Nest, a renovated Whistler chalet in Tantalus with 4 king beds sleeping 8, 3.5 baths, ski-in/ski-out access via a short walk, a private hot tub, sauna and mountain views.",
   },
   header:   {
-      "title": "Raven's Nest | Ski in Ski out | Views",
+      "title": "Raven's Nest | Ski-In/Out | Hot Tub | Views",
       "guests": 8,
       "bedrooms": 4,
-      "bathrooms": 3,
+      "beds": 4,
+      "bathrooms": 3.5,
       "priceRange": "$2,000-$3,500 per night",
       "holidayPrice": "$2,300-$4,000 Nightly | Christmas & NY",
-      "airbnbLink": "https://www.airbnb.ca/rooms/1300258964918876012?guests=1&adults=1&s=67&unique_share_id=41b635e9-00a9-441c-a134-056b2b3814ac"
+      "airbnbLink": "https://www.airbnb.ca/rooms/1300258964918876012?guests=1&adults=1&s=67&unique_share_id=d7c3a27e-f05e-498b-a7dd-da59b54af9bf"
   },
   galleryTitle: "Raven's Nest",
   photoAltPrefix: "Raven's Nest",

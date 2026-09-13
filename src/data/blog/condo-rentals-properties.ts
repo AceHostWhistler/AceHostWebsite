@@ -45,20 +45,20 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     imageAlt: "Tyndall Stone Lodge luxe 2 bedroom Whistler Village condo",
   },
   {
-    name: "Raven's Nest | Ski in Ski out | Views",
+    name: "Raven's Nest | Ski-In/Out | Hot Tub | Views",
     priceRange: "$2,000-$4,000 per night (seasonal)",
     stats:
-      "Sleeps 8 | 4 Bedrooms | 4 Beds | 3 Bathrooms | Ski-in/Ski-out | Private Hot Tub | Mountain Views",
+      "Sleeps 8 | 4 Bedrooms | 4 King Beds | 3.5 Bathrooms | Ski-in/Ski-out | Private Hot Tub | Sauna | Mountain Views",
     paragraphs: [
-      "Perched perfectly on Blackcomb Mountain, Raven's Nest offers that rare combination of true ski-in/ski-out access and breathtaking panoramic views that will leave you speechless. This exquisite 4-bedroom townhome brings luxury slope-side living to new heights, with stylish interiors that complement – rather than compete with – the stunning natural beauty outside.",
-      "After a day conquering the slopes (which are literally at your doorstep), soothe tired muscles in your private hot tub while gazing at snowcapped peaks and alpenglow sunsets. The spacious, light-filled living areas create a warm gathering place for recounting the day's adventures, while the gourmet kitchen makes meal preparation a joy.",
-      "Four bedrooms sleep up to eight guests, including an additional 4th bedroom den, with comfortable beds and premium linens ensuring restful sleep before another day of mountain adventures. With ski storage, a garage, and proximity to Blackcomb's base amenities, Raven's Nest delivers the quintessential ski property experience for those who refuse to compromise on location or luxury.",
+      "Welcome to Raven's Nest, a renovated chalet in the Tantalus neighbourhood on Whistler Mountain. Three king bedrooms plus a private enclosed king-bed den sleep eight, with ski-in/ski-out access via a short walk to a nearby run about 100 metres from the front door.",
+      "After skiing, step from the top-floor living room onto the upper deck for a soak in the private hot tub, or use the sauna through the primary ensuite. A gas fireplace, premium kitchen and Sonos sound make the living level an easy place to settle in, with mountain views throughout.",
+      "Whistler Village is about a 15-minute walk or a 2-minute drive for dining, shopping and apres. Garage parking, mudroom ski storage and a boot dryer keep ski days practical.",
     ],
     airbnbHref:
-      "https://www.airbnb.ca/rooms/1300258964918876012?guests=1&adults=1&s=67&unique_share_id=41b635e9-00a9-441c-a134-056b2b3814ac",
+      "https://www.airbnb.ca/rooms/1300258964918876012?guests=1&adults=1&s=67&unique_share_id=d7c3a27e-f05e-498b-a7dd-da59b54af9bf",
     listingHref: "/listings/ravens-nest-ski-in-ski-out-views",
     imageSrc: "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05349.jpg",
-    imageAlt: "Raven's Nest | Ski in Ski out townhome with mountain views",
+    imageAlt: "Raven's Nest ski-in/ski-out chalet with hot tub and mountain views",
   },
   {
     name: "The Aspens | On-Hill Ski-In/Out | Hot Tubs | 2 BDR",

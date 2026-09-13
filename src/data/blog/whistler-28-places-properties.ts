@@ -118,13 +118,13 @@ export const largeHomeProperties: Whistler28Property[] = [
   },
   {
     number: 11,
-    name: "Raven's Nest | Ski in Ski out | Views",
+    name: "Raven's Nest | Ski-In/Out | Hot Tub | Views",
     description:
-      "A four-bedroom Blackcomb retreat sleeping 8, with ski-in, ski-out access, mountain views, and a peaceful alpine setting.",
+      "A renovated Tantalus chalet sleeping 8 across 4 king beds, with ski-in/ski-out access via a short walk, a private hot tub, sauna and mountain views. Whistler Village is about a 15-minute walk or 2-minute drive.",
     image: "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05349.jpg",
     listingHref: "/listings/ravens-nest-ski-in-ski-out-views",
     bookUrl:
-      "https://www.airbnb.ca/rooms/1300258964918876012?guests=1&adults=1&s=67&unique_share_id=41b635e9-00a9-441c-a134-056b2b3814ac",
+      "https://www.airbnb.ca/rooms/1300258964918876012?guests=1&adults=1&s=67&unique_share_id=d7c3a27e-f05e-498b-a7dd-da59b54af9bf",
   },
   {
     number: 12,

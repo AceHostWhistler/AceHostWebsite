@@ -908,7 +908,7 @@ export const propertyCategories: PropertyCategory[] = [
 
           {
             id: "ravens-nest",
-            name: "Raven's Nest | Ski in Ski out | Views",
+            name: "Raven's Nest | Ski-In/Out | Hot Tub | Views",
             images: [
               "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05349.jpg",
               "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05358.jpg",
@@ -916,14 +916,17 @@ export const propertyCategories: PropertyCategory[] = [
             ],
             guests: 8,
             bedrooms: 4,
-            bathrooms: 3,
-            location: "Blackcomb, Whistler",
+            beds: 4,
+            bathrooms: 3.5,
+            location: "Tantalus, Whistler",
             description:
-              "Raven's Nest is a beautiful ski-in/ski-out townhome on Blackcomb Mountain with 4 bedrooms sleeping 8, stunning views, and luxury accommodations for your Whistler getaway.",
+              "Raven's Nest is a renovated ski-in/ski-out chalet in Tantalus on Whistler Mountain, with 4 king beds sleeping 8, mountain views, a private hot tub on the upper deck, a sauna, and Whistler Village about a 15-minute walk or 2-minute drive away.",
             features: [
               "Ski-in/Ski-out Access",
               "Mountain Views",
               "Private Hot Tub",
+              "Sauna",
+              "4 King Beds",
               "Fully Equipped Kitchen",
               "Garage",
               "Fireplace",
@@ -933,6 +936,8 @@ export const propertyCategories: PropertyCategory[] = [
             priceRange: "$2,000-$3,500 per night",
             winterPrice: "",
             holidayPrice: "$2,300-$4,000 Nightly | Christmas & NY",
+            airbnbLink:
+              "https://www.airbnb.ca/rooms/1300258964918876012?guests=1&adults=1&s=67&unique_share_id=d7c3a27e-f05e-498b-a7dd-da59b54af9bf",
             isSkiInSkiOut: true,
             isPetFriendly: false,
           },

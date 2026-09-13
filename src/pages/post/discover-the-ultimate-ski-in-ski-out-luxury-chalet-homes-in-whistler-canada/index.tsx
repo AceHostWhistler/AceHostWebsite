@@ -288,11 +288,11 @@ export default function BlogPost() {
                 Raven's Nest
               </h3>
               <p>
-                This luxurious 4-bedroom ski-in/ski-out property sleeping 8 offers direct
-                access to Whistler Mountain. Featuring contemporary mountain
-                design, an open concept living area, state-of-the-art kitchen,
-                and private outdoor hot tub with stunning views of the
-                surrounding mountains.
+                This renovated Tantalus chalet sleeps 8 across 4 king beds, with
+                ski-in/ski-out access via a short walk to a nearby Whistler
+                Mountain run. Enjoy a private hot tub on the upper deck, a sauna,
+                a gas fireplace and mountain views, with Whistler Village about a
+                15-minute walk or 2-minute drive away.
               </p>
               <div className="mt-4 mb-8">
                 <Link
