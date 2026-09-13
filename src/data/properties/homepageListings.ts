@@ -1,3 +1,4 @@
+import { isHiddenFromBlogs } from "@/data/blog/hiddenFromBlogs";
 import {
   CONDO_IDS,
   TOWNHOME_IDS,
@@ -151,4 +152,11 @@ export function getWhistlerCondoAndTownhomeProperties(): PropertyFeature[] {
       return isWhistlerAreaLocation(property.location);
     });
   return sortPropertiesByDisplayOrder(properties);
+}
+
+/** Same as the properties-page condo list, minus homes that should not appear in blogs. */
+export function getWhistlerCondoAndTownhomePropertiesForBlogs(): PropertyFeature[] {
+  return getWhistlerCondoAndTownhomeProperties().filter(
+    (property) => !isHiddenFromBlogs(property)
+  );
 }

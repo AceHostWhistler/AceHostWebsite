@@ -10,6 +10,7 @@ import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas"
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
 import BlogSeoHead from "@/components/blog/BlogSeoHead";
+import { isHiddenFromBlogs } from "@/data/blog/hiddenFromBlogs";
 
 const SLUG = "fifa-vancouver-whistler-the-luxury-whistler-fifa-experience";
 const PUBLISH_DATE = "May 1, 2026";
@@ -145,19 +146,6 @@ const condoTownhomeOptions: FeaturedProperty[] = [
       "https://www.airbnb.ca/rooms/1565322561889624431?guests=1&adults=1&s=67&unique_share_id=bcb85131-d1b0-4d39-9975-7580fd94a5d9",
   },
   {
-    name: "Luxe-Cozy 3-Bed Whistler Village",
-    description:
-      "A polished 3-bedroom option in a great location, ideal for groups wanting a relaxed but elevated Whistler base.",
-    photos: [
-      "/photos/properties/Cozy Luxe 3-Bed in Whistler Village/01-1 4668 Blackcomb Way 01-Edit.jpg",
-      "/photos/properties/Cozy Luxe 3-Bed in Whistler Village/02-1 4668 Blackcomb Way 02-Edit.jpg",
-      "/photos/properties/Cozy Luxe 3-Bed in Whistler Village/03-1 4668 Blackcomb Way 03.jpg",
-      "/photos/properties/Cozy Luxe 3-Bed in Whistler Village/04-1 4668 Blackcomb Way 04-Edit.jpg",
-    ],
-    bookUrl:
-      "https://www.airbnb.ca/rooms/1249285355870765792?guests=1&adults=1&s=67&unique_share_id=dcc074b1-0fe5-477a-bc67-701bc6736b13",
-  },
-  {
     name: "The Aspens | 2-Bed Ski in/Out",
     description:
       "A classic Whistler option for those who want comfort, convenience, and a clean mountain stay.",
@@ -256,7 +244,7 @@ export default function BlogPost() {
     ...kadenwoodHomes,
     ...luxuryHomesBeyondKadenwood,
     ...condoTownhomeOptions,
-  ];
+  ].filter((property) => !isHiddenFromBlogs(property));
   const faqStructuredData = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -440,7 +428,9 @@ export default function BlogPost() {
             </div>
 
             <div className="mt-10 space-y-12">
-              {kadenwoodHomes.map((property) => (
+              {kadenwoodHomes
+                .filter((property) => !isHiddenFromBlogs(property))
+                .map((property) => (
                 <section
                   key={property.name}
                   className="border border-gray-200 rounded-xl p-5 md:p-6"
@@ -486,7 +476,9 @@ export default function BlogPost() {
             </div>
 
             <div className="mt-6 space-y-12">
-              {luxuryHomesBeyondKadenwood.map((property) => (
+              {luxuryHomesBeyondKadenwood
+                .filter((property) => !isHiddenFromBlogs(property))
+                .map((property) => (
                 <section
                   key={property.name}
                   className="border border-gray-200 rounded-xl p-5 md:p-6"
@@ -537,7 +529,9 @@ export default function BlogPost() {
             </div>
 
             <div className="mt-6 space-y-12">
-              {condoTownhomeOptions.map((property) => (
+              {condoTownhomeOptions
+                .filter((property) => !isHiddenFromBlogs(property))
+                .map((property) => (
                 <section
                   key={property.name}
                   className="border border-gray-200 rounded-xl p-5 md:p-6"

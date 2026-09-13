@@ -23,7 +23,7 @@ export const OG_IMAGE =
 
 export const IMAGES = {
   alpineTerrain: {
-    src: "/photos/properties/Muirfield Golf Course/Muirfield drone snow.png",
+    src: "/photos/properties/Falcon/Falcon living snow 3.png",
     alt: "Snow-covered alpine terrain at Whistler Blackcomb",
     caption:
       "With terrain stretching from the valley to more than 2,280 metres, weather can be dramatically different across Whistler Blackcomb's elevation range.",
@@ -33,7 +33,7 @@ export const IMAGES = {
     alt: "Heavy snowfall and powder skiing in Whistler British Columbia",
   },
   coastMountains: {
-    src: "/photos/properties/Muirfield Golf Course/Muirfield Snow shot.png",
+    src: "/photos/properties/Timber Haven John Harris/Timber Snow living 3.png",
     alt: "Pacific storm clouds over the Coast Mountains near Whistler",
   },
   alpineValley: {

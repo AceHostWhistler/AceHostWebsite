@@ -11,6 +11,7 @@ import {
   CONDO_RENTAL_PROPERTIES,
   type CondoRentalProperty,
 } from "@/data/blog/condo-rentals-properties";
+import { isHiddenFromBlogs } from "@/data/blog/hiddenFromBlogs";
 
 function CondoPropertySection({
   property,
@@ -138,7 +139,9 @@ export default function BlogPost() {
                 From slopeside gems to village-center sanctuaries – including large-group options like the six-bedroom Blueberry rental – here are all of AceHost&apos;s Whistler condo and apartment rentals:
               </p>
 
-              {CONDO_RENTAL_PROPERTIES.map((property, index) => (
+              {CONDO_RENTAL_PROPERTIES.filter(
+                (property) => !isHiddenFromBlogs(property)
+              ).map((property, index) => (
                 <CondoPropertySection
                   key={property.name}
                   property={property}

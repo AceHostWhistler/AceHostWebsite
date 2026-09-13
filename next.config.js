@@ -16,6 +16,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/post/new-acehost-luxury-airbnb-highlight-best-4-bedroom-whistler-golf-course-views',
+        destination: '/blogs',
+        permanent: true,
+      },
+      {
         source: '/listings/bear-creek-5-bed',
         destination: '/properties',
         permanent: true,

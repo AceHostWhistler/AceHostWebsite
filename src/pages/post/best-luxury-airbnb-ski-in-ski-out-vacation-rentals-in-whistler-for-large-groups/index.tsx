@@ -11,7 +11,7 @@ import {
   getPropertyAirbnbLink,
   shouldUseContactForBooking,
 } from "@/data/propertyAirbnbLinks";
-import { getWhistlerCondoAndTownhomeProperties } from "@/data/properties/homepageListings";
+import { getWhistlerCondoAndTownhomePropertiesForBlogs } from "@/data/properties/homepageListings";
 import { getPropertyListingPath } from "@/data/properties/listingPath";
 import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
 
@@ -702,7 +702,7 @@ export default function BlogPost() {
                 to Valhalla, Le Chamois, Marquise, and the rest of the Whistler collection.
               </p>
 
-              {getWhistlerCondoAndTownhomeProperties().map((property, index) => {
+              {getWhistlerCondoAndTownhomePropertiesForBlogs().map((property, index) => {
                 const listingHref = getPropertyListingPath(property);
                 const airbnbHref = getPropertyAirbnbLink(
                   property.id,

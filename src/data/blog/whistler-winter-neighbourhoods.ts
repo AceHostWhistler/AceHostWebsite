@@ -1,4 +1,5 @@
 import { getListing } from "@/data/listings";
+import { isHiddenFromBlogs } from "@/data/blog/hiddenFromBlogs";
 
 export type WinterNeighbourhoodPropertyRef = {
   slug?: string;
@@ -22,10 +23,14 @@ export type ResolvedWinterProperty = {
 export function resolveWinterProperty(
   ref: WinterNeighbourhoodPropertyRef
 ): ResolvedWinterProperty | null {
+  if (isHiddenFromBlogs(ref)) {
+    return null;
+  }
+
   if (ref.slug) {
     const listing = getListing(ref.slug);
     if (listing) {
-      return {
+      const resolved = {
         name: listing.header.title,
         image: listing.photos[0] ?? ref.image ?? "",
         listingHref: ref.listingHref ?? `/listings/${ref.slug}`,
@@ -34,6 +39,10 @@ export function resolveWinterProperty(
         footnote: ref.footnote,
         contactOnly: ref.contactOnly,
       };
+      if (isHiddenFromBlogs({ ...ref, ...resolved })) {
+        return null;
+      }
+      return resolved;
     }
   }
 
@@ -63,7 +72,6 @@ export const upperVillagePropertyRefs: WinterNeighbourhoodPropertyRef[] = [
   { slug: "whispering-pines-ski-in-ski-out" },
   { slug: "marquise-2-bed-ski-in-ski-out" },
   { slug: "ski-in-ski-out-walk-to-lifts-2-bed" },
-  { slug: "luxe-cozy-3-bed-whistler-village" },
   { slug: "ravens-nest-ski-in-ski-out-views" },
 ];
 
@@ -102,7 +110,6 @@ export const blueberryPropertyRefs: WinterNeighbourhoodPropertyRef[] = [
 ];
 
 export const nicklausNorthPropertyRefs: WinterNeighbourhoodPropertyRef[] = [
-  { slug: "golf-course-views-luxury-4-bed-whistler-village" },
   { slug: "cozy-lakefront-whistler-condo-mountain-view" },
 ];
 

@@ -14,6 +14,7 @@ import {
   townhomeProperties,
   type Whistler28Property,
 } from "@/data/blog/whistler-28-places-properties";
+import { isHiddenFromBlogs } from "@/data/blog/hiddenFromBlogs";
 import { airbnbButtonBlog } from "@/lib/airbnbButtonStyles";
 
 const SLUG = "28-best-places-to-stay-in-whistler";
@@ -34,7 +35,7 @@ const FAQ_ITEMS = [
   {
     question: "How many Whistler properties does AceHost currently feature?",
     answer:
-      "At the time of publishing, this guide includes 29 individual AceHost properties located in Whistler. The collection can change as new homes are added and seasonal or private options become available.",
+      "At the time of publishing, this guide includes 27 individual AceHost properties located in Whistler. The collection can change as new homes are added and seasonal or private options become available.",
   },
   {
     question:
@@ -199,7 +200,7 @@ export default function BlogPost() {
                 fun.
               </p>
               <p>
-                At the time of publishing, AceHost features 28 individual
+                At the time of publishing, AceHost features 27 individual
                 Whistler properties, ranging from spectacular Kadenwood chalets
                 to large family homes, extended-stay ski retreats, Village
                 penthouses, and practical one, two, and three-bedroom condos.
@@ -256,7 +257,9 @@ export default function BlogPost() {
             </div>
 
             <div className="mt-8 space-y-8">
-              {kadenwoodProperties.map((property) => (
+              {kadenwoodProperties
+                .filter((property) => !isHiddenFromBlogs(property))
+                .map((property) => (
                 <PropertyCard key={property.number} property={property} />
               ))}
             </div>
@@ -273,7 +276,9 @@ export default function BlogPost() {
             </div>
 
             <div className="mt-8 space-y-8">
-              {largeHomeProperties.map((property) => (
+              {largeHomeProperties
+                .filter((property) => !isHiddenFromBlogs(property))
+                .map((property) => (
                 <PropertyCard key={property.number} property={property} />
               ))}
             </div>
@@ -290,7 +295,9 @@ export default function BlogPost() {
             </div>
 
             <div className="mt-8 space-y-8">
-              {townhomeProperties.map((property) => (
+              {townhomeProperties
+                .filter((property) => !isHiddenFromBlogs(property))
+                .map((property) => (
                 <PropertyCard key={property.number} property={property} />
               ))}
             </div>

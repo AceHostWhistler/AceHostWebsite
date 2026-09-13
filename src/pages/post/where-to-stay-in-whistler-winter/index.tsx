@@ -633,8 +633,8 @@ export default function BlogPost() {
                 turns into a peaceful, snow-covered residential retreat.
               </p>
               <SectionImage
-                src="/photos/properties/Muirfield Golf Course/Muirfield drone snow.png"
-                alt="Nicklaus North area luxury home with golf course and mountain views in winter"
+                src="/photos/properties/Nick North 2-Bed/01 - 20251006 A7M4 03 A1_03279-Edit.jpg"
+                alt="Nicklaus North lakefront condo with mountain views in winter"
               />
               <p>
                 <strong>Best overall for:</strong> Quiet stays, beautiful

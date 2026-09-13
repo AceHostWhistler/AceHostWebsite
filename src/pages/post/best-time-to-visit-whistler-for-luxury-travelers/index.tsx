@@ -15,7 +15,7 @@ const IMG_RESTAURANT = "/Screenshot 2026-04-23 at 5.17.44\u202fPM.png";
 const IMG_SUMMER_VILLAGE = "/Screenshot 2026-04-23 at 5.18.12\u202fPM.png";
 
 const HERO =
-  "/photos/properties/Muirfield Golf Course/Muirfield Snow shot.png";
+  "/photos/properties/2919 Heritage/Mountaintop living snow18.png";
 const HERO_URL = new URL(HERO, "https://www.acehost.ca").href;
 const PUBLISH_DATE = "April 24, 2026";
 const ISO_MOD = "2026-04-24T12:00:00-07:00";

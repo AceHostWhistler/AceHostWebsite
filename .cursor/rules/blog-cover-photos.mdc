@@ -28,7 +28,7 @@ Update **both** places so `/blogs` and the post page stay in sync:
 
 ```tsx
 // ✅ GOOD, unique cover
-const HERO = "/photos/properties/Muirfield Golf Course/Muirfield Snow shot.png";
+const HERO = "/photos/properties/2919 Heritage/Mountaintop living snow18.png";
 
 // ❌ BAD, already used by fifa-vancouver-whistler-the-luxury-whistler-fifa-experience
 const HERO = "/photos/properties/2919 Heritage/Mountaintop Snow cover.png";

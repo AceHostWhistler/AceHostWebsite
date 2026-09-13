@@ -28,22 +28,6 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     imageAlt: "Marquise Penthouse Whistler condo with Fairmont views",
   },
   {
-    name: "Luxe Cozy 3-Bed Whistler Village",
-    priceRange: "$750-$2,200+ per night (seasonal)",
-    stats: "Sleeps 6 | 3 Bedrooms | 5 Beds | 3 Bathrooms | Village Location | Walk to Lifts",
-    paragraphs: [
-      "Nestled in the vibrant heart of Whistler Village, this beautifully updated luxury condo offers both style and unbeatable convenience. Completely renovated with a designer's touch, this spacious three-bedroom haven is perfect for families or groups of friends who want to experience the best of Whistler.",
-      "Just steps away from the gondolas, restaurants, and village attractions, this property combines a prime location with all the comforts of home. The thoughtfully designed space features an open-concept living area perfect for socializing, while three well-appointed bedrooms provide privacy and comfort when it's time to rest.",
-      "Mornings begin with coffee on your private balcony, afternoons might find you relaxing by the fire after a day of adventure, and evenings can be spent preparing meals in the fully equipped kitchen or exploring Whistler's renowned dining scene just outside your door.",
-    ],
-    airbnbHref:
-      "https://www.airbnb.ca/rooms/1249285355870765792?guests=1&adults=1&s=67&unique_share_id=0ecd2877-9bf3-4bcc-92f2-5579a0af8e7f",
-    listingHref: "/listings/luxe-cozy-3-bed-whistler-village",
-    imageSrc:
-      "/photos/properties/Cozy Luxe 3-Bed in Whistler Village/02-1 4668 Blackcomb Way 02-Edit.jpg",
-    imageAlt: "Luxe Cozy 3-Bed condo in Whistler Village",
-  },
-  {
     name: "Tyndall - Luxe 2 bedroom, Main Whistler Village",
     priceRange: "$400-$1,150+ per night (seasonal)",
     stats:

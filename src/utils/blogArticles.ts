@@ -147,7 +147,7 @@ export const allArticles: Article[] = [
     readTime: "14 min read",
     link: "/post/best-time-to-visit-whistler-for-luxury-travelers",
     coverImage:
-      "/photos/properties/Muirfield Golf Course/Muirfield Snow shot.png",
+      "/photos/properties/2919 Heritage/Mountaintop living snow18.png",
     publishedAt: "2026-04-24T19:00:00.000Z",
   },
   {
@@ -381,18 +381,6 @@ export const allArticles: Article[] = [
       "/photos/post/luxury-property-management-investment-opportunities-in-whistler/hero.jpg",
     publishedAt: "2024-09-25T07:00:00.000Z",
     headline: "AceHost Whistler Property Management Services",
-  },
-  {
-    title: "Best 4-Bedroom Whistler Golf Course Rental | AceHost",
-    category: "Property Highlight",
-    description:
-      "AceHost luxury Airbnb highlight: a stunning 4-bedroom Whistler home on the golf course with panoramic mountain views, hot tub, and premium amenities.",
-    readTime: "8 min read",
-    link: "/post/new-acehost-luxury-airbnb-highlight-best-4-bedroom-whistler-golf-course-views",
-    coverImage:
-      "/photos/properties/Muirfield Golf Course/Muirfield drone snow.png",
-    publishedAt: "2025-01-16T08:00:00.000Z",
-    headline: "New AceHost Luxury Airbnb Highlight",
   },
   {
     title: "Whistler Summer Luxury Vacation Homes | AceHost",
