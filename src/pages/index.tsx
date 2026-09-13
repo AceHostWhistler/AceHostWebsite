@@ -431,18 +431,16 @@ const Home = () => {
                 >
                   <Link
                     href={href}
-                    className="group relative flex min-h-[28rem] overflow-hidden rounded-2xl"
+                    className="group relative flex min-h-[21rem] overflow-hidden rounded-2xl"
                   >
-                    <div className="absolute inset-x-0 -top-1/3 h-[133.333%]">
-                      <Image
-                        src={section.image}
-                        alt={section.title}
-                        fill
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 440px"
-                        className="object-cover image-zoom brightness-[0.62] origin-[center_70%]"
-                        quality={80}
-                      />
-                    </div>
+                    <Image
+                      src={section.image}
+                      alt={section.title}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 440px"
+                      className="object-cover image-zoom brightness-[0.62]"
+                      quality={80}
+                    />
                     <div
                       className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/30"
                       aria-hidden="true"
