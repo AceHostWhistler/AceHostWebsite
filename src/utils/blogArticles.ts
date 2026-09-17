@@ -58,7 +58,8 @@ export const allArticles: Article[] = [
     ],
   },
   {
-    title: "Whistler Weather Forecast 2026/2027: El Niño & Snow | AceHost",
+    title:
+      "Whistler snow Forecast 2026 2027 Winter: La Niña/El Niño Outlook | Snow & weather Forecast | AceHost",
     category: "Whistler Winter",
     description:
       "Whistler winter 2026/2027 weather and snow forecast. See what a very strong El Niño could mean for Whistler Blackcomb snowfall, temperatures, January powder…",
@@ -67,7 +68,8 @@ export const allArticles: Article[] = [
     coverImage:
       "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Drone Blueberry shot.png",
     publishedAt: "2026-08-26T17:00:00.000Z",
-    headline: "Whistler Weather Forecast 2026/2027 Winter: La Niña/El Niño Outlook & Snow Forecast",
+    headline:
+      "Whistler snow Forecast 2026 2027 Winter: La Niña/El Niño Outlook | Snow & weather Forecast",
   },
   {
     title: "Whistler Airbnb Zoning & Licence Rules | AceHost",

@@ -11,13 +11,12 @@ import BlogSeoHead from "@/components/blog/BlogSeoHead";
 import {
   CATEGORY,
   FAQ_ITEMS,
+  HEADLINE,
   HERO,
   READ_TIME,
   SLUG,
   TOC_ITEMS,
 } from "@/data/blog/whistler-weather-forecast-2026-2027";
-const ARTICLE_HEADLINE =
-  "Whistler Weather Forecast 2026/2027 Winter: La Niña/El Niño Outlook & Snow Forecast";
 
 function TableOfContents({ mobile = false }: { mobile?: boolean }) {
   if (mobile) {
@@ -101,7 +100,7 @@ export default function WhistlerWeatherForecast2026Page() {
                 {CATEGORY}
               </span>
               <h1 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-4">
-                {ARTICLE_HEADLINE}
+                {HEADLINE}
               </h1>
               <p className="text-base sm:text-lg text-gray-100 leading-relaxed max-w-2xl mb-6">
                 What a potentially historic El Niño could mean for Whistler
