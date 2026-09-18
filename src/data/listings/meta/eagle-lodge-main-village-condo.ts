@@ -2,7 +2,7 @@ import type { ListingData } from "../types";
 
 const base = "/photos/properties/Eagle Lodge 238";
 
-export const EAGLE_LODGE_COVER = `${base}/Balcony snow shot.png`;
+export const EAGLE_LODGE_COVER = `${base}/Eagle edit 1.png`;
 
 const AIRBNB_LINK =
   "https://www.airbnb.ca/rooms/1776955453586628651?guests=1&adults=1&s=67&unique_share_id=2e93f58e-f371-431b-81ae-330d43a91d41";
@@ -12,21 +12,20 @@ const listing: ListingData = {
   galleryPreserveOrder: true,
   photos: [
     EAGLE_LODGE_COVER,
-    `${base}/IMG_4305.JPG`,
-    `${base}/IMG_4306.JPG`,
-    `${base}/IMG_4307.JPG`,
-    `${base}/IMG_4308.JPG`,
-    `${base}/IMG_4309.JPG`,
-    `${base}/IMG_4310.JPG`,
-    `${base}/IMG_4311.JPG`,
-    `${base}/IMG_4312.JPG`,
-    `${base}/IMG_4314.JPG`,
-    `${base}/IMG_4315.JPG`,
-    `${base}/IMG_4316.JPG`,
-    `${base}/IMG_4317.JPG`,
-    `${base}/IMG_4318.JPG`,
-    `${base}/IMG_4319.JPG`,
-    `${base}/IMG_4320.JPG`,
+    `${base}/Eagle edit 3.png`,
+    `${base}/Eagle edit 2.png`,
+    `${base}/Eagle edit 4.png`,
+    `${base}/Eagle edit 5.png`,
+    `${base}/Eagle edit 6.png`,
+    `${base}/Eagle edit 11.png`,
+    `${base}/Eagle edit 7.png`,
+    `${base}/Eagle edit 8.png`,
+    `${base}/Eagle edit 9.png`,
+    `${base}/Eagle edit 10.png`,
+    `${base}/Eagle edit 13.png`,
+    `${base}/Eagle edit.png`,
+    `${base}/Eagle edit 12.png`,
+    `${base}/Eagle edit 14.png`,
   ],
   seo: {
     title: "Eagle Lodge | Main Village Condo | Walk to Lifts | Free Parking - AceHost",

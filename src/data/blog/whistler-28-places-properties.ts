@@ -293,6 +293,16 @@ export const townhomeProperties: Whistler28Property[] = [
     bookUrl:
       "https://www.airbnb.ca/rooms/1566952897757488737?guests=1&adults=1&s=67&unique_share_id=70d8a9c5-be29-49cb-a1de-03c1e0ec667b",
   },
+  {
+    number: 28,
+    name: "Eagle Lodge | Main Village Condo | Walk to Lifts | Free Parking",
+    description:
+      "A renovated 1-bedroom Town Plaza condo in the centre of Whistler Village, with a king bed, sofa bed, full kitchen, gas fireplace, private balcony, free underground parking, and a 7-minute walk to the gondolas.",
+    image: "/photos/properties/Eagle Lodge 238/Eagle edit 1.png",
+    listingHref: "/listings/eagle-lodge-main-village-condo",
+    bookUrl:
+      "https://www.airbnb.ca/rooms/1776955453586628651?guests=1&adults=1&s=67&unique_share_id=2e93f58e-f371-431b-81ae-330d43a91d41",
+  },
 ];
 
 export const allWhistler28Properties: Whistler28Property[] = [

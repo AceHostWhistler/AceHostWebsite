@@ -224,6 +224,19 @@ const condoTownhomeOptions: FeaturedProperty[] = [
       "https://www.airbnb.ca/rooms/50025973?preview_for_ml=true&source_impression_id=p3_1699290307_SHcNx7EoXySmn6j5",
   },
   {
+    name: "Eagle Lodge | Main Village Condo | Walk to Lifts | Free Parking",
+    description:
+      "A renovated 1-bedroom Town Plaza condo in the centre of Whistler Village. Walk about 7 minutes to the gondolas, with restaurants, shops and Olympic Plaza just outside, plus free underground parking.",
+    photos: [
+      "/photos/properties/Eagle Lodge 238/Eagle edit 1.png",
+      "/photos/properties/Eagle Lodge 238/Eagle edit 3.png",
+      "/photos/properties/Eagle Lodge 238/Eagle edit 9.png",
+      "/photos/properties/Eagle Lodge 238/Eagle edit 2.png",
+    ],
+    bookUrl:
+      "https://www.airbnb.ca/rooms/1776955453586628651?guests=1&adults=1&s=67&unique_share_id=2e93f58e-f371-431b-81ae-330d43a91d41",
+  },
+  {
     name: "Luxury 3-Bed | Stunning Views",
     description:
       "A strong choice for families or small groups looking for great views, comfort, and a relaxed summer base in Whistler.",

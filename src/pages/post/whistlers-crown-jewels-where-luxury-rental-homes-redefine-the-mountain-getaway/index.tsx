@@ -323,6 +323,45 @@ export default function BlogPost() {
               </div>
 
               <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+                Eagle Lodge | Main Village Condo
+              </h3>
+              <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
+                <Image
+                  src="/photos/properties/Eagle Lodge 238/Eagle edit 1.png"
+                  alt="Eagle Lodge renovated 1-bedroom condo in Whistler Village"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p>
+                A renovated 1-bedroom Town Plaza condo in the centre of Whistler
+                Village, with a king bed, sofa bed, full kitchen, gas fireplace and
+                a private balcony. Walk about 7 minutes to the gondolas, with
+                restaurants, shops and Olympic Plaza just outside, plus one free
+                underground parking stall.
+              </p>
+              <div className="mt-6 mb-8">
+                <Link
+                  href="/listings/eagle-lodge-main-village-condo"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-all shadow-sm hover:shadow-md font-medium"
+                >
+                  View Eagle Lodge
+                  <svg
+                    className="ml-2 w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </Link>
+              </div>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
                 Panoramic Estate | Kadenwood
               </h3>
               <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">

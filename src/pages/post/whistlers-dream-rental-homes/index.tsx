@@ -812,6 +812,55 @@ export default function BlogPost() {
                 </div>
               </div>
 
+              {/* Condo 6 */}
+              <h3 className="text-2xl font-bold text-gray-900 mt-12 mb-4">
+                6) Eagle Lodge | Main Village Condo | Walk to Lifts | Free Parking
+              </h3>
+
+              <div className="bg-gray-50 p-5 rounded-lg mb-6">
+                <p className="font-semibold">Price per night: $200-$900</p>
+              </div>
+
+              <p>
+                Stay in the centre of Whistler Village at this renovated 1-bedroom
+                Eagle Lodge condo in Town Plaza. Walk about 7 minutes to the
+                gondolas, with restaurants, shops, groceries and Olympic Plaza just
+                outside. The home sleeps 4 with a king bedroom and sofa bed.
+              </p>
+
+              <p className="mt-4">
+                Inside you will find a full kitchen, gas fireplace, in-suite laundry,
+                a private balcony and one free underground parking stall. Once you
+                arrive and park, you can walk to the lifts and most Village
+                attractions without needing a car.
+              </p>
+
+              <p className="text-blue-600 font-medium mt-2 mb-6">
+                <Link
+                  href="/listings/eagle-lodge-main-village-condo"
+                  className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  View Property Details
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </Link>
+              </p>
+
+              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
+                <Image
+                  src="/photos/properties/Eagle Lodge 238/Eagle edit 1.png"
+                  alt="Eagle Lodge renovated 1-bedroom Whistler Village condo"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-3">
+                  <p className="text-sm font-medium">
+                    Eagle Lodge | Main Village Condo | Walk to Lifts | Free Parking
+                  </p>
+                </div>
+              </div>
+
               {/* VIP Concierge Services */}
               <h2 className="text-3xl font-bold text-gray-900 mt-16 mb-6">
                 AceHost Whistler Included VIP Concierge Services
