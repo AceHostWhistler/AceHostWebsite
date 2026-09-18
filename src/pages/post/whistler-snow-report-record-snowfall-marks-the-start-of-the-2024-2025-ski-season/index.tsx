@@ -25,7 +25,7 @@ const WhistlerSnowReport = () => {
       link: "/post/top-7-of-the-most-luxury-vacation-rental-homes-in-whistler-for-christmas-new-years",
     },
     {
-      title: "Whistler Winter Outlook 2027: Snow Report and El Niño Forecast",
+      title: "Whistler snow forecast 2026 2027 Winter: Snow Report and El Niño Forecast",
       category: "Whistler Winter",
       description: "Whistler snow report and winter outlook for the 2026/2027 ski season",
       readTime: "28 min read",

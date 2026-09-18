@@ -8,7 +8,7 @@ export const READ_TIME = "28 min read";
 export const CATEGORY = "Whistler Winter";
 
 export const HEADLINE =
-  "Whistler Winter Outlook 2027: Snow Report and El Niño Forecast";
+  "Whistler snow forecast 2026 2027 Winter: Snow Report and El Niño Forecast";
 
 export const META = {
   title: `${HEADLINE} | AceHost`,

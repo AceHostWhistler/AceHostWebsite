@@ -19,27 +19,6 @@ export interface Article {
 // All blog articles data with proper image paths
 export const allArticles: Article[] = [
   {
-    title:
-      "Whistler Winter Outlook 2027: Snow Report and El Niño Forecast | AceHost",
-    category: "Whistler Winter",
-    description:
-      "Whistler snow report and winter outlook for 2027. See what a very strong El Niño could mean for Whistler Blackcomb snowfall, temperatures, January powder…",
-    readTime: "28 min read",
-    link: "/post/whistler-weather-forecast-2026-2027-winter",
-    coverImage:
-      "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Drone Blueberry shot.png",
-    publishedAt: "2026-08-26T17:00:00.000Z",
-    modifiedAt: "2026-09-17T17:00:00.000Z",
-    headline: "Whistler Winter Outlook 2027: Snow Report and El Niño Forecast",
-    keywords: [
-      "Whistler snow report 2027",
-      "Whistler winter outlook 2027",
-      "Whistler weather forecast 2026 2027",
-      "Whistler El Niño snow forecast",
-      "best time to ski Whistler 2027",
-    ],
-  },
-  {
     title: "Justin Tse in Kadenwood | Luxury Whistler Experience with AceHost | AceHost",
     category: "Luxury Travel, Kadenwood",
     description:
@@ -50,6 +29,27 @@ export const allArticles: Article[] = [
       "/photos/properties/Chalet La Forja/2950 Heritage Peaks Trail 4 Large 2.png",
     publishedAt: "2026-07-31T19:00:00.000Z",
     headline: "Justin Tse's Luxury Whistler Experience with AceHost in Kadenwood",
+  },
+  {
+    title:
+      "Whistler snow forecast 2026 2027 Winter: Snow Report and El Niño Forecast | AceHost",
+    category: "Whistler Winter",
+    description:
+      "Whistler snow report and winter outlook for 2027. See what a very strong El Niño could mean for Whistler Blackcomb snowfall, temperatures, January powder…",
+    readTime: "28 min read",
+    link: "/post/whistler-weather-forecast-2026-2027-winter",
+    coverImage:
+      "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Drone Blueberry shot.png",
+    publishedAt: "2026-08-26T17:00:00.000Z",
+    modifiedAt: "2026-09-17T17:00:00.000Z",
+    headline: "Whistler snow forecast 2026 2027 Winter: Snow Report and El Niño Forecast",
+    keywords: [
+      "Whistler snow report 2027",
+      "Whistler snow forecast 2026 2027",
+      "Whistler winter outlook 2027",
+      "Whistler El Niño snow forecast",
+      "best time to ski Whistler 2027",
+    ],
   },
   {
     title: "Can Foreigners Buy Property in Whistler? 2026 Guide | AceHost",
