@@ -13,14 +13,14 @@ export default function Document() {
         <link rel="preload" href="/logo.png" as="image" />
 
         {/* Favicon: 48px PNG first so Google can crop a clean circular icon */}
-        <link rel="icon" type="image/png" sizes="48x48" href="/favicons/acehost-48.png" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/favicons/acehost-192.png" />
-        <link rel="icon" type="image/png" sizes="96x96" href="/favicons/acehost-96.png" />
-        <link rel="icon" href="/favicons/favicon.ico" sizes="any" />
-        <link rel="shortcut icon" href="/favicons/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="48x48" href="/favicons/acehost-48.png?v=4" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/favicons/acehost-192.png?v=4" />
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicons/acehost-96.png?v=4" />
+        <link rel="icon" href="/favicons/favicon.ico?v=4" sizes="any" />
+        <link rel="shortcut icon" href="/favicons/favicon.ico?v=4" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=4" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=4" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=4" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#ffffff" />
         <meta

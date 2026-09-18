@@ -301,7 +301,7 @@ const Home = () => {
         <meta name="twitter:image" content={`${SITE_URL}/logo.png`} />
         <meta property="og:url" content={SITE_URL} />
         <link rel="canonical" href={SITE_URL} />
-        <link rel="icon" type="image/png" sizes="48x48" href="/favicons/acehost-48.png" />
+        <link rel="icon" type="image/png" sizes="48x48" href="/favicons/acehost-48.png?v=4" />
 
         {/* Structured data for Google search results */}
         <script

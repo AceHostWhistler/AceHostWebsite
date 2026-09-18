@@ -340,7 +340,7 @@ export default function Properties() {
           name="description"
           content="Browse our exclusive collection of luxury vacation rentals in Whistler, BC. Ski-in/ski-out chalets, premium condos, and spectacular mountain homes available."
         />
-        <link rel="icon" type="image/png" sizes="48x48" href="/favicons/acehost-48.png" />
+        <link rel="icon" type="image/png" sizes="48x48" href="/favicons/acehost-48.png?v=4" />
         <link rel="canonical" href={`${SITE_URL}/properties`} />
         <script
           type="application/ld+json"
