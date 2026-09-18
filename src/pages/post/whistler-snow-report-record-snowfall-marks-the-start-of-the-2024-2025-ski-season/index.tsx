@@ -25,11 +25,11 @@ const WhistlerSnowReport = () => {
       link: "/post/top-7-of-the-most-luxury-vacation-rental-homes-in-whistler-for-christmas-new-years",
     },
     {
-      title: "Whistler's Winter Outlook 2024: From El Niño Challenges to La Niña Promises",
-      category: "Weather Report",
-      description: "Whistler's weather outlook for the upcoming ski season",
-      readTime: "10 min read",
-      link: "/post/whistlers-winter-outlook-2024-from-el-nino-challenges-to-la-nina-promises",
+      title: "Whistler Winter Outlook 2027: Snow Report and El Niño Forecast",
+      category: "Whistler Winter",
+      description: "Whistler snow report and winter outlook for the 2026/2027 ski season",
+      readTime: "28 min read",
+      link: "/post/whistler-weather-forecast-2026-2027-winter",
     },
   ];
 

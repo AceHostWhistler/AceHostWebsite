@@ -19,6 +19,27 @@ export interface Article {
 // All blog articles data with proper image paths
 export const allArticles: Article[] = [
   {
+    title:
+      "Whistler Winter Outlook 2027: Snow Report and El Niño Forecast | AceHost",
+    category: "Whistler Winter",
+    description:
+      "Whistler snow report and winter outlook for 2027. See what a very strong El Niño could mean for Whistler Blackcomb snowfall, temperatures, January powder…",
+    readTime: "28 min read",
+    link: "/post/whistler-weather-forecast-2026-2027-winter",
+    coverImage:
+      "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Drone Blueberry shot.png",
+    publishedAt: "2026-08-26T17:00:00.000Z",
+    modifiedAt: "2026-09-17T17:00:00.000Z",
+    headline: "Whistler Winter Outlook 2027: Snow Report and El Niño Forecast",
+    keywords: [
+      "Whistler snow report 2027",
+      "Whistler winter outlook 2027",
+      "Whistler weather forecast 2026 2027",
+      "Whistler El Niño snow forecast",
+      "best time to ski Whistler 2027",
+    ],
+  },
+  {
     title: "Justin Tse in Kadenwood | Luxury Whistler Experience with AceHost | AceHost",
     category: "Luxury Travel, Kadenwood",
     description:
@@ -56,20 +77,6 @@ export const allArticles: Article[] = [
       "Whistler Phase 1 property",
       "Whistler investment property",
     ],
-  },
-  {
-    title:
-      "Whistler snow Forecast 2026 2027 Winter: La Niña/El Niño Outlook | Snow & weather Forecast | AceHost",
-    category: "Whistler Winter",
-    description:
-      "Whistler winter 2026/2027 weather and snow forecast. See what a very strong El Niño could mean for Whistler Blackcomb snowfall, temperatures, January powder…",
-    readTime: "28 min read",
-    link: "/post/whistler-weather-forecast-2026-2027-winter",
-    coverImage:
-      "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Drone Blueberry shot.png",
-    publishedAt: "2026-08-26T17:00:00.000Z",
-    headline:
-      "Whistler snow Forecast 2026 2027 Winter: La Niña/El Niño Outlook | Snow & weather Forecast",
   },
   {
     title: "Whistler Airbnb Zoning & Licence Rules | AceHost",
@@ -271,17 +278,6 @@ export const allArticles: Article[] = [
     link: "/post/top-7-of-the-most-luxury-vacation-rental-homes-in-whistler-for-christmas-new-years",
     coverImage:
       "/photos/post/top-7-of-the-most-luxury-vacation-rental-homes-in-whistler-for-christmas-new-years/Hero.png",
-    publishedAt: "2024-11-24T08:00:00.000Z",
-  },
-  {
-    title: "Whistler Winter Outlook 2024: El Niño to La Niña | AceHost",
-    category: "Weather Report",
-    description:
-      "Whistler winter outlook 2024: from El Niño challenges to La Niña promises. What the forecast means for snowfall, ski conditions, and planning your trip.",
-    readTime: "10 min read",
-    link: "/post/whistlers-winter-outlook-2024-from-el-nino-challenges-to-la-nina-promises",
-    coverImage:
-      "/photos/post/whistlers-winter-outlook-2024-from-el-nino-challenges-to-la-nina-promises/hero.png",
     publishedAt: "2024-11-24T08:00:00.000Z",
   },
   {

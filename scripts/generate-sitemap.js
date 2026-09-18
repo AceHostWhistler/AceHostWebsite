@@ -27,6 +27,7 @@ const EXCLUDED_ROUTES = new Set([
   '/services/structural-drying',
   '/about',
   '/blog',
+  '/post/whistlers-winter-outlook-2024-from-el-nino-challenges-to-la-nina-promises',
 ]);
 
 function getListingSlugs() {
@@ -48,6 +49,7 @@ function getBlogPostRoutes() {
     .filter((entry) =>
       fs.existsSync(path.join(POST_DIR, entry.name, 'index.tsx'))
     )
+    .filter((entry) => !EXCLUDED_ROUTES.has(`/post/${entry.name}`))
     .map((entry) => {
       const indexPath = path.join(POST_DIR, entry.name, 'index.tsx');
       let lastmod = new Date().toISOString().split('T')[0];

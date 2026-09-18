@@ -61,6 +61,21 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/post/whistlers-winter-outlook-2024-from-el-nino-challenges-to-la-nina-promises',
+        destination: '/post/whistler-weather-forecast-2026-2027-winter',
+        permanent: true,
+      },
+      {
+        source: '/post/whistler-winter-outlook-2027',
+        destination: '/post/whistler-weather-forecast-2026-2027-winter',
+        permanent: true,
+      },
+      {
+        source: '/post/whistler-snow-report-2027',
+        destination: '/post/whistler-weather-forecast-2026-2027-winter',
+        permanent: true,
+      },
+      {
         source: '/about',
         destination: '/our-story',
         permanent: true,

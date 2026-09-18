@@ -13,6 +13,11 @@ export interface BlogPostListing {
 
 const POSTS_DIR = path.join(process.cwd(), "src/pages/post");
 
+/** Older posts that 301 to a current article and should not appear on /blogs. */
+const SUPERSEDED_POST_SLUGS = new Set([
+  "whistlers-winter-outlook-2024-from-el-nino-challenges-to-la-nina-promises",
+]);
+
 const articleBySlug = new Map<string, Article>(
   allArticles.map((article) => [article.link.replace(/^\/post\//, ""), article])
 );
@@ -145,7 +150,7 @@ function discoverPost(slug: string): BlogPostListing {
     category: registry?.category ?? parseCategory(content),
     readTime: registry?.readTime ?? parseReadTime(content),
     heroImage: registry?.coverImage ?? parseHeroImage(content, slug),
-    publishedAt: parsePublishedAt(content),
+    publishedAt: registry?.publishedAt ?? parsePublishedAt(content),
   };
 }
 
@@ -160,7 +165,8 @@ export function discoverBlogPosts(): BlogPostListing[] {
     .filter((entry) => fs.statSync(path.join(POSTS_DIR, entry)).isDirectory())
     .filter((entry) =>
       fs.existsSync(path.join(POSTS_DIR, entry, "index.tsx"))
-    );
+    )
+    .filter((entry) => !SUPERSEDED_POST_SLUGS.has(entry));
 
   return slugs
     .map(discoverPost)

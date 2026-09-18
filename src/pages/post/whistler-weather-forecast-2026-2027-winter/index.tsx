@@ -76,7 +76,7 @@ export default function WhistlerWeatherForecast2026Page() {
   return (
     <>
       <BlogSeoHead
-        keywords="Whistler weather forecast 2026/2027 winter, Whistler snow forecast 2026/2027, Whistler El Niño, Whistler Blackcomb snow forecast, Whistler January snow, best time to ski Whistler 2027, El Niño ski season 2026/2027"
+        keywords="Whistler snow report 2027, Whistler winter outlook 2027, Whistler weather forecast 2026/2027 winter, Whistler snow forecast 2026/2027, Whistler El Niño, Whistler Blackcomb snow forecast, Whistler January snow, best time to ski Whistler 2027, El Niño ski season 2026/2027"
         faqItems={FAQ_ITEMS}
       />
 
@@ -107,7 +107,7 @@ export default function WhistlerWeatherForecast2026Page() {
                 Blackcomb snowfall, temperatures and powder days this winter.
               </p>
               <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-200 mb-6">
-                <span>Updated August 2026</span>
+                <span>Updated September 2026</span>
                 <span aria-hidden className="hidden sm:inline">
                   |
                 </span>

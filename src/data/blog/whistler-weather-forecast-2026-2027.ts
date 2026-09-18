@@ -3,17 +3,17 @@ export const SLUG = "whistler-weather-forecast-2026-2027-winter";
 export const CANONICAL_URL = `https://www.acehost.ca/post/${SLUG}`;
 
 export const PUBLISH_DATE = "August 26, 2026";
-export const ISO_MOD = "2026-08-26T10:00:00-07:00";
+export const ISO_MOD = "2026-09-17T17:00:00-07:00";
 export const READ_TIME = "28 min read";
 export const CATEGORY = "Whistler Winter";
 
 export const HEADLINE =
-  "Whistler snow Forecast 2026 2027 Winter: La Niña/El Niño Outlook | Snow & weather Forecast";
+  "Whistler Winter Outlook 2027: Snow Report and El Niño Forecast";
 
 export const META = {
   title: `${HEADLINE} | AceHost`,
   description:
-    "Whistler winter 2026/2027 weather and snow forecast. See what a very strong El Niño could mean for Whistler Blackcomb snowfall, temperatures, January powder and ski conditions.",
+    "Whistler snow report and winter outlook for 2027. See what a very strong El Niño could mean for Whistler Blackcomb snowfall, temperatures, January powder and ski conditions.",
 };
 
 export const HERO = {
