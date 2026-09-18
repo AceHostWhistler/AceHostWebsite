@@ -64,6 +64,7 @@ export const villagePropertyRefs: WinterNeighbourhoodPropertyRef[] = [
   { slug: "whistler-village-views-luxury-2-5-bedroom" },
   { slug: "whistler-village-penthouse" },
   { slug: "valhalla-unit-33-village" },
+  { slug: "eagle-lodge-main-village-condo" },
   { slug: "whistler-village-penthouse-3-bdr-walk-to-ski" },
   { slug: "northlands-walk-to-village-slopes-luxury-4-bed" },
 ];

@@ -71,6 +71,7 @@ export const HOMEPAGE_PROPERTY_ORDER: readonly string[] = [
   "vancouver-house-corner",
   "bluffs-unit-4",
   "squamish-retreat",
+  "eagle-lodge-main-village-condo",
   "northlands-walk-to-village-slopes-luxury-4-bed",
   "cascade-lodge-615",
   "cascade-lodge-514",

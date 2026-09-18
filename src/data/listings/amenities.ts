@@ -89,6 +89,15 @@ export const listingAmenities: Record<string, string[]> = {
     "Wood-beam great room",
     "Fireplace",
   ],
+  "eagle-lodge-main-village-condo": [
+    "Centre of main Whistler Village",
+    "7-minute walk to gondolas",
+    "King bedroom & sofa bed",
+    "Full kitchen & gas fireplace",
+    "Private balcony",
+    "In-suite washer & dryer",
+    "Free underground parking",
+  ],
   "falcon-blueberry-drive": [
     "Blueberry Hill location",
     "Dining table seats 14",

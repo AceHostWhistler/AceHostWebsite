@@ -14,6 +14,8 @@ import CozyLakefrontWhistlerCondoMountainViewDetails from "./details/cozy-lakefr
 import cozy_lakefront_whistler_condo_mountain_viewMeta from "./meta/cozy-lakefront-whistler-condo-mountain-view";
 import DreamLogChalet5Bedroom4BathCreeksideDetails from "./details/dream-log-chalet-5-bedroom-4-bath-creekside";
 import dream_log_chalet_5_bedroom_4_bath_creeksideMeta from "./meta/dream-log-chalet-5-bedroom-4-bath-creekside";
+import EagleLodgeMainVillageCondoDetails from "./details/eagle-lodge-main-village-condo";
+import eagle_lodge_main_village_condoMeta from "./meta/eagle-lodge-main-village-condo";
 import FalconBlueberryDriveDetails from "./details/falcon-blueberry-drive";
 import falcon_blueberry_driveMeta from "./meta/falcon-blueberry-drive";
 import GolfCourseViewsLuxury4BedWhistlerVillageDetails from "./details/golf-course-views-luxury-4-bed-whistler-village";
@@ -81,6 +83,7 @@ export const listingSlugs = [
   "chalet-la-forja-kadenwood",
   "cozy-lakefront-whistler-condo-mountain-view",
   "dream-log-chalet-5-bedroom-4-bath-creekside",
+  "eagle-lodge-main-village-condo",
   "falcon-blueberry-drive",
   "golf-course-views-luxury-4-bed-whistler-village",
   "heron-views-whistler-village",
@@ -121,6 +124,7 @@ export const listings: Record<string, ListingEntry> = {
   "chalet-la-forja-kadenwood": { ...chalet_la_forja_kadenwoodMeta, Details: ChaletLaForjaKadenwoodDetails },
   "cozy-lakefront-whistler-condo-mountain-view": { ...cozy_lakefront_whistler_condo_mountain_viewMeta, Details: CozyLakefrontWhistlerCondoMountainViewDetails },
   "dream-log-chalet-5-bedroom-4-bath-creekside": { ...dream_log_chalet_5_bedroom_4_bath_creeksideMeta, Details: DreamLogChalet5Bedroom4BathCreeksideDetails },
+  "eagle-lodge-main-village-condo": { ...eagle_lodge_main_village_condoMeta, Details: EagleLodgeMainVillageCondoDetails },
   "falcon-blueberry-drive": { ...falcon_blueberry_driveMeta, Details: FalconBlueberryDriveDetails },
   "golf-course-views-luxury-4-bed-whistler-village": { ...golf_course_views_luxury_4_bed_whistler_villageMeta, Details: GolfCourseViewsLuxury4BedWhistlerVillageDetails },
   "heron-views-whistler-village": { ...heron_views_whistler_villageMeta, Details: HeronViewsWhistlerVillageDetails },
