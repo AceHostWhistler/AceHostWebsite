@@ -131,6 +131,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/listings/bedora-place',
+        destination: '/worldwide-listings/bedora-place',
+        permanent: true,
+      },
+      {
         source: '/listings/hood-river-luxury-home',
         destination: '/worldwide-listings/hood-river-luxury-home',
         permanent: true,

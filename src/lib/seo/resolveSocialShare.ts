@@ -124,6 +124,11 @@ const WORLDWIDE_LISTING_TITLES: Record<string, Pick<StaticPageMeta, "title" | "d
     description:
       "An ideal family ski home just 400m (8 min walk) to Whistler Creekside Gondola. Stunning, unobstructed views of the Tantalus Range, Alpha & Nita Lakes. Perfect for 1 large family, 3 couples, or 2 families. This 1,450 sqft, 3-bedroom, 5-bed, architecturally designed home features; vaulted ceilings, a steam shower, kids’ triple bunk room, heated floors, a cozy living area with fireplace, and a kitchen for family dinners. Enjoy 2 free parking spots, A/C, & ski storage!",
   },
+  "bedora-place": {
+    title: "Bedora Place | Ocean View Luxury Retreat | West Vancouver - AceHost",
+    description:
+      "Ocean-view luxury home in West Vancouver. 5 bedrooms, 6 beds, 3.5 baths, and space for 10 guests, with a games room, indoor and outdoor fireplaces, and a quiet upscale setting close to downtown Vancouver.",
+  },
   "cotswolds-uk-soho-farm-house": {
     title: "Luxury Cotswolds Estate Near Soho Farmhouse | Pool, Tennis & Spa | AceHost",
     description: businessInfo.description,

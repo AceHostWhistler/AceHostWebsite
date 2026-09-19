@@ -88,6 +88,8 @@ export function getPropertyListingPath(property: PropertyFeature): string {
       return "/worldwide-listings/punta-mita---casa-juntos";
     case "hood-river-luxury-home":
       return "/worldwide-listings/hood-river-luxury-home";
+    case "bedora-place":
+      return "/worldwide-listings/bedora-place";
     default:
       return `/listings/${property.id}`;
   }

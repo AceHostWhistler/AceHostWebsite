@@ -8,6 +8,14 @@ export const worldwideListingAmenities: Record<string, string[]> = {
     "5 minutes from Mykonos Town",
     "Traditional Cycladic architecture",
   ],
+  "bedora-place": [
+    "West Vancouver ocean views",
+    "5 bedrooms, 10 guests",
+    "Games room with pool table",
+    "Indoor and outdoor fireplaces",
+    "Steam shower",
+    "Garage parking",
+  ],
   "cotswolds-uk-soho-farm-house": [
     "Soho Farm House estate",
     "Outdoor heated pool",

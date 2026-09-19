@@ -1,6 +1,7 @@
 import { BLUFFS_AIRBNB_LINK } from "../listings/bluffsAirbnbLink";
 import { BLUFFS_UNIT_8_AIRBNB_LINK } from "../listings/bluffsUnit8AirbnbLink";
 import { SCANDINAVE_COVER, SCANDINAVE_PHOTOS } from "../scandinavePhotos";
+import { BEDORA_PLACE_COVER, BEDORA_PLACE_PHOTOS } from "../bedoraPlacePhotos";
 
 export interface PropertyFeature {
   id: string;
@@ -74,6 +75,7 @@ export const HOME_IDS = new Set([
   "wedge-mountain-lodge-spa",
   "squamish-retreat",
   "hood-river-luxury-home",
+  "bedora-place",
   "cotswolds-uk-soho-farm-house",
   "mykonos-crystal-villa",
   "villa-oineas-greece-mykonos",
@@ -81,6 +83,48 @@ export const HOME_IDS = new Set([
   "villa-rosabella-mykonos",
   "punta-mita---casa-juntos",
 ]);
+
+const BEDORA_PLACE: PropertyFeature = {
+  id: "bedora-place",
+  name: "Bedora Place | West Vancouver",
+  images: [
+    BEDORA_PLACE_COVER,
+    BEDORA_PLACE_PHOTOS[1] ?? BEDORA_PLACE_COVER,
+    BEDORA_PLACE_PHOTOS[3] ?? BEDORA_PLACE_COVER,
+  ],
+  guests: 10,
+  bedrooms: 5,
+  beds: 6,
+  bathrooms: 3.5,
+  priceRange: "$1,000-$2,500 per night | Weekday vs weekend in summer",
+  location: "West Vancouver, British Columbia",
+  description:
+    "Ocean-view luxury retreat in West Vancouver. Spacious home with incredible ocean views, multiple living areas, a large kitchen and dining space, indoor and outdoor fireplaces, and a dedicated games room with a pool table, arcade, and table games. Steam shower, Nespresso, modern furnishings, ample parking, and a quiet upscale setting close to trails, the ocean, and downtown Vancouver.",
+  features: [
+    "Ocean Views",
+    "Games Room with Pool Table",
+    "Indoor & Outdoor Fireplaces",
+    "Steam Shower",
+    "Nespresso",
+    "Garage Parking",
+    "BBQ Grill",
+    "Large Kitchen & Dining",
+    "Multiple Living Areas",
+    "Self Check-in",
+  ],
+  highlights: [
+    "West Vancouver Ocean Views",
+    "Dedicated Games Room",
+    "Quiet Upscale Setting",
+    "Close to Downtown Vancouver",
+  ],
+  link: "/worldwide-listings/bedora-place",
+  airbnbLink:
+    "https://www.airbnb.ca/rooms/1682274339649339817?guests=1&adults=1&s=67&unique_share_id=65cb0895-1c19-4e3d-9a6b-57836a5fbac4",
+  isSkiInSkiOut: false,
+  isPetFriendly: false,
+  country: "canada",
+};
 
 export function isWhistlerAreaLocation(location: string): boolean {
   const loc = location.toLowerCase();
@@ -1335,6 +1379,8 @@ export const propertyCategories: PropertyCategory[] = [
             country: "greece"
           },
 
+          BEDORA_PLACE,
+
           {
             id: "cotswolds-uk-soho-farm-house",
             name: "Cotswolds UK - Soho Farm House",
@@ -1912,6 +1958,7 @@ export const propertyCategories: PropertyCategory[] = [
         description:
           "Introducing AceHost Global VIP Concierge Services & Villas We're thrilled to announce that AceHost now offers exclusive VIP concierge services and handpicked luxury properties across the globe. Whether you're dreaming of a beachfront estate, a serene countryside chateau, or a sleek modern villa for a group getaway, our team will source the perfect destination tailored to your vision.\nBelow is a curated selection of homes we currently work with, but our network extends far beyond. If you're planning your next vacation and looking for a large, private villa paired with personalized service, we're here to make it happen.\nThis offering is reserved for our top-tier VIP clients & repeat guests. Inquire today to see if you qualify.",
         properties: [
+          BEDORA_PLACE,
           {
             id: "cotswolds-uk-soho-farm-house",
             name: "Cotswolds UK - Soho Farm House",

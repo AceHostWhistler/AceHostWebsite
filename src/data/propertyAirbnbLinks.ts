@@ -47,6 +47,8 @@ const EXTRA_PROPERTY_AIRBNB_LINKS: Record<string, string> = {
     "https://www.airbnb.ca/rooms/1313847204355627326?guests=1&adults=1&s=67&unique_share_id=507dffd6-1f84-49a3-99eb-d10f493a65a6",
   "cotswolds-uk-soho-farm-house":
     "https://www.airbnb.ca/rooms/1414129878809697902?guests=1&adults=1&s=67&unique_share_id=ba3bff7b-bc57-416c-bcd6-96b0943cfe51",
+  "bedora-place":
+    "https://www.airbnb.ca/rooms/1682274339649339817?guests=1&adults=1&s=67&unique_share_id=65cb0895-1c19-4e3d-9a6b-57836a5fbac4",
   "snow-pine":
     "https://www.airbnb.ca/rooms/744832560480313027?guests=1&adults=1&s=67&unique_share_id=50412c76-d839-4753-bf56-19310f38a4ef",
   "whistler-village-views-luxury-2-5-bedroom":

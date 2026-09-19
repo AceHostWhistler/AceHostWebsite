@@ -38,6 +38,14 @@ const VANCOUVER: PropertyGeo = {
   longitude: -123.1207,
 };
 
+const WEST_VANCOUVER: PropertyGeo = {
+  locality: "West Vancouver",
+  region: "BC",
+  country: "CA",
+  latitude: 49.4,
+  longitude: -123.249,
+};
+
 const MYKONOS: PropertyGeo = {
   locality: "Mykonos",
   region: "South Aegean",
@@ -104,6 +112,7 @@ const PATH_GEO: Record<string, PropertyGeo> = {
   "super-yacht-thailand": PHUKET,
   "hood-river-luxury-home": HOOD_RIVER,
   "vancouver-house-corner-unit-30th-floor": VANCOUVER,
+  "bedora-place": WEST_VANCOUVER,
 };
 
 export function getPropertyGeoBySlug(slug: string): PropertyGeo {

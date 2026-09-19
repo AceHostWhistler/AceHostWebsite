@@ -58,6 +58,7 @@ export const HOMEPAGE_PROPERTY_ORDER: readonly string[] = [
   "ski-in-ski-out-walk-to-lifts-2-bed",
   "whistler-village-views-luxury-2-5-bedroom",
   "luxury-3-bed-stunning-views",
+  "bedora-place",
   "cotswolds-uk-soho-farm-house",
   "santorini-greece-villa-eclipse",
   "villa-oineas-greece-mykonos",
