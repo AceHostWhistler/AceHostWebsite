@@ -78,12 +78,12 @@ export const worldwideListingAmenities: Record<string, string[]> = {
     "Ideal for groups",
   ],
   "vancouver-house-corner-unit-30th-floor": [
-    "30th-floor corner unit",
-    "Vancouver House",
-    "City & water views",
-    "Premium downtown location",
-    "Luxury high-rise living",
-    "Full building amenities",
+    "Yaletown tower suite",
+    "City and mountain views",
+    "200 sq ft patio",
+    "Pool, hot tub, sauna, and gym",
+    "Free parking",
+    "Walk to Seawall and SkyTrain",
   ],
 };
 

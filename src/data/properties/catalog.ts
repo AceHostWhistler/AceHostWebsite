@@ -1423,7 +1423,7 @@ export const propertyCategories: PropertyCategory[] = [
 
           {
             id: "vancouver-house-corner",
-            name: "Vancouver House Corner Unit | 30th Floor",
+            name: "Yaletown Tower Suite | Views, Pool + Free Parking",
             images: [
               "/photos/properties/vancouver-house/645adc4aca79d22167763483_Vancouver_House-03.jpg",
               "/photos/properties/vancouver-house/645adc49fb32ea8384334e2e_Vancouver_House-05.jpg",
@@ -1431,28 +1431,31 @@ export const propertyCategories: PropertyCategory[] = [
             ],
             guests: 4,
             bedrooms: 2,
+            beds: 2,
             bathrooms: 2,
-            location: "Vancouver, BC",
+            location: "Yaletown, Vancouver, BC",
             description:
-              "Experience the epitome of luxury urban living in this stunning corner unit at Vancouver House. Located on the 30th floor, this property offers breathtaking views of False Creek, downtown Vancouver, and the North Shore mountains.",
+              "Stylish tower suite with breathtaking city and mountain views. This bright 800 sq ft, 2-bedroom, 2-bathroom home sits in the centre of Yaletown, an easy walk from BC Place, Rogers Arena, the Seawall, restaurants, shopping, and SkyTrain. Enjoy a huge 200 sq ft patio, king and queen beds, a full kitchen, dedicated workspace, free parking, and access to the building's pool, hot tub, sauna, and gym.",
             features: [
-              "Corner Unit Views",
-              "30th Floor",
-              "Fully Equipped Kitchen",
-              "High-End Appliances",
+              "City & Mountain Views",
+              "200 sq ft Patio",
+              "Free Parking",
+              "Pool, Hot Tub & Sauna",
               "In-Building Gym",
-              "Concierge Service",
-              "Central Location",
-              "Parking Available",
+              "Full Kitchen",
+              "Dedicated Workspace",
+              "Portable AC",
             ],
             highlights: [
-              "Panoramic City Views",
-              "Luxury Finishes",
-              "Prime Location",
+              "Centre of Yaletown",
+              "King and Queen Beds",
+              "Walk to Seawall & SkyTrain",
               "Building Amenities",
             ],
             priceRange: "$12,000 per month | 3 month minimum",
-            link: "/vancouver-listings/vancouver-house-corner-unit-30th-floor"
+            link: "/vancouver-listings/vancouver-house-corner-unit-30th-floor",
+            airbnbLink:
+              "https://www.airbnb.ca/rooms/1010373029610726119?guests=1&adults=1&s=67&unique_share_id=b8edd947-8412-4a7b-9875-2a04633c6616",
           },
 
           {

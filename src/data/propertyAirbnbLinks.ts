@@ -12,7 +12,6 @@ export const CONTACT_ONLY_PROPERTY_IDS = new Set([
   "villa-oineas-greece-mykonos",
   "helios-estate-mykonos",
   "villa-rosabella-mykonos",
-  "vancouver-house-corner",
   "wedge-mountain-lodge",
   "wedge-mountain-lodge-spa",
 ]);
@@ -49,6 +48,8 @@ const EXTRA_PROPERTY_AIRBNB_LINKS: Record<string, string> = {
     "https://www.airbnb.ca/rooms/1414129878809697902?guests=1&adults=1&s=67&unique_share_id=ba3bff7b-bc57-416c-bcd6-96b0943cfe51",
   "bedora-place":
     "https://www.airbnb.ca/rooms/1682274339649339817?guests=1&adults=1&s=67&unique_share_id=65cb0895-1c19-4e3d-9a6b-57836a5fbac4",
+  "vancouver-house-corner":
+    "https://www.airbnb.ca/rooms/1010373029610726119?guests=1&adults=1&s=67&unique_share_id=b8edd947-8412-4a7b-9875-2a04633c6616",
   "snow-pine":
     "https://www.airbnb.ca/rooms/744832560480313027?guests=1&adults=1&s=67&unique_share_id=50412c76-d839-4753-bf56-19310f38a4ef",
   "whistler-village-views-luxury-2-5-bedroom":

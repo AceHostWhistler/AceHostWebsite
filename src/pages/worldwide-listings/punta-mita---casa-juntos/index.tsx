@@ -161,7 +161,7 @@ const PuntaMitaCasaJuntos = () => {
             bedrooms={8}
             bathrooms={8}
             priceRange="$3,500-$5,000 per night"
-            airbnbLink="https://www.airbnb.ca/rooms/561767409786915919?guests=1&adults=1&s=67&unique_share_id=7a6e7b88-1a8b-4352-acca-56db762955cd"
+            contactLink="/contact"
             amenities={getWorldwideAmenities("punta-mita---casa-juntos")}
             onMorePhotosClick={openGallery}
           />

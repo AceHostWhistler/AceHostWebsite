@@ -134,8 +134,9 @@ const WORLDWIDE_LISTING_TITLES: Record<string, Pick<StaticPageMeta, "title" | "d
     description: businessInfo.description,
   },
   "vancouver-house-corner-unit-30th-floor": {
-    title: "The Vancouver House, Corner Unit | 30th Floor - AceHost",
-    description: businessInfo.description,
+    title: "Yaletown Tower Suite | Views, Pool + Free Parking - AceHost",
+    description:
+      "Stylish Yaletown tower suite with city and mountain views. Bright 800 sq ft, 2-bedroom, 2-bathroom home with a 200 sq ft patio, king and queen beds, free parking, and building pool, hot tub, sauna, and gym.",
   },
 };
 

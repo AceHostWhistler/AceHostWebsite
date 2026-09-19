@@ -3,7 +3,6 @@ import Head from "next/head";
 import Image from "next/image";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import PropertyHeaderEditorial from "@/components/PropertyHeaderEditorial";
 import {
@@ -23,6 +22,10 @@ import {
   GALLERY_PREVIEW_LIMIT,
   getGalleryPhotoOrder,
 } from "@/lib/galleryPhotoOrder";
+import { airbnbButtonLg } from "@/lib/airbnbButtonStyles";
+
+const AIRBNB_LINK =
+  "https://www.airbnb.ca/rooms/1010373029610726119?guests=1&adults=1&s=67&unique_share_id=b8edd947-8412-4a7b-9875-2a04633c6616";
 
 const VancouverHouseCornerUnit = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -99,10 +102,10 @@ const VancouverHouseCornerUnit = () => {
   return (
     <>
       <Head>
-        <title>The Vancouver House, Corner Unit | 30th Floor - AceHost</title>
+        <title>Yaletown Tower Suite | Views, Pool + Free Parking - AceHost</title>
         <meta
           name="description"
-          content="Experience luxury living in this stunning corner unit on the 30th floor of the iconic Vancouver House. Panoramic views, designer furnishings, and all amenities."
+          content="Stylish Yaletown tower suite with city and mountain views. Bright 800 sq ft, 2-bedroom, 2-bathroom home with a 200 sq ft patio, king and queen beds, free parking, and building pool, hot tub, sauna, and gym."
         />
       </Head>
 
@@ -111,13 +114,13 @@ const VancouverHouseCornerUnit = () => {
 
         <main className={editorialMainClass}>
           <PropertyHeaderEditorial
-            title="The Vancouver House, Corner Unit | 30th Floor"
+            title="Yaletown Tower Suite | Views, Pool + Free Parking"
             guests={4}
             bedrooms={2}
             beds={2}
             bathrooms={2}
             priceRange="$12,000 per month | 3 month minimum"
-            airbnbLink="https://www.airbnb.ca/rooms/561767409786915919?guests=1&adults=1&s=67&unique_share_id=7a6e7b88-1a8b-4352-acca-56db762955cd"
+            airbnbLink={AIRBNB_LINK}
             amenities={getWorldwideAmenities("vancouver-house-corner-unit-30th-floor")}
             onMorePhotosClick={openGallery}
           />
@@ -161,52 +164,31 @@ const VancouverHouseCornerUnit = () => {
           <div id="details" className="max-w-7xl mx-auto px-4 mb-16 sm:mb-20">
             <div className="mb-12 sm:mb-16">
               <h2 className="text-3xl font-bold mb-6 text-gray-900">
-                Property Details
+                The Space
               </h2>
               <div className={editorialGalleryGridClass}>
                 <div>
                   <p className="text-gray-700 mb-6">
-                    Welcome to this spectacular corner unit on the 30th floor of
-                    the iconic Vancouver House. This architectural masterpiece
-                    offers breathtaking 270-degree views of False Creek, English
-                    Bay, and the North Shore mountains through floor-to-ceiling
-                    windows.
+                    Stylish tower suite with breathtaking city and mountain views. This bright 800 sq ft, 2-bedroom, 2-bathroom home sits in the centre of Yaletown, an easy walk from BC Place, Rogers Arena, the Seawall, restaurants, shopping, and SkyTrain.
                   </p>
                   <p className="text-gray-700 mb-6">
-                    Featuring 2 bedrooms and 2 bathrooms across 1,200 square
-                    feet of thoughtfully designed living space, this luxury
-                    apartment combines modern elegance with ultimate comfort.
-                    The unit has been professionally decorated with high-end
-                    designer furnishings throughout, creating a sophisticated
-                    yet comfortable atmosphere.
+                    Enjoy a huge 200 sq ft patio, king and queen beds, a full kitchen, dedicated workspace, free parking, and access to the building&apos;s pool, hot tub, sauna, and gym.
                   </p>
                   <p className="text-gray-700 mb-6">
-                    The open-concept living area flows seamlessly onto a large
-                    balcony, perfect for enjoying your morning coffee while
-                    taking in the spectacular views. The gourmet kitchen
-                    features premium Miele appliances, quartz countertops, and
-                    everything you need to prepare delicious meals.
+                    Yes, we have AC. Two portable air-conditioning units are available from May 1 through September 30, one in the primary bedroom and one in the living room.
                   </p>
                 </div>
                 <div>
                   <p className="text-gray-700 mb-6">
-                    As a guest, you'll have access to the building's
-                    exceptional amenities, including a fitness center, indoor
-                    pool and hot tub, and the stunning rooftop garden. The
-                    building also offers 24-hour concierge service for added
-                    convenience and security.
+                    Check-in is straightforward: a buzzer code to enter the building, a front-door code for the unit, and two fobs left on the counter for your stay.
                   </p>
                   <p className="text-gray-700 mb-6">
-                    Located in the heart of Vancouver's Beach District,
-                    you'll be steps away from the Seawall, Granville
-                    Island, and countless restaurants, shops, and entertainment
-                    options. This prime location makes it the perfect base for
-                    exploring everything Vancouver has to offer.
+                    The swimming pool, hot tub, sauna, and fitness centre are shared building amenities and follow building hours and rules. This is a fully licensed short-term rental.
                   </p>
                   <div className="flex items-center space-x-8 mt-6">
                     <div className="flex items-center">
                       <FaBed className="text-gray-700 mr-2 text-xl" />
-                      <span className="text-gray-700">2 Bedrooms</span>
+                      <span className="text-gray-700">2 Bedrooms, 2 Beds</span>
                     </div>
                     <div className="flex items-center">
                       <FaBath className="text-gray-700 mr-2 text-xl" />
@@ -225,23 +207,18 @@ const VancouverHouseCornerUnit = () => {
               <div className={editorialGalleryGridClass}>
                 <div>
                   <h3 className="text-xl font-semibold mb-3 text-gray-900">
-                    Primary Bedroom
+                    Bedroom 1
                   </h3>
                   <p className="text-gray-700 mb-6">
-                    Spacious primary bedroom with king-sized bed, premium
-                    linens, ample closet space, and an ensuite bathroom
-                    featuring a walk-in shower. Floor-to-ceiling windows offer
-                    stunning city and water views.
+                    Primary bedroom with a king bed.
                   </p>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-3 text-gray-900">
-                    Second Bedroom
+                    Bedroom 2
                   </h3>
                   <p className="text-gray-700 mb-6">
-                    Comfortable second bedroom with queen-sized bed, desk
-                    workspace, closet, and access to the main bathroom with a
-                    soaking tub/shower combination.
+                    Second bedroom with a queen bed.
                   </p>
                 </div>
               </div>
@@ -253,210 +230,38 @@ const VancouverHouseCornerUnit = () => {
                 Amenities
               </h2>
               <div className={editorialGalleryGridClass}>
-                <div className="flex items-start">
-                  <svg
-                    className="h-5 w-5 text-gray-900 mt-0.5 mr-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 13l4 4L19 7"
-                    ></path>
-                  </svg>
-                  <span>Full Kitchen with High-End Appliances</span>
-                </div>
-                <div className="flex items-start">
-                  <svg
-                    className="h-5 w-5 text-gray-900 mt-0.5 mr-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 13l4 4L19 7"
-                    ></path>
-                  </svg>
-                  <span>In-Suite Washer & Dryer</span>
-                </div>
-                <div className="flex items-start">
-                  <svg
-                    className="h-5 w-5 text-gray-900 mt-0.5 mr-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 13l4 4L19 7"
-                    ></path>
-                  </svg>
-                  <span>Floor-to-Ceiling Windows</span>
-                </div>
-                <div className="flex items-start">
-                  <svg
-                    className="h-5 w-5 text-gray-900 mt-0.5 mr-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 13l4 4L19 7"
-                    ></path>
-                  </svg>
-                  <span>Large Balcony with Seating</span>
-                </div>
-                <div className="flex items-start">
-                  <svg
-                    className="h-5 w-5 text-gray-900 mt-0.5 mr-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 13l4 4L19 7"
-                    ></path>
-                  </svg>
-                  <span>Air Conditioning</span>
-                </div>
-                <div className="flex items-start">
-                  <svg
-                    className="h-5 w-5 text-gray-900 mt-0.5 mr-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 13l4 4L19 7"
-                    ></path>
-                  </svg>
-                  <span>High-Speed Wi-Fi</span>
-                </div>
-                <div className="flex items-start">
-                  <svg
-                    className="h-5 w-5 text-gray-900 mt-0.5 mr-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 13l4 4L19 7"
-                    ></path>
-                  </svg>
-                  <span>Smart TVs</span>
-                </div>
-                <div className="flex items-start">
-                  <svg
-                    className="h-5 w-5 text-gray-900 mt-0.5 mr-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 13l4 4L19 7"
-                    ></path>
-                  </svg>
-                  <span>Designer Furnishings</span>
-                </div>
-                <div className="flex items-start">
-                  <svg
-                    className="h-5 w-5 text-gray-900 mt-0.5 mr-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 13l4 4L19 7"
-                    ></path>
-                  </svg>
-                  <span>Fitness Center Access</span>
-                </div>
-                <div className="flex items-start">
-                  <svg
-                    className="h-5 w-5 text-gray-900 mt-0.5 mr-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 13l4 4L19 7"
-                    ></path>
-                  </svg>
-                  <span>Indoor Pool & Hot Tub Access</span>
-                </div>
-                <div className="flex items-start">
-                  <svg
-                    className="h-5 w-5 text-gray-900 mt-0.5 mr-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 13l4 4L19 7"
-                    ></path>
-                  </svg>
-                  <span>Rooftop Garden Access</span>
-                </div>
-                <div className="flex items-start">
-                  <svg
-                    className="h-5 w-5 text-gray-900 mt-0.5 mr-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 13l4 4L19 7"
-                    ></path>
-                  </svg>
-                  <span>24-Hour Concierge</span>
-                </div>
+                {[
+                  "Full kitchen",
+                  "Dedicated workspace",
+                  "Free parking garage",
+                  "200 sq ft patio",
+                  "Wifi and TV",
+                  "In-suite washer and dryer",
+                  "Portable air conditioning",
+                  "Shared pool",
+                  "Shared hot tub",
+                  "Shared sauna",
+                  "Shared gym",
+                  "Elevator",
+                ].map((item) => (
+                  <div key={item} className="flex items-start">
+                    <svg
+                      className="h-5 w-5 text-gray-900 mt-0.5 mr-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 13l4 4L19 7"
+                      ></path>
+                    </svg>
+                    <span>{item}</span>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -466,18 +271,23 @@ const VancouverHouseCornerUnit = () => {
                 Location
               </h2>
               <p className="text-gray-700 mb-6">
-                Located in Vancouver's Beach District, you'll be
-                perfectly positioned to explore the city. The Vancouver House is
-                just:
+                In the centre of Yaletown, Vancouver. An easy walk to BC Place, Rogers Arena, the Seawall, restaurants, shopping, and SkyTrain.
               </p>
-              <ul className="list-disc list-inside space-y-2 text-gray-700 mb-6">
-                <li>Steps from the Seawall walking/biking path</li>
-                <li>5-minute walk to Granville Island</li>
-                <li>10-minute walk to Yaletown restaurants and shops</li>
-                <li>15-minute walk to English Bay Beach</li>
-                <li>Close to public transit options</li>
-                <li>25-minute drive from Vancouver International Airport</li>
-              </ul>
+              <p className="text-gray-700 mb-6">
+                Check-in after 4:00 p.m. Checkout before 10:00 a.m. Quiet hours from 11:00 p.m. to 6:00 a.m. No pets, no smoking, and no parties or events.
+              </p>
+            </div>
+
+            <div className="max-w-4xl mx-auto text-center mb-8">
+              <a
+                href={AIRBNB_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                referrerPolicy="no-referrer-when-downgrade"
+                className={airbnbButtonLg}
+              >
+                Book on Airbnb
+              </a>
             </div>
           </div>
         </main>

@@ -38,6 +38,14 @@ const VANCOUVER: PropertyGeo = {
   longitude: -123.1207,
 };
 
+const YALETOWN: PropertyGeo = {
+  locality: "Yaletown",
+  region: "BC",
+  country: "CA",
+  latitude: 49.2784,
+  longitude: -123.1199,
+};
+
 const WEST_VANCOUVER: PropertyGeo = {
   locality: "West Vancouver",
   region: "BC",
@@ -111,7 +119,7 @@ const PATH_GEO: Record<string, PropertyGeo> = {
   "punta-mita---casa-juntos": PUNTA_MITA,
   "super-yacht-thailand": PHUKET,
   "hood-river-luxury-home": HOOD_RIVER,
-  "vancouver-house-corner-unit-30th-floor": VANCOUVER,
+  "vancouver-house-corner-unit-30th-floor": YALETOWN,
   "bedora-place": WEST_VANCOUVER,
 };
 
