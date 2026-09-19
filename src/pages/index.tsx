@@ -216,6 +216,13 @@ const Home = () => {
     return listing.locationFilter === activeFilter;
   });
 
+  const whistlerListings = filteredListings.filter(
+    (listing) => !isWorldwideListing(listing)
+  );
+  const worldwideListings = filteredListings.filter((listing) =>
+    isWorldwideListing(listing)
+  );
+
   const faqItems = [
     {
       question: "Is there a minimum stay requirement for Acehost properties?",
@@ -528,13 +535,41 @@ const Home = () => {
                 </button>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {filteredListings.map((property, index) => (
-                <div key={property.id} className="col-span-1">
-                  {renderPropertyCard(property, index)}
+            {whistlerListings.length > 0 && (
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {whistlerListings.map((property, index) => (
+                  <div key={property.id} className="col-span-1">
+                    {renderPropertyCard(property, index)}
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {worldwideListings.length > 0 && (
+              <div
+                className={
+                  whistlerListings.length > 0
+                    ? "mt-16 sm:mt-20 pt-12 sm:pt-16 border-t border-stone-200"
+                    : ""
+                }
+              >
+                {whistlerListings.length > 0 && (
+                  <h3 className="text-3xl sm:text-4xl font-light mb-10 text-gray-900">
+                    Worldwide Properties
+                  </h3>
+                )}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  {worldwideListings.map((property, index) => (
+                    <div key={property.id} className="col-span-1">
+                      {renderPropertyCard(
+                        property,
+                        whistlerListings.length + index
+                      )}
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </div>
+            )}
           </div>
         </section>
 

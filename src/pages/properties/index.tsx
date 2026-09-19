@@ -34,6 +34,7 @@ import PropertyCoverImage from "@/components/PropertyCoverImage";
 import {
   propertyCategories,
   getPropertyType,
+  isWhistlerAreaLocation,
   type PropertyFeature,
   type PropertyCategory,
 } from "@/data/properties/catalog";
@@ -80,20 +81,14 @@ export default function Properties() {
           (category) => activeCategory === "all" || category.id === activeCategory
         );
 
-    return baseCategories.map((category) => {
-    const filteredProperties = category.properties.filter((property) => {
-          // Apply all filters
+    const grouped = baseCategories.map((category) => {
+      const filteredProperties = category.properties.filter((property) => {
           const bedroomsMatch = property.bedrooms === null || (typeof property.bedrooms === 'number' && property.bedrooms >= filters.minBedrooms && property.bedrooms <= filters.maxBedrooms);
           const guestsMatch = typeof property.guests === 'string' || (typeof property.guests === 'number' && property.guests >= filters.minGuests && property.guests <= filters.maxGuests);
           const petFriendlyMatch = !filters.petFriendly || property.isPetFriendly;
           const skiInSkiOutMatch = !filters.skiInSkiOut || property.isSkiInSkiOut;
-          const propertyLocation = property.location.toLowerCase();
           const isWorldwideProperty =
-            !!property.country ||
-            (!propertyLocation.includes("whistler") &&
-              !propertyLocation.includes("pemberton") &&
-              !propertyLocation.includes("squamish") &&
-              property.location !== "whistler");
+            !!property.country || !isWhistlerAreaLocation(property.location);
           const propertyType = getPropertyType(property);
           const quickCategoryMatch =
             activeCategory === "pets"
@@ -109,25 +104,9 @@ export default function Properties() {
               : activeCategory === "homes"
               ? !isWorldwideProperty && propertyType === "home"
               : true;
-          
-          // Location filtering - ensure properties with non-Whistler locations only appear in worldwide section
-          const locationMatch = 
-            broadCategory ||
-            (category.id === "whistler" && (
-              !property.country && 
-              (property.location.includes("Whistler") || 
-               property.location.includes("Pemberton") || 
-               property.location.includes("Squamish") || 
-               property.location === "whistler")
-            )) ||
-            (category.id === "worldwide" && (
-              property.country || 
-              (!property.location.includes("Whistler") && 
-               !property.location.includes("Pemberton") && 
-               !property.location.includes("Squamish") && 
-               property.location !== "whistler")
-            ));
-          
+          const locationMatch =
+            (category.id === "whistler" && !isWorldwideProperty) ||
+            (category.id === "worldwide" && isWorldwideProperty);
           const amenitiesMatch =
             filters.amenities.length === 0 ||
                 filters.amenities.every(amenity => 
@@ -137,10 +116,20 @@ export default function Properties() {
             );
 
           return bedroomsMatch && guestsMatch && petFriendlyMatch && skiInSkiOutMatch && amenitiesMatch && locationMatch && typeMatch && quickCategoryMatch;
+      });
+
+      return { ...category, properties: sortPropertiesByDisplayOrder(filteredProperties) };
     });
 
-    return { ...category, properties: sortPropertiesByDisplayOrder(filteredProperties) };
-  });
+    return grouped
+      .filter((category) => category.properties.length > 0)
+      .sort((a, b) => {
+        if (a.id === "whistler") return -1;
+        if (b.id === "whistler") return 1;
+        if (a.id === "worldwide") return 1;
+        if (b.id === "worldwide") return -1;
+        return 0;
+      });
   }, [propertyCategories, activeCategory, filters]);
 
   // Add/remove amenity filter
@@ -534,37 +523,52 @@ export default function Properties() {
               {(() => {
                 let propertyCoverIndex = 0;
 
-                return displayProperties.map((category) => (
-                <div key={category.id} className="mb-16 sm:mb-20">
-                  <div className="mb-8 sm:mb-10">
-                    <h2 className="text-2xl sm:text-3xl font-light mb-3 sm:mb-4 text-gray-900">
-                      {category.title}
-                    </h2>
-                    {category.description && (
-                      <div className="text-base sm:text-lg text-gray-600 max-w-4xl space-y-4">
-                        {category.description.split('\n').map((paragraph, index) => (
-                          <p key={index}>{paragraph}</p>
-                        ))}
+                return displayProperties.map((category) => {
+                  const showWorldwideBreak =
+                    category.id === "worldwide" &&
+                    displayProperties.some((item) => item.id === "whistler");
+
+                  return (
+                    <div
+                      key={category.id}
+                      className={
+                        showWorldwideBreak
+                          ? "mb-16 sm:mb-20 mt-8 sm:mt-12 pt-10 sm:pt-14 border-t border-stone-200"
+                          : "mb-16 sm:mb-20"
+                      }
+                    >
+                      <div className="mb-8 sm:mb-10">
+                        <h2 className="text-2xl sm:text-3xl font-light mb-3 sm:mb-4 text-gray-900">
+                          {category.id === "worldwide"
+                            ? "Worldwide Properties"
+                            : category.title}
+                        </h2>
+                        {category.description && activeCategory !== "all" && (
+                          <div className="text-base sm:text-lg text-gray-600 max-w-4xl space-y-4">
+                            {category.description.split("\n").map((paragraph, index) => (
+                              <p key={index}>{paragraph}</p>
+                            ))}
+                          </div>
+                        )}
                       </div>
-                    )}
-                  </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                    {category.properties.map((property) => {
-                      const imagePriority = propertyCoverIndex < 9;
-                      propertyCoverIndex += 1;
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                        {category.properties.map((property) => {
+                          const imagePriority = propertyCoverIndex < 9;
+                          propertyCoverIndex += 1;
 
-                      return (
-                        <PropertyCard
-                          key={property.id}
-                          property={property}
-                          imagePriority={imagePriority}
-                        />
-                      );
-                    })}
-                  </div>
-                </div>
-              ));
+                          return (
+                            <PropertyCard
+                              key={property.id}
+                              property={property}
+                              imagePriority={imagePriority}
+                            />
+                          );
+                        })}
+                      </div>
+                    </div>
+                  );
+                });
               })()}
             </div>
             
