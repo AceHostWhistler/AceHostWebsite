@@ -106,7 +106,6 @@ const HotelBookingAssistance = () => {
                   If you'd like additional assistance during your stay, our premium concierge services are available:
                 </p>
                 <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                  <li><strong>$200 USD per hour</strong> for optional concierge services</li>
                   <li>Priority restaurant reservations in Whistler's finest establishments</li>
                   <li>Curated in-town experiences and activity bookings</li>
                   <li>Grocery delivery to your room prior to checking in</li>
@@ -114,7 +113,7 @@ const HotelBookingAssistance = () => {
                   <li>And much more to enhance your stay!</li>
                 </ul>
                 <p className="mt-4 text-gray-700">
-                  A full itinerary typically costs around <strong>4-8+ hours</strong> depending on what you need. Let us know what you need and we can send a ballpark estimate.
+                  Let us know what you need and we can send a ballpark estimate.
                 </p>
                 <p className="mt-4 text-gray-700 font-medium">
                   Remember: There is no charge for our booking assistance - you only pay for optional concierge services if you choose to use them after booking.
@@ -194,7 +193,7 @@ const HotelBookingAssistance = () => {
               <div className="bg-gray-100 p-8 rounded-lg mb-12 border-l-4 border-gray-400">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Important Note About Concierge Services</h3>
                 <p className="text-gray-700">
-                  Please note that all concierge services for our larger homes are included at no additional hourly charge. For hotels, there is an optional charge. Please let us know if you would like to opt in when booking.
+                  Please note that all concierge services for our larger homes are included. For hotels, concierge is optional. Please let us know if you would like to opt in when booking.
                 </p>
               </div>
 

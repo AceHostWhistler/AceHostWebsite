@@ -1900,7 +1900,6 @@ export const propertyCategories: PropertyCategory[] = [
               "Local Expert Assistance",
             ],
             priceRange: "Subject to request, 5-night minimum stays, 2+ bedrooms",
-            winterPrice: "$200 USD per hour concierge services",
             holidayPrice: "No charge for booking, only for optional concierge services",
             isPetFriendly: false,
             isSkiInSkiOut: false,
