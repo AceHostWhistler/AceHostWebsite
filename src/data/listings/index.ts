@@ -73,6 +73,7 @@ import whistler_village_views_luxury_2_5_bedroomMeta from "./meta/whistler-villa
 
 import type { ListingEntry } from "./types";
 import { getListingAmenities } from "./amenities";
+import { filterListingPhotos } from "@/lib/optimizedPropertyPhotos";
 
 export const listingSlugs = [
   "bluffs-unit-4-taluswood",
@@ -159,6 +160,7 @@ export function getListing(slug: string): ListingEntry | undefined {
   if (!entry) return undefined;
   return {
     ...entry,
+    photos: filterListingPhotos(entry.photos),
     amenities: entry.amenities?.length
       ? entry.amenities
       : getListingAmenities(slug),

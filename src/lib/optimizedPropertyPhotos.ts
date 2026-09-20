@@ -11,6 +11,7 @@ import optimizedFolders from "@/data/optimizedPropertyFolders.json";
 import photoManifest from "@/data/optimizedPhotoManifest.json";
 
 const PHOTO_PREFIX = "/photos/properties/";
+const LISTING_IMAGE_EXT = /\.(avif|gif|jpe?g|png|webp)$/i;
 const optimizedFolderSet = new Set<string>(optimizedFolders.folders);
 
 const galleryManifest = photoManifest.gallery as Record<string, string>;
@@ -50,6 +51,13 @@ function resolveOptimizedSrc(
 ): string {
   const manifest = variant === "gallery" ? galleryManifest : fullManifest;
   return manifest[src] ?? toWebpPath(src, variant);
+}
+
+/** Drop placeholder or folder paths that are not actual image files. */
+export function filterListingPhotos(photos: readonly string[]): string[] {
+  return photos.filter((src) =>
+    LISTING_IMAGE_EXT.test((src.split("?")[0] ?? "").trim())
+  );
 }
 
 export function getGalleryPhotoSrc(src: string): string {

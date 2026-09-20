@@ -22,6 +22,7 @@ import {
 } from "@/lib/editorialPropertyLayout";
 import { getListingAmenities } from "@/data/listings/amenities";
 import {
+  filterListingPhotos,
   getFullPhotoSrc,
   getGalleryPhotoSrc,
 } from "@/lib/optimizedPropertyPhotos";
@@ -56,10 +57,14 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
     vimeoTitle,
     videoUrl,
   } = listing;
-  const galleryPhotos = getGalleryPhotoOrder(photos, listing.slug, {
-    preserveOrder: listing.galleryPreserveOrder,
-    deferPhotos: listing.galleryDeferPhotos,
-  });
+  const galleryPhotos = getGalleryPhotoOrder(
+    filterListingPhotos(photos),
+    listing.slug,
+    {
+      preserveOrder: listing.galleryPreserveOrder,
+      deferPhotos: listing.galleryDeferPhotos,
+    }
+  );
 
   const [showAllPhotos, setShowAllPhotos] = useState(false);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(
