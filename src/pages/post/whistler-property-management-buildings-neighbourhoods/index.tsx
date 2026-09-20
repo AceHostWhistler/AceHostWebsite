@@ -24,9 +24,10 @@ const ISO_MOD = "2026-09-19T17:00:00-07:00";
 const READ_TIME = "14 min read";
 
 const META = {
-  title: "Whistler Property Management by Building | AceHost",
+  title:
+    "Whistler's Best Property Management Company: Local Expertise Across Every Major Phase 1 Building and Neighbourhoods | AceHost",
   description:
-    "Explore AceHost property management across Whistler Village, Upper Village, Creekside, Kadenwood and more. Request a rental revenue estimate.",
+    "AceHost is a Whistler property management company with local expertise across major Phase 1 buildings and neighbourhoods. Request a rental revenue estimate.",
 };
 
 const KEYWORDS = [
@@ -299,7 +300,8 @@ export default function BlogPost() {
               Property Management, Whistler
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
-              Whistler Property Management by Building and Neighbourhood
+              Whistler&apos;s Best Property Management Company: Local Expertise
+              Across Every Major Phase 1 Building and Neighbourhoods
             </h1>
             <div className="flex flex-wrap items-center text-sm text-gray-600 mb-8 gap-x-4 gap-y-1">
               <span>

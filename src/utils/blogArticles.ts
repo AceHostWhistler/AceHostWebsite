@@ -19,16 +19,18 @@ export interface Article {
 // All blog articles data with proper image paths
 export const allArticles: Article[] = [
   {
-    title: "Whistler Property Management by Building | AceHost",
+    title:
+      "Whistler's Best Property Management Company: Local Expertise Across Every Major Phase 1 Building and Neighbourhoods | AceHost",
     category: "Property Management, Whistler",
     description:
-      "Explore AceHost property management across Whistler Village, Upper Village, Creekside, Kadenwood and more. Request a rental revenue estimate.",
+      "AceHost is a Whistler property management company with local expertise across major Phase 1 buildings and neighbourhoods. Request a rental revenue estimate.",
     readTime: "14 min read",
     link: "/post/whistler-property-management-buildings-neighbourhoods",
     coverImage: "/photos/properties/2919 Heritage/Drone Mountaintop.png",
     publishedAt: "2026-09-19T17:00:00.000Z",
-    modifiedAt: "2026-09-19T17:00:00.000Z",
-    headline: "Whistler Property Management by Building and Neighbourhood",
+    modifiedAt: "2026-09-20T01:40:00.000Z",
+    headline:
+      "Whistler's Best Property Management Company: Local Expertise Across Every Major Phase 1 Building and Neighbourhoods",
     keywords: [
       "Whistler property management company",
       "Best property management companies in Whistler",
