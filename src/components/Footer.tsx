@@ -59,14 +59,6 @@ const Footer = () => {
             <ul className="space-y-4">
               <li>
                 <Link
-                  href="/concierge-service"
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  Concierge Services
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/properties"
                   className="text-gray-600 hover:text-gray-900 transition-colors"
                 >
@@ -79,6 +71,14 @@ const Footer = () => {
                   className="text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   Property Management
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/concierge-service"
+                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                >
+                  Concierge Services
                 </Link>
               </li>
             </ul>

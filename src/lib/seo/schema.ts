@@ -84,43 +84,51 @@ export function buildHomepageOrganizationSchema() {
         },
       ],
     },
-    department: [
-      {
-        "@type": "Organization",
-        name: "View Luxury Rental Properties",
-        url: `${SITE_URL}/properties`,
-      },
-      {
-        "@type": "Organization",
-        name: "Our Story",
-        url: `${SITE_URL}/our-story`,
-      },
-      {
-        "@type": "Organization",
-        name: "Contact Us",
-        url: `${SITE_URL}/contact`,
-      },
-      {
-        "@type": "Organization",
-        name: "Property Management",
-        url: `${SITE_URL}/list-property`,
-      },
-      {
-        "@type": "Organization",
-        name: "AceHost Whistler Luxury Rentals",
-        url: `${SITE_URL}/properties`,
-      },
-      {
-        "@type": "Organization",
-        name: "Blog",
-        url: `${SITE_URL}/blogs`,
-      },
-      {
-        "@type": "Organization",
-        name: "WorldWide Listings",
-        url: `${SITE_URL}/worldwide-listings`,
-      },
-    ],
+    department: WHISTLER_PRIMARY_NAV.map((item) => ({
+      "@type": "Organization",
+      name: item.name,
+      url: item.url,
+    })),
+  };
+}
+
+const WHISTLER_PRIMARY_NAV = [
+  {
+    name: "View Luxury Rental Properties",
+    url: `${SITE_URL}/properties`,
+  },
+  {
+    name: "Property Management",
+    url: `${SITE_URL}/list-property`,
+  },
+  {
+    name: "Concierge Services",
+    url: `${SITE_URL}/concierge-service`,
+  },
+  {
+    name: "Our Story",
+    url: `${SITE_URL}/our-story`,
+  },
+  {
+    name: "Contact Us",
+    url: `${SITE_URL}/contact`,
+  },
+];
+
+/** Preferred homepage sitelinks for Whistler searches. Worldwide homes stay on their own pages. */
+export function buildSiteNavigationSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "AceHost Whistler",
+    itemListOrder: "https://schema.org/ItemListOrderAscending",
+    numberOfItems: WHISTLER_PRIMARY_NAV.length,
+    itemListElement: WHISTLER_PRIMARY_NAV.map((item, index) => ({
+      "@type": "SiteNavigationElement",
+      position: index + 1,
+      name: item.name,
+      url: item.url,
+    })),
   };
 }
 
@@ -197,10 +205,34 @@ export function buildVacationRentalSchema({
   };
 }
 
+function breadcrumbParentForUrl(canonicalUrl: string): {
+  name: string;
+  item: string;
+} {
+  const path = canonicalUrl.replace(SITE_URL, "");
+  if (path.startsWith("/worldwide-listings")) {
+    return {
+      name: "Worldwide Properties",
+      item: `${SITE_URL}/properties?category=worldwide`,
+    };
+  }
+  if (path.startsWith("/vancouver-listings")) {
+    return {
+      name: "Vancouver Listings",
+      item: `${SITE_URL}/properties?category=worldwide`,
+    };
+  }
+  return {
+    name: "Luxury Vacation Rentals in Whistler",
+    item: `${SITE_URL}/properties`,
+  };
+}
+
 export function buildBreadcrumbSchema(
   title: string,
   canonicalUrl: string
 ) {
+  const parent = breadcrumbParentForUrl(canonicalUrl);
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -214,8 +246,8 @@ export function buildBreadcrumbSchema(
       {
         "@type": "ListItem",
         position: 2,
-        name: "Luxury Rental Homes",
-        item: `${SITE_URL}/properties`,
+        name: parent.name,
+        item: parent.item,
       },
       {
         "@type": "ListItem",

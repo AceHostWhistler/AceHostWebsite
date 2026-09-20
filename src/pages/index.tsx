@@ -27,6 +27,7 @@ import {
 import {
   buildHomepageOrganizationSchema,
   buildOrganizationSchema,
+  buildSiteNavigationSchema,
   buildWebsiteSchema,
 } from "@/lib/seo/schema";
 import { SITE_URL } from "@/data/seo/business";
@@ -50,6 +51,7 @@ const Home = () => {
   const structuredData = buildOrganizationSchema();
   const websiteSchema = buildWebsiteSchema();
   const homepageOrganizationSchema = buildHomepageOrganizationSchema();
+  const siteNavigationSchema = buildSiteNavigationSchema();
 
   // Render optimized property card directly
   const renderPropertyCard = (property: HomepageListing, index: number) => {
@@ -331,6 +333,12 @@ const Home = () => {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(homepageOrganizationSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(siteNavigationSchema),
           }}
         />
 

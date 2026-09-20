@@ -106,32 +106,59 @@ function dedupePages(pages) {
   return Array.from(seen.values());
 }
 
-function generateUrlEntry(route, lastmod, priority = 0.8, changefreq = 'weekly') {
+function generateUrlEntry(route, lastmod) {
   const url = route === '/' ? SITE_URL : `${SITE_URL}${route}`;
-
-  let finalPriority = priority;
-  let finalChangefreq = changefreq;
-  if (route === '/') {
-    finalPriority = 1.0;
-    finalChangefreq = 'weekly';
-  } else if (route.includes('/post/')) {
-    finalPriority = 0.7;
-    finalChangefreq = 'weekly';
-  } else if (
-    route.includes('/listings/') ||
-    route.includes('/worldwide-listings/') ||
-    route.includes('/vancouver-listings/')
-  ) {
-    finalPriority = 0.8;
-    finalChangefreq = 'monthly';
-  }
+  const { priority, changefreq } = getRoutePriority(route);
 
   return `  <url>
     <loc>${url}</loc>
     <lastmod>${lastmod}</lastmod>
-    <changefreq>${finalChangefreq}</changefreq>
-    <priority>${finalPriority}</priority>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
   </url>`;
+}
+
+const CORE_ROUTES = [
+  '/',
+  '/properties',
+  '/list-property',
+  '/concierge-service',
+  '/our-story',
+  '/contact',
+  '/blogs',
+  '/faq',
+];
+
+function getRoutePriority(route) {
+  if (route === '/') {
+    return { priority: 1.0, changefreq: 'weekly' };
+  }
+  if (CORE_ROUTES.includes(route)) {
+    return { priority: 0.9, changefreq: 'weekly' };
+  }
+  if (route.startsWith('/listings/')) {
+    return { priority: 0.8, changefreq: 'monthly' };
+  }
+  if (route.startsWith('/post/')) {
+    return { priority: 0.7, changefreq: 'weekly' };
+  }
+  if (route.startsWith('/vancouver-listings/')) {
+    return { priority: 0.65, changefreq: 'monthly' };
+  }
+  if (route.startsWith('/worldwide-listings/')) {
+    return { priority: 0.6, changefreq: 'monthly' };
+  }
+  return { priority: 0.7, changefreq: 'weekly' };
+}
+
+function routeRank(route) {
+  const coreIndex = CORE_ROUTES.indexOf(route);
+  if (coreIndex !== -1) return coreIndex;
+  if (route.startsWith('/listings/')) return 100;
+  if (route.startsWith('/post/')) return 200;
+  if (route.startsWith('/vancouver-listings/')) return 300;
+  if (route.startsWith('/worldwide-listings/')) return 400;
+  return 250;
 }
 
 function generateSitemap() {
@@ -139,7 +166,9 @@ function generateSitemap() {
     ...getAllPages(),
     ...getListingRoutes(),
     ...getBlogPostRoutes(),
-  ]);
+  ]).sort(
+    (a, b) => routeRank(a.route) - routeRank(b.route) || a.route.localeCompare(b.route)
+  );
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
