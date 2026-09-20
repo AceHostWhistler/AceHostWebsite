@@ -19,6 +19,34 @@ export interface Article {
 // All blog articles data with proper image paths
 export const allArticles: Article[] = [
   {
+    title: "Whistler Property Management by Building | AceHost",
+    category: "Property Management, Whistler",
+    description:
+      "Explore AceHost property management across Whistler Village, Upper Village, Creekside, Kadenwood and more. Request a rental revenue estimate.",
+    readTime: "14 min read",
+    link: "/post/whistler-property-management-buildings-neighbourhoods",
+    coverImage: "/photos/properties/2919 Heritage/Drone Mountaintop.png",
+    publishedAt: "2026-09-19T17:00:00.000Z",
+    modifiedAt: "2026-09-19T17:00:00.000Z",
+    headline: "Whistler Property Management by Building and Neighbourhood",
+    keywords: [
+      "Whistler property management company",
+      "Best property management companies in Whistler",
+      "Whistler Airbnb property management",
+      "Whistler vacation rental management",
+      "Whistler luxury property management",
+      "Whistler Phase 1 property management",
+      "Whistler condo property management",
+      "Whistler rental revenue estimate",
+      "Valhalla Whistler property management",
+      "Aspens Whistler property management",
+      "Marquise Whistler property management",
+      "Woodrun Whistler property management",
+      "Eagle Lodge Whistler property management",
+      "Cascade Lodge Whistler property management",
+    ],
+  },
+  {
     title: "Justin Tse in Kadenwood | Luxury Whistler Experience with AceHost | AceHost",
     category: "Luxury Travel, Kadenwood",
     description:
