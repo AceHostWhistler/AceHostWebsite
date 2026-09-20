@@ -83,44 +83,41 @@ export default function WhistlerWeatherForecast2026Page() {
       <div className="min-h-screen bg-white">
         <Navigation transparent={false} />
 
-        <main className="pt-0">
-          {/* Cinematic hero */}
-          <header className="relative w-full min-h-[420px] sm:min-h-[480px] md:min-h-[560px] flex items-end">
-            <Image
-              src={HERO.src}
-              alt={HERO.alt}
-              fill
-              className="object-cover object-center"
-              priority
-              sizes="100vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
-            <div className="relative z-10 w-full max-w-[820px] mx-auto px-4 sm:px-6 lg:px-8 pb-10 sm:pb-14 pt-28">
-              <span className="inline-block bg-white/15 backdrop-blur-sm text-white text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
-                {CATEGORY}
-              </span>
-              <h1 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-4">
-                {HEADLINE}
-              </h1>
-              <p className="text-base sm:text-lg text-gray-100 leading-relaxed max-w-2xl mb-6">
-                What a potentially historic El Niño could mean for Whistler
-                Blackcomb snowfall, temperatures and powder days this winter.
-              </p>
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-200 mb-6">
-                <span>Updated September 2026</span>
-                <span aria-hidden className="hidden sm:inline">
-                  |
-                </span>
-                <span>{READ_TIME}</span>
-              </div>
-              <BookWhistlerWinterButton variant="hero" />
-            </div>
-          </header>
-
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+        <main className="pt-24 pb-20">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="lg:grid lg:grid-cols-[minmax(0,820px)_220px] lg:gap-12 xl:gap-16 lg:justify-center">
               <div className="min-w-0 max-w-[820px] lg:max-w-none mx-auto lg:mx-0 w-full">
                 <BlogBreadcrumbs slug="whistler-weather-forecast-2026-2027-winter" />
+                <span className="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full mb-4">
+                  {CATEGORY}
+                </span>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
+                  {HEADLINE}
+                </h1>
+                <p className="text-xl text-gray-800 leading-relaxed mb-6">
+                  What a potentially historic El Niño could mean for Whistler
+                  Blackcomb snowfall, temperatures and powder days this winter.
+                </p>
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-600 mb-6">
+                  <span>Updated September 2026</span>
+                  <span aria-hidden className="hidden sm:inline">
+                    |
+                  </span>
+                  <span>{READ_TIME}</span>
+                </div>
+                <div className="mb-8">
+                  <BookWhistlerWinterButton variant="primary" />
+                </div>
+                <div className="relative w-full aspect-[16/9] mb-10 rounded-xl overflow-hidden bg-gray-100">
+                  <Image
+                    src={HERO.src}
+                    alt={HERO.alt}
+                    fill
+                    className="object-cover object-center"
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 820px"
+                  />
+                </div>
                 <BlogGuestyInlineBanner compact placement="top" />
               <TableOfContents mobile />
 

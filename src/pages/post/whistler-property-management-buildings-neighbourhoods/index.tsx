@@ -280,22 +280,6 @@ export default function BlogPost() {
         <main className="pt-24 pb-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <BlogBreadcrumbs slug={SLUG} />
-          </div>
-
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
-            <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden bg-gray-100 shadow-xl">
-              <Image
-                src={HERO}
-                alt="Luxury Kadenwood ski-in ski-out home managed by AceHost Whistler"
-                fill
-                className="object-cover"
-                priority
-                sizes="(max-width: 1280px) 100vw, 1152px"
-              />
-            </div>
-          </div>
-
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <span className="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full mb-4">
               Property Management, Whistler
             </span>
@@ -303,7 +287,7 @@ export default function BlogPost() {
               Whistler&apos;s Best Property Management Company: Local Expertise
               Across Every Major Phase 1 Building and Neighbourhoods
             </h1>
-            <div className="flex flex-wrap items-center text-sm text-gray-600 mb-8 gap-x-4 gap-y-1">
+            <div className="flex flex-wrap items-center text-sm text-gray-600 mb-6 gap-x-4 gap-y-1">
               <span>
                 Updated: <time dateTime={ISO_MOD}>{PUBLISH_DATE}</time>
               </span>
@@ -316,14 +300,24 @@ export default function BlogPost() {
               </span>
               <span>By AceHost Whistler</span>
             </div>
+            <p className="text-xl text-gray-800 leading-relaxed mb-8">
+              Choosing a Whistler property management company is not only about
+              comparing fees. It is about finding a local team that understands
+              how the location, building, layout, amenities and guest experience
+              of your particular property affect its rental performance.
+            </p>
+            <div className="relative w-full aspect-[16/9] mb-10 rounded-xl overflow-hidden bg-gray-100">
+              <Image
+                src={HERO}
+                alt="Luxury Kadenwood ski-in ski-out home managed by AceHost Whistler"
+                fill
+                className="object-cover"
+                priority
+                sizes="(max-width: 1024px) 100vw, 896px"
+              />
+            </div>
 
             <article className="prose prose-lg max-w-none">
-              <p className="text-xl text-gray-800 leading-relaxed">
-                Choosing a Whistler property management company is not only about
-                comparing fees. It is about finding a local team that understands
-                how the location, building, layout, amenities and guest experience
-                of your particular property affect its rental performance.
-              </p>
               <p>
                 A three-bedroom townhouse in Valhalla requires a different
                 marketing strategy from a ski-in ski-out condo at The Aspens. A
