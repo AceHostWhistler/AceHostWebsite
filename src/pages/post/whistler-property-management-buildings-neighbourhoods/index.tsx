@@ -244,7 +244,7 @@ const FEATURED_PROPERTIES = [
     listingHref: "/listings/whistler-village-views-luxury-2-5-bedroom",
     airbnbHref: "https://www.airbnb.ca/rooms/50025973",
     imageSrc:
-      "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-14.jpg",
+      "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Whistler Village Views Cover.jpg",
     imageAlt: "Tyndall Stone Lodge condo in the centre of Whistler Village",
   },
   {

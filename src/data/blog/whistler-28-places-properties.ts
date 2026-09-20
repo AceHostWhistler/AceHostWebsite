@@ -197,7 +197,7 @@ export const townhomeProperties: Whistler28Property[] = [
     description:
       "Freshly renovated Tyndall Stone Lodge retreat overlooking Olympic Plaza with A/C, in-suite laundry, pool, hot tub, and guaranteed parking.",
     image:
-      "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-14.jpg",
+      "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Whistler Village Views Cover.jpg",
     listingHref: "/listings/whistler-village-views-luxury-2-5-bedroom",
     bookUrl:
       "https://www.airbnb.ca/rooms/50025973?guests=1&adults=1&s=67&unique_share_id=04ceb090-1b8e-4e32-972f-d616b380a0a8",

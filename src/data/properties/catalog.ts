@@ -1300,6 +1300,9 @@ export const propertyCategories: PropertyCategory[] = [
             name: "Tyndall - Luxe 2 bedroom, Main Whistler Village",
             images: [
               "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Whistler Village Views Cover.jpg",
+              "/photos/properties/whistler-village-views-luxury-2-5-bedroom/01 - 20250707 A7M3 01 A1_07036.jpg",
+              "/photos/properties/whistler-village-views-luxury-2-5-bedroom/02 - 20250707 A7M3 01 A1_07154.jpg",
+              "/photos/properties/whistler-village-views-luxury-2-5-bedroom/03 - 20250707 A7M3 01 A1_07045.jpg",
             ],
             guests: 6,
             bedrooms: 2.5,

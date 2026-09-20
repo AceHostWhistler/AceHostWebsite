@@ -215,10 +215,10 @@ const condoTownhomeOptions: FeaturedProperty[] = [
     description:
       "A polished and comfortable option for guests wanting village convenience with a more upscale feel.",
     photos: [
-      "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge.jpg",
-      "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-2.jpg",
-      "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-3.jpg",
-      "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-4.jpg",
+      "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Whistler Village Views Cover.jpg",
+      "/photos/properties/whistler-village-views-luxury-2-5-bedroom/01 - 20250707 A7M3 01 A1_07036.jpg",
+      "/photos/properties/whistler-village-views-luxury-2-5-bedroom/02 - 20250707 A7M3 01 A1_07154.jpg",
+      "/photos/properties/whistler-village-views-luxury-2-5-bedroom/03 - 20250707 A7M3 01 A1_07045.jpg",
     ],
     bookUrl:
       "https://www.airbnb.ca/rooms/50025973?preview_for_ml=true&source_impression_id=p3_1699290307_SHcNx7EoXySmn6j5",

@@ -592,7 +592,7 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/whistler-village-views-luxury-2-5-bedroom/Tyndall Stone Lodge-14.jpg"
+                  src="/photos/properties/whistler-village-views-luxury-2-5-bedroom/Whistler Village Views Cover.jpg"
                   alt="Whistler Village Luxury 2 Bedroom Condo"
                   fill
                   className="object-cover"
