@@ -5,7 +5,6 @@ const base = "/photos/properties/Two Cedars New";
 const listing: ListingData = {
   slug: "two-cedars-kadenwood",
   photos: [
-    `${base}/Two Cedars New`,
     `${base}/Two Cedars Cover photo snow.png`,
     `${base}/OSA_AncientCW1002 Panorama.jpg`,
     `${base}/02-2934 Ancient Cedars-02.jpg`,

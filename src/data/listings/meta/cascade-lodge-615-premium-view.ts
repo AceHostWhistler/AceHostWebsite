@@ -25,6 +25,7 @@ const listing: ListingData = {
     "/photos/properties/Cascade 615/20240621 A7M3 05 A1_02529.jpg",
     "/photos/properties/Cascade 615/20240621 A7M3 05 A1_02562.jpg",
     "/photos/properties/Cascade 615/20240621 A7M3 05 A1_02579.jpg",
+    "/photos/properties/Cascade 615/airbnb-6f824ff2-d6f0-4ed1-9a82-bb7001f707c8.jpg",
   ],
   seo: {
     title: "Cascade Lodge #615 | Premium View - AceHost",

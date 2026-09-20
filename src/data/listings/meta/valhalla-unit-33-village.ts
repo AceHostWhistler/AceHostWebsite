@@ -5,8 +5,6 @@ const base = "/photos/properties/Valhalla Unit 33 Village";
 const listing: ListingData = {
   slug: "valhalla-unit-33-village",
   photos: [
-    `${base}/Valhalla Unit 33 Village`,
-    `${base}/Valhalla Unit 33 Village`,
     `${base}/Living room angle 3.png`,
     `${base}/Living room angle 2.png`,
     `${base}/Living room brighter.png`,
