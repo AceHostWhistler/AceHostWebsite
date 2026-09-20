@@ -10,6 +10,7 @@ import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
 import BlogSeoHead from "@/components/blog/BlogSeoHead";
 import { allArticles } from "@/utils/blogArticles";
 import { airbnbButtonBlog } from "@/lib/airbnbButtonStyles";
+import BlogBulletList from "@/components/blog/BlogBulletList";
 
 const SLUG = "whistler-property-management-buildings-neighbourhoods";
 const HERO = "/photos/properties/2919 Heritage/Drone Mountaintop.png";
@@ -46,6 +47,116 @@ const KEYWORDS = [
   "Eagle Lodge Whistler property management",
   "Cascade Lodge Whistler property management",
 ].join(", ");
+
+const MANAGED_LOCATIONS = [
+  "Kadenwood luxury chalets and ski-in ski-out estates",
+  "Blueberry Hill luxury homes",
+  "Valhalla Peaks in Village North",
+  "Tyndall Stone Lodge in the centre of Whistler Village",
+  "Eagle Lodge in Town Plaza",
+  "Symphony and the Northlands area",
+  "Cascade Lodge at the entrance to Whistler Village",
+  "The Aspens on Blackcomb Mountain",
+  "Marquise in the Upper Village",
+  "Le Chamois at the base of Blackcomb",
+  "Taluswood Bluffs in Creekside",
+  "Luxury Village penthouses and townhouses",
+  "Creekside and Blackcomb ski-in ski-out homes",
+  "Larger private homes throughout Whistler",
+];
+
+const KADENWOOD_HOMES = [
+  "The Mountaintop",
+  "Chalet La Forja",
+  "Two Cedars",
+  "Panoramic Estate",
+  "Slopeside Chalet",
+  "Timber Haven",
+];
+
+const PRIVATE_HOME_AREAS = [
+  "Stonebridge",
+  "Sunridge Plateau",
+  "Brio",
+  "Whistler Cay",
+  "White Gold",
+  "Nicklaus North",
+  "Horstman Estates",
+  "Nordic",
+  "Bayshores",
+  "Alpine Meadows",
+  "WedgeWoods",
+];
+
+const VILLAGE_BUILDINGS = [
+  "Lagoons",
+  "Glacier's Reach",
+  "Northstar at Stoney Creek",
+  "Valhalla",
+  "The Gables",
+  "Symphony",
+  "Granite Court",
+  "Sunpath",
+  "Montebello",
+  "Marketplace Lodge",
+  "Market Pavilion",
+  "Alpenglow",
+  "Village Gate House",
+  "Carleton Lodge",
+  "Tyndall Stone Lodge",
+  "Town Plaza",
+  "Eagle Lodge",
+  "Deer Lodge",
+  "Bear Lodge",
+  "Cascade Lodge",
+];
+
+const BENCHLANDS_BUILDINGS = [
+  "Woodrun",
+  "Glacier Lodge",
+  "Greystone Lodge",
+  "Wildwood Lodge",
+  "Snowbird",
+  "Foxglove",
+  "Forest Creek",
+  "Cedar Hollow",
+  "Treeline",
+  "Snowgoose",
+  "Painted Cliff",
+  "Mountain Star",
+  "Pinnacle Ridge",
+  "Horstman House",
+  "The Villas at Snowberry",
+];
+
+const CREEKSIDE_BUILDINGS = [
+  "Taluswood and Taluswood Bluffs",
+  "Lake Placid Lodge",
+  "Gondola Village",
+  "Gondola Heights",
+  "Powderview",
+  "Snowridge",
+  "Nordic Court",
+  "Whiski Jack",
+  "Marmot Place and the surrounding Marmot area",
+  "Bayshores",
+  "Nordic Estates",
+  "Gondola Way",
+];
+
+const REVENUE_ESTIMATE_FACTORS = [
+  "Building and neighbourhood",
+  "Bedroom and bathroom count",
+  "Renovation quality",
+  "Views and outdoor space",
+  "Ski and Village access",
+  "Parking and storage",
+  "Hot tubs, pools and other amenities",
+  "Air conditioning",
+  "Comparable rental performance",
+  "Seasonal owner-use plans",
+  "Opportunities to improve the property",
+];
 
 const TOC_ITEMS = [
   { id: "why-building-level-experience-matters", label: "Why building-level experience matters" },
@@ -409,22 +520,7 @@ export default function BlogPost() {
                 penthouses, condos and ski-in ski-out properties across Whistler.
               </p>
               <p>Our managed locations include:</p>
-              <ul>
-                <li>Kadenwood luxury chalets and ski-in ski-out estates</li>
-                <li>Blueberry Hill luxury homes</li>
-                <li>Valhalla Peaks in Village North</li>
-                <li>Tyndall Stone Lodge in the centre of Whistler Village</li>
-                <li>Eagle Lodge in Town Plaza</li>
-                <li>Symphony and the Northlands area</li>
-                <li>Cascade Lodge at the entrance to Whistler Village</li>
-                <li>The Aspens on Blackcomb Mountain</li>
-                <li>Marquise in the Upper Village</li>
-                <li>Le Chamois at the base of Blackcomb</li>
-                <li>Taluswood Bluffs in Creekside</li>
-                <li>Luxury Village penthouses and townhouses</li>
-                <li>Creekside and Blackcomb ski-in ski-out homes</li>
-                <li>Larger private homes throughout Whistler</li>
-              </ul>
+              <BlogBulletList items={MANAGED_LOCATIONS} />
               <p>
                 Explore the current{" "}
                 <Link href="/">AceHost collection of Whistler vacation rentals</Link>{" "}
@@ -452,10 +548,9 @@ export default function BlogPost() {
                 than another.
               </p>
               <p>
-                AceHost manages a growing portfolio in Kadenwood, including The
-                Mountaintop, Chalet La Forja, Two Cedars, Panoramic Estate,
-                Slopeside Chalet and Timber Haven.
+                AceHost manages a growing portfolio in Kadenwood, including:
               </p>
+              <BlogBulletList items={KADENWOOD_HOMES} columns={2} />
               <p>
                 Our Blueberry Hill portfolio includes substantial luxury homes
                 with convenient access to Whistler Village, beautiful views and
@@ -463,10 +558,9 @@ export default function BlogPost() {
               </p>
               <p>
                 We also understand the positioning of private homes in areas
-                such as Stonebridge, Sunridge Plateau, Brio, Whistler Cay, White
-                Gold, Nicklaus North, Horstman Estates, Nordic, Bayshores,
-                Alpine Meadows and WedgeWoods.
+                such as:
               </p>
+              <BlogBulletList items={PRIVATE_HOME_AREAS} columns={2} />
 
               <h2
                 id="village"
@@ -536,28 +630,7 @@ export default function BlogPost() {
                 Whistler&apos;s best-known Village and Village North
                 developments, including:
               </p>
-              <ul>
-                <li>Lagoons</li>
-                <li>Glacier&apos;s Reach</li>
-                <li>Northstar at Stoney Creek</li>
-                <li>Valhalla</li>
-                <li>The Gables</li>
-                <li>Symphony</li>
-                <li>Granite Court</li>
-                <li>Sunpath</li>
-                <li>Montebello</li>
-                <li>Marketplace Lodge</li>
-                <li>Market Pavilion</li>
-                <li>Alpenglow</li>
-                <li>Village Gate House</li>
-                <li>Carleton Lodge</li>
-                <li>Tyndall Stone Lodge</li>
-                <li>Town Plaza</li>
-                <li>Eagle Lodge</li>
-                <li>Deer Lodge</li>
-                <li>Bear Lodge</li>
-                <li>Cascade Lodge</li>
-              </ul>
+              <BlogBulletList items={VILLAGE_BUILDINGS} columns={2} />
               <p>
                 Owners searching for Lagoons property management, Valhalla
                 property management, Glacier&apos;s Reach property management or
@@ -607,23 +680,7 @@ export default function BlogPost() {
                 AceHost also understands the guest appeal and rental positioning
                 of established Benchlands developments such as:
               </p>
-              <ul>
-                <li>Woodrun</li>
-                <li>Glacier Lodge</li>
-                <li>Greystone Lodge</li>
-                <li>Wildwood Lodge</li>
-                <li>Snowbird</li>
-                <li>Foxglove</li>
-                <li>Forest Creek</li>
-                <li>Cedar Hollow</li>
-                <li>Treeline</li>
-                <li>Snowgoose</li>
-                <li>Painted Cliff</li>
-                <li>Mountain Star</li>
-                <li>Pinnacle Ridge</li>
-                <li>Horstman House</li>
-                <li>The Villas at Snowberry</li>
-              </ul>
+              <BlogBulletList items={BENCHLANDS_BUILDINGS} columns={2} />
               <p>
                 If you own a condo or townhouse in the Benchlands, we can
                 compare its location, renovation, views, amenities and bedroom
@@ -661,20 +718,7 @@ export default function BlogPost() {
                 , along with other homes in Creekside and the surrounding area.
               </p>
               <p>Our knowledge extends across:</p>
-              <ul>
-                <li>Taluswood and Taluswood Bluffs</li>
-                <li>Lake Placid Lodge</li>
-                <li>Gondola Village</li>
-                <li>Gondola Heights</li>
-                <li>Powderview</li>
-                <li>Snowridge</li>
-                <li>Nordic Court</li>
-                <li>Whiski Jack</li>
-                <li>Marmot Place and the surrounding Marmot area</li>
-                <li>Bayshores</li>
-                <li>Nordic Estates</li>
-                <li>Gondola Way</li>
-              </ul>
+              <BlogBulletList items={CREEKSIDE_BUILDINGS} columns={2} />
               <p>
                 The best marketing approach in this part of Whistler often
                 focuses on ski access, views, privacy, space and the relaxed
@@ -809,19 +853,7 @@ export default function BlogPost() {
                 AceHost can review a property you are considering and provide an
                 initial rental revenue estimate based on:
               </p>
-              <ul>
-                <li>Building and neighbourhood</li>
-                <li>Bedroom and bathroom count</li>
-                <li>Renovation quality</li>
-                <li>Views and outdoor space</li>
-                <li>Ski and Village access</li>
-                <li>Parking and storage</li>
-                <li>Hot tubs, pools and other amenities</li>
-                <li>Air conditioning</li>
-                <li>Comparable rental performance</li>
-                <li>Seasonal owner-use plans</li>
-                <li>Opportunities to improve the property</li>
-              </ul>
+              <BlogBulletList items={REVENUE_ESTIMATE_FACTORS} columns={2} />
               <p>
                 We can also suggest furnishing, renovation and amenity
                 improvements that may strengthen the guest experience and rental
