@@ -136,10 +136,10 @@ const CotswoldsUKSohoFarmHouse = ({
   return (
     <>
       <Head>
-        <title>Luxury Cotswolds Estate Near Soho Farmhouse | Pool, Tennis & Spa | AceHost</title>
+        <title>Luxury Retreat Near Soho Farmhouse | Pool & Tennis | AceHost</title>
         <meta
           name="description"
-          content="Experience luxury at this designer stone estate near Soho Farmhouse in the Cotswolds, UK. This exclusive 8-bedroom property offers spa facilities, a tennis court, and an annex house, all set on a stunning 2-acre property just minutes from Soho Farmhouse."
+          content="Luxury retreat near Soho Farmhouse in the Cotswolds. 8 bedrooms, 8 beds, 5 baths, sleeps 15, with a heated pool, tennis court, spa, A/C, and a 2-bedroom annex on 2 acres."
         />
         {/* Preload hero gallery image for faster first paint */}
         <link rel="preload" href={COVER} as="image" type="image/webp" />
@@ -151,9 +151,10 @@ const CotswoldsUKSohoFarmHouse = ({
         <main className={editorialMainClass}>
           {/* Header with Property Info */}
           <PropertyHeaderEditorial
-            title="Luxury Cotswolds Estate Near Soho Farmhouse | Pool, Tennis & Spa"
+            title="Luxury Retreat Near Soho Farmhouse | Pool & Tennis"
             guests={15}
             bedrooms={8}
+            beds={8}
             bathrooms={5}
             priceRange="2-3 night minimum. £1,200-£3,100 per night | Dependent on season, day of week, holidays, etc."
             contactLink="/contact"
@@ -201,7 +202,7 @@ const CotswoldsUKSohoFarmHouse = ({
           <div className="max-w-5xl mx-auto px-6 md:px-10 lg:px-8" id="details">
             <div className="text-gray-800 space-y-6 leading-relaxed text-base md:text-lg">
               <p>
-                Escape to a stunning estate near Soho Farmhouse, offering a luxurious retreat with an outdoor spa &amp; heated pool/hot tub, private tennis court, and cozy annex house for additional sleeping. This beautiful house is spread across several acres, features 8 bedrooms, a gourmet kitchen, multiple living areas, and 5 bathrooms. Enjoy the hot tub, infrared sauna, cold plunge, pool, &amp; outdoor fire pit.
+                Escape to a stunning estate near Soho Farmhouse, offering a luxurious retreat with an outdoor spa &amp; heated pool/hot tub, A/C, private tennis court, and cozy annex house for additional sleeping. This beautiful house is spread across several acres, features 8 bedrooms, a gourmet kitchen, multiple living areas, and 5 bathrooms. Enjoy the hot tub, infrared sauna, cold plunge, pool, &amp; outdoor fire pit.
               </p>
               <p>
                 Perfect for families or groups seeking a peaceful Cotswolds getaway in a prestigious, rural setting.
@@ -300,7 +301,7 @@ const CotswoldsUKSohoFarmHouse = ({
 
               <h3 className="text-2xl font-bold text-gray-900 pt-2">Other things to note</h3>
               <p>
-                Perfect getaway for a family or group of 6 to 12 people total, with the option to sleep up to 15.
+                Perfect getaway for a family or group of 6 to 12 people total, with the option to sleep up to 15 guests.
               </p>
             </div>
 

@@ -17,13 +17,13 @@ export const worldwideListingAmenities: Record<string, string[]> = {
     "Garage parking",
   ],
   "cotswolds-uk-soho-farm-house": [
-    "Soho Farm House estate",
+    "Near Soho Farmhouse",
     "Outdoor heated pool",
+    "Private tennis court",
     "Air conditioning",
-    "Extensive grounds",
-    "Event-ready layout",
-    "UK countryside retreat",
-    "Premium interiors",
+    "Hot tub, sauna & cold plunge",
+    "Pets welcome (max 2 dogs)",
+    "Main house + annex",
   ],
   "helios-estate-mykonos": [
     "Helios Estate Mykonos",

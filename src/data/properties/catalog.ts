@@ -126,6 +126,51 @@ const BEDORA_PLACE: PropertyFeature = {
   country: "canada",
 };
 
+const COTSWOLDS_UK: PropertyFeature = {
+  id: "cotswolds-uk-soho-farm-house",
+  name: "Luxury Retreat Near Soho Farmhouse | Pool & Tennis",
+  images: [
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A8292.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/DJI_20260720185020_0008_D.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/Cotswolds Cover Pool 2.jpeg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/224A8465.jpg",
+    "/photos/properties/Cotswolds UK - Soho Farm House/Hot tub shot no AC cotswolds.png",
+  ],
+  guests: 15,
+  bedrooms: 8,
+  beds: 8,
+  bathrooms: 5,
+  priceRange:
+    "2-3 night minimum. £1,200-£3,100 per night | Dependent on season, day of week, holidays, etc.",
+  location: "Cotswolds, United Kingdom",
+  description:
+    "Luxury retreat near Soho Farmhouse with an outdoor spa, heated pool, hot tub, A/C, private tennis court, and a cozy annex for extra sleeping. This 8-bedroom, 8-bed, 5-bathroom stone estate sleeps 15 across the main house and annex, set on a serene 2-acre property just minutes from Soho Farmhouse.",
+  features: [
+    "Private Tennis Court",
+    "Infrared Sauna",
+    "Hot Tub & Cold Plunge",
+    "Designer Kitchen with AGA Oven",
+    "Two Cozy Living Rooms",
+    "Electric Car Charger",
+    "Air Conditioning",
+    "Outdoor BBQ & Dining",
+    "Firepit",
+    "Pets Welcome (max 2 dogs)",
+  ],
+  highlights: [
+    "Near Soho Farmhouse",
+    "320m² Luxury Living Space",
+    "Main House + Separate Annex",
+    "2-Acre Private Grounds",
+  ],
+  link: "/worldwide-listings/cotswolds-uk-soho-farm-house",
+  airbnbLink:
+    "https://www.airbnb.ca/rooms/1414129878809697902?guests=1&adults=1&s=67&unique_share_id=ba3bff7b-bc57-416c-bcd6-96b0943cfe51",
+  isSkiInSkiOut: false,
+  isPetFriendly: true,
+  country: "uk",
+};
+
 export function isWhistlerAreaLocation(location: string): boolean {
   const loc = location.toLowerCase();
   return (
@@ -1447,45 +1492,7 @@ export const propertyCategories: PropertyCategory[] = [
 
           BEDORA_PLACE,
 
-          {
-            id: "cotswolds-uk-soho-farm-house",
-            name: "Cotswolds UK - Soho Farm House",
-            images: [
-              "/photos/properties/Cotswolds UK - Soho Farm House/224A8292.jpg",
-              "/photos/properties/Cotswolds UK - Soho Farm House/DJI_20260720185020_0008_D.jpg",
-              "/photos/properties/Cotswolds UK - Soho Farm House/Cotswolds Cover Pool 2.jpeg",
-              "/photos/properties/Cotswolds UK - Soho Farm House/224A8465.jpg",
-              "/photos/properties/Cotswolds UK - Soho Farm House/Hot tub shot no AC cotswolds.png"
-            ],
-            guests: 15,
-            bedrooms: 8,
-            bathrooms: 5,
-            priceRange: "2-3 night minimum. £1,200-£3,100 per night | Dependent on season, day of week, holidays, etc.",
-            location: "Cotswolds, United Kingdom",
-            description: "Designer Stone Estate Near Soho Farmhouse – 8 Bedroom, Spa, Tennis Court, & Annex. Welcome to your countryside dream retreat, just 4 minutes by car (or a scenic 30-minute walk through a private trail) from the world-famous Soho Farmhouse. This beautifully renovated 8-bedroom, 5-bathroom stone estate offers over 320m² of luxurious living space across two dwellings, all set on a stunning and serene 2-acre property.",
-            features: [
-              "Private Tennis Court",
-              "Infrared Sauna",
-              "Hot Tub & Cold Plunge",
-              "Designer Kitchen with AGA Oven",
-              "Two Cozy Living Rooms",
-              "Electric Car Charger",
-              "Air Conditioning",
-              "Outdoor BBQ & Dining",
-              "Firepit"
-            ],
-            highlights: [
-              "Near Soho Farmhouse",
-              "320m² Luxury Living Space",
-              "Main House + Separate Annex",
-              "2-Acre Private Grounds"
-            ],
-            link: "/worldwide-listings/cotswolds-uk-soho-farm-house",
-            airbnbLink: "https://www.airbnb.ca/rooms/1414129878809697902?guests=1&adults=1&s=67&unique_share_id=ba3bff7b-bc57-416c-bcd6-96b0943cfe51",
-            isSkiInSkiOut: false,
-            isPetFriendly: false,
-            country: "uk"
-          },
+          COTSWOLDS_UK,
 
           {
             id: "vancouver-house-corner",
@@ -2028,45 +2035,7 @@ export const propertyCategories: PropertyCategory[] = [
           "Introducing AceHost Global VIP Concierge Services & Villas We're thrilled to announce that AceHost now offers exclusive VIP concierge services and handpicked luxury properties across the globe. Whether you're dreaming of a beachfront estate, a serene countryside chateau, or a sleek modern villa for a group getaway, our team will source the perfect destination tailored to your vision.\nBelow is a curated selection of homes we currently work with, but our network extends far beyond. If you're planning your next vacation and looking for a large, private villa paired with personalized service, we're here to make it happen.\nThis offering is reserved for our top-tier VIP clients & repeat guests. Inquire today to see if you qualify.",
         properties: [
           BEDORA_PLACE,
-          {
-            id: "cotswolds-uk-soho-farm-house",
-            name: "Cotswolds UK - Soho Farm House",
-            images: [
-              "/photos/properties/Cotswolds UK - Soho Farm House/224A8292.jpg",
-              "/photos/properties/Cotswolds UK - Soho Farm House/DJI_20260720185020_0008_D.jpg",
-              "/photos/properties/Cotswolds UK - Soho Farm House/Cotswolds Cover Pool 2.jpeg",
-              "/photos/properties/Cotswolds UK - Soho Farm House/224A8465.jpg",
-              "/photos/properties/Cotswolds UK - Soho Farm House/Hot tub shot no AC cotswolds.png"
-            ],
-            guests: 15,
-            bedrooms: 8,
-            bathrooms: 5,
-            priceRange: "2-3 night minimum. £1,200-£3,100 per night | Dependent on season, day of week, holidays, etc.",
-            location: "Cotswolds, United Kingdom",
-            description: "Designer Stone Estate Near Soho Farmhouse – 8 Bedroom, Spa, Tennis Court, & Annex. Welcome to your countryside dream retreat, just 4 minutes by car (or a scenic 30-minute walk through a private trail) from the world-famous Soho Farmhouse. This beautifully renovated 8-bedroom, 5-bathroom stone estate offers over 320m² of luxurious living space across two dwellings, all set on a stunning and serene 2-acre property.",
-            features: [
-              "Private Tennis Court",
-              "Infrared Sauna",
-              "Hot Tub & Cold Plunge",
-              "Designer Kitchen with AGA Oven",
-              "Two Cozy Living Rooms",
-              "Electric Car Charger",
-              "Air Conditioning",
-              "Outdoor BBQ & Dining",
-              "Firepit"
-            ],
-            highlights: [
-              "Near Soho Farmhouse",
-              "320m² Luxury Living Space",
-              "Main House + Separate Annex",
-              "2-Acre Private Grounds"
-            ],
-            link: "/worldwide-listings/cotswolds-uk-soho-farm-house",
-            airbnbLink: "https://www.airbnb.ca/rooms/1414129878809697902?guests=1&adults=1&s=67&unique_share_id=ba3bff7b-bc57-416c-bcd6-96b0943cfe51",
-            isSkiInSkiOut: false,
-            isPetFriendly: false,
-            country: "uk"
-          },
+          COTSWOLDS_UK,
           {
             id: "santorini-greece-villa-eclipse",
             name: "Santorini Greece - Villa Eclipse",
