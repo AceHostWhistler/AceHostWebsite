@@ -390,7 +390,7 @@ export default function BlogPost() {
               </h3>
               <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/Timber Haven John Harris/Timber Haven cover.png"
+                  src="/photos/properties/Timber Haven John Harris/Drone Timber cover snow 2.png"
                   alt="Timber Haven luxury chalet in Kadenwood, Whistler"
                   fill
                   className="object-cover"

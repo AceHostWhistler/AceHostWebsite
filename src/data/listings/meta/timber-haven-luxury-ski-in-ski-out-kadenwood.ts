@@ -3,7 +3,8 @@ import type { ListingData } from "../types";
 const listing: ListingData = {
   slug: "timber-haven-luxury-ski-in-ski-out-kadenwood",
   photos: [
-  "/photos/properties/Timber Haven John Harris/Timber Haven cover.png",
+  "/photos/properties/Timber Haven John Harris/Drone Timber cover snow 2.png",
+  "/photos/properties/Timber Haven John Harris/Drone Timber cover snow.png",
   "/photos/properties/Timber Haven John Harris/Hot Tub Timber Haven Snow.png",
   "/photos/properties/Timber Haven John Harris/07 - 20260506 A7M4 03 A1_00158.jpg",
   "/photos/properties/Timber Haven John Harris/Timber Master snow.png",
@@ -11,7 +12,6 @@ const listing: ListingData = {
   "/photos/properties/Timber Haven John Harris/8D487CA0-D240-4A51-AC47-9B142E4DEE05.PNG.jpg",
   "/photos/properties/Timber Haven John Harris/Timber Master snow 2.png",
   "/photos/properties/Timber Haven John Harris/Timber Snow living 4.png",
-  "/photos/properties/Timber Haven John Harris/02 - 20260506 MM4P 02 0347.jpg",
   "/photos/properties/Timber Haven John Harris/Timber Snow living 17.png",
   "/photos/properties/Timber Haven John Harris/Timber Master snow 3.png",
   "/photos/properties/Timber Haven John Harris/20 - 20260506 A7M4 02 A1_09946.jpg",

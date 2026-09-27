@@ -290,7 +290,7 @@ export default function BlogPost() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 not-prose">
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Timber Haven John Harris/Timber Haven cover.png"
+                    src="/photos/properties/Timber Haven John Harris/Drone Timber cover snow 2.png"
                     alt="Timber Haven Kadenwood exterior and setting"
                     fill
                     className="object-cover"
@@ -298,7 +298,7 @@ export default function BlogPost() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Timber Haven John Harris/02 - 20260506 MM4P 02 0347.jpg"
+                    src="/photos/properties/Timber Haven John Harris/Timber Snow living 13.png"
                     alt="Timber Haven great room"
                     fill
                     className="object-cover"

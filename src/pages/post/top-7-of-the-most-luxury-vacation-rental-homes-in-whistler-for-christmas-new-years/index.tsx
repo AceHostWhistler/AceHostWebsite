@@ -315,7 +315,7 @@ const LuxuryChristmasRentals = () => {
 
                 <div className="my-6 relative aspect-[16/9] rounded-xl overflow-hidden shadow-md">
                   <Image
-                    src="/photos/properties/Timber Haven John Harris/Timber Haven cover.png"
+                    src="/photos/properties/Timber Haven John Harris/Drone Timber cover snow 2.png"
                     alt="Timber Haven luxury chalet in Kadenwood"
                     fill
                     className="object-cover"

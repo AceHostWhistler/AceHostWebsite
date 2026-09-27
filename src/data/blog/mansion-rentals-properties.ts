@@ -119,7 +119,7 @@ export const MANSION_RENTAL_PROPERTIES: MansionRentalProperty[] = [
     headline: true,
     images: [
       {
-        src: "/photos/properties/Timber Haven John Harris/Timber Haven cover.png",
+        src: "/photos/properties/Timber Haven John Harris/Drone Timber cover snow 2.png",
         alt: "Timber Haven eight-bedroom Whistler luxury chalet",
       },
       {
