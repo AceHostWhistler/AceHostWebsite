@@ -19,7 +19,7 @@ export default function TimberHavenLuxurySkiInSkiOutKadenwoodDetails(_props: Lis
           The main floor is especially convenient, with 2 bedrooms including a primary suite, making it ideal for elderly guests or anyone who prefers to avoid stairs when coming in and out of the home. Across the 3 well-designed levels, guests can enjoy multiple living areas, a TV lounge, home office space, recreation room, ping pong table, and beautifully furnished spaces with tasteful artwork throughout.
         </p>
         <p className="text-gray-800 mb-6 max-w-4xl">
-          The open-concept living and dining area is designed for entertaining, with a warm mountain atmosphere, large windows, and plenty of space for everyone to come together. For larger groups, a spare dining table extension allows up to 16 guests to dine comfortably in the same room, perfect for family dinners, chef-prepared meals, and holiday gatherings.
+          The open-concept living and dining area is designed for entertaining, with a warm mountain atmosphere, large windows, and plenty of space for everyone to come together. For larger groups, a spare dining table extension allows 14+ guests to dine comfortably in the same room, perfect for family dinners, chef-prepared meals, and holiday gatherings.
         </p>
         <p className="text-gray-800 mb-6 max-w-4xl">
           Outside, enjoy a private hot tub, outdoor dining area, and peaceful alpine surroundings. In the winter, guests can take advantage of Kadenwood’s exceptional ski-in/ski-out access via the Peak to Creek run, along with the private residents-only gondola and groomed ski trail access. In the summer, the home is a beautiful base for hiking, biking, golfing, lake days, and relaxing in one of Whistler’s most exclusive communities.
@@ -74,9 +74,9 @@ export default function TimberHavenLuxurySkiInSkiOutKadenwoodDetails(_props: Lis
           This bedroom does not have an ensuite, but has access to a bathroom with a steam shower on the basement level.
         </p>
 
-        <p className="text-gray-800 mb-2 max-w-4xl font-medium">Dining Table for 12+:</p>
+        <p className="text-gray-800 mb-2 max-w-4xl font-medium">Dining Table for 14+:</p>
         <p className="text-gray-800 mb-6 max-w-4xl">
-          The dining table comfortably seats 8 guests with the standard chair setup. An extension leaf and 4 additional chairs are available and ready to use, allowing the table to accommodate 12+ guests comfortably.
+          The dining table comfortably seats 10 guests with the standard chair setup. An extension leaf and 4 additional chairs are available and ready to use, allowing the table to accommodate 14+ guests comfortably.
         </p>
 
         <p className="text-gray-800 mb-2 max-w-4xl font-medium">Basement Bathroom:</p>
