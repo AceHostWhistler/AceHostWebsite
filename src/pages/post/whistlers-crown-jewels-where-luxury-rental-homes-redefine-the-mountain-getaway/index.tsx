@@ -187,7 +187,7 @@ export default function BlogPost() {
               </h3>
               <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png"
+                  src="/photos/properties/Chalet La Forja/New cover forja snow.png"
                   alt="Chalet La Forja luxury vacation home in Kadenwood, Whistler"
                   fill
                   className="object-cover"
@@ -433,7 +433,7 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png"
+                  src="/photos/properties/Chalet La Forja/New cover forja snow.png"
                   alt="Luxury chalet in Whistler with mountain views"
                   fill
                   className="object-cover"

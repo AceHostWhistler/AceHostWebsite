@@ -193,7 +193,7 @@ export default function BlogPost() {
               </h3>
               <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png"
+                  src="/photos/properties/Chalet La Forja/New cover forja snow.png"
                   alt="Chalet La Forja outdoor space with mountain views in summer"
                   fill
                   className="object-cover"
@@ -229,7 +229,7 @@ export default function BlogPost() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png"
+                    src="/photos/properties/Chalet La Forja/New cover forja snow.png"
                     alt="Chalet La Forja exterior with mountain views"
                     fill
                     className="object-cover"

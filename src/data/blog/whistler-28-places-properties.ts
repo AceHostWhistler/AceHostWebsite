@@ -27,7 +27,7 @@ export const kadenwoodProperties: Whistler28Property[] = [
     name: "Chalet La Forja - Ski in Ski out Kadenwood Estate",
     description:
       "A nine-bedroom Kadenwood estate with a heated pool, hot tub, sauna, gym, ski access, housekeeping every other day, and daily winter butler service.",
-    image: "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
+    image: "/photos/properties/Chalet La Forja/New cover forja snow.png",
     listingHref: "/listings/chalet-la-forja-kadenwood",
     bookUrl:
       "https://www.airbnb.ca/rooms/52655503?guests=1&adults=1&s=67&unique_share_id=f1bb5c2c-51f9-4a82-9aa4-670fb8caa71d",

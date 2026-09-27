@@ -3,7 +3,7 @@ import type { ListingData } from "../types";
 const listing: ListingData = {
   slug: "chalet-la-forja-kadenwood",
   photos: [
-  "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
+  "/photos/properties/Chalet La Forja/New cover forja snow.png",
   "/photos/properties/Chalet La Forja/02-2950 Heritage Peaks Trail-02.jpg",
   "/photos/properties/Chalet La Forja/03-2950 Heritage Peaks Trail-03.jpg",
   "/photos/properties/Chalet La Forja/04-2950 Heritage Peaks Trail-04.jpg",

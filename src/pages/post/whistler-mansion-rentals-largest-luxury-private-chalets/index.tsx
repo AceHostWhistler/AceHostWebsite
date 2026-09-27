@@ -17,7 +17,7 @@ import {
 const SLUG = "whistler-mansion-rentals-largest-luxury-private-chalets";
 const CANONICAL_URL = `https://www.acehost.ca/post/${SLUG}`;
 const HERO =
-  "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png";
+  "/photos/properties/Chalet La Forja/New cover forja snow.png";
 const HERO_URL = `https://www.acehost.ca${encodeURI(HERO)}`;
 const PUBLISH_DATE = "August 1, 2026";
 const ISO_MOD = "2026-08-01T12:00:00-07:00";

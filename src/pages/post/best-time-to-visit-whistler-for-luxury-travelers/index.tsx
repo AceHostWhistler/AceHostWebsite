@@ -113,7 +113,7 @@ export default function BlogPost() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png"
+                    src="/photos/properties/Chalet La Forja/New cover forja snow.png"
                     alt="Chalet La Forja luxury vacation home Whistler"
                     fill
                     className="object-cover"

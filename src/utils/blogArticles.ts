@@ -92,7 +92,7 @@ export const allArticles: Article[] = [
     readTime: "14 min read",
     link: "/post/can-foreigners-buy-property-in-whistler",
     coverImage:
-      "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
+      "/photos/properties/Chalet La Forja/New cover forja snow.png",
     publishedAt: "2026-09-10T17:00:00.000Z",
     modifiedAt: "2026-09-10T17:00:00.000Z",
     headline:
@@ -128,7 +128,7 @@ export const allArticles: Article[] = [
     readTime: "15 min read",
     link: "/post/whistler-mansion-rentals-largest-luxury-private-chalets",
     coverImage:
-      "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
+      "/photos/properties/Chalet La Forja/New cover forja snow.png",
     publishedAt: "2026-08-01T19:00:00.000Z",
     headline: "Whistler's Most Impressive Airbnb Homes: Large Luxury Chalets, Mansions and Ski-In/Ski-Out Estates",
   },

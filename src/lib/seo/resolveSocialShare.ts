@@ -13,7 +13,7 @@ type StaticPageMeta = Omit<SocialSharePayload, "type">;
 
 const LA_FORJA_COVER_IMAGE =
   getPropertyCardCoverImage("/listings/chalet-la-forja-kadenwood") ??
-  "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png";
+  "/photos/properties/Chalet La Forja/New cover forja snow.png";
 
 const MOUNTAINTOP_COVER_IMAGE =
   "/photos/properties/2919 Heritage/Mountaintop Snow cover.png";

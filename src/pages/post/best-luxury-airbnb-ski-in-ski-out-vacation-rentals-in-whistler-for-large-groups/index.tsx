@@ -233,7 +233,7 @@ export default function BlogPost() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 not-prose">
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png"
+                    src="/photos/properties/Chalet La Forja/New cover forja snow.png"
                     alt="Chalet La Forja exterior Kadenwood"
                     fill
                     className="object-cover"

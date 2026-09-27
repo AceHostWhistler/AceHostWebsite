@@ -20,7 +20,7 @@ const YOUTUBE_ID = "cNHhE2B8Zeo";
 
 const PHOTOS = {
   hero: "/photos/properties/Chalet La Forja/2950 Heritage Peaks Trail 4 Large 2.png",
-  greatRoom: "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
+  greatRoom: "/photos/properties/Chalet La Forja/New cover forja snow.png",
   justinEntrance:
     "/photos/post/justin-tse-chalet-la-forja-whistler/justin-la-forja-entrance.png",
   justinOffice:

@@ -59,7 +59,7 @@ export const MANSION_RENTAL_PROPERTIES: MansionRentalProperty[] = [
     headline: true,
     images: [
       {
-        src: "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
+        src: "/photos/properties/Chalet La Forja/New cover forja snow.png",
         alt: "Chalet La Forja luxury Whistler mansion with heated pool",
       },
       {

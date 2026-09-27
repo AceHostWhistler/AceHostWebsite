@@ -44,7 +44,7 @@ export const IMAGES = {
     alt: "Whistler alpine terrain overlooking the valley in winter",
   },
   worldComparison: {
-    src: "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
+    src: "/photos/properties/Chalet La Forja/New cover forja snow.png",
     alt: "Whistler Blackcomb alpine skiing during winter",
   },
   villageSnow: {

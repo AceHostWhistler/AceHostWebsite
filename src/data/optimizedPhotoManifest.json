@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T18:39:15.703Z",
+  "generatedAt": "2026-09-27T19:00:45.286Z",
   "gallery": {
     "/photos/properties/3445-Heron-Place/01-3445 Heron Place 01.jpg": "/high-quality/property-gallery/3445-Heron-Place/01-3445 Heron Place 01.webp",
     "/photos/properties/3445-Heron-Place/02-3445 Heron Place 02 2.jpg": "/high-quality/property-gallery/3445-Heron-Place/02-3445 Heron Place 02 2.webp",
@@ -285,7 +285,6 @@
     "/photos/properties/Chalet La Forja/La Forja 01.jpg": "/high-quality/property-gallery/Chalet La Forja/La Forja 01.webp",
     "/photos/properties/Chalet La Forja/La Forja 02.jpg": "/high-quality/property-gallery/Chalet La Forja/La Forja 02.webp",
     "/photos/properties/Chalet La Forja/La Forja 03.jpg": "/high-quality/property-gallery/Chalet La Forja/La Forja 03.webp",
-    "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png": "/high-quality/property-gallery/Chalet La Forja/New Drone Cover photo Forja.webp",
     "/photos/properties/Chalet La Forja/b30fb971-069a-4bb1-9848-da69fc17037f (1).avif": "/high-quality/property-gallery/Chalet La Forja/b30fb971-069a-4bb1-9848-da69fc17037f (1).webp",
     "/photos/properties/Chalet La Forja/bad9aa86-7dc0-4b6c-8b42-a57435a9ad7c.avif": "/high-quality/property-gallery/Chalet La Forja/bad9aa86-7dc0-4b6c-8b42-a57435a9ad7c.webp",
     "/photos/properties/Chalet La Forja/cad64758-b957-4682-b3f5-c11cdafff714.avif": "/high-quality/property-gallery/Chalet La Forja/cad64758-b957-4682-b3f5-c11cdafff714.webp",
@@ -1170,7 +1169,8 @@
     "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ2221-Edit.jpg": "/high-quality/property-gallery/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ2221-Edit.webp",
     "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_R001526-Edit.jpg": "/high-quality/property-gallery/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_R001526-Edit.webp",
     "/photos/properties/Timber Haven John Harris/Drone Timber cover snow 2.png": "/high-quality/property-gallery/Timber Haven John Harris/Drone Timber cover snow 2.webp",
-    "/photos/properties/Timber Haven John Harris/Drone Timber cover snow.png": "/high-quality/property-gallery/Timber Haven John Harris/Drone Timber cover snow.webp"
+    "/photos/properties/Timber Haven John Harris/Drone Timber cover snow.png": "/high-quality/property-gallery/Timber Haven John Harris/Drone Timber cover snow.webp",
+    "/photos/properties/Chalet La Forja/New cover forja snow.png": "/high-quality/property-gallery/Chalet La Forja/New cover forja snow.webp"
   },
   "full": {
     "/photos/properties/3445-Heron-Place/01-3445 Heron Place 01.jpg": "/high-quality/property-full/3445-Heron-Place/01-3445 Heron Place 01.webp",
@@ -1457,7 +1457,6 @@
     "/photos/properties/Chalet La Forja/La Forja 01.jpg": "/high-quality/property-full/Chalet La Forja/La Forja 01.webp",
     "/photos/properties/Chalet La Forja/La Forja 02.jpg": "/high-quality/property-full/Chalet La Forja/La Forja 02.webp",
     "/photos/properties/Chalet La Forja/La Forja 03.jpg": "/high-quality/property-full/Chalet La Forja/La Forja 03.webp",
-    "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png": "/high-quality/property-full/Chalet La Forja/New Drone Cover photo Forja.webp",
     "/photos/properties/Chalet La Forja/b30fb971-069a-4bb1-9848-da69fc17037f (1).avif": "/high-quality/property-full/Chalet La Forja/b30fb971-069a-4bb1-9848-da69fc17037f (1).webp",
     "/photos/properties/Chalet La Forja/bad9aa86-7dc0-4b6c-8b42-a57435a9ad7c.avif": "/high-quality/property-full/Chalet La Forja/bad9aa86-7dc0-4b6c-8b42-a57435a9ad7c.webp",
     "/photos/properties/Chalet La Forja/cad64758-b957-4682-b3f5-c11cdafff714.avif": "/high-quality/property-full/Chalet La Forja/cad64758-b957-4682-b3f5-c11cdafff714.webp",
@@ -2342,6 +2341,7 @@
     "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ2221-Edit.jpg": "/high-quality/property-full/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_KRJ2221-Edit.webp",
     "/photos/properties/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_R001526-Edit.jpg": "/high-quality/property-full/scandinavian-mountainside-retreat-pemberton-meadows-50-acres/_R001526-Edit.webp",
     "/photos/properties/Timber Haven John Harris/Drone Timber cover snow 2.png": "/high-quality/property-full/Timber Haven John Harris/Drone Timber cover snow 2.webp",
-    "/photos/properties/Timber Haven John Harris/Drone Timber cover snow.png": "/high-quality/property-full/Timber Haven John Harris/Drone Timber cover snow.webp"
+    "/photos/properties/Timber Haven John Harris/Drone Timber cover snow.png": "/high-quality/property-full/Timber Haven John Harris/Drone Timber cover snow.webp",
+    "/photos/properties/Chalet La Forja/New cover forja snow.png": "/high-quality/property-full/Chalet La Forja/New cover forja snow.webp"
   }
 }

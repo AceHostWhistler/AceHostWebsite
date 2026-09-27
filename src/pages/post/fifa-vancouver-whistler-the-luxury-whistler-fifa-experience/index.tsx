@@ -53,7 +53,7 @@ const kadenwoodHomes: FeaturedProperty[] = [
     description:
       "One of the most impressive homes in Whistler, perfect for guests wanting a statement home with a luxury feel throughout.",
     photos: [
-      "/photos/properties/Chalet La Forja/New Drone Cover photo Forja.png",
+      "/photos/properties/Chalet La Forja/New cover forja snow.png",
       "/photos/properties/Chalet La Forja/Forja-3 copy.jpg",
       "/photos/properties/Chalet La Forja/IMG_1414 2.JPG",
       "/photos/properties/Chalet La Forja/hero00002.jpg",
