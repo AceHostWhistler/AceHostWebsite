@@ -152,6 +152,7 @@ const CotswoldsUKSohoFarmHouse = ({
           {/* Header with Property Info */}
           <PropertyHeaderEditorial
             title="Luxury Cotswolds Airbnb Near Soho Farmhouse | 8 Bedroom Vacation Rental, Spa, Heated pool, Tennis Court, Cold Plunge, Air Conditioning, & Sauna · Brandy's Farmhouse"
+            keepFullTitleInH1
             guests={15}
             bedrooms={8}
             beds={8}

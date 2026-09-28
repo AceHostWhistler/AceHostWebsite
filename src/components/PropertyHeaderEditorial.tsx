@@ -30,6 +30,8 @@ interface PropertyHeaderEditorialProps {
   onMorePhotosClick?: () => void;
   geo?: PropertyGeo;
   schemaImages?: string[];
+  /** Keep the full title string in the H1 instead of splitting on | */
+  keepFullTitleInH1?: boolean;
 }
 
 function scrollToId(id: string) {
@@ -143,6 +145,7 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
   onMorePhotosClick,
   geo: geoProp,
   schemaImages,
+  keepFullTitleInH1 = false,
 }) => {
   const router = useRouter();
   const [cleanPath] = (router.asPath || "/").split("?");
@@ -154,6 +157,8 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
   const geo = geoProp ?? getPropertyGeoByPath(canonicalPath);
 
   const { primary, secondary } = parseTitleParts(title);
+  const h1Text = keepFullTitleInH1 ? title : primary;
+  const subtitle = keepFullTitleInH1 ? undefined : secondary;
   const toNumber = (value: number | string | undefined): number | undefined => {
     if (value === undefined) return undefined;
     if (typeof value === "number") return value;
@@ -211,11 +216,11 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
         <div className="border-b border-stone-300/50 bg-[#1c1917] px-4 py-5 text-stone-100 sm:px-6 sm:py-7">
           <div className="mx-auto max-w-6xl">
             <h1 className="text-[1.5rem] font-medium leading-[1.1] tracking-tight sm:text-[2.05rem] md:text-[2.45rem]">
-              {primary}
+              {h1Text}
             </h1>
-            {secondary && (
+            {subtitle && (
               <p className="mt-1.5 max-w-xl text-[12px] font-normal tracking-wide text-stone-300 sm:text-[13.5px]">
-                {secondary}
+                {subtitle}
               </p>
             )}
           </div>
