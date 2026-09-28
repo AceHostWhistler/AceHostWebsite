@@ -372,12 +372,12 @@ const Home = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
               {/* Text first in DOM for SEO; stacks above video on mobile */}
               <motion.div className="lg:col-span-5 xl:col-span-5" {...riseIn}>
-                <p className="mb-3 text-sm font-medium tracking-wide text-white/70 sm:text-base">
-                  Property Management &amp; VIP Concierge Services
-                </p>
-                <h1 className="mb-5 text-4xl font-semibold tracking-tight leading-[1.12] text-white sm:text-5xl">
+                <h1 className="mb-3 text-4xl font-semibold tracking-tight leading-[1.12] text-white sm:text-5xl">
                   Luxury Vacation Rental Properties in Whistler, Canada
                 </h1>
+                <p className="mb-5 text-sm font-medium tracking-wide text-white/70 sm:text-base">
+                  Property Management &amp; VIP Concierge Services
+                </p>
                 <p className="mb-8 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
                   AceHost is a leading Whistler luxury Airbnb property management
                   company. We proudly offer an array of magnificent vacation
