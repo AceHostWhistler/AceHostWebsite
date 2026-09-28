@@ -131,7 +131,7 @@ const WORLDWIDE_LISTING_TITLES: Record<string, Pick<StaticPageMeta, "title" | "d
   },
   "cotswolds-uk-soho-farm-house": {
     title:
-      "Luxury Cotswolds Airbnb Near Soho Farmhouse | 8 Bedroom AirBnb, Spa, Heated pool, Tennis Court, Cold Plunge, Air Conditioning, & Sauna | Brandy's Farmhouse",
+      "Luxury Cotswolds Airbnb Near Soho Farmhouse | 8 Bedroom Vacation Rental, Spa, Heated pool, Tennis Court, Cold Plunge, Air Conditioning, & Sauna · Brandy's Farmhouse",
     description:
       "Luxury Cotswolds Airbnb near Soho Farmhouse, close to Soho Farmhouse, and next to Soho Farmhouse. 8 bedrooms, spa, heated pool, tennis court, cold plunge, A/C, and sauna. Sleeps 15 at Brandy's Farmhouse.",
   },

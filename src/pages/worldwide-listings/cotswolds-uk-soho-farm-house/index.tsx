@@ -136,7 +136,7 @@ const CotswoldsUKSohoFarmHouse = ({
   return (
     <>
       <Head>
-        <title>Luxury Cotswolds Airbnb Near Soho Farmhouse | 8 Bedroom AirBnb, Spa, Heated pool, Tennis Court, Cold Plunge, Air Conditioning, & Sauna | Brandy&apos;s Farmhouse</title>
+        <title>Luxury Cotswolds Airbnb Near Soho Farmhouse | 8 Bedroom Vacation Rental, Spa, Heated pool, Tennis Court, Cold Plunge, Air Conditioning, & Sauna · Brandy&apos;s Farmhouse</title>
         <meta
           name="description"
           content="Luxury Cotswolds Airbnb near Soho Farmhouse, close to Soho Farmhouse, and next to Soho Farmhouse. 8 bedrooms, spa, heated pool, tennis court, cold plunge, A/C, and sauna. Sleeps 15 at Brandy's Farmhouse."
@@ -151,7 +151,7 @@ const CotswoldsUKSohoFarmHouse = ({
         <main className={editorialMainClass}>
           {/* Header with Property Info */}
           <PropertyHeaderEditorial
-            title="Luxury Cotswolds Airbnb Near Soho Farmhouse | 8 Bedroom AirBnb, Spa, Heated pool, Tennis Court, Cold Plunge, Air Conditioning, & Sauna | Brandy's Farmhouse"
+            title="Luxury Cotswolds Airbnb Near Soho Farmhouse | 8 Bedroom Vacation Rental, Spa, Heated pool, Tennis Court, Cold Plunge, Air Conditioning, & Sauna · Brandy's Farmhouse"
             guests={15}
             bedrooms={8}
             beds={8}
