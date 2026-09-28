@@ -13,7 +13,7 @@ const SLUG =
   "can-you-airbnb-your-whistler-home-zoning-licensing-nightly-rental-rules";
 const CANONICAL_URL = `https://www.acehost.ca/post/${SLUG}`;
 const HERO =
-  "/photos/properties/3445-Heron-Place/Heron Snow cover.png";
+  "/photos/properties/3445-Heron-Place/Heron new cover phto snow light.png";
 const SUPPORTING_IMAGE =
   "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Living blueberry 306.png";
 const HERO_URL = `https://www.acehost.ca${encodeURI(HERO)}`;
