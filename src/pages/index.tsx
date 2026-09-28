@@ -8,7 +8,9 @@ import { motion, useReducedMotion } from "framer-motion";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import GuestySearchWidget from "@/components/GuestySearchWidget";
-import PropertyCoverImage from "@/components/PropertyCoverImage";
+import PropertyCoverImage, {
+  PROPERTY_CARD_FRAME_CLASS,
+} from "@/components/PropertyCoverImage";
 import VimeoEmbed from "@/components/VimeoEmbed";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -85,13 +87,13 @@ const Home = () => {
         key={property.id}
         className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow flex flex-col h-full"
       >
-        <div className="relative w-full bg-neutral-100">
-          <Link href={cardLink} className="block w-full">
+        <div className={PROPERTY_CARD_FRAME_CLASS}>
+          <Link href={cardLink} className="block relative h-full w-full">
             <PropertyCoverImage
               src={coverSrc}
               alt={coverAlt}
               priority={index < 2}
-              className="cursor-pointer"
+              className="cursor-pointer object-cover"
             />
           </Link>
           {property.isPetFriendly && (

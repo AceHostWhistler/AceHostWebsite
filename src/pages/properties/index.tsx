@@ -30,7 +30,9 @@ import { GetStaticProps } from "next";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import GuestySearchWidget from "@/components/GuestySearchWidget";
-import PropertyCoverImage from "@/components/PropertyCoverImage";
+import PropertyCoverImage, {
+  PROPERTY_CARD_FRAME_CLASS,
+} from "@/components/PropertyCoverImage";
 import {
   propertyCategories,
   getPropertyType,
@@ -193,7 +195,7 @@ export default function Properties() {
 
     return (
       <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow h-full">
-        <div className="relative w-full bg-neutral-100">
+        <div className={PROPERTY_CARD_FRAME_CLASS}>
           {/* Pet Friendly Badge */}
           {property.isPetFriendly && (
             <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 text-xs font-medium rounded-md z-10">
@@ -201,11 +203,12 @@ export default function Properties() {
             </div>
           )}
           
-          <Link href={propertyUrl} className="block w-full">
+          <Link href={propertyUrl} className="block relative h-full w-full">
             <PropertyCoverImage
               src={property.images[0]}
               alt={`${property.name} - Luxury ${property.location === "whistler" ? "Whistler" : property.location === "vancouver" ? "Vancouver" : "Worldwide"} vacation rental with ${property.bedrooms} bedrooms, accommodating up to ${property.guests} guests`}
               priority={imagePriority}
+              className="object-cover"
             />
           </Link>
 

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import PropertyCoverImage from "@/components/PropertyCoverImage";
+import PropertyCoverImage, {
+  PROPERTY_CARD_FRAME_CLASS,
+} from "@/components/PropertyCoverImage";
 import type { PropertyFeature } from "@/data/properties/catalog";
 import { getPropertyListingPath } from "@/data/properties/listingPath";
 import {
@@ -42,12 +44,13 @@ function PropertyShowcaseCard({
 
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow flex flex-col h-full">
-      <div className="relative w-full bg-neutral-100">
-        <Link href={href} className="block w-full">
+      <div className={PROPERTY_CARD_FRAME_CLASS}>
+        <Link href={href} className="block relative h-full w-full">
           <PropertyCoverImage
             src={property.images[0]}
             alt={`${property.name}, Whistler property managed by AceHost`}
             priority={imagePriority}
+            className="object-cover"
           />
         </Link>
 
