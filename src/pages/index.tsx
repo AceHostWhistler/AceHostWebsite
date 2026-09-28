@@ -451,7 +451,7 @@ const Home = () => {
                 >
                   <Link
                     href={href}
-                    className="group relative flex min-h-[21rem] overflow-hidden rounded-2xl"
+                    className="group relative flex min-h-[18rem] flex-col justify-end overflow-hidden rounded-2xl"
                   >
                     <Image
                       src={section.image}
@@ -465,7 +465,7 @@ const Home = () => {
                       className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/30"
                       aria-hidden="true"
                     />
-                    <div className="relative z-10 mt-auto p-6 sm:p-7">
+                    <div className="relative z-10 p-6 sm:p-7">
                       <h3 className="mb-3 text-xl font-semibold tracking-tight text-white sm:text-2xl">
                         {section.title}
                       </h3>
