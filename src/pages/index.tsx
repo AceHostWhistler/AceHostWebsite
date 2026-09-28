@@ -84,13 +84,13 @@ const Home = () => {
         key={property.id}
         className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow flex flex-col h-full"
       >
-        <div className="relative h-56">
-          <Link href={cardLink} className="block relative h-full w-full">
+        <div className="relative w-full bg-neutral-100">
+          <Link href={cardLink} className="block w-full">
             <PropertyCoverImage
               src={coverSrc}
               alt={coverAlt}
               priority={index < 2}
-              className="cursor-pointer object-cover"
+              className="cursor-pointer"
             />
           </Link>
           {property.isPetFriendly && (

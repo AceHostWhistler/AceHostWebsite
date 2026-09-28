@@ -42,13 +42,12 @@ function PropertyShowcaseCard({
 
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow flex flex-col h-full">
-      <div className="relative h-56">
-        <Link href={href} className="block relative h-full w-full">
+      <div className="relative w-full bg-neutral-100">
+        <Link href={href} className="block w-full">
           <PropertyCoverImage
             src={property.images[0]}
             alt={`${property.name}, Whistler property managed by AceHost`}
             priority={imagePriority}
-            className="object-cover"
           />
         </Link>
 
