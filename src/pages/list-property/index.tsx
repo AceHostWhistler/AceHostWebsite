@@ -55,7 +55,6 @@ const ListProperty = () => {
     message: "",
     inquiryType: "Property Management",
     propertyAddress: "",
-    propertyListingUrl: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
@@ -80,9 +79,6 @@ const ListProperty = () => {
       formData.message.trim(),
       formData.propertyAddress.trim()
         ? `\n\nProperty address: ${formData.propertyAddress.trim()}`
-        : "",
-      formData.propertyListingUrl.trim()
-        ? `\nProperty or listing URL: ${formData.propertyListingUrl.trim()}`
         : "",
     ]
       .join("")
@@ -124,7 +120,6 @@ const ListProperty = () => {
         message: "",
         inquiryType: "Property Management",
         propertyAddress: "",
-        propertyListingUrl: "",
       });
     } catch {
       setSubmitError(true);
@@ -534,7 +529,7 @@ const ListProperty = () => {
                 Curious What Your Whistler Property Could Earn?
               </h2>
               <p className="text-lg text-stone-300 leading-relaxed">
-                Send us your property address or listing link and we&apos;ll
+                Send us your property address and we&apos;ll
                 provide an initial assessment of its vacation-rental potential.
               </p>
             </div>
@@ -622,23 +617,6 @@ const ListProperty = () => {
                       name="propertyAddress"
                       value={formData.propertyAddress}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-black"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="propertyListingUrl"
-                      className="block text-sm font-medium mb-2"
-                    >
-                      Property or Listing URL
-                    </label>
-                    <input
-                      type="url"
-                      id="propertyListingUrl"
-                      name="propertyListingUrl"
-                      value={formData.propertyListingUrl}
-                      onChange={handleChange}
-                      placeholder="https://"
                       className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-black"
                     />
                   </div>

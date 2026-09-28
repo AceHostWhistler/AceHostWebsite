@@ -69,7 +69,7 @@ export const HOW_IT_WORKS_STEPS = [
     number: "01",
     title: "Tell Us About Your Property",
     description:
-      "Send us the property address, listing link, or a few details about the home.",
+      "Send us the property address or a few details about the home.",
   },
   {
     number: "02",
