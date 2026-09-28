@@ -128,7 +128,7 @@ const BEDORA_PLACE: PropertyFeature = {
 
 const COTSWOLDS_UK: PropertyFeature = {
   id: "cotswolds-uk-soho-farm-house",
-  name: "Luxury Cotswolds Rental Home Near Soho Farmhouse | 8 Bedroom AirBnb, Spa, Heated pool, Tennis Court, Cold Plunge, Air Conditioning, & Sauna | Brandy's Farmhouse",
+  name: "Luxury Cotswolds Airbnb Near Soho Farmhouse | 8 Bedroom AirBnb, Spa, Heated pool, Tennis Court, Cold Plunge, Air Conditioning, & Sauna | Brandy's Farmhouse",
   images: [
     "/photos/properties/Cotswolds UK - Soho Farm House/224A8292.jpg",
     "/photos/properties/Cotswolds UK - Soho Farm House/DJI_20260720185020_0008_D.jpg",
@@ -144,7 +144,7 @@ const COTSWOLDS_UK: PropertyFeature = {
     "2-3 night minimum. £1,200-£3,100 per night | Dependent on season, day of week, holidays, etc.",
   location: "Cotswolds, United Kingdom",
   description:
-    "Luxury retreat near Soho Farmhouse with an outdoor spa, heated pool, hot tub, A/C, private tennis court, and a cozy annex for extra sleeping. This 8-bedroom, 8-bed, 5-bathroom stone estate sleeps 15 across the main house and annex, set on a serene 2-acre property just minutes from Soho Farmhouse.",
+    "Luxury Cotswolds Airbnb near Soho Farmhouse, close to Soho Farmhouse, and next to Soho Farmhouse. Outdoor spa, heated pool, hot tub, A/C, private tennis court, and a cozy annex for extra sleeping. This 8-bedroom, 8-bed, 5-bathroom stone estate sleeps 15 across the main house and annex, just minutes from Soho Farmhouse.",
   features: [
     "Private Tennis Court",
     "Infrared Sauna",
