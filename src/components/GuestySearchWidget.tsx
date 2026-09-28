@@ -33,7 +33,7 @@ export default function GuestySearchWidget({
         href={GUESTY_BOOKING_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="group flex w-full items-center justify-center gap-2 rounded-md bg-stone-900 px-5 py-3.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-stone-800 active:scale-[0.99]"
+        className="group flex w-full items-center justify-center gap-2 rounded-lg bg-stone-900 px-6 py-3.5 text-sm font-medium text-white shadow-sm transition-all hover:bg-stone-800 active:scale-[0.99] sm:text-base"
       >
         Check availability
         <ArrowUpRight

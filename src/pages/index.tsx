@@ -105,7 +105,7 @@ const Home = () => {
             {useContact ? (
               <Link
                 href={getPropertyContactLink(property.id, property.contactLink)}
-                className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
+                className="bg-black text-white px-5 py-2.5 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors"
               >
                 Contact Us
               </Link>
@@ -115,14 +115,14 @@ const Home = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
-                className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
+                className="bg-black text-white px-5 py-2.5 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors"
               >
                 Book Now
               </a>
             ) : (
               <Link
                 href={cardLink}
-                className="bg-black text-white px-5 py-2.5 rounded-md text-[1.03rem] font-medium hover:bg-gray-800 transition-colors"
+                className="bg-black text-white px-5 py-2.5 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors"
               >
                 Book Now
               </Link>
@@ -168,24 +168,24 @@ const Home = () => {
           </div>
 
           {/* Property name */}
-          <h3 className={`text-xl font-medium mb-2 text-gray-900 leading-snug ${property.id === "hotel-booking-assistance" ? "" : "line-clamp-2"} ${property.id === "hotel-booking-assistance" ? "h-auto" : "min-h-[2.75rem]"}`}>
+          <h3 className={`mb-2 text-xl font-semibold leading-snug text-gray-900 ${property.id === "hotel-booking-assistance" ? "" : "line-clamp-2"} ${property.id === "hotel-booking-assistance" ? "h-auto" : "min-h-[2.75rem]"}`}>
             {property.name}
           </h3>
 
           {/* Pricing information */}
           <div className="space-y-1 mb-3">
             {property.priceRange && (
-              <p className="text-gray-600">
+              <p className="text-sm leading-relaxed text-gray-600 sm:text-base">
                 {formatDisplayedPrice(property.priceRange)}
               </p>
             )}
             {property.winterPrice && (
-              <p className="text-gray-600">
+              <p className="text-sm leading-relaxed text-gray-600 sm:text-base">
                 {formatDisplayedPrice(property.winterPrice)}
               </p>
             )}
             {property.holidayPrice && (
-              <p className="text-gray-600">
+              <p className="text-sm leading-relaxed text-gray-600 sm:text-base">
                 {formatDisplayedPrice(property.holidayPrice)}
               </p>
             )}
@@ -372,17 +372,13 @@ const Home = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
               {/* Text first in DOM for SEO; stacks above video on mobile */}
               <motion.div className="lg:col-span-5 xl:col-span-5" {...riseIn}>
-                <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.08] text-white mb-4">
-                  Luxury Vacation
-                  <br />
-                  Rental Properties in
-                  <br />
-                  Whistler Canada
-                </h1>
-                <p className="text-base sm:text-lg font-semibold text-white mb-4">
+                <p className="mb-3 text-sm font-medium tracking-wide text-white/70 sm:text-base">
                   Property Management &amp; VIP Concierge Services
                 </p>
-                <p className="text-base sm:text-lg text-white leading-relaxed max-w-xl mb-8">
+                <h1 className="mb-5 text-4xl font-semibold tracking-tight leading-[1.12] text-white sm:text-5xl">
+                  Luxury Vacation Rental Properties in Whistler, Canada
+                </h1>
+                <p className="mb-8 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
                   AceHost is a leading Whistler luxury Airbnb property management
                   company. We proudly offer an array of magnificent vacation
                   rental homes in Whistler, British Columbia. Offering a seamless
@@ -396,13 +392,13 @@ const Home = () => {
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link
                     href="/properties"
-                    className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3.5 text-sm font-semibold text-stone-950 transition-colors hover:bg-stone-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-stone-950"
+                    className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3.5 text-sm font-medium text-stone-950 transition-colors hover:bg-stone-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-stone-950 sm:text-base"
                   >
                     View Luxury Rental Properties
                   </Link>
                   <Link
                     href="/list-property"
-                    className="inline-flex items-center justify-center rounded-lg border border-white/40 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:border-white/60 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-stone-950"
+                    className="inline-flex items-center justify-center rounded-lg border border-white/40 bg-white/5 px-6 py-3.5 text-sm font-medium text-white transition-colors hover:border-white/60 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-stone-950 sm:text-base"
                   >
                     List Your Property
                   </Link>
@@ -470,14 +466,15 @@ const Home = () => {
                       aria-hidden="true"
                     />
                     <div className="relative z-10 mt-auto p-6 sm:p-7">
-                      <h3 className="text-2xl font-medium mb-3 text-white">
+                      <h3 className="mb-3 text-xl font-semibold tracking-tight text-white sm:text-2xl">
                         {section.title}
                       </h3>
-                      <p className="text-white/90 mb-4 text-sm leading-relaxed line-clamp-5">
+                      <p className="mb-4 text-base leading-relaxed text-white/80 line-clamp-4">
                         {section.description}
                       </p>
-                      <span className="inline-block text-white font-medium border-b border-white/80">
+                      <span className="inline-flex items-center text-base font-medium text-white">
                         {section.linkText}
+                        <ArrowRight size={16} className="ml-2" />
                       </span>
                     </div>
                   </Link>
@@ -496,57 +493,57 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="mb-16 text-center">
-              <h2 className="text-4xl font-light mb-6 text-gray-900">
+            <div className="mb-10 text-center">
+              <h2 className="mb-8 text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
                 View Our Full Collection Of Luxury Vacation Rental Properties
               </h2>
               {/* Property Filters - match properties page style */}
-              <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto mb-12">
+              <div className="flex flex-wrap justify-center gap-3 max-w-5xl mx-auto">
                 <button
                   onClick={() => setActiveFilter("all")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "all" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
+                  className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "all" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
                 >
                   Whistler All Properties
                 </button>
                 <button
                   onClick={() => setActiveFilter("whistler")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "whistler" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
+                  className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "whistler" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
                 >
                   Whistler
                 </button>
                 <button
                   onClick={() => setActiveFilter("homes")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "homes" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
+                  className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "homes" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
                 >
                   Whistler Homes
                 </button>
                 <button
                   onClick={() => setActiveFilter("townhomes")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "townhomes" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
+                  className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "townhomes" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
                 >
                   Whistler Townhomes
                 </button>
                 <button
                   onClick={() => setActiveFilter("condos")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "condos" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
+                  className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "condos" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
                 >
                   Whistler Condos
                 </button>
                 <button
                   onClick={() => setActiveFilter("pets")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "pets" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
+                  className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "pets" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
                 >
                   Whistler Pet Friendly
                 </button>
                 <button
                   onClick={() => setActiveFilter("skiinout")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "skiinout" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
+                  className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "skiinout" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
                 >
                   Whistler Ski In/Out
                 </button>
                 <button
                   onClick={() => setActiveFilter("worldwide")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "worldwide" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
+                  className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "worldwide" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
                 >
                   Worldwide
                 </button>
@@ -571,7 +568,7 @@ const Home = () => {
                 }
               >
                 {whistlerListings.length > 0 && (
-                  <h3 className="text-3xl sm:text-4xl font-light mb-10 text-gray-900">
+                  <h3 className="mb-8 text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
                     Worldwide Properties
                   </h3>
                 )}
@@ -596,16 +593,16 @@ const Home = () => {
         {/* FAQ Section */}
         <section className="py-24 bg-gray-50">
           <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-light mb-6 text-gray-900">
+            <h2 className="mb-8 text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
               Frequently Asked Questions
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {faqItems.map((faq, index) => (
                 <div key={index} className="col-span-1">
-                  <h3 className="text-2xl font-medium mb-4 text-gray-900">
+                  <h3 className="mb-3 text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl">
                     {faq.question}
                   </h3>
-                  <p className="text-gray-600">{faq.answer}</p>
+                  <p className="text-sm leading-relaxed text-gray-600 sm:text-base">{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -615,15 +612,15 @@ const Home = () => {
         {/* Contact Section */}
         <section className="py-24 bg-gray-50">
           <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-light mb-6 text-gray-900">
+            <h2 className="mb-4 text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
               Contact Us
             </h2>
-            <p className="text-base text-gray-700 mb-8">
-              Have a question or need assistance? We're here to help.
+            <p className="mb-8 text-base leading-relaxed text-gray-600 sm:text-lg">
+              Have a question or need assistance? We&apos;re here to help.
             </p>
             <Link
               href="/contact"
-              className="inline-block bg-black text-white px-8 py-4 rounded-md hover:bg-gray-800 transition-colors text-base font-medium"
+              className="inline-flex items-center justify-center rounded-lg bg-black px-6 py-3.5 text-sm font-medium text-white transition-colors hover:bg-gray-800 sm:text-base"
             >
               Get in Touch
             </Link>

@@ -162,14 +162,11 @@ export default function GuestOwnerTestimonialsSection({
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-10 flex flex-col gap-8 lg:mb-12 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
-            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-stone-500">
+            <p className="mb-3 text-sm font-medium tracking-wide text-stone-500 sm:text-base">
               Real words, real stays
             </p>
-            <h2 className="text-3xl font-bold leading-[1.1] tracking-tight text-stone-950 sm:text-4xl lg:text-[2.65rem]">
-              Trusted by homeowners
-              <span className="mt-2 block text-2xl font-medium text-stone-600 sm:text-3xl">
-                and the guests who stay with us
-              </span>
+            <h2 className="text-3xl font-semibold tracking-tight text-stone-950 sm:text-4xl">
+              Trusted by homeowners and the guests who stay with us
             </h2>
           </div>
 
@@ -282,7 +279,7 @@ export default function GuestOwnerTestimonialsSection({
             href={footerLink.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-stone-950 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-stone-800"
+            className="inline-flex items-center gap-2 rounded-lg bg-stone-950 px-6 py-3.5 text-sm font-medium text-white transition-colors hover:bg-stone-800 sm:text-base"
           >
             {footerLink.label}
             <ArrowUpRight className="h-4 w-4" />
