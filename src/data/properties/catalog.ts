@@ -128,7 +128,7 @@ const BEDORA_PLACE: PropertyFeature = {
 
 const COTSWOLDS_UK: PropertyFeature = {
   id: "cotswolds-uk-soho-farm-house",
-  name: "Luxury Retreat Near Soho Farmhouse | Pool & Tennis",
+  name: "Luxury Cotswolds Rental Home Near Soho Farmhouse | 8 Bedroom AirBnb, Spa, Heated pool, Tennis Court, Cold Plunge, Air Conditioning, & Sauna | Brandy's Farmhouse",
   images: [
     "/photos/properties/Cotswolds UK - Soho Farm House/224A8292.jpg",
     "/photos/properties/Cotswolds UK - Soho Farm House/DJI_20260720185020_0008_D.jpg",

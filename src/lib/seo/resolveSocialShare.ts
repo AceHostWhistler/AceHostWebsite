@@ -130,7 +130,8 @@ const WORLDWIDE_LISTING_TITLES: Record<string, Pick<StaticPageMeta, "title" | "d
       "Ocean-view luxury home in West Vancouver. 5 bedrooms, 6 beds, 3.5 baths, and space for 10 guests, with a games room, indoor and outdoor fireplaces, and a quiet upscale setting close to downtown Vancouver.",
   },
   "cotswolds-uk-soho-farm-house": {
-    title: "Luxury Retreat Near Soho Farmhouse | Pool & Tennis | AceHost",
+    title:
+      "Luxury Cotswolds Rental Home Near Soho Farmhouse | 8 Bedroom AirBnb, Spa, Heated pool, Tennis Court, Cold Plunge, Air Conditioning, & Sauna | Brandy's Farmhouse | AceHost",
     description:
       "Luxury Cotswolds retreat near Soho Farmhouse. 8 bedrooms, 8 beds, 5 baths, sleeps 15, with a heated pool, tennis court, spa, A/C, and a 2-bedroom annex.",
   },

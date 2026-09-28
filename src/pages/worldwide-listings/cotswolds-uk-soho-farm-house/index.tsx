@@ -136,7 +136,7 @@ const CotswoldsUKSohoFarmHouse = ({
   return (
     <>
       <Head>
-        <title>Luxury Retreat Near Soho Farmhouse | Pool & Tennis | AceHost</title>
+        <title>Luxury Cotswolds Rental Home Near Soho Farmhouse | 8 Bedroom AirBnb, Spa, Heated pool, Tennis Court, Cold Plunge, Air Conditioning, & Sauna | Brandy&apos;s Farmhouse | AceHost</title>
         <meta
           name="description"
           content="Luxury retreat near Soho Farmhouse in the Cotswolds. 8 bedrooms, 8 beds, 5 baths, sleeps 15, with a heated pool, tennis court, spa, A/C, and a 2-bedroom annex on 2 acres."
@@ -151,7 +151,7 @@ const CotswoldsUKSohoFarmHouse = ({
         <main className={editorialMainClass}>
           {/* Header with Property Info */}
           <PropertyHeaderEditorial
-            title="Luxury Retreat Near Soho Farmhouse | Pool & Tennis"
+            title="Luxury Cotswolds Rental Home Near Soho Farmhouse | 8 Bedroom AirBnb, Spa, Heated pool, Tennis Court, Cold Plunge, Air Conditioning, & Sauna | Brandy's Farmhouse"
             guests={15}
             bedrooms={8}
             beds={8}
