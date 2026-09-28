@@ -12,6 +12,7 @@ import {
 } from "@/lib/seo/schema";
 import { SITE_URL } from "@/data/seo/business";
 import { getPrimaryPricePeriodLabel } from "@/lib/pricePeriodLabel";
+import { formatDisplayedPrice } from "@/lib/formatDisplayedPrice";
 
 interface PropertyHeaderEditorialProps {
   title: string;
@@ -85,7 +86,7 @@ interface PriceRowProps {
 }
 
 function PriceRow({ season, value, highlight }: PriceRowProps) {
-  const { amount, note } = parsePriceAmount(value);
+  const { amount, note } = parsePriceAmount(formatDisplayedPrice(value));
   const detail = stripLabelFromNote(note, [
     season,
     "nightly",

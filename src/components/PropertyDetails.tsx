@@ -1,5 +1,6 @@
 import React from 'react';
 import { Users, Bed, Bath } from 'lucide-react';
+import { formatDisplayedPrice } from '@/lib/formatDisplayedPrice';
 
 interface PropertyDetailsProps {
   guests: number | string;
@@ -38,7 +39,7 @@ const PropertyDetails: React.FC<PropertyDetailsProps> = ({
       </div>
       {priceRange && (
         <div className="bg-gray-200 text-gray-900 px-3 py-1 text-sm font-medium rounded-md">
-          {priceRange}
+          {formatDisplayedPrice(priceRange)}
         </div>
       )}
     </div>

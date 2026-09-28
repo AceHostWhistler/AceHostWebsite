@@ -20,6 +20,7 @@ import {
   shouldUseContactForBooking,
 } from "@/data/propertyAirbnbLinks";
 import { getPropertyType } from "@/data/properties/catalog";
+import { formatDisplayedPrice } from "@/lib/formatDisplayedPrice";
 import {
   getHomepageListings,
   type HomepageListing,
@@ -172,13 +173,19 @@ const Home = () => {
           {/* Pricing information */}
           <div className="space-y-1 mb-3">
             {property.priceRange && (
-              <p className="text-gray-600">{property.priceRange}</p>
+              <p className="text-gray-600">
+                {formatDisplayedPrice(property.priceRange)}
+              </p>
             )}
             {property.winterPrice && (
-              <p className="text-gray-600">{property.winterPrice}</p>
+              <p className="text-gray-600">
+                {formatDisplayedPrice(property.winterPrice)}
+              </p>
             )}
             {property.holidayPrice && (
-              <p className="text-gray-600">{property.holidayPrice}</p>
+              <p className="text-gray-600">
+                {formatDisplayedPrice(property.holidayPrice)}
+              </p>
             )}
           </div>
 

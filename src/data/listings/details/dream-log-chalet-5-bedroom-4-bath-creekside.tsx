@@ -2,6 +2,7 @@ import React from "react";
 import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Image from "next/image";
 import Link from "next/link";
+import { formatDisplayedPrice } from "@/lib/formatDisplayedPrice";
 import type { ListingDetailsProps } from "../types";
 
 export default function DreamLogChalet5Bedroom4BathCreeksideDetails({ photos }: ListingDetailsProps) {
@@ -63,9 +64,15 @@ export default function DreamLogChalet5Bedroom4BathCreeksideDetails({ photos }: 
                           Discounted Pricing for Long Stays:
                         </p>
                         <ul className="list-disc pl-5 mb-6 text-gray-800">
-                          <li className="mb-2">6-month winter: 17,000 per month</li>
-                          <li className="mb-2">6-month summer: 11,500 per month</li>
-                          <li className="mb-2">12-month rental: 13,000 per month</li>
+                          <li className="mb-2">
+                            {formatDisplayedPrice("6-month winter: 17,000 per month")}
+                          </li>
+                          <li className="mb-2">
+                            {formatDisplayedPrice("6-month summer: 11,500 per month")}
+                          </li>
+                          <li className="mb-2">
+                            {formatDisplayedPrice("12-month rental: 13,000 per month")}
+                          </li>
                         </ul>
                         <p className="text-gray-800 mb-4">
                           Free parking in driveway for up to a maximum of 5 vehicles.

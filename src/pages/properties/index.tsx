@@ -41,6 +41,7 @@ import {
 import { sortPropertiesByDisplayOrder } from "@/data/properties/homepageListings";
 import { getPropertyListingPath } from "@/data/properties/listingPath";
 import { buildPropertiesItemListSchema } from "@/lib/seo/schema";
+import { formatDisplayedPrice } from "@/lib/formatDisplayedPrice";
 import { SITE_URL } from "@/data/seo/business";
 
 const propertiesStructuredData =
@@ -268,13 +269,19 @@ export default function Properties() {
           {/* Price range */}
           <div className="space-y-1 mb-2.5">
             {property.priceRange && (
-              <p className="text-gray-600">{property.priceRange}</p>
+              <p className="text-gray-600">
+                {formatDisplayedPrice(property.priceRange)}
+              </p>
             )}
             {property.winterPrice && (
-              <p className="text-gray-600">{property.winterPrice}</p>
+              <p className="text-gray-600">
+                {formatDisplayedPrice(property.winterPrice)}
+              </p>
             )}
             {property.holidayPrice && (
-              <p className="text-gray-600">{property.holidayPrice}</p>
+              <p className="text-gray-600">
+                {formatDisplayedPrice(property.holidayPrice)}
+              </p>
             )}
           </div>
 

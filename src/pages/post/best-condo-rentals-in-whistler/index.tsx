@@ -12,6 +12,7 @@ import {
   type CondoRentalProperty,
 } from "@/data/blog/condo-rentals-properties";
 import { isHiddenFromBlogs } from "@/data/blog/hiddenFromBlogs";
+import { formatDisplayedPrice } from "@/lib/formatDisplayedPrice";
 
 function CondoPropertySection({
   property,
@@ -27,7 +28,9 @@ function CondoPropertySection({
       </h2>
 
       <div className="bg-gray-50 p-5 rounded-lg mb-6">
-        <p className="font-semibold">Price Range: {property.priceRange}</p>
+        <p className="font-semibold">
+          Price Range: {formatDisplayedPrice(property.priceRange)}
+        </p>
         <p className="mt-4">{property.stats}</p>
       </div>
 

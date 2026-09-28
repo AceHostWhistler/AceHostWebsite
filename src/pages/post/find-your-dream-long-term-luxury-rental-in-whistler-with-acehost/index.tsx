@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import { BlogGuestyInlineBanner } from "@/components/blog/BlogGuestyBookingCtas";
 import BlogRelatedArticles from "@/components/BlogRelatedArticles";
 import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
+import { formatDisplayedPrice } from "@/lib/formatDisplayedPrice";
 
 const LongTermRentals = () => {
   const currentArticleLink = "/post/find-your-dream-long-term-luxury-rental-in-whistler-with-acehost";
@@ -148,7 +149,7 @@ const LongTermRentals = () => {
                   </div>
                   <div>
                     <strong className="text-gray-900">Price Range:</strong>{" "}
-                    21,000 per month
+                    {formatDisplayedPrice("21,000 per month")}
                   </div>
                 </div>
 
@@ -240,7 +241,9 @@ const LongTermRentals = () => {
                   </div>
                   <div>
                     <strong className="text-gray-900">Price Range:</strong>{" "}
-                    18,500 per month in Winter. 17,000 per month in Summer.
+                    {formatDisplayedPrice(
+                      "18,500 per month in Winter. 17,000 per month in Summer."
+                    )}
                   </div>
                 </div>
 

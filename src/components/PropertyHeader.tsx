@@ -5,6 +5,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { airbnbButtonHeader } from "@/lib/airbnbButtonStyles";
 import { getPrimaryPricePeriodLabel } from "@/lib/pricePeriodLabel";
+import { formatDisplayedPrice } from "@/lib/formatDisplayedPrice";
 
 interface PropertyHeaderProps {
   title: string;
@@ -97,7 +98,7 @@ interface PriceTierProps {
 }
 
 function PriceTier({ label, value }: PriceTierProps) {
-  const { amount, detail } = parsePriceText(value);
+  const { amount, detail } = parsePriceText(formatDisplayedPrice(value));
   const subtitle = cleanPriceDetail(detail, label);
 
   return (

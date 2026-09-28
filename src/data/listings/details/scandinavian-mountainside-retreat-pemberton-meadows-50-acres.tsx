@@ -2,6 +2,7 @@ import React from "react";
 import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import Image from "next/image";
 import Link from "next/link";
+import { formatDisplayedPrice } from "@/lib/formatDisplayedPrice";
 import type { ListingDetailsProps } from "../types";
 
 export default function ScandinavianMountainsideRetreatPembertonMeadows50AcresDetails({ photos }: ListingDetailsProps) {
@@ -15,7 +16,9 @@ export default function ScandinavianMountainsideRetreatPembertonMeadows50AcresDe
                     Welcome to Pemberton Meadows Escape. This 5-bed, 5-bath award-winning property was designed with the eye of a leading Japanese architect. At this estate, guests can experience 50 acres of surrounding private land and breathtaking panoramic views of the Pemberton Valley Mountain Range. This home provides total privacy in a tranquil setting – perfect for families or groups seeking luxury living in a peaceful, natural environment. Included in the bookings at Pemberton Meadows, guests can enjoy an enhanced experience with a private chef and butler. Our chefs provide a premium dining experience, using only fresh, locally sourced ingredients from Pemberton Valley farms.
                     <br />
                     <br />
-                    For weddings, the venue fee is between $30,000-35,000 and includes an introduction to our favorite wedding planner in town, plus a 2-night stay at the home.
+                    {formatDisplayedPrice(
+                      "For weddings, the venue fee is between $30,000-35,000 and includes an introduction to our favorite wedding planner in town, plus a 2-night stay at the home."
+                    )}
                   </p>
 
                   {/* The Space Section */}
@@ -152,7 +155,9 @@ export default function ScandinavianMountainsideRetreatPembertonMeadows50AcresDe
                         <h2 className="text-2xl font-bold">Wedding Venue</h2>
                       </div>
                       <p className="text-gray-800 mb-6">
-                        Pemberton Meadows Escape is an exceptional wedding venue, offering a stunning backdrop for your special day. Our venue fee is between $30,000-$35,000 and includes an introduction to our favorite local wedding planner who knows the property intimately.
+                        {formatDisplayedPrice(
+                          "Pemberton Meadows Escape is an exceptional wedding venue, offering a stunning backdrop for your special day. Our venue fee is between $30,000-$35,000 and includes an introduction to our favorite local wedding planner who knows the property intimately."
+                        )}
                       </p>
                       <p className="text-gray-800 mb-6">
                         The wedding package also includes a 2-night stay at the home, allowing you to fully enjoy the property before and after your celebration. With panoramic mountain views and 50 acres of private land, your wedding will be an unforgettable experience in one of British Columbia's most beautiful settings.
