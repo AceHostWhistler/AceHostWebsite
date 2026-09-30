@@ -43,7 +43,7 @@ const mountaintopWriteup: ListingWriteupContent = {
     title: "Location & Ski Access",
     imageSide: "left",
     image: {
-      photoIndex: 1,
+      photoIndex: 0,
       alt: "The Mountaintop in Kadenwood",
     },
     paragraphs: [

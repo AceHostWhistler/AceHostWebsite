@@ -26,7 +26,7 @@ export const allArticles: Article[] = [
       "AceHost is a Whistler property management company with local expertise across major Phase 1 buildings and neighbourhoods. Request a rental revenue estimate.",
     readTime: "14 min read",
     link: "/post/whistler-property-management-buildings-neighbourhoods",
-    coverImage: "/photos/properties/2919 Heritage/Drone Mountaintop.png",
+    coverImage: "/photos/properties/2919 Heritage/Mountaintop.png",
     publishedAt: "2026-09-19T17:00:00.000Z",
     modifiedAt: "2026-09-20T01:40:00.000Z",
     headline:
@@ -164,7 +164,7 @@ export const allArticles: Article[] = [
     readTime: "13 min read",
     link: "/post/fifa-vancouver-whistler-the-luxury-whistler-fifa-experience",
     coverImage:
-      "/photos/properties/2919 Heritage/Mountaintop Snow cover.png",
+      "/photos/properties/2919 Heritage/Mountaintop.png",
     publishedAt: "2026-05-01T16:30:00.000Z",
   },
   {

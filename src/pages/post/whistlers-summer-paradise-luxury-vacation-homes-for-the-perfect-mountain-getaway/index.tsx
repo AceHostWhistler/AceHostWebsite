@@ -412,7 +412,7 @@ export default function BlogPost() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/2919 Heritage/Mountaintop Snow cover.png"
+                    src="/photos/properties/2919 Heritage/Mountaintop.png"
                     alt="Luxury outdoor space with mountain backdrop in summer"
                     fill
                     className="object-cover"

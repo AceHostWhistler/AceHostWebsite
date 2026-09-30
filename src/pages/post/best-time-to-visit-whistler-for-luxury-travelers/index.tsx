@@ -194,7 +194,7 @@ export default function BlogPost() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-10 not-prose">
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/2919 Heritage/Mountaintop Snow cover.png"
+                    src="/photos/properties/2919 Heritage/Mountaintop.png"
                     alt="The Mountaintop at Kadenwood ski-in ski-out luxury home"
                     fill
                     className="object-cover"

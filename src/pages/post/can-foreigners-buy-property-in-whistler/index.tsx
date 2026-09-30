@@ -13,7 +13,7 @@ const CANONICAL_URL = `https://www.acehost.ca/post/${SLUG}`;
 const COVER_IMAGE =
   "/photos/properties/Chalet La Forja/New cover forja snow.png";
 const IMG_MOUNTAINTOP =
-  "/photos/properties/2919 Heritage/Mountaintop Snow cover.png";
+  "/photos/properties/2919 Heritage/Mountaintop.png";
 const IMG_RAVEN_INTERIOR =
   "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05349.jpg";
 const IMG_TWO_CEDARS =

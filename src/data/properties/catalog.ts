@@ -363,8 +363,8 @@ export const propertyCategories: PropertyCategory[] = [
             id: "luxury-ski-in-ski-out-7-bedroom-kadenwood",
             name: "The Mountaintop in Kadenwood | Ski in Ski out",
             images: [
+              "/photos/properties/2919 Heritage/Mountaintop.png",
               "/photos/properties/2919 Heritage/Mountaintop Snow cover.png",
-              "/photos/properties/2919 Heritage/Drone Mountaintop.png",
               "/photos/properties/2919 Heritage/Mountaintop living snow.png",
               "/photos/properties/2919 Heritage/Mountaintop living snow 2.png",
               "/photos/properties/2919 Heritage/Mountaintop living snow 3.png",

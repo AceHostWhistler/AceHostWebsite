@@ -79,7 +79,7 @@ export const MANSION_RENTAL_PROPERTIES: MansionRentalProperty[] = [
     headline: true,
     images: [
       {
-        src: "/photos/properties/2919 Heritage/Mountaintop Snow cover.png",
+        src: "/photos/properties/2919 Heritage/Mountaintop.png",
         alt: "The Mountaintop luxury ski-in ski-out rental in Whistler",
       },
       {

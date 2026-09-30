@@ -347,7 +347,7 @@ export default function BlogPost() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 not-prose">
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/2919 Heritage/Mountaintop Snow cover.png"
+                    src="/photos/properties/2919 Heritage/Mountaintop.png"
                     alt="The Mountaintop at Kadenwood exterior"
                     fill
                     className="object-cover"
@@ -363,8 +363,8 @@ export default function BlogPost() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/2919 Heritage/Drone Mountaintop.png"
-                    alt="The Mountaintop Kadenwood estate aerial view"
+                    src="/photos/properties/2919 Heritage/Mountaintop Snow cover.png"
+                    alt="The Mountaintop Kadenwood estate in snow"
                     fill
                     className="object-cover"
                   />

@@ -470,7 +470,7 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/2919 Heritage/Mountaintop Snow cover.png"
+                  src="/photos/properties/2919 Heritage/Mountaintop.png"
                   alt="The Mountaintop at Kadenwood"
                   fill
                   className="object-cover"

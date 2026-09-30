@@ -17,7 +17,7 @@ const PUBLISH_DATE = "May 1, 2026";
 const ISO_MODIFIED = "2026-05-01T09:30:00-07:00";
 const CANONICAL_URL = `https://www.acehost.ca/post/${SLUG}`;
 const HERO_IMAGE =
-  "/photos/properties/2919 Heritage/Mountaintop Snow cover.png";
+  "/photos/properties/2919 Heritage/Mountaintop.png";
 const HERO_IMAGE_URL = `https://www.acehost.ca${encodeURI(HERO_IMAGE)}`;
 
 const META = {
@@ -40,10 +40,10 @@ const kadenwoodHomes: FeaturedProperty[] = [
     description:
       "A spectacular luxury home and one of the most exciting options for FIFA travellers wanting privacy, panoramic mountain views, and a truly elevated Whistler stay.",
     photos: [
+      "/photos/properties/2919 Heritage/Mountaintop.png",
       "/photos/properties/2919 Heritage/Mountaintop Snow cover.png",
-      "/photos/properties/2919 Heritage/Drone Mountaintop.png",
-      "/photos/properties/2919 Heritage/Mountaintop Snow cover.png",
-      "/photos/properties/2919 Heritage/Drone Mountaintop.png",
+      "/photos/properties/2919 Heritage/Mountaintop living snow 5.png",
+      "/photos/properties/2919 Heritage/Mountaintop living snow 10.png",
     ],
     bookUrl:
       "https://www.airbnb.ca/rooms/1599369454342102375?guests=1&adults=1&s=67&unique_share_id=07a4f082-1dec-4a06-bf97-05638b3b71ef",

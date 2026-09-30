@@ -3,8 +3,8 @@ import type { ListingData } from "../types";
 const listing: ListingData = {
   slug: "luxury-ski-in-ski-out-7-bedroom-kadenwood",
   photos: [
+    "/photos/properties/2919 Heritage/Mountaintop.png",
     "/photos/properties/2919 Heritage/Mountaintop Snow cover.png",
-    "/photos/properties/2919 Heritage/Drone Mountaintop.png",
     "/photos/properties/2919 Heritage/Mountaintop living snow.png",
     "/photos/properties/2919 Heritage/Mountaintop living snow 2.png",
     "/photos/properties/2919 Heritage/Mountaintop living snow 3.png",

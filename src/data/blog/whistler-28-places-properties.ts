@@ -37,7 +37,7 @@ export const kadenwoodProperties: Whistler28Property[] = [
     name: "The Mountaintop in Kadenwood | Ski in Ski out",
     description:
       "A dramatic seven-bedroom mountain retreat with exceptional views, private wellness amenities, and direct ski access.",
-    image: "/photos/properties/2919 Heritage/Mountaintop Snow cover.png",
+    image: "/photos/properties/2919 Heritage/Mountaintop.png",
     listingHref: "/listings/luxury-ski-in-ski-out-7-bedroom-kadenwood",
     bookUrl:
       "https://www.airbnb.ca/rooms/1599369454342102375?guests=1&adults=1&s=67&unique_share_id=07a4f082-1dec-4a06-bf97-05638b3b71ef",

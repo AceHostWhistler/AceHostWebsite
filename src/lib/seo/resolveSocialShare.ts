@@ -16,7 +16,7 @@ const LA_FORJA_COVER_IMAGE =
   "/photos/properties/Chalet La Forja/New cover forja snow.png";
 
 const MOUNTAINTOP_COVER_IMAGE =
-  "/photos/properties/2919 Heritage/Mountaintop Snow cover.png";
+  "/photos/properties/2919 Heritage/Mountaintop.png";
 
 const STATIC_PAGES: Record<string, StaticPageMeta> = {
   "/": {

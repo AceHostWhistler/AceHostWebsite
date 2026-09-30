@@ -13,7 +13,7 @@ import { airbnbButtonBlog } from "@/lib/airbnbButtonStyles";
 import BlogBulletList from "@/components/blog/BlogBulletList";
 
 const SLUG = "whistler-property-management-buildings-neighbourhoods";
-const HERO = "/photos/properties/2919 Heritage/Drone Mountaintop.png";
+const HERO = "/photos/properties/2919 Heritage/Mountaintop.png";
 const VILLAGE_IMAGE =
   "/photos/properties/Valhalla Unit 33 Village/Hot tub Northlands snow.png";
 const UPPER_VILLAGE_IMAGE =
