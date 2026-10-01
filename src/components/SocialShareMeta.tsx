@@ -29,7 +29,7 @@ export default function SocialShareMeta({
   const ogDescription = socialDescription ?? description;
 
   return (
-    <>
+    <Head>
       <meta name="description" content={description} />
       <meta property="og:title" content={ogTitle} />
       <meta property="og:description" content={ogDescription} />
@@ -50,6 +50,6 @@ export default function SocialShareMeta({
       <meta name="twitter:description" content={ogDescription} />
       <meta name="twitter:image" content={imageUrl} />
       <meta name="twitter:image:alt" content={ogTitle} />
-    </>
+    </Head>
   );
 }

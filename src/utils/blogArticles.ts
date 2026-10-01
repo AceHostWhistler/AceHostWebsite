@@ -56,7 +56,7 @@ export const allArticles: Article[] = [
     readTime: "12 min read",
     link: "/post/justin-tse-chalet-la-forja-whistler",
     coverImage:
-      "/photos/properties/Chalet La Forja/2950 Heritage Peaks Trail 4 Large 2.png",
+      "/photos/properties/Chalet La Forja/New cover forja snow.png",
     publishedAt: "2026-07-31T19:00:00.000Z",
     headline: "Justin Tse's Luxury Whistler Experience with AceHost in Kadenwood",
   },

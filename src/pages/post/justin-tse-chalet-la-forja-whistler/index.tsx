@@ -19,7 +19,7 @@ const CANONICAL_URL = `${SITE_URL}/post/${SLUG}`;
 const YOUTUBE_ID = "cNHhE2B8Zeo";
 
 const PHOTOS = {
-  hero: "/photos/properties/Chalet La Forja/2950 Heritage Peaks Trail 4 Large 2.png",
+  hero: "/photos/properties/Chalet La Forja/New cover forja snow.png",
   greatRoom: "/photos/properties/Chalet La Forja/New cover forja snow.png",
   justinEntrance:
     "/photos/post/justin-tse-chalet-la-forja-whistler/justin-la-forja-entrance.png",
@@ -30,7 +30,7 @@ const PHOTOS = {
   justinSnow:
     "/photos/post/justin-tse-chalet-la-forja-whistler/justin-whistler-snow.png",
   skiExterior: "/photos/properties/Chalet La Forja/Forja-3 copy.jpg",
-  ctaExterior: "/photos/properties/Chalet La Forja/hero00002.jpg",
+  ctaExterior: "/photos/properties/Chalet La Forja/New cover forja snow.png",
 } as const;
 
 const PUBLISH_DATE = "July 31, 2026";
@@ -54,7 +54,7 @@ const KADENWOOD_BOOKING_PROPERTIES: Whistler28Property[] = kadenwoodProperties.m
       ? {
           ...property,
           image:
-            "/photos/properties/Chalet La Forja/2950 Heritage Peaks Trail 4 Large 2.png",
+            "/photos/properties/Chalet La Forja/New cover forja snow.png",
         }
       : property
 );

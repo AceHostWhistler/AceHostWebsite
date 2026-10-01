@@ -91,16 +91,6 @@ function App({ Component, pageProps }: AppProps) {
         })}
         <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
         <title>{socialShare.title}</title>
-        <SocialShareMeta
-          title={socialShare.title}
-          description={socialShare.description}
-          image={socialShare.image}
-          type={socialShare.type}
-          publishedAt={socialShare.publishedAt}
-          modifiedAt={socialShare.modifiedAt}
-          socialTitle={socialShare.socialTitle}
-          socialDescription={socialShare.socialDescription}
-        />
         {blogStructuredData && (
           <script
             type="application/ld+json"
@@ -110,6 +100,16 @@ function App({ Component, pageProps }: AppProps) {
           />
         )}
       </Head>
+      <SocialShareMeta
+        title={socialShare.title}
+        description={socialShare.description}
+        image={socialShare.image}
+        type={socialShare.type}
+        publishedAt={socialShare.publishedAt}
+        modifiedAt={socialShare.modifiedAt}
+        socialTitle={socialShare.socialTitle}
+        socialDescription={socialShare.socialDescription}
+      />
       <Component {...pageProps} />
       <Analytics />
     </>
