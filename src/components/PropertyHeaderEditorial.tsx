@@ -6,6 +6,7 @@ import { ArrowUpRight } from "lucide-react";
 import { airbnbButtonPill } from "@/lib/airbnbButtonStyles";
 import type { PropertyGeo } from "@/data/seo/propertyGeo";
 import { getPropertyGeoByPath } from "@/data/seo/propertyGeo";
+import { getPropertyCardCoverImage } from "@/lib/seo/propertyCardCovers";
 import {
   buildBreadcrumbSchema,
   buildVacationRentalSchema,
@@ -170,13 +171,15 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
   const bedroomCount = toNumber(bedrooms);
 
   const breadcrumbSchema = buildBreadcrumbSchema(title, canonicalUrl);
+  const coverImage =
+    schemaImages?.[0] ?? getPropertyCardCoverImage(canonicalPath);
   const vacationRentalSchema = buildVacationRentalSchema({
     title,
     url: canonicalUrl,
     geo,
     bedroomCount,
     guestCount,
-    images: schemaImages,
+    images: coverImage ? [coverImage] : undefined,
   });
 
   const specs = [

@@ -22,6 +22,7 @@ import { getWorldwideAmenities } from "@/data/worldwideAmenities";
 import { airbnbButtonLg } from "@/lib/airbnbButtonStyles";
 import { GALLERY_PREVIEW_LIMIT } from "@/lib/galleryPhotoOrder";
 import {
+  COTSWOLDS_COVER,
   COTSWOLDS_COVER_GALLERY,
   COTSWOLDS_FULL_PHOTOS,
   COTSWOLDS_GALLERY_PHOTOS,
@@ -161,6 +162,7 @@ const CotswoldsUKSohoFarmHouse = ({
             contactLink="/contact"
             airbnbLink={AIRBNB_LINK}
             amenities={getWorldwideAmenities("cotswolds-uk-soho-farm-house")}
+            schemaImages={[COTSWOLDS_COVER]}
             onMorePhotosClick={openGallery}
           />
 

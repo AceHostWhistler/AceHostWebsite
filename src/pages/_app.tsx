@@ -98,6 +98,8 @@ function App({ Component, pageProps }: AppProps) {
           type={socialShare.type}
           publishedAt={socialShare.publishedAt}
           modifiedAt={socialShare.modifiedAt}
+          socialTitle={socialShare.socialTitle}
+          socialDescription={socialShare.socialDescription}
         />
         {blogStructuredData && (
           <script

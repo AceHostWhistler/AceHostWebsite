@@ -146,7 +146,7 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
           geo: listingGeo,
           bedroomCount: Number.isFinite(bedroomCount) ? bedroomCount : undefined,
           guestCount: Number.isFinite(guestCount) ? guestCount : undefined,
-          images: photos.slice(0, 3),
+          images: photos[0] ? [photos[0]] : undefined,
         })
       : null;
 
@@ -193,7 +193,7 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
             amenities={amenities}
             onMorePhotosClick={openGallery}
             geo={listingGeo}
-            schemaImages={photos.slice(0, 3)}
+            schemaImages={photos[0] ? [photos[0]] : undefined}
           />
 
           {vimeoVideoId && (

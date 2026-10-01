@@ -6,6 +6,14 @@ import {
 
 type SocialShareMetaProps = SocialSharePayload;
 
+function imageMimeType(imagePath: string): string {
+  const path = imagePath.split("?")[0]?.toLowerCase() ?? "";
+  if (path.endsWith(".png")) return "image/png";
+  if (path.endsWith(".webp")) return "image/webp";
+  if (path.endsWith(".gif")) return "image/gif";
+  return "image/jpeg";
+}
+
 export default function SocialShareMeta({
   title,
   description,
@@ -21,12 +29,15 @@ export default function SocialShareMeta({
   const ogDescription = socialDescription ?? description;
 
   return (
-    <Head>
+    <>
       <meta name="description" content={description} />
       <meta property="og:title" content={ogTitle} />
       <meta property="og:description" content={ogDescription} />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:image:secure_url" content={imageUrl} />
+      <meta property="og:image:alt" content={ogTitle} />
+      <meta property="og:image:type" content={imageMimeType(image)} />
+      <link rel="image_src" href={imageUrl} />
       <meta property="og:type" content={type} />
       {type === "article" && publishedAt ? (
         <meta property="article:published_time" content={publishedAt} />
@@ -38,6 +49,7 @@ export default function SocialShareMeta({
       <meta name="twitter:title" content={ogTitle} />
       <meta name="twitter:description" content={ogDescription} />
       <meta name="twitter:image" content={imageUrl} />
-    </Head>
+      <meta name="twitter:image:alt" content={ogTitle} />
+    </>
   );
 }

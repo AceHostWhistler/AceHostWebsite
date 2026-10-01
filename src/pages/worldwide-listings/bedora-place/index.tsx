@@ -127,7 +127,7 @@ const BedoraPlace = () => {
             airbnbLink={AIRBNB_LINK}
             amenities={getWorldwideAmenities("bedora-place")}
             onMorePhotosClick={openGallery}
-            schemaImages={photos.slice(0, 3)}
+            schemaImages={photos[0] ? [photos[0]] : undefined}
           />
 
           <div className={editorialGalleryWrapperClass} id="photos">
