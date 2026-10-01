@@ -29,6 +29,8 @@ import {
 import { getPropertyGeoBySlug } from "@/data/seo/propertyGeo";
 import { buildVacationRentalSchema } from "@/lib/seo/schema";
 import { SITE_URL } from "@/data/seo/business";
+import { getPropertyCardCoverImage } from "@/lib/seo/propertyCardCovers";
+import { toAbsoluteImageUrl } from "@/lib/seo/socialShare";
 import {
   GALLERY_PREVIEW_LIMIT,
   getGalleryPhotoOrder,
@@ -65,6 +67,12 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
       deferPhotos: listing.galleryDeferPhotos,
     }
   );
+  const listingPath = `/listings/${listing.slug}`;
+  const coverImage =
+    getPropertyCardCoverImage(listingPath) ?? photos[0];
+  const coverShareUrl = coverImage
+    ? toAbsoluteImageUrl(getGalleryPhotoSrc(coverImage))
+    : undefined;
 
   const [showAllPhotos, setShowAllPhotos] = useState(false);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(
@@ -146,7 +154,7 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
           geo: listingGeo,
           bedroomCount: Number.isFinite(bedroomCount) ? bedroomCount : undefined,
           guestCount: Number.isFinite(guestCount) ? guestCount : undefined,
-          images: photos[0] ? [photos[0]] : undefined,
+          images: coverImage ? [coverImage] : undefined,
         })
       : null;
 
@@ -156,6 +164,16 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
         <title>{seo.title}</title>
         <meta name="description" content={seo.description} />
         {seo.keywords && <meta name="keywords" content={seo.keywords} />}
+        {coverShareUrl ? (
+          <meta property="og:image" content={coverShareUrl} />
+        ) : null}
+        {coverShareUrl ? (
+          <meta property="og:image:secure_url" content={coverShareUrl} />
+        ) : null}
+        {coverShareUrl ? (
+          <meta name="twitter:image" content={coverShareUrl} />
+        ) : null}
+        {coverShareUrl ? <link rel="image_src" href={coverShareUrl} /> : null}
         {structuredData && (
           <script
             type="application/ld+json"
@@ -193,7 +211,7 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
             amenities={amenities}
             onMorePhotosClick={openGallery}
             geo={listingGeo}
-            schemaImages={photos[0] ? [photos[0]] : undefined}
+            schemaImages={coverImage ? [coverImage] : undefined}
           />
 
           {vimeoVideoId && (

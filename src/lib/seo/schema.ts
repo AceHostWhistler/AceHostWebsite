@@ -1,4 +1,5 @@
 import { businessInfo, SITE_URL } from "@/data/seo/business";
+import { toAbsoluteImageUrl } from "@/lib/seo/socialShare";
 import type { PropertyGeo } from "@/data/seo/propertyGeo";
 import type { PropertyCategory, PropertyFeature } from "@/data/properties/catalog";
 import { getPropertyListingPath } from "@/data/properties/listingPath";
@@ -165,7 +166,7 @@ export function buildVacationRentalSchema({
 }: VacationRentalSchemaInput) {
   const absoluteImages = images
     ?.filter(Boolean)
-    .map((img) => (img.startsWith("http") ? img : `${SITE_URL}${img}`));
+    .map((img) => toAbsoluteImageUrl(img));
 
   return {
     "@context": "https://schema.org",

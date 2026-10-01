@@ -1,6 +1,7 @@
 import { allArticles } from "@/utils/blogArticles";
 import { getListing } from "@/data/listings";
 import { businessInfo } from "@/data/seo/business";
+import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import { getPropertyCardCoverImage } from "@/lib/seo/propertyCardCovers";
 import {
   ACEHOST_LOGO_IMAGE,
@@ -8,6 +9,11 @@ import {
   normalizePath,
   type SocialSharePayload,
 } from "@/lib/seo/socialShare";
+
+function shareCover(imagePath: string | undefined): string {
+  if (!imagePath) return DEFAULT_SOCIAL_IMAGE;
+  return getGalleryPhotoSrc(imagePath);
+}
 
 type StaticPageMeta = Omit<SocialSharePayload, "type">;
 
@@ -72,7 +78,8 @@ const STATIC_PAGES: Record<string, StaticPageMeta> = {
     title: "Hotel Booking Assistance & Concierge Services | AceHost",
     description:
       "AceHost hotel booking assistance and concierge services for Whistler and beyond.",
-    image: ACEHOST_LOGO_IMAGE,
+    image:
+      "/thumbnails/Four Seasons Resort and Residences Whistler_885.webp",
   },
   "/privacy": {
     title: "Privacy Policy | AceHost Whistler",
@@ -160,17 +167,25 @@ function resolveListingSocialShare(
     return {
       title: listing.seo.title,
       description: listing.seo.description,
-      image: cardCover ?? listing.photos[0] ?? DEFAULT_SOCIAL_IMAGE,
+      image: shareCover(cardCover ?? listing.photos[0]),
       type: "website",
     };
   }
 
   const listingMeta = WORLDWIDE_LISTING_TITLES[slug];
-  if (!listingMeta) return null;
+  if (!listingMeta) {
+    if (!cardCover) return null;
+    return {
+      title: businessInfo.legalName,
+      description: businessInfo.description,
+      image: shareCover(cardCover),
+      type: "website",
+    };
+  }
 
   return {
     ...listingMeta,
-    image: cardCover ?? DEFAULT_SOCIAL_IMAGE,
+    image: shareCover(cardCover),
     type: "website",
   };
 }
@@ -183,7 +198,11 @@ export function resolveSocialShare(
 
   const staticPage = STATIC_PAGES[normalizedPath];
   if (staticPage) {
-    return { ...staticPage, type: "website" };
+    return {
+      ...staticPage,
+      image: shareCover(staticPage.image),
+      type: "website",
+    };
   }
 
   const postMatch = normalizedPath.match(/^\/post\/([^/]+)$/);
@@ -196,7 +215,7 @@ export function resolveSocialShare(
         description: article.description ?? article.title,
         socialTitle: article.socialTitle,
         socialDescription: article.socialDescription,
-        image: article.coverImage,
+        image: shareCover(article.coverImage),
         type: "article",
         publishedAt: article.publishedAt,
         modifiedAt: article.modifiedAt ?? article.publishedAt,

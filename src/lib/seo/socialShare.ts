@@ -16,7 +16,15 @@ export type SocialSharePayload = {
 export const ACEHOST_LOGO_IMAGE = "/logo.png";
 export const DEFAULT_SOCIAL_IMAGE = ACEHOST_LOGO_IMAGE;
 /** Bump this when cover photos change so Google and iMessage recache the new image. */
-export const SHARE_IMAGE_VERSION = "20260930";
+export const SHARE_IMAGE_VERSION = "20260930c";
+
+export function shareImageMimeType(imagePath: string): string {
+  const path = imagePath.split("?")[0]?.toLowerCase() ?? "";
+  if (path.endsWith(".png")) return "image/png";
+  if (path.endsWith(".webp")) return "image/webp";
+  if (path.endsWith(".gif")) return "image/gif";
+  return "image/jpeg";
+}
 
 export function toAbsoluteImageUrl(imagePath: string): string {
   if (!imagePath) {

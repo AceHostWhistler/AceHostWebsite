@@ -48,7 +48,7 @@ const listing: ListingData = {
     "@context": "https://schema.org/",
     "@type": "Product",
     "name": "Snowpine | Walk to Ski | 3 BDR | Private Hot Tub",
-    "image": "/photos/properties/Snowpine 3-bed Saul/01-2040 Karen Cres-01.jpg",
+    "image": "/photos/properties/Snowpine 3-bed Saul/02-2040 Karen Cres-02.jpg",
     "description":
       "A modern 3-bedroom Creekside retreat with private hot tub, fireplace, BBQ and fire pit, just a 5-minute walk from the Creekside Gondola.",
     "sku": "snowpine-creekside",

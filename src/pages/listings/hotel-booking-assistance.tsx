@@ -24,6 +24,14 @@ const HotelBookingAssistance = () => {
           name="keywords"
           content="hotel booking, concierge services, Whistler hotels, room upgrades, priority reservations, dining credit, early checkout, late checkout"
         />
+        <meta
+          property="og:image"
+          content="https://www.acehost.ca/thumbnails/Four%20Seasons%20Resort%20and%20Residences%20Whistler_885.webp?v=20260930c"
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.acehost.ca/thumbnails/Four%20Seasons%20Resort%20and%20Residences%20Whistler_885.webp?v=20260930c"
+        />
       </Head>
 
       <div className="min-h-screen bg-white">

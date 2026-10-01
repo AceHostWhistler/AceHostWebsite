@@ -1,18 +1,11 @@
 import Head from "next/head";
 import {
+  shareImageMimeType,
   toAbsoluteImageUrl,
   type SocialSharePayload,
 } from "@/lib/seo/socialShare";
 
 type SocialShareMetaProps = SocialSharePayload;
-
-function imageMimeType(imagePath: string): string {
-  const path = imagePath.split("?")[0]?.toLowerCase() ?? "";
-  if (path.endsWith(".png")) return "image/png";
-  if (path.endsWith(".webp")) return "image/webp";
-  if (path.endsWith(".gif")) return "image/gif";
-  return "image/jpeg";
-}
 
 export default function SocialShareMeta({
   title,
@@ -36,7 +29,7 @@ export default function SocialShareMeta({
       <meta property="og:image" content={imageUrl} />
       <meta property="og:image:secure_url" content={imageUrl} />
       <meta property="og:image:alt" content={ogTitle} />
-      <meta property="og:image:type" content={imageMimeType(image)} />
+      <meta property="og:image:type" content={shareImageMimeType(image)} />
       <link rel="image_src" href={imageUrl} />
       <meta property="og:type" content={type} />
       {type === "article" && publishedAt ? (

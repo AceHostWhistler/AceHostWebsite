@@ -11,8 +11,11 @@ import {
   buildBlogBreadcrumbSchema,
 } from "@/lib/seo/schema";
 import { businessInfo, SITE_URL } from "@/data/seo/business";
-import SocialShareMeta from "@/components/SocialShareMeta";
 import { resolveSocialShare } from "@/lib/seo/resolveSocialShare";
+import {
+  shareImageMimeType,
+  toAbsoluteImageUrl,
+} from "@/lib/seo/socialShare";
 
 function getCanonicalPath(asPath: string): string {
   const [cleanPath] = asPath.split("#");
@@ -25,7 +28,13 @@ function getCanonicalPath(asPath: string): string {
 
 function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  const canonicalPath = getCanonicalPath(router.asPath || "/");
+  const pageSlug =
+    typeof pageProps.slug === "string" ? pageProps.slug : undefined;
+  const resolvedPath =
+    pageSlug && router.pathname.includes("[slug]")
+      ? router.pathname.replace("[slug]", pageSlug)
+      : router.asPath || "/";
+  const canonicalPath = getCanonicalPath(resolvedPath);
   const canonicalUrl = `${SITE_URL}${canonicalPath}`;
   const locales = router.locales || ["en"];
   const defaultLocale = router.defaultLocale || "en";
@@ -56,9 +65,12 @@ function App({ Component, pageProps }: AppProps) {
   }, [canonicalPath]);
 
   const socialShare = useMemo(
-    () => resolveSocialShare(router.asPath || "/", locales),
-    [router.asPath, locales]
+    () => resolveSocialShare(resolvedPath, locales),
+    [resolvedPath, locales]
   );
+  const shareImageUrl = toAbsoluteImageUrl(socialShare.image);
+  const ogTitle = socialShare.socialTitle ?? socialShare.title;
+  const ogDescription = socialShare.socialDescription ?? socialShare.description;
 
   return (
     <>
@@ -91,6 +103,35 @@ function App({ Component, pageProps }: AppProps) {
         })}
         <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
         <title>{socialShare.title}</title>
+        <meta name="description" content={socialShare.description} />
+        <meta property="og:title" content={ogTitle} />
+        <meta property="og:description" content={ogDescription} />
+        <meta property="og:image" content={shareImageUrl} />
+        <meta property="og:image:secure_url" content={shareImageUrl} />
+        <meta property="og:image:alt" content={ogTitle} />
+        <meta
+          property="og:image:type"
+          content={shareImageMimeType(socialShare.image)}
+        />
+        <link rel="image_src" href={shareImageUrl} />
+        <meta property="og:type" content={socialShare.type ?? "website"} />
+        {socialShare.type === "article" && socialShare.publishedAt ? (
+          <meta
+            property="article:published_time"
+            content={socialShare.publishedAt}
+          />
+        ) : null}
+        {socialShare.type === "article" && socialShare.modifiedAt ? (
+          <meta
+            property="article:modified_time"
+            content={socialShare.modifiedAt}
+          />
+        ) : null}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={ogTitle} />
+        <meta name="twitter:description" content={ogDescription} />
+        <meta name="twitter:image" content={shareImageUrl} />
+        <meta name="twitter:image:alt" content={ogTitle} />
         {blogStructuredData && (
           <script
             type="application/ld+json"
@@ -100,16 +141,6 @@ function App({ Component, pageProps }: AppProps) {
           />
         )}
       </Head>
-      <SocialShareMeta
-        title={socialShare.title}
-        description={socialShare.description}
-        image={socialShare.image}
-        type={socialShare.type}
-        publishedAt={socialShare.publishedAt}
-        modifiedAt={socialShare.modifiedAt}
-        socialTitle={socialShare.socialTitle}
-        socialDescription={socialShare.socialDescription}
-      />
       <Component {...pageProps} />
       <Analytics />
     </>

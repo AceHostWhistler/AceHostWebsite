@@ -12,8 +12,13 @@ import {
   buildVacationRentalSchema,
 } from "@/lib/seo/schema";
 import { SITE_URL } from "@/data/seo/business";
+import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import { getPrimaryPricePeriodLabel } from "@/lib/pricePeriodLabel";
 import { formatDisplayedPrice } from "@/lib/formatDisplayedPrice";
+import {
+  shareImageMimeType,
+  toAbsoluteImageUrl,
+} from "@/lib/seo/socialShare";
 
 interface PropertyHeaderEditorialProps {
   title: string;
@@ -154,8 +159,14 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
     cleanPath.endsWith("/") && cleanPath !== "/"
       ? cleanPath.slice(0, -1)
       : cleanPath;
+  const slug =
+    typeof router.query.slug === "string" ? router.query.slug : undefined;
+  const listingLookupPath =
+    slug && (router.pathname || "").includes("[slug]")
+      ? (router.pathname || "").replace("[slug]", slug)
+      : canonicalPath;
   const canonicalUrl = `${SITE_URL}${canonicalPath}`;
-  const geo = geoProp ?? getPropertyGeoByPath(canonicalPath);
+  const geo = geoProp ?? getPropertyGeoByPath(listingLookupPath);
 
   const { primary, secondary } = parseTitleParts(title);
   const h1Text = keepFullTitleInH1 ? title : primary;
@@ -172,14 +183,20 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
 
   const breadcrumbSchema = buildBreadcrumbSchema(title, canonicalUrl);
   const coverImage =
-    schemaImages?.[0] ?? getPropertyCardCoverImage(canonicalPath);
+    getPropertyCardCoverImage(listingLookupPath) ??
+    schemaImages?.[0] ??
+    getPropertyCardCoverImage(canonicalPath);
+  const shareImage = coverImage ? getGalleryPhotoSrc(coverImage) : undefined;
+  const shareImageUrl = shareImage
+    ? toAbsoluteImageUrl(shareImage)
+    : undefined;
   const vacationRentalSchema = buildVacationRentalSchema({
     title,
     url: canonicalUrl,
     geo,
     bedroomCount,
     guestCount,
-    images: coverImage ? [coverImage] : undefined,
+    images: shareImage ? [shareImage] : coverImage ? [coverImage] : undefined,
   });
 
   const specs = [
@@ -195,6 +212,31 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
   return (
     <>
       <Head>
+        {shareImageUrl ? (
+          <meta property="og:image" content={shareImageUrl} />
+        ) : null}
+        {shareImageUrl ? (
+          <meta property="og:image:secure_url" content={shareImageUrl} />
+        ) : null}
+        {shareImageUrl ? (
+          <meta property="og:image:alt" content={title} />
+        ) : null}
+        {shareImageUrl ? (
+          <meta
+            property="og:image:type"
+            content={shareImageMimeType(shareImage ?? "")}
+          />
+        ) : null}
+        {shareImageUrl ? <link rel="image_src" href={shareImageUrl} /> : null}
+        {shareImageUrl ? (
+          <meta name="twitter:card" content="summary_large_image" />
+        ) : null}
+        {shareImageUrl ? (
+          <meta name="twitter:image" content={shareImageUrl} />
+        ) : null}
+        {shareImageUrl ? (
+          <meta name="twitter:image:alt" content={title} />
+        ) : null}
         <link rel="up" href={`${SITE_URL}/properties`} />
         <link rel="bookmark" href={canonicalUrl} />
         <script
