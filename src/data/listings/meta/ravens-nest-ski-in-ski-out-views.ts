@@ -60,7 +60,7 @@ const listing: ListingData = {
       "beds": 4,
       "bathrooms": 3.5,
       "priceRange": "$2,000-$3,500 per night",
-      "holidayPrice": "$2,300-$4,000 Nightly | Christmas & NY",
+      "holidayPrice": "$3,000-$4,500 Nightly | Christmas & NY",
       "airbnbLink": "https://www.airbnb.ca/rooms/1300258964918876012?guests=1&adults=1&s=67&unique_share_id=d7c3a27e-f05e-498b-a7dd-da59b54af9bf"
   },
   galleryTitle: "Raven's Nest",
