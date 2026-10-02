@@ -425,7 +425,7 @@ export default function Properties() {
                   >
                     Concierge Services
                   </Link>
-                  , where you can expect a fully personalized trip, think private chefs, heli-skiing, snowmobile fondue tours, airport transfers, and hard-to-get restaurant reservations, local contacts and expertise, all arranged seamlessly by our local experts.
+                  , where we can help suggest and arrange private chefs, included ski lift pass delivery, ski instructors, heli-skiing, snowmobile fondue tours, airport transfers, and restaurant reservations, local contacts and expertise, all arranged seamlessly by our local experts.
                 </p>
                 <p>
                   Travellers can book directly on Airbnb links below, or speak with us directly to find exact pricing, more information, &amp; more chalet options.
