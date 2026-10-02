@@ -428,7 +428,7 @@ const Home = () => {
 
         {/* Services Section */}
         <section className="bg-white pt-20 pb-10">
-          <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-[1440px] mx-auto grid grid-cols-1 items-stretch gap-5 px-4 sm:px-6 md:grid-cols-3 lg:px-8">
             {sections.map((section, index) => {
               const href =
                 index === 0
@@ -440,6 +440,7 @@ const Home = () => {
               return (
                 <motion.div
                   key={section.title}
+                  className="flex h-full flex-col"
                   initial={reduceMotion ? false : { opacity: 0, y: 28 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
@@ -451,7 +452,7 @@ const Home = () => {
                 >
                   <Link
                     href={href}
-                    className="group relative flex min-h-[18rem] flex-col justify-end overflow-hidden rounded-2xl"
+                    className="group relative flex min-h-[18rem] flex-1 flex-col justify-end overflow-hidden rounded-2xl"
                   >
                     <Image
                       src={section.image}
@@ -469,7 +470,7 @@ const Home = () => {
                       <h3 className="mb-3 text-xl font-semibold tracking-tight text-white sm:text-2xl">
                         {section.title}
                       </h3>
-                      <p className="mb-4 text-base leading-relaxed text-white/80 line-clamp-4">
+                      <p className="mb-4 text-base leading-relaxed text-white/80">
                         {section.description}
                       </p>
                       <span className="inline-flex items-center text-base font-medium text-white">
