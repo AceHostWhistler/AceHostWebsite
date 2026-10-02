@@ -503,13 +503,13 @@ const Home = () => {
                   onClick={() => setActiveFilter("all")}
                   className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "all" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
                 >
-                  Whistler All Properties
+                  All Properties
                 </button>
                 <button
                   onClick={() => setActiveFilter("whistler")}
                   className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "whistler" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
                 >
-                  Whistler
+                  Whistler All Properties
                 </button>
                 <button
                   onClick={() => setActiveFilter("homes")}

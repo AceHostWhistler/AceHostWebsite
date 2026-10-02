@@ -449,7 +449,7 @@ export default function Properties() {
                       : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
                   }`}
                 >
-                  Whistler All Properties
+                  All Properties
                 </button>
                 <button
                   onClick={() => setActiveCategory("whistler")}
@@ -459,7 +459,7 @@ export default function Properties() {
                       : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
                   }`}
                 >
-                  Whistler
+                  Whistler All Properties
                 </button>
                 <button
                   onClick={() => setActiveCategory("homes")}
