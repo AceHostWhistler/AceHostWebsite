@@ -80,10 +80,10 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     name: "The Aspens | On-Hill Ski-In/Out | Hot Tubs | 2 BDR",
     priceRange: "$350-$1,300 per night (seasonal)",
     stats:
-      "Sleeps 4 | 2 Bedrooms | 3 Beds | 2 Bathrooms | Ski-in/Ski-out | Pool & Three Hot Tubs | Upper Village Location",
+      "Sleeps 6 | 2 Bedrooms | 4 Beds | 2 Bathrooms | Ski-in/Ski-out | Pool & Three Hot Tubs | Upper Village Location",
     paragraphs: [
       "Welcome to one of the most convenient ski-in/ski-out locations on Blackcomb Mountain. This ground-floor 2-bedroom home at The Aspens sits just steps from the slopes and is the closest unit in the building to the pool and three hot tubs.",
-      "Inside, enjoy a king primary suite, twin bedroom, fireplace, full kitchen, patio and BBQ. Ski rentals are available right in the building, while Upper Village, Whistler Village, Lost Lake and year-round trails are all within easy reach.",
+      "Inside, enjoy a king primary suite, twin bedroom, fireplace, full kitchen, patio and BBQ. The living room includes a pullout sofa bed that can accommodate 2 additional guests, bringing the home's maximum occupancy to 6. Ski rentals are available right in the building, while Upper Village, Whistler Village, Lost Lake and year-round trails are all within easy reach.",
       "The pool and hot tub area is only steps from this particular unit, making it incredibly easy to head out for a soak after skiing and return home without crossing the entire building.",
     ],
     airbnbHref:
@@ -211,10 +211,10 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     name: "Bluffs - Luxury 2 Bed Ski in Ski out in Creekside - Views!",
     priceRange: "$380-$950 Summer | $500-$1,350 Winter (seasonal)",
     stats:
-      "Sleeps 6 | 2 Bedrooms | 3 Beds | 2 Bathrooms | Ski-in/Ski-out | Hot Tub | Creekside/Taluswood",
+      "Sleeps 6 | 2 Bedrooms | 3 Beds | 2 Bathrooms | Ski-in/Ski-out | Shared complex hot tub | Creekside/Taluswood",
     paragraphs: [
       "Perched in Taluswood's Bluffs, this two-bedroom retreat drops you onto the Dave Murray Downhill for true ski-in/ski-out days and sunset mountain-view evenings. King and queen suites, heated bathroom floors, and a chef-ready kitchen make it feel far larger than a typical Creekside base.",
-      "Complex hot tub access, two underground parking stalls, and dedicated ski and bike storage simplify every ski day. Portable AC keeps summer stays comfortable when temperatures climb in the valley.",
+      "Shared complex hot tub access, two underground parking stalls, and dedicated ski and bike storage simplify every ski day. Portable AC keeps summer stays comfortable when temperatures climb in the valley.",
       "For skiers who prioritize slope access and Creekside calm over village bustle, Bluffs is one of the most compelling ski-in/ski-out condos on the AceHost roster.",
     ],
     airbnbHref:

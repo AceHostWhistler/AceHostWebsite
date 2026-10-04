@@ -619,6 +619,9 @@ export default function BlogPost() {
                 hot tub/pool, Blackcomb Mountain, and ski lifts. Main & Upper
                 Whistler Village within walking distance. Nearby biking trails,
                 2 golf courses, and Lost Lake make this spot perfect year-round!
+                The living room includes a pullout sofa bed that can accommodate
+                2 additional guests, bringing the home&apos;s maximum occupancy
+                to 6.
               </p>
 
               <p className="mt-4">

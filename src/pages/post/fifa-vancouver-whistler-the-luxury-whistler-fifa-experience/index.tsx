@@ -148,7 +148,7 @@ const condoTownhomeOptions: FeaturedProperty[] = [
   {
     name: "The Aspens | 2-Bed Ski in/Out",
     description:
-      "A classic Whistler option for those who want comfort, convenience, and a clean mountain stay.",
+      "A classic Whistler option for those who want comfort, convenience, and a clean mountain stay. Sleeps 6 guests across 2 bedrooms and 4 beds, including a living-room pullout sofa.",
     photos: [
       "/photos/properties/The Aspens/4800-Spearhead-Drive-1.JPG",
       "/photos/properties/The Aspens/4800-Spearhead-Drive-2.JPG",

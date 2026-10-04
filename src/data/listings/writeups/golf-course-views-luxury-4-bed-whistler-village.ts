@@ -84,7 +84,7 @@ const golfCourseViewsWriteup: ListingWriteupContent = {
     notes: [ACEHOST_VIP_CONCIERGE_NOTE, ACEHOST_REACH_OUT_NOTE],
     registration: [
       "Municipal registration number: 00015211",
-      "Provincial registration number: PM264215843",
+      "Provincial registration number: PM250254511",
     ],
   },
 };

@@ -52,11 +52,11 @@ const listing: ListingData = {
   "/photos/properties/Muirfield Golf Course/45 - 20250820 A7M4 01 A1_00521.jpg"
 ],
   seo: {
-    title: "\n          Golf Course Views | Luxury 4-bed Whistler Village - AceHost\n        ",
-    description: "Experience Whistler luxury at this cozy, standalone chalet sitting right on Nicklaus North Golf Course with stunning views of Hole 14. Enjoy a private hot tub, media room, wood-burning fireplace, and chef's kitchen.",
+    title: "Nicklaus North | 4-Bedroom Chalet | Golf Course Views - AceHost",
+    description: "Nicklaus North 4-bedroom chalet with golf course views of Hole 14. Sleeps 8 guests with 6 beds and 3.5 bathrooms. Private hot tub, media room, wood-burning fireplace, and chef's kitchen.",
   },
   header:   {
-      "title": "Golf Course Views | Luxury 4-bed Whistler Village",
+      "title": "Nicklaus North | 4-Bedroom Chalet | Golf Course Views",
       "guests": 8,
       "bedrooms": 4,
       "bathrooms": 3.5,
@@ -66,8 +66,8 @@ const listing: ListingData = {
       "holidayPrice": "$3500-5000 Nightly | Christmas & NY",
       "airbnbLink": "https://www.airbnb.ca/rooms/1493522257280258231?guests=1&adults=1&s=67&unique_share_id=d98beea7-9f12-4195-8af6-52e4aa1a94cd"
   },
-  galleryTitle: "Golf Course Views",
-  photoAltPrefix: "Golf Course Views",
+  galleryTitle: "Nicklaus North | 4-Bedroom Chalet | Golf Course Views",
+  photoAltPrefix: "Nicklaus North 4-Bedroom Chalet",
 };
 
 export default listing;

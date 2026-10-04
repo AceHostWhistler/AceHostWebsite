@@ -42,15 +42,15 @@ const listing: ListingData = {
 ],
   seo: {
     title: "The Aspens | On-Hill Ski-In/Out | Hot Tubs | 2 BDR - AceHost",
-    description: "Ground-floor ski-in/ski-out at The Aspens on Blackcomb Mountain. Closest unit to pool and three hot tubs, king primary suite, twin bedroom, patio BBQ, and easy walk to Upper Village and Whistler Village.",
+    description: "Ground-floor ski-in/ski-out at The Aspens on Blackcomb Mountain. Sleeps 6 guests across 2 bedrooms, 4 beds and 2 bathrooms, including a living-room pullout sofa. Closest unit to pool and three hot tubs, king primary suite, twin bedroom, patio BBQ, and easy walk to Upper Village and Whistler Village.",
   },
   header:   {
       "title": "The Aspens | On-Hill Ski-In/Out | Hot Tubs | 2 BDR",
-      "guests": 4,
+      "guests": 6,
       "bedrooms": 2,
       "bathrooms": 2,
       "priceRange": "$350-$1,300 per night",
-      "beds": 3,
+      "beds": 4,
       "airbnbLink": "https://www.airbnb.com/rooms/1072474554447345991?guests=1&adults=1&s=67&unique_share_id=e556b35c-05b5-40b6-91e1-5304ffafc23b",
       "contactLink": "/contact"
   },

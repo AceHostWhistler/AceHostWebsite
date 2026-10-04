@@ -155,7 +155,7 @@ export const townhomeProperties: Whistler28Property[] = [
     number: 14,
     name: "The Aspens | On-Hill Ski-In/Out | Hot Tubs | 2 BDR",
     description:
-      "Ground-floor ski-in/ski-out at The Aspens, the closest unit to the pool, three hot tubs, and Blackcomb slopes.",
+      "Ground-floor ski-in/ski-out at The Aspens, the closest unit to the pool, three hot tubs, and Blackcomb slopes. Sleeps 6 guests, including a living-room pullout sofa bed.",
     image: "/photos/properties/The Aspens/4800-Spearhead-Drive-1.JPG",
     listingHref: "/listings/whispering-pines-ski-in-ski-out",
     bookUrl:
@@ -257,7 +257,7 @@ export const townhomeProperties: Whistler28Property[] = [
     number: 24,
     name: "Bluffs | Luxury 2 Bed Ski in Ski out | Views",
     description:
-      "A two-bedroom Taluswood retreat on the Dave Murray Downhill, with mountain views, a hot tub, fireplace, parking, and gear storage.",
+      "A two-bedroom Taluswood retreat on the Dave Murray Downhill, with mountain views, a shared complex hot tub, fireplace, parking, and gear storage.",
     image: "/photos/properties/Bluffs Unit 4/IMG_001112.JPG",
     listingHref: "/listings/bluffs-unit-4-taluswood",
     bookUrl:

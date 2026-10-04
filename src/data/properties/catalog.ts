@@ -1019,7 +1019,7 @@ export const propertyCategories: PropertyCategory[] = [
 
           {
             id: "golf-course-views",
-            name: "Golf Course Views | Luxury 4-bed Whistler Village",
+            name: "Nicklaus North | 4-Bedroom Chalet | Golf Course Views",
             images: [
               "/photos/properties/Muirfield Golf Course/Muirfield drone snow.png",
               "/photos/properties/Muirfield Golf Course/Muirfield Snow shot.png",
@@ -1173,7 +1173,7 @@ export const propertyCategories: PropertyCategory[] = [
 
           {
             id: "luxe-cozy-3-bed-whistler-village",
-            name: "Luxe Cozy 3-Bed Whistler Village",
+            name: "Blackcomb Pines | Luxe 3-Bedroom | Blackcomb",
             images: [
               "/photos/properties/Cozy Luxe 3-Bed in Whistler Village/02-1 4668 Blackcomb Way 02-Edit.jpg",
               "/photos/properties/Cozy Luxe 3-Bed in Whistler Village/01-1 4668 Blackcomb Way 01-Edit.jpg",
@@ -1181,14 +1181,15 @@ export const propertyCategories: PropertyCategory[] = [
             ],
             guests: 6,
             bedrooms: 3,
-            bathrooms: 3,
-            location: "Upper Whistler Village, Whistler",
+            bathrooms: 2.5,
+            beds: 4,
+            location: "Blackcomb, Whistler",
             description:
-              "This stylish and recently renovated 3-bedroom condo in Whistler Village combines convenient location with modern comfort. Tastefully decorated with a cozy mountain aesthetic and just minutes from the gondolas.",
+              "This stylish and recently renovated 3-bedroom townhome in Blackcomb combines convenient location with modern comfort. Tastefully decorated with a cozy mountain aesthetic and just minutes from the gondolas.",
             features: [
               "Recently Renovated",
               "Modern Design",
-              "Village Location",
+              "Blackcomb Location",
               "Walk to Lifts",
               "Gas Fireplace",
               "Designer Furnishings",
@@ -1197,8 +1198,8 @@ export const propertyCategories: PropertyCategory[] = [
             ],
             highlights: [
               "Stylish Modern Interior",
-              "Steps to Village Restaurants",
-              "5-Minute Walk to Gondolas",
+              "Blackcomb, Whistler",
+              "Walk to Village & Lifts",
               "Fully Equipped Kitchen",
             ],
             priceRange: "$750-$2,200+ per night",
@@ -1212,17 +1213,19 @@ export const propertyCategories: PropertyCategory[] = [
             images: [
               "/photos/properties/The Aspens/4800-Spearhead-Drive-1.JPG",
             ],
-            guests: 4,
+            guests: 6,
             bedrooms: 2,
             bathrooms: 2,
+            beds: 4,
             location: "Upper Village, Whistler",
             description:
-              "Ground-floor ski-in/ski-out at The Aspens on Blackcomb Mountain. Closest unit to the pool and three hot tubs, with a king primary suite, twin bedroom, patio BBQ and easy walk to Upper Village and Whistler Village.",
+              "Ground-floor ski-in/ski-out at The Aspens on Blackcomb Mountain. Sleeps 6 guests across 2 bedrooms, 4 beds and 2 bathrooms, including a living-room pullout sofa. Closest unit to the pool and three hot tubs, with a king primary suite, twin bedroom, patio BBQ and easy walk to Upper Village and Whistler Village.",
             features: [
               "Ski-in/Ski-out Access",
               "Pool & Three Hot Tubs",
               "Ground-Floor Unit",
               "King Primary Suite",
+              "Pullout Sofa Bed",
               "Patio & BBQ",
               "Fireplace",
               "Fully Equipped Kitchen",
@@ -1751,7 +1754,7 @@ export const propertyCategories: PropertyCategory[] = [
 
           {
             id: "bluffs-unit-4",
-            name: "Bluffs - Luxury 2 Bed Ski in Ski out in Creeksside - Views!",
+            name: "Bluffs - Luxury 2 Bed Ski in Ski out in Creekside - Views!",
             images: [
               "/photos/properties/Bluffs Unit 4/IMG_001112.JPG",
               "/photos/properties/Bluffs Unit 4/01 - 20260522 MM4P 02 0362.jpg",
@@ -1766,7 +1769,7 @@ export const propertyCategories: PropertyCategory[] = [
               "Perched in Taluswood's Bluffs, this 2-bedroom retreat drops you onto the Dave Murray Downhill for true ski-in ski-out days and sunset mountain-view evenings.",
             features: [
               "True Ski-in/Ski-out",
-              "Hot Tub",
+              "Shared complex hot tub",
               "Gas Fireplace",
               "Chef-Ready Kitchen",
               "Underground Parking (2 stalls)",
@@ -1777,7 +1780,7 @@ export const propertyCategories: PropertyCategory[] = [
             highlights: [
               "Dave Murray Downhill Access",
               "King & Queen Suites",
-              "Private Complex Hot Tub",
+              "Shared complex hot tub",
               "Heated Bathroom Floors",
             ],
             priceRange: "$380-950 in summer",

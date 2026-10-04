@@ -11,7 +11,7 @@ const whisperingPinesWriteup: ListingWriteupContent = {
   intro: {
     paragraphs: [
       "Welcome to one of the most convenient ski-in/ski-out locations on Blackcomb Mountain. This ground-floor 2-bedroom home at The Aspens sits just steps from the slopes and is the closest unit in the building to the pool and three hot tubs.",
-      "Inside, enjoy a king primary suite, twin bedroom, fireplace, full kitchen, patio and BBQ. Ski rentals are available right in the building, while Upper Village, Whistler Village, Lost Lake and year-round trails are all within easy reach.",
+      "Inside, enjoy a king primary suite, twin bedroom, fireplace, full kitchen, patio and BBQ. The living room includes a pullout sofa bed that can accommodate 2 additional guests, bringing the home's maximum occupancy to 6. Ski rentals are available right in the building, while Upper Village, Whistler Village, Lost Lake and year-round trails are all within easy reach.",
     ],
     highlights: [
       "True ski-in / ski-out",
@@ -33,7 +33,7 @@ const whisperingPinesWriteup: ListingWriteupContent = {
     paragraphs: [
       "If skiing is the priority, The Aspens is difficult to beat. This ground-floor home sits directly on Blackcomb Mountain, with true ski-in/ski-out access just steps from the unit and some of the best on-hill convenience in Whistler.",
       "What makes this particular condo even more convenient is its position within the building. It is the closest unit in The Aspens to both the ski slope access and the pool and hot tub area, meaning less time walking through hallways in ski boots and more time enjoying the mountain.",
-      "The open living and dining area provides a comfortable place to relax after skiing, centred around a cozy indoor fireplace. Step outside onto the patio for fresh mountain air or use the private BBQ for an easy meal at home. The kitchen is fully equipped and includes a Keurig coffee machine and SodaStream.",
+      "The open living and dining area provides a comfortable place to relax after skiing, centred around a cozy indoor fireplace. The living room includes a pullout sofa bed that can accommodate 2 additional guests, bringing the home's maximum occupancy to 6. Step outside onto the patio for fresh mountain air or use the private BBQ for an easy meal at home. The kitchen is fully equipped and includes a Keurig coffee machine and SodaStream.",
     ],
   },
   location: {
@@ -55,7 +55,7 @@ const whisperingPinesWriteup: ListingWriteupContent = {
   },
   bedrooms: {
     title: "Bedroom Layout",
-    summary: "Up to 4 guests across two bedrooms and three beds.",
+    summary: "Up to 6 guests across 2 bedrooms and 4 beds.",
     floors: [
       {
         label: "Ground floor",
@@ -73,7 +73,7 @@ const whisperingPinesWriteup: ListingWriteupContent = {
           },
           {
             name: "Living room",
-            details: "Additional Smart TV with cable.",
+            details: "Pullout sofa bed for 2 additional guests, plus a Smart TV with cable.",
           },
         ],
       },
@@ -83,7 +83,7 @@ const whisperingPinesWriteup: ListingWriteupContent = {
   other: {
     title: "Other details",
     guestAccess: [
-      "Guests have private access to the entire 2-bedroom condo, including the patio and BBQ.",
+      "Guests have private access to the entire 2-bedroom condo, including the patio, BBQ and living-room pullout sofa bed.",
       "You will also have access to The Aspens' heated outdoor pool, three hot tubs, fitness facilities, ski-in/ski-out access and building ski-rental/ski concierge services.",
       "Self check-in is available, with access instructions provided before arrival.",
     ],

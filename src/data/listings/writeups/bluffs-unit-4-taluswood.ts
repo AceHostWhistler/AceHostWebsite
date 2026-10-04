@@ -11,14 +11,14 @@ const bluffsUnit4Writeup: ListingWriteupContent = {
   intro: {
     paragraphs: [
       "Perched in Taluswood's Bluffs, this 2-bedroom retreat drops you onto the Dave Murray Downhill for true ski-in ski-out days and sunset mountain-view evenings.",
-      "A King and Queen suite, a Queen sofa, a common area hot tub, quiet portable AC units that cool the living room (from May 1-Nov 1), Smart TVs, a gas fireplace, a BBQ and a chef-ready kitchen keep every season comfortable.",
+      "A King and Queen suite, a Queen sofa, a shared complex hot tub, quiet portable AC units that cool the living room (from May 1-Nov 1), Smart TVs, a gas fireplace, a BBQ and a chef-ready kitchen keep every season comfortable.",
       "Underground parking for two cars and secure ski & bike storage make arrivals effortless.",
     ],
     highlights: [
       "True ski-in / ski-out",
       "Dave Murray Downhill access",
       "2 bedrooms + sofa bed",
-      "Complex hot tub with views",
+      "Shared complex hot tub",
       "2 underground parking stalls",
       "Secure ski & bike storage",
       "Portable AC (May 1 - Nov 1)",
@@ -36,7 +36,7 @@ const bluffsUnit4Writeup: ListingWriteupContent = {
       "Enjoy same-floor living to the entire home (only 2 steps down after entering the home, otherwise would be step free) and bedrooms from the front door. An open-concept kitchen, dining, and living area with a gas fireplace and a portable AC unit (from May 1-Nov 1). The living room features two couches, including a queen pull-out sofa facing a gas fireplace and a 65-inch Smart TV with Netflix, Amazon Prime, and HDMI ports for your own devices. Sliding doors lead to a covered balcony where you will find a four-burner BBQ and an outdoor dining space.",
       "The chef's kitchen is fully stocked for longer stays: full-size fridge with bottom freezer; five-burner electric range, convection oven, microwave, and dishwasher; Nespresso original machine & drip coffee machine; high-end cookware, chef's knives, spice rack, baking basics, and ample glassware. A solid wood dining table seats six comfortably indoors.",
       "Portable, whisper-quiet AC units keep the living room cool from May 1 to November 1. In-floor heating in bathrooms and efficient baseboard heaters throughout the unit. The unit features high-speed Wi-Fi ideal for remote work or streaming.",
-      "The hot tub is private to the complex and looks directly toward the snow-capped Coast Mountains. Enjoy sunrise soaks or starlit sessions after a day on the slopes.",
+      "The shared complex hot tub looks directly toward the snow-capped Coast Mountains. Enjoy sunrise soaks or starlit sessions after a day on the slopes.",
     ],
   },
   bedrooms: {

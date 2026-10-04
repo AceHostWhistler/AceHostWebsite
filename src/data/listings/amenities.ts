@@ -11,7 +11,7 @@ export const listingAmenities: Record<string, string[]> = {
   "bluffs-unit-4-taluswood": [
     "Ski-in / ski-out on Dave Murray",
     "Taluswood mountain views",
-    "Private hot tub",
+    "Shared complex hot tub",
     "Gas fireplace",
     "Portable AC (May–Nov)",
     "Chef-ready kitchen",
@@ -129,9 +129,10 @@ export const listingAmenities: Record<string, string[]> = {
     "Blueberry Hill",
   ],
   "luxe-cozy-3-bed-whistler-village": [
+    "Blackcomb, Whistler",
     "Ski-in / ski-out",
     "Walk to Whistler Village",
-    "3 bed · 3 bath townhome",
+    "3 bed · 2.5 bath townhome",
     "End-unit log chalet feel",
     "Lost Lake trails nearby",
     "Fireplace",
@@ -320,10 +321,11 @@ export const listingAmenities: Record<string, string[]> = {
   ],
   "whispering-pines-ski-in-ski-out": [
     "Ski-in / ski-out · Aspens",
+    "Sleeps 6 guests",
     "Pool & three hot tubs",
     "Closest unit to slopes & tubs",
     "Ground-floor 2-bedroom",
-    "King primary & twin bedroom",
+    "King primary, twin bedroom & pullout sofa",
     "Walk to Whistler Village",
   ],
   "whistler-village-penthouse": [

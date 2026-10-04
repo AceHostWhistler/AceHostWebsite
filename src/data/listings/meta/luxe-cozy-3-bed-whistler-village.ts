@@ -27,14 +27,14 @@ const listing: ListingData = {
   "/photos/properties/Cozy Luxe 3-Bed in Whistler Village/23-1 4668 Blackcomb Way 22-Edit.jpg"
 ],
   seo: {
-    title: "Luxe-Cozy 3-Bed Whistler Village - AceHost",
-    description: "Experience Whistler luxury in this stunning 3-bedroom, 3-bathroom townhome located in the heart of Blackcomb. This end unit offers an ideal mountain retreat with easy access to trails and a ski-in location for the perfect getaway.",
+    title: "Blackcomb Pines | Luxe 3-Bedroom | Blackcomb - AceHost",
+    description: "Experience Whistler luxury in this stunning 3-bedroom, 2.5-bathroom townhome in Blackcomb. This end unit offers an ideal mountain retreat with easy access to trails and a ski-in location for the perfect getaway. Sleeps 6 guests.",
   },
   header:   {
-      "title": "Luxe-Cozy 3-Bed Whistler Village",
+      "title": "Blackcomb Pines | Luxe 3-Bedroom | Blackcomb",
       "guests": 6,
       "bedrooms": 3,
-      "bathrooms": 3,
+      "bathrooms": 2.5,
       "priceRange": "$750-$2,200+ per night",
       "beds": 4,
       "winterPrice": "$750-$1,500+ Nightly | Winter",
@@ -42,8 +42,8 @@ const listing: ListingData = {
       "airbnbLink": "https://www.airbnb.ca/rooms/1249285355870765792?guests=1&adults=1&s=67&unique_share_id=dcc074b1-0fe5-477a-bc67-701bc6736b13",
       "contactLink": "/contact"
   },
-  galleryTitle: "Luxe-Cozy 3-Bed Whistler Village - AceHost",
-  photoAltPrefix: "Luxe-Cozy 3-Bed Whistler Village - AceHost",
+  galleryTitle: "Blackcomb Pines | Luxe 3-Bedroom | Blackcomb",
+  photoAltPrefix: "Blackcomb Pines",
 };
 
 export default listing;
