@@ -56,6 +56,8 @@ const EXTRA_PROPERTY_AIRBNB_LINKS: Record<string, string> = {
     "https://www.airbnb.ca/rooms/50025973?guests=1&adults=1&s=67&unique_share_id=04ceb090-1b8e-4e32-972f-d616b380a0a8",
   "whistler-village-views":
     "https://www.airbnb.ca/rooms/50025973?guests=1&adults=1&s=67&unique_share_id=04ceb090-1b8e-4e32-972f-d616b380a0a8",
+  "eagle-lodge-main-village-condo":
+    "https://www.airbnb.ca/rooms/1776955453586628651?guests=1&adults=1&s=67&unique_share_id=d783b88f-c389-425b-9d1e-371e0ddde809",
 };
 
 function isValidAirbnbLink(link?: string): link is string {

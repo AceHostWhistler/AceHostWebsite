@@ -48,14 +48,14 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     name: "Eagle Lodge | Main Village Condo | Walk to Lifts | Free Parking",
     priceRange: "$200-$900 per night (seasonal)",
     stats:
-      "Sleeps 4 | 1 Bedroom | 2 Beds | 1 Bathroom | Walk to Gondolas | Free Parking | Whistler Village",
+      "Sleeps 4 | 1 Bedroom | 2 Beds | 1 Bathroom | Walk to Gondolas | Shared Hot Tub & Gym | Free Parking | Whistler Village",
     paragraphs: [
       "Stay in the centre of Whistler Village at this renovated 1-bedroom Eagle Lodge condo in Town Plaza. Walk about 7 minutes to the gondolas, with restaurants, shops, groceries and Olympic Plaza just outside.",
-      "The home features a king bedroom, sofa bed, full kitchen, gas fireplace, in-suite laundry, a private balcony and one free underground parking stall. Once you arrive and park, you can walk to the lifts and most Village attractions without needing a car.",
-      "Choose Eagle Lodge when you want a true main-Village 1-bedroom base with free parking, walkable lift access and a renovated single-level layout.",
+      "The home features a king bedroom, sofa bed, full kitchen, gas fireplace, in-suite laundry, a private balcony and one free underground parking stall. After a day on the mountain, unwind in the building's brand-new shared hot tub or enjoy the brand-new shared gym.",
+      "Choose Eagle Lodge when you want a true main-Village 1-bedroom base with free parking, walkable lift access, a renovated single-level layout, and shared hot tub and gym access.",
     ],
     airbnbHref:
-      "https://www.airbnb.ca/rooms/1776955453586628651?guests=1&adults=1&s=67&unique_share_id=2e93f58e-f371-431b-81ae-330d43a91d41",
+      "https://www.airbnb.ca/rooms/1776955453586628651?guests=1&adults=1&s=67&unique_share_id=d783b88f-c389-425b-9d1e-371e0ddde809",
     listingHref: "/listings/eagle-lodge-main-village-condo",
     imageSrc: "/photos/properties/Eagle Lodge 238/Eagle edit 1.png",
     imageAlt: "Eagle Lodge renovated 1-bedroom Whistler Village condo with fireplace",

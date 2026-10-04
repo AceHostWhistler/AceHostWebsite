@@ -1842,10 +1842,12 @@ export const propertyCategories: PropertyCategory[] = [
             bathrooms: 1,
             location: "Whistler Village, Whistler",
             description:
-              "Stay in the centre of Whistler Village at this renovated 1-bedroom Eagle Lodge condo. Walk about 7 minutes to the gondolas, with restaurants, shops and Olympic Plaza just outside. King bed, sofa bed, full kitchen, gas fireplace, private balcony and free underground parking.",
+              "Stay in the centre of Whistler Village at this renovated 1-bedroom Eagle Lodge condo. Walk about 7 minutes to the gondolas, then unwind in the building's brand-new shared hot tub or gym. King bed, sofa bed, full kitchen, gas fireplace, private balcony and free underground parking.",
             features: [
               "Walk to Gondolas",
               "Main Village Location",
+              "Brand-New Shared Hot Tub",
+              "Brand-New Shared Gym",
               "King Bedroom",
               "Sofa Bed",
               "Full Kitchen",
@@ -1857,12 +1859,13 @@ export const propertyCategories: PropertyCategory[] = [
             highlights: [
               "Town Plaza on the Village Stroll",
               "7-Minute Walk to Lifts",
+              "Brand-New Shared Hot Tub & Gym",
               "One Free Parking Stall",
               "Single-Level Condo",
             ],
             priceRange: "$200-$900 per night",
             airbnbLink:
-              "https://www.airbnb.ca/rooms/1776955453586628651?guests=1&adults=1&s=67&unique_share_id=2e93f58e-f371-431b-81ae-330d43a91d41",
+              "https://www.airbnb.ca/rooms/1776955453586628651?guests=1&adults=1&s=67&unique_share_id=d783b88f-c389-425b-9d1e-371e0ddde809",
             isPetFriendly: false,
             isSkiInSkiOut: false,
           },

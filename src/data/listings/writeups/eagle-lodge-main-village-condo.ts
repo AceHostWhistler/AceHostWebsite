@@ -10,10 +10,12 @@ import {
 const eagleLodgeWriteup: ListingWriteupContent = {
   intro: {
     paragraphs: [
-      "Stay directly in the centre of Whistler Village in this renovated 1-bedroom condo at Eagle Lodge. Walk approximately seven minutes to the gondolas, with restaurants, cafes, groceries, shops and Olympic Plaza just outside. The home features a king bedroom, sofa bed, full kitchen, gas fireplace, in-suite laundry, mountain views, a private balcony, seasonal portable air conditioning and one free underground parking space.",
+      "Stay directly in the centre of Whistler Village in this renovated 1-bedroom condo at Eagle Lodge. Walk approximately seven minutes to the gondolas, with restaurants, cafes, groceries, shops and Olympic Plaza just outside. After a day on the mountain, unwind in the building's brand-new shared hot tub or enjoy the brand-new shared gym. The home also includes a king bedroom, sofa bed, full kitchen, gas fireplace, in-suite laundry, mountain views, a private balcony, seasonal portable air conditioning and one free underground parking space.",
     ],
     highlights: [
       "Whistler Village centre",
+      "Brand-new shared hot tub",
+      "Brand-new shared gym",
       "King bedroom plus sofa bed",
       "Gas fireplace",
       "Private balcony",
@@ -31,6 +33,7 @@ const eagleLodgeWriteup: ListingWriteupContent = {
     },
     paragraphs: [
       "Eagle Lodge 238 is a renovated, approximately 600-square-foot condo on the second floor. It offers a comfortable single-level layout and a convenient location directly within Whistler's main pedestrian Village. Once you arrive and park, you can walk to the ski lifts, restaurants, cafes, groceries, shops and most of Whistler's central attractions.",
+      "Guests have access to Eagle Lodge's brand-new shared hot tub and gym, both fully open. Enjoy a relaxing soak after skiing, hiking or biking, or fit in a workout without leaving the building. These are shared building amenities, and access is subject to posted operating hours and building rules.",
       "The open-plan living room is a comfortable place to relax after skiing, biking or exploring the Village. Settle in beside the gas fireplace, watch a movie on the large television or enjoy the mountain views through the windows. The living room includes a futon-style sofa bed, with sheets, a duvet and pillows provided.",
       "The full kitchen makes it easy to prepare breakfast before heading to the mountain, pack lunches or enjoy a relaxed dinner at home. It includes a refrigerator, stove and oven, microwave, dishwasher, coffee maker, kettle, toaster, cookware, dishes and essential utensils. The dining table seats 4 guests.",
       "Step onto the private balcony for fresh mountain air and surrounding views. It is a lovely place to start the morning with coffee before walking through the Village to the gondolas. A portable air-conditioning unit is available seasonally from May 1 through November 1.",
@@ -46,7 +49,7 @@ const eagleLodgeWriteup: ListingWriteupContent = {
     paragraphs: [
       "Eagle Lodge sits in Town Plaza, directly on the Whistler Village Stroll. You are staying within Whistler's main Village, rather than in a surrounding neighbourhood that requires driving or a shuttle into town.",
       "Step outside the building and you are immediately surrounded by restaurants, coffee shops, grocery stores, boutiques and apres spots. Olympic Plaza is only moments away, while the Whistler Village and Excalibur gondolas are approximately a seven-minute walk through the Village.",
-      "For ski days, walk from the condo to the gondolas without needing to drive or wait for a shuttle. At the end of the day, walk back through the Village to the gas fireplace and your private balcony.",
+      "For ski days, walk from the condo to the gondolas without needing to drive or wait for a shuttle. At the end of the day, walk back through the Village to the gas fireplace, your private balcony, or the building's shared hot tub and gym.",
     ],
   },
   bedrooms: {
@@ -80,13 +83,13 @@ const eagleLodgeWriteup: ListingWriteupContent = {
   other: {
     title: "Other details",
     guestAccess: [
-      "Guests have private access to the entire condo, including the bedroom, bathroom, kitchen, living and dining area, private balcony and in-suite laundry. The reservation includes one complimentary underground parking space. An elevator connects the underground parking area to the residential floors. Detailed check-in, entrance and parking instructions will be sent before arrival.",
+      "Guests have private access to the entire condo, including the bedroom, bathroom, kitchen, living and dining area, private balcony and in-suite laundry. Guests also have shared access to Eagle Lodge's brand-new hot tub and gym, both fully open during the building's posted operating hours. The reservation includes one complimentary underground parking space. An elevator connects the underground parking area to the residential floors. Detailed check-in, entrance, amenity access and parking instructions will be sent before arrival.",
     ],
     notes: [
       ACEHOST_VIP_CONCIERGE_NOTE,
       ACEHOST_SKI_PASS_NOTE,
       "The underground parking area can be tight for larger vehicles, so please drive carefully and follow the instructions provided before arrival.",
-      "The building's shared hot tub, fitness room and changing rooms are currently closed for renovations until further notice. These facilities are not included as available amenities at this time.",
+      "The brand-new hot tub and gym are shared building amenities and are not private to the condo. Guests must follow the posted operating hours and building rules.",
       "This is a privately managed vacation rental and does not operate like a traditional hotel.",
       ACEHOST_REACH_OUT_NOTE,
     ],

@@ -830,9 +830,10 @@ export default function BlogPost() {
 
               <p className="mt-4">
                 Inside you will find a full kitchen, gas fireplace, in-suite laundry,
-                a private balcony and one free underground parking stall. Once you
-                arrive and park, you can walk to the lifts and most Village
-                attractions without needing a car.
+                a private balcony and one free underground parking stall. After a day
+                on the mountain, unwind in the building's brand-new shared hot tub or
+                enjoy the brand-new shared gym. Once you arrive and park, you can
+                walk to the lifts and most Village attractions without needing a car.
               </p>
 
               <p className="text-blue-600 font-medium mt-2 mb-6">

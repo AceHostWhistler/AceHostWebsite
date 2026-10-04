@@ -338,7 +338,8 @@ export default function BlogPost() {
                 Village, with a king bed, sofa bed, full kitchen, gas fireplace and
                 a private balcony. Walk about 7 minutes to the gondolas, with
                 restaurants, shops and Olympic Plaza just outside, plus one free
-                underground parking stall.
+                underground parking stall. After a day on the mountain, unwind in
+                the building&apos;s brand-new shared hot tub or gym.
               </p>
               <div className="mt-6 mb-8">
                 <Link

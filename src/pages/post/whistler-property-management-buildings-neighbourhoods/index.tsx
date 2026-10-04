@@ -249,9 +249,10 @@ const FEATURED_PROPERTIES = [
   },
   {
     name: "Eagle Lodge",
-    label: "Town Plaza condo within walking distance of the lifts",
+    label: "Town Plaza condo with shared hot tub and gym, walking distance of the lifts",
     listingHref: "/listings/eagle-lodge-main-village-condo",
-    airbnbHref: "https://www.airbnb.ca/rooms/1776955453586628651",
+    airbnbHref:
+      "https://www.airbnb.ca/rooms/1776955453586628651?guests=1&adults=1&s=67&unique_share_id=d783b88f-c389-425b-9d1e-371e0ddde809",
     imageSrc: "/photos/properties/Eagle Lodge 238/Eagle edit 1.png",
     imageAlt: "Eagle Lodge condo in Town Plaza, Whistler Village",
   },

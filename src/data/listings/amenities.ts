@@ -92,6 +92,8 @@ export const listingAmenities: Record<string, string[]> = {
   "eagle-lodge-main-village-condo": [
     "Centre of main Whistler Village",
     "7-minute walk to gondolas",
+    "Brand-new shared hot tub",
+    "Brand-new shared gym",
     "King bedroom & sofa bed",
     "Full kitchen & gas fireplace",
     "Private balcony",
