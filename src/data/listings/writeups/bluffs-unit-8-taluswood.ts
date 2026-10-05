@@ -10,12 +10,12 @@ import {
 const bluffsUnit8Writeup: ListingWriteupContent = {
   intro: {
     paragraphs: [
-      "Perched in Taluswood's Bluffs, this 3-bedroom retreat puts you right on the Dave Murray Downhill for true ski-in ski-out days and beautiful mountain-view evenings. With a King suite, Queen bedroom, 4 Twin bunk beds, and a Queen sofa bed, the home is ideal for families and groups. A neighbourhood hot tub with stunning views, AC, Smart TVs, gas fireplace, BBQ, gorgeous patio view, chef-ready kitchen, generous parking, and secure ski & bike storage make every season comfortable and effortless.",
+      "Perched in Taluswood's Bluffs, this 2-bedroom retreat puts you right on the Dave Murray Downhill for true ski-in ski-out days and beautiful mountain-view evenings. With a King suite, Queen bedroom, 4 Twin bunk beds, and a Queen sofa bed, the home is ideal for families and groups. A neighbourhood hot tub with stunning views, AC, Smart TVs, gas fireplace, BBQ, gorgeous patio view, chef-ready kitchen, generous parking, and secure ski & bike storage make every season comfortable and effortless.",
     ],
     highlights: [
       "True ski-in / ski-out",
       "Dave Murray Downhill",
-      "3 bedrooms + sofa bed",
+      "2 bedrooms + sofa bed",
       "King suite on top floor",
       "4 twin bunk beds",
       "Neighbourhood hot tub",
@@ -70,7 +70,7 @@ const bluffsUnit8Writeup: ListingWriteupContent = {
       },
     ],
     footnote:
-      "Bedroom 1: 1 king bed. Bedroom 2: 1 queen bed. Bedroom 3: 4 single beds. Living room: 1 sofa bed.",
+      "Bedroom 1: 1 king bed. Bedroom 2: 1 queen bed. Bunk room: 4 single beds. Living room: 1 sofa bed.",
   },
   location: {
     title: "Location & Ski Access",

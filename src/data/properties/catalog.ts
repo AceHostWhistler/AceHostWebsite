@@ -821,19 +821,19 @@ export const propertyCategories: PropertyCategory[] = [
 
           {
             id: "bluffs-unit-8",
-            name: "Bluffs Penthouse - Luxe 3-Bedroom - Ski-in Ski-out",
+            name: "Bluffs Penthouse - Luxe 2-Bedroom - Ski-in Ski-out",
             images: [
               "/photos/properties/Bluffs Unit 8/ChatGPT Image Sep 4, 2026, 04_35_38 PM (8).png",
               "/photos/properties/Bluffs Unit 8/Bluffs 8 drone snow.avif",
               "/photos/properties/Bluffs Unit 8/Hot tub snow bluffs.png",
             ],
             guests: 10,
-            bedrooms: 3,
+            bedrooms: 2,
             beds: 7,
             bathrooms: 3,
             location: "Taluswood, Whistler",
             description:
-              "Perched in Taluswood's Bluffs, this 3-bedroom retreat puts you right on the Dave Murray Downhill for true ski-in ski-out days and beautiful mountain-view evenings. With a King suite, Queen bedroom, 4 Twin bunk beds, and a Queen sofa bed, the home is ideal for families and groups. A neighbourhood hot tub with stunning views, AC, Smart TVs, gas fireplace, BBQ, gorgeous patio view, chef-ready kitchen, generous parking, and secure ski & bike storage make every season comfortable and effortless.",
+              "Perched in Taluswood's Bluffs, this 2-bedroom retreat puts you right on the Dave Murray Downhill for true ski-in ski-out days and beautiful mountain-view evenings. With a King suite, Queen bedroom, 4 Twin bunk beds, and a Queen sofa bed, the home is ideal for families and groups. A neighbourhood hot tub with stunning views, AC, Smart TVs, gas fireplace, BBQ, gorgeous patio view, chef-ready kitchen, generous parking, and secure ski & bike storage make every season comfortable and effortless.",
             features: [
               "True Ski-in/Ski-out",
               "Neighbourhood Hot Tub",

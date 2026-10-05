@@ -766,7 +766,7 @@ export default function BlogPost() {
 
               {/* Condo 5 */}
               <h3 className="text-2xl font-bold text-gray-900 mt-12 mb-4">
-                5) Bluffs #8 - Luxury 3 Bed - Ski in Ski out - Views!
+                5) Bluffs #8 - Luxury 2 Bed - Ski in Ski out - Views!
               </h3>
 
               <div className="bg-gray-50 p-5 rounded-lg mb-6">
@@ -774,7 +774,7 @@ export default function BlogPost() {
               </div>
 
               <p>
-                Perched in Taluswood&apos;s Bluffs, this three-bedroom retreat puts you
+                Perched in Taluswood&apos;s Bluffs, this 2-bedroom retreat puts you
                 right on the Dave Murray Downhill for true ski-in ski-out days and
                 beautiful mountain-view evenings. With a King suite, Queen bedroom,
                 four Twin bunk beds, and a Queen sofa bed, the home sleeps up to 10
@@ -804,13 +804,13 @@ export default function BlogPost() {
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
                   src="/photos/properties/Bluffs Unit 8/ChatGPT Image Sep 4, 2026, 04_35_38 PM (8).png"
-                  alt="Bluffs #8 luxury 3-bed ski-in ski-out condo in Taluswood"
+                  alt="Bluffs #8 luxury 2-bed ski-in ski-out condo in Taluswood"
                   fill
                   className="object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-3">
                   <p className="text-sm font-medium">
-                    Bluffs #8 - Luxury 3 Bed - Ski in Ski out - Views!
+                    Bluffs #8 - Luxury 2 Bed - Ski in Ski out - Views!
                   </p>
                 </div>
               </div>

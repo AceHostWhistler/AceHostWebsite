@@ -42,14 +42,14 @@ const listing: ListingData = {
   ],
   seo: {
     title:
-      "Bluffs Penthouse - Luxe 3-Bedroom - Ski-in Ski-out | AceHost",
+      "Bluffs Penthouse - Luxe 2-Bedroom - Ski-in Ski-out | AceHost",
     description:
-      "Perched in Taluswood's Bluffs, this 3-bedroom retreat puts you right on the Dave Murray Downhill for true ski-in ski-out days and beautiful mountain-view evenings. With a King suite, Queen bedroom, 4 Twin bunk beds, and a Queen sofa bed, the home is ideal for families and groups. A neighbourhood hot tub with stunning views, AC, Smart TVs, gas fireplace, BBQ, gorgeous patio view, chef-ready kitchen, generous parking, and secure ski & bike storage make every season comfortable and effortless.",
+      "Perched in Taluswood's Bluffs, this 2-bedroom retreat puts you right on the Dave Murray Downhill for true ski-in ski-out days and beautiful mountain-view evenings. With a King suite, Queen bedroom, 4 Twin bunk beds, and a Queen sofa bed, the home is ideal for families and groups. A neighbourhood hot tub with stunning views, AC, Smart TVs, gas fireplace, BBQ, gorgeous patio view, chef-ready kitchen, generous parking, and secure ski & bike storage make every season comfortable and effortless.",
   },
   header: {
-    title: "Bluffs Penthouse - Luxe 3-Bedroom - Ski-in Ski-out",
+    title: "Bluffs Penthouse - Luxe 2-Bedroom - Ski-in Ski-out",
     guests: 10,
-    bedrooms: 3,
+    bedrooms: 2,
     beds: 7,
     bathrooms: 3,
     priceRange: "Summer: $450-$1,200+ | Winter: $750-$1,600+ | Christmas/NY: $2,300-$3,100+",
@@ -57,15 +57,15 @@ const listing: ListingData = {
     holidayPrice: "$2,300-$3,100+ Nightly | Christmas & NY",
     airbnbLink: BLUFFS_UNIT_8_AIRBNB_LINK,
   },
-  galleryTitle: "Bluffs Penthouse - Luxe 3-Bedroom - Ski-in Ski-out",
+  galleryTitle: "Bluffs Penthouse - Luxe 2-Bedroom - Ski-in Ski-out",
   photoAltPrefix: "Bluffs Unit 8 Taluswood",
   structuredData: {
     "@context": "https://schema.org/",
     "@type": "Product",
-    name: "Bluffs Penthouse - Luxe 3-Bedroom - Ski-in Ski-out",
+    name: "Bluffs Penthouse - Luxe 2-Bedroom - Ski-in Ski-out",
     image: BLUFFS_UNIT_8_COVER,
     description:
-      "Perched in Taluswood's Bluffs, this 3-bedroom retreat puts you right on the Dave Murray Downhill for true ski-in ski-out days and beautiful mountain-view evenings. With a King suite, Queen bedroom, 4 Twin bunk beds, and a Queen sofa bed, the home is ideal for families and groups. A neighbourhood hot tub with stunning views, AC, Smart TVs, gas fireplace, BBQ, gorgeous patio view, chef-ready kitchen, generous parking, and secure ski & bike storage make every season comfortable and effortless.",
+      "Perched in Taluswood's Bluffs, this 2-bedroom retreat puts you right on the Dave Murray Downhill for true ski-in ski-out days and beautiful mountain-view evenings. With a King suite, Queen bedroom, 4 Twin bunk beds, and a Queen sofa bed, the home is ideal for families and groups. A neighbourhood hot tub with stunning views, AC, Smart TVs, gas fireplace, BBQ, gorgeous patio view, chef-ready kitchen, generous parking, and secure ski & bike storage make every season comfortable and effortless.",
     sku: "bluffs-unit-8-taluswood",
     brand: {
       "@type": "Brand",

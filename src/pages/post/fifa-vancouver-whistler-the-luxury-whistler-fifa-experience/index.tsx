@@ -198,9 +198,9 @@ const condoTownhomeOptions: FeaturedProperty[] = [
       "https://www.airbnb.ca/rooms/1313847204355627326?guests=1&adults=1&s=67&unique_share_id=507dffd6-1f84-49a3-99eb-d10f493a65a6",
   },
   {
-    name: "Bluffs #8 - Luxury 3 Bed - Ski in Ski out - Views!",
+    name: "Bluffs #8 - Luxury 2 Bed - Ski in Ski out - Views!",
     description:
-      "A three-bedroom Taluswood ski-in/ski-out retreat with a King suite, bunk room, hot tub, and elevated views, sleeps up to 10 guests and is ideal for families and groups who want Dave Murray access in Creekside.",
+      "A 2-bedroom Taluswood ski-in/ski-out retreat with a King suite, bunk room, hot tub, and elevated views, sleeps up to 10 guests and is ideal for families and groups who want Dave Murray access in Creekside.",
     photos: [
       "/photos/properties/Bluffs Unit 8/ChatGPT Image Sep 4, 2026, 04_35_38 PM (8).png",
       "/photos/properties/Bluffs Unit 8/Bluffs 8 drone snow.avif",

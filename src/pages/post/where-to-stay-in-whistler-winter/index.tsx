@@ -505,7 +505,7 @@ export default function BlogPost() {
               />
               <SectionImage
                 src="/photos/properties/Bluffs Unit 8/ChatGPT Image Sep 4, 2026, 04_35_38 PM (8).png"
-                alt="Bluffs #8 luxury 3-bed ski-in ski-out condo in Taluswood Creekside"
+                alt="Bluffs #8 luxury 2-bed ski-in ski-out condo in Taluswood Creekside"
               />
               <h3>Creekside Also Has Ski Lessons</h3>
               <p>
