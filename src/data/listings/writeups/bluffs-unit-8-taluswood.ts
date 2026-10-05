@@ -46,7 +46,7 @@ const bluffsUnit8Writeup: ListingWriteupContent = {
         bedrooms: [
           {
             name: "Primary Suite",
-            details: "King bed in a private upper-level bedroom.",
+            details: "King bed with a private ensuite bathroom.",
           },
         ],
       },
