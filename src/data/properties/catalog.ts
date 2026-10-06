@@ -2,6 +2,10 @@ import { BLUFFS_AIRBNB_LINK } from "../listings/bluffsAirbnbLink";
 import { BLUFFS_UNIT_8_AIRBNB_LINK } from "../listings/bluffsUnit8AirbnbLink";
 import { SCANDINAVE_COVER, SCANDINAVE_PHOTOS } from "../scandinavePhotos";
 import { BEDORA_PLACE_COVER, BEDORA_PLACE_PHOTOS } from "../bedoraPlacePhotos";
+import {
+  PINNACLE_RIDGE_23_AIRBNB_LINK,
+  PINNACLE_RIDGE_23_PHOTOS,
+} from "../listings/pinnacleRidge23Photos";
 
 export interface PropertyFeature {
   id: string;
@@ -41,6 +45,7 @@ export const TOWNHOME_IDS = new Set([
   "luxe-cozy-3-bed-whistler-village",
   "luxe-5-bed-scandinave-retreat",
   "northlands-walk-to-village-slopes-luxury-4-bed",
+  "pinnacle-ridge-23",
 ]);
 
 export const CONDO_IDS = new Set([
@@ -726,6 +731,42 @@ export const propertyCategories: PropertyCategory[] = [
             isPetFriendly: true,
             isSkiInSkiOut: false,
             link: "/listings/falcon-blueberry-drive",
+          },
+
+          {
+            id: "pinnacle-ridge-23",
+            name: "Pinnacle Ridge 23 | Ski-In/Out | Hot Tub | Village",
+            images: PINNACLE_RIDGE_23_PHOTOS,
+            guests: 14,
+            bedrooms: 6,
+            beds: 10,
+            bathrooms: 5.5,
+            location: "Blackcomb, Whistler",
+            description:
+              "Renovated 6-bedroom Blackcomb townhome with ski access about 2 minutes from the door, an 8-minute walk to Upper Village and 13 minutes to Whistler Village. Private hot tub, fireplace, chef's kitchen and space for 14 guests.",
+            features: [
+              "Ski Access About 2 Minutes From the Door",
+              "Private Hot Tub",
+              "Chef's Kitchen",
+              "Dining Table Seats 10",
+              "Central A/C",
+              "2 Decks and BBQ",
+              "Walk to Upper Village",
+              "Fireplace",
+            ],
+            highlights: [
+              "Blackcomb, Whistler",
+              "Walk to Village & Lifts",
+              "Private Hot Tub",
+              "6 Bedrooms, Sleeps 14",
+            ],
+            priceRange: "Nightly Price Range: $1,365-$3,675+",
+            winterPrice: "$2,100-$3,675+ Nightly | Winter",
+            holidayPrice: "$4,200-$7,560+ Nightly | Christmas & NY",
+            isPetFriendly: false,
+            isSkiInSkiOut: true,
+            link: "/listings/pinnacle-ridge-23",
+            airbnbLink: PINNACLE_RIDGE_23_AIRBNB_LINK,
           },
 
           {

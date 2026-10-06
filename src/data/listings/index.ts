@@ -38,6 +38,8 @@ import NorthlandsWalkToVillageSlopesLuxury4BedDetails from "./details/northlands
 import northlands_walk_to_village_slopes_luxury_4_bedMeta from "./meta/northlands-walk-to-village-slopes-luxury-4-bed";
 import PanoramicEstateKadenwoodDetails from "./details/panoramic-estate-kadenwood";
 import panoramic_estate_kadenwoodMeta from "./meta/panoramic-estate-kadenwood";
+import PinnacleRidge23Details from "./details/pinnacle-ridge-23";
+import pinnacle_ridge_23Meta from "./meta/pinnacle-ridge-23";
 import Rare3BedroomWhistlerVillageWalkToHillDetails from "./details/rare-3-bedroom-whistler-village-walk-to-hill";
 import rare_3_bedroom_whistler_village_walk_to_hillMeta from "./meta/rare-3-bedroom-whistler-village-walk-to-hill";
 import RavensNestSkiInSkiOutViewsDetails from "./details/ravens-nest-ski-in-ski-out-views";
@@ -96,6 +98,7 @@ export const listingSlugs = [
   "marquise-2-bed-ski-in-ski-out",
   "northlands-walk-to-village-slopes-luxury-4-bed",
   "panoramic-estate-kadenwood",
+  "pinnacle-ridge-23",
   "rare-3-bedroom-whistler-village-walk-to-hill",
   "ravens-nest-ski-in-ski-out-views",
   "scandinavian-mountainside-retreat-pemberton-meadows-50-acres",
@@ -137,6 +140,7 @@ export const listings: Record<string, ListingEntry> = {
   "marquise-2-bed-ski-in-ski-out": { ...marquise_2_bed_ski_in_ski_outMeta, Details: Marquise2BedSkiInSkiOutDetails },
   "northlands-walk-to-village-slopes-luxury-4-bed": { ...northlands_walk_to_village_slopes_luxury_4_bedMeta, Details: NorthlandsWalkToVillageSlopesLuxury4BedDetails },
   "panoramic-estate-kadenwood": { ...panoramic_estate_kadenwoodMeta, Details: PanoramicEstateKadenwoodDetails },
+  "pinnacle-ridge-23": { ...pinnacle_ridge_23Meta, Details: PinnacleRidge23Details },
   "rare-3-bedroom-whistler-village-walk-to-hill": { ...rare_3_bedroom_whistler_village_walk_to_hillMeta, Details: Rare3BedroomWhistlerVillageWalkToHillDetails },
   "ravens-nest-ski-in-ski-out-views": { ...ravens_nest_ski_in_ski_out_viewsMeta, Details: RavensNestSkiInSkiOutViewsDetails },
   "scandinavian-mountainside-retreat-pemberton-meadows-50-acres": { ...scandinavian_mountainside_retreat_pemberton_meadows_50_acresMeta, Details: ScandinavianMountainsideRetreatPembertonMeadows50AcresDetails },

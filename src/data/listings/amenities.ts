@@ -111,6 +111,15 @@ export const listingAmenities: Record<string, string[]> = {
     "25-minute walk or Route 6 bus to Village",
     "One pet allowed with fee",
   ],
+  "pinnacle-ridge-23": [
+    "Blackcomb, Whistler",
+    "Ski access about 2 minutes from the door",
+    "8-minute walk to Upper Village",
+    "Private hot tub",
+    "6 bedrooms · 10 beds · 5.5 baths",
+    "Chef's kitchen, dining for 10",
+    "Central A/C",
+  ],
   "golf-course-views-luxury-4-bed-whistler-village": [
     "Nicklaus North golf course frontage",
     "Private hot tub",

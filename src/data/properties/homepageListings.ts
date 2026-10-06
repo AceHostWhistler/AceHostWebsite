@@ -39,6 +39,7 @@ export const HOMEPAGE_PROPERTY_ORDER: readonly string[] = [
   "slopeside-villa",
   "heron-views-whistler",
   "falcon-blueberry-drive",
+  "pinnacle-ridge-23",
   "luxury-6-bedroom-blueberry",
   "luxe-5-bed-scandinave-retreat",
   "bluffs-unit-8",
