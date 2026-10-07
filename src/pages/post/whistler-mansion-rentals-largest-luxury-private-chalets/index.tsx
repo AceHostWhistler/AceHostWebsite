@@ -686,6 +686,36 @@ export default function BlogPost() {
                 airbnbHref={ALTERNATIVE_PROPERTIES[3].airbnbHref}
               />
 
+              <h3 className="text-xl font-bold text-gray-900 mt-10 mb-3">
+                10. Pinnacle Ridge 23 | Ski-In/Out | Hot Tub | Village
+              </h3>
+              <p className="text-gray-700 font-medium not-prose text-base mb-4">
+                14 guests | 6 bedrooms | 10 beds | 5.5 bathrooms
+              </p>
+              <PropertyImages images={ALTERNATIVE_PROPERTIES[4].images} columns={1} />
+              <p>
+                Pinnacle Ridge 23 is a renovated 6-bedroom ski-in/ski-out townhome
+                on Blackcomb. Ski access is about 2 minutes from the door, Upper
+                Village is an 8-minute walk, and Whistler Village is about 13
+                minutes.
+              </p>
+              <p>
+                After skiing, the private hot tub, gas fireplace and chef&apos;s
+                kitchen make it easy for a larger group to settle in. The dining
+                table seats 10, with seating for another 4 at the island. It is one
+                of the strongest ski-in/ski-out options for 14 guests outside
+                Kadenwood.
+              </p>
+              <p>
+                <strong>Best for:</strong> Families and groups who want true
+                ski-in/ski-out access, 6 bedrooms and a walkable Upper Village
+                location.
+              </p>
+              <CtaBlock
+                listingHref={ALTERNATIVE_PROPERTIES[4].listingHref}
+                airbnbHref={ALTERNATIVE_PROPERTIES[4].airbnbHref}
+              />
+
               <h2
                 id="how-to-choose"
                 className="text-2xl font-bold text-gray-900 mt-12 mb-4 scroll-mt-28"
@@ -713,9 +743,11 @@ export default function BlogPost() {
               </h3>
               <p>
                 Kadenwood offers privacy, ski access and a private neighbourhood
-                gondola above Creekside. Blueberry Hill is closer to Whistler Village
-                by road and can feel more central for guests focused on restaurants,
-                shopping and non-ski activities. Creekside provides its own gondola,
+                gondola above Creekside. Pinnacle Ridge 23 on Blackcomb is ski-in/ski-out
+                and still an 8-minute walk to Upper Village. Blueberry Hill is closer
+                to Whistler Village by road and can feel more central for guests focused
+                on restaurants, shopping and non-ski activities. Creekside provides its
+                own gondola,
                 restaurants, grocery store, ski school and a quieter base than the
                 main Village. Our{" "}
                 <Link href="/post/where-to-stay-in-whistler-winter">

@@ -322,6 +322,51 @@ export default function BlogPost() {
               </div>
 
               <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+                Pinnacle Ridge 23 | Ski-In/Out | Hot Tub | Village
+              </h3>
+              <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
+                <Image
+                  src="/photos/properties/Pinnacle Ridge 23/Snowy Whistler Retreat with Gondola Views.png"
+                  alt="Pinnacle Ridge 23 ski-in ski-out townhome with gondola views"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p>
+                Pinnacle Ridge 23 is a renovated 6-bedroom ski-in/ski-out townhome
+                on Blackcomb that works just as well in summer. Leave the car parked
+                and walk 8 minutes to Upper Village or about 13 minutes to Whistler
+                Village for restaurants, shopping, trails and mountain biking.
+              </p>
+              <p>
+                Two decks, a BBQ, a private hot tub and a chef&apos;s kitchen with
+                dining for 10 make it easy for groups of up to 14. In winter, ski
+                access is about 2 minutes from the door, so this is one of the rare
+                large-group homes that stays ski-in/ski-out and village-walkable
+                year-round.
+              </p>
+              <div className="mt-6 mb-8">
+                <Link
+                  href="/listings/pinnacle-ridge-23"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-all shadow-sm hover:shadow-md font-medium"
+                >
+                  View Pinnacle Ridge 23
+                  <svg
+                    className="ml-2 w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </Link>
+              </div>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
                 Panoramic Estate | Kadenwood
               </h3>
               <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">

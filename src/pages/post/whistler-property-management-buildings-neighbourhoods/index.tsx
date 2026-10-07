@@ -230,6 +230,16 @@ const FEATURED_PROPERTIES = [
     imageAlt: "The Aspens ski-in ski-out condo on Blackcomb Mountain",
   },
   {
+    name: "Pinnacle Ridge 23",
+    label: "Ski-in ski-out 6-bedroom townhome on Blackcomb",
+    listingHref: "/listings/pinnacle-ridge-23",
+    airbnbHref:
+      "https://www.airbnb.ca/rooms/1786522789927072620?guests=1&adults=1&s=67&unique_share_id=1ad241f6-75d1-46d5-9f48-9edb942d47f4",
+    imageSrc:
+      "/photos/properties/Pinnacle Ridge 23/Snowy Whistler Retreat with Gondola Views.png",
+    imageAlt: "Pinnacle Ridge 23 ski-in ski-out townhome with gondola views",
+  },
+  {
     name: "Marquise Penthouse",
     label: "Upper Village penthouse with mountain views",
     listingHref: "/listings/luxury-3-bed-stunning-views",

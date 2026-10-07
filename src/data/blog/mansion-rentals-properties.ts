@@ -26,7 +26,7 @@ function listingAirbnb(slug: string, catalogId?: string): string | undefined {
   return undefined;
 }
 
-/** Nine properties in article order for mansion rentals blog */
+/** Large-home properties in article order for the mansion rentals blog */
 export const MANSION_RENTAL_PROPERTIES: MansionRentalProperty[] = [
   {
     name: "Two Cedars",
@@ -185,6 +185,21 @@ export const MANSION_RENTAL_PROPERTIES: MansionRentalProperty[] = [
       {
         src: "/photos/properties/Luxe 3-bed Scandinave/1-2 2221 Gondola Way 26.jpg",
         alt: "Luxe five-bed Creekside Whistler ski rental",
+      },
+    ],
+  },
+  {
+    name: "Pinnacle Ridge 23",
+    listingHref: "/listings/pinnacle-ridge-23",
+    airbnbHref: listingAirbnb("pinnacle-ridge-23"),
+    area: "Blackcomb",
+    bedrooms: 6,
+    guests: 14,
+    standout: "Ski-in/ski-out, private hot tub, chef's kitchen and an 8-minute walk to Upper Village",
+    images: [
+      {
+        src: "/photos/properties/Pinnacle Ridge 23/Snowy Whistler Retreat with Gondola Views.png",
+        alt: "Pinnacle Ridge 23 ski-in ski-out townhome with gondola views",
       },
     ],
   },
