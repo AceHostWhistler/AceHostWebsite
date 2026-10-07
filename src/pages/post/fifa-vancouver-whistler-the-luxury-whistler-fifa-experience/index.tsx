@@ -91,6 +91,19 @@ const kadenwoodHomes: FeaturedProperty[] = [
 
 const luxuryHomesBeyondKadenwood: FeaturedProperty[] = [
   {
+    name: "Pinnacle Ridge 23 | Ski-In/Out | Hot Tub | Village",
+    description:
+      "A renovated 6-bedroom ski-in/ski-out Blackcomb townhome for 14 guests, with ski access about 2 minutes from the door, a private hot tub, and an 8-minute walk to Upper Village.",
+    photos: [
+      "/photos/properties/Pinnacle Ridge 23/Snowy Whistler Retreat with Gondola Views.png",
+      "/photos/properties/Pinnacle Ridge 23/Snowy Whistler Balcony Hot Tub-1.png",
+      "/photos/properties/Pinnacle Ridge 23/Warm interior, snowy Whistler views-2.png",
+      "/photos/properties/Pinnacle Ridge 23/45 - DJI_20261004163547_0103_D.jpg",
+    ],
+    bookUrl:
+      "https://www.airbnb.ca/rooms/1786522789927072620?guests=1&adults=1&s=67&unique_share_id=1ad241f6-75d1-46d5-9f48-9edb942d47f4",
+  },
+  {
     name: "Luxury 6-Bedroom | Whistler",
     description:
       "A standout luxury home option for larger groups wanting space, comfort, and a beautiful setting for a Whistler summer stay.",

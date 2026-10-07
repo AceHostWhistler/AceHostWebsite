@@ -93,6 +93,23 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     imageAlt: "The Aspens | 2-Bed Ski in/Out condo in Upper Village",
   },
   {
+    name: "Pinnacle Ridge 23 | Ski-In/Out | Hot Tub | Village",
+    priceRange: "$1,365-$3,675+ per night (seasonal)",
+    stats:
+      "Sleeps 14 | 6 Bedrooms | 10 Beds | 5.5 Bathrooms | Ski-in/Ski-out | Private Hot Tub | Blackcomb",
+    paragraphs: [
+      "Pinnacle Ridge 23 is a renovated 6-bedroom ski-in/ski-out townhome on Blackcomb, with ski access about 2 minutes from the door via the Yellow Brick Road. After the mountain, come home to a private hot tub, gas fireplace, chef's kitchen and room for 14 guests.",
+      "The dining table seats 10, with seating for another 4 at the kitchen island. Two decks, a BBQ, central A/C, fast Wi-Fi and laundry make it easy for larger groups. Upper Village is an 8-minute walk, and Whistler Village is about 13 minutes.",
+      "Choose Pinnacle Ridge 23 when you want true ski-in/ski-out convenience, Village walkability, and a full 6-bedroom layout without booking a Kadenwood estate.",
+    ],
+    airbnbHref:
+      "https://www.airbnb.ca/rooms/1786522789927072620?guests=1&adults=1&s=67&unique_share_id=1ad241f6-75d1-46d5-9f48-9edb942d47f4",
+    listingHref: "/listings/pinnacle-ridge-23",
+    imageSrc:
+      "/photos/properties/Pinnacle Ridge 23/Snowy Whistler Retreat with Gondola Views.png",
+    imageAlt: "Pinnacle Ridge 23 ski-in ski-out townhome with gondola views",
+  },
+  {
     name: "Le Chamois | Ski-In/Out | 2 Bed | Blackcomb",
     priceRange: "$350-$1,200 per night (seasonal)",
     stats:

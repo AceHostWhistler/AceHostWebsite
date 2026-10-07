@@ -171,8 +171,11 @@ export default function BlogPost() {
               <p>
                 Located on Blackcomb Mountain, this neighborhood offers
                 ski-in/ski-out access to both Blackcomb and Whistler mountains.
-                Luxury chalets here feature sophisticated alpine architecture,
-                spa-like amenities, and proximity to Upper Village.
+                Luxury chalets and townhomes here feature sophisticated alpine
+                architecture, spa-like amenities, and proximity to Upper Village.
+                Pinnacle Ridge 23 is a strong example: ski-in/ski-out access about
+                2 minutes from the door, a private hot tub, and an 8-minute walk
+                to Upper Village.
               </p>
 
               <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
@@ -269,6 +272,37 @@ export default function BlogPost() {
                   className="inline-flex items-center text-blue-600 hover:text-blue-800"
                 >
                   View Chalet La Forja
+                  <svg
+                    className="ml-2 w-4 h-4"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </Link>
+              </div>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+                Pinnacle Ridge 23
+              </h3>
+              <p>
+                This renovated 6-bedroom Blackcomb townhome is ski-in/ski-out,
+                with ski access about 2 minutes from the door. It sleeps 14,
+                has a private hot tub and chef&apos;s kitchen, and sits an
+                8-minute walk from Upper Village and about 13 minutes from
+                Whistler Village.
+              </p>
+              <div className="mt-4 mb-8">
+                <Link
+                  href="/listings/pinnacle-ridge-23"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800"
+                >
+                  View Pinnacle Ridge 23
                   <svg
                     className="ml-2 w-4 h-4"
                     fill="currentColor"

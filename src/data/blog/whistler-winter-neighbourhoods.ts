@@ -70,6 +70,7 @@ export const villagePropertyRefs: WinterNeighbourhoodPropertyRef[] = [
 ];
 
 export const upperVillagePropertyRefs: WinterNeighbourhoodPropertyRef[] = [
+  { slug: "pinnacle-ridge-23" },
   { slug: "whispering-pines-ski-in-ski-out" },
   { slug: "marquise-2-bed-ski-in-ski-out" },
   { slug: "ski-in-ski-out-walk-to-lifts-2-bed" },

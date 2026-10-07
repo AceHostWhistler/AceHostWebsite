@@ -364,6 +364,58 @@ export default function BlogPost() {
                 </div>
               </div>
 
+              <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
+                Pinnacle Ridge 23 | Ski-In/Out | Hot Tub | Village
+              </h2>
+
+              <div className="bg-gray-50 p-5 rounded-lg mb-6">
+                <p className="font-semibold">Price per night: $1,365-$3,675+</p>
+                <p className="mt-4">
+                  Sleeps 14 | 6 bedrooms | 10 beds | 5.5 baths | Ski-in/ski-out |
+                  Private hot tub | Chef&apos;s kitchen
+                </p>
+              </div>
+
+              <p>
+                Pinnacle Ridge 23 is a renovated 6-bedroom ski-in/ski-out townhome
+                on Blackcomb. Ski access is about 2 minutes from the door, Upper
+                Village is an 8-minute walk, and Whistler Village is about 13
+                minutes.
+              </p>
+
+              <p className="mt-4">
+                After skiing, come home to a private hot tub, gas fireplace and a
+                chef&apos;s kitchen with dining for 10 plus 4 more at the island.
+                The home sleeps 14 and works well for families and groups who want
+                true ski-in/ski-out access without staying in Kadenwood.
+              </p>
+
+              <p className="text-blue-600 font-medium mt-2 mb-6">
+                <Link
+                  href="/listings/pinnacle-ridge-23"
+                  className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  View Property Details
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </Link>
+              </p>
+
+              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
+                <Image
+                  src="/photos/properties/Pinnacle Ridge 23/Snowy Whistler Retreat with Gondola Views.png"
+                  alt="Pinnacle Ridge 23 ski-in ski-out townhome with gondola views"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-3">
+                  <p className="text-sm font-medium">
+                    Pinnacle Ridge 23 | Ski-In/Out | Hot Tub | Village
+                  </p>
+                </div>
+              </div>
+
               {/* Property 6 */}
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
                 6) Heron Views | Whistler Village

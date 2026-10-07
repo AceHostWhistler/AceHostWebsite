@@ -288,6 +288,45 @@ export default function BlogPost() {
               </div>
 
               <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+                Pinnacle Ridge 23 | Ski-In/Out | Hot Tub | Village
+              </h3>
+              <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
+                <Image
+                  src="/photos/properties/Pinnacle Ridge 23/Snowy Whistler Retreat with Gondola Views.png"
+                  alt="Pinnacle Ridge 23 ski-in ski-out townhome with gondola views"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p>
+                Ski-in/ski-out on Blackcomb, with ski access about 2 minutes from
+                the door. This renovated 6-bedroom townhome sleeps 14, has a
+                private hot tub and chef&apos;s kitchen, and is an 8-minute walk
+                to Upper Village. It is one of the strongest large-group
+                ski-in/ski-out options outside Kadenwood.
+              </p>
+              <div className="mt-6 mb-8">
+                <Link
+                  href="/listings/pinnacle-ridge-23"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-all shadow-sm hover:shadow-md font-medium"
+                >
+                  View Pinnacle Ridge 23
+                  <svg
+                    className="ml-2 w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </Link>
+              </div>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
                 Marquise 2-bed | Upper Village
               </h3>
               <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">

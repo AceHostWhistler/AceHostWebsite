@@ -48,6 +48,8 @@ const AIRBNB = {
     "https://www.airbnb.ca/rooms/18060329?preview_for_ml=true&source_impression_id=p3_1684112119_tL0LL7QnYLFGOCBI",
   luxury6:
     "https://www.airbnb.ca/rooms/1551638001847968788?guests=1&adults=1&s=67&unique_share_id=ff68258e-d89f-4493-8e79-fd85820e6872",
+  pinnacleRidge:
+    "https://www.airbnb.ca/rooms/1786522789927072620?guests=1&adults=1&s=67&unique_share_id=1ad241f6-75d1-46d5-9f48-9edb942d47f4",
 };
 
 function CtaBlock({
@@ -510,6 +512,65 @@ export default function BlogPost() {
                 airbnbHref={AIRBNB.slopeSide}
               />
 
+              {/* 7 Pinnacle Ridge 23 */}
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">
+                7. Pinnacle Ridge 23 | Ski-In/Out | Hot Tub | Village
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 not-prose">
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+                  <Image
+                    src="/photos/properties/Pinnacle Ridge 23/Snowy Whistler Retreat with Gondola Views.png"
+                    alt="Pinnacle Ridge 23 ski-in ski-out townhome with gondola views"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+                  <Image
+                    src="/photos/properties/Pinnacle Ridge 23/Snowy Whistler Balcony Hot Tub-1.png"
+                    alt="Pinnacle Ridge 23 private hot tub in the snow"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+                  <Image
+                    src="/photos/properties/Pinnacle Ridge 23/Warm interior, snowy Whistler views-2.png"
+                    alt="Pinnacle Ridge 23 living area"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+                  <Image
+                    src="/photos/properties/Pinnacle Ridge 23/45 - DJI_20261004163547_0103_D.jpg"
+                    alt="Aerial view of Pinnacle Ridge 23 on Blackcomb"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+              <p>
+                Pinnacle Ridge 23 is a renovated 6-bedroom ski-in/ski-out townhome on Blackcomb
+                for groups of up to 14. Ski access is about 2 minutes from the door on the Yellow
+                Brick Road trail, with an 8-minute walk to Upper Village and 13 minutes to
+                Whistler Village.
+              </p>
+              <p>
+                After skiing, come home to a private hot tub, gas fireplace, chef's kitchen,
+                dining for 10 plus 4 at the island, 2 decks, BBQ and central A/C. It is one of
+                the strongest ski-in/ski-out options in the collection for a large family or
+                mixed group that still wants to walk to the Village.
+              </p>
+              <p>
+                <strong>Why families love it:</strong> true ski-in/ski-out access, 6 bedrooms,
+                a private hot tub, and a walkable Blackcomb location.
+              </p>
+              <CtaBlock
+                listingHref="/listings/pinnacle-ridge-23"
+                airbnbHref={AIRBNB.pinnacleRidge}
+              />
+
               <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">
                 Better-priced large-group alternatives near the village
               </h2>
@@ -521,7 +582,7 @@ export default function BlogPost() {
 
               {/* 7 Heron */}
               <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">
-                7. Heron Views | Whistler Village
+                8. Heron Views | Whistler Village
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 not-prose">
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
@@ -578,7 +639,7 @@ export default function BlogPost() {
 
               {/* 8 Falcon */}
               <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">
-                8. Falcon | Blueberry Drive
+                9. Falcon | Blueberry Drive
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 not-prose">
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
@@ -636,7 +697,7 @@ export default function BlogPost() {
 
               {/* 9 Luxury 6 bed */}
               <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">
-                9. Luxury 6-Bedroom | Whistler Village | Blueberry
+                10. Luxury 6-Bedroom | Whistler Village | Blueberry
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 not-prose">
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">

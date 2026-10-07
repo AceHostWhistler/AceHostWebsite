@@ -661,8 +661,11 @@ export default function BlogPost() {
                   The Aspens
                 </Link>
                 ,{" "}
-                <Link href="/listings/luxury-3-bed-stunning-views">Marquise</Link>{" "}
-                and Le Chamois.
+                <Link href="/listings/luxury-3-bed-stunning-views">Marquise</Link>
+                , Le Chamois and{" "}
+                <Link href="/listings/pinnacle-ridge-23">Pinnacle Ridge 23</Link>
+                , a renovated 6-bedroom ski-in/ski-out townhome with ski access
+                about 2 minutes from the door.
               </p>
               <p>
                 The Aspens is particularly attractive because guests can ski
