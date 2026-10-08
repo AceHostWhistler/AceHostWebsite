@@ -45,7 +45,7 @@ const falconBlueberryDriveWriteup: ListingWriteupContent = {
     },
     paragraphs: [
       "Falcon is located in peaceful Blueberry Hill, just outside Whistler Village with quick access to both the Village and the mountains. The Valley Trail and Whistler Golf Course are approximately a one-minute walk from the home, and the scenic trail into Whistler Village takes about 25 minutes. For quicker access, the Village and gondolas are approximately a 3-4 minute drive away, and the Route 6 public bus stops just steps from the property.",
-      "Very prestigious, quiet, and family-orientated area Blueberry Hill. Very convenient location close to Whistler Village. One of the best features of the location is the ability to reach the Village without needing a car. The Route 6 Blueberry/Tapley's bus also stops just steps from the property and provides convenient service directly into Whistler Village. This makes Falcon an excellent option for groups who want the space, privacy and mountain setting of a large chalet without feeling far removed from the restaurants, skiing, shopping and energy of Whistler Village.",
+      "Falcon sits in Blueberry Hill, one of Whistler's most established and peaceful residential neighbourhoods. The elevated setting offers beautiful mountain views while keeping guests close to Whistler Village and the slopes. One of the best features of the location is the ability to reach the Village without a car. This makes Falcon an excellent option for groups who want the space, privacy and mountain setting of a large chalet without feeling far removed from the restaurants, skiing, shopping and energy of Whistler Village.",
     ],
   },
   bedrooms: {
@@ -78,7 +78,7 @@ const falconBlueberryDriveWriteup: ListingWriteupContent = {
           {
             name: "Bedroom 4",
             details:
-              "Lovely large bedroom with a gorgeous King bed, sofa for lounging and desk space. Adjacent to the room is a powder bathroom and the outdoor hot tub is accessed through this room on the back deck.",
+              "Lovely large bedroom with a gorgeous King bed, sofa for lounging and desk space. Adjacent to the room is a powder half bathroom, and the outdoor hot tub is accessed through this room on the back deck.",
           },
         ],
       },
@@ -95,7 +95,8 @@ const falconBlueberryDriveWriteup: ListingWriteupContent = {
           },
           {
             name: "Bedroom 7",
-            details: "King bed. All three lower bedrooms share a spacious bathroom, one sink, and a large shower.",
+            details:
+              "King bed with an ensuite bathroom. Bedrooms 5 and 6 share this bathroom and walk through bedroom 7 to use it. One sink and a large shower.",
           },
         ],
       },
