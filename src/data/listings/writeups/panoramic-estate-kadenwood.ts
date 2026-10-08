@@ -19,6 +19,7 @@ const panoramicEstateWriteup: ListingWriteupContent = {
       "Extra-large hot tub",
       "Indoor sauna",
       "Ski-in / ski-out",
+      "Private driveway parking for 6 to 10 vehicles",
       "Dining for 14 guests",
       "Ping pong and fitness equipment",
     ],
@@ -52,6 +53,7 @@ const panoramicEstateWriteup: ListingWriteupContent = {
     paragraphs: [
       "Set high above Creekside in Kadenwood, Panoramic Estate combines a private alpine setting with exceptional access to Whistler Mountain. Guests can use Kadenwood's private residents-and-guests-only gondola to reach Creekside Village in approximately five minutes, or enjoy ski-in/ski-out access during the winter when conditions permit. Creekside offers lifts, restaurants, cafes and groceries, while Whistler Village is approximately a 10-minute drive away.",
       ...KADENWOOD_LOCATION_PARAGRAPHS,
+      "Parking and private driveway: Panoramic Estate offers ample private parking for approximately 6 to 10 vehicles, making it ideal for groups and families travelling with multiple cars. A long, private driveway leads directly to the home, providing convenient access, privacy, and plenty of space for parking throughout your stay.",
       "Guests can reach Creekside and Whistler Village via the private gondola, taxi, ride app, private driver, or vehicle rentals. Transportation is not necessary to ski since the property is located right on Whistler Mountain.",
     ],
   },

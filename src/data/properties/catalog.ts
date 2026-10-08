@@ -511,6 +511,7 @@ export const propertyCategories: PropertyCategory[] = [
               "Gourmet Kitchen",
               "Ski-in/Ski-out Access",
               "Elevator",
+              "Parking for 6-10 Vehicles",
             ],
             highlights: [
               "Exclusive Kadenwood Location",
