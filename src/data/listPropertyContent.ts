@@ -122,6 +122,7 @@ export const SHOWCASE_CONDO_PROPERTY_IDS = [
   "luxe-5-bed-scandinave-retreat",
   "whistler-village-penthouse-3-bdr",
   "luxury-6-bedroom-blueberry",
+  "woodrun-2-bed",
   "valhalla-unit-33-village",
   "luxury-3-bed-stunning-views",
   "marquise-2-bed",

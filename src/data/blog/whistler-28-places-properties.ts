@@ -174,6 +174,16 @@ export const townhomeProperties: Whistler28Property[] = [
   },
   {
     number: 16,
+    name: "Ski-In Ski-Out Penthouse | Pool - Hot Tub - Views",
+    description:
+      "A luxury top-floor penthouse at Woodrun Lodge on Blackcomb, with ski-in/ski-out access, vaulted timber ceilings, mountain views, a gas fireplace, and year-round pool and hot tub. Sleeps 7.",
+    image: "/photos/properties/Woodrun 2-bed/03 - 20261008 A7M3 04 A1_00532.jpg",
+    listingHref: "/listings/woodrun-2-bed",
+    bookUrl:
+      "https://www.airbnb.ca/rooms/1793052831212188813?guests=1&adults=1&s=67&unique_share_id=10d91b83-2689-4877-90fb-ebafe5eb6c96",
+  },
+  {
+    number: 17,
     name: "Marquise 2 Bed | Ski-In/Ski-Out | Whistler Village",
     description:
       "Main-floor Marquise condo with Puffy Royal King bed, in-unit washer and dryer, free parking, pool, hot tub, gym, and ski storage on Blackcomb.",
@@ -183,7 +193,7 @@ export const townhomeProperties: Whistler28Property[] = [
       "https://www.airbnb.ca/rooms/1370367404602078616?guests=1&adults=1&s=67&unique_share_id=eb381b39-e67d-44ea-9d7c-2de2e1b5fa20",
   },
   {
-    number: 17,
+    number: 18,
     name: "The Nest | Ski in-Ski out",
     description:
       "A five-bedroom ski-in, ski-out home for extended stays, with a private hot tub and a strong group layout.",
@@ -193,7 +203,7 @@ export const townhomeProperties: Whistler28Property[] = [
       "https://www.airbnb.ca/rooms/763259660349118016?guests=1&adults=1&s=67&unique_share_id=b5240c14-ecb8-4f5a-9c3c-f3861874c7e0",
   },
   {
-    number: 18,
+    number: 19,
     name: "Le Chamois | Ski-In/Out | 2 Bed | Blackcomb",
     description:
       "Upper Village ski base with a 2-minute walk to the Blackcomb Gondola, king suite, Murphy bedroom, free parking, pool, hot tub and gym.",
@@ -203,7 +213,7 @@ export const townhomeProperties: Whistler28Property[] = [
       "https://www.airbnb.ca/rooms/1015303987589924725?guests=1&adults=1&s=67&unique_share_id=1d282b7d-e5fc-4539-b272-d5d4809bf789",
   },
   {
-    number: 19,
+    number: 20,
     name: "Tyndall - Luxe 2 bedroom, Main Whistler Village",
     description:
       "Freshly renovated Tyndall Stone Lodge retreat overlooking Olympic Plaza with A/C, in-suite laundry, pool, hot tub, and guaranteed parking.",
@@ -214,7 +224,7 @@ export const townhomeProperties: Whistler28Property[] = [
       "https://www.airbnb.ca/rooms/50025973?guests=1&adults=1&s=67&unique_share_id=04ceb090-1b8e-4e32-972f-d616b380a0a8",
   },
   {
-    number: 20,
+    number: 21,
     name: "Luxe 5-BED Scandinave Retreat | Walk to Slopes",
     description:
       "A stylish Creekside retreat with three bedrooms, five beds, a private hot tub, and easy access to the slopes.",
@@ -224,7 +234,7 @@ export const townhomeProperties: Whistler28Property[] = [
       "https://www.airbnb.ca/rooms/1313847204355627326?guests=1&adults=1&s=67&unique_share_id=507dffd6-1f84-49a3-99eb-d10f493a65a6",
   },
   {
-    number: 21,
+    number: 22,
     name: "Whistler Village Penthouse 4-Bed - Ski in Ski out",
     description:
       "A 2-level Hearthstone Lodge penthouse with four beds, a private balcony hot tub, stone fireplace, and steps-from-gondola access in Whistler Village.",
@@ -235,7 +245,7 @@ export const townhomeProperties: Whistler28Property[] = [
       "https://www.airbnb.ca/rooms/1471251206220643818?guests=1&adults=1&s=67&unique_share_id=0ec28644-49fa-4b63-9276-7e5f5c6a1153",
   },
   {
-    number: 22,
+    number: 23,
     name: "Cozy Lakefront Whistler Condo | Mountain View",
     description:
       "A peaceful two-bedroom lakefront condo with mountain views and easy access to golf, trails, restaurants, and ski areas.",
@@ -245,7 +255,7 @@ export const townhomeProperties: Whistler28Property[] = [
       "https://www.airbnb.ca/rooms/1305524887656641858?guests=1&adults=1&s=67&unique_share_id=23663c37-e33a-445b-a53c-6f927f30d084",
   },
   {
-    number: 23,
+    number: 24,
     name: "Whistler Village - Private Hot Tub - Walk to Hill",
     description:
       "A spacious three-bedroom Valhalla townhome at the north end of Whistler Village with a private hot tub, three bathrooms, underground parking, and walk-to-lift access.",
@@ -255,7 +265,7 @@ export const townhomeProperties: Whistler28Property[] = [
       "https://www.airbnb.ca/rooms/1693450379764005787?guests=1&adults=1&s=67&unique_share_id=bd20bf84-b138-4958-9dc8-9128130a2028",
   },
   {
-    number: 24,
+    number: 25,
     name: "Marquise Penthouse | Ski-In/Out | 3-Bed | Views",
     description:
       "A 1,100 sq. ft. Marquise penthouse with Fairmont views, glass-domed hot tub, pool, sauna, gym, and private patio on Blackcomb.",
@@ -265,7 +275,7 @@ export const townhomeProperties: Whistler28Property[] = [
       "https://www.airbnb.ca/rooms/1461637483646115205?guests=1&adults=1&s=67&unique_share_id=9b6640b9-138d-4627-bea4-cb2155e32c72",
   },
   {
-    number: 25,
+    number: 26,
     name: "Bluffs | Luxury 2 Bed Ski in Ski out | Views",
     description:
       "A two-bedroom Taluswood retreat on the Dave Murray Downhill, with mountain views, a shared complex hot tub, fireplace, parking, and gear storage.",
@@ -275,7 +285,7 @@ export const townhomeProperties: Whistler28Property[] = [
       "https://www.airbnb.com/rooms/1693549013411163327?guests=1&adults=1&s=67&unique_share_id=759d2f0b-5f96-4039-b45f-18a842fc59f7",
   },
   {
-    number: 26,
+    number: 27,
     name: "Bluffs #8 - Luxury 2 Bed - Ski in Ski out - Views!",
     description:
       "A 2-bedroom Taluswood retreat on the Dave Murray Downhill with a King suite, bunk room, hot tub, and elevated views over Whistler. Sleeps up to 10 guests.",
@@ -285,7 +295,7 @@ export const townhomeProperties: Whistler28Property[] = [
       "https://www.airbnb.ca/rooms/1747927495845801389?guests=1&adults=1&s=67&unique_share_id=99456c1e-0b4a-4b30-933f-0c8270cc0adb",
   },
   {
-    number: 27,
+    number: 28,
     name: "Whistler Village Penthouse - 3 BDR - Walk to Ski",
     description:
       "Tyndall Lodge penthouse in the heart of Whistler Village with loft bunks, 5 beds, pool and hot tub access, and free parking.",
@@ -295,7 +305,7 @@ export const townhomeProperties: Whistler28Property[] = [
       "https://www.airbnb.ca/rooms/1595039212030139605?guests=1&adults=1&s=67&unique_share_id=dc75c08b-e1ae-46ae-8b17-0587b742fa45",
   },
   {
-    number: 28,
+    number: 29,
     name: "Symphony - Walk to village & slopes - Luxury 4-bed",
     description:
       "A three-level Symphony townhome-style retreat with a king primary bedroom, four beds, three bathrooms, a shared hot tub, private exterior entrance, and excellent Village walkability.",
@@ -305,7 +315,7 @@ export const townhomeProperties: Whistler28Property[] = [
       "https://www.airbnb.ca/rooms/1566952897757488737?guests=1&adults=1&s=67&unique_share_id=70d8a9c5-be29-49cb-a1de-03c1e0ec667b",
   },
   {
-    number: 29,
+    number: 30,
     name: "Eagle Lodge | Main Village Condo | Walk to Lifts | Free Parking",
     description:
       "A renovated 1-bedroom Town Plaza condo in the centre of Whistler Village, with a king bed, sofa bed, full kitchen, gas fireplace, private balcony, brand-new shared hot tub and gym, free underground parking, and a 7-minute walk to the gondolas.",

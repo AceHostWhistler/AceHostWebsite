@@ -714,7 +714,64 @@ export default function BlogPost() {
 
               {/* Condo 3 */}
               <h3 className="text-2xl font-bold text-gray-900 mt-12 mb-4">
-                3) Luxe 2 Bedroom Le Chamois | Ski-in/Ski-out Upper Whistler
+                3) Ski-In Ski-Out Penthouse | Pool - Hot Tub - Views
+              </h3>
+
+              <div className="bg-gray-50 p-5 rounded-lg mb-6">
+                <p className="font-semibold">Price per night: $500-$3,000</p>
+              </div>
+
+              <p>
+                This top-floor penthouse at Woodrun Lodge sits directly on
+                Blackcomb Mountain, with genuine ski-in/ski-out access along
+                Merlin&apos;s ski run. Exposed timber beams, vaulted ceilings and
+                floor-to-ceiling windows give it the feel of a luxury log chalet,
+                with mountain views from the living space and private balcony.
+              </p>
+
+              <p className="mt-4">
+                Sleeps 7 across a King suite, a Queen/Twin bunk bedroom and a
+                Queen sofa bed. Guests get 2 free underground parking spots, 2
+                ski lockers, a boot dryer, AC and elevator access, plus Woodrun
+                Lodge&apos;s year-round heated outdoor pool, hot tub and gym.
+              </p>
+
+              <p className="mt-4">
+                The Fairmont is about a 2-minute downhill walk, Upper Village is
+                a few minutes away, and Whistler Village is about a 10 to 15
+                minute walk. It is a perfect luxury ski-in/ski-out rental when
+                you want penthouse living without booking a full chalet.
+              </p>
+
+              <p className="text-blue-600 font-medium mt-2 mb-6">
+                <Link
+                  href="/listings/woodrun-2-bed"
+                  className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  View Property Details
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </Link>
+              </p>
+
+              <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
+                <Image
+                  src="/photos/properties/Woodrun 2-bed/03 - 20261008 A7M3 04 A1_00532.jpg"
+                  alt="Woodrun Lodge ski-in ski-out penthouse on Blackcomb"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-3">
+                  <p className="text-sm font-medium">
+                    Woodrun Lodge | Ski-In Ski-Out Penthouse
+                  </p>
+                </div>
+              </div>
+
+              {/* Condo 4 */}
+              <h3 className="text-2xl font-bold text-gray-900 mt-12 mb-4">
+                4) Luxe 2 Bedroom Le Chamois | Ski-in/Ski-out Upper Whistler
                 Village
               </h3>
 
@@ -766,9 +823,9 @@ export default function BlogPost() {
                 </div>
               </div>
 
-              {/* Condo 4 */}
+              {/* Condo 5 */}
               <h3 className="text-2xl font-bold text-gray-900 mt-12 mb-4">
-                4) Luxe 5-BED Scandinave Retreat | Walk to Slopes
+                5) Luxe 5-BED Scandinave Retreat | Walk to Slopes
               </h3>
 
               <div className="bg-gray-50 p-5 rounded-lg mb-6">
@@ -816,9 +873,9 @@ export default function BlogPost() {
                 </div>
               </div>
 
-              {/* Condo 5 */}
+              {/* Condo 6 */}
               <h3 className="text-2xl font-bold text-gray-900 mt-12 mb-4">
-                5) Bluffs #8 - Luxury 2 Bed - Ski in Ski out - Views!
+                6) Bluffs #8 - Luxury 2 Bed - Ski in Ski out - Views!
               </h3>
 
               <div className="bg-gray-50 p-5 rounded-lg mb-6">
@@ -867,9 +924,9 @@ export default function BlogPost() {
                 </div>
               </div>
 
-              {/* Condo 6 */}
+              {/* Condo 7 */}
               <h3 className="text-2xl font-bold text-gray-900 mt-12 mb-4">
-                6) Eagle Lodge | Main Village Condo | Walk to Lifts | Free Parking
+                7) Eagle Lodge | Main Village Condo | Walk to Lifts | Free Parking
               </h3>
 
               <div className="bg-gray-50 p-5 rounded-lg mb-6">

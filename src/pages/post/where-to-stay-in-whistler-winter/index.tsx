@@ -473,7 +473,10 @@ export default function BlogPost() {
                 Some properties are genuinely ski-in, ski-out. Others require a short
                 walk, shuttle or very brief connection to the mountain. Always review
                 the exact ski access for the individual property rather than assuming
-                every property in a neighbourhood has identical access.
+                every property in a neighbourhood has identical access. AceHost
+                currently features ski-in ski-out stays here including The Aspens,
+                Woodrun Lodge&apos;s luxury 2-bedroom penthouse, Marquise, Le Chamois
+                and Pinnacle Ridge 23.
               </p>
               <p>
                 <strong>Best overall for:</strong> Families, Blackcomb skiing and

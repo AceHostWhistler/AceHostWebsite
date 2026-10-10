@@ -327,6 +327,47 @@ export default function BlogPost() {
               </div>
 
               <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+                Ski-In Ski-Out Penthouse | Pool - Hot Tub - Views
+              </h3>
+              <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
+                <Image
+                  src="/photos/properties/Woodrun 2-bed/03 - 20261008 A7M3 04 A1_00532.jpg"
+                  alt="Woodrun Lodge ski-in ski-out penthouse on Blackcomb Mountain"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p>
+                A luxury top-floor penthouse at Woodrun Lodge on Blackcomb, with
+                genuine ski-in/ski-out access, vaulted timber ceilings, mountain
+                views and a gas fireplace. Sleeps 7 across a King suite, a
+                Queen/Twin bunk bedroom and a Queen sofa bed, with 2 free parking
+                spots, ski lockers and Woodrun Lodge&apos;s year-round heated
+                pool, hot tub and gym. Upper Village is a few minutes away, and
+                Whistler Village is about a 10 to 15 minute walk.
+              </p>
+              <div className="mt-6 mb-8">
+                <Link
+                  href="/listings/woodrun-2-bed"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-all shadow-sm hover:shadow-md font-medium"
+                >
+                  View Woodrun Lodge Penthouse
+                  <svg
+                    className="ml-2 w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </Link>
+              </div>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
                 Marquise 2-bed | Upper Village
               </h3>
               <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">

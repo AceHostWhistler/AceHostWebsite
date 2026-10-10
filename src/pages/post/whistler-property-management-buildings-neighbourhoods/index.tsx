@@ -57,6 +57,7 @@ const MANAGED_LOCATIONS = [
   "Symphony and the Northlands area",
   "Cascade Lodge at the entrance to Whistler Village",
   "The Aspens on Blackcomb Mountain",
+  "Woodrun Lodge ski-in ski-out penthouse on Blackcomb",
   "Marquise in the Upper Village",
   "Le Chamois at the base of Blackcomb",
   "Taluswood Bluffs in Creekside",
@@ -228,6 +229,15 @@ const FEATURED_PROPERTIES = [
     airbnbHref: "https://www.airbnb.com/rooms/1072474554447345991",
     imageSrc: "/photos/properties/The Aspens/4800-Spearhead-Drive-1.JPG",
     imageAlt: "The Aspens ski-in ski-out condo on Blackcomb Mountain",
+  },
+  {
+    name: "Woodrun Lodge Penthouse",
+    label: "Ski-in ski-out penthouse with year-round pool and hot tub",
+    listingHref: "/listings/woodrun-2-bed",
+    airbnbHref:
+      "https://www.airbnb.ca/rooms/1793052831212188813?guests=1&adults=1&s=67&unique_share_id=10d91b83-2689-4877-90fb-ebafe5eb6c96",
+    imageSrc: "/photos/properties/Woodrun 2-bed/03 - 20261008 A7M3 04 A1_00532.jpg",
+    imageAlt: "Woodrun Lodge ski-in ski-out penthouse on Blackcomb Mountain",
   },
   {
     name: "Pinnacle Ridge 23",
@@ -671,6 +681,8 @@ export default function BlogPost() {
                   The Aspens
                 </Link>
                 ,{" "}
+                <Link href="/listings/woodrun-2-bed">Woodrun Lodge</Link>
+                ,{" "}
                 <Link href="/listings/luxury-3-bed-stunning-views">Marquise</Link>
                 , Le Chamois and{" "}
                 <Link href="/listings/pinnacle-ridge-23">Pinnacle Ridge 23</Link>
@@ -682,7 +694,9 @@ export default function BlogPost() {
                 directly to and from the building while still remaining close to
                 the Upper Village. Its pools, hot tubs, ski valet and on-hill
                 setting make the amenities an important part of the listing
-                strategy.
+                strategy. Woodrun Lodge is a similar draw: a top-floor ski-in
+                ski-out penthouse with vaulted timber ceilings, mountain views
+                and year-round pool and hot tub access.
               </p>
               <p>
                 Marquise offers a quieter Blackcomb setting with convenient

@@ -93,6 +93,22 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     imageAlt: "The Aspens | 2-Bed Ski in/Out condo in Upper Village",
   },
   {
+    name: "Ski-In Ski-Out Penthouse | Pool - Hot Tub - Views",
+    priceRange: "$500-$3,000 per night (seasonal)",
+    stats:
+      "Sleeps 7 | 2 Bedrooms | 4 Beds | 2 Baths | Ski-in/ski-out | Year-round pool & hot tub | Woodrun Lodge Blackcomb",
+    paragraphs: [
+      "This top-floor penthouse at Woodrun Lodge sits directly on Blackcomb Mountain, with genuine ski-in/ski-out access along Merlin's ski run. Exposed timber beams, vaulted ceilings and floor-to-ceiling windows give it the feel of a luxury log chalet, with modern renovations and mountain views from the living space and private balcony.",
+      "Sleeps 7 across a King suite, a Queen/Twin bunk bedroom and a Queen sofa bed. Guests get 2 guaranteed free underground parking spots, 2 ski lockers, a boot dryer, AC and elevator access, plus Woodrun Lodge's year-round heated outdoor pool, hot tub and gym.",
+      "The Fairmont is about a 2-minute downhill walk, Upper Village is a few minutes away, and Whistler Village is about a 10 to 15 minute walk. Choose Woodrun when you want a true luxury ski-in/ski-out penthouse without booking a full chalet.",
+    ],
+    airbnbHref:
+      "https://www.airbnb.ca/rooms/1793052831212188813?guests=1&adults=1&s=67&unique_share_id=10d91b83-2689-4877-90fb-ebafe5eb6c96",
+    listingHref: "/listings/woodrun-2-bed",
+    imageSrc: "/photos/properties/Woodrun 2-bed/03 - 20261008 A7M3 04 A1_00532.jpg",
+    imageAlt: "Woodrun Lodge ski-in ski-out penthouse on Blackcomb Mountain",
+  },
+  {
     name: "Pinnacle Ridge 23 | Ski-In/Out | Hot Tub | Village",
     priceRange: "$1,365-$3,675+ per night (seasonal)",
     stats:

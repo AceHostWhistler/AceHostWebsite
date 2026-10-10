@@ -175,7 +175,9 @@ export default function BlogPost() {
                 architecture, spa-like amenities, and proximity to Upper Village.
                 Pinnacle Ridge 23 is a strong example: ski-in/ski-out access about
                 2 minutes from the door, a private hot tub, and an 8-minute walk
-                to Upper Village.
+                to Upper Village. Woodrun Lodge is another, a luxury ski-in/ski-out
+                penthouse with vaulted timber ceilings, mountain views, and a
+                year-round heated pool and hot tub.
               </p>
 
               <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
@@ -444,6 +446,49 @@ export default function BlogPost() {
                   className="inline-flex items-center text-blue-600 hover:text-blue-800"
                 >
                   View Timber Haven
+                  <svg
+                    className="ml-2 w-4 h-4"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </Link>
+              </div>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+                Ski-In Ski-Out Penthouse | Woodrun Lodge
+              </h3>
+              <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
+                <Image
+                  src="/photos/properties/Woodrun 2-bed/03 - 20261008 A7M3 04 A1_00532.jpg"
+                  alt="Woodrun Lodge ski-in ski-out penthouse on Blackcomb Mountain"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p>
+                This top-floor penthouse at Woodrun Lodge sits directly on
+                Blackcomb Mountain, with genuine ski-in/ski-out access along
+                Merlin&apos;s ski run. Exposed timber beams, vaulted ceilings and
+                floor-to-ceiling windows give it the feel of a luxury log chalet,
+                with mountain views from the living space and private balcony.
+                Sleeps 7, with 2 free parking spots, ski lockers, a boot dryer
+                and year-round pool, hot tub and gym access. Upper Village is a
+                few minutes away, and Whistler Village is about a 10 to 15 minute
+                walk.
+              </p>
+              <div className="mt-4 mb-8">
+                <Link
+                  href="/listings/woodrun-2-bed"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800"
+                >
+                  View Woodrun Lodge Penthouse
                   <svg
                     className="ml-2 w-4 h-4"
                     fill="currentColor"

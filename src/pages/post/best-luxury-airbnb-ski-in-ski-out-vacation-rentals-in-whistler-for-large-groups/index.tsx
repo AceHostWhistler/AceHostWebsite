@@ -760,7 +760,7 @@ export default function BlogPost() {
                 Village walkability, a hot tub, and an easier price point, these Whistler condos
                 and townhomes are a strong fit. This list includes every AceHost condo and townhome
                 currently shown on our properties page, from Scandinave Retreat and Granite Court
-                to Valhalla, Le Chamois, Marquise, and the rest of the Whistler collection.
+                to Valhalla, Le Chamois, Marquise, Woodrun Lodge, and the rest of the Whistler collection.
               </p>
 
               {getWhistlerCondoAndTownhomePropertiesForBlogs().map((property, index) => {

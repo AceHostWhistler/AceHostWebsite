@@ -130,7 +130,7 @@ export default function BlogPost() {
               <div className="bg-gray-50 p-6 rounded-lg mb-8">
                 <h2 className="text-xl font-semibold mb-2">Summary</h2>
                 <p className="text-gray-700">
-                  Thinking about a Whistler getaway but not sure where to stay? This guide showcases every AceHost condo rental in Whistler – from luxurious 3-bedroom stunners with panoramic views and village penthouses to ski-in/ski-out Creekside retreats and the six-bedroom Blueberry Ravencrest home for larger groups. We have hand-selected properties that offer the perfect blend of comfort, location, and that special Whistler magic to make your mountain vacation unforgettable!
+                  Thinking about a Whistler getaway but not sure where to stay? This guide showcases every AceHost condo rental in Whistler, from luxurious 3-bedroom stunners with panoramic views and village penthouses to ski-in/ski-out Blackcomb penthouses like Woodrun Lodge, Creekside retreats, and the six-bedroom Blueberry Ravencrest home for larger groups. We have hand-selected properties that offer the perfect blend of comfort, location, and that special Whistler magic to make your mountain vacation unforgettable!
                 </p>
               </div>
 
@@ -139,7 +139,7 @@ export default function BlogPost() {
               </p>
 
               <p className="font-medium text-xl mt-6 mb-8">
-                From slopeside gems to village-center sanctuaries – including large-group options like the six-bedroom Blueberry rental – here are all of AceHost&apos;s Whistler condo and apartment rentals:
+                From slopeside gems like Woodrun Lodge&apos;s ski-in/ski-out penthouse to village-center sanctuaries, including large-group options like the six-bedroom Blueberry rental, here are all of AceHost&apos;s Whistler condo and apartment rentals:
               </p>
 
               {CONDO_RENTAL_PROPERTIES.filter(
