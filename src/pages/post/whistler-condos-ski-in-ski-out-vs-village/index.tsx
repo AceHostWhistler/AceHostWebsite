@@ -21,7 +21,7 @@ const SLUG = "whistler-condos-ski-in-ski-out-vs-village";
 const PUBLISH_DATE = "October 10, 2026";
 const READ_TIME = "8 min read";
 const HERO =
-  "/photos/properties/Woodrun 2-bed/03 - 20261008 A7M3 04 A1_00532.jpg";
+  "/photos/properties/Woodrun 2-bed/01 - 20261008 A7M3 04 A1_00668.jpg";
 
 const RELATED = allArticles.filter((article) =>
   [
@@ -109,8 +109,8 @@ export default function WhistlerCondosSkiVsVillagePost() {
               />
               <SectionImage
                 src={HERO}
-                alt="Woodrun Lodge ski-in ski-out penthouse interior with timber beams and mountain views"
-                caption="A slopeside penthouse at Woodrun Lodge on Blackcomb. Ski access here depends on open connecting terrain."
+                alt="Woodrun Lodge at dusk on Blackcomb Mountain"
+                caption="Woodrun Lodge on Blackcomb. Ski access here depends on open connecting terrain."
                 priority
               />
             </div>
@@ -326,8 +326,8 @@ export default function WhistlerCondosSkiVsVillagePost() {
                 still a Village stay, not a slopeside one.
               </p>
               <SectionImage
-                src="/photos/properties/Eagle Lodge 238/Eagle edit 1.png"
-                alt="Eagle Lodge renovated condo in Town Plaza, Whistler Village"
+                src="/photos/properties/whistler-village-views-luxury-2-5-bedroom/01 - 20250707 A7M3 01 A1_07036.jpg"
+                alt="Renovated living and dining area in a Whistler Village condo"
                 caption="Village condos trade a longer lift walk for restaurants, groceries and a pedestrian evening."
               />
 
@@ -349,8 +349,8 @@ export default function WhistlerCondosSkiVsVillagePost() {
                 Stroll, but you are not isolated from town.
               </p>
               <SectionImage
-                src="/photos/properties/The Aspens/4800-Spearhead-Drive-1.JPG"
-                alt="The Aspens ski-in ski-out condo on Blackcomb Mountain"
+                src="/photos/properties/The Aspens/4800-Spearhead-Drive-2.JPG"
+                alt="Aerial view of Upper Village condos beside Blackcomb ski runs"
                 caption="Upper Village and Blackcomb favour ski convenience, with the main Village still walkable from many buildings."
               />
 
@@ -372,8 +372,8 @@ export default function WhistlerCondosSkiVsVillagePost() {
                 every property that lists Creekside in the name.
               </p>
               <SectionImage
-                src="/photos/properties/Bluffs Unit 4/IMG_001112.JPG"
-                alt="Bluffs Unit 4 condo interior in Taluswood above Creekside"
+                src="/photos/properties/Bluffs Unit 4/Bluffs drone.jpg"
+                alt="Taluswood condos on the mountainside above Creekside and Alpha Lake"
                 caption="Taluswood's Bluffs sits above Creekside. Ski access is on the mountain. Creekside shops are a short drive."
               />
 
