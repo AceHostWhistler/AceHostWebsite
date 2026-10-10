@@ -24,25 +24,41 @@ export default function SocialShareMeta({
   return (
     <Head>
       <meta name="description" content={description} />
-      <meta property="og:title" content={ogTitle} />
-      <meta property="og:description" content={ogDescription} />
-      <meta property="og:image" content={imageUrl} />
-      <meta property="og:image:secure_url" content={imageUrl} />
-      <meta property="og:image:alt" content={ogTitle} />
-      <meta property="og:image:type" content={shareImageMimeType(image)} />
-      <link rel="image_src" href={imageUrl} />
-      <meta property="og:type" content={type} />
+      <meta key="og:title" property="og:title" content={ogTitle} />
+      <meta
+        key="og:description"
+        property="og:description"
+        content={ogDescription}
+      />
+      <meta key="og:image" property="og:image" content={imageUrl} />
+      <meta
+        key="og:image:secure_url"
+        property="og:image:secure_url"
+        content={imageUrl}
+      />
+      <meta key="og:image:alt" property="og:image:alt" content={ogTitle} />
+      <meta
+        key="og:image:type"
+        property="og:image:type"
+        content={shareImageMimeType(image)}
+      />
+      <link key="image_src" rel="image_src" href={imageUrl} />
+      <meta key="og:type" property="og:type" content={type} />
       {type === "article" && publishedAt ? (
         <meta property="article:published_time" content={publishedAt} />
       ) : null}
       {type === "article" && modifiedAt ? (
         <meta property="article:modified_time" content={modifiedAt} />
       ) : null}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={ogTitle} />
-      <meta name="twitter:description" content={ogDescription} />
-      <meta name="twitter:image" content={imageUrl} />
-      <meta name="twitter:image:alt" content={ogTitle} />
+      <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
+      <meta key="twitter:title" name="twitter:title" content={ogTitle} />
+      <meta
+        key="twitter:description"
+        name="twitter:description"
+        content={ogDescription}
+      />
+      <meta key="twitter:image" name="twitter:image" content={imageUrl} />
+      <meta key="twitter:image:alt" name="twitter:image:alt" content={ogTitle} />
     </Head>
   );
 }

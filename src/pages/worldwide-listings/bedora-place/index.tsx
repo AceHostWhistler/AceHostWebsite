@@ -23,6 +23,10 @@ import {
   GALLERY_PREVIEW_LIMIT,
   getGalleryPhotoOrder,
 } from "@/lib/galleryPhotoOrder";
+import {
+  getPropertyCardCoverImage,
+  pinCoverPhoto,
+} from "@/lib/seo/propertyCardCovers";
 import { airbnbButtonLg } from "@/lib/airbnbButtonStyles";
 import { BEDORA_PLACE_PHOTOS } from "@/data/bedoraPlacePhotos";
 
@@ -36,7 +40,8 @@ const BedoraPlace = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [isImageLoading, setIsImageLoading] = useState(false);
-  const photos = BEDORA_PLACE_PHOTOS;
+  const coverImage = getPropertyCardCoverImage("/worldwide-listings/bedora-place");
+  const photos = pinCoverPhoto(BEDORA_PLACE_PHOTOS, coverImage);
   const galleryPhotos = getGalleryPhotoOrder(photos, "bedora-place", {
     preserveOrder: true,
   });
@@ -127,7 +132,7 @@ const BedoraPlace = () => {
             airbnbLink={AIRBNB_LINK}
             amenities={getWorldwideAmenities("bedora-place")}
             onMorePhotosClick={openGallery}
-            schemaImages={photos[0] ? [photos[0]] : undefined}
+            schemaImages={coverImage ? [coverImage] : photos[0] ? [photos[0]] : undefined}
           />
 
           <div className={editorialGalleryWrapperClass} id="photos">

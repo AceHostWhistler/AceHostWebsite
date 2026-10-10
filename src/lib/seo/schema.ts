@@ -300,9 +300,7 @@ export function buildArticleSchema({
   dateModified,
 }: ArticleSchemaInput) {
   const absoluteImage = image
-    ? image.startsWith("http")
-      ? image
-      : `${SITE_URL}${image}`
+    ? toAbsoluteImageUrl(image)
     : businessInfo.logo;
 
   return {

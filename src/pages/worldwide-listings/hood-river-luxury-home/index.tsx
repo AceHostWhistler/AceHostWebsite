@@ -20,6 +20,10 @@ import {
   getGalleryPhotoOrder,
 } from "@/lib/galleryPhotoOrder";
 import { getFullPhotoSrc, getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
+import {
+  getPropertyCardCoverImage,
+  pinCoverPhoto,
+} from "@/lib/seo/propertyCardCovers";
 import Footer from "@/components/Footer";
 import { X } from "lucide-react";
 
@@ -75,7 +79,13 @@ const HoodRiverLuxuryHome = () => {
     "/photos/properties/hood-river-luxury-home/Interior 31 - Garage.jpg",
     "/photos/properties/hood-river-luxury-home/Interior 32 - Garage.jpg",
   ];
-  const galleryPhotos = getGalleryPhotoOrder(photos, "hood-river-luxury-home");
+  const coverImage = getPropertyCardCoverImage(
+    "/worldwide-listings/hood-river-luxury-home"
+  );
+  const galleryPhotos = getGalleryPhotoOrder(
+    pinCoverPhoto(photos, coverImage),
+    "hood-river-luxury-home"
+  );
 
   const handlePhotoClick = (index: number) => {
     setIsImageLoading(false);
@@ -139,6 +149,7 @@ const HoodRiverLuxuryHome = () => {
             priceRange="$800-$1,200 per night"
             amenities={getWorldwideAmenities("hood-river-luxury-home")}
             onMorePhotosClick={openGallery}
+            schemaImages={coverImage ? [coverImage] : undefined}
           />
 
           {/* Photo Grid */}

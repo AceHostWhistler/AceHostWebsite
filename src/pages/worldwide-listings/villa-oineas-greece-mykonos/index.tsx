@@ -24,6 +24,10 @@ import {
   GALLERY_PREVIEW_LIMIT,
   getGalleryPhotoOrder,
 } from "@/lib/galleryPhotoOrder";
+import {
+  getPropertyCardCoverImage,
+  pinCoverPhoto,
+} from "@/lib/seo/propertyCardCovers";
 
 const VillaOineasGreeceMykonos = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -118,8 +122,11 @@ const VillaOineasGreeceMykonos = () => {
     "/photos/properties/Oineas Villa - Greece Mykonos/VILLA OINEAS - 26.jpg",
     "/photos/properties/Oineas Villa - Greece Mykonos/VILLA OINEAS - 27.jpg",
   ];
+  const coverImage = getPropertyCardCoverImage(
+    "/worldwide-listings/villa-oineas-greece-mykonos"
+  );
   const galleryPhotos = getGalleryPhotoOrder(
-    photos,
+    pinCoverPhoto(photos, coverImage),
     "villa-oineas-greece-mykonos"
   );
 
@@ -210,6 +217,7 @@ const VillaOineasGreeceMykonos = () => {
             contactLink="/contact"
             amenities={getWorldwideAmenities("villa-oineas-greece-mykonos")}
             onMorePhotosClick={openGallery}
+            schemaImages={coverImage ? [coverImage] : undefined}
           />
 
           {/* Photo Grid */}

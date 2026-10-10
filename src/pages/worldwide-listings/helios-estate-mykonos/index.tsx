@@ -23,6 +23,10 @@ import {
   getGalleryPhotoOrder,
 } from "@/lib/galleryPhotoOrder";
 import { getFullPhotoSrc, getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
+import {
+  getPropertyCardCoverImage,
+  pinCoverPhoto,
+} from "@/lib/seo/propertyCardCovers";
 
 const HeliosEstateMykonos = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -113,7 +117,13 @@ const HeliosEstateMykonos = () => {
     "/photos/properties/Helios Estate - Mykonos/02.jpg",
     "/photos/properties/Helios Estate - Mykonos/03.jpg",
   ];
-  const galleryPhotos = getGalleryPhotoOrder(photos, "helios-estate-mykonos");
+  const coverImage = getPropertyCardCoverImage(
+    "/worldwide-listings/helios-estate-mykonos"
+  );
+  const galleryPhotos = getGalleryPhotoOrder(
+    pinCoverPhoto(photos, coverImage),
+    "helios-estate-mykonos"
+  );
 
   const handlePhotoClick = (index: number) => {
     setIsImageLoading(false);
@@ -179,6 +189,7 @@ const HeliosEstateMykonos = () => {
             contactLink="/contact"
             amenities={getWorldwideAmenities("helios-estate-mykonos")}
             onMorePhotosClick={openGallery}
+            schemaImages={coverImage ? [coverImage] : undefined}
           />
 
           {/* Photo Grid */}

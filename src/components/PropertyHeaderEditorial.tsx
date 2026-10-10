@@ -12,12 +12,12 @@ import {
   buildVacationRentalSchema,
 } from "@/lib/seo/schema";
 import { SITE_URL } from "@/data/seo/business";
-import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import { getPrimaryPricePeriodLabel } from "@/lib/pricePeriodLabel";
 import { formatDisplayedPrice } from "@/lib/formatDisplayedPrice";
 import {
   shareImageMimeType,
   toAbsoluteImageUrl,
+  toShareImagePath,
 } from "@/lib/seo/socialShare";
 
 interface PropertyHeaderEditorialProps {
@@ -186,9 +186,8 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
     getPropertyCardCoverImage(listingLookupPath) ??
     schemaImages?.[0] ??
     getPropertyCardCoverImage(canonicalPath);
-  const shareImage = coverImage ? getGalleryPhotoSrc(coverImage) : undefined;
-  const shareImageUrl = shareImage
-    ? toAbsoluteImageUrl(shareImage)
+  const shareImageUrl = coverImage
+    ? toAbsoluteImageUrl(coverImage)
     : undefined;
   const vacationRentalSchema = buildVacationRentalSchema({
     title,
@@ -196,7 +195,7 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
     geo,
     bedroomCount,
     guestCount,
-    images: shareImage ? [shareImage] : coverImage ? [coverImage] : undefined,
+    images: coverImage ? [coverImage] : undefined,
   });
 
   const specs = [
@@ -229,7 +228,7 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
           <meta
             key="og:image:type"
             property="og:image:type"
-            content={shareImageMimeType(shareImage ?? "")}
+            content={shareImageMimeType(toShareImagePath(coverImage))}
           />
         ) : null}
         {shareImageUrl ? (

@@ -21,6 +21,10 @@ import {
   getGalleryPhotoOrder,
 } from "@/lib/galleryPhotoOrder";
 import { getFullPhotoSrc, getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
+import {
+  getPropertyCardCoverImage,
+  pinCoverPhoto,
+} from "@/lib/seo/propertyCardCovers";
 import Footer from "@/components/Footer";
 import VimeoEmbed from "@/components/VimeoEmbed";
 import { X, MapPin, Users, Bed, Bath, Check } from "lucide-react";
@@ -83,7 +87,13 @@ const PuntaMitaCasaJuntos = () => {
     "/photos/properties/Punta Mita/DSC_2122 copy.jpg",
     "/photos/properties/Punta Mita/DSC_2275 copy.jpg",
   ];
-  const galleryPhotos = getGalleryPhotoOrder(photos, "punta-mita---casa-juntos");
+  const coverImage = getPropertyCardCoverImage(
+    "/worldwide-listings/punta-mita---casa-juntos"
+  );
+  const galleryPhotos = getGalleryPhotoOrder(
+    pinCoverPhoto(photos, coverImage),
+    "punta-mita---casa-juntos"
+  );
 
   const amenities = [
     "Beachfront",
@@ -164,6 +174,7 @@ const PuntaMitaCasaJuntos = () => {
             contactLink="/contact"
             amenities={getWorldwideAmenities("punta-mita---casa-juntos")}
             onMorePhotosClick={openGallery}
+            schemaImages={coverImage ? [coverImage] : undefined}
           />
 
           {/* Video Section */}

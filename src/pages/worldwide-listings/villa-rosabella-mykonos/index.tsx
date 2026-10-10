@@ -23,6 +23,10 @@ import {
   GALLERY_PREVIEW_LIMIT,
   getGalleryPhotoOrder,
 } from "@/lib/galleryPhotoOrder";
+import {
+  getPropertyCardCoverImage,
+  pinCoverPhoto,
+} from "@/lib/seo/propertyCardCovers";
 
 const VillaRosabellaMykonos = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -91,8 +95,11 @@ const VillaRosabellaMykonos = () => {
     "/photos/properties/Villa Rosabella Mykonos/Villa Rosabella (58).jpg",
     "/photos/properties/Villa Rosabella Mykonos/Villa Rosabella (59).jpg"
   ];
+  const coverImage = getPropertyCardCoverImage(
+    "/worldwide-listings/villa-rosabella-mykonos"
+  );
   const galleryPhotos = getGalleryPhotoOrder(
-    photos,
+    pinCoverPhoto(photos, coverImage),
     "villa-rosabella-mykonos"
   );
 
@@ -164,6 +171,7 @@ const VillaRosabellaMykonos = () => {
             contactLink="/contact"
             amenities={getWorldwideAmenities("villa-rosabella-mykonos")}
             onMorePhotosClick={openGallery}
+            schemaImages={coverImage ? [coverImage] : undefined}
           />
 
           {/* Photo Grid */}

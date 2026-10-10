@@ -1,4 +1,5 @@
 import { SITE_URL } from "@/data/seo/business";
+import { OG_COVER_BY_SOURCE } from "@/data/seo/ogCoverMap";
 
 export type SocialSharePayload = {
   title: string;
@@ -18,7 +19,9 @@ export const DEFAULT_SOCIAL_IMAGE = ACEHOST_LOGO_IMAGE;
 export const LOGO_SHARE_WIDTH = 800;
 export const LOGO_SHARE_HEIGHT = 800;
 /** Bump this when cover photos change so Google and iMessage recache the new image. */
-export const SHARE_IMAGE_VERSION = "20261009a";
+export const SHARE_IMAGE_VERSION = "20261010a";
+export const SHARE_PHOTO_WIDTH = 1200;
+export const SHARE_PHOTO_HEIGHT = 800;
 
 export function isLogoShareImage(imagePath: string): boolean {
   const path = imagePath.split("?")[0]?.toLowerCase() ?? "";
@@ -26,21 +29,32 @@ export function isLogoShareImage(imagePath: string): boolean {
 }
 
 export function shareImageMimeType(imagePath: string): string {
-  const path = imagePath.split("?")[0]?.toLowerCase() ?? "";
+  const path = toShareImagePath(imagePath).split("?")[0]?.toLowerCase() ?? "";
   if (path.endsWith(".png")) return "image/png";
   if (path.endsWith(".webp")) return "image/webp";
   if (path.endsWith(".gif")) return "image/gif";
   return "image/jpeg";
 }
 
-export function toAbsoluteImageUrl(imagePath: string): string {
-  if (!imagePath) {
-    return withShareVersion(`${SITE_URL}${encodeURI(DEFAULT_SOCIAL_IMAGE)}`);
-  }
+/** Compact JPEG used for iMessage, Google, and schema when a cover is too large. */
+export function toShareImagePath(imagePath: string | undefined): string {
+  if (!imagePath) return DEFAULT_SOCIAL_IMAGE;
   if (imagePath.startsWith("http://") || imagePath.startsWith("https://")) {
-    return withShareVersion(imagePath);
+    return imagePath;
   }
   const path = imagePath.startsWith("/") ? imagePath : `/${imagePath}`;
+  return OG_COVER_BY_SOURCE[path] ?? path;
+}
+
+export function toAbsoluteImageUrl(imagePath: string): string {
+  const resolved = toShareImagePath(imagePath);
+  if (!resolved) {
+    return withShareVersion(`${SITE_URL}${encodeURI(DEFAULT_SOCIAL_IMAGE)}`);
+  }
+  if (resolved.startsWith("http://") || resolved.startsWith("https://")) {
+    return withShareVersion(resolved);
+  }
+  const path = resolved.startsWith("/") ? resolved : `/${resolved}`;
   return withShareVersion(`${SITE_URL}${encodeURI(path)}`);
 }
 

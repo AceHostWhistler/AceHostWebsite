@@ -22,6 +22,10 @@ import {
   GALLERY_PREVIEW_LIMIT,
   getGalleryPhotoOrder,
 } from "@/lib/galleryPhotoOrder";
+import {
+  getPropertyCardCoverImage,
+  pinCoverPhoto,
+} from "@/lib/seo/propertyCardCovers";
 import { airbnbButtonLg } from "@/lib/airbnbButtonStyles";
 
 const AIRBNB_LINK =
@@ -88,8 +92,11 @@ const VancouverHouseCornerUnit = () => {
     "/photos/properties/vancouver-house/airbnb-ac20b3d1-d182-4f81-b6a8-376d576655ec.jpg",
     "/photos/properties/vancouver-house/airbnb-bcd4a4e9-8682-440d-bb1f-251ddfd8ba29.jpg",
   ];
+  const coverImage = getPropertyCardCoverImage(
+    "/vancouver-listings/vancouver-house-corner-unit-30th-floor"
+  );
   const galleryPhotos = getGalleryPhotoOrder(
-    photos,
+    pinCoverPhoto(photos, coverImage),
     "vancouver-house-corner-unit-30th-floor"
   );
 
@@ -162,6 +169,7 @@ const VancouverHouseCornerUnit = () => {
             airbnbLink={AIRBNB_LINK}
             amenities={getWorldwideAmenities("vancouver-house-corner-unit-30th-floor")}
             onMorePhotosClick={openGallery}
+            schemaImages={coverImage ? [coverImage] : undefined}
           />
 
           {/* Photo Grid */}

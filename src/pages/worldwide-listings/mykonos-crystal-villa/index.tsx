@@ -21,6 +21,10 @@ import {
   getGalleryPhotoOrder,
 } from "@/lib/galleryPhotoOrder";
 import { getFullPhotoSrc, getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
+import {
+  getPropertyCardCoverImage,
+  pinCoverPhoto,
+} from "@/lib/seo/propertyCardCovers";
 import Footer from "@/components/Footer";
 import { X } from "lucide-react";
 
@@ -64,7 +68,13 @@ const MykonosCrystalVilla = () => {
     "/photos/properties/Villa Aegean Mykonos Greece/TRG_5800.jpg",
     "/photos/properties/Villa Aegean Mykonos Greece/TRG_5825.jpg",
   ];
-  const galleryPhotos = getGalleryPhotoOrder(photos, "mykonos-crystal-villa");
+  const coverImage = getPropertyCardCoverImage(
+    "/worldwide-listings/mykonos-crystal-villa"
+  );
+  const galleryPhotos = getGalleryPhotoOrder(
+    pinCoverPhoto(photos, coverImage),
+    "mykonos-crystal-villa"
+  );
 
   const handlePhotoClick = (index: number) => {
     setSelectedPhotoIndex(index);
@@ -135,6 +145,7 @@ const MykonosCrystalVilla = () => {
             priceRange="€2,000-€4,000 per night"
             amenities={getWorldwideAmenities("mykonos-crystal-villa")}
             onMorePhotosClick={openGallery}
+            schemaImages={coverImage ? [coverImage] : undefined}
           />
 
           {/* Photo Grid */}

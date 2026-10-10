@@ -24,6 +24,10 @@ import {
   GALLERY_PREVIEW_LIMIT,
   getGalleryPhotoOrder,
 } from "@/lib/galleryPhotoOrder";
+import {
+  getPropertyCardCoverImage,
+  pinCoverPhoto,
+} from "@/lib/seo/propertyCardCovers";
 
 const SantoriniGreeceVillaEclipse = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -57,8 +61,11 @@ const SantoriniGreeceVillaEclipse = () => {
     "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(24 of 25).jpg",
     "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(25 of 25).jpg",
   ];
+  const coverImage = getPropertyCardCoverImage(
+    "/worldwide-listings/santorini-greece-villa-eclipse"
+  );
   const galleryPhotos = getGalleryPhotoOrder(
-    photos,
+    pinCoverPhoto(photos, coverImage),
     "santorini-greece-villa-eclipse"
   );
 
@@ -149,6 +156,7 @@ const SantoriniGreeceVillaEclipse = () => {
             contactLink="/contact"
             amenities={getWorldwideAmenities("santorini-greece-villa-eclipse")}
             onMorePhotosClick={openGallery}
+            schemaImages={coverImage ? [coverImage] : undefined}
           />
 
           {/* Photo Grid */}

@@ -16,6 +16,8 @@ import {
   isLogoShareImage,
   LOGO_SHARE_HEIGHT,
   LOGO_SHARE_WIDTH,
+  SHARE_PHOTO_HEIGHT,
+  SHARE_PHOTO_WIDTH,
   shareImageMimeType,
   toAbsoluteImageUrl,
 } from "@/lib/seo/socialShare";
@@ -128,20 +130,24 @@ function App({ Component, pageProps }: AppProps) {
           property="og:image:type"
           content={shareImageMimeType(socialShare.image)}
         />
-        {isLogoShareImage(socialShare.image) ? (
-          <>
-            <meta
-              key="og:image:width"
-              property="og:image:width"
-              content={String(LOGO_SHARE_WIDTH)}
-            />
-            <meta
-              key="og:image:height"
-              property="og:image:height"
-              content={String(LOGO_SHARE_HEIGHT)}
-            />
-          </>
-        ) : null}
+        <meta
+          key="og:image:width"
+          property="og:image:width"
+          content={String(
+            isLogoShareImage(socialShare.image)
+              ? LOGO_SHARE_WIDTH
+              : SHARE_PHOTO_WIDTH
+          )}
+        />
+        <meta
+          key="og:image:height"
+          property="og:image:height"
+          content={String(
+            isLogoShareImage(socialShare.image)
+              ? LOGO_SHARE_HEIGHT
+              : SHARE_PHOTO_HEIGHT
+          )}
+        />
         <link key="image_src" rel="image_src" href={shareImageUrl} />
         <meta
           key="og:type"

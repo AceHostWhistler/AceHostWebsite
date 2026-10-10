@@ -29,7 +29,10 @@ import {
 import { getPropertyGeoBySlug } from "@/data/seo/propertyGeo";
 import { buildVacationRentalSchema } from "@/lib/seo/schema";
 import { SITE_URL } from "@/data/seo/business";
-import { getPropertyCardCoverImage } from "@/lib/seo/propertyCardCovers";
+import {
+  getPropertyCardCoverImage,
+  pinCoverPhoto,
+} from "@/lib/seo/propertyCardCovers";
 import { toAbsoluteImageUrl } from "@/lib/seo/socialShare";
 import {
   GALLERY_PREVIEW_LIMIT,
@@ -59,19 +62,19 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
     vimeoTitle,
     videoUrl,
   } = listing;
+  const listingPath = `/listings/${listing.slug}`;
+  const coverImage =
+    getPropertyCardCoverImage(listingPath) ?? photos[0];
   const galleryPhotos = getGalleryPhotoOrder(
-    filterListingPhotos(photos),
+    pinCoverPhoto(filterListingPhotos(photos), coverImage),
     listing.slug,
     {
       preserveOrder: listing.galleryPreserveOrder,
       deferPhotos: listing.galleryDeferPhotos,
     }
   );
-  const listingPath = `/listings/${listing.slug}`;
-  const coverImage =
-    getPropertyCardCoverImage(listingPath) ?? photos[0];
   const coverShareUrl = coverImage
-    ? toAbsoluteImageUrl(getGalleryPhotoSrc(coverImage))
+    ? toAbsoluteImageUrl(coverImage)
     : undefined;
 
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -188,7 +191,10 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
-              __html: JSON.stringify(structuredData),
+              __html: JSON.stringify({
+                ...structuredData,
+                image: coverShareUrl ?? structuredData.image,
+              }),
             }}
           />
         )}

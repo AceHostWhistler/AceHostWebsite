@@ -23,6 +23,10 @@ import {
   GALLERY_PREVIEW_LIMIT,
   getGalleryPhotoOrder,
 } from "@/lib/galleryPhotoOrder";
+import {
+  getPropertyCardCoverImage,
+  pinCoverPhoto,
+} from "@/lib/seo/propertyCardCovers";
 
 const SuperYachtThailand = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -79,7 +83,13 @@ const SuperYachtThailand = () => {
     "/photos/properties/Yacht Thailand Sea D/Yacht_Sead_VIP Bedroom-7.jpg",
     "/photos/properties/Yacht Thailand Sea D/Yacht_Sead_VIP Bedroom-9.jpg",
   ];
-  const galleryPhotos = getGalleryPhotoOrder(photos, "super-yacht-thailand");
+  const coverImage = getPropertyCardCoverImage(
+    "/worldwide-listings/super-yacht-thailand"
+  );
+  const galleryPhotos = getGalleryPhotoOrder(
+    pinCoverPhoto(photos, coverImage),
+    "super-yacht-thailand"
+  );
 
   const handlePhotoClick = (index: number) => {
     setIsImageLoading(false);
@@ -166,6 +176,7 @@ const SuperYachtThailand = () => {
             priceRange="$11,000-$13,000 per night"
             amenities={getWorldwideAmenities("super-yacht-thailand")}
             onMorePhotosClick={openGallery}
+            schemaImages={coverImage ? [coverImage] : undefined}
           />
 
           {/* Photo Grid */}

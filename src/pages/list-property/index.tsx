@@ -153,10 +153,6 @@ const ListProperty = () => {
           property="og:description"
           content="Full-service Airbnb and vacation rental property management in Whistler. Revenue management, luxury marketing, guest services, and VIP concierge."
         />
-        <meta
-          property="og:image"
-          content="https://www.acehost.ca/photos/homepage/WhistlerVacationRental.jpg"
-        />
         <meta property="og:url" content={LIST_PROPERTY_CANONICAL} />
         <meta name="twitter:card" content="summary_large_image" />
         <script

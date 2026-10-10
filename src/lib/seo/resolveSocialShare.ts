@@ -1,25 +1,20 @@
 import { allArticles } from "@/utils/blogArticles";
 import { getListing } from "@/data/listings";
 import { businessInfo } from "@/data/seo/business";
-import { getGalleryPhotoSrc } from "@/lib/optimizedPropertyPhotos";
 import { getPropertyCardCoverImage } from "@/lib/seo/propertyCardCovers";
 import {
   ACEHOST_LOGO_IMAGE,
   DEFAULT_SOCIAL_IMAGE,
   normalizePath,
+  toShareImagePath,
   type SocialSharePayload,
 } from "@/lib/seo/socialShare";
 
 function shareCover(imagePath: string | undefined): string {
-  if (!imagePath) return DEFAULT_SOCIAL_IMAGE;
-  return getGalleryPhotoSrc(imagePath);
+  return toShareImagePath(imagePath);
 }
 
 type StaticPageMeta = Omit<SocialSharePayload, "type">;
-
-const LA_FORJA_COVER_IMAGE =
-  getPropertyCardCoverImage("/listings/chalet-la-forja-kadenwood") ??
-  "/photos/properties/Chalet La Forja/New cover forja snow.png";
 
 const MOUNTAINTOP_COVER_IMAGE =
   "/photos/properties/2919 Heritage/Mountaintop.png";
@@ -35,7 +30,7 @@ const STATIC_PAGES: Record<string, StaticPageMeta> = {
     title: "Luxury Vacation Rentals in Whistler | AceHost",
     description:
       "Browse our exclusive collection of luxury vacation rentals in Whistler, BC. Ski-in/ski-out chalets, premium condos, and spectacular mountain homes available.",
-    image: LA_FORJA_COVER_IMAGE,
+    image: "/photos/page-covers/properties.jpg",
   },
   "/blogs": {
     title: "The AceHost Blog | Luxury Whistler Vacation Rentals & Tips",
@@ -47,32 +42,32 @@ const STATIC_PAGES: Record<string, StaticPageMeta> = {
     title: "Contact Us | AceHost Whistler",
     description:
       "Get in touch with AceHost Whistler for luxury property management services, vacation rentals, and VIP concierge services in Whistler.",
-    image: ACEHOST_LOGO_IMAGE,
+    image: "/photos/homepage/pm/cedars full res.jpg",
   },
   "/concierge-service": {
     title: "Whistler VIP Concierge Services | AceHost",
     description:
       "Personalized luxury concierge services for your Whistler vacation. From private chefs to heli-skiing, we take care of every detail.",
-    image: ACEHOST_LOGO_IMAGE,
+    image: "/photos/homepage/WhistlerVipConcierge-hero.jpg",
   },
   "/faq": {
     title: "FAQ - AceHost | Luxury Vacation Rental Properties in Whistler",
     description:
       "Find answers to frequently asked questions about AceHost luxury vacation rentals in Whistler, our concierge services, and property management.",
-    image: ACEHOST_LOGO_IMAGE,
+    image: "/photos/page-covers/faq.jpg",
   },
   "/our-story": {
     title: "Our Story | AceHost Whistler Luxury Vacation Rentals",
     description:
       "Learn about the AceHost team and our mission to provide exceptional luxury vacation rental experiences in Whistler.",
-    image: ACEHOST_LOGO_IMAGE,
+    image: "/photos/page-covers/about.jpg",
   },
   "/list-property": {
     title:
       "Luxury Property Management in Whistler | AceHost Airbnb & Vacation Rental Management",
     description:
       "AceHost provides full-service Airbnb and vacation rental property management in Whistler. Maximize rental income with luxury marketing, guest services, property care, and VIP concierge.",
-    image: "https://www.acehost.ca/photos/homepage/WhistlerVacationRental.jpg",
+    image: "/photos/page-covers/list-property.jpg",
   },
   "/listings/hotel-booking-assistance": {
     title: "Hotel Booking Assistance & Concierge Services | AceHost",
@@ -162,14 +157,20 @@ function resolveListingSocialShare(
 
   if (prefix === "listings") {
     const listing = getListing(slug);
-    if (!listing) return null;
+    if (listing) {
+      return {
+        title: listing.seo.title,
+        description: listing.seo.description,
+        image: shareCover(cardCover ?? listing.photos[0]),
+        type: "website",
+      };
+    }
 
-    return {
-      title: listing.seo.title,
-      description: listing.seo.description,
-      image: shareCover(cardCover ?? listing.photos[0]),
-      type: "website",
-    };
+    const worldwide = resolveListingSocialShare(slug, "worldwide-listings");
+    if (worldwide) return worldwide;
+    const vancouver = resolveListingSocialShare(slug, "vancouver-listings");
+    if (vancouver) return vancouver;
+    return null;
   }
 
   const listingMeta = WORLDWIDE_LISTING_TITLES[slug];
