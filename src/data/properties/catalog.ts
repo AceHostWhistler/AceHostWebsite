@@ -6,6 +6,10 @@ import {
   PINNACLE_RIDGE_23_AIRBNB_LINK,
   PINNACLE_RIDGE_23_PHOTOS,
 } from "../listings/pinnacleRidge23Photos";
+import {
+  WOODRUN_2_BED_AIRBNB_LINK,
+  WOODRUN_2_BED_PHOTOS,
+} from "../listings/woodrun2BedPhotos";
 
 export interface PropertyFeature {
   id: string;
@@ -64,6 +68,7 @@ export const CONDO_IDS = new Set([
   "whistler-village-penthouse",
   "whistler-village-penthouse-3-bdr",
   "blackcomb-greens",
+  "woodrun-2-bed",
 ]);
 
 export const HOME_IDS = new Set([
@@ -897,6 +902,41 @@ export const propertyCategories: PropertyCategory[] = [
             holidayPrice: "$2300-$3100+ Nightly | Christmas & NY",
             link: "/listings/bluffs-unit-8-taluswood",
             airbnbLink: BLUFFS_UNIT_8_AIRBNB_LINK,
+            isPetFriendly: false,
+            isSkiInSkiOut: true,
+          },
+
+          {
+            id: "woodrun-2-bed",
+            name: "Ski-In Ski-Out Penthouse | Pool - Hot Tub - Views",
+            images: WOODRUN_2_BED_PHOTOS,
+            guests: 7,
+            bedrooms: 2,
+            beds: 4,
+            bathrooms: 2,
+            location: "Blackcomb, Whistler",
+            description:
+              "Luxury ski-in/ski-out penthouse at Woodrun Lodge on Blackcomb, with exposed log beams, vaulted ceilings, mountain views, a gas fireplace, year-round heated pool and hot tub. Sleeps 7, with 2 free parking spots, 2 ski lockers, boot dryer and AC.",
+            features: [
+              "True Ski-in/Ski-out",
+              "Year-Round Pool & Hot Tub",
+              "2 Free Underground Parking Spots",
+              "2 Ski Lockers & Boot Dryer",
+              "Air Conditioning",
+              "King Suite with Ensuite",
+              "Gas Fireplace",
+              "Private Mountain-View Balcony",
+            ],
+            highlights: [
+              "Woodrun Lodge on Blackcomb",
+              "Sleeps 7",
+              "Walk to Upper Village",
+              "Elevator Access",
+            ],
+            priceRange: "$500-$3,000 per night",
+            holidayPrice: "$2,500-$3,750 Nightly | Christmas & NY",
+            link: "/listings/woodrun-2-bed",
+            airbnbLink: WOODRUN_2_BED_AIRBNB_LINK,
             isPetFriendly: false,
             isSkiInSkiOut: true,
           },

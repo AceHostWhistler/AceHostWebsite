@@ -321,6 +321,15 @@ export const listingAmenities: Record<string, string[]> = {
     "Fully equipped kitchen",
     "3 bed · 3 bath · parking",
   ],
+  "woodrun-2-bed": [
+    "Ski-in / ski-out on Blackcomb",
+    "2 bedrooms · 4 beds · 7 guests",
+    "Year-round pool and hot tub",
+    "2 free underground parking spots",
+    "2 ski lockers and boot dryer",
+    "Air conditioning",
+    "King suite with ensuite",
+  ],
   "wedge-mountain-lodge-spa": [
     "Full-service spa & wellness",
     "10 bedrooms · 13 bathrooms",

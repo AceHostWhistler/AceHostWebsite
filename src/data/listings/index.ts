@@ -66,6 +66,8 @@ import WedgeMountainLodgeSpaDetails from "./details/wedge-mountain-lodge-spa";
 import wedge_mountain_lodge_spaMeta from "./meta/wedge-mountain-lodge-spa";
 import WhisperingPinesSkiInSkiOutDetails from "./details/whispering-pines-ski-in-ski-out";
 import whispering_pines_ski_in_ski_outMeta from "./meta/whispering-pines-ski-in-ski-out";
+import Woodrun2BedDetails from "./details/woodrun-2-bed";
+import woodrun_2_bedMeta from "./meta/woodrun-2-bed";
 import WhistlerVillagePenthouseDetails from "./details/whistler-village-penthouse";
 import whistler_village_penthouseMeta from "./meta/whistler-village-penthouse";
 import WhistlerVillagePenthouse3BdrWalkToSkiDetails from "./details/whistler-village-penthouse-3-bdr-walk-to-ski";
@@ -114,7 +116,8 @@ export const listingSlugs = [
   "whispering-pines-ski-in-ski-out",
   "whistler-village-penthouse",
   "whistler-village-penthouse-3-bdr-walk-to-ski",
-  "whistler-village-views-luxury-2-5-bedroom"
+  "whistler-village-views-luxury-2-5-bedroom",
+  "woodrun-2-bed"
 ] as const;
 
 export type ListingSlug = (typeof listingSlugs)[number];
@@ -157,6 +160,7 @@ export const listings: Record<string, ListingEntry> = {
   "whistler-village-penthouse": { ...whistler_village_penthouseMeta, Details: WhistlerVillagePenthouseDetails },
   "whistler-village-penthouse-3-bdr-walk-to-ski": { ...whistler_village_penthouse_3_bdr_walk_to_skiMeta, Details: WhistlerVillagePenthouse3BdrWalkToSkiDetails },
   "whistler-village-views-luxury-2-5-bedroom": { ...whistler_village_views_luxury_2_5_bedroomMeta, Details: WhistlerVillageViewsLuxury25BedroomDetails },
+  "woodrun-2-bed": { ...woodrun_2_bedMeta, Details: Woodrun2BedDetails },
 };
 
 export function getListing(slug: string): ListingEntry | undefined {
