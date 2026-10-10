@@ -19,6 +19,25 @@ export interface Article {
 // All blog articles data with proper image paths
 export const allArticles: Article[] = [
   {
+    title: "Whistler Condos: Ski-In Ski-Out vs Village | AceHost",
+    category: "Luxury Properties, Whistler Condos",
+    description:
+      "Compare ski-in ski-out and Whistler Village condos. Explore locations, amenities and AceHost stays, then check availability and book your Whistler getaway.",
+    readTime: "8 min read",
+    link: "/post/whistler-condos-ski-in-ski-out-vs-village",
+    coverImage:
+      "/photos/properties/Woodrun 2-bed/03 - 20261008 A7M3 04 A1_00532.jpg",
+    publishedAt: "2026-10-10T16:00:00.000Z",
+    headline: "Whistler Condos: Ski-In Ski-Out vs. Village Stays",
+    keywords: [
+      "Whistler condos",
+      "ski-in ski-out Whistler condo",
+      "Whistler Village condo",
+      "Upper Village Blackcomb condo",
+      "AceHost Whistler rentals",
+    ],
+  },
+  {
     title:
       "Whistler's Best Property Management Company: Local Expertise Across Every Major Phase 1 Building and Neighbourhoods | AceHost",
     category: "Property Management, Whistler",
