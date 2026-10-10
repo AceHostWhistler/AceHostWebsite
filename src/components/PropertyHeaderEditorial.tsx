@@ -213,29 +213,48 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
     <>
       <Head>
         {shareImageUrl ? (
-          <meta property="og:image" content={shareImageUrl} />
-        ) : null}
-        {shareImageUrl ? (
-          <meta property="og:image:secure_url" content={shareImageUrl} />
-        ) : null}
-        {shareImageUrl ? (
-          <meta property="og:image:alt" content={title} />
+          <meta key="og:image" property="og:image" content={shareImageUrl} />
         ) : null}
         {shareImageUrl ? (
           <meta
+            key="og:image:secure_url"
+            property="og:image:secure_url"
+            content={shareImageUrl}
+          />
+        ) : null}
+        {shareImageUrl ? (
+          <meta key="og:image:alt" property="og:image:alt" content={title} />
+        ) : null}
+        {shareImageUrl ? (
+          <meta
+            key="og:image:type"
             property="og:image:type"
             content={shareImageMimeType(shareImage ?? "")}
           />
         ) : null}
-        {shareImageUrl ? <link rel="image_src" href={shareImageUrl} /> : null}
         {shareImageUrl ? (
-          <meta name="twitter:card" content="summary_large_image" />
+          <link key="image_src" rel="image_src" href={shareImageUrl} />
         ) : null}
         {shareImageUrl ? (
-          <meta name="twitter:image" content={shareImageUrl} />
+          <meta
+            key="twitter:card"
+            name="twitter:card"
+            content="summary_large_image"
+          />
         ) : null}
         {shareImageUrl ? (
-          <meta name="twitter:image:alt" content={title} />
+          <meta
+            key="twitter:image"
+            name="twitter:image"
+            content={shareImageUrl}
+          />
+        ) : null}
+        {shareImageUrl ? (
+          <meta
+            key="twitter:image:alt"
+            name="twitter:image:alt"
+            content={title}
+          />
         ) : null}
         <link rel="up" href={`${SITE_URL}/properties`} />
         <link rel="bookmark" href={canonicalUrl} />

@@ -13,6 +13,9 @@ import {
 import { businessInfo, SITE_URL } from "@/data/seo/business";
 import { resolveSocialShare } from "@/lib/seo/resolveSocialShare";
 import {
+  isLogoShareImage,
+  LOGO_SHARE_HEIGHT,
+  LOGO_SHARE_WIDTH,
   shareImageMimeType,
   toAbsoluteImageUrl,
 } from "@/lib/seo/socialShare";
@@ -71,6 +74,9 @@ function App({ Component, pageProps }: AppProps) {
   const shareImageUrl = toAbsoluteImageUrl(socialShare.image);
   const ogTitle = socialShare.socialTitle ?? socialShare.title;
   const ogDescription = socialShare.socialDescription ?? socialShare.description;
+  const twitterCard = isLogoShareImage(socialShare.image)
+    ? "summary"
+    : "summary_large_image";
 
   return (
     <>
@@ -104,17 +110,44 @@ function App({ Component, pageProps }: AppProps) {
         <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
         <title>{socialShare.title}</title>
         <meta name="description" content={socialShare.description} />
-        <meta property="og:title" content={ogTitle} />
-        <meta property="og:description" content={ogDescription} />
-        <meta property="og:image" content={shareImageUrl} />
-        <meta property="og:image:secure_url" content={shareImageUrl} />
-        <meta property="og:image:alt" content={ogTitle} />
+        <meta key="og:title" property="og:title" content={ogTitle} />
         <meta
+          key="og:description"
+          property="og:description"
+          content={ogDescription}
+        />
+        <meta key="og:image" property="og:image" content={shareImageUrl} />
+        <meta
+          key="og:image:secure_url"
+          property="og:image:secure_url"
+          content={shareImageUrl}
+        />
+        <meta key="og:image:alt" property="og:image:alt" content={ogTitle} />
+        <meta
+          key="og:image:type"
           property="og:image:type"
           content={shareImageMimeType(socialShare.image)}
         />
-        <link rel="image_src" href={shareImageUrl} />
-        <meta property="og:type" content={socialShare.type ?? "website"} />
+        {isLogoShareImage(socialShare.image) ? (
+          <>
+            <meta
+              key="og:image:width"
+              property="og:image:width"
+              content={String(LOGO_SHARE_WIDTH)}
+            />
+            <meta
+              key="og:image:height"
+              property="og:image:height"
+              content={String(LOGO_SHARE_HEIGHT)}
+            />
+          </>
+        ) : null}
+        <link key="image_src" rel="image_src" href={shareImageUrl} />
+        <meta
+          key="og:type"
+          property="og:type"
+          content={socialShare.type ?? "website"}
+        />
         {socialShare.type === "article" && socialShare.publishedAt ? (
           <meta
             property="article:published_time"
@@ -127,11 +160,19 @@ function App({ Component, pageProps }: AppProps) {
             content={socialShare.modifiedAt}
           />
         ) : null}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={ogTitle} />
-        <meta name="twitter:description" content={ogDescription} />
-        <meta name="twitter:image" content={shareImageUrl} />
-        <meta name="twitter:image:alt" content={ogTitle} />
+        <meta key="twitter:card" name="twitter:card" content={twitterCard} />
+        <meta key="twitter:title" name="twitter:title" content={ogTitle} />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
+          content={ogDescription}
+        />
+        <meta key="twitter:image" name="twitter:image" content={shareImageUrl} />
+        <meta
+          key="twitter:image:alt"
+          name="twitter:image:alt"
+          content={ogTitle}
+        />
         {blogStructuredData && (
           <script
             type="application/ld+json"

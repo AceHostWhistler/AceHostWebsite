@@ -13,10 +13,17 @@ export type SocialSharePayload = {
   socialDescription?: string;
 };
 
-export const ACEHOST_LOGO_IMAGE = "/logo.png";
+export const ACEHOST_LOGO_IMAGE = "/og-logo.png";
 export const DEFAULT_SOCIAL_IMAGE = ACEHOST_LOGO_IMAGE;
+export const LOGO_SHARE_WIDTH = 800;
+export const LOGO_SHARE_HEIGHT = 800;
 /** Bump this when cover photos change so Google and iMessage recache the new image. */
-export const SHARE_IMAGE_VERSION = "20260930c";
+export const SHARE_IMAGE_VERSION = "20261009a";
+
+export function isLogoShareImage(imagePath: string): boolean {
+  const path = imagePath.split("?")[0]?.toLowerCase() ?? "";
+  return path.endsWith("/og-logo.png") || path.endsWith("/logo.png");
+}
 
 export function shareImageMimeType(imagePath: string): string {
   const path = imagePath.split("?")[0]?.toLowerCase() ?? "";

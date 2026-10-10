@@ -33,7 +33,6 @@ import {
   buildSiteNavigationSchema,
   buildWebsiteSchema,
 } from "@/lib/seo/schema";
-import { SITE_URL } from "@/data/seo/business";
 
 const Testimonials = dynamic(() => import("@/components/Testimonials"), {
   ssr: true,
@@ -302,23 +301,6 @@ const Home = () => {
           name="keywords"
           content="Whistler vacation rentals, luxury whistler chalet, whistler accommodations, whistler property management, whistler concierge, luxury rental"
         />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="AceHost | Luxury Vacation Rental Properties in Whistler"
-        />
-        <meta
-          property="og:description"
-          content="AceHost offers luxury rental properties in Whistler, VIP concierge services, and property management. Explore our exclusive collection of Whistler chalets and homes."
-        />
-        <meta
-          property="og:image"
-          content={`${SITE_URL}/logo.png`}
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content={`${SITE_URL}/logo.png`} />
-        <meta property="og:url" content={SITE_URL} />
-        <link rel="canonical" href={SITE_URL} />
         <link rel="icon" type="image/png" sizes="48x48" href="/favicons/acehost-48.png?v=4" />
 
         {/* Structured data for Google search results */}

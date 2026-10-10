@@ -42,8 +42,7 @@ export default function Document() {
         {/* OpenGraph metadata for social sharing and search results */}
         <meta property="og:site_name" content="AceHost Whistler" />
         
-        {/* Twitter Card defaults, per-page images set in _app SocialShareMeta */}
-        <meta name="twitter:card" content="summary_large_image" />
+        {/* Twitter Card is set per page in _app so logo shares stay a single compact image */}
         <meta name="twitter:site" content="@acehost_whistler" />
 
         {/* Enable DNS prefetching */}

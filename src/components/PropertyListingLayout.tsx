@@ -165,15 +165,25 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
         <meta name="description" content={seo.description} />
         {seo.keywords && <meta name="keywords" content={seo.keywords} />}
         {coverShareUrl ? (
-          <meta property="og:image" content={coverShareUrl} />
+          <meta key="og:image" property="og:image" content={coverShareUrl} />
         ) : null}
         {coverShareUrl ? (
-          <meta property="og:image:secure_url" content={coverShareUrl} />
+          <meta
+            key="og:image:secure_url"
+            property="og:image:secure_url"
+            content={coverShareUrl}
+          />
         ) : null}
         {coverShareUrl ? (
-          <meta name="twitter:image" content={coverShareUrl} />
+          <meta
+            key="twitter:image"
+            name="twitter:image"
+            content={coverShareUrl}
+          />
         ) : null}
-        {coverShareUrl ? <link rel="image_src" href={coverShareUrl} /> : null}
+        {coverShareUrl ? (
+          <link key="image_src" rel="image_src" href={coverShareUrl} />
+        ) : null}
         {structuredData && (
           <script
             type="application/ld+json"
