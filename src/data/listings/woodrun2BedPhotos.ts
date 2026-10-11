@@ -5,7 +5,7 @@ const D = WOODRUN_2_BED_PHOTO_DIR;
 export const WOODRUN_2_BED_COVER = `${D}/03 - 20261008 A7M3 04 A1_00532.jpg`;
 
 export const WOODRUN_2_BED_AIRBNB_LINK =
-  "https://www.airbnb.ca/rooms/1793052831212188813?guests=1&adults=1&s=67&unique_share_id=10d91b83-2689-4877-90fb-ebafe5eb6c96";
+  "https://www.airbnb.ca/rooms/1793052831212188813?guests=1&adults=1&s=67&unique_share_id=f9ff3669-46ff-4f31-abf9-bc5e06f38cce";
 
 /** Cover first, then remaining numbered gallery photos. */
 export const WOODRUN_2_BED_PHOTOS: string[] = [

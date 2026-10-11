@@ -324,7 +324,7 @@ export const listingAmenities: Record<string, string[]> = {
   "woodrun-2-bed": [
     "Ski-in / ski-out on Blackcomb",
     "2 bedrooms · 4 beds · 7 guests",
-    "Year-round pool and hot tub",
+    "Year-round pool, hot tub, gym and sauna",
     "2 free underground parking spots",
     "2 ski lockers and boot dryer",
     "Air conditioning",

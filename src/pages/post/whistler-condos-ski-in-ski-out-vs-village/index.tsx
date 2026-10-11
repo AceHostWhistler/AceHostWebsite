@@ -110,7 +110,7 @@ export default function WhistlerCondosSkiVsVillagePost() {
               <SectionImage
                 src={HERO}
                 alt="Woodrun Lodge at dusk on Blackcomb Mountain"
-                caption="Woodrun Lodge on Blackcomb. Ski access here depends on open connecting terrain."
+                caption="Woodrun Lodge on Blackcomb, with ski-in/ski-out along Merlin's run."
                 priority
               />
             </div>
@@ -204,10 +204,11 @@ export default function WhistlerCondosSkiVsVillagePost() {
                 </li>
               </ul>
               <p>
-                Woodrun's listing is explicit on that last point: ski-to-door
-                access still depends on snowfall, weather and mountain operations.
-                That is a useful standard for any slopeside condo, even when the
-                building is genuinely on the hill.
+                Woodrun Lodge sits alongside Merlin's run with genuine
+                ski-in/ski-out access, including a short ski down toward the
+                Blackcomb Gondola. That is still a useful reminder to confirm how
+                you get on and off the mountain at any slopeside condo, especially
+                early and late season.
               </p>
 
               <h2
@@ -344,8 +345,8 @@ export default function WhistlerCondosSkiVsVillagePost() {
               <p>
                 The main Village is still reachable on foot from several of these
                 condos. Woodrun's listing describes the Fairmont as about a
-                2-minute downhill walk and Whistler Village as about a 10 to 15
-                minute walk. That is a different evening than staying on the
+                one to two-minute downhill walk and Whistler Village as about a
+                10 to 15-minute walk. That is a different evening than staying on the
                 Stroll, but you are not isolated from town.
               </p>
               <SectionImage

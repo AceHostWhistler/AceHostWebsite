@@ -10,7 +10,7 @@ const listing: ListingData = {
   seo: {
     title: "Ski-In Ski-Out Penthouse | Pool - Hot Tub - Views - AceHost",
     description:
-      "Stay in a luxury ski-in/ski-out penthouse on Blackcomb Mountain, where exposed log beams, vaulted ceilings and rustic chalet charm meet modern renovations and top-of-the-line furnishings. Enjoy mountain views through floor-to-ceiling windows and from your private balcony, plus a gas fireplace, year-round heated pool and hot tub. Sleeps 7 with a King suite, Queen/Twin bunk and Queen sofa bed. Includes 2 guaranteed free parking spots, 2 ski lockers, boot dryer, AC, Pack 'n Play and high chair.",
+      "Stay in This Woodrun Penthouse, a luxury ski-in/ski-out retreat on Blackcomb Mountain where exposed log beams and vaulted ceilings meet modern renovations and premium furnishings. Enjoy mountain views, a private balcony and gas fireplace, plus a shared year-round heated pool, hot tub, gym and sauna. Sleeps 7 with a King suite, Queen/Twin bunk and Queen sofa bed, plus two guaranteed free underground parking spots, two ski lockers, boot dryer, AC, Pack 'n Play and high chair.",
   },
   header: {
     title: "Ski-In Ski-Out Penthouse | Pool - Hot Tub - Views",

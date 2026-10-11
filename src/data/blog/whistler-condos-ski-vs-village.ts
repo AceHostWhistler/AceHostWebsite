@@ -48,11 +48,11 @@ export const FEATURED_PROPERTIES = [
       "Woodrun Lodge penthouse living area with vaulted timber ceilings and mountain views",
     caption: "Top-floor penthouse at Woodrun Lodge on Blackcomb Mountain.",
     summary:
-      "A strong match if skiing is the centre of the trip and you want a smaller luxury condo rather than a large chalet. The penthouse sits at Woodrun Lodge on Blackcomb, with ski-in/ski-out access when the connecting terrain on Merlin's run is open.",
+      "A strong match if skiing is the centre of the trip and you want a smaller luxury condo rather than a large chalet. The penthouse sits at Woodrun Lodge on Blackcomb, with ski-in/ski-out access along Merlin's run.",
     features: [
       "Sleeps 7 across 2 enclosed bedrooms and a queen sofa bed",
       "Two guaranteed free parking spots, both underground",
-      "Shared year-round pool, hot tub and gym in the building",
+      "Shared year-round pool, hot tub, gym and sauna in the building",
     ],
   },
   {
