@@ -321,9 +321,9 @@ const ListProperty = () => {
                   <div className="relative rounded-2xl overflow-hidden shadow-lg ring-1 ring-gray-200 bg-gray-50">
                     <Image
                       src="/photos/homepage/list-property/airbnb-superhost-profile.png"
-                      alt="Ben's Airbnb Superhost profile, 4.92 rating and 1100+ reviews"
-                      width={640}
-                      height={480}
+                      alt="AceHost Whistler Superhost profile, 4.92 rating and 1103+ reviews"
+                      width={668}
+                      height={430}
                       className="w-full h-auto object-contain transition-opacity group-hover:opacity-95"
                     />
                   </div>
@@ -334,7 +334,7 @@ const ListProperty = () => {
                   rel="noopener noreferrer"
                   className="mt-4 inline-flex items-center justify-center rounded-lg bg-[#FF5A5F] hover:bg-[#E0484D] px-6 py-3 text-sm font-semibold text-white transition-colors"
                 >
-                  View Ben&apos;s Airbnb Superhost Profile
+                  View AceHost Whistler Superhost Profile
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </div>
