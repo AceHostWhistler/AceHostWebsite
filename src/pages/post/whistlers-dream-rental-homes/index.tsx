@@ -757,7 +757,7 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/Woodrun 2-bed/03 - 20261008 A7M3 04 A1_00532.jpg"
+                  src="/photos/properties/Woodrun 2-bed/Woodrun snow 1.jpg"
                   alt="Woodrun Lodge ski-in ski-out penthouse on Blackcomb"
                   fill
                   className="object-cover"

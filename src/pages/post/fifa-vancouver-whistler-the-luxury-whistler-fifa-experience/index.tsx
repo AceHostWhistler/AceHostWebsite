@@ -176,7 +176,7 @@ const condoTownhomeOptions: FeaturedProperty[] = [
     description:
       "A luxury Woodrun Lodge penthouse on Blackcomb with true ski-in/ski-out access, vaulted timber ceilings, mountain views, a gas fireplace, and a year-round pool, hot tub, gym and sauna. Sleeps 7, with 2 free parking spots.",
     photos: [
-      "/photos/properties/Woodrun 2-bed/03 - 20261008 A7M3 04 A1_00532.jpg",
+      "/photos/properties/Woodrun 2-bed/Woodrun snow 1.jpg",
       "/photos/properties/Woodrun 2-bed/01 - 20261008 A7M3 04 A1_00668.jpg",
       "/photos/properties/Woodrun 2-bed/02 - 20261008 A7M3 04 A1_00466.jpg",
       "/photos/properties/Woodrun 2-bed/04 - 20261008 A7M3 04 A1_00460.jpg",

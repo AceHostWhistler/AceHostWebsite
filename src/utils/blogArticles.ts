@@ -26,7 +26,7 @@ export const allArticles: Article[] = [
     readTime: "8 min read",
     link: "/post/whistler-condos-ski-in-ski-out-vs-village",
     coverImage:
-      "/photos/properties/Woodrun 2-bed/03 - 20261008 A7M3 04 A1_00532.jpg",
+      "/photos/properties/Woodrun 2-bed/Woodrun snow 1.jpg",
     publishedAt: "2026-10-10T16:00:00.000Z",
     headline: "Whistler Condos: Ski-In Ski-Out vs. Village Stays",
     keywords: [

@@ -43,7 +43,7 @@ export const FEATURED_PROPERTIES = [
     name: "Ski-In Ski-Out Penthouse | Pool - Hot Tub - Views",
     building: "Woodrun Lodge, Blackcomb",
     href: "/listings/woodrun-2-bed",
-    image: "/photos/properties/Woodrun 2-bed/03 - 20261008 A7M3 04 A1_00532.jpg",
+    image: "/photos/properties/Woodrun 2-bed/Woodrun snow 1.jpg",
     imageAlt:
       "Woodrun Lodge penthouse living area with vaulted timber ceilings and mountain views",
     caption: "Top-floor penthouse at Woodrun Lodge on Blackcomb Mountain.",
