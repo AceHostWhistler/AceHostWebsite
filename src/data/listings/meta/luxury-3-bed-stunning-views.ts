@@ -34,6 +34,7 @@ const listing: ListingData = {
   "/photos/properties/Luxury 3-Bed | Stunning Views/29 - 20250707 A7M3 03 A1_07588.jpg",
   "/photos/properties/Luxury 3-Bed | Stunning Views/30 - 20250707 A7M3 03 A1_07598.jpg",
   "/photos/properties/Luxury 3-Bed | Stunning Views/31 - 20250707 A7M3 03 A1_07627.jpg",
+  "/photos/properties/Luxury 3-Bed | Stunning Views/Marquise 507 and 226 ski in ski out.jpeg",
   "/photos/properties/Luxury 3-Bed | Stunning Views/Pool Marquise 1.png",
   "/photos/properties/Luxury 3-Bed | Stunning Views/Pool Marquise 2.png"
 ],
