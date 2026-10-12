@@ -749,12 +749,12 @@ export const propertyCategories: PropertyCategory[] = [
             bathrooms: 5.5,
             location: "Blackcomb, Whistler",
             description:
-              "Renovated 6-bedroom Blackcomb townhome with ski access about 2 minutes from the door, an 8-minute walk to Upper Village and 13 minutes to Whistler Village. Private hot tub, fireplace, chef's kitchen and space for 14 guests.",
+              "Renovated 6-bedroom Blackcomb townhome with ski access about 2 minutes from the door, an 8-minute walk to Upper Village and 13 minutes to Whistler Village. Private hot tub, chef's kitchen, dining for 13 or more, and space for 14 guests.",
             features: [
               "Ski Access About 2 Minutes From the Door",
               "Private Hot Tub",
               "Chef's Kitchen",
-              "Dining Table Seats 10",
+              "Dining Table Seats 13+",
               "Central A/C",
               "2 Decks and BBQ",
               "Walk to Upper Village",

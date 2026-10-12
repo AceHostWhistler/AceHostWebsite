@@ -117,7 +117,7 @@ export const listingAmenities: Record<string, string[]> = {
     "8-minute walk to Upper Village",
     "Private hot tub",
     "6 bedrooms · 10 beds · 5.5 baths",
-    "Chef's kitchen, dining for 10",
+    "Chef's kitchen, dining for 13+",
     "Central A/C",
   ],
   "golf-course-views-luxury-4-bed-whistler-village": [

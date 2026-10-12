@@ -115,7 +115,7 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
       "Sleeps 14 | 6 Bedrooms | 10 Beds | 5.5 Bathrooms | Ski-in/Ski-out | Private Hot Tub | Blackcomb",
     paragraphs: [
       "Pinnacle Ridge 23 is a renovated 6-bedroom ski-in/ski-out townhome on Blackcomb, with ski access about 2 minutes from the door via the Yellow Brick Road. After the mountain, come home to a private hot tub, gas fireplace, chef's kitchen and room for 14 guests.",
-      "The dining table seats 10, with seating for another 4 at the kitchen island. Two decks, a BBQ, central A/C, fast Wi-Fi and laundry make it easy for larger groups. Upper Village is an 8-minute walk, and Whistler Village is about 13 minutes.",
+      "The main dining table seats 13 or more guests, with seating for another 4 at the kitchen island. Two decks, a BBQ, central A/C, fast Wi-Fi and laundry make it easy for larger groups. Upper Village is an 8-minute walk, and Whistler Village is about 13 minutes.",
       "Choose Pinnacle Ridge 23 when you want true ski-in/ski-out convenience, Village walkability, and a full 6-bedroom layout without booking a Kadenwood estate.",
     ],
     airbnbHref:
