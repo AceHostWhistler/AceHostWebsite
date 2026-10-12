@@ -945,8 +945,8 @@ export const propertyCategories: PropertyCategory[] = [
             id: "valhalla-unit-33-village",
             name: "Whistler Village - Private Hot Tub - Walk to Hill",
             images: [
-              "/photos/properties/Valhalla Unit 33 Village/Living room angle 3.png",
-              "/photos/properties/Valhalla Unit 33 Village/Living room brighter.png",
+              "/photos/properties/Valhalla Unit 33 Village/Valhalla snow edit 1.jpeg",
+              "/photos/properties/Valhalla Unit 33 Village/Valhalla snow edit 2.jpeg",
               "/photos/properties/Valhalla Unit 33 Village/Hot tub Northlands snow.png",
             ],
             guests: 8,

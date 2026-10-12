@@ -219,7 +219,7 @@ const FEATURED_PROPERTIES = [
     listingHref: "/listings/valhalla-unit-33-village",
     airbnbHref: "https://www.airbnb.ca/rooms/1693450379764005787",
     imageSrc:
-      "/photos/properties/Valhalla Unit 33 Village/Living room angle 3.png",
+      "/photos/properties/Valhalla Unit 33 Village/Valhalla snow edit 1.jpeg",
     imageAlt: "Living room inside the Valhalla Peaks townhouse in Whistler Village North",
   },
   {

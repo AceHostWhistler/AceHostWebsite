@@ -414,7 +414,7 @@ export default function BlogPost() {
                 without worrying about driving or parking.
               </p>
               <SectionImage
-                src="/photos/properties/Valhalla Unit 33 Village/Living room angle 3.png"
+                src="/photos/properties/Valhalla Unit 33 Village/Valhalla snow edit 1.jpeg"
                 alt="Luxury Whistler Village townhome interior with mountain views"
               />
               <h3>Great for Ski Lessons</h3>

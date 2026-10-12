@@ -26,7 +26,7 @@ const valhallaWriteup: ListingWriteupContent = {
     title: "The Residence",
     imageSide: "right",
     image: {
-      photoIndex: 3,
+      photoIndex: 7,
       alt: "Valhalla Peaks balcony",
     },
     paragraphs: [
@@ -41,7 +41,7 @@ const valhallaWriteup: ListingWriteupContent = {
     title: "Location & Village Access",
     imageSide: "left",
     image: {
-      photoIndex: 12,
+      photoIndex: 16,
       alt: "Valhalla Peaks hot tub",
     },
     paragraphs: [

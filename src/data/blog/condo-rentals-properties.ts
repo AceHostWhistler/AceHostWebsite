@@ -187,7 +187,7 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     airbnbHref:
       "https://www.airbnb.ca/rooms/1693450379764005787?guests=1&adults=1&s=67&unique_share_id=bd20bf84-b138-4958-9dc8-9128130a2028",
     listingHref: "/listings/valhalla-unit-33-village",
-    imageSrc: "/photos/properties/Valhalla Unit 33 Village/Living room angle 3.png",
+    imageSrc: "/photos/properties/Valhalla Unit 33 Village/Valhalla snow edit 1.jpeg",
     imageAlt: "Valhalla Peaks luxury 3-bed Whistler Village condo with private hot tub",
   },
   {

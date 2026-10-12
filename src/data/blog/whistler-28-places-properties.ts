@@ -259,7 +259,7 @@ export const townhomeProperties: Whistler28Property[] = [
     name: "Whistler Village - Private Hot Tub - Walk to Hill",
     description:
       "A spacious three-bedroom Valhalla townhome at the north end of Whistler Village with a private hot tub, three bathrooms, underground parking, and walk-to-lift access.",
-    image: "/photos/properties/Valhalla Unit 33 Village/Living room angle 3.png",
+    image: "/photos/properties/Valhalla Unit 33 Village/Valhalla snow edit 1.jpeg",
     listingHref: "/listings/valhalla-unit-33-village",
     bookUrl:
       "https://www.airbnb.ca/rooms/1693450379764005787?guests=1&adults=1&s=67&unique_share_id=bd20bf84-b138-4958-9dc8-9128130a2028",
