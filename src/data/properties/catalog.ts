@@ -8,6 +8,7 @@ import {
 } from "../listings/pinnacleRidge23Photos";
 import {
   WOODRUN_2_BED_AIRBNB_LINK,
+  WOODRUN_2_BED_COVER,
   WOODRUN_2_BED_PHOTOS,
 } from "../listings/woodrun2BedPhotos";
 
@@ -909,7 +910,12 @@ export const propertyCategories: PropertyCategory[] = [
           {
             id: "woodrun-2-bed",
             name: "Ski-In Ski-Out Penthouse | Pool - Hot Tub - Views",
-            images: WOODRUN_2_BED_PHOTOS,
+            images: [
+              WOODRUN_2_BED_COVER,
+              ...WOODRUN_2_BED_PHOTOS.filter(
+                (photo) => photo !== WOODRUN_2_BED_COVER
+              ),
+            ],
             guests: 7,
             bedrooms: 2,
             beds: 4,

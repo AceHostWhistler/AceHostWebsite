@@ -1,12 +1,14 @@
 import type { ListingData } from "../types";
 import {
   WOODRUN_2_BED_AIRBNB_LINK,
+  WOODRUN_2_BED_COVER,
   WOODRUN_2_BED_PHOTOS,
 } from "../woodrun2BedPhotos";
 
 const listing: ListingData = {
   slug: "woodrun-2-bed",
   photos: WOODRUN_2_BED_PHOTOS,
+  galleryPreserveOrder: true,
   seo: {
     title: "Ski-In Ski-Out Penthouse | Pool - Hot Tub - Views - AceHost",
     description:
@@ -24,6 +26,19 @@ const listing: ListingData = {
   },
   galleryTitle: "Ski-In Ski-Out Penthouse | Pool - Hot Tub - Views",
   photoAltPrefix: "Woodrun Lodge ski-in ski-out penthouse",
+  structuredData: {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    name: "Ski-In Ski-Out Penthouse | Pool - Hot Tub - Views",
+    image: WOODRUN_2_BED_COVER,
+    description:
+      "Stay in This Woodrun Penthouse, a luxury ski-in/ski-out retreat on Blackcomb Mountain where exposed log beams and vaulted ceilings meet modern renovations and premium furnishings. Enjoy mountain views, a private balcony and gas fireplace, plus a shared year-round heated pool, hot tub, gym and sauna.",
+    sku: "woodrun-2-bed",
+    brand: {
+      "@type": "Brand",
+      name: "AceHost",
+    },
+  },
 };
 
 export default listing;
