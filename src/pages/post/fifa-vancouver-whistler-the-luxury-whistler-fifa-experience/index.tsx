@@ -178,8 +178,8 @@ const condoTownhomeOptions: FeaturedProperty[] = [
     photos: [
       "/photos/properties/Woodrun 2-bed/Woodrun snow 1.jpg",
       "/photos/properties/Woodrun 2-bed/01 - 20261008 A7M3 04 A1_00668.jpg",
-      "/photos/properties/Woodrun 2-bed/02 - 20261008 A7M3 04 A1_00466.jpg",
-      "/photos/properties/Woodrun 2-bed/04 - 20261008 A7M3 04 A1_00460.jpg",
+      "/photos/properties/Woodrun 2-bed/Woodrun snow 2.jpg",
+      "/photos/properties/Woodrun 2-bed/9.jpg",
     ],
     bookUrl:
       "https://www.airbnb.ca/rooms/1793052831212188813?guests=1&adults=1&s=67&unique_share_id=f9ff3669-46ff-4f31-abf9-bc5e06f38cce",
