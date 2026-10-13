@@ -700,7 +700,7 @@ export default function BlogPost() {
 
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
-                  src="/photos/properties/The Aspens/4800-Spearhead-Drive-1.JPG"
+                  src="/photos/properties/The Aspens/Aspens drone shot.jpeg"
                   alt="The Aspens Luxury 2 Bedroom Condo"
                   fill
                   className="object-cover"

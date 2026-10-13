@@ -17,7 +17,7 @@ const HERO = "/photos/properties/2919 Heritage/Mountaintop.png";
 const VILLAGE_IMAGE =
   "/photos/properties/Valhalla Unit 33 Village/Hot tub Northlands snow.png";
 const UPPER_VILLAGE_IMAGE =
-  "/photos/properties/The Aspens/4800-Spearhead-Drive-1.JPG";
+  "/photos/properties/The Aspens/Aspens drone shot.jpeg";
 const CREEKSIDE_IMAGE = "/photos/properties/Bluffs Unit 4/Bluffs drone.jpg";
 const CTA_IMAGE = "/photos/homepage/WhistlerVacationRental.jpg";
 const PUBLISH_DATE = "September 2026";
@@ -227,7 +227,7 @@ const FEATURED_PROPERTIES = [
     label: "On-hill ski-in ski-out condo on Blackcomb",
     listingHref: "/listings/whispering-pines-ski-in-ski-out",
     airbnbHref: "https://www.airbnb.com/rooms/1072474554447345991",
-    imageSrc: "/photos/properties/The Aspens/4800-Spearhead-Drive-1.JPG",
+    imageSrc: "/photos/properties/The Aspens/Aspens drone shot.jpeg",
     imageAlt: "The Aspens ski-in ski-out condo on Blackcomb Mountain",
   },
   {

@@ -61,7 +61,7 @@ export const FEATURED_PROPERTIES = [
     name: "The Aspens | On-Hill Ski-In/Out | Hot Tubs | 2 BDR",
     building: "The Aspens, Blackcomb",
     href: "/listings/whispering-pines-ski-in-ski-out",
-    image: "/photos/properties/The Aspens/4800-Spearhead-Drive-1.JPG",
+    image: "/photos/properties/The Aspens/Aspens drone shot.jpeg",
     imageAlt:
       "Ground-floor ski-in ski-out condo at The Aspens on Blackcomb Mountain",
     caption: "Ground-floor unit at The Aspens, steps from Blackcomb terrain.",

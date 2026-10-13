@@ -163,10 +163,10 @@ const condoTownhomeOptions: FeaturedProperty[] = [
     description:
       "A classic Whistler option for those who want comfort, convenience, and a clean mountain stay. Sleeps 6 guests across 2 bedrooms and 4 beds, including a living-room pullout sofa.",
     photos: [
-      "/photos/properties/The Aspens/4800-Spearhead-Drive-1.JPG",
-      "/photos/properties/The Aspens/4800-Spearhead-Drive-2.JPG",
-      "/photos/properties/The Aspens/4800-Spearhead-Drive-3.JPG",
+      "/photos/properties/The Aspens/Aspens drone shot.jpeg",
       "/photos/properties/The Aspens/4800-Spearhead-Drive-4.JPG",
+      "/photos/properties/The Aspens/4800-Spearhead-Drive-5.JPG",
+      "/photos/properties/The Aspens/4800-Spearhead-Drive-6.JPG",
     ],
     bookUrl:
       "https://www.airbnb.com/rooms/1072474554447345991?guests=1&adults=1&s=67&unique_share_id=e556b35c-05b5-40b6-91e1-5304ffafc23b",

@@ -20,6 +20,7 @@ export const OG_COVER_BY_SOURCE: Record<string, string> = {
   "/photos/properties/Snowpine 3-bed Saul/02-2040 Karen Cres-02.jpg": "/og-covers/02-2040-Karen-Cres-02-48c75b66.jpg",
   "/photos/properties/Wedge Mountain Lodge Spa/Wedge Mountain Lodge & Spa - Exterior 1.jpg": "/og-covers/Wedge-Mountain-Lodge-Spa-Exterior-1-39e43925.jpg",
   "/photos/properties/Cozy Luxe 3-Bed in Whistler Village/02-1 4668 Blackcomb Way 02-Edit.jpg": "/og-covers/02-1-4668-Blackcomb-Way-02-Edit-0a23231a.jpg",
+  "/photos/properties/The Aspens/Aspens drone shot.jpeg": "/og-covers/Aspens-drone-shot-d14a141c.jpg",
   "/photos/properties/The Aspens/4800-Spearhead-Drive-1.JPG": "/og-covers/4800-Spearhead-Drive-1-2abf8029.jpg",
   "/photos/properties/Marquise 2-bed/Marquise-15.jpg": "/og-covers/Marquise-15-0cf9a277.jpg",
   "/photos/properties/Wolverine Crescent/01 - 20251220 A7M4 01 A1_01116-Edit.jpg": "/og-covers/01-20251220-A7M4-01-A1-01116-Edit-216fd957.jpg",

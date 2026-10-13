@@ -3,9 +3,8 @@ import type { ListingData } from "../types";
 const listing: ListingData = {
   slug: "whispering-pines-ski-in-ski-out",
   photos: [
+  "/photos/properties/The Aspens/Aspens drone shot.jpeg",
   "/photos/properties/The Aspens/4800-Spearhead-Drive-1.JPG",
-  "/photos/properties/The Aspens/4800-Spearhead-Drive-2.JPG",
-  "/photos/properties/The Aspens/4800-Spearhead-Drive-3.JPG",
   "/photos/properties/The Aspens/4800-Spearhead-Drive-4.JPG",
   "/photos/properties/The Aspens/4800-Spearhead-Drive-5.JPG",
   "/photos/properties/The Aspens/4800-Spearhead-Drive-6.JPG",

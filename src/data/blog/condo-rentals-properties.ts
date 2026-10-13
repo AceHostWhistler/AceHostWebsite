@@ -89,7 +89,7 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     airbnbHref:
       "https://www.airbnb.com/rooms/1072474554447345991?guests=1&adults=1&s=67&unique_share_id=e556b35c-05b5-40b6-91e1-5304ffafc23b",
     listingHref: "/listings/whispering-pines-ski-in-ski-out",
-    imageSrc: "/photos/properties/The Aspens/4800-Spearhead-Drive-1.JPG",
+    imageSrc: "/photos/properties/The Aspens/Aspens drone shot.jpeg",
     imageAlt: "The Aspens | 2-Bed Ski in/Out condo in Upper Village",
   },
   {

@@ -1304,7 +1304,7 @@ export const propertyCategories: PropertyCategory[] = [
             id: "whispering-pines",
             name: "The Aspens | On-Hill Ski-In/Out | Hot Tubs | 2 BDR",
             images: [
-              "/photos/properties/The Aspens/4800-Spearhead-Drive-1.JPG",
+              "/photos/properties/The Aspens/Aspens drone shot.jpeg",
             ],
             guests: 6,
             bedrooms: 2,

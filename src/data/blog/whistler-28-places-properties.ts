@@ -167,7 +167,7 @@ export const townhomeProperties: Whistler28Property[] = [
     name: "The Aspens | On-Hill Ski-In/Out | Hot Tubs | 2 BDR",
     description:
       "Ground-floor ski-in/ski-out at The Aspens, the closest unit to the pool, three hot tubs, and Blackcomb slopes. Sleeps 6 guests, including a living-room pullout sofa bed.",
-    image: "/photos/properties/The Aspens/4800-Spearhead-Drive-1.JPG",
+    image: "/photos/properties/The Aspens/Aspens drone shot.jpeg",
     listingHref: "/listings/whispering-pines-ski-in-ski-out",
     bookUrl:
       "https://www.airbnb.com/rooms/1072474554447345991?guests=1&adults=1&s=67&unique_share_id=e556b35c-05b5-40b6-91e1-5304ffafc23b",

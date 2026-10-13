@@ -350,7 +350,7 @@ export default function WhistlerCondosSkiVsVillagePost() {
                 Stroll, but you are not isolated from town.
               </p>
               <SectionImage
-                src="/photos/properties/The Aspens/4800-Spearhead-Drive-2.JPG"
+                src="/photos/properties/The Aspens/4800-Spearhead-Drive-4.JPG"
                 alt="Aerial view of Upper Village condos beside Blackcomb ski runs"
                 caption="Upper Village and Blackcomb favour ski convenience, with the main Village still walkable from many buildings."
               />

@@ -27,7 +27,7 @@ const whisperingPinesWriteup: ListingWriteupContent = {
     title: "The Residence",
     imageSide: "right",
     image: {
-      photoIndex: 0,
+      photoIndex: 1,
       alt: "The Aspens interior",
     },
     paragraphs: [
