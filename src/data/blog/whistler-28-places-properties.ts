@@ -237,7 +237,7 @@ export const townhomeProperties: Whistler28Property[] = [
     number: 22,
     name: "Whistler Village Penthouse 4-Bed - Ski in Ski out",
     description:
-      "A 2-level Hearthstone Lodge penthouse with four beds, a private balcony hot tub, stone fireplace, and steps-from-gondola access in Whistler Village.",
+      "A 2-level Hearthstone Lodge penthouse with four beds, a private balcony hot tub, wood-burning fireplace, and steps-from-gondola access in Whistler Village.",
     image:
       "/photos/properties/3-Bed PH Whistler Village/snowy-room-blinds-only Hearthstone.png",
     listingHref: "/listings/whistler-village-penthouse",

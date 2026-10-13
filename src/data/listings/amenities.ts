@@ -351,7 +351,7 @@ export const listingAmenities: Record<string, string[]> = {
     "Hearthstone Lodge penthouse",
     "Private hot tub",
     "Steps to gondolas",
-    "Stone fireplace & log beams",
+    "Wood-burning fireplace & log beams",
     "Air conditioning",
     "Free parking",
   ],

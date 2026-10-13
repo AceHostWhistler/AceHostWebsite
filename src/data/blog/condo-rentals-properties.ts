@@ -196,9 +196,9 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     stats:
       "Sleeps 7 | 2 Bedrooms | 4 Beds | 2 Bathrooms | Private Hot Tub | Walk to Gondolas | Village Location",
     paragraphs: [
-      "This Hearthstone Lodge penthouse is a 2-level alpine retreat steps from the Whistler and Blackcomb gondolas, with a private balcony hot tub, stone fireplace, exposed log beams, and free parking in the Rainbow Parkade below.",
-      "High ceilings, mountain views, and classic Whistler character make it an ideal gathering space after skiing. The grocery store and BC Liquor are directly downstairs, with top Village restaurants and après-ski just outside the door.",
-      "Once you arrive and park, you can walk almost everywhere – from morning lift lines to evening dinners – without needing your car again.",
+      "This Hearthstone Lodge penthouse is a 2-level alpine retreat steps from the Whistler and Blackcomb gondolas, with a private balcony hot tub, wood-burning fireplace, exposed log beams, and complimentary parking.",
+      "High ceilings, mountain views, and classic Whistler character make it an ideal gathering space after skiing. The grocery store and BC Liquor are directly downstairs, with top Village restaurants and apres-ski just outside the door.",
+      "Once you arrive and park, you can walk almost everywhere, from morning lift lines to evening dinners, without needing your car again.",
     ],
     airbnbHref:
       "https://www.airbnb.ca/rooms/1471251206220643818?guests=1&adults=1&s=67&unique_share_id=0ec28644-49fa-4b63-9276-7e5f5c6a1153",

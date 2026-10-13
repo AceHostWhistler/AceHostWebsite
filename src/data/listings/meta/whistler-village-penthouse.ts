@@ -31,7 +31,7 @@ const listing: ListingData = {
   seo: {
     title: "Whistler Village Penthouse 4-Bed - Ski in Ski out | AceHost",
     description:
-      "Hearthstone Lodge penthouse with private balcony hot tub, stone fireplace, log beams, and steps-from-gondola access in the heart of Whistler Village.",
+      "Hearthstone Lodge penthouse with private balcony hot tub, wood-burning fireplace, log beams, and steps-from-gondola access in the heart of Whistler Village.",
   },
   header: {
     title: "Whistler Village Penthouse 4-Bed - Ski in Ski out",

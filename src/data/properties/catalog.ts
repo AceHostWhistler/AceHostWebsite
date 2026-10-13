@@ -1046,7 +1046,7 @@ export const propertyCategories: PropertyCategory[] = [
             bathrooms: 2,
             location: "Whistler Village",
             description:
-              "Welcome to this Whistler Village penthouse at Hearthstone Lodge, a 2-level alpine retreat steps from the gondolas with a private balcony hot tub, stone fireplace, and free parking.",
+              "Experience classic alpine charm in this two-level Whistler Village penthouse at Hearthstone Lodge, just a short walk from the gondolas, with a private balcony hot tub, wood-burning fireplace and complimentary parking.",
             features: [
               "Private Hot Tub",
               "Walk to Gondolas",
@@ -1054,7 +1054,7 @@ export const propertyCategories: PropertyCategory[] = [
               "Free Parking",
               "High Ceilings",
               "Log Beams",
-              "Stone Fireplace",
+              "Wood-Burning Fireplace",
               "Mountain Views",
               "Fully Equipped Kitchen",
             ],
