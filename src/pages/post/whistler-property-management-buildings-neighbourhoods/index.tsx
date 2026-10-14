@@ -72,7 +72,7 @@ const KADENWOOD_HOMES = [
   "Two Cedars",
   "Panoramic Estate",
   "Slopeside Chalet",
-  "Timber Haven",
+  "TimberVue",
 ];
 
 const PRIVATE_HOME_AREAS = [

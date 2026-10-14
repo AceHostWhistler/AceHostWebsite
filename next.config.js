@@ -82,7 +82,12 @@ const nextConfig = {
       },
       {
         source: '/listings/altitude-retreat-kadenwood',
-        destination: '/listings/timber-haven-luxury-ski-in-ski-out-kadenwood',
+        destination: '/listings/timbervue-luxury-ski-in-ski-out-kadenwood',
+        permanent: true,
+      },
+      {
+        source: '/listings/timber-haven-luxury-ski-in-ski-out-kadenwood',
+        destination: '/listings/timbervue-luxury-ski-in-ski-out-kadenwood',
         permanent: true,
       },
       {

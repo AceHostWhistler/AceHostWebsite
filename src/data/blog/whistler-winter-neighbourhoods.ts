@@ -103,7 +103,7 @@ export const kadenwoodPropertyRefs: WinterNeighbourhoodPropertyRef[] = [
   { slug: "luxury-ski-in-ski-out-7-bedroom-kadenwood" },
   { slug: "panoramic-estate-kadenwood" },
   { slug: "slopeside-villa-kadenwood" },
-  { slug: "timber-haven-luxury-ski-in-ski-out-kadenwood" },
+  { slug: "timbervue-luxury-ski-in-ski-out-kadenwood" },
 ];
 
 export const blueberryPropertyRefs: WinterNeighbourhoodPropertyRef[] = [

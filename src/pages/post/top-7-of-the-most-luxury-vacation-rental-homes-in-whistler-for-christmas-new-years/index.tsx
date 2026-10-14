@@ -285,7 +285,7 @@ const LuxuryChristmasRentals = () => {
 
               {/* Property 3 */}
               <div className="bg-gray-50 p-6 rounded-lg mb-14">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">3) Timber Haven - Luxury Ski in Ski out - Kadenwood</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">3) TimberVue - Luxury Ski in Ski out - Kadenwood</h2>
 
                 <div className="flex flex-col md:flex-row gap-4 mb-6">
                   <div className="flex-1 bg-white p-4 rounded-lg shadow-sm">
@@ -316,7 +316,7 @@ const LuxuryChristmasRentals = () => {
                 <div className="my-6 relative aspect-[16/9] rounded-xl overflow-hidden shadow-md">
                   <Image
                     src="/photos/properties/Timber Haven John Harris/Drone Timber cover snow 2.png"
-                    alt="Timber Haven luxury chalet in Kadenwood"
+                    alt="TimberVue luxury chalet in Kadenwood"
                     fill
                     className="object-cover"
                   />
@@ -324,7 +324,7 @@ const LuxuryChristmasRentals = () => {
 
                 <div className="space-y-4 text-gray-700">
                   <p>
-                    Discover the epitome of luxury at Timber Haven, nestled in
+                    Discover the epitome of luxury at TimberVue, nestled in
                     Whistler&apos;s most prestigious ski-in, ski-out neighbourhood,
                     Kadenwood. Set in close proximity to the private Kadenwood
                     gondola, this 8-bedroom property offers an unrivalled location
@@ -340,14 +340,14 @@ const LuxuryChristmasRentals = () => {
                   <p>
                     With stunning mountain views and beautiful furnishings throughout,
                     the open-concept living and dining areas are ideal
-                    for entertaining large groups. Timber Haven provides
+                    for entertaining large groups. TimberVue provides
                     the perfect backdrop for an elegant holiday celebration.
                   </p>
                 </div>
 
                 <div className="mt-6">
                   <Link 
-                    href="/listings/timber-haven-luxury-ski-in-ski-out-kadenwood" 
+                    href="/listings/timbervue-luxury-ski-in-ski-out-kadenwood" 
                     className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                   >
                     View Property Details

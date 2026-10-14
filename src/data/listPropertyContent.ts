@@ -113,7 +113,7 @@ export const SHOWCASE_PROPERTY_IDS = [
   "two-cedars",
   "chalet-la-forja",
   "panoramic-estate",
-  "timber-haven-luxury-ski-in-ski-out-kadenwood",
+  "timbervue-luxury-ski-in-ski-out-kadenwood",
   "heron-views-whistler",
   "luxury-ski-in-ski-out-7-bedroom-kadenwood",
 ];
@@ -183,7 +183,7 @@ export const LIST_PROPERTY_TESTIMONIALS: TestimonialItem[] = [
   },
   {
     name: "Paulina",
-    role: "Guest at Timber Haven",
+    role: "Guest at TimberVue",
     text: "Ben is an exceptional host! His attention and hospitality were 10000/10. He helped us with everything from the very beginning and was always quick to respond. The house is an absolute WOW and worth every single penny. It's even more incredible in person. Having a cup of coffee on the terrace was the perfect way to start the day. We would definitely stay here again and highly recommend it!",
     date: "1 day ago",
   },

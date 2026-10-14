@@ -422,12 +422,12 @@ export default function BlogPost() {
               </div>
 
               <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-                Timber Haven - Luxury Ski in Ski out - Kadenwood
+                TimberVue - Luxury Ski in Ski out - Kadenwood
               </h3>
               <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
                 <Image
                   src="/photos/properties/Timber Haven John Harris/Drone Timber cover snow 2.png"
-                  alt="Timber Haven luxury chalet in Kadenwood, Whistler"
+                  alt="TimberVue luxury chalet in Kadenwood, Whistler"
                   fill
                   className="object-cover"
                 />
@@ -435,17 +435,17 @@ export default function BlogPost() {
               <p>
                 This extraordinary Kadenwood estate accommodates up to 
                 16 guests in the ultimate luxury. Featuring ski-in/ski-out access via the private 
-                Kadenwood gondola, Timber Haven offers 8 bedrooms, 6.5 bathrooms, a private hot tub, 
+                Kadenwood gondola, TimberVue offers 8 bedrooms, 6.5 bathrooms, a private hot tub, 
                 multiple lounge spaces, outdoor dining, and curated artwork throughout. 
                 AceHost VIP concierge is included to ensure a truly 
                 exceptional stay experience.
               </p>
               <div className="mt-4 mb-8">
                 <Link
-                  href="/listings/timber-haven-luxury-ski-in-ski-out-kadenwood"
+                  href="/listings/timbervue-luxury-ski-in-ski-out-kadenwood"
                   className="inline-flex items-center text-blue-600 hover:text-blue-800"
                 >
-                  View Timber Haven
+                  View TimberVue
                   <svg
                     className="ml-2 w-4 h-4"
                     fill="currentColor"

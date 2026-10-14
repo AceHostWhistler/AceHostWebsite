@@ -1,7 +1,7 @@
 import type { ListingData } from "../types";
 
 const listing: ListingData = {
-  slug: "timber-haven-luxury-ski-in-ski-out-kadenwood",
+  slug: "timbervue-luxury-ski-in-ski-out-kadenwood",
   photos: [
   "/photos/properties/Timber Haven John Harris/Drone Timber cover snow 2.png",
   "/photos/properties/Timber Haven John Harris/Drone Timber cover snow.png",
@@ -91,11 +91,11 @@ const listing: ListingData = {
   "/photos/properties/Timber Haven John Harris/Timber Snow living 9.png",
 ],
   seo: {
-    title: "Timber Haven - Luxury Ski in Ski out - Kadenwood - AceHost",
+    title: "TimberVue - Luxury Ski in Ski out - Kadenwood - AceHost",
     description: "Welcome to your private Kadenwood mountain estate, an 8-bedroom luxury home with stunning views, ski-in/ski-out access, a private hot tub, beautiful furnishings, curated artwork, and access to Kadenwood’s private residents-only gondola. With spacious living areas, outdoor dining, a ping pong table, multiple lounge spaces, and a main floor with 2 bedrooms including the Master Bedroom suite, this home is perfect for families, large groups, and guests who prefer minimal stairs during their stay.",
   },
   header:   {
-      "title": "Timber Haven - Luxury Ski in Ski out - Kadenwood",
+      "title": "TimberVue - Luxury Ski in Ski out - Kadenwood",
       "guests": 16,
       "bedrooms": 8,
       "bathrooms": 6.5,
@@ -105,8 +105,8 @@ const listing: ListingData = {
       "holidayPrice": "$12,000-$16,500 Nightly | Christmas & NY",
       "airbnbLink": "https://www.airbnb.ca/rooms/1684937418405220715?guests=1&adults=1&s=67&unique_share_id=07a60c93-180c-4b37-be0a-dd512adb2808"
   },
-  galleryTitle: "Timber Haven - Luxury Ski in Ski out - Kadenwood",
-  photoAltPrefix: "Timber Haven - Luxury Ski in Ski out - Kadenwood - AceHost",
+  galleryTitle: "TimberVue - Luxury Ski in Ski out - Kadenwood",
+  photoAltPrefix: "TimberVue - Luxury Ski in Ski out - Kadenwood - AceHost",
 };
 
 export default listing;

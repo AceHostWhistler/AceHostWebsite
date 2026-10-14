@@ -8,7 +8,7 @@ import {
   KADENWOOD_LOCATION_PARAGRAPHS,
 } from "./shared";
 
-const timberHavenWriteup: ListingWriteupContent = {
+const timberVueWriteup: ListingWriteupContent = {
   intro: {
     paragraphs: [
       "Welcome to your private Kadenwood mountain estate, an 8-bedroom luxury home with stunning views, ski-in/ski-out access, a private hot tub, beautiful furnishings, curated artwork, and access to Kadenwood's private residents-only gondola.",
@@ -29,7 +29,7 @@ const timberHavenWriteup: ListingWriteupContent = {
     imageSide: "right",
     image: {
       photoIndex: 2,
-      alt: "Timber Haven living and dining",
+      alt: "TimberVue living and dining",
     },
     paragraphs: [
       "Located in Kadenwood, Whistler's favourite luxury ski-in/ski-out neighbourhood, this 8-bedroom mountain estate offers the perfect blend of privacy, comfort, and convenience. Perched high above Creekside and surrounded by old growth forest, the home features one-of-a-kind mountain views, elegant interiors, and plenty of room for groups to relax, gather, and enjoy Whistler in every season.",
@@ -43,10 +43,10 @@ const timberHavenWriteup: ListingWriteupContent = {
     imageSide: "left",
     image: {
       photoIndex: 1,
-      alt: "Timber Haven in Kadenwood",
+      alt: "TimberVue in Kadenwood",
     },
     paragraphs: [
-      "In winter, Timber Haven connects to Whistler Mountain via Peak to Creek and Kadenwood's groomed ski trails, with the private residents-only gondola for quick access to Creekside.",
+      "In winter, TimberVue connects to Whistler Mountain via Peak to Creek and Kadenwood's groomed ski trails, with the private residents-only gondola for quick access to Creekside.",
       ...KADENWOOD_LOCATION_PARAGRAPHS,
     ],
   },
@@ -132,4 +132,4 @@ const timberHavenWriteup: ListingWriteupContent = {
   },
 };
 
-export default timberHavenWriteup;
+export default timberVueWriteup;

@@ -148,12 +148,12 @@ export default function BlogPost() {
               </div>
 
               <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-                Timber Haven - Luxury Ski in Ski out - Kadenwood
+                TimberVue - Luxury Ski in Ski out - Kadenwood
               </h3>
               <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
                 <Image
                   src="/photos/properties/Timber Haven John Harris/Drone Timber cover snow 2.png"
-                  alt="Timber Haven luxury chalet in Kadenwood, Whistler"
+                  alt="TimberVue luxury chalet in Kadenwood, Whistler"
                   fill
                   className="object-cover"
                 />
@@ -163,10 +163,10 @@ export default function BlogPost() {
               </p>
               <div className="mt-6 mb-8">
                 <Link
-                  href="/listings/timber-haven-luxury-ski-in-ski-out-kadenwood"
+                  href="/listings/timbervue-luxury-ski-in-ski-out-kadenwood"
                   className="inline-flex items-center justify-center px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-all shadow-sm hover:shadow-md font-medium"
                 >
-                  View Timber Haven
+                  View TimberVue
                   <svg
                     className="ml-2 w-5 h-5"
                     fill="currentColor"

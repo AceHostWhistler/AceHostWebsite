@@ -33,7 +33,7 @@ export interface HomepageListing {
 export const HOMEPAGE_PROPERTY_ORDER: readonly string[] = [
   "luxury-ski-in-ski-out-7-bedroom-kadenwood",
   "chalet-la-forja",
-  "timber-haven-luxury-ski-in-ski-out-kadenwood",
+  "timbervue-luxury-ski-in-ski-out-kadenwood",
   "two-cedars",
   "panoramic-estate",
   "slopeside-villa",

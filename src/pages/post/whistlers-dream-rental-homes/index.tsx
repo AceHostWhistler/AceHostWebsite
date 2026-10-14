@@ -178,7 +178,7 @@ export default function BlogPost() {
 
               {/* Property 3 */}
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
-                3) Timber Haven - Luxury Ski in Ski out - Kadenwood
+                3) TimberVue - Luxury Ski in Ski out - Kadenwood
               </h2>
 
               <div className="bg-gray-50 p-5 rounded-lg mb-6">
@@ -193,7 +193,7 @@ export default function BlogPost() {
               </div>
 
               <p>
-                Timber Haven, also located in the prestigious Kadenwood
+                TimberVue, also located in the prestigious Kadenwood
                 neighbourhood. This private mountain estate
                 features 8 bedrooms and 11 beds, accommodating up to 16 guests.
                 Immerse yourself in the serenity of the surrounding mountains as
@@ -205,7 +205,7 @@ export default function BlogPost() {
 
               <p className="text-blue-600 font-medium mt-2 mb-6">
                 <Link 
-                  href="/listings/timber-haven-luxury-ski-in-ski-out-kadenwood" 
+                  href="/listings/timbervue-luxury-ski-in-ski-out-kadenwood" 
                   className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   View Property Details
@@ -218,13 +218,13 @@ export default function BlogPost() {
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
                   src="/photos/properties/Timber Haven John Harris/Drone Timber cover snow 2.png"
-                  alt="Timber Haven in Kadenwood"
+                  alt="TimberVue in Kadenwood"
                   fill
                   className="object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-3">
                   <p className="text-sm font-medium">
-                    Timber Haven | Kadenwood
+                    TimberVue | Kadenwood
                   </p>
                 </div>
               </div>

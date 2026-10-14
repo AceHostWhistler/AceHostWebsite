@@ -109,9 +109,9 @@ export const MANSION_RENTAL_PROPERTIES: MansionRentalProperty[] = [
     ],
   },
   {
-    name: "Timber Haven",
-    listingHref: "/listings/timber-haven-luxury-ski-in-ski-out-kadenwood",
-    airbnbHref: listingAirbnb("timber-haven-luxury-ski-in-ski-out-kadenwood"),
+    name: "TimberVue",
+    listingHref: "/listings/timbervue-luxury-ski-in-ski-out-kadenwood",
+    airbnbHref: listingAirbnb("timbervue-luxury-ski-in-ski-out-kadenwood"),
     area: "Kadenwood",
     bedrooms: 8,
     guests: 16,
@@ -120,11 +120,11 @@ export const MANSION_RENTAL_PROPERTIES: MansionRentalProperty[] = [
     images: [
       {
         src: "/photos/properties/Timber Haven John Harris/Drone Timber cover snow 2.png",
-        alt: "Timber Haven eight-bedroom Whistler luxury chalet",
+        alt: "TimberVue eight-bedroom Whistler luxury chalet",
       },
       {
-        src: listingPhotos("timber-haven-luxury-ski-in-ski-out-kadenwood", [10])[0],
-        alt: "Timber Haven dining room and main living area",
+        src: listingPhotos("timbervue-luxury-ski-in-ski-out-kadenwood", [10])[0],
+        alt: "TimberVue dining room and main living area",
       },
     ],
   },

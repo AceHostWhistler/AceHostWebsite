@@ -66,7 +66,7 @@ const FAQ_ITEMS = [
   {
     question: "Which Whistler luxury home is best for guests who want fewer stairs?",
     answer:
-      "Panoramic Estate has a private elevator connecting its levels. Timber Haven has two bedrooms on the main floor, including the primary suite. Chalet La Forja also has a main-floor bedroom.",
+      "Panoramic Estate has a private elevator connecting its levels. TimberVue has two bedrooms on the main floor, including the primary suite. Chalet La Forja also has a main-floor bedroom.",
   },
   {
     question: "Can AceHost arrange a private chef or driver?",
@@ -503,14 +503,14 @@ export default function BlogPost() {
               />
 
               <h3 className="text-xl font-bold text-gray-900 mt-10 mb-3">
-                5. Timber Haven | Luxury Ski in Ski out | Kadenwood
+                5. TimberVue | Luxury Ski in Ski out | Kadenwood
               </h3>
               <p className="text-gray-700 font-medium not-prose text-base mb-4">
                 16 guests | 8 bedrooms | 11 beds | 6.5 bathrooms
               </p>
               <PropertyImages images={HEADLINE_PROPERTIES[4].images} />
               <p>
-                Timber Haven is a private eight-bedroom mountain estate with
+                TimberVue is a private eight-bedroom mountain estate with
                 Kadenwood ski-in/ski-out access, neighbourhood gondola access and
                 beautiful views over Whistler&rsquo;s alpine surroundings.
               </p>
@@ -524,7 +524,7 @@ export default function BlogPost() {
               </p>
               <p>
                 Two bedrooms, including the primary suite, are located on the main
-                floor. That makes Timber Haven particularly useful for groups
+                floor. That makes TimberVue particularly useful for groups
                 travelling with older relatives or anyone who would prefer fewer
                 stairs.
               </p>
@@ -769,7 +769,7 @@ export default function BlogPost() {
                 Choose by mobility needs
               </h3>
               <p>
-                Panoramic Estate has an elevator. Timber Haven includes two
+                Panoramic Estate has an elevator. TimberVue includes two
                 main-floor bedrooms, and Chalet La Forja has a main-floor bedroom.
                 These details can be more important than an extra amenity when
                 travelling with grandparents or guests who prefer fewer stairs.

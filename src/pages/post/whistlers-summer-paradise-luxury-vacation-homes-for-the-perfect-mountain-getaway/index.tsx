@@ -151,28 +151,28 @@ export default function BlogPost() {
               </div>
 
               <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-                Timber Haven - Luxury Ski in Ski out - Kadenwood
+                TimberVue - Luxury Ski in Ski out - Kadenwood
               </h3>
               <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
                 <Image
                   src="/photos/properties/Timber Haven John Harris/Drone Timber cover snow 2.png"
-                  alt="Timber Haven luxury chalet in Kadenwood, Whistler"
+                  alt="TimberVue luxury chalet in Kadenwood, Whistler"
                   fill
                   className="object-cover"
                 />
               </div>
               <p>
-                While Timber Haven is renowned as a winter destination, its summer appeal is equally spectacular. This magnificent Kadenwood estate offers unparalleled luxury with panoramic views of the forest and mountains in their summer splendor. The property&apos;s expansive outdoor spaces, including a private hot tub and multiple decks, are perfect for enjoying the mild summer temperatures and spectacular sunsets.
+                While TimberVue is renowned as a winter destination, its summer appeal is equally spectacular. This magnificent Kadenwood estate offers unparalleled luxury with panoramic views of the forest and mountains in their summer splendor. The property&apos;s expansive outdoor spaces, including a private hot tub and multiple decks, are perfect for enjoying the mild summer temperatures and spectacular sunsets.
               </p>
               <p>
                 Summer guests will appreciate the property&apos;s proximity to Whistler&apos;s valley trail network, perfect for hiking and biking adventures. After a day of exploration, unwind in the private hot tub or relax with a private chef-prepared dinner on the deck while enjoying the long summer evenings. AceHost VIP concierge ensures every need is met, allowing guests to fully immerse themselves in Whistler&apos;s summer magic.
               </p>
               <div className="mt-6 mb-8">
                 <Link
-                  href="/listings/timber-haven-luxury-ski-in-ski-out-kadenwood"
+                  href="/listings/timbervue-luxury-ski-in-ski-out-kadenwood"
                   className="inline-flex items-center justify-center px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-all shadow-sm hover:shadow-md font-medium"
                 >
-                  View Timber Haven
+                  View TimberVue
                   <svg
                     className="ml-2 w-5 h-5"
                     fill="currentColor"
@@ -516,7 +516,7 @@ export default function BlogPost() {
               </p>
               
               <p>
-                Each of our properties offers a unique vantage point to appreciate Whistler's natural splendor. The elevated position of our Kadenwood properties - including Panoramic Estate, Slope Side Chalet, Chalet La Forja, and Timber Haven - provides sweeping views of the entire valley, while our Blueberry Hill property, Falcon, offers a perfect perspective of Alpha Lake framed by mountain peaks. Even our village property, Heron Views, delivers stunning mountain vistas from a convenient central location.
+                Each of our properties offers a unique vantage point to appreciate Whistler's natural splendor. The elevated position of our Kadenwood properties - including Panoramic Estate, Slope Side Chalet, Chalet La Forja, and TimberVue - provides sweeping views of the entire valley, while our Blueberry Hill property, Falcon, offers a perfect perspective of Alpha Lake framed by mountain peaks. Even our village property, Heron Views, delivers stunning mountain vistas from a convenient central location.
               </p>
               
               <p>

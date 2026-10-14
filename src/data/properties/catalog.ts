@@ -75,7 +75,7 @@ export const CONDO_IDS = new Set([
 export const HOME_IDS = new Set([
   "two-cedars",
   "chalet-la-forja",
-  "timber-haven-luxury-ski-in-ski-out-kadenwood",
+  "timbervue-luxury-ski-in-ski-out-kadenwood",
   "luxury-ski-in-ski-out-7-bedroom-kadenwood",
   "panoramic-estate",
   "slopeside-villa",
@@ -575,8 +575,8 @@ export const propertyCategories: PropertyCategory[] = [
           },
 
           {
-            id: "timber-haven-luxury-ski-in-ski-out-kadenwood",
-            name: "Timber Haven - Luxury Ski in Ski out - Kadenwood",
+            id: "timbervue-luxury-ski-in-ski-out-kadenwood",
+            name: "TimberVue - Luxury Ski in Ski out - Kadenwood",
             images: [
               "/photos/properties/Timber Haven John Harris/Drone Timber cover snow 2.png",
               "/photos/properties/Timber Haven John Harris/Drone Timber cover snow.png",
@@ -613,7 +613,7 @@ export const propertyCategories: PropertyCategory[] = [
             priceRange: "$4000-$9,000+ per night",
             winterPrice: "$6500-$9000+ Nightly | Winter",
             holidayPrice: "$12,000-$16,500 Nightly | Christmas & NY",
-            link: "/listings/timber-haven-luxury-ski-in-ski-out-kadenwood",
+            link: "/listings/timbervue-luxury-ski-in-ski-out-kadenwood",
             isSkiInSkiOut: true,
             isPetFriendly: false,
           },

@@ -4,7 +4,7 @@ const CARD_SIZES = "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px";
 const HERO_SIZES = "(max-width: 1024px) 33vw, 320px";
 const CARD_QUALITY = 85;
 
-/** Timber Haven cover is 1536x1024, used as the shared property-card frame. */
+/** TimberVue cover is 1536x1024, used as the shared property-card frame. */
 export const PROPERTY_CARD_FRAME_CLASS =
   "relative aspect-[3/2] w-full overflow-hidden bg-neutral-100";
 

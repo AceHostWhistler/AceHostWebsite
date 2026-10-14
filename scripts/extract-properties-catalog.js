@@ -66,7 +66,7 @@ export const CONDO_IDS = new Set([
 export const HOME_IDS = new Set([
   "two-cedars",
   "chalet-la-forja",
-  "timber-haven-luxury-ski-in-ski-out-kadenwood",
+  "timbervue-luxury-ski-in-ski-out-kadenwood",
   "luxury-ski-in-ski-out-7-bedroom-kadenwood",
   "panoramic-estate",
   "slopeside-villa",

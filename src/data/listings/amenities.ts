@@ -295,7 +295,7 @@ export const listingAmenities: Record<string, string[]> = {
     "Fireplace",
     "Ideal for families & groups",
   ],
-  "timber-haven-luxury-ski-in-ski-out-kadenwood": [
+  "timbervue-luxury-ski-in-ski-out-kadenwood": [
     "Ski-in / ski-out · Kadenwood",
     "Private Kadenwood gondola",
     "Hot tub & sauna",

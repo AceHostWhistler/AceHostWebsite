@@ -34,7 +34,7 @@ const AIRBNB = {
     "https://www.airbnb.ca/rooms/666613336620375768?guests=1&adults=1&s=67&unique_share_id=0d8a1725-cb02-487a-a033-7cc2940692e4",
   laForja:
     "https://www.airbnb.ca/rooms/52655503?guests=1&adults=1&s=67&unique_share_id=f1bb5c2c-51f9-4a82-9aa4-670fb8caa71d",
-  timberHaven:
+  timberVue:
     "https://www.airbnb.ca/rooms/1684937418405220715?guests=1&adults=1&s=67&unique_share_id=07a60c93-180c-4b37-be0a-dd512adb2808",
   mountaintop:
     "https://www.airbnb.ca/rooms/1599369454342102375?guests=1&adults=1&s=67&unique_share_id=07a4f082-1dec-4a06-bf97-05638b3b71ef",
@@ -285,15 +285,15 @@ export default function BlogPost() {
                 airbnbHref={AIRBNB.laForja}
               />
 
-              {/* 3 Timber Haven */}
+              {/* 3 TimberVue */}
               <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">
-                3. Timber Haven - Luxury Ski in Ski out - Kadenwood
+                3. TimberVue - Luxury Ski in Ski out - Kadenwood
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 not-prose">
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
                     src="/photos/properties/Timber Haven John Harris/Drone Timber cover snow 2.png"
-                    alt="Timber Haven Kadenwood exterior and setting"
+                    alt="TimberVue Kadenwood exterior and setting"
                     fill
                     className="object-cover"
                   />
@@ -301,7 +301,7 @@ export default function BlogPost() {
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
                     src="/photos/properties/Timber Haven John Harris/Timber Snow living 13.png"
-                    alt="Timber Haven great room"
+                    alt="TimberVue great room"
                     fill
                     className="object-cover"
                   />
@@ -309,7 +309,7 @@ export default function BlogPost() {
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
                     src="/photos/properties/Timber Haven John Harris/20 - 20260506 A7M4 02 A1_09946.jpg"
-                    alt="Timber Haven hot tub and deck"
+                    alt="TimberVue hot tub and deck"
                     fill
                     className="object-cover"
                   />
@@ -317,14 +317,14 @@ export default function BlogPost() {
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
                     src="/photos/properties/Timber Haven John Harris/Hot Tub Timber Haven Snow.png"
-                    alt="Timber Haven kitchen and dining"
+                    alt="TimberVue kitchen and dining"
                     fill
                     className="object-cover"
                   />
                 </div>
               </div>
               <p>
-                Timber Haven is a great pick for families who want a big luxury home that still
+                TimberVue is a great pick for families who want a big luxury home that still
                 feels warm and comfortable. It sleeps up to 16 guests with 8 bedrooms, 11 beds, and
                 6.5 bathrooms.
               </p>
@@ -338,8 +338,8 @@ export default function BlogPost() {
                 polished mountain-home feel.
               </p>
               <CtaBlock
-                listingHref="/listings/timber-haven-luxury-ski-in-ski-out-kadenwood"
-                airbnbHref={AIRBNB.timberHaven}
+                listingHref="/listings/timbervue-luxury-ski-in-ski-out-kadenwood"
+                airbnbHref={AIRBNB.timberVue}
               />
 
               {/* 4 Mountaintop */}

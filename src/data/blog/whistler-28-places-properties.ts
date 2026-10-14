@@ -64,11 +64,11 @@ export const kadenwoodProperties: Whistler28Property[] = [
   },
   {
     number: 6,
-    name: "Timber Haven - Luxury Ski in Ski out - Kadenwood",
+    name: "TimberVue - Luxury Ski in Ski out - Kadenwood",
     description:
       "An eight-bedroom ski home with beautiful interiors, central air conditioning, a hot tub, sauna, generous gathering spaces, and private gondola access.",
     image: "/photos/properties/Timber Haven John Harris/Drone Timber cover snow 2.png",
-    listingHref: "/listings/timber-haven-luxury-ski-in-ski-out-kadenwood",
+    listingHref: "/listings/timbervue-luxury-ski-in-ski-out-kadenwood",
     bookUrl:
       "https://www.airbnb.ca/rooms/1684937418405220715?guests=1&adults=1&s=67&unique_share_id=07a60c93-180c-4b37-be0a-dd512adb2808",
   },
