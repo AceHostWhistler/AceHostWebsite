@@ -883,7 +883,7 @@ export const propertyCategories: PropertyCategory[] = [
             guests: 10,
             bedrooms: 2,
             beds: 7,
-            bathrooms: 3,
+            bathrooms: 2,
             location: "Taluswood, Whistler",
             description:
               "Perched in Taluswood's Bluffs, this 2-bedroom retreat puts you right on the Dave Murray Downhill for true ski-in ski-out days and beautiful mountain-view evenings. With a King suite, Queen bedroom, 4 Twin bunk beds, and a Queen sofa bed, the home is ideal for families and groups. A neighbourhood hot tub with stunning views, AC, Smart TVs, gas fireplace, BBQ, gorgeous patio view, chef-ready kitchen, generous parking, and secure ski & bike storage make every season comfortable and effortless.",

@@ -51,7 +51,7 @@ const listing: ListingData = {
     guests: 10,
     bedrooms: 2,
     beds: 7,
-    bathrooms: 3,
+    bathrooms: 2,
     priceRange: "Summer: $450-$1,200+ | Winter: $750-$1,600+ | Christmas/NY: $2,300-$3,100+",
     winterPrice: "$750-$1,600+ Nightly | Winter",
     holidayPrice: "$2,300-$3,100+ Nightly | Christmas & NY",

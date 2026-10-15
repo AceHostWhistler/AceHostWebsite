@@ -260,7 +260,7 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     name: "Bluffs #8 - Luxury 2 Bed - Ski in Ski out - Views!",
     priceRange: "$450-$1,200+ Summer | $750-$1,600+ Winter (seasonal)",
     stats:
-      "Sleeps 10 | 2 Bedrooms | 7 Beds | 3 Bathrooms | Ski-in/Ski-out | Hot Tub | Taluswood",
+      "Sleeps 10 | 2 Bedrooms | 7 Beds | 2 Bathrooms | Ski-in/Ski-out | Hot Tub | Taluswood",
     paragraphs: [
       "Perched in Taluswood's Bluffs, this 2-bedroom retreat puts you right on the Dave Murray Downhill for true ski-in ski-out days and beautiful mountain-view evenings. With a King suite, Queen bedroom, four Twin bunk beds, and a Queen sofa bed, the home sleeps up to 10 guests and is ideal for families and groups who want Creekside slope access.",
       "The open-concept main level combines kitchen, dining, and living areas with a gas fireplace, Smart TV, portable AC from May through November, and a covered balcony with BBQ and outdoor dining. A private complex hot tub, two underground parking stalls, outdoor parking for larger vehicles, and secure ski and bike storage make every season comfortable.",
