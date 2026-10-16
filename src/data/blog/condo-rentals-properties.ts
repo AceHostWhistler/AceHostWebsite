@@ -112,10 +112,10 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     name: "Pinnacle Ridge 23 | Ski-In/Out | Hot Tub | Village",
     priceRange: "$1,365-$3,675+ per night (seasonal)",
     stats:
-      "Sleeps 14 (up to 16 with bonus den) | 6 Bedrooms | 10 Beds | 5.5 Bathrooms | Ski-in/Ski-out | Private Hot Tub | Blackcomb",
+      "Sleeps 14 | 6 Bedrooms | 10 Beds | 5.5 Bathrooms | Ski-in/Ski-out | Private Hot Tub | Blackcomb",
     paragraphs: [
-      "Stay at Pinnacle Ridge 23, a beautifully renovated 6-bedroom mountain home on Blackcomb with ski access about 2 minutes from the door via the Yellow Brick Road and a private outdoor hot tub. Vaulted ceilings, a gas fireplace, chef's kitchen, 2 decks, BBQ and central A/C round out the stay.",
-      "The main dining table seats 13 or more guests, with seating for another 4 at the kitchen island. Sleeps 14 across 6 bedrooms, or up to 16 including a bonus sleeping den. Upper Village is an 8-minute walk, and Whistler Village is about 13 minutes.",
+      "Stay in one of Whistler's best ski-in/ski-out neighbourhoods at Pinnacle Ridge 23, a renovated 6-bedroom mountain home sitting slopeside on Blackcomb's main ski run. After skiing, return home to a private outdoor hot tub, gas fireplace and spacious living areas. Both Upper Village and Whistler Village are walking distance.",
+      "The chef's kitchen seats 13 or more at the dining table, with extra seating at the island. Sleeps 14 across 6 bedrooms, with a bonus den for extra twin beds. Ski access is about a 2-minute walk from the door.",
       "Choose Pinnacle Ridge 23 when you want true ski-in/ski-out convenience, Village walkability, and a full 6-bedroom layout without booking a Kadenwood estate.",
     ],
     airbnbHref:

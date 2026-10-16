@@ -155,7 +155,7 @@ export const townhomeProperties: Whistler28Property[] = [
     number: 14,
     name: "Pinnacle Ridge 23 | Ski-In/Out | Hot Tub | Village",
     description:
-      "A beautifully renovated 6-bedroom Blackcomb ski-in/ski-out home with ski access about 2 minutes from the door, a private hot tub, chef's kitchen, 2 decks and an 8-minute walk to Upper Village. Sleeps 14, or up to 16 including a bonus den.",
+      "A renovated 6-bedroom mountain home sitting slopeside on Blackcomb's main ski run, with ski access about a 2-minute walk from the door, a private outdoor hot tub, and both Upper Village and Whistler Village walking distance. Sleeps 14.",
     image:
       "/photos/properties/Pinnacle Ridge 23/Snowy Whistler Retreat with Gondola Views.png",
     listingHref: "/listings/pinnacle-ridge-23",

@@ -112,7 +112,8 @@ export const listingAmenities: Record<string, string[]> = {
   ],
   "pinnacle-ridge-23": [
     "Blackcomb, Whistler",
-    "Ski access about 2 minutes from the door",
+    "Slopeside on the main ski run",
+    "About a 2-minute walk from the door to ski",
     "8-minute walk to Upper Village",
     "Private hot tub",
     "6 bedrooms plus bonus den",

@@ -299,12 +299,12 @@ export default function BlogPost() {
                 />
               </div>
               <p>
-                Ski-in/ski-out on Blackcomb, with ski access about 2 minutes from
-                the door. This beautifully renovated 6-bedroom home sleeps 14, or
-                up to 16 including a bonus den, has a private hot tub and
-                chef&apos;s kitchen, and is an 8-minute walk to Upper Village. It
-                is one of the strongest large-group ski-in/ski-out options outside
-                Kadenwood.
+                Pinnacle Ridge 23 sits slopeside on Blackcomb&apos;s main ski run,
+                with ski access about a 2-minute walk from the door. This renovated
+                6-bedroom home has a private outdoor hot tub, gas fireplace and
+                chef&apos;s kitchen, and both Upper Village and Whistler Village are
+                walking distance. It is one of the strongest large-group ski-in/ski-out
+                options outside Kadenwood.
               </p>
               <div className="mt-6 mb-8">
                 <Link

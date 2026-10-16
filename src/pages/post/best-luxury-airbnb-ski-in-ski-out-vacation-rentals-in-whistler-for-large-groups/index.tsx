@@ -551,16 +551,17 @@ export default function BlogPost() {
                 </div>
               </div>
               <p>
-                Pinnacle Ridge 23 is a beautifully renovated 6-bedroom ski-in/ski-out home on Blackcomb
-                for groups of up to 14, or 16 including a bonus sleeping den. Ski access is about 2
-                minutes from the door on the Yellow Brick Road trail, with an 8-minute walk to Upper
-                Village and 13 minutes to Whistler Village.
+                Stay in one of Whistler&rsquo;s best ski-in/ski-out neighbourhoods at Pinnacle Ridge 23,
+                a renovated 6-bedroom home sitting slopeside on Blackcomb&rsquo;s main ski run. Ski
+                access is about a 2-minute walk from the door, with no driving, shuttles or hauling
+                equipment through the Village. Upper Village is an 8-minute walk and Whistler Village
+                is about 13 minutes.
               </p>
               <p>
-                After skiing, come home to a private hot tub, gas fireplace, chef&apos;s kitchen,
-                dining for 13 or more plus 4 at the island, 2 decks, BBQ and central A/C. It is one of
-                the strongest ski-in/ski-out options in the collection for a large family or
-                mixed group that still wants to walk to the Village.
+                After skiing, return home to a private outdoor hot tub, gas fireplace and spacious
+                living areas. The chef&apos;s kitchen seats 13 or more at the dining table, plus extra
+                seating at the island. The home sleeps 14 guests across 6 bedrooms, with a bonus den
+                for extra twin beds.
               </p>
               <p>
                 <strong>Why families love it:</strong> true ski-in/ski-out access, 6 bedrooms,

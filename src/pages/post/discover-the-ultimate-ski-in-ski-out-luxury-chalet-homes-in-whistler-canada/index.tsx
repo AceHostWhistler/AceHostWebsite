@@ -173,9 +173,9 @@ export default function BlogPost() {
                 ski-in/ski-out access to both Blackcomb and Whistler mountains.
                 Luxury chalets and townhomes here feature sophisticated alpine
                 architecture, spa-like amenities, and proximity to Upper Village.
-                Pinnacle Ridge 23 is a strong example: ski-in/ski-out access about
-                2 minutes from the door, a private hot tub, and an 8-minute walk
-                to Upper Village. Woodrun Lodge is another, a luxury ski-in/ski-out
+                Pinnacle Ridge 23 is a strong example: slopeside on Blackcomb&apos;s
+                main ski run, ski access about a 2-minute walk from the door, a
+                private hot tub, and an 8-minute walk to Upper Village. Woodrun Lodge is another, a luxury ski-in/ski-out
                 penthouse with vaulted timber ceilings, mountain views, and a
                 year-round heated pool and hot tub.
               </p>
@@ -290,14 +290,14 @@ export default function BlogPost() {
               </div>
 
               <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-                Pinnacle Ridge 23
+                Pinnacle Ridge 23 | Ski-In/Out | Hot Tub | Village
               </h3>
               <p>
-                This beautifully renovated 6-bedroom Blackcomb home is ski-in/ski-out,
-                with ski access about 2 minutes from the door. It sleeps 14, or up
-                to 16 including a bonus den, has a private hot tub and chef&apos;s
-                kitchen, and sits an 8-minute walk from Upper Village and about 13
-                minutes from Whistler Village.
+                Stay in one of Whistler&apos;s best ski-in/ski-out neighbourhoods
+                at this renovated 6-bedroom Blackcomb home. Pinnacle Ridge sits
+                slopeside on the main ski run, about a 2-minute walk from the door
+                to ski. It has a private outdoor hot tub and chef&apos;s kitchen,
+                and both Upper Village and Whistler Village are walking distance.
               </p>
               <div className="mt-4 mb-8">
                 <Link

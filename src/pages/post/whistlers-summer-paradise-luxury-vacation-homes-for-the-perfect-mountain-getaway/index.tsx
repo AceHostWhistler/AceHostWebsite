@@ -333,16 +333,16 @@ export default function BlogPost() {
                 />
               </div>
               <p>
-                Pinnacle Ridge 23 is a renovated 6-bedroom ski-in/ski-out townhome
-                on Blackcomb that works just as well in summer. Leave the car parked
+                Pinnacle Ridge 23 is a renovated 6-bedroom slopeside home on
+                Blackcomb that works just as well in summer. Leave the car parked
                 and walk 8 minutes to Upper Village or about 13 minutes to Whistler
                 Village for restaurants, shopping, trails and mountain biking.
               </p>
               <p>
                 Two decks, a BBQ, a private hot tub and a chef&apos;s kitchen with
-                dining for 13 or more make it easy for groups of up to 14, or 16
-                including a bonus den. In winter, ski access is about 2 minutes
-                from the door, so this is one of the rare large-group homes that
+                dining for 13 or more make it easy for groups of 14. In winter,
+                ski access is about a 2-minute walk from the door on Blackcomb&apos;s
+                main ski run, so this is one of the rare large-group homes that
                 stays ski-in/ski-out and village-walkable year-round.
               </p>
               <div className="mt-6 mb-8">

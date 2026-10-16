@@ -195,7 +195,7 @@ export const MANSION_RENTAL_PROPERTIES: MansionRentalProperty[] = [
     area: "Blackcomb",
     bedrooms: 6,
     guests: 14,
-    standout: "Ski-in/ski-out about 2 minutes from the door, private hot tub, chef's kitchen and an 8-minute walk to Upper Village. Sleeps 14, or up to 16 with a bonus den",
+    standout: "Slopeside on Blackcomb's main ski run, about a 2-minute walk from the door to ski, private hot tub, and both villages walking distance. Sleeps 14",
     images: [
       {
         src: "/photos/properties/Pinnacle Ridge 23/Snowy Whistler Retreat with Gondola Views.png",

@@ -690,21 +690,22 @@ export default function BlogPost() {
                 10. Pinnacle Ridge 23 | Ski-In/Out | Hot Tub | Village
               </h3>
               <p className="text-gray-700 font-medium not-prose text-base mb-4">
-                14 guests (up to 16 with bonus den) | 6 bedrooms | 10 beds | 5.5 bathrooms
+                14 guests | 6 bedrooms | 10 beds | 5.5 bathrooms
               </p>
               <PropertyImages images={ALTERNATIVE_PROPERTIES[4].images} columns={1} />
               <p>
-                Stay at Pinnacle Ridge 23, a beautifully renovated 6-bedroom
-                ski-in/ski-out home on Blackcomb. Ski access is about 2 minutes
-                from the door via the Yellow Brick Road, Upper Village is an
-                8-minute walk, and Whistler Village is about 13 minutes.
+                Stay in one of Whistler&apos;s best ski-in/ski-out neighbourhoods
+                at Pinnacle Ridge 23, a renovated 6-bedroom home sitting slopeside
+                on Blackcomb&apos;s main ski run. Ski access is about a 2-minute
+                walk from the door, Upper Village is an 8-minute walk, and
+                Whistler Village is about 13 minutes.
               </p>
               <p>
-                After skiing, the private hot tub, gas fireplace and chef&apos;s
-                kitchen make it easy for a larger group to settle in. The dining
-                table seats 13 or more, with seating for another 4 at the island. It
-                is one of the strongest ski-in/ski-out options for 14 guests, or
-                up to 16 including a bonus den, outside Kadenwood.
+                After skiing, return home to a private outdoor hot tub, gas
+                fireplace and spacious living areas. The dining table seats 13 or
+                more, with extra seating at the kitchen island. It is one of the
+                strongest slopeside ski-in/ski-out options for 14 guests outside
+                Kadenwood, with a bonus den for extra twin beds.
               </p>
               <p>
                 <strong>Best for:</strong> Families and groups who want true

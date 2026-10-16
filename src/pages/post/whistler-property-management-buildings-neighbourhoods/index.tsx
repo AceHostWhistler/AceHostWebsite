@@ -686,8 +686,8 @@ export default function BlogPost() {
                 <Link href="/listings/luxury-3-bed-stunning-views">Marquise</Link>
                 , Le Chamois and{" "}
                 <Link href="/listings/pinnacle-ridge-23">Pinnacle Ridge 23</Link>
-                , a renovated 6-bedroom ski-in/ski-out townhome with ski access
-                about 2 minutes from the door.
+                , a renovated 6-bedroom ski-in/ski-out home sitting slopeside on
+                Blackcomb&apos;s main ski run, about a 2-minute walk from the door.
               </p>
               <p>
                 The Aspens is particularly attractive because guests can ski
