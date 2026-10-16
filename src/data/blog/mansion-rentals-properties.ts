@@ -69,7 +69,7 @@ export const MANSION_RENTAL_PROPERTIES: MansionRentalProperty[] = [
     ],
   },
   {
-    name: "The Mountaintop in Kadenwood",
+    name: "The Mountaintop | Kadenwood Ski In Ski Out | Views",
     listingHref: "/listings/luxury-ski-in-ski-out-7-bedroom-kadenwood",
     airbnbHref: listingAirbnb("luxury-ski-in-ski-out-7-bedroom-kadenwood"),
     area: "Kadenwood",
@@ -89,7 +89,7 @@ export const MANSION_RENTAL_PROPERTIES: MansionRentalProperty[] = [
     ],
   },
   {
-    name: "Panoramic Estate",
+    name: "Panoramic Estate | Kadenwood | Ski In Ski Out",
     listingHref: "/listings/panoramic-estate-kadenwood",
     airbnbHref: listingAirbnb("panoramic-estate-kadenwood"),
     area: "Kadenwood",

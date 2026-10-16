@@ -105,7 +105,7 @@ const LuxuryChristmasRentals = () => {
 
               {/* Property 1 */}
               <div className="bg-gray-50 p-6 rounded-lg mb-14">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">1) Panoramic Estate</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">1) Panoramic Estate | Kadenwood | Ski In Ski Out</h2>
 
                 <div className="flex flex-col md:flex-row gap-4 mb-6">
                   <div className="flex-1 bg-white p-4 rounded-lg shadow-sm">

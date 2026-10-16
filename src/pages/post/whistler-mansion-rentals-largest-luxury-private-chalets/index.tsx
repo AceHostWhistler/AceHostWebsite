@@ -434,7 +434,7 @@ export default function BlogPost() {
               />
 
               <h3 className="text-xl font-bold text-gray-900 mt-10 mb-3">
-                3. The Mountaintop at Kadenwood | Ski in Ski out
+                3. The Mountaintop | Kadenwood Ski In Ski Out | Views
               </h3>
               <p className="text-gray-700 font-medium not-prose text-base mb-4">
                 16 guests | 7 bedrooms | 8 beds | 6.5 bathrooms | Approximately
@@ -469,7 +469,7 @@ export default function BlogPost() {
               />
 
               <h3 className="text-xl font-bold text-gray-900 mt-10 mb-3">
-                4. Panoramic Estate | Kadenwood
+                4. Panoramic Estate | Kadenwood | Ski In Ski Out
               </h3>
               <p className="text-gray-700 font-medium not-prose text-base mb-4">
                 17 guests | 8 bedrooms | 11 beds | 7 bathrooms

@@ -444,7 +444,7 @@ export default function BlogPost() {
               </div>
 
               <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-                Panoramic Estate | Kadenwood
+                Panoramic Estate | Kadenwood | Ski In Ski Out
               </h3>
               <div className="relative aspect-[16/9] mb-6 rounded-lg overflow-hidden">
                 <Image

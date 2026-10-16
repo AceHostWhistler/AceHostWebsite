@@ -372,7 +372,7 @@ export const propertyCategories: PropertyCategory[] = [
 
           {
             id: "luxury-ski-in-ski-out-7-bedroom-kadenwood",
-            name: "The Mountaintop in Kadenwood | Ski in Ski out",
+            name: "The Mountaintop | Kadenwood Ski In Ski Out | Views",
             images: [
               "/photos/properties/2919 Heritage/Mountaintop.png",
               "/photos/properties/2919 Heritage/Mountaintop Snow cover.png",
@@ -465,7 +465,7 @@ export const propertyCategories: PropertyCategory[] = [
             bathrooms: 6.5,
             location: "Kadenwood, Whistler",
             description:
-              "A 7,500-square-foot Kadenwood ski-in/ski-out estate with a chef's kitchen, hot tub, XL outdoor sauna, fire pits, gym, steam room, and private gondola access.",
+              "Set high above Creekside in exclusive Kadenwood, The Mountaintop is a 7,500 sq. ft. ski-in/ski-out estate designed for groups of 16 or more. The home offers panoramic mountain views, seven bedrooms, a chef's kitchen and exceptional entertaining spaces. After skiing, relax in the private hot tub, extra-large outdoor sauna or steam room, then gather around the fire pits, wet bar, ping-pong table or two 90-inch TVs. Private Kadenwood Gondola access makes reaching Creekside effortless.",
             features: [
               "Renovated Chef's Kitchen",
               "Hot Tub",
@@ -505,7 +505,7 @@ export const propertyCategories: PropertyCategory[] = [
             bathrooms: 7,
             location: "Kadenwood, Whistler",
             description:
-              "An 8-bedroom Kadenwood timber chalet with mountain-view decks, ski-in/ski-out access, a private gondola, hot tub, sauna, elevator, media room, and gym.",
+              "Welcome to Panoramic Estate in Kadenwood, a true Whistler-style luxury log chalet with soaring timber ceilings, warm wood finishes, stone fireplaces and incredible mountain views. This expansive 8-bedroom ski-in/ski-out home is perfect for families and groups, with multiple living spaces, large outdoor decks, a private elevator, hot tub, sauna and media room, all surrounded by the peaceful mountain setting of exclusive Kadenwood.",
             features: [
               "Panoramic Mountain Views",
               "Private Hot Tub",

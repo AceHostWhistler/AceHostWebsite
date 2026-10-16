@@ -352,7 +352,7 @@ export default function BlogPost() {
               </div>
 
               <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-                Panoramic Estate | Kadenwood
+                Panoramic Estate | Kadenwood | Ski In Ski Out
               </h3>
               <p>
                 This stunning mountain estate in Kadenwood offers unparalleled luxury with over

@@ -344,7 +344,7 @@ export default function BlogPost() {
 
               {/* 4 Mountaintop */}
               <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">
-                4. The Mountaintop at Kadenwood | Ski in Ski out
+                4. The Mountaintop | Kadenwood Ski In Ski Out | Views
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 not-prose">
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
@@ -382,7 +382,7 @@ export default function BlogPost() {
               </div>
               <p>
                 If your group&rsquo;s dream Whistler trip is all about skiing, this one is a strong
-                contender. The Mountaintop at Kadenwood sleeps up to 16 guests with 7 bedrooms and
+                contender. The Mountaintop sleeps up to 16 guests with 7 bedrooms and
                 6.5 bathrooms.
               </p>
               <p>
@@ -401,7 +401,7 @@ export default function BlogPost() {
 
               {/* 5 Panoramic */}
               <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">
-                5. Panoramic Estate | Kadenwood
+                5. Panoramic Estate | Kadenwood | Ski In Ski Out
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 not-prose">
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">

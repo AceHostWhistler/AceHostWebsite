@@ -89,11 +89,11 @@ const listing: ListingData = {
     "/photos/properties/2919 Heritage/airbnb-97b203c8-658b-43e3-9ec2-a06cc1cc3268.jpg",
   ],
   seo: {
-    title: "The Mountaintop in Kadenwood | Ski in Ski out - AceHost",
-    description: "Set high above Creekside in exclusive Kadenwood, The Mountaintop is a 7,500 sq. ft. ski-in/ski-out estate designed for groups of 16 or more. The home offers panoramic mountain views, seven bedrooms, a chef’s kitchen and exceptional entertaining spaces. After skiing, relax in the private hot tub, extra-large outdoor sauna or steam room, then gather around the fire pits, wet bar, ping-pong table or two 90-inch TVs.",
+    title: "The Mountaintop | Kadenwood Ski In Ski Out | Views - AceHost",
+    description: "Set high above Creekside in exclusive Kadenwood, The Mountaintop is a 7,500 sq. ft. ski-in/ski-out estate designed for groups of 16 or more. The home offers panoramic mountain views, seven bedrooms, a chef's kitchen and exceptional entertaining spaces. After skiing, relax in the private hot tub, extra-large outdoor sauna or steam room, then gather around the fire pits, wet bar, ping-pong table or two 90-inch TVs. Private Kadenwood Gondola access makes reaching Creekside effortless.",
   },
   header:   {
-      "title": "The Mountaintop in Kadenwood | Ski in Ski out",
+      "title": "The Mountaintop | Kadenwood Ski In Ski Out | Views",
       "guests": 16,
       "bedrooms": 7,
       "bathrooms": 6.5,
@@ -101,7 +101,7 @@ const listing: ListingData = {
       "beds": 8,
       "airbnbLink": "https://www.airbnb.ca/rooms/1599369454342102375?guests=1&adults=1&s=67&unique_share_id=07a4f082-1dec-4a06-bf97-05638b3b71ef"
   },
-  galleryTitle: "The Mountaintop in Kadenwood",
+  galleryTitle: "The Mountaintop | Kadenwood Ski In Ski Out | Views",
   photoAltPrefix: "The Mountaintop in Kadenwood",
   vimeoVideoId: "1174594797",
   vimeoTitle: "2919 Heritage Peaks Trail - Mountaintop Kadenwood - AceHost",

@@ -36,7 +36,7 @@ type FeaturedProperty = {
 
 const kadenwoodHomes: FeaturedProperty[] = [
   {
-    name: "The Mountaintop at Kadenwood | Ski in Ski out",
+    name: "The Mountaintop | Kadenwood Ski In Ski Out | Views",
     description:
       "A spectacular luxury home and one of the most exciting options for FIFA travellers wanting privacy, panoramic mountain views, and a truly elevated Whistler stay.",
     photos: [
@@ -62,7 +62,7 @@ const kadenwoodHomes: FeaturedProperty[] = [
       "https://www.airbnb.ca/rooms/52655503?guests=1&adults=1&s=67&unique_share_id=f1bb5c2c-51f9-4a82-9aa4-670fb8caa71d",
   },
   {
-    name: "Panoramic Estate | Kadenwood",
+    name: "Panoramic Estate | Kadenwood | Ski In Ski Out",
     description:
       "A stunning luxury home with dramatic views, ideal for groups wanting privacy, scale, and a true high-end Whistler stay.",
     photos: [

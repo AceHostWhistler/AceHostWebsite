@@ -34,9 +34,9 @@ export const kadenwoodProperties: Whistler28Property[] = [
   },
   {
     number: 3,
-    name: "The Mountaintop in Kadenwood | Ski in Ski out",
+    name: "The Mountaintop | Kadenwood Ski In Ski Out | Views",
     description:
-      "A dramatic seven-bedroom mountain retreat with exceptional views, private wellness amenities, and direct ski access.",
+      "A 7,500 sq. ft. ski-in/ski-out Kadenwood estate for groups of 16 or more, with panoramic views, a chef's kitchen, hot tub, extra-large outdoor sauna, steam room and private gondola access.",
     image: "/photos/properties/2919 Heritage/Mountaintop.png",
     listingHref: "/listings/luxury-ski-in-ski-out-7-bedroom-kadenwood",
     bookUrl:
@@ -46,7 +46,7 @@ export const kadenwoodProperties: Whistler28Property[] = [
     number: 4,
     name: "Panoramic Estate | Kadenwood | Ski In Ski Out",
     description:
-      "An eight-bedroom estate with an elevator, sauna, hot tub, media room, games, and plenty of room for large families and groups.",
+      "A Whistler-style luxury log chalet in Kadenwood with 8 bedrooms, soaring timber ceilings, a private elevator, hot tub, sauna, media room and ski-in/ski-out access.",
     image: "/photos/properties/Panoramic Estate/Panoramic Estate.jpg",
     listingHref: "/listings/panoramic-estate-kadenwood",
     bookUrl:

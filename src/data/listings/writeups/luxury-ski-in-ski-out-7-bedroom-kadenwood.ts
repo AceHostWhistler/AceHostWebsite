@@ -36,7 +36,7 @@ const mountaintopWriteup: ListingWriteupContent = {
       "The gourmet kitchen is equipped with Wolf, Sub-Zero and Miele appliances, quartz countertops, generous preparation areas and a separate prep kitchen. It is ideal for everything from family breakfasts to professionally catered dinners and private chef experiences.",
       "Connected dining and entertaining areas include a main dining table seating 12 or more, a bar-height table for an additional 8 guests, and separate bar seating for 4 guests, giving larger groups flexibility without separating guests from the main entertaining area.",
       "Additional indoor amenities include a wet bar, ping-pong table, fitness space, steam room, ski and mudroom, laundry facilities and a large ski-boot drying system in the garage. After a day on Whistler Mountain, step outside to the private hot tub or extra-large outdoor barrel sauna, with outdoor fire pits for après-ski.",
-      "The home has a powerful air-conditioning system in the main living area for summer comfort throughout the home, although individual bedrooms do not have separate air-conditioning units.",
+      "The home has a powerful air-conditioning system in the main living area. It provides a refreshing escape during the summer and helps maintain a comfortable temperature throughout the home, although individual bedrooms do not have separate air-conditioning units.",
     ],
   },
   location: {
@@ -47,7 +47,7 @@ const mountaintopWriteup: ListingWriteupContent = {
       alt: "The Mountaintop in Kadenwood",
     },
     paragraphs: [
-      "The Mountaintop sits high above Creekside in Kadenwood, approximately 1,000 feet above the valley floor. The elevated position creates expansive mountain views and a peaceful sense of privacy that define the home.",
+      "The Mountaintop sits high above Creekside in Kadenwood, approximately 1,000 feet above the valley floor. The elevated position creates the expansive mountain views and peaceful sense of privacy that define the home.",
       "Kadenwood's private residents-and-guests-only gondola connects the neighbourhood with Creekside Village in approximately five minutes. Creekside offers direct access to Whistler Mountain, ski school, restaurants, cafes, groceries and equipment rentals. Whistler Village is approximately a 10-minute drive away.",
       ...KADENWOOD_LOCATION_PARAGRAPHS,
       "Guests can access Creekside and Whistler Village via the private gondola, taxi, ride app, private driver, or vehicle rentals. Transportation is not necessary to ski since the property is located right on Whistler Mountain.",

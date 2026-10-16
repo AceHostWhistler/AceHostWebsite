@@ -479,7 +479,7 @@ export default function BlogPost() {
 
               {/* Property 7 */}
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
-                7) The Mountaintop in Kadenwood | Ski in Ski out
+                7) The Mountaintop | Kadenwood Ski In Ski Out | Views
               </h2>
 
               <div className="bg-gray-50 p-5 rounded-lg mb-6">
@@ -495,7 +495,7 @@ export default function BlogPost() {
 
               <p>
                 Located in Whistler&apos;s most prestigious true ski-in ski-out
-                neighbourhood, The Mountaintop in Kadenwood is a refined 7-bedroom
+                neighbourhood, The Mountaintop is a refined 7-bedroom
                 retreat with 7,500 square feet of mountain living. A renovated
                 chef&apos;s kitchen, hot tub, wood barrel sauna, fire pits, and
                 private Kadenwood gondola access make it ideal for groups who want seamless
@@ -530,14 +530,14 @@ export default function BlogPost() {
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-3">
                   <p className="text-sm font-medium">
-                    The Mountaintop | Kadenwood
+                    The Mountaintop | Kadenwood Ski In Ski Out | Views
                   </p>
                 </div>
               </div>
 
               {/* Property 8 */}
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
-                8) Panoramic Estate | Kadenwood
+                8) Panoramic Estate | Kadenwood | Ski In Ski Out
               </h2>
 
               <div className="bg-gray-50 p-5 rounded-lg mb-6">
@@ -588,7 +588,7 @@ export default function BlogPost() {
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-3">
                   <p className="text-sm font-medium">
-                    Panoramic Estate | Kadenwood
+                    Panoramic Estate | Kadenwood | Ski In Ski Out
                   </p>
                 </div>
               </div>
