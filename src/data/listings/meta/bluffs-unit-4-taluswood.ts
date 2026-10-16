@@ -38,12 +38,12 @@ const listing: ListingData = {
 ],
   seo: {
     title:
-      "Bluffs - Luxury 2 Bed Ski in Ski out in Creekside - Views! | AceHost",
+      "Bluffs - Luxury 2 Bed Ski in Ski out - Views! | AceHost",
     description:
-      "Ski Whistler's legendary Dave Murray Downhill from this 2-bedroom Taluswood retreat. A short walk to the ski access bridge, then ski directly to the Creekside Gondola. Sleeps 6 with a King suite, Queen bedroom and Queen sofa bed, plus a shared hot tub, ski-boot dryer, portable AC (May to Nov), two underground parking spots and secure ski/bike storage.",
+      "Ski Whistler's legendary Dave Murray Downhill, home of the 2010 Winter Olympics, from this 2-bedroom Taluswood retreat. A short walk brings you to the ski access bridge, then ski directly down to the Creekside Gondola. Sleeps 6 with a King suite, Queen bedroom and Queen sofa bed, plus a chef-ready kitchen, Smart TVs, ski-boot dryer, portable AC (May to Nov), 2 underground parking spots and secure ski/bike storage.",
   },
   header: {
-    title: "Bluffs - Luxury 2 Bed Ski in Ski out in Creekside - Views!",
+    title: "Bluffs - Luxury 2 Bed Ski in Ski out - Views!",
     guests: 6,
     bedrooms: 2,
     beds: 3,
@@ -53,15 +53,15 @@ const listing: ListingData = {
     holidayPrice: "$1,500-$2,500+ Nightly | Christmas & NY",
     airbnbLink: BLUFFS_AIRBNB_LINK,
   },
-  galleryTitle: "Bluffs - Luxury 2 Bed Ski in Ski out in Creekside - Views!",
+  galleryTitle: "Bluffs - Luxury 2 Bed Ski in Ski out - Views!",
   photoAltPrefix: "Bluffs Creekside",
   structuredData: {
     "@context": "https://schema.org/",
     "@type": "Product",
-    name: "Bluffs - Luxury 2 Bed Ski in Ski out in Creekside - Views!",
+    name: "Bluffs - Luxury 2 Bed Ski in Ski out - Views!",
     image: "/photos/properties/Bluffs Unit 4/IMG_001112.JPG",
     description:
-      "Ski Whistler's legendary Dave Murray Downhill from this 2-bedroom Taluswood retreat. A short walk to the ski access bridge, then ski directly to the Creekside Gondola. Sleeps 6 with a King suite, Queen bedroom and Queen sofa bed, plus a shared hot tub, ski-boot dryer, two underground parking spots and secure ski/bike storage.",
+      "Ski Whistler's legendary Dave Murray Downhill, home of the 2010 Winter Olympics, from this 2-bedroom Taluswood retreat. A short walk brings you to the ski access bridge, then ski directly down to the Creekside Gondola. Sleeps 6 with a King suite, Queen bedroom and Queen sofa bed, plus a chef-ready kitchen, Smart TVs, ski-boot dryer, portable AC (May to Nov), 2 underground parking spots and secure ski/bike storage.",
     sku: "bluffs-unit-4-taluswood",
     brand: {
       "@type": "Brand",

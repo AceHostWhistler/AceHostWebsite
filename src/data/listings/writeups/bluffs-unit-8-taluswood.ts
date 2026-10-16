@@ -10,8 +10,8 @@ import {
 const bluffsUnit8Writeup: ListingWriteupContent = {
   intro: {
     paragraphs: [
-      "Ski Whistler's legendary Dave Murray Downhill, home of the 2010 Winter Olympics, from this 3-bedroom Taluswood retreat. It is a 2 to 3-minute walk (about 75 metres) to the ski access bridge, then a 3 to 4-minute ski to the Creekside Gondola. Return to mountain views, a gas fireplace, BBQ balcony and shared hot tub.",
-      "Sleeps 10 with a King suite, Queen bedroom, four Twin bunk beds and a Queen sofa bed. The home includes a chef-ready kitchen, Smart TVs, two underground parking spots and secure ski and bike storage.",
+      "Ski Whistler's legendary Dave Murray Downhill, home of the 2010 Winter Olympics, from this 3-bedroom Taluswood retreat. Just a 2 to 3-minute walk to the ski access bridge, then a quick 3 to 4-minute ski to the Creekside Gondola. Return to mountain views, a cozy gas fireplace, BBQ balcony and shared hot tub.",
+      "Sleeps 10 with a King suite, Queen bedroom, four Twin bunk beds and Queen sofa bed. Includes a chef-ready kitchen, Smart TVs, 2 underground parking spots and secure ski/bike storage.",
     ],
     highlights: [
       "Ski-in / ski-out on Dave Murray",

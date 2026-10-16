@@ -241,7 +241,7 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     imageAlt: "Northlands Symphony luxury 4-bed village condo walk to slopes",
   },
   {
-    name: "Bluffs - Luxury 2 Bed Ski in Ski out in Creekside - Views!",
+    name: "Bluffs - Luxury 2 Bed Ski in Ski out - Views!",
     priceRange: "$380-$950 Summer | $500-$1,350 Winter (seasonal)",
     stats:
       "Sleeps 6 | 2 Bedrooms | 3 Beds | 2 Bathrooms | Ski-in/Ski-out | Shared complex hot tub | Ski-boot dryer | Creekside/Taluswood",
@@ -262,7 +262,7 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     stats:
       "Sleeps 10 | 3 Bedrooms | 7 Beds | 2 Bathrooms | Ski-in/Ski-out | Shared Hot Tub | Taluswood",
     paragraphs: [
-      "Ski Whistler's legendary Dave Murray Downhill from this 3-bedroom Taluswood penthouse. It is a 2 to 3-minute walk to the ski access bridge, then a 3 to 4-minute ski to the Creekside Gondola. With a King suite, Queen bedroom, four Twin bunk beds and a Queen sofa bed, the home sleeps up to 10 guests and is ideal for families and groups who want Creekside slope access.",
+      "Ski Whistler's legendary Dave Murray Downhill, home of the 2010 Winter Olympics, from this 3-bedroom Taluswood retreat. Just a 2 to 3-minute walk to the ski access bridge, then a quick 3 to 4-minute ski to the Creekside Gondola. With a King suite, Queen bedroom, four Twin bunk beds and a Queen sofa bed, the home sleeps up to 10 guests and is ideal for families and groups who want Creekside slope access.",
       "The open-concept main level combines kitchen, dining and living areas with a gas fireplace, Smart TV and a covered balcony with BBQ and outdoor dining. A shared complex hot tub, two underground parking stalls, outdoor parking for larger vehicles and secure ski and bike storage make every season comfortable.",
       "For skiers and families who want true Dave Murray access, elevated views over Whistler Village and a 3-bedroom layout in Taluswood, Bluffs #8 is one of the strongest ski-in/ski-out condo options in the AceHost collection.",
     ],

@@ -874,7 +874,7 @@ export const propertyCategories: PropertyCategory[] = [
 
           {
             id: "bluffs-unit-8",
-            name: "Bluffs Penthouse - Luxe 3-Bedroom - Ski-in Ski-out",
+            name: "Bluffs Penthouse - Luxe 3 Bedrooms - Ski in Ski out",
             images: [
               "/photos/properties/Bluffs Unit 8/ChatGPT Image Sep 4, 2026, 04_35_38 PM (8).png",
               "/photos/properties/Bluffs Unit 8/Bluffs 8 drone snow.avif",
@@ -886,7 +886,7 @@ export const propertyCategories: PropertyCategory[] = [
             bathrooms: 2,
             location: "Taluswood, Whistler",
             description:
-              "Ski Whistler's legendary Dave Murray Downhill, home of the 2010 Winter Olympics, from this 3-bedroom Taluswood retreat. It is a 2 to 3-minute walk to the ski access bridge, then a 3 to 4-minute ski to the Creekside Gondola. Sleeps 10 with a King suite, Queen bedroom, four Twin bunk beds and Queen sofa bed, plus a shared hot tub, chef-ready kitchen, two underground parking spots and secure ski/bike storage.",
+              "Ski Whistler's legendary Dave Murray Downhill, home of the 2010 Winter Olympics, from this 3-bedroom Taluswood retreat. Just a 2 to 3-minute walk to the ski access bridge, then a quick 3 to 4-minute ski to the Creekside Gondola. Sleeps 10 with a King suite, Queen bedroom, four Twin bunk beds and Queen sofa bed. Includes a chef-ready kitchen, Smart TVs, 2 underground parking spots and secure ski/bike storage.",
             features: [
               "True Ski-in/Ski-out",
               "Shared Complex Hot Tub",
@@ -1848,7 +1848,7 @@ export const propertyCategories: PropertyCategory[] = [
 
           {
             id: "bluffs-unit-4",
-            name: "Bluffs - Luxury 2 Bed Ski in Ski out in Creekside - Views!",
+            name: "Bluffs - Luxury 2 Bed Ski in Ski out - Views!",
             images: [
               "/photos/properties/Bluffs Unit 4/IMG_001112.JPG",
               "/photos/properties/Bluffs Unit 4/01 - 20260522 MM4P 02 0362.jpg",

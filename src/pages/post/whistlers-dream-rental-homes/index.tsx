@@ -884,12 +884,12 @@ export default function BlogPost() {
               </div>
 
               <p>
-                Ski Whistler&apos;s legendary Dave Murray Downhill from this
-                3-bedroom Taluswood penthouse. It is a 2 to 3-minute walk to the
-                ski access bridge, then a 3 to 4-minute ski to the Creekside
-                Gondola. With a King suite, Queen bedroom, four Twin bunk beds and
-                a Queen sofa bed, the home sleeps up to 10 guests and works
-                especially well for families and groups.
+                Ski Whistler&apos;s legendary Dave Murray Downhill, home of the
+                2010 Winter Olympics, from this 3-bedroom Taluswood retreat. Just
+                a 2 to 3-minute walk to the ski access bridge, then a quick 3 to
+                4-minute ski to the Creekside Gondola. With a King suite, Queen
+                bedroom, four Twin bunk beds and a Queen sofa bed, the home sleeps
+                up to 10 guests and works especially well for families and groups.
               </p>
 
               <p className="mt-4">

@@ -226,7 +226,7 @@ const condoTownhomeOptions: FeaturedProperty[] = [
   {
     name: "Bluffs #8 - Luxury 3 Bed - Ski in Ski out - Views!",
     description:
-      "A 3-bedroom Taluswood ski-in/ski-out penthouse with a King suite, bunk room, shared hot tub and elevated views. A 2 to 3-minute walk to the ski access bridge, then a 3 to 4-minute ski to the Creekside Gondola. Sleeps up to 10 guests.",
+      "A 3-bedroom Taluswood ski-in/ski-out retreat with a King suite, bunk room, shared hot tub and elevated views. Just a 2 to 3-minute walk to the ski access bridge, then a quick 3 to 4-minute ski to the Creekside Gondola. Sleeps up to 10 guests.",
     photos: [
       "/photos/properties/Bluffs Unit 8/ChatGPT Image Sep 4, 2026, 04_35_38 PM (8).png",
       "/photos/properties/Bluffs Unit 8/Bluffs 8 drone snow.avif",
