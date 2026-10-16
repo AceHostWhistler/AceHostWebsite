@@ -755,7 +755,7 @@ export const propertyCategories: PropertyCategory[] = [
             bathrooms: 5.5,
             location: "Blackcomb, Whistler",
             description:
-              "Renovated 6-bedroom Blackcomb townhome with ski access about 2 minutes from the door, an 8-minute walk to Upper Village and 13 minutes to Whistler Village. Private hot tub, chef's kitchen, dining for 13 or more, and space for 14 guests.",
+              "Stay at Pinnacle Ridge 23, a beautifully renovated 6-bedroom mountain home on Blackcomb with ski access approximately 2 minutes from the door and a private outdoor hot tub. Enjoy vaulted ceilings, a gas fireplace, chef's kitchen, 2 decks, BBQ and central A/C, an 8-minute walk from Upper Village and about 13 minutes from Whistler Village. Sleeps 14, or up to 16 including a bonus den.",
             features: [
               "Ski Access About 2 Minutes From the Door",
               "Private Hot Tub",
@@ -763,8 +763,8 @@ export const propertyCategories: PropertyCategory[] = [
               "Dining Table Seats 13+",
               "Central A/C",
               "2 Decks and BBQ",
+              "Boot and Glove Dryer",
               "Walk to Upper Village",
-              "Fireplace",
             ],
             highlights: [
               "Blackcomb, Whistler",

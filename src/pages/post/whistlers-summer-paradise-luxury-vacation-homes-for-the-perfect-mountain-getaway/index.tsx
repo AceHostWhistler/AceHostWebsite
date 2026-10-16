@@ -340,10 +340,10 @@ export default function BlogPost() {
               </p>
               <p>
                 Two decks, a BBQ, a private hot tub and a chef&apos;s kitchen with
-                dining for 10 make it easy for groups of up to 14. In winter, ski
-                access is about 2 minutes from the door, so this is one of the rare
-                large-group homes that stays ski-in/ski-out and village-walkable
-                year-round.
+                dining for 13 or more make it easy for groups of up to 14, or 16
+                including a bonus den. In winter, ski access is about 2 minutes
+                from the door, so this is one of the rare large-group homes that
+                stays ski-in/ski-out and village-walkable year-round.
               </p>
               <div className="mt-6 mb-8">
                 <Link

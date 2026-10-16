@@ -11,7 +11,7 @@ const listing: ListingData = {
   seo: {
     title: "Pinnacle Ridge 23 | Ski-In/Out | Hot Tub | Village - AceHost",
     description:
-      "Stay at Pinnacle Ridge 23, a renovated 6-bedroom Blackcomb home with ski access about 2 minutes from the door, a private hot tub, chef's kitchen, dining for 13 or more, and an 8-minute walk to Upper Village. Sleeps 14.",
+      "Stay at Pinnacle Ridge 23, a beautifully renovated 6-bedroom Blackcomb home with ski access about 2 minutes from the door, a private hot tub, chef's kitchen, 2 decks, BBQ and central A/C. An 8-minute walk to Upper Village and about 13 minutes to Whistler Village. Sleeps 14, or up to 16 including a bonus den.",
   },
   header: {
     title: "Pinnacle Ridge 23 | Ski-In/Out | Hot Tub | Village",
@@ -32,7 +32,7 @@ const listing: ListingData = {
     name: "Pinnacle Ridge 23 | Ski-In/Out | Hot Tub | Village",
     image: PINNACLE_RIDGE_23_COVER,
     description:
-      "Stay at Pinnacle Ridge 23, a renovated 6-bedroom Blackcomb home with ski access about 2 minutes from the door, a private hot tub, chef's kitchen, dining for 13 or more, and an 8-minute walk to Upper Village. Sleeps 14.",
+      "Stay at Pinnacle Ridge 23, a beautifully renovated 6-bedroom Blackcomb home with ski access about 2 minutes from the door, a private hot tub, chef's kitchen, 2 decks, BBQ and central A/C. An 8-minute walk to Upper Village and about 13 minutes to Whistler Village. Sleeps 14, or up to 16 including a bonus den.",
     sku: "pinnacle-ridge-23",
     brand: {
       "@type": "Brand",

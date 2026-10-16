@@ -93,7 +93,7 @@ const luxuryHomesBeyondKadenwood: FeaturedProperty[] = [
   {
     name: "Pinnacle Ridge 23 | Ski-In/Out | Hot Tub | Village",
     description:
-      "A renovated 6-bedroom ski-in/ski-out Blackcomb townhome for 14 guests, with ski access about 2 minutes from the door, a private hot tub, and an 8-minute walk to Upper Village.",
+      "A beautifully renovated 6-bedroom ski-in/ski-out Blackcomb home with ski access about 2 minutes from the door, a private hot tub, chef's kitchen and an 8-minute walk to Upper Village. Sleeps 14, or up to 16 including a bonus den.",
     photos: [
       "/photos/properties/Pinnacle Ridge 23/Snowy Whistler Retreat with Gondola Views.png",
       "/photos/properties/Pinnacle Ridge 23/Snowy Whistler Balcony Hot Tub-1.png",

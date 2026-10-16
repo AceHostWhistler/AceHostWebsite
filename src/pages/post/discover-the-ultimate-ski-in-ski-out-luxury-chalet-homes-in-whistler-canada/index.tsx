@@ -293,11 +293,11 @@ export default function BlogPost() {
                 Pinnacle Ridge 23
               </h3>
               <p>
-                This renovated 6-bedroom Blackcomb townhome is ski-in/ski-out,
-                with ski access about 2 minutes from the door. It sleeps 14,
-                has a private hot tub and chef&apos;s kitchen, and sits an
-                8-minute walk from Upper Village and about 13 minutes from
-                Whistler Village.
+                This beautifully renovated 6-bedroom Blackcomb home is ski-in/ski-out,
+                with ski access about 2 minutes from the door. It sleeps 14, or up
+                to 16 including a bonus den, has a private hot tub and chef&apos;s
+                kitchen, and sits an 8-minute walk from Upper Village and about 13
+                minutes from Whistler Village.
               </p>
               <div className="mt-4 mb-8">
                 <Link

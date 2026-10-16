@@ -371,23 +371,24 @@ export default function BlogPost() {
               <div className="bg-gray-50 p-5 rounded-lg mb-6">
                 <p className="font-semibold">Price per night: $1,365-$3,675+</p>
                 <p className="mt-4">
-                  Sleeps 14 | 6 bedrooms | 10 beds | 5.5 baths | Ski-in/ski-out |
-                  Private hot tub | Chef&apos;s kitchen
+                  Sleeps 14 (up to 16 with bonus den) | 6 bedrooms | 10 beds |
+                  5.5 baths | Ski-in/ski-out | Private hot tub | Chef&apos;s kitchen
                 </p>
               </div>
 
               <p>
-                Pinnacle Ridge 23 is a renovated 6-bedroom ski-in/ski-out townhome
-                on Blackcomb. Ski access is about 2 minutes from the door, Upper
-                Village is an 8-minute walk, and Whistler Village is about 13
-                minutes.
+                Stay at Pinnacle Ridge 23, a beautifully renovated 6-bedroom
+                mountain home on Blackcomb with ski access about 2 minutes from
+                the door via the Yellow Brick Road. Upper Village is an 8-minute
+                walk, and Whistler Village is about 13 minutes.
               </p>
 
               <p className="mt-4">
                 After skiing, come home to a private hot tub, gas fireplace and a
-                chef&apos;s kitchen with dining for 10 plus 4 more at the island.
-                The home sleeps 14 and works well for families and groups who want
-                true ski-in/ski-out access without staying in Kadenwood.
+                chef&apos;s kitchen with dining for 13 or more, plus 4 more at the
+                island. The home sleeps 14 across 6 bedrooms, or up to 16 including
+                a bonus den, and works well for families and groups who want true
+                ski-in/ski-out access without staying in Kadenwood.
               </p>
 
               <p className="text-blue-600 font-medium mt-2 mb-6">

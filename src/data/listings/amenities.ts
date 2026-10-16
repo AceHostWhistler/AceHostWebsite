@@ -115,9 +115,9 @@ export const listingAmenities: Record<string, string[]> = {
     "Ski access about 2 minutes from the door",
     "8-minute walk to Upper Village",
     "Private hot tub",
-    "6 bedrooms · 10 beds · 5.5 baths",
+    "6 bedrooms plus bonus den",
     "Chef's kitchen, dining for 13+",
-    "Central A/C",
+    "Boot and glove dryer",
   ],
   "golf-course-views-luxury-4-bed-whistler-village": [
     "Nicklaus North golf course frontage",

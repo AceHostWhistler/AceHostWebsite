@@ -300,10 +300,11 @@ export default function BlogPost() {
               </div>
               <p>
                 Ski-in/ski-out on Blackcomb, with ski access about 2 minutes from
-                the door. This renovated 6-bedroom townhome sleeps 14, has a
-                private hot tub and chef&apos;s kitchen, and is an 8-minute walk
-                to Upper Village. It is one of the strongest large-group
-                ski-in/ski-out options outside Kadenwood.
+                the door. This beautifully renovated 6-bedroom home sleeps 14, or
+                up to 16 including a bonus den, has a private hot tub and
+                chef&apos;s kitchen, and is an 8-minute walk to Upper Village. It
+                is one of the strongest large-group ski-in/ski-out options outside
+                Kadenwood.
               </p>
               <div className="mt-6 mb-8">
                 <Link
