@@ -224,7 +224,8 @@ export const listingAmenities: Record<string, string[]> = {
   ],
   "ravens-nest-ski-in-ski-out-views": [
     "Ski-in / ski-out · Tantalus",
-    "Private hot tub",
+    "Ski access ~100 m walk",
+    "Private upper-deck hot tub",
     "Sauna",
     "4 bedrooms · 4 king beds · sleeps 8",
     "3.5 bathrooms",

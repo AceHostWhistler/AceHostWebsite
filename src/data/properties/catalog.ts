@@ -1155,7 +1155,7 @@ export const propertyCategories: PropertyCategory[] = [
 
           {
             id: "ravens-nest",
-            name: "Raven's Nest | Ski-In/Out | Hot Tub | Views",
+            name: "Raven Nest | Ski-In Ski-Out | Hot Tub | Views",
             images: [
               "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05349.jpg",
               "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05358.jpg",
@@ -1167,7 +1167,7 @@ export const propertyCategories: PropertyCategory[] = [
             bathrooms: 3.5,
             location: "Tantalus, Whistler",
             description:
-              "Raven's Nest is a renovated ski-in/ski-out chalet in Tantalus on Whistler Mountain, with 4 king beds sleeping 8, mountain views, a private hot tub on the upper deck, a sauna, and Whistler Village about a 15-minute walk or 2-minute drive away.",
+              "Welcome to Raven's Nest, a beautifully renovated Whistler chalet with breathtaking mountain views, 3 King bedrooms and an additional King-bed den. Enjoy ski-in/ski-out access via a short walk to the run, then return to your private hot tub on the upper deck off the living room. A sauna, gas fireplace, premium kitchen and Sonos sound complete the mountain retreat, with Whistler Village close by for dining, shopping and après.",
             features: [
               "Ski-in/Ski-out Access",
               "Mountain Views",

@@ -61,12 +61,12 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     imageAlt: "Eagle Lodge renovated 1-bedroom Whistler Village condo with fireplace",
   },
   {
-    name: "Raven's Nest | Ski-In/Out | Hot Tub | Views",
+    name: "Raven Nest | Ski-In Ski-Out | Hot Tub | Views",
     priceRange: "$2,000-$4,000 per night (seasonal)",
     stats:
       "Sleeps 8 | 4 Bedrooms | 4 King Beds | 3.5 Bathrooms | Ski-in/Ski-out | Private Hot Tub | Sauna | Mountain Views",
     paragraphs: [
-      "Welcome to Raven's Nest, a renovated chalet in the Tantalus neighbourhood on Whistler Mountain. Three king bedrooms plus a private enclosed king-bed den sleep eight, with ski-in/ski-out access via a short walk to a nearby run about 100 metres from the front door.",
+      "Welcome to Raven's Nest, a beautifully renovated Whistler chalet with breathtaking mountain views, 3 king bedrooms and an additional king-bed den. Enjoy ski-in/ski-out access via a short walk to the run, then return to your private hot tub on the upper deck off the living room.",
       "After skiing, step from the top-floor living room onto the upper deck for a soak in the private hot tub, or use the sauna through the primary ensuite. A gas fireplace, premium kitchen and Sonos sound make the living level an easy place to settle in, with mountain views throughout.",
       "Whistler Village is about a 15-minute walk or a 2-minute drive for dining, shopping and apres. Garage parking, mudroom ski storage and a boot dryer keep ski days practical.",
     ],

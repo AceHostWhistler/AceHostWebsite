@@ -118,9 +118,9 @@ export const largeHomeProperties: Whistler28Property[] = [
   },
   {
     number: 11,
-    name: "Raven's Nest | Ski-In/Out | Hot Tub | Views",
+    name: "Raven Nest | Ski-In Ski-Out | Hot Tub | Views",
     description:
-      "A renovated Tantalus chalet sleeping 8 across 4 king beds, with ski-in/ski-out access via a short walk, a private hot tub, sauna and mountain views. Whistler Village is about a 15-minute walk or 2-minute drive.",
+      "A renovated Whistler chalet with 3 king bedrooms, an additional king-bed den, ski-in/ski-out access via a short walk, a private upper-deck hot tub, sauna, gas fireplace and Sonos sound. Whistler Village is close by for dining, shopping and après.",
     image: "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05349.jpg",
     listingHref: "/listings/ravens-nest-ski-in-ski-out-views",
     bookUrl:

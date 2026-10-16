@@ -321,14 +321,14 @@ export default function BlogPost() {
               </div>
 
               <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-                Raven's Nest
+                Raven Nest | Ski-In Ski-Out | Hot Tub | Views
               </h3>
               <p>
-                This renovated Tantalus chalet sleeps 8 across 4 king beds, with
-                ski-in/ski-out access via a short walk to a nearby Whistler
-                Mountain run. Enjoy a private hot tub on the upper deck, a sauna,
-                a gas fireplace and mountain views, with Whistler Village about a
-                15-minute walk or 2-minute drive away.
+                Welcome to Raven&apos;s Nest, a renovated Tantalus chalet with 3
+                king bedrooms and an additional king-bed den. Enjoy ski-in/ski-out
+                access via a short walk to the run, then return to a private hot
+                tub on the upper deck. A sauna, gas fireplace, premium kitchen and
+                Sonos sound complete the stay, with Whistler Village close by.
               </p>
               <div className="mt-4 mb-8">
                 <Link
