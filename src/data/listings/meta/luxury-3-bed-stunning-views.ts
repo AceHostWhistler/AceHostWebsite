@@ -39,11 +39,11 @@ const listing: ListingData = {
   "/photos/properties/Luxury 3-Bed | Stunning Views/Pool Marquise 2.png"
 ],
   seo: {
-    title: "Marquise Penthouse | Ski-In/Out | 3-Bed | Views - AceHost",
-    description: "Spacious 1,100 sq. ft. Marquise penthouse on Blackcomb with Fairmont and mountain views, 2 bedrooms, fireplace, private patio, A/C, glass-domed hot tub, pool, sauna and gym.",
+    title: "Marquise Penthouse | Ski-In Ski-Out | Views - AceHost",
+    description: "Welcome to Marquise 507, a spacious 2-bedroom, 3-bed penthouse-style retreat on Blackcomb Mountain with excellent ski-in/ski-out access just across the street. Step outside, reach the ski trail within moments, and ski down to the Blackcomb Gondola in minutes. After skiing, enjoy mountain views, a fireplace, full kitchen, A/C, free underground parking, plus access to the heated outdoor pool, glass-domed hot tub, sauna and gym.",
   },
   header:   {
-      "title": "Marquise Penthouse | Ski-In/Out | 3-Bed | Views",
+      "title": "Marquise Penthouse | Ski-In Ski-Out | Views",
       "guests": 6,
       "bedrooms": 2,
       "bathrooms": 2,
@@ -53,7 +53,7 @@ const listing: ListingData = {
       "holidayPrice": "$1000-$1280+ Nightly | Christmas & NY",
       "airbnbLink": "https://www.airbnb.ca/rooms/1461637483646115205?guests=1&adults=1&s=67&unique_share_id=9b6640b9-138d-4627-bea4-cb2155e32c72"
   },
-  galleryTitle: "Marquise Penthouse",
+  galleryTitle: "Marquise Penthouse | Ski-In Ski-Out | Views",
   photoAltPrefix: "Marquise Penthouse",
 };
 

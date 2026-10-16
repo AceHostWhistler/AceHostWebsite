@@ -266,9 +266,9 @@ export const townhomeProperties: Whistler28Property[] = [
   },
   {
     number: 25,
-    name: "Marquise Penthouse | Ski-In/Out | 3-Bed | Views",
+    name: "Marquise Penthouse | Ski-In Ski-Out | Views",
     description:
-      "A 1,100 sq. ft. Marquise penthouse with Fairmont views, glass-domed hot tub, pool, sauna, gym, and private patio on Blackcomb.",
+      "Marquise 507 is a 1,100 sq. ft. penthouse on Blackcomb with ski-in/ski-out access just across the street, Fairmont views, free underground parking, a glass-domed hot tub, pool, sauna and gym.",
     image: "/photos/properties/Luxury 3-Bed | Stunning Views/04 - 20250707 A7M3 03 A1_07325.jpg",
     listingHref: "/listings/luxury-3-bed-stunning-views",
     bookUrl:

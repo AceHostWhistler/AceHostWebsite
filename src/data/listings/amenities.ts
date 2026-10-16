@@ -155,12 +155,14 @@ export const listingAmenities: Record<string, string[]> = {
     "Heated floors & steam shower",
   ],
   "luxury-3-bed-stunning-views": [
-    "Marquise penthouse on Blackcomb",
+    "Ski-in / ski-out · Blackcomb",
+    "Ski trail just across the street",
     "Fairmont & mountain views",
     "Glass-domed hot tub · pool · sauna",
     "2 bedrooms · 3 beds · 2 baths",
+    "Free underground parking",
     "Private patio & fireplace",
-    "Summer A/C in living area",
+    "Summer A/C May 1 to November 1",
   ],
   "luxury-6-bedroom-whistler-village-blueberry": [
     "Blueberry neighbourhood",

@@ -250,8 +250,8 @@ const FEATURED_PROPERTIES = [
     imageAlt: "Pinnacle Ridge 23 ski-in ski-out townhome with gondola views",
   },
   {
-    name: "Marquise Penthouse",
-    label: "Upper Village penthouse with mountain views",
+    name: "Marquise Penthouse | Ski-In Ski-Out | Views",
+    label: "Ski-in/ski-out penthouse on Blackcomb, just across the street from the trail",
     listingHref: "/listings/luxury-3-bed-stunning-views",
     airbnbHref: "https://www.airbnb.ca/rooms/1461637483646115205",
     imageSrc:

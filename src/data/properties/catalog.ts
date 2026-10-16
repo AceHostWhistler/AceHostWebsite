@@ -1779,7 +1779,7 @@ export const propertyCategories: PropertyCategory[] = [
 
           {
             id: "luxury-3-bed-stunning-views",
-            name: "Marquise Penthouse | Ski-In/Out | 3-Bed | Views",
+            name: "Marquise Penthouse | Ski-In Ski-Out | Views",
             images: [
               "/photos/properties/Luxury 3-Bed | Stunning Views/04 - 20250707 A7M3 03 A1_07325.jpg",
               "/photos/properties/Luxury 3-Bed | Stunning Views/01 - 20250707 A7M3 03 A1_07650-Edit.jpg",
@@ -1821,28 +1821,28 @@ export const propertyCategories: PropertyCategory[] = [
             bathrooms: 2,
             location: "Blackcomb Benchlands, Whistler",
             description:
-              "Spacious 1,100 sq. ft. Marquise penthouse on Blackcomb with Fairmont and mountain views, 2 bedrooms, fireplace, private patio, A/C, glass-domed hot tub, pool, sauna and gym.",
+              "Welcome to Marquise 507, a spacious 2-bedroom, 3-bed penthouse-style retreat on Blackcomb Mountain with excellent ski-in/ski-out access just across the street. Step outside, reach the ski trail within moments, and ski down to the Blackcomb Gondola in minutes. After skiing, enjoy mountain views, a fireplace, full kitchen, A/C, free underground parking, plus access to the heated outdoor pool, glass-domed hot tub, sauna and gym.",
             features: [
+              "Ski-In/Ski-Out Across the Street",
               "Fairmont & Mountain Views",
               "Glass-Domed Hot Tub",
               "Heated Pool & Sauna",
               "Fitness Center",
-              "Gas Fireplace",
+              "Free Underground Parking",
               "Private Patio",
               "Summer A/C",
-              "Ski Access on Blackcomb",
             ],
             highlights: [
-              "Fairmont & Mountain Views",
+              "Ski-In/Ski-Out on Blackcomb",
               "Marquise Penthouse on Blackcomb",
               "Resort Pool, Hot Tub & Sauna",
-              "Spacious 1,100 sq ft Condo",
+              "Free Underground Parking",
             ],
             priceRange: "Nightly Price Range: $400-$1,150+",
             winterPrice: "$650-$1000+ Nightly | Winter",
             holidayPrice: "$1000-$1280+ Nightly | Christmas & NY",
             isPetFriendly: false,
-            isSkiInSkiOut: false,
+            isSkiInSkiOut: true,
             airbnbLink: "https://www.airbnb.ca/rooms/1461637483646115205?guests=1&adults=1&s=67&unique_share_id=9b6640b9-138d-4627-bea4-cb2155e32c72",
             link: "/listings/luxury-3-bed-stunning-views",
           },

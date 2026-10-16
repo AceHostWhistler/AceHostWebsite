@@ -12,13 +12,13 @@ export interface CondoRentalProperty {
 /** All AceHost Whistler condo and condo-style rentals for the best-condo-rentals blog */
 export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
   {
-    name: "Marquise Penthouse | Ski-In/Out | 3-Bed | Views",
+    name: "Marquise Penthouse | Ski-In Ski-Out | Views",
     priceRange: "$650-$1,280+ per night (seasonal)",
     stats:
-      "1,100 sq ft | Sleeps 6 | 2 Bedrooms | 3 Beds | 2 Bathrooms | Glass-Domed Hot Tub & Pool | Fairmont Views",
+      "1,100 sq ft | Sleeps 6 | 2 Bedrooms | 3 Beds | 2 Bathrooms | Ski-In/Ski-Out | Glass-Domed Hot Tub & Pool | Fairmont Views",
     paragraphs: [
-      "Welcome to this spacious 1,100 sq. ft. Marquise penthouse-style retreat with some of the best Fairmont and mountain views in Whistler. Enjoy 2 bedrooms, 2 bathrooms, a cozy fireplace, private patio, full kitchen and A/C, with room for up to 6 guests.",
-      "The main living area features a cozy gas fireplace, comfortable seating and views toward the Fairmont Chateau Whistler. After skiing, relax in the building's glass-domed hot tub, outdoor pool, sauna or gym.",
+      "Welcome to Marquise 507, a spacious 2-bedroom, 3-bed penthouse-style retreat on Blackcomb Mountain with ski-in/ski-out access just across the street. Step outside, reach the ski trail within moments, and ski down to the Blackcomb Gondola in minutes.",
+      "After skiing, enjoy mountain views, a fireplace, full kitchen, A/C, free underground parking, plus access to the heated outdoor pool, glass-domed hot tub, sauna and gym.",
       "The primary bedroom offers a king bed, private patio access with views, vanity area and direct access to a full bathroom. Bedroom 2 has a queen bed with private ensuite bathroom and bathtub, while a queen pullout sofa in the living room accommodates additional guests.",
     ],
     airbnbHref:
