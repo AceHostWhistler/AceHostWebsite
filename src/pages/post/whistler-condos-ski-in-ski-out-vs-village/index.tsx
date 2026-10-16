@@ -510,7 +510,8 @@ export default function WhistlerCondosSkiVsVillagePost() {
                 underground spots. Eagle Lodge and Le Chamois include one free
                 underground stall. Tyndall includes one guaranteed underground
                 space. The Aspens charges approximately $26 CAD per vehicle, per
-                day, through the building. Bluffs includes two underground stalls.
+                day, through the building. Bluffs includes two underground stalls
+                plus outdoor parking outside the building.
               </p>
               <p>
                 <strong>Laundry, ski storage, stairs and elevators.</strong>{" "}

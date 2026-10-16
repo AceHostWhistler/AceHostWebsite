@@ -875,7 +875,7 @@ export default function BlogPost() {
 
               {/* Condo 6 */}
               <h3 className="text-2xl font-bold text-gray-900 mt-12 mb-4">
-                6) Bluffs #8 - Luxury 2 Bed - Ski in Ski out - Views!
+                6) Bluffs #8 - Luxury 3 Bed - Ski in Ski out - Views!
               </h3>
 
               <div className="bg-gray-50 p-5 rounded-lg mb-6">
@@ -883,19 +883,20 @@ export default function BlogPost() {
               </div>
 
               <p>
-                Perched in Taluswood&apos;s Bluffs, this 2-bedroom retreat puts you
-                right on the Dave Murray Downhill for true ski-in ski-out days and
-                beautiful mountain-view evenings. With a King suite, Queen bedroom,
-                four Twin bunk beds, and a Queen sofa bed, the home sleeps up to 10
-                guests and works especially well for families and groups.
+                Ski Whistler&apos;s legendary Dave Murray Downhill from this
+                3-bedroom Taluswood penthouse. It is a 2 to 3-minute walk to the
+                ski access bridge, then a 3 to 4-minute ski to the Creekside
+                Gondola. With a King suite, Queen bedroom, four Twin bunk beds and
+                a Queen sofa bed, the home sleeps up to 10 guests and works
+                especially well for families and groups.
               </p>
 
               <p className="mt-4">
                 The open-concept main level includes a chef-ready kitchen, gas
-                fireplace, Smart TV, portable AC from May through November, and a
-                covered balcony with BBQ. Complex hot tub access, two underground
-                parking stalls, outdoor parking for larger vehicles, and secure ski
-                and bike storage make every season comfortable.
+                fireplace, Smart TV and a covered balcony with BBQ. A shared
+                complex hot tub, two underground parking stalls, outdoor parking
+                for larger vehicles and secure ski and bike storage make every
+                season comfortable.
               </p>
 
               <p className="text-blue-600 font-medium mt-2 mb-6">
@@ -913,13 +914,13 @@ export default function BlogPost() {
               <div className="relative aspect-[16/9] my-10 rounded-lg overflow-hidden">
                 <Image
                   src="/photos/properties/Bluffs Unit 8/ChatGPT Image Sep 4, 2026, 04_35_38 PM (8).png"
-                  alt="Bluffs #8 luxury 2-bed ski-in ski-out condo in Taluswood"
+                  alt="Bluffs #8 luxury 3-bed ski-in ski-out condo in Taluswood"
                   fill
                   className="object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-3">
                   <p className="text-sm font-medium">
-                    Bluffs #8 - Luxury 2 Bed - Ski in Ski out - Views!
+                    Bluffs #8 - Luxury 3 Bed - Ski in Ski out - Views!
                   </p>
                 </div>
               </div>

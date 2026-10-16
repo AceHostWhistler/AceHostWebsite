@@ -40,7 +40,7 @@ const listing: ListingData = {
     title:
       "Bluffs - Luxury 2 Bed Ski in Ski out in Creekside - Views! | AceHost",
     description:
-      "Perched in Taluswood's Bluffs, this 2-bedroom retreat offers true ski-in ski-out access on Dave Murray Downhill, a shared complex hot tub, and mountain views.",
+      "Ski Whistler's legendary Dave Murray Downhill from this 2-bedroom Taluswood retreat. A short walk to the ski access bridge, then ski directly to the Creekside Gondola. Sleeps 6 with a King suite, Queen bedroom and Queen sofa bed, plus a shared hot tub, ski-boot dryer, portable AC (May to Nov), two underground parking spots and secure ski/bike storage.",
   },
   header: {
     title: "Bluffs - Luxury 2 Bed Ski in Ski out in Creekside - Views!",
@@ -61,7 +61,7 @@ const listing: ListingData = {
     name: "Bluffs - Luxury 2 Bed Ski in Ski out in Creekside - Views!",
     image: "/photos/properties/Bluffs Unit 4/IMG_001112.JPG",
     description:
-      "Perched in Taluswood's Bluffs, this 2-bedroom retreat offers true ski-in ski-out access, a shared complex hot tub, and mountain views in Whistler.",
+      "Ski Whistler's legendary Dave Murray Downhill from this 2-bedroom Taluswood retreat. A short walk to the ski access bridge, then ski directly to the Creekside Gondola. Sleeps 6 with a King suite, Queen bedroom and Queen sofa bed, plus a shared hot tub, ski-boot dryer, two underground parking spots and secure ski/bike storage.",
     sku: "bluffs-unit-4-taluswood",
     brand: {
       "@type": "Brand",

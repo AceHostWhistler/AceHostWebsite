@@ -244,10 +244,10 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     name: "Bluffs - Luxury 2 Bed Ski in Ski out in Creekside - Views!",
     priceRange: "$380-$950 Summer | $500-$1,350 Winter (seasonal)",
     stats:
-      "Sleeps 6 | 2 Bedrooms | 3 Beds | 2 Bathrooms | Ski-in/Ski-out | Shared complex hot tub | Creekside/Taluswood",
+      "Sleeps 6 | 2 Bedrooms | 3 Beds | 2 Bathrooms | Ski-in/Ski-out | Shared complex hot tub | Ski-boot dryer | Creekside/Taluswood",
     paragraphs: [
-      "Perched in Taluswood's Bluffs, this two-bedroom retreat drops you onto the Dave Murray Downhill for true ski-in/ski-out days and sunset mountain-view evenings. King and queen suites, heated bathroom floors, and a chef-ready kitchen make it feel far larger than a typical Creekside base.",
-      "Shared complex hot tub access, two underground parking stalls, and dedicated ski and bike storage simplify every ski day. Portable AC keeps summer stays comfortable when temperatures climb in the valley.",
+      "Ski Whistler's legendary Dave Murray Downhill, home of the 2010 Winter Olympics, from this two-bedroom Taluswood retreat. A short walk brings you to the ski access bridge, then ski directly down to the Creekside Gondola. King and queen suites, a ski-boot dryer in the mudroom, heated bathroom floors and a chef-ready kitchen make it feel far larger than a typical Creekside base.",
+      "Shared complex hot tub access, two underground parking stalls plus outdoor parking, portable AC from May to November, and dedicated ski and bike storage simplify every ski day.",
       "For skiers who prioritize slope access and Creekside calm over village bustle, Bluffs is one of the most compelling ski-in/ski-out condos on the AceHost roster.",
     ],
     airbnbHref:
@@ -257,20 +257,20 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     imageAlt: "Bluffs luxury ski-in ski-out Creekside condo with mountain views",
   },
   {
-    name: "Bluffs #8 - Luxury 2 Bed - Ski in Ski out - Views!",
+    name: "Bluffs #8 - Luxury 3 Bed - Ski in Ski out - Views!",
     priceRange: "$450-$1,200+ Summer | $750-$1,600+ Winter (seasonal)",
     stats:
-      "Sleeps 10 | 2 Bedrooms | 7 Beds | 2 Bathrooms | Ski-in/Ski-out | Hot Tub | Taluswood",
+      "Sleeps 10 | 3 Bedrooms | 7 Beds | 2 Bathrooms | Ski-in/Ski-out | Shared Hot Tub | Taluswood",
     paragraphs: [
-      "Perched in Taluswood's Bluffs, this 2-bedroom retreat puts you right on the Dave Murray Downhill for true ski-in ski-out days and beautiful mountain-view evenings. With a King suite, Queen bedroom, four Twin bunk beds, and a Queen sofa bed, the home sleeps up to 10 guests and is ideal for families and groups who want Creekside slope access.",
-      "The open-concept main level combines kitchen, dining, and living areas with a gas fireplace, Smart TV, portable AC from May through November, and a covered balcony with BBQ and outdoor dining. A private complex hot tub, two underground parking stalls, outdoor parking for larger vehicles, and secure ski and bike storage make every season comfortable.",
-      "For skiers and families who want true Dave Murray access, elevated views over Whistler Village, and a 2-bedroom layout in Taluswood, Bluffs #8 is one of the strongest ski-in/ski-out condo options in the AceHost collection.",
+      "Ski Whistler's legendary Dave Murray Downhill from this 3-bedroom Taluswood penthouse. It is a 2 to 3-minute walk to the ski access bridge, then a 3 to 4-minute ski to the Creekside Gondola. With a King suite, Queen bedroom, four Twin bunk beds and a Queen sofa bed, the home sleeps up to 10 guests and is ideal for families and groups who want Creekside slope access.",
+      "The open-concept main level combines kitchen, dining and living areas with a gas fireplace, Smart TV and a covered balcony with BBQ and outdoor dining. A shared complex hot tub, two underground parking stalls, outdoor parking for larger vehicles and secure ski and bike storage make every season comfortable.",
+      "For skiers and families who want true Dave Murray access, elevated views over Whistler Village and a 3-bedroom layout in Taluswood, Bluffs #8 is one of the strongest ski-in/ski-out condo options in the AceHost collection.",
     ],
     airbnbHref:
       "https://www.airbnb.ca/rooms/1747927495845801389?guests=1&adults=1&s=67&unique_share_id=99456c1e-0b4a-4b30-933f-0c8270cc0adb",
     listingHref: "/listings/bluffs-unit-8-taluswood",
     imageSrc: "/photos/properties/Bluffs Unit 8/ChatGPT Image Sep 4, 2026, 04_35_38 PM (8).png",
-    imageAlt: "Bluffs #8 luxury 2-bed ski-in ski-out condo in Taluswood Whistler",
+    imageAlt: "Bluffs #8 luxury 3-bed ski-in ski-out condo in Taluswood Whistler",
   },
   {
     name: "Cozy Lakefront Whistler Condo | Mountain View",

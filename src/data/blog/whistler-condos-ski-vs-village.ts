@@ -140,13 +140,13 @@ export const FEATURED_PROPERTIES = [
     imageAlt:
       "Bluffs Unit 4 living area with mountain views in Taluswood, Whistler",
     caption:
-      "Bluffs Unit 4 is a Taluswood condo above Creekside, with ski access onto the Dave Murray Downhill.",
+      "Bluffs Unit 4 is a Taluswood condo above Creekside. A short walk reaches the ski access bridge onto the Dave Murray Downhill, then ski to the Creekside Gondola.",
     summary:
-      "A useful comparison if you want ski-in/ski-out on Whistler Mountain rather than Blackcomb. This is a mountainside condo, not a Creekside Village sidewalk stay. Creekside shops, restaurants and the gondola are a short drive, not a Village-style walk.",
+      "A useful comparison if you want ski-in/ski-out on Whistler Mountain rather than Blackcomb. This is a mountainside condo, not a Creekside Village sidewalk stay. Creekside shops, restaurants and the gondola are a short drive, not a Village-style walk. Ski access is best suited to confident intermediate and advanced skiers.",
     features: [
       "King and queen suites plus a queen sofa bed, sleeps 6",
       "Shared complex hot tub, not a private tub",
-      "Two underground parking stalls and in-suite laundry",
+      "Ski-boot dryer, two underground stalls plus outdoor parking",
     ],
   },
 ] as const;
