@@ -519,7 +519,7 @@ export default function BlogPost() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 not-prose">
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Pinnacle Ridge 23/Snowy Whistler Retreat with Gondola Views.png"
+                    src="/photos/properties/Pinnacle Ridge 23/Pinnacle_new_cover_gondola_above_home_cleaned.jpg"
                     alt="Pinnacle Ridge 23 ski-in ski-out townhome with gondola views"
                     fill
                     className="object-cover"

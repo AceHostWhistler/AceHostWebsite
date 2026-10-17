@@ -95,7 +95,7 @@ const luxuryHomesBeyondKadenwood: FeaturedProperty[] = [
     description:
       "A renovated 6-bedroom mountain home sitting slopeside on Blackcomb's main ski run, with ski access about a 2-minute walk from the door, a private outdoor hot tub, and both Upper Village and Whistler Village walking distance. Sleeps 14.",
     photos: [
-      "/photos/properties/Pinnacle Ridge 23/Snowy Whistler Retreat with Gondola Views.png",
+      "/photos/properties/Pinnacle Ridge 23/Pinnacle_new_cover_gondola_above_home_cleaned.jpg",
       "/photos/properties/Pinnacle Ridge 23/Snowy Whistler Balcony Hot Tub-1.png",
       "/photos/properties/Pinnacle Ridge 23/Warm interior, snowy Whistler views-2.png",
       "/photos/properties/Pinnacle Ridge 23/45 - DJI_20261004163547_0103_D.jpg",

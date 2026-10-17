@@ -19,7 +19,7 @@ export const DEFAULT_SOCIAL_IMAGE = ACEHOST_LOGO_IMAGE;
 export const LOGO_SHARE_WIDTH = 800;
 export const LOGO_SHARE_HEIGHT = 800;
 /** Bump this when cover photos change so Google and iMessage recache the new image. */
-export const SHARE_IMAGE_VERSION = "20261013a";
+export const SHARE_IMAGE_VERSION = "20261016a";
 export const SHARE_PHOTO_WIDTH = 1200;
 export const SHARE_PHOTO_HEIGHT = 800;
 

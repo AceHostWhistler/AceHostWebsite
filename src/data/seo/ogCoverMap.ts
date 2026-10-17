@@ -75,6 +75,6 @@ export const OG_COVER_BY_SOURCE: Record<string, string> = {
   "/photos/homepage/pm/cedars full res.jpg": "/og-covers/cedars-full-res-98303305.jpg",
   "/photos/properties/worldwide/Bedora Place/18 - 20260502 A7M4 01 A1_07454.jpg": "/og-covers/18-20260502-A7M4-01-A1-07454-990c31fe.jpg",
   "/photos/properties/Luxe 3-bed Scandinave/1-2 2221 Gondola Way 26.jpg": "/og-covers/1-2-2221-Gondola-Way-26-9d36c201.jpg",
-  "/photos/properties/Pinnacle Ridge 23/Snowy Whistler Retreat with Gondola Views.png": "/og-covers/Snowy-Whistler-Retreat-with-Gondola-Views-74e674b2.jpg",
+  "/photos/properties/Pinnacle Ridge 23/Pinnacle_new_cover_gondola_above_home_cleaned.jpg": "/og-covers/Pinnacle-new-cover-gondola-above-home-cleaned-8301d6d5.jpg",
   "/photos/properties/Woodrun 2-bed/Woodrun snow 1.jpg": "/og-covers/Woodrun-snow-1-8ff17d2c.jpg",
 };

@@ -4,7 +4,7 @@ export const PINNACLE_RIDGE_23_PHOTO_DIR =
 const D = PINNACLE_RIDGE_23_PHOTO_DIR;
 
 export const PINNACLE_RIDGE_23_COVER =
-  `${D}/Snowy Whistler Retreat with Gondola Views.png`;
+  `${D}/Pinnacle_new_cover_gondola_above_home_cleaned.jpg`;
 
 /** Cover first, then numbered gallery photos, then remaining named images. */
 export const PINNACLE_RIDGE_23_PHOTOS: string[] = [

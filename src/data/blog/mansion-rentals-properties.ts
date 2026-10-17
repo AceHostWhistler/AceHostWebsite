@@ -198,7 +198,7 @@ export const MANSION_RENTAL_PROPERTIES: MansionRentalProperty[] = [
     standout: "Slopeside on Blackcomb's main ski run, about a 2-minute walk from the door to ski, private hot tub, and both villages walking distance. Sleeps 14",
     images: [
       {
-        src: "/photos/properties/Pinnacle Ridge 23/Snowy Whistler Retreat with Gondola Views.png",
+        src: "/photos/properties/Pinnacle Ridge 23/Pinnacle_new_cover_gondola_above_home_cleaned.jpg",
         alt: "Pinnacle Ridge 23 ski-in ski-out townhome with gondola views",
       },
     ],

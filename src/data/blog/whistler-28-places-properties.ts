@@ -157,7 +157,7 @@ export const townhomeProperties: Whistler28Property[] = [
     description:
       "A renovated 6-bedroom mountain home sitting slopeside on Blackcomb's main ski run, with ski access about a 2-minute walk from the door, a private outdoor hot tub, and both Upper Village and Whistler Village walking distance. Sleeps 14.",
     image:
-      "/photos/properties/Pinnacle Ridge 23/Snowy Whistler Retreat with Gondola Views.png",
+      "/photos/properties/Pinnacle Ridge 23/Pinnacle_new_cover_gondola_above_home_cleaned.jpg",
     listingHref: "/listings/pinnacle-ridge-23",
     bookUrl:
       "https://www.airbnb.ca/rooms/1786522789927072620?guests=1&adults=1&s=67&unique_share_id=1ad241f6-75d1-46d5-9f48-9edb942d47f4",

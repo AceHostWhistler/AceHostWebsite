@@ -246,7 +246,7 @@ const FEATURED_PROPERTIES = [
     airbnbHref:
       "https://www.airbnb.ca/rooms/1786522789927072620?guests=1&adults=1&s=67&unique_share_id=1ad241f6-75d1-46d5-9f48-9edb942d47f4",
     imageSrc:
-      "/photos/properties/Pinnacle Ridge 23/Snowy Whistler Retreat with Gondola Views.png",
+      "/photos/properties/Pinnacle Ridge 23/Pinnacle_new_cover_gondola_above_home_cleaned.jpg",
     imageAlt: "Pinnacle Ridge 23 ski-in ski-out townhome with gondola views",
   },
   {
