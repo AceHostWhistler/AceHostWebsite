@@ -1931,7 +1931,7 @@ export const propertyCategories: PropertyCategory[] = [
             name: "Eagle Lodge | Main Village Condo | Walk to Lifts | Free Parking",
             images: [
               "/photos/properties/Eagle Lodge 238/Eagle edit 1.png",
-              "/photos/properties/Eagle Lodge 238/Eagle edit 3.png",
+              "/photos/properties/Eagle Lodge 238/Eagle Lodge View.jpeg",
               "/photos/properties/Eagle Lodge 238/Eagle edit 2.png",
             ],
             guests: 4,

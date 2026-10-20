@@ -255,7 +255,7 @@ const condoTownhomeOptions: FeaturedProperty[] = [
       "A renovated 1-bedroom Town Plaza condo in the centre of Whistler Village. Walk about 7 minutes to the gondolas, with restaurants, shops and Olympic Plaza just outside, plus a brand-new shared hot tub and gym and free underground parking.",
     photos: [
       "/photos/properties/Eagle Lodge 238/Eagle edit 1.png",
-      "/photos/properties/Eagle Lodge 238/Eagle edit 3.png",
+      "/photos/properties/Eagle Lodge 238/Eagle Lodge View.jpeg",
       "/photos/properties/Eagle Lodge 238/Eagle edit 9.png",
       "/photos/properties/Eagle Lodge 238/Eagle edit 2.png",
     ],

@@ -12,7 +12,7 @@ const listing: ListingData = {
   galleryPreserveOrder: true,
   photos: [
     EAGLE_LODGE_COVER,
-    `${base}/Eagle edit 3.png`,
+    `${base}/Eagle Lodge View.jpeg`,
     `${base}/Eagle edit 2.png`,
     `${base}/Eagle edit 4.png`,
     `${base}/Eagle edit 5.png`,
