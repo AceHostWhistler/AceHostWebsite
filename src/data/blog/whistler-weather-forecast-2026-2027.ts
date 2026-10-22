@@ -26,7 +26,7 @@ export const OG_IMAGE =
 
 export const IMAGES = {
   alpineTerrain: {
-    src: "/photos/properties/Falcon/Falcon living snow 3.png",
+    src: "/photos/properties/Falcon/Falcon_new_living_room_cover_cleaned.jpg",
     alt: "Snow-covered alpine terrain at Whistler Blackcomb",
     caption:
       "With terrain stretching from the valley to more than 2,280 metres, weather can be dramatically different across Whistler Blackcomb's elevation range.",

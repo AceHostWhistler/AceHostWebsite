@@ -64,6 +64,7 @@ async function main() {
   const extras = [
     "/photos/properties/worldwide/Bedora Place/18 - 20260502 A7M4 01 A1_07454.jpg",
     "/photos/properties/Luxe 3-bed Scandinave/1-2 2221 Gondola Way 26.jpg",
+    "/photos/properties/Falcon/Falcon_new_living_room_cover_cleaned.jpg",
     "/photos/properties/Pinnacle Ridge 23/Pinnacle_new_cover_gondola_above_home_cleaned.jpg",
     "/photos/properties/Woodrun 2-bed/Woodrun snow 1.jpg",
   ];

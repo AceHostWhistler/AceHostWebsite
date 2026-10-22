@@ -153,7 +153,7 @@ export const MANSION_RENTAL_PROPERTIES: MansionRentalProperty[] = [
     standout: "Hot tub, barrel sauna, central air conditioning, fireplace and mountain views",
     images: [
       {
-        src: "/photos/properties/Falcon/Cover photo Falcon.webp",
+        src: "/photos/properties/Falcon/Falcon_new_living_room_cover_cleaned.jpg",
         alt: "Falcon seven-bedroom Whistler chalet with hot tub and sauna",
       },
     ],

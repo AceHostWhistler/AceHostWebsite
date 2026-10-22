@@ -610,7 +610,7 @@ export default function BlogPost() {
                 more space than most properties located directly in Whistler Village.
               </p>
               <SectionImage
-                src="/photos/properties/Falcon/Cover photo Falcon.webp"
+                src="/photos/properties/Falcon/Falcon_new_living_room_cover_cleaned.jpg"
                 alt="Falcon luxury chalet in Blueberry Whistler with mountain views"
               />
               <p>

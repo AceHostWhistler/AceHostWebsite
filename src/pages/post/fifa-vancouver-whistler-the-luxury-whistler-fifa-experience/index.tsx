@@ -121,10 +121,10 @@ const luxuryHomesBeyondKadenwood: FeaturedProperty[] = [
     description:
       "A gorgeous chalet with strong design appeal, great views, and the type of elevated mountain atmosphere that works beautifully for FIFA travellers.",
     photos: [
-      "/photos/properties/Falcon/Cover photo Falcon.webp",
+      "/photos/properties/Falcon/Falcon_new_living_room_cover_cleaned.jpg",
       "/photos/properties/Falcon/Outdoor shot falcon zoomed out.webp",
       "/photos/properties/Falcon/Outdoor shot falcon.webp",
-      "/photos/properties/Falcon/Cover photo Falcon.webp",
+      "/photos/properties/Falcon/Falcon_new_living_room_cover_cleaned.jpg",
     ],
     bookUrl:
       "https://www.airbnb.ca/rooms/18060329?preview_for_ml=true&source_impression_id=p3_1684112119_tL0LL7QnYLFGOCBI",

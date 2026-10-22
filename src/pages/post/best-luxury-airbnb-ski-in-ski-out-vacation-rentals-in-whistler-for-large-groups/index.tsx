@@ -645,8 +645,8 @@ export default function BlogPost() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 not-prose">
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Falcon/Cover photo Falcon.webp"
-                    alt="Falcon Blueberry Drive exterior"
+                    src="/photos/properties/Falcon/Falcon_new_living_room_cover_cleaned.jpg"
+                    alt="Falcon living room on Blueberry Drive"
                     fill
                     className="object-cover"
                   />

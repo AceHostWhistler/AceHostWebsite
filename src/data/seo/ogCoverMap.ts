@@ -8,6 +8,7 @@ export const OG_COVER_BY_SOURCE: Record<string, string> = {
   "/photos/properties/Slopeside Kadenwood/01-2945 Slope Side 01.jpg": "/og-covers/01-2945-Slope-Side-01-24fff267.jpg",
   "/photos/properties/Timber Haven John Harris/Drone Timber cover snow 2.png": "/og-covers/Drone-Timber-cover-snow-2-a5f5eaad.jpg",
   "/photos/properties/3445-Heron-Place/Heron new cover phto snow light.png": "/og-covers/Heron-new-cover-phto-snow-light-0c948da7.jpg",
+  "/photos/properties/Falcon/Falcon_new_living_room_cover_cleaned.jpg": "/og-covers/Falcon-new-living-room-cover-cleaned-79dca6f4.jpg",
   "/photos/properties/Falcon/Cover photo Falcon.webp": "/og-covers/Cover-photo-Falcon-db8e9a55.jpg",
   "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Cover Blueberry 306 snow.png": "/og-covers/Cover-Blueberry-306-snow-bf92f678.jpg",
   "/photos/properties/Bluffs Unit 8/ChatGPT Image Sep 4, 2026, 04_35_38 PM (8).png": "/og-covers/ChatGPT-Image-Sep-4-2026-04-35-38-PM-8-ffde72b4.jpg",

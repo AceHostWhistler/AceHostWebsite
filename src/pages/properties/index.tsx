@@ -372,8 +372,8 @@ export default function Properties() {
                   <div className="relative grid grid-cols-3 gap-3 sm:gap-4">
                     <div className="relative aspect-square w-full overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/15">
                       <PropertyCoverImage
-                        src="/photos/properties/Falcon/Cover photo Falcon.webp"
-                        alt="Falcon luxury chalet exterior in Whistler"
+                        src="/photos/properties/Falcon/Falcon_new_living_room_cover_cleaned.jpg"
+                        alt="Falcon luxury chalet living room in Whistler"
                         priority
                         variant="hero"
                       />
