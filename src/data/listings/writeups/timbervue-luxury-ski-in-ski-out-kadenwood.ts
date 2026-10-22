@@ -28,7 +28,7 @@ const timberVueWriteup: ListingWriteupContent = {
     title: "The Residence",
     imageSide: "right",
     image: {
-      photoIndex: 2,
+      photoIndex: 1,
       alt: "TimberVue living and dining",
     },
     paragraphs: [
@@ -42,7 +42,7 @@ const timberVueWriteup: ListingWriteupContent = {
     title: "Location & Ski Access",
     imageSide: "left",
     image: {
-      photoIndex: 1,
+      photoIndex: 2,
       alt: "TimberVue in Kadenwood",
     },
     paragraphs: [
