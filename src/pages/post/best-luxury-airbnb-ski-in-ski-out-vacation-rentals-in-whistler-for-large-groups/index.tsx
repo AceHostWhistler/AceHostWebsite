@@ -300,7 +300,7 @@ export default function BlogPost() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Timber Haven John Harris/Timber Snow living 13.png"
+                    src="/photos/properties/Timber Haven John Harris/Living timber snow 13.jpg"
                     alt="TimberVue great room"
                     fill
                     className="object-cover"

@@ -36,7 +36,7 @@ export const IMAGES = {
     alt: "Heavy snowfall and powder skiing in Whistler British Columbia",
   },
   coastMountains: {
-    src: "/photos/properties/Timber Haven John Harris/Timber Snow living 3.png",
+    src: "/photos/properties/Timber Haven John Harris/Timber living new snow 3.jpg",
     alt: "Pacific storm clouds over the Coast Mountains near Whistler",
   },
   alpineValley: {
