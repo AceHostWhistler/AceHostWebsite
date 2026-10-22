@@ -46,7 +46,6 @@ export const TOWNHOME_IDS = new Set([
   "ravens-nest",
   "snow-pine",
   "rare-3-bedroom-whistler-village",
-  "luxe-cozy-3-bed-whistler-village",
   "luxe-5-bed-scandinave-retreat",
   "northlands-walk-to-village-slopes-luxury-4-bed",
 ]);

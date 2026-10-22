@@ -54,7 +54,6 @@ export const HOMEPAGE_PROPERTY_ORDER: readonly string[] = [
   "the-nest",
   "snow-pine",
   "wedge-mountain-lodge-spa",
-  "luxe-cozy-3-bed-whistler-village",
   "whispering-pines",
   "marquise-2-bed",
   "ski-in-ski-out-walk-to-lifts-2-bed",

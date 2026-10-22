@@ -47,7 +47,6 @@ export const TOWNHOME_IDS = new Set([
   "ravens-nest",
   "snow-pine",
   "rare-3-bedroom-whistler-village",
-  "luxe-cozy-3-bed-whistler-village",
   "luxe-5-bed-scandinave-retreat",
   "northlands-walk-to-village-slopes-luxury-4-bed",
   "pinnacle-ridge-23",
@@ -1263,42 +1262,6 @@ export const propertyCategories: PropertyCategory[] = [
             winterPrice: "Request for Event & Wedding Venue Whistler Pricing",
             holidayPrice: "Request for Nightly rates",
             contactLink: "/contact",
-          },
-
-          {
-            id: "luxe-cozy-3-bed-whistler-village",
-            name: "Blackcomb Pines | Luxe 3-Bedroom | Blackcomb",
-            images: [
-              "/photos/properties/Cozy Luxe 3-Bed in Whistler Village/02-1 4668 Blackcomb Way 02-Edit.jpg",
-              "/photos/properties/Cozy Luxe 3-Bed in Whistler Village/01-1 4668 Blackcomb Way 01-Edit.jpg",
-              "/photos/properties/Cozy Luxe 3-Bed in Whistler Village/01-1 4668 Blackcomb Way 01-Edit.jpg",
-            ],
-            guests: 6,
-            bedrooms: 3,
-            bathrooms: 2.5,
-            beds: 4,
-            location: "Blackcomb, Whistler",
-            description:
-              "This stylish and recently renovated 3-bedroom townhome in Blackcomb combines convenient location with modern comfort. Tastefully decorated with a cozy mountain aesthetic and just minutes from the gondolas.",
-            features: [
-              "Recently Renovated",
-              "Modern Design",
-              "Blackcomb Location",
-              "Walk to Lifts",
-              "Gas Fireplace",
-              "Designer Furnishings",
-              "Open Concept Living",
-              "Mountain Views",
-            ],
-            highlights: [
-              "Stylish Modern Interior",
-              "Blackcomb, Whistler",
-              "Walk to Village & Lifts",
-              "Fully Equipped Kitchen",
-            ],
-            priceRange: "$750-$2,200+ per night",
-            winterPrice: "$750-$1,500+ Nightly | Winter",
-            holidayPrice: "$1,800-$2,200+ Nightly | Christmas & NY",
           },
 
           {
