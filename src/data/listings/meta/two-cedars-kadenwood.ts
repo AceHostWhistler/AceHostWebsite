@@ -7,6 +7,7 @@ const listing: ListingData = {
   photos: [
     `${base}/Two Cedars Cover photo snow.png`,
     `${base}/OSA_AncientCW1002 Panorama.jpg`,
+    `${base}/Sauna snow two cedars.jpeg`,
     `${base}/02-2934 Ancient Cedars-02.jpg`,
     `${base}/03-2934 Ancient Cedars-03.jpg`,
     `${base}/04-2934 Ancient Cedars-04.jpg`,
