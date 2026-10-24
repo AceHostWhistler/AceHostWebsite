@@ -36,7 +36,7 @@ export const OG_COVER_BY_SOURCE: Record<string, string> = {
   "/photos/properties/Punta Mita/242608_2093 copy 2.jpg": "/og-covers/242608-2093-copy-2-156de14e.jpg",
   "/photos/properties/hood-river-luxury-home/Interior 3.jpg": "/og-covers/Interior-3-07a45750.jpg",
   "/photos/properties/Luxury 3-Bed | Stunning Views/04 - 20250707 A7M3 03 A1_07325.jpg": "/og-covers/04-20250707-A7M3-03-A1-07325-2627f479.jpg",
-  "/photos/properties/Bluffs Unit 4/IMG_001112.JPG": "/og-covers/IMG-001112-856a097e.jpg",
+  "/photos/properties/Bluffs Unit 4/6.jpeg": "/og-covers/6-e7076b20.jpg",
   "/photos/properties/Squamish/16 - 20251104 A7M4 01 A1_06655.jpg": "/og-covers/16-20251104-A7M4-01-A1-06655-18405947.jpg",
   "/photos/properties/Eagle Lodge 238/Eagle edit 1.png": "/og-covers/Eagle-edit-1-3789765d.jpg",
   "/photos/properties/Northlands Symphony 29/01 - 20251128 A7M4 02 A1_02882_.jpg": "/og-covers/01-20251128-A7M4-02-A1-02882-9364f9d9.jpg",

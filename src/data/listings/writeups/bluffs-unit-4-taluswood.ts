@@ -27,7 +27,7 @@ const bluffsUnit4Writeup: ListingWriteupContent = {
     title: "The Residence",
     imageSide: "right",
     image: {
-      photoIndex: 4,
+      photoIndex: 1,
       alt: "Bluffs Unit 4 living area",
     },
     paragraphs: [
@@ -70,8 +70,8 @@ const bluffsUnit4Writeup: ListingWriteupContent = {
     title: "Location & Ski Access",
     imageSide: "left",
     image: {
-      photoIndex: 7,
-      alt: "Bluffs Unit 4 bedroom",
+      photoIndex: 27,
+      alt: "Bluffs Unit 4 drone view",
     },
     paragraphs: [
       "One of the biggest highlights of this home is its ski-in/ski-out location on Whistler Mountain. From the property, it is a short walk to the ski access bridge connecting to the legendary Dave Murray Downhill, part of Whistler's 2010 Winter Olympic alpine skiing venue. Click into your skis and enjoy a downhill ski directly to the Creekside Gondola in just a few minutes. At the end of the day, follow Dave Murray Downhill back to the ski access point and enjoy a short walk home.",

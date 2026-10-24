@@ -503,7 +503,7 @@ export default function BlogPost() {
                 essentials guests need during a winter holiday.
               </p>
               <SectionImage
-                src="/photos/properties/Bluffs Unit 4/IMG_001112.JPG"
+                src="/photos/properties/Bluffs Unit 4/6.jpeg"
                 alt="Luxury Creekside ski-access home in Whistler Taluswood"
               />
               <SectionImage

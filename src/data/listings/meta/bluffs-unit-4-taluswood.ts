@@ -4,17 +4,22 @@ import { BLUFFS_AIRBNB_LINK } from "../bluffsAirbnbLink";
 const listing: ListingData = {
   slug: "bluffs-unit-4-taluswood",
   photos: [
-  "/photos/properties/Bluffs Unit 4/IMG_001112.JPG",
-  "/photos/properties/Bluffs Unit 4/01 - 20260522 MM4P 02 0362.jpg",
+  "/photos/properties/Bluffs Unit 4/6.jpeg",
+  "/photos/properties/Bluffs Unit 4/Bluffs 4 living cover snow.jpg",
+  "/photos/properties/Bluffs Unit 4/Bluffs 4 snow photos living.jpg",
+  "/photos/properties/Bluffs Unit 4/Bluffs 4 snow phot.jpg",
+  "/photos/properties/Bluffs Unit 4/Bluffs 4 snow edit living 1.jpeg",
+  "/photos/properties/Bluffs Unit 4/Bluffs 4 snow edit living 2.jpeg",
+  "/photos/properties/Bluffs Unit 4/Bluffs 4 snow edit living 3.jpeg",
+  "/photos/properties/Bluffs Unit 4/Bluffs 4 snow edit living 4.jpeg",
+  "/photos/properties/Bluffs Unit 4/Bluffs 4 living snow 8.jpeg",
   "/photos/properties/Bluffs Unit 4/IMG_001110.JPG",
   "/photos/properties/Bluffs Unit 4/Hot tub.png",
   "/photos/properties/Bluffs Unit 4/Bluffs photo.png",
   "/photos/properties/Bluffs Unit 4/Edited no plant living.png",
-  "/photos/properties/Bluffs Unit 4/Dining table Bluffs.png",
   "/photos/properties/Bluffs Unit 4/Master ironed.png",
   "/photos/properties/Bluffs Unit 4/Master ironed 2.png",
   "/photos/properties/Bluffs Unit 4/Bed 2 ironed 1.png",
-  "/photos/properties/Bluffs Unit 4/10 - 20260522 A7M4 03 A1_06530.jpg",
   "/photos/properties/Bluffs Unit 4/11 - 20260522 A7M4 03 A1_06541.jpg",
   "/photos/properties/Bluffs Unit 4/12 - 20260522 A7M4 03 A1_06596.jpg",
   "/photos/properties/Bluffs Unit 4/13 - 20260522 A7M4 03 A1_06601.jpg",
@@ -34,7 +39,7 @@ const listing: ListingData = {
   "/photos/properties/Bluffs Unit 4/Plant no living room bluffs.png",
   "/photos/properties/Bluffs Unit 4/75eb0f7a-d926-4720-8f99-23c5adbf2c60.jpeg",
   "/photos/properties/Bluffs Unit 4/IMG_001107.PNG",
-  "/photos/properties/Bluffs Unit 4/IMG_001108.PNG"
+  "/photos/properties/Bluffs Unit 4/44.02 - 4 - 2301 Taluswood Pl, Whistler - 07 - 20260612 A7M4 01 A1_01506.jpg",
 ],
   seo: {
     title:
@@ -59,7 +64,7 @@ const listing: ListingData = {
     "@context": "https://schema.org/",
     "@type": "Product",
     name: "Bluffs - Luxury 2 Bed Ski in Ski out - Views!",
-    image: "/photos/properties/Bluffs Unit 4/IMG_001112.JPG",
+    image: "/photos/properties/Bluffs Unit 4/6.jpeg",
     description:
       "Ski Whistler's legendary Dave Murray Downhill, home of the 2010 Winter Olympics, from this 2-bedroom Taluswood retreat. A short walk brings you to the ski access bridge, then ski directly down to the Creekside Gondola. Sleeps 6 with a King suite, Queen bedroom and Queen sofa bed, plus a chef-ready kitchen, Smart TVs, ski-boot dryer, portable AC (May to Nov), 2 underground parking spots and secure ski/bike storage.",
     sku: "bluffs-unit-4-taluswood",

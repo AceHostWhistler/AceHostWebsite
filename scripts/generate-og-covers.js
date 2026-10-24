@@ -66,6 +66,7 @@ async function main() {
     "/photos/properties/Luxe 3-bed Scandinave/1-2 2221 Gondola Way 26.jpg",
     "/photos/properties/Falcon/Falcon_new_living_room_cover_cleaned.jpg",
     "/photos/properties/Pinnacle Ridge 23/Pinnacle_new_cover_gondola_above_home_cleaned.jpg",
+    "/photos/properties/Bluffs Unit 4/6.jpeg",
     "/photos/properties/Woodrun 2-bed/Woodrun snow 1.jpg",
   ];
 

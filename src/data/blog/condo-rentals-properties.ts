@@ -253,7 +253,7 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     airbnbHref:
       "https://www.airbnb.com/rooms/1693549013411163327?guests=1&adults=1&s=67&unique_share_id=759d2f0b-5f96-4039-b45f-18a842fc59f7",
     listingHref: "/listings/bluffs-unit-4-taluswood",
-    imageSrc: "/photos/properties/Bluffs Unit 4/IMG_001112.JPG",
+    imageSrc: "/photos/properties/Bluffs Unit 4/6.jpeg",
     imageAlt: "Bluffs luxury ski-in ski-out Creekside condo with mountain views",
   },
   {

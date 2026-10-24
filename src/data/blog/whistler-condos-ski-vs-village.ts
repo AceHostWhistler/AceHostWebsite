@@ -136,7 +136,7 @@ export const FEATURED_PROPERTIES = [
     name: "Bluffs | Luxury 2 Bed Ski in Ski out | Views",
     building: "The Bluffs, Taluswood (above Creekside)",
     href: "/listings/bluffs-unit-4-taluswood",
-    image: "/photos/properties/Bluffs Unit 4/IMG_001112.JPG",
+    image: "/photos/properties/Bluffs Unit 4/6.jpeg",
     imageAlt:
       "Bluffs Unit 4 living area with mountain views in Taluswood, Whistler",
     caption:

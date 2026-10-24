@@ -1815,8 +1815,8 @@ export const propertyCategories: PropertyCategory[] = [
             id: "bluffs-unit-4",
             name: "Bluffs - Luxury 2 Bed Ski in Ski out - Views!",
             images: [
-              "/photos/properties/Bluffs Unit 4/IMG_001112.JPG",
-              "/photos/properties/Bluffs Unit 4/01 - 20260522 MM4P 02 0362.jpg",
+              "/photos/properties/Bluffs Unit 4/6.jpeg",
+              "/photos/properties/Bluffs Unit 4/Bluffs 4 living cover snow.jpg",
               "/photos/properties/Bluffs Unit 4/Hot tub.png",
             ],
             guests: 6,

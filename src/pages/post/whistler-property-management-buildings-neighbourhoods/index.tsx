@@ -281,7 +281,7 @@ const FEATURED_PROPERTIES = [
     label: "Luxury Creekside ski-in ski-out property",
     listingHref: "/listings/bluffs-unit-4-taluswood",
     airbnbHref: "https://www.airbnb.com/rooms/1693549013411163327",
-    imageSrc: "/photos/properties/Bluffs Unit 4/IMG_001112.JPG",
+    imageSrc: "/photos/properties/Bluffs Unit 4/6.jpeg",
     imageAlt: "Taluswood Bluffs living space with mountain views in Whistler Creekside",
   },
 ];
