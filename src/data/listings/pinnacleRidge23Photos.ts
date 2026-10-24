@@ -9,6 +9,8 @@ export const PINNACLE_RIDGE_23_COVER =
 /** Cover first, then numbered gallery photos, then remaining named images. */
 export const PINNACLE_RIDGE_23_PHOTOS: string[] = [
   PINNACLE_RIDGE_23_COVER,
+  `${D}/Pinnacle ski hill.jpeg`,
+  `${D}/Pinnacle ski hill 2.jpeg`,
   `${D}/05 - 20261004 A7M3 01 A1_09197.jpg`,
   `${D}/08 - 20261004 A7M3 01 A1_09088.jpg`,
   `${D}/09 - 20261004 A7M3 01 A1_09253.jpg`,
