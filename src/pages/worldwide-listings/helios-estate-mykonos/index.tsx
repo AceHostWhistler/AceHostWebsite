@@ -475,11 +475,11 @@ const HeliosEstateMykonos = () => {
             <div className={editorialGalleryModalWrapperClass}>
               <div className={editorialGalleryGridClass}>
                 {galleryPhotos.map((photo, index) => (
-                  <div key={index} className="mb-6">
-                    <div
-                      className={editorialGalleryModalTileClass}
-                      onClick={() => handlePhotoClick(index)}
-                    >
+                  <div
+                    key={index}
+                    className={editorialGalleryModalTileClass}
+                    onClick={() => handlePhotoClick(index)}
+                  >
                       <Image
                         src={getGalleryPhotoSrc(photo)}
                         alt={`Helios Estate Mykonos photo ${index + 1}`}
@@ -488,7 +488,6 @@ const HeliosEstateMykonos = () => {
                         className="object-cover hover:scale-105 transition-transform duration-300"
                         loading="lazy"
                       />
-                    </div>
                   </div>
                 ))}
               </div>

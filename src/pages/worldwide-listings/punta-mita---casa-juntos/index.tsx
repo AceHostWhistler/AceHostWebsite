@@ -283,11 +283,11 @@ const PuntaMitaCasaJuntos = () => {
             <div className={editorialGalleryModalWrapperClass}>
               <div className={editorialGalleryGridClass}>
                 {galleryPhotos.map((photo, index) => (
-                  <div key={index} className="mb-6">
-                    <div
-                      className={editorialGalleryModalTileClass}
-                      onClick={() => handlePhotoClick(index)}
-                    >
+                  <div
+                    key={index}
+                    className={editorialGalleryModalTileClass}
+                    onClick={() => handlePhotoClick(index)}
+                  >
                       <Image
                         src={getGalleryPhotoSrc(photo)}
                         alt={`Punta Mita - Casa Juntos ${index + 1}`}
@@ -296,7 +296,6 @@ const PuntaMitaCasaJuntos = () => {
                         className="object-cover hover:scale-105 transition-transform duration-300"
                         loading="lazy"
                       />
-                    </div>
                   </div>
                 ))}
               </div>

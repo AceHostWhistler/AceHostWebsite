@@ -307,11 +307,11 @@ const SuperYachtThailand = () => {
             <div className="max-w-7xl mx-auto py-6 px-4">
               <div className={editorialGalleryGridClass}>
                 {galleryPhotos.map((photo, index) => (
-                  <div key={index} className="mb-6">
-                    <div
-                      className={editorialGalleryModalTileClass}
-                      onClick={() => handlePhotoClick(index)}
-                    >
+                  <div
+                    key={index}
+                    className={editorialGalleryModalTileClass}
+                    onClick={() => handlePhotoClick(index)}
+                  >
                       <Image
                         src={getGalleryPhotoSrc(photo)}
                         alt={`Super Yacht Thailand interior ${index + 1}`}
@@ -320,7 +320,6 @@ const SuperYachtThailand = () => {
                         className="object-cover hover:scale-105 transition-transform duration-300"
                         priority={index < 6}
                       />
-                    </div>
                   </div>
                 ))}
               </div>

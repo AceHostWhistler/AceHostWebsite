@@ -311,25 +311,19 @@ const PropertyListingLayout: React.FC<PropertyListingLayoutProps> = ({
             <div className={editorialGalleryModalWrapperClass}>
               <div className={editorialGalleryGridClass}>
                 {galleryPhotos.map((photo, index) => (
-                  <div key={`${photo}-${index}`} className="mb-6">
-                    <div
-                      className={editorialGalleryModalTileClass}
-                      onClick={() => handlePhotoClick(index)}
-                    >
-                      <Image
-                        src={getGalleryPhotoSrc(photo)}
-                        alt={`${photoAltPrefix} ${index + 1}`}
-                        fill
-                        sizes={editorialGalleryImageSizes}
-                        className="object-cover hover:scale-105 transition-transform duration-300"
-                        priority={index < 6}
-                      />
-                    </div>
-                    <div className="mt-1 text-center">
-                      <span className="text-white text-xs">
-                        {index + 1} / {galleryPhotos.length}
-                      </span>
-                    </div>
+                  <div
+                    key={`${photo}-${index}`}
+                    className={editorialGalleryModalTileClass}
+                    onClick={() => handlePhotoClick(index)}
+                  >
+                    <Image
+                      src={getGalleryPhotoSrc(photo)}
+                      alt={`${photoAltPrefix} ${index + 1}`}
+                      fill
+                      sizes={editorialGalleryImageSizes}
+                      className="object-cover hover:scale-105 transition-transform duration-300"
+                      priority={index < 6}
+                    />
                   </div>
                 ))}
               </div>
