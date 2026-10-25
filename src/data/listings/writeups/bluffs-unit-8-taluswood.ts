@@ -93,7 +93,8 @@ const bluffsUnit8Writeup: ListingWriteupContent = {
     title: "Other details",
     guestAccess: [
       "Guests have exclusive access to the entire 3-bedroom, 2-bathroom home, including the living and dining areas, fully equipped kitchen, in-suite laundry and private covered balcony with BBQ and mountain views.",
-      "Your stay also includes access to shared amenities within the Bluffs complex: the outdoor hot tub, secure ski and bike storage in the underground garage, two guaranteed underground parking spots and a communal bike wash area near the garage entrance in summer.",
+      "Your stay also includes access to shared amenities within the Bluffs complex: the outdoor hot tub, secure ski and bike storage in the underground garage and a communal bike wash area near the garage entrance in summer.",
+      "Two underground parking stalls are included. Additional outdoor parking is available subject to availability.",
       "Detailed check-in instructions will be provided before arrival.",
     ],
     notes: [

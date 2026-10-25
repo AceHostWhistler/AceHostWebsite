@@ -31,7 +31,8 @@ const cascadeLodge514Writeup: ListingWriteupContent = {
       alt: "Cascade Lodge #514 studio",
     },
     paragraphs: [
-      "This luxe studio offers an efficient open layout with mountain views, a queen bed for two guests and a sofa bed for additional sleeping space. The kitchenette is ideal for breakfasts, snacks and light meals, while the Smart TV keeps evenings relaxed after time on the slopes or Village strolls.",
+      "This luxe studio offers an efficient open layout with mountain views, a queen bed for two guests and a sofa bed for additional sleeping space. The Smart TV keeps evenings relaxed after time on the slopes or Village strolls.",
+      "The studio includes air conditioning, heating and a well-equipped kitchenette with a mini refrigerator, cooktop, microwave, dishwasher, kettle, toaster and coffee maker.",
       "The renovated interiors create a bright, modern feel with the comforts you need for a Whistler stay without sacrificing location or building amenities.",
     ],
   },
@@ -46,7 +47,7 @@ const cascadeLodge514Writeup: ListingWriteupContent = {
       "Cascade Lodge sits on Northlands Boulevard at the gateway to Whistler Village, putting shops, restaurants and Village strolls within easy reach.",
       "Whistler Mountain is approximately a 9-minute walk away. During winter, ski lifts are also accessible via a short walk or complimentary Village shuttle. Whistler and Blackcomb offer more than 8,100 acres of terrain for skiing and snowboarding.",
       "Guests enjoy shared access to Cascade Lodge's heated outdoor pool, hot tubs, saunas and fitness room. Complimentary ski valet in the lobby makes storing and retrieving equipment easy during winter stays. The pool and hot tubs are outdoor facilities. Availability may vary during heavy snow, cold temperatures or icy conditions for guest safety.",
-      "Paid parking is available on site. Additional vehicles may require separate arrangements.",
+      "Paid underground parking is available through the building and is currently CAD $26 per 24 hours. Parking rates are set by the building and may change.",
     ],
   },
   bedrooms: {
@@ -79,6 +80,10 @@ const cascadeLodge514Writeup: ListingWriteupContent = {
       "No pets allowed.",
       "Check-in after 4:00 PM. Check-out before 10:00 AM. 4 guests maximum.",
       ACEHOST_REACH_OUT_NOTE,
+    ],
+    registration: [
+      "Municipal registration number: 00010692",
+      "Provincial registration number: PM580445725",
     ],
   },
 };
