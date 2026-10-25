@@ -32,7 +32,8 @@ const cozyLakefrontWriteup: ListingWriteupContent = {
     },
     paragraphs: [
       "This 1,000 sq. ft. two-bedroom, two-bathroom condo sits on the top floor at Nicklaus North in Whistler, with a 200 sq. ft. patio for relaxing and taking in the view. Breathtaking lake and mountain outlooks extend from every room, in a safe and secure neighbourhood with amazing outdoor amenities nearby, including hiking, walking, cross-country skiing, mountain biking, lakefront trails, golf and disc golf.",
-      "Free underground parking is included, with plenty of free outdoor parking available as well.",
+      "One free underground parking space is included. Additional free outdoor parking is available for at least four vehicles.",
+      "A portable A/C unit is provided in the primary bedroom from May 15 to October 15.",
       "The kitchen includes all appliances and plenty of counter space for cooking, with a stove, oven, microwave, dishwasher and cookware needed for a gourmet meal. The patio has enough room to relax and soak up the sun, read a book, or watch golfers on the fairway.",
       "Ultra high-speed fibre optic Wi-Fi (300mbps), one Smart TV in the main room, and a Bose Bluetooth speaker keep evenings connected. In-suite washer and dryer include detergent and fabric softener. Complimentary coffee, tea, salt, pepper, olive oil, soap, shampoo, conditioner and body wash are provided.",
     ],
@@ -66,9 +67,9 @@ const cozyLakefrontWriteup: ListingWriteupContent = {
             details: "Bathtub and shower with plenty of towels.",
           },
           {
-            name: "Second bedroom",
+            name: "Bedroom 2",
             details:
-              "Two twin beds with new linens and a large closet for clothing storage.",
+              "One Twin-over-Full bunk bed plus one separate Single bed, with a large closet for storage.",
           },
           {
             name: "Second bathroom",
@@ -102,7 +103,7 @@ const cozyLakefrontWriteup: ListingWriteupContent = {
     ],
     registration: [
       "Municipal registration number: 00013056",
-      "Provincial registration number: H874382751",
+      "Provincial registration number: PM641948628",
     ],
   },
 };
