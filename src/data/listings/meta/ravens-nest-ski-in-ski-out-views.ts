@@ -11,6 +11,8 @@ const listing: ListingData = {
   "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05359.jpg",
   "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05364.jpg",
   "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05369.jpg",
+  "/photos/properties/Raven_s Nest 3-Bedroom/Ravens Nest hot tub deck.jpg",
+  "/photos/properties/Raven_s Nest 3-Bedroom/Ravens Nest BBQ.jpg",
   "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05394.jpg",
   "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05399.jpg",
   "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05424.jpg",
