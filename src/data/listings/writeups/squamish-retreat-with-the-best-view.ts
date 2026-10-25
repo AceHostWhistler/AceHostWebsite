@@ -70,6 +70,10 @@ const squamishRetreatWriteup: ListingWriteupContent = {
             details:
               "Queen size, high-end mattress with new linens. Large closet. Third bathroom, newly finished.",
           },
+          {
+            name: "Living room",
+            details: "One Queen sofa bed provides additional sleeping space.",
+          },
         ],
       },
     ],

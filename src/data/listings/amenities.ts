@@ -277,6 +277,7 @@ export const listingAmenities: Record<string, string[]> = {
     "Ski / bike mud room",
     "Multiple patios",
     "45-minute drive to Whistler",
+    "A high chair and Pack 'n Play crib are included with the home rental.",
   ],
   "the-nest-ski-in-ski-out": [
     "Ski-in/ski-out – on a ski run",
