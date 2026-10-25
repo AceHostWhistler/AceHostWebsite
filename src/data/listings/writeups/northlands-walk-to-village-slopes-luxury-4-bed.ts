@@ -61,7 +61,7 @@ const northlandsWriteup: ListingWriteupContent = {
         bedrooms: [
           {
             name: "Primary Bedroom",
-            details: "King bed with private ensuite bathroom.",
+            details: "One Queen bed with a private ensuite bathroom.",
           },
           {
             name: "Bedroom 2",

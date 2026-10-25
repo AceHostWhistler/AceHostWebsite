@@ -46,7 +46,7 @@ const cascadeLodge615Writeup: ListingWriteupContent = {
       "Cascade Lodge sits on Northlands Boulevard at the gateway to Whistler Village, putting shops, restaurants, the Whistler Museum and Village strolls within easy reach.",
       "During winter, ski lifts are within a short walk or complimentary Village shuttle ride. Whistler and Blackcomb mountains offer more than 8,100 acres of terrain, with the Peak 2 Peak Gondola nearby for unforgettable alpine views.",
       "Guests enjoy shared access to Cascade Lodge's heated outdoor pool, hot tubs, saunas and fitness room. Complimentary ski valet in the lobby makes storing and retrieving equipment easy during winter stays. The pool and hot tubs are outdoor facilities. Availability may vary during heavy snow, cold temperatures or icy conditions for guest safety.",
-      "Paid parking is available for one vehicle. Additional vehicles may require separate arrangements.",
+      "Paid underground parking is available through the building and is currently CAD $26 per 24 hours. Parking rates are set by the building and may change.",
     ],
   },
   bedrooms: {
@@ -59,12 +59,12 @@ const cascadeLodge615Writeup: ListingWriteupContent = {
         bedrooms: [
           {
             name: "Bedroom",
-            details: "A comfortable primary sleeping area for two guests.",
+            details: "One Queen bed.",
           },
           {
             name: "Living area",
             details:
-              "Additional sleeping space for up to two more guests, ideal for couples, friends or a small family.",
+              "A compact futon sofa bed, ideal for one additional guest or two guests comfortable with a snug fit.",
           },
         ],
       },
@@ -86,7 +86,7 @@ const cascadeLodge615Writeup: ListingWriteupContent = {
     ],
     registration: [
       "Municipal registration number: 00010692",
-      "Provincial registration number: ST626835225",
+      "Provincial registration number: PM231934898",
     ],
   },
 };
