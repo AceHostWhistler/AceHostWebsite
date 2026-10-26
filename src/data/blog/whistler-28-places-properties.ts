@@ -176,7 +176,7 @@ export const townhomeProperties: Whistler28Property[] = [
     number: 16,
     name: "Ski-In Ski-Out Penthouse | Pool - Hot Tub - Views",
     description:
-      "A luxury top-floor penthouse at Woodrun Lodge on Blackcomb, with ski-in/ski-out access, vaulted timber ceilings, mountain views, a gas fireplace, Sonos throughout, and a year-round pool, hot tub, gym and sauna. Sleeps 7.",
+      "A renovated luxury ski-in/ski-out penthouse at Woodrun Lodge on Blackcomb, with vaulted timber ceilings, mountain views, a gas fireplace, Sonos throughout, cable TV, high-speed Wi-Fi, and a year-round pool, hot tub, gym and sauna. Sleeps 7.",
     image: "/photos/properties/Woodrun 2-bed/Woodrun snow 1.jpg",
     listingHref: "/listings/woodrun-2-bed",
     bookUrl:

@@ -98,7 +98,7 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     stats:
       "Sleeps 7 | 2 Bedrooms | 4 Beds | 2 Baths | Ski-in/ski-out | Year-round pool, hot tub, gym & sauna | Woodrun Lodge Blackcomb",
     paragraphs: [
-      "This top-floor penthouse at Woodrun Lodge sits directly on Blackcomb Mountain, with genuine ski-in/ski-out access along Merlin's ski run. Exposed timber beams, vaulted ceilings and floor-to-ceiling windows give it the feel of a luxury log chalet, with modern renovations, a Sonos sound system throughout and mountain views from the living space and private balcony.",
+      "This top-floor penthouse at Woodrun Lodge sits directly on Blackcomb Mountain, with genuine ski-in/ski-out access along Merlin's ski run. Exposed timber beams, vaulted ceilings and floor-to-ceiling windows give it the feel of a luxury log chalet, with Sonos throughout, cable TV, high-speed Wi-Fi and mountain views from the living space and private balcony.",
       "Sleeps 7 across a King suite, a Queen/Twin bunk bedroom and a Queen sofa bed. Guests get 2 guaranteed free underground parking spots, 2 ski lockers, a boot dryer, AC and elevator access, plus Woodrun Lodge's year-round heated outdoor pool, hot tub, gym and sauna.",
       "The Fairmont is about a one to two-minute downhill walk, Upper Village is a few minutes away, and Whistler Village is about a 10 to 15-minute walk. Choose Woodrun when you want a true luxury ski-in/ski-out penthouse without booking a full chalet.",
     ],
