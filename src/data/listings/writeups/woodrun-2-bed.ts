@@ -19,6 +19,7 @@ const woodrun2BedWriteup: ListingWriteupContent = {
       "Sleeps 7",
       "2 free underground parking spots",
       "2 ski lockers and boot dryer",
+      "Sonos throughout the home",
       "Air conditioning",
       "King suite with ensuite",
     ],
@@ -32,9 +33,12 @@ const woodrun2BedWriteup: ListingWriteupContent = {
     },
     paragraphs: [
       "The Woodrun Penthouse is a renovated top-floor, two-bedroom, two-bathroom home at Woodrun Lodge on Blackcomb Mountain. Extensive exposed log beams, vaulted ceilings and natural wood detailing create classic alpine chalet character, while modern renovations, premium furnishings and high-end appliances provide an elevated and comfortable stay.",
-      "The bright, open-concept living area features floor-to-ceiling windows with beautiful mountain views, a gas fireplace, an in-unit speaker system and access to a private balcony. The full kitchen is well equipped for preparing meals at home, with premium appliances, generous counter space and all the essentials for your stay. The dining table seats six, with two additional high-top seats nearby.",
-      "The Woodrun Penthouse also includes air conditioning, heating and a private in-suite washer and dryer. A complimentary Pack 'n Play and high chair are provided for families. Please bring your own crib sheets for the Pack 'n Play.",
+      "The bright, open-concept living area features floor-to-ceiling windows with beautiful mountain views, a gas fireplace, cable TV and access to a private balcony. High-speed Wi-Fi keeps you connected throughout your stay.",
+      "Enjoy a Sonos sound system throughout the home, with speakers in both bedrooms, the living room and the kitchen. Play music in all rooms together, or select individual rooms to enjoy your favourite music exactly where you want it.",
+      "The full kitchen is well equipped for preparing meals at home, with premium appliances, generous counter space and all the essentials for your stay. The dining table seats six, with two additional high-top seats nearby.",
+      "This Woodrun Penthouse also includes air conditioning, heating and a private in-suite washer and dryer.",
       "Guests have shared access to Woodrun Lodge's year-round heated outdoor swimming pool, outdoor hot tub, gym, sauna, secure bike storage and elevator. The pool, hot tub, gym and sauna are shared with Woodrun Lodge residents and registered guests.",
+      "A complimentary Pack 'n Play and high chair are provided for families. Please bring your own crib sheets for the Pack 'n Play.",
     ],
   },
   location: {

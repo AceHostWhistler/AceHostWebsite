@@ -331,6 +331,7 @@ export const listingAmenities: Record<string, string[]> = {
     "Year-round pool, hot tub, gym and sauna",
     "2 free underground parking spots",
     "2 ski lockers and boot dryer",
+    "Sonos throughout the home",
     "Air conditioning",
     "King suite with ensuite",
   ],

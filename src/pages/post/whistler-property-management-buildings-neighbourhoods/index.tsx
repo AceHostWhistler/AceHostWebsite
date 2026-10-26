@@ -235,7 +235,7 @@ const FEATURED_PROPERTIES = [
     label: "Ski-in ski-out penthouse with year-round pool and hot tub",
     listingHref: "/listings/woodrun-2-bed",
     airbnbHref:
-      "https://www.airbnb.ca/rooms/1793052831212188813?guests=1&adults=1&s=67&unique_share_id=f9ff3669-46ff-4f31-abf9-bc5e06f38cce",
+      "https://www.airbnb.ca/rooms/1793052831212188813?guests=1&adults=1&s=67&unique_share_id=4f348638-18e8-466a-8f34-a14692786d25",
     imageSrc: "/photos/properties/Woodrun 2-bed/Woodrun snow 1.jpg",
     imageAlt: "Woodrun Lodge ski-in ski-out penthouse on Blackcomb Mountain",
   },

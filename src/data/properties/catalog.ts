@@ -928,12 +928,13 @@ export const propertyCategories: PropertyCategory[] = [
             bathrooms: 2,
             location: "Blackcomb, Whistler",
             description:
-              "Luxury ski-in/ski-out penthouse at Woodrun Lodge on Blackcomb, with exposed log beams, vaulted ceilings, mountain views, a gas fireplace, and a shared year-round heated pool, hot tub, gym and sauna. Sleeps 7, with 2 free parking spots, 2 ski lockers, boot dryer and AC.",
+              "Stay in the Woodrun Penthouse, a luxury ski-in/ski-out retreat on Blackcomb Mountain where exposed log beams and vaulted ceilings meet modern renovations and premium furnishings. Enjoy mountain views, a private balcony and gas fireplace, plus a shared year-round heated pool, hot tub, gym and sauna. Sleeps 7 with a King suite, Queen/Twin bunk and Queen sofa bed, plus two guaranteed free underground parking spots, two ski lockers, boot dryer, AC, Pack 'n Play and high chair.",
             features: [
               "True Ski-in/Ski-out",
               "Year-Round Pool, Hot Tub, Gym & Sauna",
               "2 Free Underground Parking Spots",
               "2 Ski Lockers & Boot Dryer",
+              "Sonos Throughout the Home",
               "Air Conditioning",
               "King Suite with Ensuite",
               "Gas Fireplace",

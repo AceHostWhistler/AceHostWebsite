@@ -182,7 +182,7 @@ const condoTownhomeOptions: FeaturedProperty[] = [
       "/photos/properties/Woodrun 2-bed/9.jpg",
     ],
     bookUrl:
-      "https://www.airbnb.ca/rooms/1793052831212188813?guests=1&adults=1&s=67&unique_share_id=f9ff3669-46ff-4f31-abf9-bc5e06f38cce",
+      "https://www.airbnb.ca/rooms/1793052831212188813?guests=1&adults=1&s=67&unique_share_id=4f348638-18e8-466a-8f34-a14692786d25",
   },
   {
     name: "Marquise 2-Bed Ski-in Ski-out",
