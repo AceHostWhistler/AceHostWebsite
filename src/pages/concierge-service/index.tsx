@@ -155,7 +155,8 @@ const ConciergeService = () => {
     description, 
     imageSrc, 
     imageAlt,
-    link = null 
+    link = null,
+    imageClassName = "object-cover",
   }: { 
     index: number, 
     icon: JSX.Element, 
@@ -163,7 +164,8 @@ const ConciergeService = () => {
     description: string, 
     imageSrc: string, 
     imageAlt: string,
-    link?: { url: string, text: string } | null
+    link?: { url: string, text: string } | null,
+    imageClassName?: string,
   }) => {
     const isExpanded = expandedCards.has(index);
     const truncatedText = getFirstSentence(description);
@@ -176,7 +178,7 @@ const ConciergeService = () => {
             alt={imageAlt}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
-            className="object-cover"
+            className={imageClassName}
             priority={index < 6} // Prioritize loading first 6 images
           />
         </div>
@@ -485,6 +487,16 @@ const ConciergeService = () => {
                   description="Suits adventurous beginner and intermediate riders. Drive your own snowmobile or share with a friend as you sweep across the forested trails of Blackcomb Mountain. Fondue experience when you get to the top!"
                   imageSrc="/photos/homepage/concierge-service/Screen Shot 2025-08-01 at 11.21.24 AM.png"
                   imageAlt="Crystal Hut Snowmobile Fondue Experience"
+                />
+
+                <ConciergeCard
+                  index={16}
+                  icon={<FaSkiing className="text-sm" />}
+                  title="Whistler Heli-Skiing"
+                  description="Discover fresh powder, spectacular mountain views and unforgettable alpine terrain with a heli-skiing adventure in the mountains surrounding Whistler. Ask our concierge team about options for your stay."
+                  imageSrc="/photos/homepage/concierge-service/whistler-heli-skiing.webp"
+                  imageAlt="Red helicopter and skiers surrounded by snowy alpine peaks in a Whistler heli-skiing scene."
+                  imageClassName="object-cover object-[62%_48%]"
                 />
 
                 <ConciergeCard
