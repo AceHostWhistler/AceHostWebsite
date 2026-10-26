@@ -57,14 +57,17 @@ const listing: ListingData = {
   "/photos/properties/Chalet La Forja/Forja-3 copy.jpg",
   "/photos/properties/Chalet La Forja/hero00002.jpg",
   "/photos/properties/Chalet La Forja/IMG_1414 2.JPG",
+  "/photos/properties/Chalet La Forja/Floor plan top floor updated with Queen bed Forja.jpeg",
   "/photos/properties/Chalet La Forja/La Forja 01.jpg",
-  "/photos/properties/Chalet La Forja/La Forja 02.jpg",
-  "/photos/properties/Chalet La Forja/La Forja 03.jpg"
+  "/photos/properties/Chalet La Forja/La Forja 02.jpg"
 ],
   galleryPreserveOrder: true,
   galleryDeferPhotos: [
     "/photos/properties/Chalet La Forja/09-2950 Heritage Peaks Trail-09 2.jpg",
     "/photos/properties/Chalet La Forja/0aea2bd5-2274-443e-b83a-5ce67895d20c.avif",
+    "/photos/properties/Chalet La Forja/Floor plan top floor updated with Queen bed Forja.jpeg",
+    "/photos/properties/Chalet La Forja/La Forja 01.jpg",
+    "/photos/properties/Chalet La Forja/La Forja 02.jpg",
   ],
   seo: {
     title: "Chalet La Forja - Ski in Ski out Kadenwood Estate | AceHost",
