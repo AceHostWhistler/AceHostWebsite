@@ -162,7 +162,7 @@ const ListProperty = () => {
       </Head>
 
       <div className="min-h-screen bg-white text-gray-900">
-        <Navigation transparent />
+        <Navigation transparent currentPage="/list-property" />
 
         {/* 1. Hero */}
         <section className="relative overflow-hidden bg-stone-950 text-white">

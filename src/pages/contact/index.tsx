@@ -172,7 +172,7 @@ const Contact = () => {
         />
       </Head>
 
-      <Navigation />
+      <Navigation currentPage="/contact" />
 
       {/* Hero Section */}
       <div className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden">

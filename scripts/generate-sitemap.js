@@ -107,7 +107,7 @@ function dedupePages(pages) {
 }
 
 function generateUrlEntry(route, lastmod) {
-  const url = route === '/' ? SITE_URL : `${SITE_URL}${route}`;
+  const url = route === '/' ? `${SITE_URL}/` : `${SITE_URL}${route}`;
   const { priority, changefreq } = getRoutePriority(route);
 
   return `  <url>

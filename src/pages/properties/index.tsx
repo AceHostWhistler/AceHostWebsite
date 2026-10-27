@@ -33,6 +33,7 @@ import GuestySearchWidget from "@/components/GuestySearchWidget";
 import PropertyCoverImage, {
   PROPERTY_CARD_FRAME_CLASS,
 } from "@/components/PropertyCoverImage";
+import { PROPERTY_CATEGORY_FILTERS } from "@/data/properties/propertyFilters";
 import {
   propertyCategories,
   getPropertyType,
@@ -349,7 +350,7 @@ export default function Properties() {
       </Head>
 
       <div className="min-h-screen">
-        <Navigation transparent />
+        <Navigation transparent currentPage="/properties" />
 
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-stone-950 text-white">
@@ -441,86 +442,19 @@ export default function Properties() {
         {/* Filter Buttons */}
         <div className="relative border-b border-stone-300/50 bg-[#ebe6dc] py-8 px-4 sm:px-6 lg:px-8">
             <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
-                <button
-                  onClick={() => setActiveCategory("all")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                    activeCategory === "all"
-                      ? "bg-black text-white shadow-md"
-                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
-                  }`}
-                >
-                  All Properties
-                </button>
-                <button
-                  onClick={() => setActiveCategory("whistler")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                    activeCategory === "whistler"
-                      ? "bg-black text-white shadow-md"
-                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
-                  }`}
-                >
-                  Whistler All Properties
-                </button>
-                <button
-                  onClick={() => setActiveCategory("homes")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                    activeCategory === "homes"
-                      ? "bg-black text-white shadow-md"
-                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
-                  }`}
-                >
-                  Whistler Homes
-                </button>
-                <button
-                  onClick={() => setActiveCategory("townhomes")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                    activeCategory === "townhomes"
-                      ? "bg-black text-white shadow-md"
-                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
-                  }`}
-                >
-                  Whistler Townhomes
-                </button>
-                <button
-                  onClick={() => setActiveCategory("condos")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                    activeCategory === "condos"
-                      ? "bg-black text-white shadow-md"
-                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
-                  }`}
-                >
-                  Whistler Condos
-                </button>
-                <button
-                  onClick={() => setActiveCategory("pets")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                    activeCategory === "pets"
-                      ? "bg-black text-white shadow-md"
-                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
-                  }`}
-                >
-                  Whistler Pet Friendly
-                </button>
-                <button
-                  onClick={() => setActiveCategory("skiinout")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                    activeCategory === "skiinout"
-                      ? "bg-black text-white shadow-md"
-                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
-                  }`}
-                >
-                  Whistler Ski in Ski out
-                </button>
-                <button
-                  onClick={() => setActiveCategory("worldwide")}
-                  className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                    activeCategory === "worldwide"
-                      ? "bg-black text-white shadow-md"
-                      : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
-                  }`}
-                >
-                  Worldwide
-                </button>
+                {PROPERTY_CATEGORY_FILTERS.map((filter) => (
+                  <button
+                    key={filter.id}
+                    onClick={() => setActiveCategory(filter.id)}
+                    className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                      activeCategory === filter.id
+                        ? "bg-black text-white shadow-md"
+                        : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
+                    }`}
+                  >
+                    {filter.label}
+                  </button>
+                ))}
               </div>
           </div>
 

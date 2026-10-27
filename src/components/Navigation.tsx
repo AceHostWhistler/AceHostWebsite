@@ -15,7 +15,11 @@ import LanguageSelector from "./LanguageSelector";
 import VideoEmbedFrame from "./VideoEmbedFrame";
 import { buildYouTubeEmbedUrl } from "@/lib/videoEmbeds";
 import { useRouter } from "next/router";
-import { allArticles } from "@/utils/blogArticles";
+import { getPrimaryNavBlogArticles } from "@/utils/blogArticles";
+import {
+  PROPERTY_CATEGORY_FILTERS,
+  propertyCategoryHref,
+} from "@/data/properties/propertyFilters";
 
 interface NavigationProps {
   currentPage?: string;
@@ -113,19 +117,16 @@ const Navigation = ({
     { text: "Luxury Rental Homes", url: "/properties" },
     { text: "Concierge Services", url: "/concierge-service" },
     { text: "Property Management", url: "/list-property" },
-    { text: "About", url: "/our-story" },
+    { text: "Our Story", url: "/our-story" },
   ];
 
-  const rentalFilterLinks = [
-    { text: "Whistler All Properties", url: "/properties?category=all" },
-    { text: "Whistler", url: "/properties?category=whistler" },
-    { text: "Whistler Homes", url: "/properties?category=homes" },
-    { text: "Whistler Townhomes", url: "/properties?category=townhomes" },
-    { text: "Whistler Condos", url: "/properties?category=condos" },
-    { text: "Whistler Pet Friendly", url: "/properties?category=pets" },
-    { text: "Whistler Ski in Ski out", url: "/properties?category=skiinout" },
-    { text: "Worldwide", url: "/properties?category=worldwide" },
-  ];
+  const rentalFilterLinks = PROPERTY_CATEGORY_FILTERS.map((filter) => ({
+    text: filter.label,
+    url: propertyCategoryHref(filter.id),
+  }));
+  const navBlogArticles = getPrimaryNavBlogArticles(4);
+  const featuredBlog = navBlogArticles[0];
+  const moreBlogs = navBlogArticles.slice(1, 4);
 
   const closePrimaryDropdowns = () => {
     setShowRentalsDropdown(false);
@@ -186,7 +187,7 @@ const Navigation = ({
                       )}`}
                     >
                       <Link
-                        href="/properties?category=whistler"
+                        href={link.url}
                         onClick={closePrimaryDropdowns}
                         className="inline-flex items-center"
                       >
@@ -271,24 +272,26 @@ const Navigation = ({
                         <h3 className="text-sm font-semibold mb-3 pb-2 border-b border-gray-200">
                           Featured Blog Article
                         </h3>
+                        {featuredBlog ? (
                         <div className="mb-6">
                           <div className="mb-3 rounded-md overflow-hidden">
-                            <Link href={allArticles[0].link} onClick={() => setShowResourcesDropdown(false)}>
+                            <Link href={featuredBlog.link} onClick={() => setShowResourcesDropdown(false)}>
                               <Image
-                                src={allArticles[0].coverImage}
-                                alt={allArticles[0].title}
+                                src={featuredBlog.coverImage}
+                                alt={featuredBlog.title}
                                 width={300}
                                 height={150}
                                 className="w-full h-36 object-cover"
                               />
                             </Link>
                           </div>
-                          <Link href={allArticles[0].link} onClick={() => setShowResourcesDropdown(false)}>
+                          <Link href={featuredBlog.link} onClick={() => setShowResourcesDropdown(false)}>
                             <h4 className="text-base font-bold leading-tight hover:text-blue-600 transition-colors duration-300">
-                              {allArticles[0].title}
+                              {featuredBlog.title}
                             </h4>
                           </Link>
                         </div>
+                        ) : null}
 
                         <h3 className="text-sm font-semibold mb-3 pb-2 border-b border-gray-200">
                           More Resources
@@ -325,7 +328,7 @@ const Navigation = ({
 
                         {/* Blog entries */}
                         <div className="space-y-4 mb-6">
-                          {allArticles.slice(1, 4).map((article) => (
+                          {moreBlogs.map((article) => (
                             <Link
                               key={article.link}
                               href={article.link}
@@ -521,7 +524,7 @@ const Navigation = ({
                       }`}
                     >
                       <Link
-                        href="/properties?category=whistler"
+                        href={link.url}
                         onClick={() => setIsMenuOpen(false)}
                         className="flex-1"
                       >
@@ -621,8 +624,9 @@ const Navigation = ({
                       <ChevronRight className="h-4 w-4 mr-2" />
                       FAQ's
                     </Link>
+                    {featuredBlog ? (
                     <Link
-                      href={allArticles[0].link}
+                      href={featuredBlog.link}
                       onClick={() => {
                         setShowMobileResourcesDropdown(false);
                         setIsMenuOpen(false);
@@ -630,9 +634,12 @@ const Navigation = ({
                       className="flex items-center py-3 px-4 text-base text-gray-600 hover:text-black hover:bg-gray-50 rounded-md transition-colors"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
-                      Featured: Justin Tse at La Forja
+                      Featured: {featuredBlog.title.length > 42
+                        ? `${featuredBlog.title.slice(0, 39)}…`
+                        : featuredBlog.title}
                     </Link>
-                    {allArticles.slice(1, 4).map((article) => (
+                    ) : null}
+                    {moreBlogs.map((article) => (
                       <Link
                         key={article.link}
                         href={article.link}

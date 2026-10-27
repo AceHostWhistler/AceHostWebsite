@@ -442,6 +442,16 @@ export const allArticles: Article[] = [
   },
 ];
 
+export const SNOW_FORECAST_ARTICLE_PATH =
+  "/post/whistler-weather-forecast-2026-2027-winter";
+
+/** Blog posts shown in sitewide Resources navigation, excluding seasonal forecast pages. */
+export function getPrimaryNavBlogArticles(count = 4): Article[] {
+  return allArticles
+    .filter((article) => article.link !== SNOW_FORECAST_ARTICLE_PATH)
+    .slice(0, count);
+}
+
 // Function to get related articles excluding the current one (newest registry entries first)
 export const getRelatedArticles = (currentArticleLink: string, count: number = 3): Article[] => {
   return allArticles

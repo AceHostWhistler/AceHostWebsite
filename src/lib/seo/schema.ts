@@ -85,7 +85,7 @@ export function buildHomepageOrganizationSchema() {
         },
       ],
     },
-    department: WHISTLER_PRIMARY_NAV.map((item) => ({
+    department: WHISTLER_PRIMARY_PAGES.map((item) => ({
       "@type": "Organization",
       name: item.name,
       url: item.url,
@@ -93,13 +93,13 @@ export function buildHomepageOrganizationSchema() {
   };
 }
 
-const WHISTLER_PRIMARY_NAV = [
+const WHISTLER_PRIMARY_PAGES = [
   {
     name: "View Luxury Rental Properties",
     url: `${SITE_URL}/properties`,
   },
   {
-    name: "Property Management",
+    name: "Luxury Property Management",
     url: `${SITE_URL}/list-property`,
   },
   {
@@ -115,23 +115,6 @@ const WHISTLER_PRIMARY_NAV = [
     url: `${SITE_URL}/contact`,
   },
 ];
-
-/** Preferred homepage sitelinks for Whistler searches. Worldwide homes stay on their own pages. */
-export function buildSiteNavigationSchema() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "AceHost Whistler",
-    itemListOrder: "https://schema.org/ItemListOrderAscending",
-    numberOfItems: WHISTLER_PRIMARY_NAV.length,
-    itemListElement: WHISTLER_PRIMARY_NAV.map((item, index) => ({
-      "@type": "SiteNavigationElement",
-      position: index + 1,
-      name: item.name,
-      url: item.url,
-    })),
-  };
-}
 
 export function buildWebsiteSchema() {
   return {
@@ -200,13 +183,35 @@ export function buildVacationRentalSchema({
     makesOffer: {
       "@type": "Offer",
       url,
-      priceCurrency: "CAD",
+      priceCurrency: priceCurrencyForCountry(geo.country),
       availability: "https://schema.org/InStock",
     },
   };
 }
 
-function breadcrumbParentForUrl(canonicalUrl: string): {
+function priceCurrencyForCountry(country: string): string {
+  switch (country) {
+    case "GB":
+      return "GBP";
+    case "GR":
+      return "EUR";
+    case "MX":
+      return "MXN";
+    case "TH":
+      return "THB";
+    case "US":
+      return "USD";
+    default:
+      return "CAD";
+  }
+}
+
+export function pathFromSiteUrl(url: string): string {
+  if (url === SITE_URL || url === `${SITE_URL}/`) return "/";
+  return url.startsWith(SITE_URL) ? url.slice(SITE_URL.length) || "/" : url;
+}
+
+export function getBreadcrumbParent(canonicalUrl: string): {
   name: string;
   item: string;
 } {
@@ -233,7 +238,7 @@ export function buildBreadcrumbSchema(
   title: string,
   canonicalUrl: string
 ) {
-  const parent = breadcrumbParentForUrl(canonicalUrl);
+  const parent = getBreadcrumbParent(canonicalUrl);
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",

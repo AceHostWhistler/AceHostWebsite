@@ -134,7 +134,7 @@ const OurStory = () => {
         <link rel="canonical" href="https://www.acehost.ca/our-story" />
       </Head>
 
-      <Navigation transparent />
+      <Navigation transparent currentPage="/our-story" />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-stone-950 text-white">

@@ -22,6 +22,7 @@ import {
   shouldUseContactForBooking,
 } from "@/data/propertyAirbnbLinks";
 import { getPropertyType } from "@/data/properties/catalog";
+import { PROPERTY_CATEGORY_FILTERS } from "@/data/properties/propertyFilters";
 import { formatDisplayedPrice } from "@/lib/formatDisplayedPrice";
 import {
   getHomepageListings,
@@ -30,7 +31,6 @@ import {
 import {
   buildHomepageOrganizationSchema,
   buildOrganizationSchema,
-  buildSiteNavigationSchema,
   buildWebsiteSchema,
 } from "@/lib/seo/schema";
 
@@ -53,7 +53,6 @@ const Home = () => {
   const structuredData = buildOrganizationSchema();
   const websiteSchema = buildWebsiteSchema();
   const homepageOrganizationSchema = buildHomepageOrganizationSchema();
-  const siteNavigationSchema = buildSiteNavigationSchema();
 
   // Render optimized property card directly
   const renderPropertyCard = (property: HomepageListing, index: number) => {
@@ -326,18 +325,12 @@ const Home = () => {
             __html: JSON.stringify(homepageOrganizationSchema),
           }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(siteNavigationSchema),
-          }}
-        />
 
         {/* Logo is optimized via next/image in Navigation when possible */}
       </Head>
 
       <div className="min-h-screen bg-white text-gray-900 overflow-x-hidden max-w-full">
-        <Navigation transparent={false} />
+        <Navigation transparent={false} currentPage="/" />
 
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-stone-950 text-white">
@@ -482,54 +475,19 @@ const Home = () => {
               </h2>
               {/* Property Filters - match properties page style */}
               <div className="flex flex-wrap justify-center gap-3 max-w-5xl mx-auto">
-                <button
-                  onClick={() => setActiveFilter("all")}
-                  className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "all" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
-                >
-                  All Properties
-                </button>
-                <button
-                  onClick={() => setActiveFilter("whistler")}
-                  className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "whistler" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
-                >
-                  Whistler All Properties
-                </button>
-                <button
-                  onClick={() => setActiveFilter("homes")}
-                  className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "homes" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
-                >
-                  Whistler Homes
-                </button>
-                <button
-                  onClick={() => setActiveFilter("townhomes")}
-                  className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "townhomes" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
-                >
-                  Whistler Townhomes
-                </button>
-                <button
-                  onClick={() => setActiveFilter("condos")}
-                  className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "condos" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
-                >
-                  Whistler Condos
-                </button>
-                <button
-                  onClick={() => setActiveFilter("pets")}
-                  className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "pets" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
-                >
-                  Whistler Pet Friendly
-                </button>
-                <button
-                  onClick={() => setActiveFilter("skiinout")}
-                  className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "skiinout" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
-                >
-                  Whistler Ski In/Out
-                </button>
-                <button
-                  onClick={() => setActiveFilter("worldwide")}
-                  className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === "worldwide" ? "bg-black text-white shadow-md" : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"}`}
-                >
-                  Worldwide
-                </button>
+                {PROPERTY_CATEGORY_FILTERS.map((filter) => (
+                  <button
+                    key={filter.id}
+                    onClick={() => setActiveFilter(filter.id)}
+                    className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
+                      activeFilter === filter.id
+                        ? "bg-black text-white shadow-md"
+                        : "bg-white text-gray-800 hover:bg-gray-100 hover:shadow-md shadow-sm"
+                    }`}
+                  >
+                    {filter.label}
+                  </button>
+                ))}
               </div>
             </div>
             {whistlerListings.length > 0 && (

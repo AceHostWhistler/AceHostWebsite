@@ -59,10 +59,26 @@ const Footer = () => {
             <ul className="space-y-4">
               <li>
                 <Link
+                  href="/"
+                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/properties"
                   className="text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   Luxury Properties
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/properties?category=worldwide"
+                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                >
+                  Worldwide
                 </Link>
               </li>
               <li>

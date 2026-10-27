@@ -10,6 +10,8 @@ import { getPropertyCardCoverImage } from "@/lib/seo/propertyCardCovers";
 import {
   buildBreadcrumbSchema,
   buildVacationRentalSchema,
+  getBreadcrumbParent,
+  pathFromSiteUrl,
 } from "@/lib/seo/schema";
 import { SITE_URL } from "@/data/seo/business";
 import { getPrimaryPricePeriodLabel } from "@/lib/pricePeriodLabel";
@@ -182,6 +184,8 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
   const bedroomCount = toNumber(bedrooms);
 
   const breadcrumbSchema = buildBreadcrumbSchema(title, canonicalUrl);
+  const breadcrumbParent = getBreadcrumbParent(canonicalUrl);
+  const breadcrumbParentPath = pathFromSiteUrl(breadcrumbParent.item);
   const coverImage =
     getPropertyCardCoverImage(listingLookupPath) ??
     schemaImages?.[0] ??
@@ -255,7 +259,7 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
             content={title}
           />
         ) : null}
-        <link rel="up" href={`${SITE_URL}/properties`} />
+        <link rel="up" href={breadcrumbParent.item} />
         <link rel="bookmark" href={canonicalUrl} />
         <script
           type="application/ld+json"
@@ -270,7 +274,7 @@ const PropertyHeaderEditorial: React.FC<PropertyHeaderEditorialProps> = ({
       </Head>
       <nav aria-label="Breadcrumb" className="sr-only">
         <Link href="/">Home</Link>
-        <Link href="/properties">Luxury Rental Homes</Link>
+        <Link href={breadcrumbParentPath}>{breadcrumbParent.name}</Link>
         <Link href={canonicalPath || "/"}>{title}</Link>
       </nav>
 
