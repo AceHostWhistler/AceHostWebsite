@@ -63,6 +63,8 @@ function App({ Component, pageProps }: AppProps) {
           image: article.coverImage,
           datePublished: article.publishedAt,
           dateModified: article.modifiedAt ?? article.publishedAt,
+          citations: article.citations,
+          about: article.about,
         }),
         buildBlogBreadcrumbSchema(breadcrumbTitle, articleUrl),
       ],

@@ -200,8 +200,18 @@ const BlogIndex = ({ blogPosts }: BlogIndexProps) => {
                       </span>
                     </div>
                     <h2 className="text-xl font-semibold text-gray-900 mb-4 line-clamp-2">
-                      {post.title}
+                      <Link
+                        href={`/post/${post.slug}`}
+                        className="hover:underline"
+                      >
+                        {post.title}
+                      </Link>
                     </h2>
+                    {post.excerpt ? (
+                      <p className="text-sm text-gray-600 mb-4 leading-relaxed line-clamp-3">
+                        {post.excerpt}
+                      </p>
+                    ) : null}
                     <Link
                       href={`/post/${post.slug}`}
                       className="inline-flex items-center text-black font-medium hover:underline"

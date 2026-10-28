@@ -229,6 +229,14 @@ export default function WhistlerWeatherForecastContent() {
           snowfall numbers are considerably more encouraging than most skiers would
           expect.
         </p>
+        <p>
+          For a dated late-October snow report that keeps reported snowfall
+          separate from the alpine forecast, see our{" "}
+          <Link href="/post/whistler-snow-report-october-28-2026">
+            Whistler snow report for October 28, 2026
+          </Link>
+          .
+        </p>
       
         <p>
           There are genuine reasons to expect a warmer winter overall, and an

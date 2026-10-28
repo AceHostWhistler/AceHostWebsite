@@ -280,7 +280,12 @@ export default function BlogPost() {
                 local team can also help you work through the small details that
                 make a big difference once you arrive, from choosing the right
                 neighbourhood to arranging ski lessons, airport transfers, rentals,
-                private chefs and activities.
+                private chefs and activities. If you are planning days off the
+                mountain as well as ski days, our guide to{" "}
+                <Link href="/post/whistler-winter-activities-beyond-skiing">
+                  the best things to do in Whistler beyond skiing
+                </Link>{" "}
+                covers spa time, dining, family outings and a Pemberton day trip.
               </p>
 
               <nav

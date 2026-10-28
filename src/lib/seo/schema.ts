@@ -293,6 +293,8 @@ export interface ArticleSchemaInput {
   headline?: string;
   datePublished?: string;
   dateModified?: string;
+  citations?: string[];
+  about?: string[];
 }
 
 export function buildArticleSchema({
@@ -303,6 +305,8 @@ export function buildArticleSchema({
   headline,
   datePublished,
   dateModified,
+  citations,
+  about,
 }: ArticleSchemaInput) {
   const absoluteImage = image
     ? toAbsoluteImageUrl(image)
@@ -332,6 +336,8 @@ export function buildArticleSchema({
     },
     ...(datePublished ? { datePublished } : {}),
     ...(dateModified ? { dateModified } : {}),
+    ...(citations?.length ? { citation: citations } : {}),
+    ...(about?.length ? { about } : {}),
   };
 }
 

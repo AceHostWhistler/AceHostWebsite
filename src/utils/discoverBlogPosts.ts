@@ -9,6 +9,7 @@ export interface BlogPostListing {
   readTime: string;
   heroImage: string;
   publishedAt: string;
+  excerpt?: string;
 }
 
 const POSTS_DIR = path.join(process.cwd(), "src/pages/post");
@@ -151,6 +152,7 @@ function discoverPost(slug: string): BlogPostListing {
     readTime: registry?.readTime ?? parseReadTime(content),
     heroImage: registry?.coverImage ?? parseHeroImage(content, slug),
     publishedAt: registry?.publishedAt ?? parsePublishedAt(content),
+    ...(registry?.excerpt ? { excerpt: registry.excerpt } : {}),
   };
 }
 

@@ -90,7 +90,14 @@ export default function BlogPost() {
                 a must-visit destination for foodies. Whistler is now home to
                 some of the officially top ranked restaurants in all of Canada,
                 including but not limited to Michelin recommended spots, as well
-                as Michelin chefs.
+                as Michelin chefs. A rest day during a ski holiday is a
+                particularly good time to book somewhere you have been looking
+                forward to. For spa days, fondue evenings and other winter plans
+                away from the lifts, see our guide to{" "}
+                <Link href="/post/whistler-winter-activities-beyond-skiing">
+                  the best things to do in Whistler beyond skiing
+                </Link>
+                .
               </p>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">

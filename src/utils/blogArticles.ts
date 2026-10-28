@@ -3,6 +3,8 @@ export interface Article {
   title: string;
   category: string;
   description?: string;
+  /** Blog card excerpt when different from the meta description. */
+  excerpt?: string;
   /** Open Graph / X card title when different from the document title. */
   socialTitle?: string;
   /** Open Graph / X card description when different from meta description. */
@@ -14,6 +16,8 @@ export interface Article {
   modifiedAt?: string;
   headline?: string;
   keywords?: string[];
+  citations?: string[];
+  about?: string[];
 }
 
 // All blog articles data with proper image paths
@@ -35,6 +39,72 @@ export const allArticles: Article[] = [
       "Whistler Village condo",
       "Upper Village Blackcomb condo",
       "AceHost Whistler rentals",
+    ],
+  },
+  {
+    title: "Whistler Winter Activities Beyond Skiing | AceHost",
+    excerpt:
+      "Make more of your Whistler ski holiday with spa days, mountain fondue, forest adventures, art, family activities and a scenic day trip to Pemberton.",
+    category: "Travel and Destination Guides",
+    description:
+      "Discover Whistler winter activities beyond skiing, from Scandinave Spa and fondue to snowmobiling, family outings and a scenic Pemberton day trip.",
+    readTime: "18 min read",
+    link: "/post/whistler-winter-activities-beyond-skiing",
+    coverImage:
+      "/photos/properties/Pinnacle Ridge 23/Snowy Whistler Balcony Hot Tub-1.png",
+    publishedAt: "2026-10-28T21:35:00.000Z",
+    modifiedAt: "2026-10-28T21:35:00.000Z",
+    headline: "The Best Things to Do in Whistler Beyond Skiing",
+    keywords: [
+      "Whistler winter activities",
+      "things to do in Whistler besides skiing",
+      "Whistler non-skiing activities",
+      "Whistler ski trip rest day",
+      "Whistler winter activities for families",
+      "Pemberton day trip from Whistler",
+      "where to stay in Whistler",
+      "Winter",
+      "Things to Do",
+      "Dining",
+      "Wellness",
+      "Pemberton",
+      "Family Travel",
+    ],
+    about: [
+      "Whistler winter activities",
+      "Things to do in Whistler besides skiing",
+      "Pemberton day trips",
+    ],
+  },
+  {
+    title: "Whistler Snow Report Oct 28 2026 | El Niño Update",
+    socialTitle: "Fresh Whistler Snow Challenges the Super El Niño Gloom",
+    socialDescription:
+      "Fresh October snow in Whistler, the dated alpine forecast and what a strong El Niño really means for the 2026/27 ski season. Read the AceHost update.",
+    excerpt:
+      "Fresh October snow is giving Whistler skiers reasons for optimism. Our dated update separates reported snowfall from the alpine forecast and explains what a strong El Niño can, and cannot, tell us about the season ahead.",
+    category: "Whistler Snow/Weather Report",
+    description:
+      "Fresh October snow in Whistler, the dated alpine forecast and what a strong El Niño really means for the 2026/27 ski season. Read the AceHost update.",
+    readTime: "7 min read",
+    link: "/post/whistler-snow-report-october-28-2026",
+    coverImage:
+      "/photos/properties/Two Cedars New/Two Cedars Cover photo snow.png",
+    publishedAt: "2026-10-28T17:00:00.000Z",
+    modifiedAt: "2026-10-28T17:00:00.000Z",
+    headline:
+      "Whistler Snow Report October 28, 2026: Fresh Alpine Snow Defies the Super El Niño Gloom",
+    keywords: [
+      "Whistler snow report October 28 2026",
+      "Whistler alpine snow forecast",
+      "Whistler El Niño 2026 2027",
+      "Whistler Blackcomb opening day 2026",
+    ],
+    citations: [
+      "https://www.snow-forecast.com/resorts/Whistler-Blackcomb/snow-report",
+      "https://www.whistler.com/weather/",
+      "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml",
+      "https://www.whistler.com/weather/history/",
     ],
   },
   {
@@ -445,10 +515,17 @@ export const allArticles: Article[] = [
 export const SNOW_FORECAST_ARTICLE_PATH =
   "/post/whistler-weather-forecast-2026-2027-winter";
 
+export const DATED_SNOW_REPORT_ARTICLE_PATH =
+  "/post/whistler-snow-report-october-28-2026";
+
 /** Blog posts shown in sitewide Resources navigation, excluding seasonal forecast pages. */
 export function getPrimaryNavBlogArticles(count = 4): Article[] {
   return allArticles
-    .filter((article) => article.link !== SNOW_FORECAST_ARTICLE_PATH)
+    .filter(
+      (article) =>
+        article.link !== SNOW_FORECAST_ARTICLE_PATH &&
+        article.link !== DATED_SNOW_REPORT_ARTICLE_PATH
+    )
     .slice(0, count);
 }
 
