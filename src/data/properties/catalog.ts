@@ -789,7 +789,7 @@ export const propertyCategories: PropertyCategory[] = [
               "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Cover Blueberry 306 snow.png",
               "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Living blueberry 306.png",
               "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry 306 Snow 5.png",
-              "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry 306 Snow 6.png",
+              "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry 306 bedroom snow.jpg",
               "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry 306 Snow 7.png",
               "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry 306 Snow 8.png",
               "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry 306 Snow 9.png",
