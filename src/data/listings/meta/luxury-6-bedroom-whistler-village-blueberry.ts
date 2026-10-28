@@ -15,7 +15,7 @@ const listing: ListingData = {
     "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry 306 Snow 12.png",
     "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry balcony shot.png",
     "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Deck snow shot blueberry.png",
-    "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Drone Blueberry shot.png",
+    "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Raven_Crest_snow_drone_cleaned.jpg",
     "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry 306 bedroom snow 1.jpg",
     "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry 306 bedroom snow 2.jpg",
     "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry 306 bedroom snow 3.jpg",

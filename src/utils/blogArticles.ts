@@ -158,7 +158,7 @@ export const allArticles: Article[] = [
     readTime: "28 min read",
     link: "/post/whistler-weather-forecast-2026-2027-winter",
     coverImage:
-      "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Drone Blueberry shot.png",
+      "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Raven_Crest_snow_drone_cleaned.jpg",
     publishedAt: "2026-08-26T17:00:00.000Z",
     modifiedAt: "2026-09-17T17:00:00.000Z",
     headline: "Whistler snow forecast 2026 2027 Winter: Snow Report and El Niño Forecast",

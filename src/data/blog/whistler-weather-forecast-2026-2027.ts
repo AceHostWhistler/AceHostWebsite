@@ -17,7 +17,7 @@ export const META = {
 };
 
 export const HERO = {
-  src: "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Drone Blueberry shot.png",
+  src: "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Raven_Crest_snow_drone_cleaned.jpg",
   alt: "Aerial view of Whistler Village and Blueberry in winter snow",
 };
 
