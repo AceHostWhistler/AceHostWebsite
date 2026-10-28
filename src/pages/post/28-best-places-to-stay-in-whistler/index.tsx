@@ -19,7 +19,7 @@ import { airbnbButtonBlog } from "@/lib/airbnbButtonStyles";
 
 const SLUG = "28-best-places-to-stay-in-whistler";
 const CANONICAL_URL = `https://www.acehost.ca/post/${SLUG}`;
-const HERO = "/photos/properties/Two Cedars New/Two Cedars Cover photo snow.png";
+const HERO = "/photos/properties/The Aspens/Aspens drone shot.jpeg";
 const HERO_URL = `https://www.acehost.ca${encodeURI(HERO)}`;
 const PUBLISH_DATE = "July 26, 2026";
 const ISO_MOD = "2026-07-26T10:00:00-07:00";
@@ -176,7 +176,7 @@ export default function BlogPost() {
               <div className="relative w-full aspect-[16/9] mb-8 rounded-xl overflow-hidden">
                 <Image
                   src={HERO}
-                  alt="Luxury ski-in ski-out chalet in Whistler Kadenwood"
+                  alt="Aerial view of a luxury Whistler Village ski stay in winter"
                   fill
                   className="object-cover"
                   priority

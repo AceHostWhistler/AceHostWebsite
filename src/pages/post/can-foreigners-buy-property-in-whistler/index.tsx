@@ -11,7 +11,7 @@ import { allArticles } from "@/utils/blogArticles";
 const SLUG = "can-foreigners-buy-property-in-whistler";
 const CANONICAL_URL = `https://www.acehost.ca/post/${SLUG}`;
 const COVER_IMAGE =
-  "/photos/properties/Chalet La Forja/New cover forja snow.png";
+  "/photos/properties/Pinnacle Ridge 23/Pinnacle_new_cover_gondola_above_home_cleaned.jpg";
 const IMG_MOUNTAINTOP =
   "/photos/properties/2919 Heritage/Mountaintop.png";
 const IMG_RAVEN_INTERIOR =

@@ -31,7 +31,7 @@ export default function BlogPost() {
               </div>
               <div className="relative w-full aspect-[16/9] mb-8 rounded-xl overflow-hidden">
                 <Image
-                  src="/photos/post/luxury-property-management-investment-opportunities-in-whistler/hero.jpg"
+                  src="/photos/properties/Timber Haven John Harris/Drone Timber cover snow 2.png"
                   alt="Luxury Whistler property managed by AceHost"
                   fill
                   className="object-cover"

@@ -181,7 +181,7 @@ export const allArticles: Article[] = [
     readTime: "14 min read",
     link: "/post/can-foreigners-buy-property-in-whistler",
     coverImage:
-      "/photos/properties/Chalet La Forja/New cover forja snow.png",
+      "/photos/properties/Pinnacle Ridge 23/Pinnacle_new_cover_gondola_above_home_cleaned.jpg",
     publishedAt: "2026-09-10T17:00:00.000Z",
     modifiedAt: "2026-09-10T17:00:00.000Z",
     headline:
@@ -217,7 +217,7 @@ export const allArticles: Article[] = [
     readTime: "15 min read",
     link: "/post/whistler-mansion-rentals-largest-luxury-private-chalets",
     coverImage:
-      "/photos/properties/Chalet La Forja/New cover forja snow.png",
+      "/photos/properties/Panoramic Estate/01-2923 Ancient Cedars-01.jpg",
     publishedAt: "2026-08-01T19:00:00.000Z",
     headline: "Whistler's Most Impressive Airbnb Homes: Large Luxury Chalets, Mansions and Ski-In/Ski-Out Estates",
   },
@@ -241,7 +241,7 @@ export const allArticles: Article[] = [
     readTime: "22 min read",
     link: "/post/28-best-places-to-stay-in-whistler",
     coverImage:
-      "/photos/properties/Two Cedars New/Two Cedars Cover photo snow.png",
+      "/photos/properties/The Aspens/Aspens drone shot.jpeg",
     publishedAt: "2026-07-26T17:00:00.000Z",
     headline: "From Village Condos to $20 Million Chalets: 28 Incredible Places to Stay in Whistler",
   },
@@ -253,7 +253,7 @@ export const allArticles: Article[] = [
     readTime: "13 min read",
     link: "/post/fifa-vancouver-whistler-the-luxury-whistler-fifa-experience",
     coverImage:
-      "/photos/properties/2919 Heritage/Mountaintop.png",
+      "/photos/properties/Valhalla Unit 33 Village/Valhalla snow edit 1.jpeg",
     publishedAt: "2026-05-01T16:30:00.000Z",
   },
   {
@@ -286,7 +286,7 @@ export const allArticles: Article[] = [
     readTime: "12 min read",
     link: "/post/self-managing-vs-hiring-a-whistler-property-manager-what-owners-need-to-know",
     coverImage:
-      "/photos/properties/3445-Heron-Place/Heron new cover phto snow light.png",
+      "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Cover Blueberry 306 snow.png",
     publishedAt: "2026-04-23T21:00:00.000Z",
   },
   {
@@ -297,7 +297,7 @@ export const allArticles: Article[] = [
     readTime: "16 min read",
     link: "/post/best-luxury-airbnb-ski-in-ski-out-vacation-rentals-in-whistler-for-large-groups",
     coverImage:
-      "/photos/properties/Two Cedars New/Two Cedars Cover photo snow.png",
+      "/photos/properties/Falcon/Falcon_new_living_room_cover_cleaned.jpg",
     publishedAt: "2026-04-23T19:00:00.000Z",
   },
   {
@@ -495,7 +495,7 @@ export const allArticles: Article[] = [
     readTime: "13 min read",
     link: "/post/luxury-property-management-investment-opportunities-in-whistler",
     coverImage:
-      "/photos/post/luxury-property-management-investment-opportunities-in-whistler/hero.jpg",
+      "/photos/properties/Timber Haven John Harris/Drone Timber cover snow 2.png",
     publishedAt: "2024-09-25T07:00:00.000Z",
     headline: "AceHost Whistler Property Management Services",
   },

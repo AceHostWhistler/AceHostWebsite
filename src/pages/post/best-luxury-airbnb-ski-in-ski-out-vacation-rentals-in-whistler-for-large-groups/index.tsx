@@ -17,7 +17,7 @@ import BlogBreadcrumbs from "@/components/blog/BlogBreadcrumbs";
 
 const SLUG = "best-luxury-airbnb-ski-in-ski-out-vacation-rentals-in-whistler-for-large-groups";
 const HERO =
-  "/photos/properties/Two Cedars New/Two Cedars Cover photo snow.png";
+  "/photos/properties/Falcon/Falcon_new_living_room_cover_cleaned.jpg";
 const HERO_URL = "https://www.acehost.ca" + HERO;
 const PUBLISH_DATE = "April 23, 2026";
 const ISO_MOD = "2026-04-23T12:00:00-07:00";
@@ -117,7 +117,7 @@ export default function BlogPost() {
               <div className="relative w-full aspect-[16/9] mb-8 rounded-xl overflow-hidden">
                 <Image
                   src={HERO}
-                  alt="Luxury ski-in ski-out vacation home in Whistler, Kadenwood"
+                  alt="Luxury ski-in ski-out living room in a large Whistler vacation home"
                   fill
                   className="object-cover"
                   priority

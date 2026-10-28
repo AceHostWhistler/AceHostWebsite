@@ -17,7 +17,7 @@ const PUBLISH_DATE = "May 1, 2026";
 const ISO_MODIFIED = "2026-05-01T09:30:00-07:00";
 const CANONICAL_URL = `https://www.acehost.ca/post/${SLUG}`;
 const HERO_IMAGE =
-  "/photos/properties/2919 Heritage/Mountaintop.png";
+  "/photos/properties/Valhalla Unit 33 Village/Valhalla snow edit 1.jpeg";
 const HERO_IMAGE_URL = `https://www.acehost.ca${encodeURI(HERO_IMAGE)}`;
 
 const META = {
