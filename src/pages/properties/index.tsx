@@ -197,13 +197,6 @@ export default function Properties() {
     return (
       <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow h-full">
         <div className={PROPERTY_CARD_FRAME_CLASS}>
-          {/* Pet Friendly Badge */}
-          {property.isPetFriendly && (
-            <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 text-xs font-medium rounded-md z-10">
-              Pet Friendly
-            </div>
-          )}
-          
           <Link href={propertyUrl} className="block relative h-full w-full">
             <PropertyCoverImage
               src={property.images[0]}

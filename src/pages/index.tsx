@@ -94,11 +94,6 @@ const Home = () => {
               className="cursor-pointer object-cover"
             />
           </Link>
-          {property.isPetFriendly && (
-            <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 text-xs font-medium rounded-md z-10">
-              Pet Friendly
-            </div>
-          )}
           <div className="absolute bottom-4 right-4 z-20">
             {useContact ? (
               <Link
