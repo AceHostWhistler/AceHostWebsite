@@ -24,25 +24,84 @@ export const HERO = {
   src: "/photos/properties/Pinnacle Ridge 23/Snowy Whistler Balcony Hot Tub-1.png",
   alt: "Covered outdoor hot tub on a snowy Whistler balcony looking toward snow-laden pine trees",
   caption:
-    "A rest-day view from an AceHost Whistler home: an outdoor hot tub facing snow-covered forest.",
+    "A rest-day view from Pinnacle Ridge 23: an outdoor hot tub facing snow-covered forest.",
 };
+
+const POST_PHOTOS = "/photos/post/whistler-winter-activities-beyond-skiing";
 
 export const IMAGES = {
   sauna: {
     src: "/photos/properties/Two Cedars New/Sauna snow two cedars.jpeg",
-    alt: "Cedar outdoor sauna beside a snow-covered patio and forest at a Whistler home",
+    alt: "Cedar outdoor sauna beside a snow-covered patio and forest at Two Cedars in Kadenwood",
+    caption:
+      "The outdoor sauna at Two Cedars in Kadenwood, a quiet rest-day option when you want to stay home.",
   },
-  dining: {
-    src: "/photos/properties/Falcon/Dining table Falcon snow new.jpeg",
-    alt: "Long dining table set for a group meal in a Whistler chalet with snowy trees outside the windows",
+  cafe: {
+    src: `${POST_PHOTOS}/cozy-winter-cafe.jpg`,
+    alt: "Two coffees and a croissant on a wooden café table looking out to a snowy Whistler Village street",
+    caption: "A slow Village morning, coffee in hand and the mountain street just outside the window.",
+    credit: "AI illustration.",
   },
-  living: {
-    src: "/photos/properties/Valhalla Unit 33 Village/Valhalla snow edit 1.jpeg",
-    alt: "Whistler Village living room with a fireplace and snowy trees visible through the windows",
+  fondue: {
+    src: `${POST_PHOTOS}/alpine-fondue.jpg`,
+    alt: "Four people sharing cheese fondue at a candlelit mountain chalet table with twilight peaks outside",
+    caption:
+      "A mountain fondue dinner is one of the easiest ways to make an evening the main event.",
+    credit:
+      "AI illustration. Inspired by a hut fondue dinner, not a photograph of Crystal Hut.",
+  },
+  vallea: {
+    src: `${POST_PHOTOS}/forest-light-walk.jpg`,
+    alt: "Two people walking a snowy forest path at night among tall trees lit with gold and teal light",
+    caption: "An after-dark forest walk, with light and sound turning a short trail into an evening out.",
+    credit:
+      "AI illustration. Inspired by an illuminated forest walk, not a photograph of Vallea Lumina.",
+  },
+  snowmobile: {
+    src: `${POST_PHOTOS}/guided-snowmobile.jpg`,
+    alt: "Three snowmobilers riding a groomed winter trail through snow-covered pines toward mountain peaks",
+    caption: "A guided snowmobile outing opens up a very different view of the mountains.",
+    credit: "AI illustration.",
+  },
+  dogsled: {
+    src: `${POST_PHOTOS}/dogsledding.jpg`,
+    alt: "A team of huskies pulling a wooden sled with two guests through a snowy Whistler forest",
+    caption: "A dogsled tour through the Callaghan Valley, with the dogs themselves a big part of the day.",
+    credit: "AI illustration.",
+  },
+  helicopter: {
+    src: `${POST_PHOTOS}/winter-helicopter.jpg`,
+    alt: "A red helicopter on a snowy alpine ridge above a valley of cloud, with two guests looking at the peaks",
+    caption:
+      "A scenic helicopter flight, and an alpine landing when conditions allow, can be a highlight of the whole trip.",
+    credit:
+      "AI illustration. Inspired by a winter helicopter outing, not a photograph of a specific operator.",
+  },
+  zipline: {
+    src: `${POST_PHOTOS}/winter-zipline.jpg`,
+    alt: "A smiling guest in a helmet and harness ziplining from a snowy forest platform above a winter valley",
+    caption: "A winter zipline through the trees, with walking and viewpoints as part of the outing.",
+    credit:
+      "AI illustration. Inspired by a winter forest zipline, not a photograph of Ziptrek.",
+  },
+  tubing: {
+    src: `${POST_PHOTOS}/family-snow-tubing.jpg`,
+    alt: "A man and a young girl smiling as they snow-tube down a groomed run with mountains behind them",
+    caption: "Snow tubing keeps a little mountain excitement in a family day away from ski lessons.",
+    credit:
+      "AI illustration. Inspired by family snow tubing, not a photograph of the bubly Tube Park.",
   },
   stay: {
     src: "/photos/properties/Two Cedars New/Two cedars new edit snow living 14.jpg",
-    alt: "Open living room in a Whistler mountain home with snow visible through tall windows",
+    alt: "Open living room at Two Cedars in Kadenwood with snow visible through tall windows",
+    caption:
+      "Two Cedars in Kadenwood, one of the AceHost homes that works well when the day is about staying in as much as heading out.",
+  },
+  mountaintop: {
+    src: "/photos/properties/2919 Heritage/Mountaintop living snow18.png",
+    alt: "Living room at The Mountaintop in Kadenwood with snowy forest visible through large windows",
+    caption:
+      "The Mountaintop in Kadenwood, a strong fit for a ski holiday with proper downtime between mountain days.",
   },
 } as const;
 

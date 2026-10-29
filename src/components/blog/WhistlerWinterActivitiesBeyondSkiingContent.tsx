@@ -64,13 +64,15 @@ function ArticleImage({
   src,
   alt,
   caption,
+  credit,
 }: {
   src: string;
   alt: string;
   caption?: string;
+  credit?: string;
 }) {
   return (
-    <figure className="not-prose my-8">
+    <figure className="not-prose my-10">
       <div className="relative aspect-[16/9] rounded-xl overflow-hidden bg-gray-100">
         <Image
           src={src}
@@ -81,9 +83,12 @@ function ArticleImage({
           loading="lazy"
         />
       </div>
-      {caption ? (
-        <figcaption className="text-sm text-gray-600 mt-3 italic leading-relaxed">
-          {caption}
+      {caption || credit ? (
+        <figcaption className="text-sm text-gray-600 mt-3 leading-relaxed">
+          {caption ? <span className="italic">{caption}</span> : null}
+          {credit ? (
+            <span className="block text-xs text-gray-500 mt-1">{credit}</span>
+          ) : null}
         </figcaption>
       ) : null}
     </figure>
@@ -196,12 +201,6 @@ export default function WhistlerWinterActivitiesBeyondSkiingContent() {
         </p>
       </TextBlock>
 
-      <ArticleImage
-        src={IMAGES.sauna.src}
-        alt={IMAGES.sauna.alt}
-        caption="An outdoor sauna at an AceHost Whistler home, the kind of quiet rest day that pairs well with a spa outing."
-      />
-
       <SubHeading>Turn your chalet into the destination</SubHeading>
       <TextBlock>
         <p>
@@ -218,6 +217,8 @@ export default function WhistlerWinterActivitiesBeyondSkiingContent() {
           amenities depend on the home you choose.
         </p>
       </TextBlock>
+
+      <ArticleImage {...IMAGES.sauna} />
 
       <SubHeading>Walk the Village and follow your appetite</SubHeading>
       <TextBlock>
@@ -236,6 +237,8 @@ export default function WhistlerWinterActivitiesBeyondSkiingContent() {
           hour.
         </p>
       </TextBlock>
+
+      <ArticleImage {...IMAGES.cafe} />
 
       <SubHeading>
         Take a winter walk without heading into the backcountry
@@ -285,6 +288,8 @@ export default function WhistlerWinterActivitiesBeyondSkiingContent() {
         </p>
       </TextBlock>
 
+      <ArticleImage {...IMAGES.fondue} />
+
       <SubHeading>
         Walk through the illuminated forest at Vallea Lumina
       </SubHeading>
@@ -308,6 +313,8 @@ export default function WhistlerWinterActivitiesBeyondSkiingContent() {
           light exhibition.
         </p>
       </TextBlock>
+
+      <ArticleImage {...IMAGES.vallea} />
 
       <SubHeading>Try a different kind of wilderness dinner</SubHeading>
       <TextBlock>
@@ -346,12 +353,6 @@ export default function WhistlerWinterActivitiesBeyondSkiingContent() {
         </p>
       </TextBlock>
 
-      <ArticleImage
-        src={IMAGES.dining.src}
-        alt={IMAGES.dining.alt}
-        caption="A chalet dining table ready for a long winter meal, whether you eat in or come back from town."
-      />
-
       <SectionHeader id="outdoors">
         Get outdoors without downhill skis
       </SectionHeader>
@@ -370,6 +371,8 @@ export default function WhistlerWinterActivitiesBeyondSkiingContent() {
           can match you with the right outing.
         </p>
       </TextBlock>
+
+      <ArticleImage {...IMAGES.snowmobile} />
 
       <SubHeading>Explore the forest on snowshoes</SubHeading>
       <TextBlock>
@@ -417,6 +420,8 @@ export default function WhistlerWinterActivitiesBeyondSkiingContent() {
           themselves a big part of the attraction.
         </p>
       </TextBlock>
+
+      <ArticleImage {...IMAGES.dogsled} />
 
       <SubHeading>Ride through the snow to an après dome</SubHeading>
       <TextBlock>
@@ -495,6 +500,8 @@ export default function WhistlerWinterActivitiesBeyondSkiingContent() {
         </p>
       </TextBlock>
 
+      <ArticleImage {...IMAGES.helicopter} />
+
       <SubHeading>Fly somewhere for the afternoon</SubHeading>
       <TextBlock>
         <p>
@@ -524,6 +531,8 @@ export default function WhistlerWinterActivitiesBeyondSkiingContent() {
           if your legs are asking for a complete rest.
         </p>
       </TextBlock>
+
+      <ArticleImage {...IMAGES.zipline} />
 
       <SubHeading>
         Visit the Olympic sliding track or try a bungee jump
@@ -566,10 +575,14 @@ export default function WhistlerWinterActivitiesBeyondSkiingContent() {
         </p>
       </TextBlock>
 
+      <ArticleImage {...IMAGES.tubing} />
+
       <SubHeading>Visit the Audain Art Museum</SubHeading>
       <TextBlock>
         <p>
-          The <ExtLink href={LINKS.audain}>Audain Art Museum</ExtLink> deserves
+          The <ExtLink href={LINKS.audain}>Audain Art Museum</ExtLink>
+          {" "}
+          deserves
           a place on the itinerary in its own right. Its British Columbia art
           collection and changing exhibitions offer a completely different way
           to experience the region, and the building&apos;s forest setting makes
@@ -783,12 +796,6 @@ export default function WhistlerWinterActivitiesBeyondSkiingContent() {
         </p>
       </TextBlock>
 
-      <ArticleImage
-        src={IMAGES.stay.src}
-        alt={IMAGES.stay.alt}
-        caption="Two Cedars in Kadenwood, one of the AceHost homes that works well when the day is about staying in as much as heading out."
-      />
-
       <TextBlock>
         <p>
           For a larger group,{" "}
@@ -797,6 +804,11 @@ export default function WhistlerWinterActivitiesBeyondSkiingContent() {
           theatre. It is an appealing base when your group wants plenty to enjoy
           at home as well as on the mountain.
         </p>
+      </TextBlock>
+
+      <ArticleImage {...IMAGES.stay} />
+
+      <TextBlock>
         <p>
           <Link href={LINKS.mountaintop}>The Mountaintop</Link> is another
           strong fit for a ski holiday with proper downtime, with a hot tub,
@@ -805,6 +817,11 @@ export default function WhistlerWinterActivitiesBeyondSkiingContent() {
           spacious Kadenwood option with a hot tub, indoor sauna, gym and media
           space.
         </p>
+      </TextBlock>
+
+      <ArticleImage {...IMAGES.mountaintop} />
+
+      <TextBlock>
         <p>
           For a smaller group, the{" "}
           <Link href={LINKS.woodrun}>Woodrun Penthouse on Blackcomb</Link>{" "}
@@ -833,12 +850,6 @@ export default function WhistlerWinterActivitiesBeyondSkiingContent() {
           happens between ski days.
         </p>
       </TextBlock>
-
-      <ArticleImage
-        src={IMAGES.living.src}
-        alt={IMAGES.living.alt}
-        caption="A Village home with snow just outside the windows, useful when non-skiers want cafés and shops within easy reach."
-      />
 
       <SectionHeader id="faq">Questions about Whistler beyond skiing</SectionHeader>
       <div className="mt-6 space-y-8">
