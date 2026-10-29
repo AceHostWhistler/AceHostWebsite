@@ -717,7 +717,7 @@ export const propertyCategories: PropertyCategory[] = [
             bathrooms: 3.5,
             location: "Blueberry Hill, Whistler",
             description:
-              "A spacious 7-bedroom Blueberry Hill chalet with a large indoor dining table seating 14, mountain views, central air conditioning, an outdoor sauna, private hot tub, and convenient access to Whistler Village.",
+              "Welcome to Falcon, a spacious 7-bedroom Whistler chalet in prestigious Blueberry Hill, minutes from Whistler Village and the slopes. Designed for families and groups of up to 15, the home features a large indoor dining table seating 14, mountain views, a wood-burning fireplace, central A/C, outdoor sauna, private hot tub and large deck. Walk the Valley Trail to the Village in about 25 minutes, drive in 3 to 4 minutes, or take the Route 6 bus from a stop steps away.",
             features: [
               "Hot Tub",
               "Outdoor Barrel Sauna",

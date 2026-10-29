@@ -89,7 +89,7 @@ export const largeHomeProperties: Whistler28Property[] = [
     number: 8,
     name: "Falcon | Whistler Village Chalet | Hot tub + Sauna",
     description:
-      "A seven-bedroom Blueberry Hill chalet with a dining table seating 14, central air conditioning, a private hot tub, outdoor sauna, and easy access to Whistler Village.",
+      "A spacious 7-bedroom Blueberry Hill chalet with a dining table seating 14, mountain views, central A/C, a private hot tub, outdoor sauna and a Route 6 bus stop steps from the door.",
     image: "/photos/properties/Falcon/Falcon_new_living_room_cover_cleaned.jpg",
     listingHref: "/listings/falcon-blueberry-drive",
     bookUrl:
