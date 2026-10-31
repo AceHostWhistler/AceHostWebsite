@@ -306,6 +306,7 @@ export const listingAmenities: Record<string, string[]> = {
     "Hot tub & sauna",
     "Central air conditioning",
     "8 bedrooms · 11 beds",
+    "Dining for 14+, up to 16",
     "Gas fireplace",
     "Outdoor dining & ping pong",
   ],

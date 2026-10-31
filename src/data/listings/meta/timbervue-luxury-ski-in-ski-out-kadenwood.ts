@@ -84,7 +84,7 @@ const listing: ListingData = {
 ],
   seo: {
     title: "TimberVue - Luxury Ski in Ski out - Kadenwood - AceHost",
-    description: "Welcome to your private Kadenwood mountain estate, an 8-bedroom luxury home with stunning views, ski-in/ski-out access, a private hot tub, beautiful furnishings, curated artwork, and access to Kadenwood’s private residents-only gondola. With spacious living areas, outdoor dining, a ping pong table, multiple lounge spaces, and a main floor with 2 bedrooms including the Master Bedroom suite, this home is perfect for families, large groups, and guests who prefer minimal stairs during their stay.",
+    description: "Wake up to sweeping mountain views at TimberVue, your private 8-bedroom Kadenwood estate. Enjoy ski-in/ski-out access, a private hot tub, access to Kadenwood's private gondola, and beautifully furnished spaces for gathering or unwinding. Multiple lounges, ping pong, outdoor dining, and a generous three-level layout make it an exceptional Whistler escape for families and friends, with room to come together and space to make the stay your own.",
   },
   header:   {
       "title": "TimberVue - Luxury Ski in Ski out - Kadenwood",

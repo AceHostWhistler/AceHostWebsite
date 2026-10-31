@@ -66,7 +66,7 @@ export const kadenwoodProperties: Whistler28Property[] = [
     number: 6,
     name: "TimberVue - Luxury Ski in Ski out - Kadenwood",
     description:
-      "An eight-bedroom ski home with beautiful interiors, central air conditioning, a hot tub, sauna, generous gathering spaces, and private gondola access.",
+      "A private 8-bedroom Kadenwood estate with ski-in/ski-out access, a private hot tub, Kadenwood gondola access, multiple lounges, ping pong, outdoor dining, and a dining table that extends for 14+ guests, up to 16.",
     image: "/photos/properties/Timber Haven John Harris/Drone Timber cover snow 2.png",
     listingHref: "/listings/timbervue-luxury-ski-in-ski-out-kadenwood",
     bookUrl:

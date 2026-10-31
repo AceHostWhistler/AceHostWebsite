@@ -587,7 +587,7 @@ export const propertyCategories: PropertyCategory[] = [
             bathrooms: 6.5,
             location: "Kadenwood, Whistler",
             description:
-              "An 8-bedroom Kadenwood estate with ski-in/ski-out access, a private hot tub, sauna, central air conditioning, curated artwork, and private gondola access.",
+              "Wake up to sweeping mountain views at TimberVue, your private 8-bedroom Kadenwood estate. Enjoy ski-in/ski-out access, a private hot tub, access to Kadenwood's private gondola, and beautifully furnished spaces for gathering or unwinding. Multiple lounges, ping pong, outdoor dining, and a generous three-level layout make it an exceptional Whistler escape for families and friends, with room to come together and space to make the stay your own.",
             features: [
               "Ski-in/Ski-out Access",
               "Private Residents-Only Gondola",
