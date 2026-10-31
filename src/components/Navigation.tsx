@@ -117,7 +117,7 @@ const Navigation = ({
     { text: "Luxury Rental Homes", url: "/properties" },
     { text: "Concierge Services", url: "/concierge-service" },
     { text: "Property Management", url: "/list-property" },
-    { text: "Our Story", url: "/our-story" },
+    { text: "About us", url: "/our-story" },
   ];
 
   const rentalFilterLinks = PROPERTY_CATEGORY_FILTERS.map((filter) => ({

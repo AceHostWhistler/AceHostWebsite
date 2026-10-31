@@ -107,7 +107,7 @@ const WHISTLER_PRIMARY_PAGES = [
     url: `${SITE_URL}/concierge-service`,
   },
   {
-    name: "Our Story",
+    name: "About us",
     url: `${SITE_URL}/our-story`,
   },
   {

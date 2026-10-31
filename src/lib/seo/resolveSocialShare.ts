@@ -57,7 +57,7 @@ const STATIC_PAGES: Record<string, StaticPageMeta> = {
     image: "/photos/page-covers/faq.jpg",
   },
   "/our-story": {
-    title: "Our Story | AceHost Whistler Luxury Vacation Rentals",
+    title: "About us | AceHost Whistler Luxury Vacation Rentals",
     description:
       "Learn about the AceHost team and our mission to provide exceptional luxury vacation rental experiences in Whistler.",
     image: "/photos/page-covers/about.jpg",

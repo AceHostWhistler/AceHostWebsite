@@ -321,7 +321,7 @@ const ListProperty = () => {
                   <div className="relative rounded-2xl overflow-hidden shadow-lg ring-1 ring-gray-200 bg-gray-50">
                     <Image
                       src="/photos/homepage/list-property/airbnb-superhost-profile.png"
-                      alt="AceHost Whistler Superhost profile, 4.92 rating and 1103+ reviews"
+                      alt="AceHost Whistler Superhost profile, 4.92 rating and 1150+ reviews"
                       width={668}
                       height={430}
                       className="w-full h-auto object-contain transition-opacity group-hover:opacity-95"

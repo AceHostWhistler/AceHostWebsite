@@ -858,7 +858,7 @@ export default function BlogPost() {
               <p>
                 AceHost has earned Airbnb Superhost and Vrbo Premier Host
                 status. Our current website reports a 4.92 Airbnb rating and
-                more than 1,100 guest reviews.
+                more than 1,150 guest reviews.
               </p>
               <p>
                 Those results come from combining strong marketing with close

@@ -12,12 +12,12 @@ export default function AboutRedirect() {
   return (
     <>
       <Head>
-        <title>About AceHost | Redirecting...</title>
+        <title>About us | AceHost Whistler Luxury Vacation Rentals</title>
         <meta name="robots" content="noindex, follow" />
         <link rel="canonical" href="https://acehost.ca/our-story" />
       </Head>
       <div className="min-h-screen flex items-center justify-center">
-        <p className="text-lg">Redirecting to our story...</p>
+        <p className="text-lg">Redirecting to About us...</p>
       </div>
     </>
   );

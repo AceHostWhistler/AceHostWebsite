@@ -127,7 +127,7 @@ const Footer = () => {
                   href="/our-story"
                   className="text-gray-600 hover:text-gray-900 transition-colors"
                 >
-                  Our Story
+                  About us
                 </Link>
               </li>
               <li>

@@ -126,7 +126,7 @@ const OurStory = () => {
   return (
     <div className="min-h-screen bg-white text-stone-900">
       <Head>
-        <title>Our Story | AceHost Whistler Luxury Vacation Rentals</title>
+        <title>About us | AceHost Whistler Luxury Vacation Rentals</title>
         <meta
           name="description"
           content="Learn about the AceHost team and our mission to provide exceptional luxury vacation rental experiences in Whistler."
@@ -142,12 +142,12 @@ const OurStory = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8 sm:pb-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
             <div className="lg:col-span-5">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-stone-400 mb-4">
-                About AceHost
-              </p>
               <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.08] mb-5">
-                Whistler locals building exceptional stays
+                About us
               </h1>
+              <p className="text-xl sm:text-2xl font-semibold tracking-tight text-white mb-5">
+                Whistler locals building exceptional stays
+              </p>
               <p className="text-base sm:text-lg text-stone-300 leading-relaxed max-w-xl mb-8">
                 Dedicated to luxury vacation rentals and full-service property
                 management in Whistler since 2018, for guests who expect more,
@@ -201,7 +201,7 @@ const OurStory = () => {
                 Our mission
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-stone-950 mb-6">
-                The best guest experience. A profitable home for owners.
+                The best guest experience. A profitable investment for owners.
               </h2>
               <div className="space-y-5 text-[15px] sm:text-base text-stone-600 leading-relaxed">
                 <p>
