@@ -47,6 +47,46 @@ import {
   MdTerrain,
 } from "react-icons/md";
 
+const CONCIERGE_FAQS: { question: string; paragraphs: string[] }[] = [
+  {
+    question: "What are the advantages of using AceHost concierge service?",
+    paragraphs: [
+      "AceHost offers personalized, all-in-one concierge services that take care of every aspect of your vacation. With our local connections and expertise, we can secure priority access to the best experiences in Whistler. Our team goes above and beyond to ensure you get the best tables, service, and time slots, making your stay memorable and seamless.",
+    ],
+  },
+  {
+    question: "What activities are there to do in the Summer in Whistler?",
+    paragraphs: [
+      "Whistler offers a wide range of summer activities including mountain biking, hiking, zip-lining, golf, fishing, and water sports on the beautiful lakes. Our concierge team can arrange guided tours, equipment rentals, and exclusive experiences to make your summer visit memorable.",
+    ],
+  },
+  {
+    question:
+      "Which activity tends to be the most frequently booked by our guests?",
+    paragraphs: [
+      "While our Heli Glacier Meal experience, a private chef-prepared meal atop a glacier with breathtaking views, is one of our most unique and talked-about offerings, the most frequently booked services tend to be the essentials that enhance daily comfort and convenience.",
+      "Most of our guests use AceHost to arrange airport transfers, daily cleanings, and a combination of restaurant reservations and in-home private chef dinners. Many opt for daily breakfast prepared by a chef, one of our most popular offerings, allowing guests to wake up at their own pace to a fresh spread of hot dishes, pastries, and fruit.",
+      "For activities, it's common for each trip to include one or two standout experiences, such as snowmobiling, ziplining, or the Vallea Lumina light walk. In the winter, private ski instructors are highly requested for their ability to provide tailored instruction while helping guests skip the lift lines.",
+      "We also frequently coordinate last-minute transportation, as Whistler's local taxi system doesn't offer scheduling and can be unreliable, especially in peak season. Another popular service is ski rental delivery, which is booked by nearly all of our winter guests. It's a seamless process, and the delivery fee is included.",
+      "And for our more adventurous travelers, heli-skiing remains a bucket-list favourite, with many of our groups including it as part of their winter escape.",
+      "Whether it's the basics or something extraordinary, we're here to take care of it all.",
+    ],
+  },
+  {
+    question: "What does the host/butler service include?",
+    paragraphs: [
+      "Our host/butler service enhances your luxury stay by serving specialty coffees in the morning and cocktails at night. They manage fireplaces, house cleanliness, and setup of lighting, temperature, and music to your preferences. When paired with our private chef service, they'll also set, serve, and clean meals, creating a complete 5-star dining experience.",
+    ],
+  },
+  {
+    question: "What VIP concierge services does AceHost offer?",
+    paragraphs: [
+      "AceHost offers a comprehensive range of VIP services including private chefs, in-home bartending, restaurant reservations, ski/snowboard lessons, heli-skiing, snowmobile tours, airport transfers, private drivers, in-home massages and wellness services, babysitting, daily housekeeping, and exclusive mountain experiences designed for luxury travelers.",
+      "AceHost can essentially help and book absolutely anything you need. No request is unreasonable, just ask!",
+    ],
+  },
+];
+
 const ConciergeService = () => {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
   const [expandedCards, setExpandedCards] = useState<Set<number>>(new Set());
@@ -682,358 +722,46 @@ const ConciergeService = () => {
               </p>
 
               <div className="space-y-2.5">
-                {/* FAQ 1 */}
-                <div
-                  className={`border rounded-xl overflow-hidden transition-all duration-300 ${
-                    expandedFaq === 0 ? "shadow-md" : "shadow-sm"
-                  }`}
-                >
-                  <button
-                    onClick={() => toggleFaq(0)}
-                    className="w-full flex justify-between items-center px-4 py-3.5 text-left focus:outline-none"
-                  >
-                    <h3 className="text-sm sm:text-[15px] font-medium tracking-tight text-gray-900">
-                      What are the advantages of using AceHost concierge
-                      service?
-                    </h3>
-                    <span className="ml-6 flex-shrink-0">
-                      {expandedFaq === 0 ? (
-                        <svg
-                          className="h-4 w-4 text-gray-500"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 15l7-7 7 7"
-                          />
-                        </svg>
-                      ) : (
-                        <svg
-                          className="h-4 w-4 text-gray-500"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
-                      )}
-                    </span>
-                  </button>
-                  <div
-                    className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                      expandedFaq === 0
-                        ? "max-h-96 opacity-100"
-                        : "max-h-0 opacity-0"
-                    }`}
-                  >
-                    <div className="px-4 pb-4 pt-0 text-sm text-gray-600 leading-relaxed">
-                      <p>
-                        AceHost offers personalized, all-in-one concierge
-                        services that take care of every aspect of your
-                        vacation. With our local connections and expertise, we
-                        can secure priority access to the best experiences in
-                        Whistler. Our team goes above and beyond to ensure you
-                        get the best tables, service, and time slots, making
-                        your stay memorable and seamless.
-                      </p>
+                {CONCIERGE_FAQS.map((faq, index) => {
+                  const isOpen = expandedFaq === index;
+                  return (
+                    <div
+                      key={faq.question}
+                      className={`border rounded-xl overflow-hidden transition-shadow duration-300 ${
+                        isOpen ? "shadow-md" : "shadow-sm"
+                      }`}
+                    >
+                      <button
+                        type="button"
+                        onClick={() => toggleFaq(index)}
+                        className="w-full flex justify-between items-center px-4 py-3.5 text-left focus:outline-none"
+                        aria-expanded={isOpen}
+                      >
+                        <h3 className="text-sm sm:text-[15px] font-medium tracking-tight text-gray-900 pr-4">
+                          {faq.question}
+                        </h3>
+                        <IoIosArrowDown
+                          className={`h-4 w-4 flex-shrink-0 text-gray-500 transition-transform duration-300 ${
+                            isOpen ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+                      <div
+                        className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${
+                          isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                        }`}
+                      >
+                        <div className="min-h-0 overflow-hidden">
+                          <div className="px-4 pb-5 pt-0 text-sm text-gray-600 leading-relaxed space-y-3">
+                            {faq.paragraphs.map((paragraph) => (
+                              <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-
-                {/* FAQ 2 */}
-                <div
-                  className={`border rounded-xl overflow-hidden transition-all duration-300 ${
-                    expandedFaq === 1 ? "shadow-md" : "shadow-sm"
-                  }`}
-                >
-                  <button
-                    onClick={() => toggleFaq(1)}
-                    className="w-full flex justify-between items-center px-4 py-3.5 text-left focus:outline-none"
-                  >
-                    <h3 className="text-sm sm:text-[15px] font-medium tracking-tight text-gray-900">
-                      What activities are there to do in the Summer in Whistler?
-                    </h3>
-                    <span className="ml-6 flex-shrink-0">
-                      {expandedFaq === 1 ? (
-                        <svg
-                          className="h-4 w-4 text-gray-500"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 15l7-7 7 7"
-                          />
-                        </svg>
-                      ) : (
-                        <svg
-                          className="h-4 w-4 text-gray-500"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
-                      )}
-                    </span>
-                  </button>
-                  <div
-                    className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                      expandedFaq === 1
-                        ? "max-h-96 opacity-100"
-                        : "max-h-0 opacity-0"
-                    }`}
-                  >
-                    <div className="px-4 pb-4 pt-0 text-sm text-gray-600 leading-relaxed">
-                      <p>
-                        Whistler offers a wide range of summer activities
-                        including mountain biking, hiking, zip-lining, golf,
-                        fishing, and water sports on the beautiful lakes. Our
-                        concierge team can arrange guided tours, equipment
-                        rentals, and exclusive experiences to make your summer
-                        visit memorable.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* FAQ 3 */}
-                <div
-                  className={`border rounded-xl overflow-hidden transition-all duration-300 ${
-                    expandedFaq === 2 ? "shadow-md" : "shadow-sm"
-                  }`}
-                >
-                  <button
-                    onClick={() => toggleFaq(2)}
-                    className="w-full flex justify-between items-center px-4 py-3.5 text-left focus:outline-none"
-                  >
-                    <h3 className="text-sm sm:text-[15px] font-medium tracking-tight text-gray-900">
-                      Which activity tends to be the most frequently booked by
-                      our guests?
-                    </h3>
-                    <span className="ml-6 flex-shrink-0">
-                      {expandedFaq === 2 ? (
-                        <svg
-                          className="h-4 w-4 text-gray-500"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 15l7-7 7 7"
-                          />
-                        </svg>
-                      ) : (
-                        <svg
-                          className="h-4 w-4 text-gray-500"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
-                      )}
-                    </span>
-                  </button>
-                  <div
-                    className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                      expandedFaq === 2
-                        ? "max-h-96 opacity-100"
-                        : "max-h-0 opacity-0"
-                    }`}
-                  >
-                    <div className="px-4 pb-4 pt-0 text-sm text-gray-600 leading-relaxed">
-                      <p>
-                        While our Heli Glacier Meal experience, a private chef-prepared meal atop a glacier with breathtaking views, is one of our most unique and talked-about offerings, the most frequently booked services tend to be the essentials that enhance daily comfort and convenience.
-                      </p>
-                      <p className="mt-3">
-                        Most of our guests use AceHost to arrange airport transfers, daily cleanings, and a combination of restaurant reservations and in-home private chef dinners. Many opt for daily breakfast prepared by a chef, one of our most popular offerings, allowing guests to wake up at their own pace to a fresh spread of hot dishes, pastries, and fruit.
-                      </p>
-                      <p className="mt-3">
-                        For activities, it's common for each trip to include one or two standout experiences, such as snowmobiling, ziplining, or the Vallea Lumina light walk. In the winter, private ski instructors are highly requested for their ability to provide tailored instruction while helping guests skip the lift lines.
-                      </p>
-                      <p className="mt-3">
-                        We also frequently coordinate last-minute transportation, as Whistler's local taxi system doesn't offer scheduling and can be unreliable, especially in peak season. Another popular service is ski rental delivery, which is booked by nearly all of our winter guests. It's a seamless process, and the delivery fee is included.
-                      </p>
-                      <p className="mt-3">
-                        And for our more adventurous travelers, heli-skiing remains a bucket-list favourite, with many of our groups including it as part of their winter escape.
-                      </p>
-                      <p className="mt-3">
-                        Whether it's the basics or something extraordinary, we're here to take care of it all.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* FAQ 4 */}
-                <div
-                  className={`border rounded-xl overflow-hidden transition-all duration-300 ${
-                    expandedFaq === 3 ? "shadow-md" : "shadow-sm"
-                  }`}
-                >
-                  <button
-                    onClick={() => toggleFaq(3)}
-                    className="w-full flex justify-between items-center px-4 py-3.5 text-left focus:outline-none"
-                  >
-                    <h3 className="text-sm sm:text-[15px] font-medium tracking-tight text-gray-900">
-                      What does the host/butler service include?
-                    </h3>
-                    <span className="ml-6 flex-shrink-0">
-                      {expandedFaq === 3 ? (
-                        <svg
-                          className="h-4 w-4 text-gray-500"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 15l7-7 7 7"
-                          />
-                        </svg>
-                      ) : (
-                        <svg
-                          className="h-4 w-4 text-gray-500"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
-                      )}
-                    </span>
-                  </button>
-                  <div
-                    className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                      expandedFaq === 3
-                        ? "max-h-96 opacity-100"
-                        : "max-h-0 opacity-0"
-                    }`}
-                  >
-                    <div className="px-4 pb-4 pt-0 text-sm text-gray-600 leading-relaxed">
-                      <p>
-                        Our host/butler service enhances your luxury stay by
-                        serving specialty coffees in the morning and cocktails
-                        at night. They manage fireplaces, house cleanliness, and
-                        setup of lighting, temperature, and music to your
-                        preferences. When paired with our private chef service,
-                        they'll also set, serve, and clean meals, creating
-                        a complete 5-star dining experience.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* FAQ 5 */}
-                <div
-                  className={`border rounded-xl overflow-hidden transition-all duration-300 ${
-                    expandedFaq === 4 ? "shadow-md" : "shadow-sm"
-                  }`}
-                >
-                  <button
-                    onClick={() => toggleFaq(4)}
-                    className="w-full flex justify-between items-center px-4 py-3.5 text-left focus:outline-none"
-                  >
-                    <h3 className="text-sm sm:text-[15px] font-medium tracking-tight text-gray-900">
-                      What VIP concierge services does AceHost offer?
-                    </h3>
-                    <span className="ml-6 flex-shrink-0">
-                      {expandedFaq === 4 ? (
-                        <svg
-                          className="h-4 w-4 text-gray-500"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 15l7-7 7 7"
-                          />
-                        </svg>
-                      ) : (
-                        <svg
-                          className="h-4 w-4 text-gray-500"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
-                      )}
-                    </span>
-                  </button>
-                  <div
-                    className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                      expandedFaq === 4
-                        ? "max-h-96 opacity-100"
-                        : "max-h-0 opacity-0"
-                    }`}
-                  >
-                    <div className="px-4 pb-4 pt-0 text-sm text-gray-600 leading-relaxed">
-                      <p>
-                        AceHost offers a comprehensive range of VIP services
-                        including private chefs, in-home bartending, restaurant
-                        reservations, ski/snowboard lessons, heli-skiing,
-                        snowmobile tours, airport transfers, private drivers,
-                        in-home massages and wellness services, babysitting,
-                        daily housekeeping, and exclusive mountain experiences
-                        designed for luxury travelers.
-                      </p>
-                      <p className="mt-3">
-                        AceHost can essentially help and book absolutely anything you need. No request is unreasonable, just ask!
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                  );
+                })}
               </div>
             </div>
           </section>
