@@ -956,7 +956,7 @@ export const propertyCategories: PropertyCategory[] = [
             images: [
               "/photos/properties/Valhalla Unit 33 Village/Valhalla snow edit 1.jpeg",
               "/photos/properties/Valhalla Unit 33 Village/Valhalla snow edit 2.jpeg",
-              "/photos/properties/Valhalla Unit 33 Village/Hot tub Northlands snow.png",
+              "/photos/properties/Valhalla Unit 33 Village/New Valhalla Hot tub.jpg",
             ],
             guests: 8,
             bedrooms: 3,

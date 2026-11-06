@@ -21,7 +21,7 @@ const listing: ListingData = {
     `${base}/Valhalla bedroom snow 5.jpg`,
     `${base}/Valhalla bedroom snow 6.jpg`,
     `${base}/Bunk Bed Ironed 3.png`,
-    `${base}/Hot tub Northlands snow.png`,
+    `${base}/New Valhalla Hot tub.jpg`,
     `${base}/Northlands Outdoor snow.png`,
     `${base}/05 - 20260522 A7M4 01 A1_06186.jpg`,
     `${base}/06 - 20260522 A7M4 01 A1_06207.jpg`,

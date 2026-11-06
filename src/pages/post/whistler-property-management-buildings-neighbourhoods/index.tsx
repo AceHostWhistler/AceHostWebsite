@@ -15,7 +15,7 @@ import BlogBulletList from "@/components/blog/BlogBulletList";
 const SLUG = "whistler-property-management-buildings-neighbourhoods";
 const HERO = "/photos/properties/2919 Heritage/Mountaintop.png";
 const VILLAGE_IMAGE =
-  "/photos/properties/Valhalla Unit 33 Village/Hot tub Northlands snow.png";
+  "/photos/properties/Valhalla Unit 33 Village/New Valhalla Hot tub.jpg";
 const UPPER_VILLAGE_IMAGE =
   "/photos/properties/The Aspens/Aspens drone shot.jpeg";
 const CREEKSIDE_IMAGE = "/photos/properties/Bluffs Unit 4/Bluffs drone.jpg";
