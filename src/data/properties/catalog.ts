@@ -973,10 +973,10 @@ export const propertyCategories: PropertyCategory[] = [
               "Underground Parking",
               "Ski & Bike Storage",
               "In-Suite Laundry",
-              "Portable AC (May 15–Oct 15)",
+              "Portable AC (May 15 to Oct 15)",
             ],
             highlights: [
-              "North End of Whistler Village",
+              "Village North, walk to the slopes",
               "Private Hot Tub with Peak Views",
               "Three Bedrooms & Three Bathrooms",
               "Keyless Entry & AceHost Support",

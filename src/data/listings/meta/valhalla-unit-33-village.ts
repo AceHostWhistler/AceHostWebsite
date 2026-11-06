@@ -103,8 +103,8 @@ const listing: ListingData = {
     },
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.85",
-      reviewCount: "13",
+      ratingValue: "4.88",
+      reviewCount: "17",
     },
   },
 };

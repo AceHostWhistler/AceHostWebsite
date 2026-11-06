@@ -180,9 +180,9 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     stats:
       "Sleeps 8 | 3 Bedrooms | 5 Beds | 3 Bathrooms | Private Hot Tub | Walk to Gondola | Village Location",
     paragraphs: [
-      "Valhalla Peaks is a spacious 3-bedroom Whistler Village townhome at the north end of the Village, directly across from Marketplace and Fresh St. Market. A private balcony hot tub, gas fireplace, and three full bathrooms give groups the space and privacy of a home with everything just outside the door.",
+      "Valhalla Peaks is a spacious 3-bedroom Whistler Village townhome in Village North, directly across from Marketplace and Fresh St. Market, Whistler's largest full-service grocery store. A private balcony hot tub, gas fireplace, and three full bathrooms give groups the space and privacy of a home with everything just outside the door.",
       "The Village Stroll begins steps away, with restaurants, shops, après-ski, and the Whistler Village Gondola approximately a 12-minute walk. After skiing, soak in your private hot tub with peak views, then walk to dinner without touching your car.",
-      "With underground parking, ski and bike storage, portable AC for summer months, and AceHost support throughout your stay, Valhalla Peaks is ideal for families or friends who want village convenience, hot tub time, and a quieter residential feel.",
+      "With underground parking, ski and bike storage, portable A/C in summer, Valley Trail access, and AceHost support throughout your stay, Valhalla Peaks is ideal for families or friends who want village convenience, hot tub time, and a quieter residential feel.",
     ],
     airbnbHref:
       "https://www.airbnb.ca/rooms/1693450379764005787?guests=1&adults=1&s=67&unique_share_id=bd20bf84-b138-4958-9dc8-9128130a2028",
