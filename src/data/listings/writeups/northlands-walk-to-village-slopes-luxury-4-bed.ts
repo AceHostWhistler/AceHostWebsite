@@ -27,7 +27,7 @@ const northlandsWriteup: ListingWriteupContent = {
     imageSide: "right",
     image: {
       photoIndex: 1,
-      alt: "Symphony interior",
+      alt: "Symphony living room with fireplace and snowy trees outside",
     },
     paragraphs: [
       "This unique three-level home gives you the convenience of a central Whistler Village condo with much more separation and privacy than a typical single-level unit. A private exterior entrance adds to the townhome feel, while the layout works especially well for families, couples and small groups travelling together.",
@@ -42,8 +42,8 @@ const northlandsWriteup: ListingWriteupContent = {
     title: "Location",
     imageSide: "left",
     image: {
-      photoIndex: 8,
-      alt: "Symphony living area",
+      photoIndex: 26,
+      alt: "Snow-covered trees from the Symphony balcony",
     },
     paragraphs: [
       "The Symphony complex is exceptionally well positioned in Whistler Village North, with Marketplace and Fresh St. Market directly across the street. Groceries, restaurants, cafés, shops and everyday essentials are all within easy walking distance.",

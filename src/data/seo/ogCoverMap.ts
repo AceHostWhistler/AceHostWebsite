@@ -39,7 +39,6 @@ export const OG_COVER_BY_SOURCE: Record<string, string> = {
   "/photos/properties/Bluffs Unit 4/6.jpeg": "/og-covers/6-e7076b20.jpg",
   "/photos/properties/Squamish/16 - 20251104 A7M4 01 A1_06655.jpg": "/og-covers/16-20251104-A7M4-01-A1-06655-18405947.jpg",
   "/photos/properties/Eagle Lodge 238/Eagle edit 1.png": "/og-covers/Eagle-edit-1-3789765d.jpg",
-  "/photos/properties/Northlands Symphony 29/01 - 20251128 A7M4 02 A1_02882_.jpg": "/og-covers/01-20251128-A7M4-02-A1-02882-9364f9d9.jpg",
   "/photos/properties/Cascade 615/615 snow 5.png": "/og-covers/615-snow-5-a5f5281a.jpg",
   "/photos/properties/Cascade 514/514 Snow 3.png": "/og-covers/514-Snow-3-dc3cf5c7.jpg",
   "/thumbnails/Four Seasons Resort and Residences Whistler_885.webp": "/og-covers/Four-Seasons-Resort-and-Residences-Whistler-885-827abb3f.jpg",

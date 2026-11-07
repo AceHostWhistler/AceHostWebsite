@@ -309,7 +309,7 @@ export const townhomeProperties: Whistler28Property[] = [
     name: "Symphony - Walk to village & slopes - Luxury 4-bed",
     description:
       "A three-level Symphony townhome-style retreat with a king primary bedroom, four beds, three bathrooms, a shared hot tub, private exterior entrance, and excellent Village walkability.",
-    image: "/photos/properties/Northlands Symphony 29/01 - 20251128 A7M4 02 A1_02882_.jpg",
+    image: "/photos/properties/Northlands Symphony 29/Symphony snow 3.jpg",
     listingHref: "/listings/northlands-walk-to-village-slopes-luxury-4-bed",
     bookUrl:
       "https://www.airbnb.ca/rooms/1566952897757488737?guests=1&adults=1&s=67&unique_share_id=70d8a9c5-be29-49cb-a1de-03c1e0ec667b",

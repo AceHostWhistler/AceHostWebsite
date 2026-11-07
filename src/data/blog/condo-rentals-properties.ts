@@ -253,7 +253,7 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
       "https://www.airbnb.ca/rooms/1566952897757488737?guests=1&adults=1&s=67&unique_share_id=70d8a9c5-be29-49cb-a1de-03c1e0ec667b",
     listingHref: "/listings/northlands-walk-to-village-slopes-luxury-4-bed",
     imageSrc:
-      "/photos/properties/Northlands Symphony 29/01 - 20251128 A7M4 02 A1_02882_.jpg",
+      "/photos/properties/Northlands Symphony 29/Symphony snow 3.jpg",
     imageAlt: "Northlands Symphony luxury 4-bed village condo walk to slopes",
   },
   {

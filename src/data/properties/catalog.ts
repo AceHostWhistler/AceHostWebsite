@@ -15,6 +15,7 @@ import {
   ALPINE_ESCAPE_AIRBNB_LINK,
   ALPINE_ESCAPE_COVER,
 } from "../listings/meta/alpine-escape-ski-in-out-whistler-village";
+import { NORTHLANDS_SYMPHONY_COVER } from "../listings/meta/northlands-walk-to-village-slopes-luxury-4-bed";
 
 export interface PropertyFeature {
   id: string;
@@ -1977,9 +1978,9 @@ export const propertyCategories: PropertyCategory[] = [
             id: "northlands-walk-to-village-slopes-luxury-4-bed",
             name: "Symphony - Walk to village & slopes - Luxury 4-bed",
             images: [
-              "/photos/properties/Northlands Symphony 29/01 - 20251128 A7M4 02 A1_02882_.jpg",
-              "/photos/properties/Northlands Symphony 29/02 - 20251128 A7M4 02 A1_02752.jpg",
-              "/photos/properties/Northlands Symphony 29/03 - 20251128 A7M4 02 A1_02760.jpg"
+              NORTHLANDS_SYMPHONY_COVER,
+              "/photos/properties/Northlands Symphony 29/Symphony snow 5.jpg",
+              "/photos/properties/Northlands Symphony 29/Symphony snow 6.jpg",
             ],
             guests: 6,
             bedrooms: 2,
