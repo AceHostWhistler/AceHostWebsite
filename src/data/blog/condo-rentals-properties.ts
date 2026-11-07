@@ -292,11 +292,11 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     name: "Cozy Lakefront Whistler Condo | Mountain View",
     priceRange: "$250-$800 Summer | $500-$1,300 Winter (seasonal)",
     stats:
-      "Sleeps 7 | 2 Bedrooms | 5 Beds | 2 Bathrooms | Lakefront Views | Nicklaus North | 7 Min to Village",
+      "Sleeps 7 | 2 Bedrooms | 5 Beds | 2 Bathrooms | Green Lake Views | Nicklaus North | 5 to 7 Min to Village",
     paragraphs: [
-      "This top-floor Nicklaus North condo pairs vaulted ceilings and lakefront views with a 200 sq ft private patio – a peaceful alternative to staying in the Village core. Recently updated with modern décor, every bedroom frames Green Lake and the surrounding peaks.",
-      "Cross-country skiing, biking, and lakeside walks start right outside your door, while Table 19 serves fondue and après just steps away. In summer, golf the Nicklaus North course; in winter, you're only a seven-minute drive from Whistler Village and the lifts.",
-      "Perfect for couples, small families, or remote-work trips who want scenery, space, and value without sacrificing access to Whistler's main attractions.",
+      "Wake up to Green Lake and mountain views from this stylish top-floor 2BR/2BA retreat at prestigious Nicklaus North. Sleeping 7, the home features high ceilings, a fireplace, full kitchen and a 200 sq. ft. patio overlooking the golf course.",
+      "Table Nineteen is just downstairs, with golf and the Valley Trail outside your door. Whistler Village and the gondolas are a 5 to 7-minute drive from the quieter north side, so you avoid the heavier Creekside-to-Village traffic. Free underground parking is included, with additional outdoor parking normally available.",
+      "Choose Nicklaus North when you want Green Lake views, golf-course access and a quieter stay, without giving up a short drive to the Village and gondolas.",
     ],
     airbnbHref:
       "https://www.airbnb.ca/rooms/1305524887656641858?guests=1&adults=1&s=67&unique_share_id=23663c37-e33a-445b-a53c-6f927f30d084",

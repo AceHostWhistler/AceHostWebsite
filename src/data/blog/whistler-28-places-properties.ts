@@ -248,7 +248,7 @@ export const townhomeProperties: Whistler28Property[] = [
     number: 23,
     name: "Cozy Lakefront Whistler Condo | Mountain View",
     description:
-      "A peaceful two-bedroom lakefront condo with mountain views and easy access to golf, trails, restaurants, and ski areas.",
+      "A top-floor 2-bedroom Nicklaus North condo on Green Lake, with a 200 sq. ft. patio, fireplace, Table Nineteen downstairs, free underground parking, and a 5 to 7-minute drive to Whistler Village.",
     image: "/photos/properties/Nick North 2-Bed/01 - 20251006 A7M4 03 A1_03279-Edit.jpg",
     listingHref: "/listings/cozy-lakefront-whistler-condo-mountain-view",
     bookUrl:

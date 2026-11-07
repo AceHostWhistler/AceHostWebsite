@@ -55,12 +55,12 @@ export const listingAmenities: Record<string, string[]> = {
     "Sonos sound throughout",
   ],
   "cozy-lakefront-whistler-condo-mountain-view": [
-    "Lakefront Nicklaus North setting",
-    "Mountain & lake views",
-    "Top-floor 2 bed + sofa bed",
-    "Golf course access",
-    "7-minute drive to Whistler Village",
-    "Modern renovated interiors",
+    "On Green Lake at Nicklaus North",
+    "Top-floor views with patio and fireplace",
+    "Table Nineteen downstairs",
+    "Free underground parking",
+    "5 to 7 min drive to Village",
+    "Portable A/C May 15 to Oct 15",
   ],
   "cascade-lodge-615-premium-view": [
     "Premium forest & mountain views",

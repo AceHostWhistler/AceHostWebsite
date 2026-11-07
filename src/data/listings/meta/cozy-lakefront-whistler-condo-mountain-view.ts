@@ -32,8 +32,9 @@ const listing: ListingData = {
   "/photos/properties/Nick North 2-Bed/27 - 20251006 A7M4 03 A1_03433.jpg"
 ],
   seo: {
-    title: "\n          Cozy Lakefront Whistler Condo | Mountain View - AceHost\n        ",
-    description: "Stylish Whistler Condo at prestigious Nicklaus North with breathtaking views! Top floor 1000 sqft 2BR/2BA with vaulted ceilings. Just updated with modern décor. Each bedroom with lakefront and mountain views.",
+    title: "Cozy Lakefront Whistler Condo | Mountain View - AceHost",
+    description:
+      "Wake up to Green Lake and mountain views from this stylish top-floor 2BR/2BA retreat at prestigious Nicklaus North. Sleeping 7, the home features high ceilings, a fireplace, full kitchen and 200 sq. ft. patio overlooking the golf course.",
   },
   header:   {
       "title": "Cozy Lakefront Whistler Condo | Mountain View",
