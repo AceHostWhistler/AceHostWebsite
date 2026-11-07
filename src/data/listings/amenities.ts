@@ -319,6 +319,14 @@ export const listingAmenities: Record<string, string[]> = {
     "Central air conditioning",
     "AceHost VIP concierge",
   ],
+  "alpine-escape-ski-in-out-whistler-village": [
+    "Ski-in/ski-out, 150 to 200 metres",
+    "Both gondolas under 5 minutes",
+    "Between Village and Upper Village",
+    "Wood-burning fireplace",
+    "Dining table seats 10",
+    "3 bed · 2 bath · parking",
+  ],
   "valhalla-unit-33-village": [
     "Village North, walk to lifts",
     "Private balcony hot tub",

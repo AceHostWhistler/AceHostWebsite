@@ -11,6 +11,10 @@ import {
   WOODRUN_2_BED_COVER,
   WOODRUN_2_BED_PHOTOS,
 } from "../listings/woodrun2BedPhotos";
+import {
+  ALPINE_ESCAPE_AIRBNB_LINK,
+  ALPINE_ESCAPE_COVER,
+} from "../listings/meta/alpine-escape-ski-in-out-whistler-village";
 
 export interface PropertyFeature {
   id: string;
@@ -50,6 +54,7 @@ export const TOWNHOME_IDS = new Set([
   "luxe-5-bed-scandinave-retreat",
   "northlands-walk-to-village-slopes-luxury-4-bed",
   "pinnacle-ridge-23",
+  "alpine-escape-ski-in-out-whistler-village",
 ]);
 
 export const CONDO_IDS = new Set([
@@ -946,6 +951,45 @@ export const propertyCategories: PropertyCategory[] = [
             holidayPrice: "$2,500-$3,750 Nightly | Christmas & NY",
             link: "/listings/woodrun-2-bed",
             airbnbLink: WOODRUN_2_BED_AIRBNB_LINK,
+            isPetFriendly: false,
+            isSkiInSkiOut: true,
+          },
+
+          {
+            id: "alpine-escape-ski-in-out-whistler-village",
+            name: "Alpine Escape | Ski-In/Out | Whistler Village",
+            images: [
+              ALPINE_ESCAPE_COVER,
+              "/photos/properties/Gables 11 Thi/Gables snow edit 2.jpg",
+              "/photos/properties/Gables 11 Thi/Gables snow edit 6.jpg",
+            ],
+            guests: 8,
+            bedrooms: 3,
+            bathrooms: 2,
+            beds: 5,
+            location: "Whistler Village, Whistler",
+            description:
+              "Stay in one of Whistler's rarest locations, perfectly positioned between Whistler Village and the Upper Village, with ski-in/ski-out access and both gondolas less than a 5-minute walk away. This charming 3-bedroom, 2-bath chalet-style retreat features vaulted ceilings, a wood-burning fireplace, 2 King bedrooms, a bunk room, a spacious dining area and secure underground parking. Ski, dine, shop and enjoy après without needing your car.",
+            features: [
+              "Ski-in/Ski-out, 150 to 200 metres",
+              "Both Gondolas Under 5 Minutes",
+              "Between Village and Upper Village",
+              "Wood-Burning Fireplace",
+              "Dining Table Seats 10",
+              "2 King Bedrooms and a Bunk Room",
+              "Secure Underground Parking",
+              "Valley Trail Beside the Complex",
+            ],
+            highlights: [
+              "The Gables, Fitzsimmons Creek",
+              "Sleeps 8",
+              "Walk to both mountain bases",
+              "Chalet-style townhouse",
+            ],
+            priceRange: "$575-$3,450 per night",
+            holidayPrice: "$2,875-$4,313 Nightly | Christmas & NY",
+            link: "/listings/alpine-escape-ski-in-out-whistler-village",
+            airbnbLink: ALPINE_ESCAPE_AIRBNB_LINK,
             isPetFriendly: false,
             isSkiInSkiOut: true,
           },

@@ -109,6 +109,22 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     imageAlt: "Woodrun Lodge ski-in ski-out penthouse on Blackcomb Mountain",
   },
   {
+    name: "Alpine Escape | Ski-In/Out | Whistler Village",
+    priceRange: "$575-$3,450 per night (seasonal)",
+    stats:
+      "Sleeps 8 | 3 Bedrooms | 5 Beds | 2 Baths | Ski-in/ski-out | Both gondolas under 5 minutes | The Gables",
+    paragraphs: [
+      "Stay in one of Whistler's rarest locations at Gables 11, perfectly positioned between Whistler Village and the Upper Village. Ski-in/ski-out access is about 150 to 200 metres from the complex, and both gondolas are less than a 5-minute walk away.",
+      "This 3-bedroom, 2-bath chalet-style retreat has vaulted ceilings, a wood-burning fireplace, 2 King bedrooms, a bunk room, a dining table for 10, and secure underground parking. Sleeps 8 with a living-room sofa bed.",
+      "Walk to the Upper Village, Fairmont, Four Seasons, and the main Village Stroll without needing a car. The Valley Trail runs beside the complex for summer biking, Lost Lake, and Village patios.",
+    ],
+    airbnbHref:
+      "https://www.airbnb.ca/rooms/1803047052383490890?guests=1&adults=1&s=67&unique_share_id=a96591df-1eb8-4d11-b26f-6f279e07d0cd",
+    listingHref: "/listings/alpine-escape-ski-in-out-whistler-village",
+    imageSrc: "/photos/properties/Gables 11 Thi/Gables snow edit 3.jpg",
+    imageAlt: "Gables 11 Alpine Escape dining and living room with snowy Village views",
+  },
+  {
     name: "Pinnacle Ridge 23 | Ski-In/Out | Hot Tub | Village",
     priceRange: "$1,365-$3,675+ per night (seasonal)",
     stats:

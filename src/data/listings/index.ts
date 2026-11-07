@@ -2,6 +2,8 @@ import CascadeLodge514LuxeMountainViewStudioDetails from "./details/cascade-lodg
 import cascade_lodge_514_luxe_mountain_view_studioMeta from "./meta/cascade-lodge-514-luxe-mountain-view-studio";
 import CascadeLodge615PremiumViewDetails from "./details/cascade-lodge-615-premium-view";
 import cascade_lodge_615_premium_viewMeta from "./meta/cascade-lodge-615-premium-view";
+import AlpineEscapeSkiInOutWhistlerVillageDetails from "./details/alpine-escape-ski-in-out-whistler-village";
+import alpine_escape_ski_in_out_whistler_villageMeta from "./meta/alpine-escape-ski-in-out-whistler-village";
 import BluffsUnit4TaluswoodDetails from "./details/bluffs-unit-4-taluswood";
 import bluffs_unit_4_taluswoodMeta from "./meta/bluffs-unit-4-taluswood";
 import BluffsUnit8TaluswoodDetails from "./details/bluffs-unit-8-taluswood";
@@ -80,6 +82,7 @@ import { getListingAmenities } from "./amenities";
 import { filterListingPhotos } from "@/lib/optimizedPropertyPhotos";
 
 export const listingSlugs = [
+  "alpine-escape-ski-in-out-whistler-village",
   "bluffs-unit-4-taluswood",
   "bluffs-unit-8-taluswood",
   "cascade-lodge-514-luxe-mountain-view-studio",
@@ -123,6 +126,7 @@ export const listingSlugs = [
 export type ListingSlug = (typeof listingSlugs)[number];
 
 export const listings: Record<string, ListingEntry> = {
+  "alpine-escape-ski-in-out-whistler-village": { ...alpine_escape_ski_in_out_whistler_villageMeta, Details: AlpineEscapeSkiInOutWhistlerVillageDetails },
   "bluffs-unit-4-taluswood": { ...bluffs_unit_4_taluswoodMeta, Details: BluffsUnit4TaluswoodDetails },
   "bluffs-unit-8-taluswood": { ...bluffs_unit_8_taluswoodMeta, Details: BluffsUnit8TaluswoodDetails },
   "cascade-lodge-514-luxe-mountain-view-studio": { ...cascade_lodge_514_luxe_mountain_view_studioMeta, Details: CascadeLodge514LuxeMountainViewStudioDetails },

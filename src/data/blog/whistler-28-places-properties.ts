@@ -324,6 +324,16 @@ export const townhomeProperties: Whistler28Property[] = [
     bookUrl:
       "https://www.airbnb.ca/rooms/1776955453586628651?guests=1&adults=1&s=67&unique_share_id=d783b88f-c389-425b-9d1e-371e0ddde809",
   },
+  {
+    number: 31,
+    name: "Alpine Escape | Ski-In/Out | Whistler Village",
+    description:
+      "A 3-bedroom Gables townhome between Whistler Village and the Upper Village, with ski-in/ski-out access about 150 to 200 metres away, both gondolas under 5 minutes, a wood-burning fireplace, dining for 10, and underground parking.",
+    image: "/photos/properties/Gables 11 Thi/Gables snow edit 3.jpg",
+    listingHref: "/listings/alpine-escape-ski-in-out-whistler-village",
+    bookUrl:
+      "https://www.airbnb.ca/rooms/1803047052383490890?guests=1&adults=1&s=67&unique_share_id=a96591df-1eb8-4d11-b26f-6f279e07d0cd",
+  },
 ];
 
 export const allWhistler28Properties: Whistler28Property[] = [
