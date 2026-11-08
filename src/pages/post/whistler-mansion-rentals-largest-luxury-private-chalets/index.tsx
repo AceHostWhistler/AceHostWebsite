@@ -518,9 +518,9 @@ export default function BlogPost() {
                 The house feels warm and livable despite its size. Curated artwork,
                 elegant furnishings, multiple lounge spaces, a recreation room, ping
                 pong, outdoor dining and a private hot tub give guests plenty to
-                enjoy without leaving the property. The dining area can be extended
-                so a group of up to 16 can sit together for family dinners or a
-                private-chef evening.
+                enjoy without leaving the property. The dining table comfortably
+                seats 10, with an extension leaf and 4 extra chairs for 14+ guests,
+                plus a spare table extension so up to 16 can dine in the same room.
               </p>
               <p>
                 Two bedrooms, including the primary suite, are located on the main

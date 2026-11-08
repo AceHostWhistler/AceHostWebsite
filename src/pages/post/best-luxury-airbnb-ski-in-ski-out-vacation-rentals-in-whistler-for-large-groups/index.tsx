@@ -330,7 +330,8 @@ export default function BlogPost() {
               </p>
               <p>
                 This home has that classic luxury Whistler feel: lots of room, a premium Kadenwood setting, and
-                a layout that works well for longer stays. Add ski-in/ski-out access, the private
+                a layout that works well for longer stays. The dining table seats 10 as standard, extends for 14+
+                guests, and a spare table extension allows up to 16 to dine together. Add ski-in/ski-out access, the private
                 residents-only gondola, and a private hot tub, and it is easy to see why larger groups would love it.
               </p>
               <p>

@@ -115,7 +115,7 @@ export const MANSION_RENTAL_PROPERTIES: MansionRentalProperty[] = [
     area: "Kadenwood",
     bedrooms: 8,
     guests: 16,
-    standout: "Private gondola access, hot tub, sauna, central air conditioning and multiple lounges",
+    standout: "Private gondola access, hot tub, sauna, dining table for 14+ (up to 16) and multiple lounges",
     headline: true,
     images: [
       {

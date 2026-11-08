@@ -593,12 +593,13 @@ export const propertyCategories: PropertyCategory[] = [
             bathrooms: 6.5,
             location: "Kadenwood, Whistler",
             description:
-              "Wake up to sweeping mountain views at TimberVue, your private 8-bedroom Kadenwood estate. Enjoy ski-in/ski-out access, a private hot tub, access to Kadenwood's private gondola, and beautifully furnished spaces for gathering or unwinding. Multiple lounges, ping pong, outdoor dining, and a generous three-level layout make it an exceptional Whistler escape for families and friends, with room to come together and space to make the stay your own.",
+              "Wake up to sweeping mountain views at TimberVue, your private 8-bedroom Kadenwood estate. Enjoy ski-in/ski-out access, a private hot tub, access to Kadenwood's private gondola, and beautifully furnished spaces for gathering or unwinding. Multiple lounges, ping pong, outdoor dining, and a generous three-level layout make it an exceptional Whistler escape for families and friends, with room to come together and space to make the stay your own. The dining table comfortably seats 10 guests with the standard chair setup. An extension leaf and 4 additional chairs are available and ready to use, allowing the table to accommodate 14+ guests comfortably. For larger groups, a spare dining table extension allows up to 16 guests to dine in the same room.",
             features: [
               "Ski-in/Ski-out Access",
               "Private Residents-Only Gondola",
               "Private Hot Tub",
               "Private Sauna",
+              "Dining Table for 14+, up to 16",
               "Central Air Conditioning",
               "Gas Fireplace",
               "Fire Pit",
@@ -610,6 +611,7 @@ export const propertyCategories: PropertyCategory[] = [
             ],
             highlights: [
               "Main-Floor Primary Suite",
+              "Dining table for 14+, up to 16",
               "Step-Free Mid-Level Access",
               "Ideal for Large Families & Groups",
               "Mountain Views",
