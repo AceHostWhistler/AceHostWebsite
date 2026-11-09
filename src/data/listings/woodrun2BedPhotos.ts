@@ -26,7 +26,7 @@ export const WOODRUN_2_BED_PHOTOS: string[] = [
   `${D}/Woodrun_Unit_Ski_Access_Labeled.jpg`,
   `${D}/41 - 20261009 MM4P 02 0360 winter.jpg`,
   `${D}/01 - 20261008 A7M3 04 A1_00668.jpg`,
-  `${D}/08 - 20261008 A7M3 04 A1_00495.jpg`,
+  `${D}/New TV woodrun.jpg`,
   `${D}/09 - 20261008 A7M3 04 A1_00524.jpg`,
   `${D}/10 - 20261008 A7M3 04 A1_00625.jpg`,
   `${D}/14 - 20261008 A7M3 04 A1_00618.jpg`,
