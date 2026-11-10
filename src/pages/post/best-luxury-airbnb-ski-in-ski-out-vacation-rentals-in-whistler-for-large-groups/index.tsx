@@ -737,8 +737,9 @@ export default function BlogPost() {
               </div>
               <p>
                 This is another really solid choice for large groups who want a spacious Whistler
-                Airbnb without jumping into the very biggest estate category. It sleeps up to 15
-                guests with 6 bedrooms, 10 beds, and 3 bathrooms.
+                Airbnb without jumping into the very biggest estate category. It sleeps 12
+                guests with 6 bedrooms, 10 beds, and 3 bathrooms. Bathroom renovation completed
+                November 22, 2026, with new RH vanities and glass instead of curtains.
               </p>
               <p>
                 It is practical, comfortable, and easy for family trips. Six bedrooms give everyone

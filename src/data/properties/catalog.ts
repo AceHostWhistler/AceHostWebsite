@@ -810,9 +810,9 @@ export const propertyCategories: PropertyCategory[] = [
             bathrooms: 3,
             location: "Blueberry Hill, Whistler",
             description:
-              "Welcome to this beautifully renovated 6-bedroom retreat in Whistler’s peaceful Blueberry Hill neighbourhood. Designed with Restoration Hardware and Rove Concepts furnishings, the home sleeps 12 across 10 beds and offers forest views, premium Puffy mattresses, ski and bike storage, summer A/C, and free EV charging. Whistler Village, the ski lifts and nearby lakes are only a 3–4 minute drive away, combining a quiet residential setting with exceptionally convenient access for families and groups.",
+              "Welcome to this beautifully renovated 6-bedroom retreat in Whistler's peaceful Blueberry Hill neighbourhood. Designed with Restoration Hardware and Rove Concepts furnishings, the home sleeps 12 across 10 beds and offers forest views, premium Puffy mattresses, ski and bike storage, summer A/C, and free EV charging. Whistler Village, the ski lifts and nearby lakes are only a 3 to 4 minute drive away, combining a quiet residential setting with exceptionally convenient access for families and groups.",
             features: [
-              "Newly Renovated",
+              "Newly Renovated Bathrooms",
               "Forest Views",
               "Summer Air Conditioning",
               "Luxury Mattresses",
@@ -824,9 +824,10 @@ export const propertyCategories: PropertyCategory[] = [
             ],
             highlights: [
               "Prestigious Blueberry Hill Location",
+              "Newly renovated bathrooms",
               "Restoration Hardware Furnishings",
               "10 Beds for 12 Guests",
-              "3-4 Min Drive to Village",
+              "3 to 4 Min Drive to Village",
             ],
             priceRange: "$750-1800 per night Summer",
             winterPrice: "$1200-2600 Nightly | Winter",

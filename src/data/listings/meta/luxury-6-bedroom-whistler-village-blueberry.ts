@@ -65,7 +65,8 @@ const listing: ListingData = {
   ],
   seo: {
     title: "Luxury 6-Bedroom - Whistler Village - Blueberry",
-    description: "Welcome to this beautifully renovated 6-bedroom retreat in Whistler’s peaceful Blueberry Hill neighbourhood. Designed with Restoration Hardware and Rove Concepts furnishings, the home sleeps 12 across 10 beds and offers forest views, premium Puffy mattresses, ski and bike storage, summer A/C, and free EV charging. Whistler Village, the ski lifts and nearby lakes are only a 3–4 minute drive away, combining a quiet residential setting with exceptionally convenient access for families and groups.",
+    description:
+      "Welcome to this beautifully renovated 6-bedroom retreat in Whistler's peaceful Blueberry Hill neighbourhood. Designed with Restoration Hardware and Rove Concepts furnishings, the home sleeps 12 across 10 beds and offers forest views, premium Puffy mattresses, ski and bike storage, summer A/C, and free EV charging. Whistler Village, the ski lifts and nearby lakes are only a 3 to 4 minute drive away, combining a quiet residential setting with exceptionally convenient access for families and groups.",
   },
   header:   {
       "title": "Luxury 6-Bedroom - Whistler Village - Blueberry",

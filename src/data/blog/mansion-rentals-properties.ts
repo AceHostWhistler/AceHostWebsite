@@ -165,7 +165,7 @@ export const MANSION_RENTAL_PROPERTIES: MansionRentalProperty[] = [
     area: "Blueberry",
     bedrooms: 6,
     guests: 12,
-    standout: "Ten beds, premium furnishings, ski storage and EV parking",
+    standout: "Ten beds, newly renovated bathrooms, ski storage and EV parking",
     images: [
       {
         src: "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Cover Blueberry 306 snow.png",

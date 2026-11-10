@@ -179,9 +179,9 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     stats:
       "Sleeps 12 | 6 Bedrooms | 10 Beds | 3 Bathrooms | Blueberry Hill | EV Charging | Forest Views | Summer A/C",
     paragraphs: [
-      "When your group outgrows a typical condo but still wants the convenience of a professionally managed rental, this newly renovated six-bedroom Ravencrest home on Blueberry Hill is the answer. Sleeping 12 guests across 10 beds, it delivers serious space without sacrificing the polished, move-in-ready feel AceHost is known for.",
-      "Restoration Hardware and Rove Concepts furnishings set a refined tone throughout, while a brand-new BBQ, ski and bike storage, high-speed WiFi, and smart TVs make everyday Whistler logistics effortless. Forest views and a short drive to the Village give you privacy with quick access to slopes, dining, and nightlife.",
-      "For multi-family trips, ski-week reunions, or corporate retreats that need multiple bedrooms under one roof, this Blueberry standout offers one of the largest condo-style layouts in the AceHost collection – all bookable on Airbnb with AceHost support from inquiry to checkout.",
+      "Welcome to this beautifully renovated 6-bedroom retreat in Whistler's peaceful Blueberry Hill neighbourhood. Designed with Restoration Hardware and Rove Concepts furnishings, the home sleeps 12 across 10 beds and offers forest views, premium Puffy mattresses, ski and bike storage, summer A/C, and free EV charging.",
+      "Whistler Village, the ski lifts and nearby lakes are only a 3 to 4 minute drive away. Bathroom renovation completed November 22, 2026, with new RH vanities and glass instead of curtains. Two garage parking spots (a rare find), free Level 2 EV charging, and a shuttle out front every 15 minutes keep the stay practical.",
+      "Choose Blueberry 306 when your group wants six bedrooms and a quieter residential setting, with the Village and gondolas still just a few minutes away.",
     ],
     airbnbHref:
       "https://www.airbnb.ca/rooms/1551638001847968788?guests=1&adults=1&s=67&unique_share_id=ff68258e-d89f-4493-8e79-fd85820e6872",
