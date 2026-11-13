@@ -286,7 +286,7 @@ export const allArticles: Article[] = [
     readTime: "12 min read",
     link: "/post/self-managing-vs-hiring-a-whistler-property-manager-what-owners-need-to-know",
     coverImage:
-      "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Cover Blueberry 306 snow.png",
+      "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry new reno living room snow 1.jpg",
     publishedAt: "2026-04-23T21:00:00.000Z",
   },
   {

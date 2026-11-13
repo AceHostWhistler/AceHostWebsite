@@ -15,7 +15,7 @@ const CANONICAL_URL = `https://www.acehost.ca/post/${SLUG}`;
 const HERO =
   "/photos/properties/3445-Heron-Place/Heron new cover phto snow light.png";
 const SUPPORTING_IMAGE =
-  "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Living blueberry 306.png";
+  "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry new reno living room snow 2.jpg";
 const HERO_URL = `https://www.acehost.ca${encodeURI(HERO)}`;
 const PUBLISH_DATE = "August 1, 2026";
 const ISO_MOD = "2026-08-01T10:00:00-07:00";

@@ -704,23 +704,23 @@ export default function BlogPost() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 not-prose">
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Cover Blueberry 306 snow.png"
-                    alt="Luxury 6-bedroom Blueberry home exterior"
+                    src="/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry new reno living room snow 1.jpg"
+                    alt="Luxury 6-bedroom Blueberry dining and living room in snow"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Living blueberry 306.png"
-                    alt="Luxury 6-bedroom Blueberry home exterior in snow"
+                    src="/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry new reno living room snow 2.jpg"
+                    alt="Luxury 6-bedroom Blueberry living room fireplace and snow views"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry 306 Snow 7.png"
+                    src="/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry 306 bedroom snow.jpg"
                     alt="Luxury 6-bedroom primary suite"
                     fill
                     className="object-cover"
@@ -728,7 +728,7 @@ export default function BlogPost() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry 306 Snow 10.png"
+                    src="/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry new reno living room snow 5.jpg"
                     alt="Luxury 6-bedroom kitchen and dining space"
                     fill
                     className="object-cover"

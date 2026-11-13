@@ -16,6 +16,10 @@ import {
   ALPINE_ESCAPE_COVER,
 } from "../listings/meta/alpine-escape-ski-in-out-whistler-village";
 import { NORTHLANDS_SYMPHONY_COVER } from "../listings/meta/northlands-walk-to-village-slopes-luxury-4-bed";
+import {
+  BLUEBERRY_306_COVER,
+  BLUEBERRY_306_PHOTOS,
+} from "../listings/meta/luxury-6-bedroom-whistler-village-blueberry";
 
 export interface PropertyFeature {
   id: string;
@@ -789,20 +793,8 @@ export const propertyCategories: PropertyCategory[] = [
             id: "luxury-6-bedroom-blueberry",
             name: "Luxury 6-Bedroom - Whistler Village - Blueberry",
             images: [
-              "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Cover Blueberry 306 snow.png",
-              "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Living blueberry 306.png",
-              "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry 306 Snow 5.png",
-              "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry 306 bedroom snow.jpg",
-              "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry 306 Snow 7.png",
-              "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry 306 Snow 8.png",
-              "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry 306 Snow 9.png",
-              "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry 306 Snow 10.png",
-              "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry 306 Snow 11.png",
-              "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry 306 Snow 12.png",
-              "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry balcony shot.png",
-              "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Deck snow shot blueberry.png",
-              "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Raven_Crest_snow_drone_cleaned.jpg",
-              "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Raven_Crest_snow_drone_1_cleaned.jpg"
+              BLUEBERRY_306_COVER,
+              ...BLUEBERRY_306_PHOTOS.filter((src) => src !== BLUEBERRY_306_COVER),
             ],
             guests: 12,
             bedrooms: 6,
