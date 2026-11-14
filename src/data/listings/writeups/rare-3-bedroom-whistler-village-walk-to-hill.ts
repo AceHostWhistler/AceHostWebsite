@@ -68,7 +68,7 @@ const rare3BedVillageWriteup: ListingWriteupContent = {
           },
           {
             name: "Bedroom 2",
-            details: "King bed.",
+            details: "Queen bed.",
           },
           {
             name: "Bedroom 3",
