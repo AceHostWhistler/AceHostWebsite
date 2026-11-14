@@ -85,9 +85,9 @@ export const FEATURED_PROPERTIES = [
       "Renovated Tyndall Stone Lodge condo overlooking Olympic Plaza in Whistler Village",
     caption: "Tyndall Stone Lodge overlooks Olympic Plaza in the main Village.",
     summary:
-      "A Village stay for guests who want restaurants, cafes and shops outside the door. It is listed as 2.5 bedrooms: two enclosed bedrooms plus a queen pullout in the living room, not three enclosed bedrooms. Gondolas are an easy walk or a free shuttle ride.",
+      "A Village stay for guests who want restaurants, cafes and shops outside the door. It is listed as 2.5 bedrooms: two enclosed bedrooms (king in the master, two singles in bedroom 2) plus a queen pullout in the living room, not three enclosed bedrooms. Gondolas are an easy walk or a free shuttle ride.",
     features: [
-      "Sleeps 6, with in-suite laundry and A/C",
+      "Sleeps 6, with a king bed, in-suite laundry and A/C",
       "Shared outdoor pool and hot tub",
       "One guaranteed underground parking space",
     ],

@@ -216,7 +216,7 @@ export const townhomeProperties: Whistler28Property[] = [
     number: 20,
     name: "Tyndall - Luxe 2 bedroom, Main Whistler Village",
     description:
-      "Freshly renovated Tyndall Stone Lodge retreat overlooking Olympic Plaza with A/C, in-suite laundry, pool, hot tub, and guaranteed parking.",
+      "Freshly renovated Tyndall Stone Lodge retreat overlooking Olympic Plaza, with a king bed in the master, A/C, in-suite laundry, pool, hot tub, and guaranteed parking.",
     image:
       "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Whistler Village Views Cover.jpg",
     listingHref: "/listings/whistler-village-views-luxury-2-5-bedroom",

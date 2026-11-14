@@ -382,6 +382,7 @@ export const listingAmenities: Record<string, string[]> = {
   "whistler-village-views-luxury-2-5-bedroom": [
     "Tyndall Stone Lodge · Village North",
     "Olympic Plaza views",
+    "King bed in the master",
     "Walk to gondolas",
     "A/C & in-suite laundry",
     "Pool & hot tub access",

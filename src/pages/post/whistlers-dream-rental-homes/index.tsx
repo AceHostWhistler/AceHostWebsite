@@ -619,7 +619,7 @@ export default function BlogPost() {
               </p>
 
               <p className="mt-4">
-                The master bedroom has a queen bed, the second bedroom has 2
+                The master bedroom has a king bed, the second bedroom has 2
                 single beds and a queen sofa bed. The kitchen is fully equipped
                 and there is a washing machine and dryer in the suite. The
                 complex also has a dip pool and hot tub. The property has

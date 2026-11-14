@@ -15,6 +15,7 @@ const tyndallStoneWriteup: ListingWriteupContent = {
     ],
     highlights: [
       "Olympic Plaza views",
+      "King bed in the master",
       "Freshly renovated",
       "Shared pool and hot tub",
       "A/C",
@@ -49,6 +50,8 @@ const tyndallStoneWriteup: ListingWriteupContent = {
       "Fresh St. Market, Whistler's largest full-service grocery store, is only moments away, making it exceptionally easy to stock the kitchen or grab anything you need during your stay. Once you arrive, most guests can park the car and explore Whistler almost entirely on foot.",
       "Guests have access to Tyndall Stone Lodge's shared outdoor pool and hot tub. After a day skiing, biking or hiking, head downstairs for a soak before walking out into the Village for dinner or drinks.",
       "One designated underground parking space is reserved and guaranteed with every stay. For a property this central in Whistler Village, having guaranteed secure parking is an especially valuable convenience. Limited visitor parking may also be available on a first-come basis.",
+      "Tyndall Stone Lodge sits directly beside Whistler Olympic Plaza in Village North, one of the most walkable and convenient locations in Whistler. Olympic Plaza is immediately outside, home to the Olympic Rings, open green space, a children's playground, seasonal skating and many of Whistler's year-round events and concerts. The pedestrian Village Stroll begins nearby, connecting you with restaurants, cafés, shops, après-ski and nightlife.",
+      "In summer, the location provides easy access to walking and biking routes, parks, lakes and Village events. It is an ideal base for guests who want to experience Whistler without having to rely on a car.",
     ],
   },
   bedrooms: {
@@ -60,8 +63,8 @@ const tyndallStoneWriteup: ListingWriteupContent = {
         hideLabel: true,
         bedrooms: [
           {
-            name: "Primary bedroom",
-            details: "Queen bed with views toward Whistler Olympic Plaza.",
+            name: "Master Bedroom",
+            details: "King bed with views toward Whistler Olympic Plaza.",
           },
           {
             name: "Bedroom 2",

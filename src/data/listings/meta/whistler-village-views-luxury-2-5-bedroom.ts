@@ -22,7 +22,7 @@ const listing: ListingData = {
   ],
   seo: {
     title: "Tyndall - Luxe 2 bedroom, Main Whistler Village - AceHost",
-    description: "Freshly renovated 2.5-bedroom Tyndall Stone Lodge retreat overlooking Olympic Plaza. A/C, in-suite laundry, pool and hot tub, guaranteed underground parking, and walk to gondolas.",
+    description: "Freshly renovated 2.5-bedroom Tyndall Stone Lodge retreat overlooking Olympic Plaza. King bed in the master, A/C, in-suite laundry, pool and hot tub, guaranteed underground parking, and walk to gondolas.",
   },
   header:   {
       "title": "Tyndall - Luxe 2 bedroom, Main Whistler Village",

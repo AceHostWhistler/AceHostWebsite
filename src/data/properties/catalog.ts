@@ -1458,9 +1458,10 @@ export const propertyCategories: PropertyCategory[] = [
             beds: 4,
             location: "Main Whistler Village",
             description:
-              "Freshly renovated 2.5-bedroom Tyndall Stone Lodge retreat overlooking Olympic Plaza. A/C, in-suite laundry, pool and hot tub, guaranteed underground parking, and walk to gondolas.",
+              "Freshly renovated 2.5-bedroom Tyndall Stone Lodge retreat overlooking Olympic Plaza. King bed in the master, A/C, in-suite laundry, pool and hot tub, guaranteed underground parking, and walk to gondolas.",
             features: [
               "Olympic Plaza Views",
+              "King Bed in the Master",
               "Heart of Whistler Village",
               "Walk to Gondolas",
               "A/C & In-Suite Laundry",

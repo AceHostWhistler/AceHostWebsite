@@ -35,7 +35,7 @@ export const CONDO_RENTAL_PROPERTIES: CondoRentalProperty[] = [
     paragraphs: [
       "Welcome to this freshly renovated 2.5-bedroom retreat in the heart of Whistler Village, overlooking Olympic Plaza and the surrounding mountains. Sleeping up to 6 guests, the home features two bathrooms, A/C, a full kitchen, in-suite laundry and a cozy living area.",
       "Step outside to restaurants, cafés, shops and après-ski, with Fresh St. Market nearby and the gondolas an easy walk or free shuttle away. Guests also enjoy a shared pool and hot tub, plus one guaranteed underground parking space.",
-      "The primary bedroom offers a queen bed with Olympic Plaza views, bedroom 2 has two singles, and a queen pullout sofa in the living room provides additional sleeping space for up to 6 guests.",
+      "The master bedroom offers a king bed with Olympic Plaza views, bedroom 2 has two singles, and a queen pullout sofa in the living room provides additional sleeping space for up to 6 guests.",
     ],
     airbnbHref:
       "https://www.airbnb.ca/rooms/50025973?guests=1&adults=1&s=67&unique_share_id=04ceb090-1b8e-4e32-972f-d616b380a0a8",
