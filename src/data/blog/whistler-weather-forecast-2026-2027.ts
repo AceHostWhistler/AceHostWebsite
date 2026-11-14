@@ -64,8 +64,8 @@ export const IMAGES = {
     alt: "Snow-covered deck and winter scenery at a Whistler area home",
   },
   graniteCourtWinter: {
-    src: "/photos/properties/John 3-bed Granite Court/01 - 20251125 A7M4 01 A1_02152.jpg",
-    alt: "Fresh snow around a Whistler Granite Court residence in winter",
+    src: "/photos/properties/John 3-bed Granite Court/Granite_snow_reno_edit_1_cleaned.jpg",
+    alt: "Snowy forest views from the renovated Granite Court living room in Whistler Village",
   },
   falconSnowExterior: {
     src: "/photos/properties/Falcon/Outdoor shot falcon zoomed out.webp",

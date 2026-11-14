@@ -154,7 +154,7 @@ const condoTownhomeOptions: FeaturedProperty[] = [
       "/photos/properties/John 3-bed Granite Court/Granite_snow_reno_edit_1_cleaned.jpg",
       "/photos/properties/John 3-bed Granite Court/Granite snow reno edit 9.jpg",
       "/photos/properties/John 3-bed Granite Court/Granite snow reno edit 2.jpg",
-      "/photos/properties/John 3-bed Granite Court/01 - 20251125 A7M4 01 A1_02152.jpg",
+      "/photos/properties/John 3-bed Granite Court/30 - 20251125 A7M4 01 A1_02187.jpg",
     ],
     bookUrl:
       "https://www.airbnb.ca/rooms/1565322561889624431?guests=1&adults=1&s=67&unique_share_id=bcb85131-d1b0-4d39-9975-7580fd94a5d9",

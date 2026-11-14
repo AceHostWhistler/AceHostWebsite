@@ -43,7 +43,6 @@ export const OG_COVER_BY_SOURCE: Record<string, string> = {
   "/photos/properties/Santorini-Greece-Villa-Eclipse/VILLA ECLIPSE(7 of 25).jpg": "/og-covers/VILLA-ECLIPSE-7-of-25-58c8221a.jpg",
   "/photos/properties/Oineas Villa - Greece Mykonos/VILLA OINEAS-06907.jpg": "/og-covers/VILLA-OINEAS-06907-bf8abf7d.jpg",
   "/photos/properties/Helios Estate - Mykonos/01.jpg": "/og-covers/01-a1027865.jpg",
-  "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Drone Blueberry shot.png": "/og-covers/Drone-Blueberry-shot-4b0cf5da.jpg",
   "/photos/properties/Falcon/Falcon Master snow.webp": "/og-covers/Falcon-Master-snow-a3e2ccf9.jpg",
   "/photos/properties/303-Tyndall Lodge/01 - 20260107 A7M4 01 A1_03798.jpg": "/og-covers/01-20260107-A7M4-01-A1-03798-1e4c01cf.jpg",
   "/photos/properties/2919 Heritage/Mountaintop living snow18.png": "/og-covers/Mountaintop-living-snow18-378e567a.jpg",
