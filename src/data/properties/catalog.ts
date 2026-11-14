@@ -20,6 +20,10 @@ import {
   BLUEBERRY_306_COVER,
   BLUEBERRY_306_PHOTOS,
 } from "../listings/meta/luxury-6-bedroom-whistler-village-blueberry";
+import {
+  GRANITE_COURT_COVER,
+  GRANITE_COURT_PHOTOS,
+} from "../listings/meta/rare-3-bedroom-whistler-village-walk-to-hill";
 
 export interface PropertyFeature {
   id: string;
@@ -1115,9 +1119,8 @@ export const propertyCategories: PropertyCategory[] = [
             id: "rare-3-bedroom-whistler-village",
             name: "3-BDRM | Whistler Village | Walk to Hill | Hot Tub",
             images: [
-              "/photos/properties/John 3-bed Granite Court/03 - 20251125 A7M4 01 A1_01852.jpg",
-              "/photos/properties/John 3-bed Granite Court/01 - 20251125 A7M4 01 A1_02152.jpg",
-              "/photos/properties/John 3-bed Granite Court/02 - 20251125 A7M4 01 A1_02202.jpg"
+              GRANITE_COURT_COVER,
+              ...GRANITE_COURT_PHOTOS.filter((src) => src !== GRANITE_COURT_COVER),
             ],
             guests: 8,
             bedrooms: 3,
@@ -1125,18 +1128,20 @@ export const propertyCategories: PropertyCategory[] = [
             beds: 4,
             location: "Whistler Village, Whistler",
             description:
-              "A rare Whistler Village chalet with the space and privacy of a home, just steps from restaurants, shops and the mountain. Spread across two levels, this 3-bedroom retreat features oversized wraparound balconies, mountain views, a private hot tub and cozy fireplace. One of its standout features is two guaranteed designated underground parking spaces, exceptionally rare for a central Village property, so groups arriving in multiple vehicles can park with ease and walk almost everywhere.",
+              "A rare Whistler Village chalet with the space and privacy of a home, just steps from restaurants, shops and the mountain. Spread across two levels, this 3-bedroom retreat features oversized wraparound balconies, mountain views, a private hot tub and cozy fireplace. One of its standout features is two guaranteed designated underground parking spaces, exceptionally rare for a central Village property, so groups arriving in multiple vehicles can park with ease and walk almost everywhere. The primary bedroom currently has a queen bed, with a king replacement arriving before the mountain opens in 2026.",
             features: [
+              "Private hot tub",
+              "2 guaranteed parking stalls",
+              "King bed arriving 2026",
+              "Pack n Play included",
               "City skyline view",
-              "Ski-in/Ski-out",
               "Kitchen",
               "Wifi",
               "Dedicated workspace",
               "Free parking garage on premises",
-              "Hot tub",
               "TV",
               "Washer",
-              "Free dryer – In unit",
+              "Free dryer in unit",
             ],
             highlights: [],
             priceRange: "$450-1450 per night Summer",

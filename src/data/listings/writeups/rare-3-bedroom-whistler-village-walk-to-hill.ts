@@ -17,9 +17,10 @@ const rare3BedVillageWriteup: ListingWriteupContent = {
       "Private hot tub (only in complex)",
       "2 guaranteed parking stalls",
       "Wraparound balconies",
-      "7-10 min walk to lifts",
+      "7 to 10 min walk to lifts",
       "Granite Court, Village",
       "Summer portable AC",
+      "King bed arriving 2026",
     ],
   },
   residence: {
@@ -40,7 +41,7 @@ const rare3BedVillageWriteup: ListingWriteupContent = {
     title: "Location",
     imageSide: "left",
     image: {
-      photoIndex: 20,
+      photoIndex: 13,
       alt: "Whistler, British Columbia, Canada",
     },
     paragraphs: [
@@ -62,7 +63,8 @@ const rare3BedVillageWriteup: ListingWriteupContent = {
         bedrooms: [
           {
             name: "Primary Bedroom",
-            details: "Queen bed with private ensuite bathroom.",
+            details:
+              "Queen bed with private ensuite bathroom. King bed replacement arriving before the mountain opens, 2026.",
           },
           {
             name: "Bedroom 2",
@@ -84,10 +86,13 @@ const rare3BedVillageWriteup: ListingWriteupContent = {
   other: {
     title: "Other details",
     guestAccess: [
-      "Staircase: Please note there is one flight of stairs to enter the unit. It is manageable and convenient for nearly all guests, including most elderly guests, but we like to be upfront so there are no surprises for anyone with mobility limitations or personal preferences. The benefit here is that the home sits slightly elevated, allowing for beautiful scenic views over Whistler Village and the surrounding mountains.",
+      "Staircase: Please note there is one flight of stairs to enter the unit. It is manageable and convenient for all guests, including elderly guests, but we like to be upfront so there are no surprises for anyone with mobility limitations or personal preferences. The benefit here is that the home sits slightly elevated, allowing for beautiful scenic views over Whistler Village and the surrounding mountains.",
       "The entire home and hot tub is private to your group/booking.",
     ],
     notes: [
+      "There is one flight of stairs up to the front door, and the home is on two levels. If you are travelling with little ones, there is a Pack n Play in the main-floor bedroom closet.",
+      "There is private, locked storage for skis and bikes. The underground garage has approximately 7 feet of clearance, so it is worth checking your height if you are driving up with a roof box.",
+      "For summer stays, portable air conditioning is available in the primary bedroom and main living area from May 15 to October 15. If you are enjoying an evening soak, please finish up by 10 p.m. when quiet hours begin, and pop the cover back on when you are done.",
       ACEHOST_VIP_CONCIERGE_NOTE,
       ACEHOST_SKI_PASS_NOTE,
       ACEHOST_REACH_OUT_NOTE,

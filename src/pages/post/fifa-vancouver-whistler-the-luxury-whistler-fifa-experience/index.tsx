@@ -151,10 +151,10 @@ const condoTownhomeOptions: FeaturedProperty[] = [
     description:
       "A great option for guests wanting central convenience, extra space, and easy access to everything Whistler has to offer.",
     photos: [
-      "/photos/properties/John 3-bed Granite Court/03 - 20251125 A7M4 01 A1_01852.jpg",
+      "/photos/properties/John 3-bed Granite Court/Granite_snow_reno_edit_1_cleaned.jpg",
+      "/photos/properties/John 3-bed Granite Court/Granite snow reno edit 9.jpg",
+      "/photos/properties/John 3-bed Granite Court/Granite snow reno edit 2.jpg",
       "/photos/properties/John 3-bed Granite Court/01 - 20251125 A7M4 01 A1_02152.jpg",
-      "/photos/properties/John 3-bed Granite Court/02 - 20251125 A7M4 01 A1_02202.jpg",
-      "/photos/properties/John 3-bed Granite Court/04 - 20251125 A7M4 01 A1_02228-Edit.jpg",
     ],
     bookUrl:
       "https://www.airbnb.ca/rooms/1565322561889624431?guests=1&adults=1&s=67&unique_share_id=bcb85131-d1b0-4d39-9975-7580fd94a5d9",

@@ -20,7 +20,7 @@ const IMG_TYNDALL_02 =
 const IMG_3BED_VILLAGE =
   "/photos/properties/3-Bed PH Whistler Village/snowy-room-blinds-only Hearthstone.png";
 const IMG_JOHN_GRANITE =
-  "/photos/properties/John 3-bed Granite Court/03 - 20251125 A7M4 01 A1_01852.jpg";
+  "/photos/properties/John 3-bed Granite Court/Granite_snow_reno_edit_1_cleaned.jpg";
 
 const absImageUrl = (publicPath: string) =>
   `https://www.acehost.ca${encodeURI(publicPath)}`;

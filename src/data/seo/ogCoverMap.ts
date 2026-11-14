@@ -14,7 +14,6 @@ export const OG_COVER_BY_SOURCE: Record<string, string> = {
   "/photos/properties/Valhalla Unit 33 Village/Valhalla snow edit 1.jpeg": "/og-covers/Valhalla-snow-edit-1-0c9ab345.jpg",
   "/optimized/303-Tyndall-Lodge/new-cover.jpg": "/og-covers/new-cover-c1bb2c1e.jpg",
   "/photos/properties/3-Bed PH Whistler Village/snowy-room-blinds-only Hearthstone.png": "/og-covers/snowy-room-blinds-only-Hearthstone-dd74739b.jpg",
-  "/photos/properties/John 3-bed Granite Court/03 - 20251125 A7M4 01 A1_01852.jpg": "/og-covers/03-20251125-A7M4-01-A1-01852-c23e3c4f.jpg",
   "/photos/properties/Muirfield Golf Course/Muirfield drone snow.png": "/og-covers/Muirfield-drone-snow-5dc24223.jpg",
   "/photos/properties/Raven_s Nest 3-Bedroom/20241125 A7M3 01 A1_05349.jpg": "/og-covers/20241125-A7M3-01-A1-05349-bb56edbf.jpg",
   "/photos/properties/Snowpine 3-bed Saul/02-2040 Karen Cres-02.jpg": "/og-covers/02-2040-Karen-Cres-02-48c75b66.jpg",

@@ -110,8 +110,8 @@ export const largeHomeProperties: Whistler28Property[] = [
     number: 10,
     name: "Rare 3-Bedroom | Whistler Village | Walk to Hill",
     description:
-      "A hard-to-find three-bedroom Village home with a private hot tub and easy walking access to restaurants, shops, and the slopes.",
-    image: "/photos/properties/John 3-bed Granite Court/03 - 20251125 A7M4 01 A1_01852.jpg",
+      "A hard-to-find three-bedroom Village home with a private hot tub, two guaranteed parking stalls, and a king bed arriving for the primary bedroom before the 2026 ski season.",
+    image: "/photos/properties/John 3-bed Granite Court/Granite_snow_reno_edit_1_cleaned.jpg",
     listingHref: "/listings/rare-3-bedroom-whistler-village-walk-to-hill",
     bookUrl:
       "https://www.airbnb.ca/rooms/1565322561889624431?guests=1&adults=1&s=67&unique_share_id=bcb85131-d1b0-4d39-9975-7580fd94a5d9",
