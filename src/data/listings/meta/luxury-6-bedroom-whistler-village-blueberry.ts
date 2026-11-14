@@ -2,14 +2,14 @@ import type { ListingData } from "../types";
 
 const base = "/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry";
 
-export const BLUEBERRY_306_COVER = `${base}/Blueberry new reno living room snow 1.jpg`;
+export const BLUEBERRY_306_COVER = `${base}/New cover blueberry snow best.jpg`;
 
 export const BLUEBERRY_306_PHOTOS = [
   BLUEBERRY_306_COVER,
+  `${base}/New cover blueberry best 2.jpg`,
   `${base}/Blueberry new reno living room snow 2.jpg`,
   `${base}/Blueberry new reno living room snow 3.jpg`,
   `${base}/Blueberry new reno living room snow 4.jpg`,
-  `${base}/Blueberry new reno living room snow 5.jpg`,
   `${base}/Blueberry new reno living room snow 6.jpg`,
   `${base}/30.02 - 306 - 3212 Blueberry Dr, Whistler - 05 - 20261112 A7M4 02 A1_00194-Edit.jpg`,
   `${base}/30.02 - 306 - 3212 Blueberry Dr, Whistler - 09 - 20261112 A7M4 02 A1_00165.jpg`,

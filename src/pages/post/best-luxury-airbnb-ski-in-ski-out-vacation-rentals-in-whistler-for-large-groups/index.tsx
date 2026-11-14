@@ -704,7 +704,7 @@ export default function BlogPost() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 not-prose">
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry new reno living room snow 1.jpg"
+                    src="/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/New cover blueberry snow best.jpg"
                     alt="Luxury 6-bedroom Blueberry dining and living room in snow"
                     fill
                     className="object-cover"
@@ -728,7 +728,7 @@ export default function BlogPost() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry new reno living room snow 5.jpg"
+                    src="/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/New cover blueberry best 2.jpg"
                     alt="Luxury 6-bedroom kitchen and dining space"
                     fill
                     className="object-cover"
