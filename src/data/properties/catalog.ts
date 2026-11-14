@@ -1128,11 +1128,11 @@ export const propertyCategories: PropertyCategory[] = [
             beds: 4,
             location: "Whistler Village, Whistler",
             description:
-              "A rare Whistler Village chalet with the space and privacy of a home, just steps from restaurants, shops and the mountain. Spread across two levels, this 3-bedroom retreat features oversized wraparound balconies, mountain views, a private hot tub and cozy fireplace. One of its standout features is two guaranteed designated underground parking spaces, exceptionally rare for a central Village property, so groups arriving in multiple vehicles can park with ease and walk almost everywhere. The primary bedroom currently has a queen bed, with a king replacement arriving before the mountain opens in 2026. Bedroom 2 has a queen bed.",
+              "A rare Whistler Village chalet with the space and privacy of a home, just steps from restaurants, shops and the mountain. Spread across two levels, this 3-bedroom retreat features oversized wraparound balconies, mountain views, a private hot tub and cozy fireplace. One of its standout features is two guaranteed designated underground parking spaces, exceptionally rare for a central Village property, so groups arriving in multiple vehicles can park with ease and walk almost everywhere. Sleeps 8 across a king in the primary, a queen in bedroom 2, a king in bedroom 3, and a queen pullout sofa in the living room.",
             features: [
               "Private hot tub",
               "2 guaranteed parking stalls",
-              "King bed arriving 2026",
+              "2 king beds",
               "Pack n Play included",
               "City skyline view",
               "Kitchen",

@@ -48,7 +48,7 @@ const listing: ListingData = {
   photos: GRANITE_COURT_PHOTOS,
   seo: {
     title: "3-BDRM | Whistler Village | Walk to Hill | Hot Tub",
-    description: "A rare Whistler Village chalet with the space and privacy of a home, just steps from restaurants, shops and the mountain. Spread across two levels, this 3-bedroom retreat features oversized wraparound balconies, mountain views, a private hot tub and cozy fireplace. One of its standout features is two guaranteed designated underground parking spaces, exceptionally rare for a central Village property, so groups arriving in multiple vehicles can park with ease and walk almost everywhere.",
+    description: "A rare Whistler Village chalet with the space and privacy of a home, just steps from restaurants, shops and the mountain. Sleeps 8 with 2 king beds, a queen in bedroom 2, a queen sofa bed, a private hot tub, and two guaranteed underground parking stalls.",
   },
   header:   {
       "title": "3-BDRM | Whistler Village | Walk to Hill | Hot Tub",

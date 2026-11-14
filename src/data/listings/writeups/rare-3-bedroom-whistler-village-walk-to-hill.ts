@@ -20,7 +20,7 @@ const rare3BedVillageWriteup: ListingWriteupContent = {
       "7 to 10 min walk to lifts",
       "Granite Court, Village",
       "Summer portable AC",
-      "King bed arriving 2026",
+      "2 king beds",
     ],
   },
   residence: {
@@ -55,7 +55,7 @@ const rare3BedVillageWriteup: ListingWriteupContent = {
   },
   bedrooms: {
     title: "Bedroom Layout",
-    summary: "3 bedrooms plus living room sofa bed.",
+    summary: "3 bedrooms plus living room sofa bed: 2 kings, 1 queen, and a queen pullout.",
     floors: [
       {
         label: "Bedrooms",
@@ -63,8 +63,7 @@ const rare3BedVillageWriteup: ListingWriteupContent = {
         bedrooms: [
           {
             name: "Primary Bedroom",
-            details:
-              "Queen bed with private ensuite bathroom. King bed replacement arriving before the mountain opens, 2026.",
+            details: "King bed with private ensuite bathroom.",
           },
           {
             name: "Bedroom 2",
@@ -72,7 +71,7 @@ const rare3BedVillageWriteup: ListingWriteupContent = {
           },
           {
             name: "Bedroom 3",
-            details: "Double bed.",
+            details: "King bed.",
           },
           {
             name: "Living Room",
