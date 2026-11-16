@@ -140,7 +140,7 @@ const CotswoldsUKSohoFarmHouse = ({
         <title>Luxury Retreat Near Soho Farmhouse | Pool &amp; Tennis · Brandy&apos;s Farmhouse</title>
         <meta
           name="description"
-          content="Escape to a stunning estate near Soho Farmhouse, with an outdoor spa, heated pool, hot tub, A/C, private tennis court, and a cozy annex. 8 bedrooms, 5 bathrooms, sleeps 15 in Sandford Saint Martin, Cotswolds."
+          content="Brandy's Farmhouse sits among grand country estates in the most desirable corner of the Cotswolds, just 4 minutes by car from Soho Farmhouse. Heated pool, tennis court, outdoor spa, and a step-free annex. Sleeps 15 across 8 bedrooms."
         />
         {/* Preload hero gallery image for faster first paint */}
         <link rel="preload" href={COVER} as="image" type="image/webp" />
@@ -204,111 +204,133 @@ const CotswoldsUKSohoFarmHouse = ({
           <div className="max-w-5xl mx-auto px-6 md:px-10 lg:px-8" id="details">
             <div className="text-gray-800 space-y-6 leading-relaxed text-base md:text-lg">
               <p>
-                Escape to a stunning estate near Soho Farmhouse, offering a luxurious retreat with an outdoor spa and heated pool/hot tub, A/C, private tennis court, and cozy annex for additional sleeping. This beautiful house is spread across several acres, features 8 bedrooms, a gourmet kitchen, multiple living areas, and 5 bathrooms. Enjoy the hot tub, infrared sauna, cold plunge, pool, and outdoor fire pit.
-              </p>
-              <p>
-                Perfect for families or groups seeking a peaceful Cotswolds getaway in a prestigious, rural setting.
+                Brandy&apos;s Farmhouse sits among grand country estates in the most desirable corner of the Cotswolds, just 4 minutes by car from Soho Farmhouse. Start the day with a swim in your private heated pool, play a few sets on your own tennis court, then head to the outdoor spa for a sauna, cold plunge or soak in the hot tub. Gather around the AGA in the deVOL kitchen before an evening by the fire. The stone farmhouse and step-free annex sleep up to 15 across 8 bedrooms, with 5 bathrooms.
               </p>
 
               <h3 className="text-2xl font-bold text-gray-900 pt-2">The space</h3>
               <p>
-                <strong>Main House (6 Bedrooms):</strong>
+                <strong>Bedroom layout</strong>
               </p>
               <p>
-                Step inside the heart of the estate, featuring six beautifully appointed bedrooms designed for comfort and relaxation:
+                <strong>Main House | 6 Bedrooms</strong>
+              </p>
+              <p>
+                Step inside the heart of the estate, featuring 6 beautifully appointed bedrooms designed for comfort and relaxation.
               </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li><strong>King Bedroom 1:</strong> A luxurious retreat with a spacious Emperor-size bed.</li>
-                <li><strong>King Bedroom 2:</strong> Offers a supremely comfortable Super King-size bed.</li>
+                <li><strong>King Bedroom 1:</strong> A luxurious retreat with a spacious Emperor-size bed. Private full bathroom ensuite attached.</li>
+                <li><strong>King Bedroom 2:</strong> Offers a supremely comfortable Super King-size bed. Private full bathroom ensuite attached.</li>
                 <li><strong>King Bedroom 3:</strong> Another haven with a Super King-size bed.</li>
-                <li><strong>Double Bedroom 4:</strong> Features a cozy double bed.</li>
+                <li><strong>Double Bedroom 4:</strong> Features a cosy double bed.</li>
                 <li><strong>California King Bedroom 5:</strong> Another inviting room with a Super King bed.</li>
-                <li><strong>Queen Bedroom 6:</strong> A comfortable queen bed. Located on the main floor. Only 1 step to access the main floor &amp; bathroom next to the room.</li>
+                <li><strong>Queen Bedroom 6:</strong> A comfortable Queen bed on the main floor. There is only 1 step to access the main floor, with a bathroom right next to the room.</li>
               </ul>
 
               <p>
-                Two bedrooms boast spa-like ensuite bathrooms, while the remaining bedrooms share a large bathroom complete with a separate tub and a walk-in shower. A charming powder room is also conveniently located on the main floor.
-              </p>
-              <p>
-                Enjoy two inviting living rooms, perfect for unwinding or enjoying movie nights. There are also two dedicated office spaces for remote work. The gorgeous Devol designer kitchen is a chef&apos;s dream, equipped with an iconic AGA oven, a Bosch electric oven and stove, two refrigerators, and a brand-new washer and separate dryer.
+                Two bedrooms boast spa-like ensuite bathrooms, while the remaining bedrooms share a large bathroom with a separate tub and a walk-in shower. A charming powder room is also conveniently located on the main floor.
               </p>
 
               <p>
-                <strong>Annex House (2 Bedrooms):</strong>
+                <strong>Annex House | 2 Bedrooms</strong>
               </p>
               <p>
-                Discover a private sanctuary in the Annex, nestled behind the tennis court. Perfect for a family or individuals looking for their own quarters/privacy. Also perfect for step free access to 2 bedrooms &amp; bathroom. It features:
+                Discover a private sanctuary in the annex, nestled behind the tennis court. It&apos;s perfect for a family or anyone looking for their own space and privacy. It&apos;s also a great option for guests looking for step-free access to 2 bedrooms and a bathroom.
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>Super King Bedroom 7:</strong> A comfortable room with a King-size bed.</li>
                 <li><strong>Flexible Bedroom:</strong> Can be configured with either two single beds or a King-size bed.</li>
-                <li><strong>Full Bathroom:</strong> A well-appointed full bathroom.</li>
-                <li><strong>Kitchenette:</strong> A compact kitchenette, ideal for preparing light meals and snacks.</li>
                 <li><strong>Single Bed Bedroom 8:</strong> A comfortable room with a single bed.</li>
               </ul>
+              <p>
+                The annex also features a full bathroom with a shower and a compact kitchenette, ideal for preparing light meals and snacks.
+              </p>
 
               <p>
-                <strong>Wellness &amp; Outdoor Living:</strong>
+                <strong>Kitchen, dining &amp; living areas</strong>
               </p>
               <p>
-                Experience pure relaxation with our outdoor spa area, offering:
+                The gorgeous deVOL designer kitchen is a chef&apos;s dream, equipped with an iconic AGA oven, a Bosch electric oven and stove, and two refrigerators. The extendable indoor dining table seats 12 to 14 comfortably, with 2 additional bar seats in the dining room for a total of 14 to 16.
+              </p>
+              <p>
+                Enjoy two inviting living rooms, perfect for unwinding or enjoying movie nights. There are also 2 indoor fireplaces, one gas and one wood-burning, and two dedicated office spaces for remote work.
+              </p>
+
+              <p>
+                <strong>Wellness &amp; outdoor living</strong>
               </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li><strong>Sauna:</strong> A traditional sauna for a rejuvenating experience.</li>
-                <li><strong>Hot Tub:</strong> Unwind in the hot tub under the open sky.</li>
-                <li><strong>Cold Plunge Pool:</strong> Refresh yourself with a plunge into the cold pool.</li>
-                <li><strong>Outdoor Heated Pool:</strong> Enjoy our heated pool with 4 lounge chairs located outside the main house. Perfect for a swim on a hot day and a beautiful spot for photos. Pool available all year round and heating is included at no extra charge.</li>
+                <li><strong>Heated outdoor pool:</strong> Enjoy a swim just outside the main house, with 4 lounge chairs by the pool. It&apos;s a beautiful spot for photos, too. The pool is available year-round, and heating is included at no extra charge.</li>
+                <li><strong>Hot tub:</strong> Unwind in the hot tub under the open sky.</li>
+                <li><strong>Sauna:</strong> Enjoy a traditional sauna in the outdoor spa area.</li>
+                <li><strong>Cold plunge pool:</strong> Refresh yourself with a cold plunge after the sauna.</li>
+                <li><strong>Tennis court &amp; lawn games:</strong> Enjoy the private tennis court, or spend the afternoon playing bocce ball or horseshoes.</li>
+                <li><strong>Outdoor dining &amp; BBQ:</strong> Available from April 1 to October 30.</li>
+                <li><strong>Fire pit:</strong> Gather around the outdoor fire pit under the stars.</li>
               </ul>
 
               <p>
-                Enjoy outdoor activities like bocce ball or horseshoes, or simply relax by the outdoor fire pit under the stars.
+                <strong>Air conditioning &amp; cooling</strong>
+              </p>
+              <p>
+                The home is equipped with powerful split A/C units in the main living room, Bedroom 1 and the annex. These units help cool the main house and annex during the summer, and fans are provided in every bedroom and throughout the main living spaces for added comfort.
+              </p>
+              <p>
+                The home&apos;s thick, castle-like stone walls help keep the interior naturally cool, and the Cotswolds cool down considerably in the evenings, especially compared to London. The annex is tucked away in the trees and shade, which helps keep it comfortable even on hot summer days.
               </p>
 
-              <p><strong>Additional Amenities:</strong></p>
+              <p>
+                <strong>Additional amenities</strong>
+              </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Electric car charger included.</li>
-                <li>Parking for up to 6 vehicles.</li>
-                <li>Extendable indoor dining table (seats 12-14 comfortably + 2 bar seats in the dining room for a total of 14-16).</li>
-                <li>2 indoor fireplaces (1 gas, 1 wood-burning)</li>
-                <li>Outdoor dining area and BBQ (available from April 1 to October 30).</li>
+                <li><strong>Aesop toiletries</strong> are thoughtfully placed in every bedroom, adding a touch of luxury to your stay.</li>
+                <li><strong>High-speed Wi-Fi</strong> is available throughout the 6-bedroom main house and the 2-bedroom annex.</li>
+                <li><strong>Laundry:</strong> A brand-new washer and separate dryer.</li>
+                <li><strong>Parking:</strong> Space for up to 6 vehicles, with an electric car charger included.</li>
               </ul>
 
               <p>
-                This is not just a house, it&apos;s an experience. A rare blend of country charm and modern luxury, all within striking distance of Soho Farmhouse and the Cotswolds&apos; best.
-              </p>
-
-              <p>
-                <em>*Aesop Toiletries, known for their high-end, plant-based formulations and elegant design, are thoughtfully placed in every bedroom, adding a touch of luxury to your stay.</em>
+                <strong>Pets</strong>
               </p>
               <p>
-                <em>*Full high speed wifi in the main 6-bedroom house and also the 2-bedroom Annex home!</em>
-              </p>
-              <p>
-                <em>*Air Conditioning &amp; Cooling: The home is equipped with powerful split A/C units in the main living room, Master Bedroom 1, and the Annex house. These are strong units that help cool the main home, all bedrooms 1-6, and the 2 bedrooms in the Annex home, effectively, even during the hottest peak summer days. In addition, the Cotswolds naturally cools down significantly in the evenings, especially compared to London. The home&apos;s thick, castle-like stone structure also helps keep the interior naturally cool throughout the day and night. The Annex is tucked away in the trees and shade, allowing it to stay comfortably cool even during peak summer heat. All bedrooms have fans: Fans are also provided in every bedroom and throughout the main living spaces for added comfort.</em>
-              </p>
-              <p>
-                Outdoor BBQ available from April 1 to October 30. BBQ not available in winter.
-              </p>
-              <p>
-                <strong>Pet rule:</strong> We welcome a maximum of 2 dogs for a small fee. Please declare in the guest count :)
+                We welcome a maximum of 2 dogs for a small fee. Please include them in your guest count.
               </p>
 
               <h3 className="text-2xl font-bold text-gray-900 pt-2">Guest access</h3>
               <p>
-                No noise or use of spa or tennis court after 10 pm, or before 8 am.
+                The entire estate is yours for your stay, including the 6-bedroom stone farmhouse, the separate 2-bedroom annex and the gardens. Start the morning with breakfast around the AGA in the deVOL kitchen, head outside for a game on your private tennis court, or spend the afternoon by the heated outdoor pool. The hot tub, sauna and cold plunge are all yours to enjoy, and the fire pit is a lovely place to gather in the evening.
               </p>
               <p>
-                <strong>For elderly guests, our annex home is step free, located right next to the main home and tennis court, and has 2 full bedrooms, 1 bathroom with a shower.</strong> A great option for those looking for step free.
+                The layout works especially well for families travelling with grandparents or anyone who prefers step-free accommodation. The annex sits just behind the tennis court and has its own entrance, with step-free access to both bedrooms, a bathroom with a shower and a kitchenette. It gives part of your group the freedom to make an early coffee or turn in for the night while everyone else carries on in the main house.
+              </p>
+              <p>
+                For guests who prefer to stay in the main farmhouse, one step leads up to the main living level, where you&apos;ll find a queen bedroom with a bathroom right beside it. With everyone gathered in the same house for meals, two separate sitting rooms for quieter moments and the annex close by, there&apos;s plenty of space to spend the holiday together at your own pace.
               </p>
 
               <h3 className="text-2xl font-bold text-gray-900 pt-2">Other things to note</h3>
               <p>
-                Perfect getaway for a family or group of 6 to 12 people total, with the option to sleep up to 15 guests.
+                Brandy&apos;s Farmhouse is especially lovely for a multigenerational stay. The deVOL kitchen and its AGA are at the heart of the main house, with room to gather over breakfast and two sitting rooms for anyone who wants a quieter corner afterwards. The estate works beautifully for 6 to 12 guests and sleeps up to 15 across 8 bedrooms. Six are in the main house, including a ground-floor queen bedroom with one step to reach it. The other 2 are in the step-free annex beside the tennis court, where guests have their own shower room and kitchenette.
+              </p>
+              <p>
+                The outdoor pool is heated year-round, with heating included in your stay. In summer, take dinner outside to the barbecue after a game of tennis. In the colder months, follow a swim with a soak in the hot tub and an evening by the fire. The barbecue and outdoor dining area are available from 1 April to 30 October. Quiet hours are 10 pm to 8 am, and the outdoor spa and tennis court are yours to enjoy between 8 am and 10 pm.
+              </p>
+              <p>
+                For warmer days, air-conditioning units serve the main sitting room, primary bedroom and annex, and every bedroom has a fan. Up to 2 dogs are welcome for a fee, so the family dog can come along for those country walks too. Please include any dogs when booking.
               </p>
 
-              <h3 className="text-2xl font-bold text-gray-900 pt-2">Location</h3>
+              <h3 className="text-2xl font-bold text-gray-900 pt-2">Where you&apos;ll be</h3>
               <p>
-                The home is in Sandford Saint Martin, in the Cotswolds, West Oxfordshire. Set in the rural Cotswolds countryside, with walks to Soho Farmhouse nearby.
+                Brandy&apos;s Farmhouse sits in the most desirable corner of the Cotswolds, surrounded by grand country estates and just 4 minutes by car from Soho Farmhouse. The country lanes between Sandford St Martin and Great Tew take you past open parkland, thatched cottages and some of Oxfordshire&apos;s finest country homes. For Soho House members and their invited guests, there&apos;s an even better way to reach the club: a 30-minute walk from the house along a private trail.
+              </p>
+              <p>
+                Great Tew is an easy drive for coffee at Quince &amp; Clover or a long Sunday lunch at The Falkland Arms, the village&apos;s 16th-century pub. Chipping Norton is close by for independent shops and its Wednesday market, and Blenheim Palace and Woodstock are within easy reach for a day out. Pick up something for dinner on the way home, and spend the rest of the afternoon on your own tennis court or beside the heated pool.
+              </p>
+
+              <h3 className="text-2xl font-bold text-gray-900 pt-2">Getting around</h3>
+              <p>
+                A car gives you the freedom to explore at your own pace, whether you&apos;re heading to Soho Farmhouse for dinner, picking up fresh produce in Chipping Norton or taking the scenic route home through Great Tew. There&apos;s parking for up to 6 vehicles at the house, along with an electric vehicle charger.
+              </p>
+              <p>
+                Coming from London? Take the train from Paddington to Charlbury or from Marylebone to Banbury, then continue to the farmhouse by taxi. We recommend pre-booking your pickup, especially at Charlbury, where there&apos;s no taxi rank. If everyone would like to enjoy a glass of wine over dinner, it&apos;s worth booking your return taxi when you reserve your table.
               </p>
             </div>
 
@@ -371,7 +393,7 @@ const CotswoldsUKSohoFarmHouse = ({
                   title: "Interior",
                   image: `${PHOTO_DIR}/224A8465.jpg`,
                   items: [
-                    "Devol designer kitchen with iconic AGA oven",
+                    "deVOL designer kitchen with iconic AGA oven",
                     "Spacious living and dining areas",
                     "Luxury linens and towels",
                     "En-suite bathrooms with premium fixtures",
@@ -435,7 +457,7 @@ const CotswoldsUKSohoFarmHouse = ({
                 The heart of the estate features six thoughtfully designed bedrooms and four elegant bathrooms, perfect for families, groups, or special gatherings. Two of the bedrooms have spa-like ensuite bathrooms, while the other bedrooms share a large bathroom with a separate tub and walk-in shower. There is also a charming powder room on the main floor.
               </p>
               <p className="text-gray-700 mb-8">
-                Enjoy two cozy living rooms (ideal for lounging or movie nights), two dedicated office spaces for remote work, and a gorgeous Devol designer kitchen complete with an iconic AGA oven, two fridges, and a brand-new washer/dryer.
+                Enjoy two inviting living rooms, perfect for unwinding or enjoying movie nights. There are also 2 indoor fireplaces, one gas and one wood-burning, and two dedicated office spaces for remote work. The gorgeous deVOL designer kitchen is a chef&apos;s dream, equipped with an iconic AGA oven, a Bosch electric oven and stove, two refrigerators, and a brand-new washer and separate dryer.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
@@ -554,7 +576,7 @@ const CotswoldsUKSohoFarmHouse = ({
           <div className="max-w-4xl mx-auto px-6 md:px-10 lg:px-8 text-center mb-24">
             <h2 className="text-2xl sm:text-3xl font-bold mb-6">Experience countryside luxury at its finest</h2>
             <p className="text-gray-700 max-w-3xl mx-auto mb-8 leading-relaxed text-lg">
-              This is not just a house, it's an experience. A rare blend of country charm and modern luxury, all within striking distance of Soho Farmhouse and the Cotswolds' best. Perfect for family gatherings, corporate retreats, or special celebrations.
+              Brandy&apos;s Farmhouse sits among grand country estates in the most desirable corner of the Cotswolds, just 4 minutes by car from Soho Farmhouse. The stone farmhouse and step-free annex sleep up to 15, with a heated pool, private tennis court, and outdoor spa.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link

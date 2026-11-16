@@ -168,7 +168,7 @@ const COTSWOLDS_UK: PropertyFeature = {
     "2-3 night minimum. £1,200-£3,100 per night | Dependent on season, day of week, holidays, etc.",
   location: "Sandford Saint Martin, Cotswolds, United Kingdom",
   description:
-    "Escape to a stunning estate near Soho Farmhouse, offering a luxurious retreat with an outdoor spa and heated pool/hot tub, A/C, private tennis court, and cozy annex for additional sleeping. This beautiful house is spread across several acres, features 8 bedrooms, a gourmet kitchen, multiple living areas, and 5 bathrooms. Enjoy the hot tub, infrared sauna, cold plunge, pool, and outdoor fire pit. Perfect for families or groups seeking a peaceful Cotswolds getaway in a prestigious, rural setting.",
+    "Brandy's Farmhouse sits among grand country estates in the most desirable corner of the Cotswolds, just 4 minutes by car from Soho Farmhouse. Start the day with a swim in your private heated pool, play a few sets on your own tennis court, then head to the outdoor spa for a sauna, cold plunge or soak in the hot tub. Gather around the AGA in the deVOL kitchen before an evening by the fire. The stone farmhouse and step-free annex sleep up to 15 across 8 bedrooms, with 5 bathrooms.",
   features: [
     "Private Tennis Court",
     "Infrared Sauna",
@@ -182,7 +182,7 @@ const COTSWOLDS_UK: PropertyFeature = {
     "Pets Welcome (max 2 dogs)",
   ],
   highlights: [
-    "Walks to Soho Farmhouse",
+    "4 minutes from Soho Farmhouse",
     "320m² Luxury Living Space",
     "Main House + Separate Annex",
     "2-Acre Private Grounds",

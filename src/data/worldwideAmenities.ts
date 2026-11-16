@@ -17,7 +17,7 @@ export const worldwideListingAmenities: Record<string, string[]> = {
     "Garage parking",
   ],
   "cotswolds-uk-soho-farm-house": [
-    "Walks to Soho Farmhouse",
+    "4 minutes from Soho Farmhouse",
     "Outdoor heated pool",
     "Private tennis court",
     "Air conditioning",
