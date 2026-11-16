@@ -71,11 +71,11 @@ const SANTORINI: PropertyGeo = {
 };
 
 const COTSWOLDS: PropertyGeo = {
-  locality: "Cotswolds",
+  locality: "Sandford Saint Martin",
   region: "England",
   country: "GB",
-  latitude: 51.833,
-  longitude: -1.8433,
+  latitude: 51.9366,
+  longitude: -1.3904,
 };
 
 const PUNTA_MITA: PropertyGeo = {

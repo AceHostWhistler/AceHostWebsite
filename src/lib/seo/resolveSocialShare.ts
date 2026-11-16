@@ -133,9 +133,9 @@ const WORLDWIDE_LISTING_TITLES: Record<string, Pick<StaticPageMeta, "title" | "d
   },
   "cotswolds-uk-soho-farm-house": {
     title:
-      "Luxury Cotswolds Airbnb Near Soho Farmhouse | 8 Bedroom Vacation Rental, Spa, Heated pool, Tennis Court, Cold Plunge, Air Conditioning, & Sauna · Brandy's Farmhouse",
+      "Luxury Retreat Near Soho Farmhouse | Pool & Tennis · Brandy's Farmhouse",
     description:
-      "Luxury Cotswolds Airbnb near Soho Farmhouse, close to Soho Farmhouse, and next to Soho Farmhouse. 8 bedrooms, spa, heated pool, tennis court, cold plunge, A/C, and sauna. Sleeps 15 at Brandy's Farmhouse.",
+      "Escape to a stunning estate near Soho Farmhouse, with an outdoor spa, heated pool, hot tub, A/C, private tennis court, and a cozy annex. 8 bedrooms, 5 bathrooms, sleeps 15 in Sandford Saint Martin, Cotswolds.",
   },
   "vancouver-house-corner-unit-30th-floor": {
     title: "Yaletown Tower Suite | Views, Pool + Free Parking - AceHost",

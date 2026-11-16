@@ -152,7 +152,7 @@ const BEDORA_PLACE: PropertyFeature = {
 
 const COTSWOLDS_UK: PropertyFeature = {
   id: "cotswolds-uk-soho-farm-house",
-  name: "Luxury Cotswolds Airbnb Near Soho Farmhouse | 8 Bedroom Vacation Rental, Spa, Heated pool, Tennis Court, Cold Plunge, Air Conditioning, & Sauna · Brandy's Farmhouse",
+  name: "Luxury Retreat Near Soho Farmhouse | Pool & Tennis · Brandy's Farmhouse",
   images: [
     "/photos/properties/Cotswolds UK - Soho Farm House/224A8292.jpg",
     "/photos/properties/Cotswolds UK - Soho Farm House/DJI_20260720185020_0008_D.jpg",
@@ -166,9 +166,9 @@ const COTSWOLDS_UK: PropertyFeature = {
   bathrooms: 5,
   priceRange:
     "2-3 night minimum. £1,200-£3,100 per night | Dependent on season, day of week, holidays, etc.",
-  location: "Cotswolds, United Kingdom",
+  location: "Sandford Saint Martin, Cotswolds, United Kingdom",
   description:
-    "Luxury Cotswolds Airbnb near Soho Farmhouse, close to Soho Farmhouse, and next to Soho Farmhouse. Outdoor spa, heated pool, hot tub, A/C, private tennis court, and a cozy annex for extra sleeping. This 8-bedroom, 8-bed, 5-bathroom stone estate sleeps 15 across the main house and annex, just minutes from Soho Farmhouse.",
+    "Escape to a stunning estate near Soho Farmhouse, offering a luxurious retreat with an outdoor spa and heated pool/hot tub, A/C, private tennis court, and cozy annex for additional sleeping. This beautiful house is spread across several acres, features 8 bedrooms, a gourmet kitchen, multiple living areas, and 5 bathrooms. Enjoy the hot tub, infrared sauna, cold plunge, pool, and outdoor fire pit. Perfect for families or groups seeking a peaceful Cotswolds getaway in a prestigious, rural setting.",
   features: [
     "Private Tennis Court",
     "Infrared Sauna",
@@ -182,7 +182,7 @@ const COTSWOLDS_UK: PropertyFeature = {
     "Pets Welcome (max 2 dogs)",
   ],
   highlights: [
-    "Near Soho Farmhouse",
+    "Walks to Soho Farmhouse",
     "320m² Luxury Living Space",
     "Main House + Separate Annex",
     "2-Acre Private Grounds",

@@ -137,10 +137,10 @@ const CotswoldsUKSohoFarmHouse = ({
   return (
     <>
       <Head>
-        <title>Luxury Cotswolds Airbnb Near Soho Farmhouse | 8 Bedroom Vacation Rental, Spa, Heated pool, Tennis Court, Cold Plunge, Air Conditioning, & Sauna · Brandy&apos;s Farmhouse</title>
+        <title>Luxury Retreat Near Soho Farmhouse | Pool &amp; Tennis · Brandy&apos;s Farmhouse</title>
         <meta
           name="description"
-          content="Luxury Cotswolds Airbnb near Soho Farmhouse, close to Soho Farmhouse, and next to Soho Farmhouse. 8 bedrooms, spa, heated pool, tennis court, cold plunge, A/C, and sauna. Sleeps 15 at Brandy's Farmhouse."
+          content="Escape to a stunning estate near Soho Farmhouse, with an outdoor spa, heated pool, hot tub, A/C, private tennis court, and a cozy annex. 8 bedrooms, 5 bathrooms, sleeps 15 in Sandford Saint Martin, Cotswolds."
         />
         {/* Preload hero gallery image for faster first paint */}
         <link rel="preload" href={COVER} as="image" type="image/webp" />
@@ -152,7 +152,7 @@ const CotswoldsUKSohoFarmHouse = ({
         <main className={editorialMainClass}>
           {/* Header with Property Info */}
           <PropertyHeaderEditorial
-            title="Brandy's Farmhouse | Luxury Cotswolds Airbnb Near Soho Farmhouse"
+            title="Brandy's Farmhouse | Luxury Retreat Near Soho Farmhouse | Pool & Tennis"
             guests={15}
             bedrooms={8}
             beds={8}
@@ -204,10 +204,10 @@ const CotswoldsUKSohoFarmHouse = ({
           <div className="max-w-5xl mx-auto px-6 md:px-10 lg:px-8" id="details">
             <div className="text-gray-800 space-y-6 leading-relaxed text-base md:text-lg">
               <p>
-                Escape to a stunning luxury Cotswolds Airbnb near Soho Farmhouse, close to Soho Farmhouse, and next to Soho Farmhouse. This estate offers an outdoor spa and heated pool/hot tub, A/C, private tennis court, and a cozy annex house for additional sleeping. This beautiful house is spread across several acres, features 8 bedrooms, a gourmet kitchen, multiple living areas, and 5 bathrooms. Enjoy the hot tub, infrared sauna, cold plunge, pool, and outdoor fire pit.
+                Escape to a stunning estate near Soho Farmhouse, offering a luxurious retreat with an outdoor spa and heated pool/hot tub, A/C, private tennis court, and cozy annex for additional sleeping. This beautiful house is spread across several acres, features 8 bedrooms, a gourmet kitchen, multiple living areas, and 5 bathrooms. Enjoy the hot tub, infrared sauna, cold plunge, pool, and outdoor fire pit.
               </p>
               <p>
-                Perfect for families or groups seeking a peaceful Cotswolds getaway in a prestigious rural setting, just minutes from Soho Farmhouse.
+                Perfect for families or groups seeking a peaceful Cotswolds getaway in a prestigious, rural setting.
               </p>
 
               <h3 className="text-2xl font-bold text-gray-900 pt-2">The space</h3>
@@ -274,7 +274,7 @@ const CotswoldsUKSohoFarmHouse = ({
               </ul>
 
               <p>
-                This is not just a house, it&apos;s an experience. A rare blend of country charm and modern luxury, near Soho Farmhouse, close to Soho Farmhouse, and next to Soho Farmhouse, with the Cotswolds&apos; best nearby.
+                This is not just a house, it&apos;s an experience. A rare blend of country charm and modern luxury, all within striking distance of Soho Farmhouse and the Cotswolds&apos; best.
               </p>
 
               <p>
@@ -295,15 +295,20 @@ const CotswoldsUKSohoFarmHouse = ({
 
               <h3 className="text-2xl font-bold text-gray-900 pt-2">Guest access</h3>
               <p>
-                No loud noise or use of spa or tennis court after 10 pm, or before 8 am, neighbours need to sleep :)
+                No noise or use of spa or tennis court after 10 pm, or before 8 am.
               </p>
               <p>
-                <strong>***For Elderly, our annex is step free, located right next to the main home and tennis court, and has 2 full bedrooms, 1 bathroom with a shower.***</strong> A great option for those looking for step free.
+                <strong>For elderly guests, our annex home is step free, located right next to the main home and tennis court, and has 2 full bedrooms, 1 bathroom with a shower.</strong> A great option for those looking for step free.
               </p>
 
               <h3 className="text-2xl font-bold text-gray-900 pt-2">Other things to note</h3>
               <p>
                 Perfect getaway for a family or group of 6 to 12 people total, with the option to sleep up to 15 guests.
+              </p>
+
+              <h3 className="text-2xl font-bold text-gray-900 pt-2">Location</h3>
+              <p>
+                The home is in Sandford Saint Martin, in the Cotswolds, West Oxfordshire. Set in the rural Cotswolds countryside, with walks to Soho Farmhouse nearby.
               </p>
             </div>
 
@@ -549,7 +554,7 @@ const CotswoldsUKSohoFarmHouse = ({
           <div className="max-w-4xl mx-auto px-6 md:px-10 lg:px-8 text-center mb-24">
             <h2 className="text-2xl sm:text-3xl font-bold mb-6">Experience countryside luxury at its finest</h2>
             <p className="text-gray-700 max-w-3xl mx-auto mb-8 leading-relaxed text-lg">
-              This is not just a house - it's an experience. A rare blend of country charm and modern luxury, near Soho Farmhouse, close to Soho Farmhouse, and next to Soho Farmhouse, plus the Cotswolds' best attractions. Perfect for family gatherings, corporate retreats, or special celebrations.
+              This is not just a house, it's an experience. A rare blend of country charm and modern luxury, all within striking distance of Soho Farmhouse and the Cotswolds' best. Perfect for family gatherings, corporate retreats, or special celebrations.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
