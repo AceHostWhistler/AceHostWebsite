@@ -27,22 +27,22 @@ const heronViewsWriteup: ListingWriteupContent = {
     title: "The Residence",
     imageSide: "left",
     image: {
-      photoIndex: 2,
+      photoIndex: 3,
       alt: "Heron Views interior living space",
     },
     paragraphs: [
       "Outdoor enthusiasts will love the two newly renovated decks, offering approximately 2,400 sq. ft. of outdoor living space with sweeping views across Whistler Golf Course toward Whistler and Blackcomb mountains. The upper deck is designed for entertaining, with stylish outdoor seating, a daybed, BBQ and fire table, perfect for morning coffee, family dinners or drinks overlooking the mountains. The lower deck creates a private apres-ski retreat with a large 14-person hot tub, sunken fire pit, loungers and additional seating, all surrounded by the chalet's beautiful mountain setting.",
       "Inside, the main level features a spacious open-concept kitchen, dining and living area designed for groups to gather comfortably. The well-equipped kitchen includes a Vertuo Nespresso machine, Keurig and drip coffee maker, while the nearby wet bar offers generous counter space, glassware and a bar fridge for entertaining. The living area provides multiple seating areas and a Smart TV, with large windows bringing the surrounding forest and mountain views indoors.",
       "On the lower level, a second generous living area provides another space for the group to relax, complete with a large Samsung Frame TV and direct access to the lower deck, hot tub and fire pit. Guests can also unwind in the steam shower after a day of skiing, biking or exploring Whistler.",
-      "The home has 5 bedrooms and 5.5 baths. The driveway accommodates two vehicles, with space for one additional vehicle in the garage. The garage also provides convenient storage for skis, bikes and other outdoor equipment.",
+      "The driveway accommodates two vehicles, with space for one additional vehicle in the garage. The garage also provides convenient storage for skis, bikes and other outdoor equipment.",
     ],
   },
   location: {
     title: "Location",
     imageSide: "right",
     image: {
-      photoIndex: 2,
-      alt: "Heron Views mountain and golf course setting",
+      photoIndex: 1,
+      alt: "Heron Views snowy deck with mountain and golf course views",
     },
     paragraphs: [
       "Heron Views is located in prestigious Blueberry Hill, offering a peaceful residential setting while remaining exceptionally close to Whistler Village and the mountains. Whistler Golf Course and the Valley Trail are approximately a one-minute walk from the home, providing a scenic route toward the Village as well as easy access for walking and biking.",
@@ -57,14 +57,14 @@ const heronViewsWriteup: ListingWriteupContent = {
         label: "Top Level",
         bedrooms: [
           {
-            name: "Bedroom 1, Primary Suite",
+            name: "Bedroom 1, Primary Master Suite",
             details:
               "King bed with a generously sized ensuite bathroom featuring a bathtub, large walk-in shower and separate toilet room. The primary suite also includes a large closet and private balcony with outdoor seating, perfect for enjoying a quiet morning coffee.",
           },
           {
             name: "Bedroom 2",
             details:
-              "Four-poster queen bed with private ensuite bathroom, bathtub and private balcony.",
+              "Four-poster Queen bed with private ensuite bathroom, bathtub and private balcony.",
           },
           {
             name: "Bedroom 3",
@@ -94,7 +94,9 @@ const heronViewsWriteup: ListingWriteupContent = {
   other: {
     title: "Other details",
     guestAccess: [
-      "Guests have access to the entire private home to themselves including all amenities such as the hot tub, garage, and more.",
+      "Guests have exclusive use of the entire private home and all its amenities throughout their stay. This includes all 5 bedrooms, spacious living and dining areas, fully equipped kitchen, theatre room, expansive outdoor decks, private 14-person hot tub, sunken fire pit, BBQ and steam shower.",
+      "Guests also have access to the private garage for parking and convenient storage of skis, bikes and other outdoor equipment.",
+      "The entire property is yours to enjoy, offering complete privacy and plenty of space to relax and unwind with family and friends.",
     ],
     notes: [
       ACEHOST_VIP_CONCIERGE_NOTE,

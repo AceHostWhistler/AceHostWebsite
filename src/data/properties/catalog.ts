@@ -638,8 +638,8 @@ export const propertyCategories: PropertyCategory[] = [
             name: "Heron Views | Whistler Village | Stunning Views",
             images: [
               "/photos/properties/3445-Heron-Place/Heron new cover phto snow light.png",
-              "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05831-Edit.jpg",
-              "/photos/properties/3445-Heron-Place/20241125 A7M3 02 A1_05851.jpg",
+              "/photos/properties/3445-Heron-Place/Heron outside deck snow shot.jpg",
+              "/photos/properties/3445-Heron-Place/Hot tub heron cleaned new snow.jpg",
             ],
             guests: 11,
             bedrooms: 5,
@@ -647,7 +647,7 @@ export const propertyCategories: PropertyCategory[] = [
             bathrooms: 5.5,
             location: "Blueberry Hill, Whistler",
             description:
-              "Welcome to Heron Views, a 7,800 sq. ft. traditional log chalet in prestigious Blueberry Hill, with sweeping views across Whistler Golf Course toward Whistler and Blackcomb mountains. Just a 3–4 minute drive from the Village and ski lifts, or a scenic walk along the Valley Trail, the home combines privacy with convenience. Enjoy two expansive decks, summer air conditioning, a 14-person hot tub, fire pit, theatre room, wet bar and generous living spaces for families and groups.",
+              "Welcome to Heron Views, a 7,800 sq. ft. traditional log chalet in prestigious Blueberry Hill, with sweeping views across Whistler Golf Course toward Whistler and Blackcomb mountains. Just a 3 to 4 minute drive from the Village and ski lifts, or a scenic walk along the Valley Trail, the home combines privacy with convenience. Enjoy two expansive decks, summer air conditioning, a 14-person hot tub, fire pit, theatre room, wet bar and generous living spaces for families and groups.",
             features: [
               "Blueberry Hill",
               "Mountain Views",
@@ -661,7 +661,7 @@ export const propertyCategories: PropertyCategory[] = [
             ],
             highlights: [
               "7,800 sq. ft. Traditional Log Chalet",
-              "3–4 Minute Drive to Village & Lifts",
+              "3 to 4 Minute Drive to Village & Lifts",
               "Scenic Valley Trail Access",
               "Whistler & Blackcomb Views",
             ],
