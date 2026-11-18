@@ -108,7 +108,7 @@ export const listingAmenities: Record<string, string[]> = {
     "Mountain views",
     "Fireplace",
     "25-minute walk or Route 6 bus to Village",
-    "Alta Lake about a 15-minute walk",
+    "3.5 bathrooms across three levels",
     "One pet allowed with fee",
   ],
   "pinnacle-ridge-23": [
