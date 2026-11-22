@@ -383,6 +383,7 @@ export const listingAmenities: Record<string, string[]> = {
     "Tyndall Stone Lodge · Village North",
     "Olympic Plaza views",
     "King bed in the master",
+    "Bunk bed in bedroom 2",
     "Walk to gondolas",
     "A/C & in-suite laundry",
     "Pool & hot tub access",

@@ -6,6 +6,7 @@ const listing: ListingData = {
   slug: "whistler-village-views-luxury-2-5-bedroom",
   photos: [
     `${P}/Whistler Village Views Cover.jpg`,
+    `${P}/Gemini_Generated_Image_uyx2lkuyx2lkuyx2 (1).jpeg`,
     `${P}/01 - 20250707 A7M3 01 A1_07036.jpg`,
     `${P}/02 - 20250707 A7M3 01 A1_07154.jpg`,
     `${P}/03 - 20250707 A7M3 01 A1_07045.jpg`,
@@ -16,13 +17,10 @@ const listing: ListingData = {
     `${P}/09 - 20250707 A7M3 01 A1_07077.jpg`,
     `${P}/10 - 20250707 A7M3 01 A1_07084.jpg`,
     `${P}/11 - 20250707 A7M3 01 A1_07098.jpg`,
-    `${P}/12 - 20250707 A7M3 01 A1_07161.jpg`,
-    `${P}/13 - 20250707 A7M3 01 A1_07115.jpg`,
-    `${P}/14 - 20250707 A7M3 01 A1_07123.jpg`,
   ],
   seo: {
     title: "Tyndall - Luxe 2 bedroom, Main Whistler Village - AceHost",
-    description: "Freshly renovated 2.5-bedroom Tyndall Stone Lodge retreat overlooking Olympic Plaza. King bed in the master, A/C, in-suite laundry, pool and hot tub, guaranteed underground parking, and walk to gondolas.",
+    description: "Freshly renovated 2.5-bedroom Tyndall Stone Lodge retreat overlooking Olympic Plaza. King bed in the master, bunk bed in bedroom 2, A/C, in-suite laundry, pool and hot tub, guaranteed underground parking, and walk to gondolas.",
   },
   header:   {
       "title": "Tyndall - Luxe 2 bedroom, Main Whistler Village",
@@ -38,6 +36,7 @@ const listing: ListingData = {
   },
   galleryTitle: "Tyndall Stone Lodge",
   photoAltPrefix: "Tyndall Stone Lodge",
+  galleryPreserveOrder: true,
 };
 
 export default listing;

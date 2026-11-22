@@ -1448,9 +1448,9 @@ export const propertyCategories: PropertyCategory[] = [
             name: "Tyndall - Luxe 2 bedroom, Main Whistler Village",
             images: [
               "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Whistler Village Views Cover.jpg",
+              "/photos/properties/whistler-village-views-luxury-2-5-bedroom/Gemini_Generated_Image_uyx2lkuyx2lkuyx2 (1).jpeg",
               "/photos/properties/whistler-village-views-luxury-2-5-bedroom/01 - 20250707 A7M3 01 A1_07036.jpg",
               "/photos/properties/whistler-village-views-luxury-2-5-bedroom/02 - 20250707 A7M3 01 A1_07154.jpg",
-              "/photos/properties/whistler-village-views-luxury-2-5-bedroom/03 - 20250707 A7M3 01 A1_07045.jpg",
             ],
             guests: 6,
             bedrooms: 2.5,
@@ -1458,7 +1458,7 @@ export const propertyCategories: PropertyCategory[] = [
             beds: 4,
             location: "Main Whistler Village",
             description:
-              "Freshly renovated 2.5-bedroom Tyndall Stone Lodge retreat overlooking Olympic Plaza. King bed in the master, A/C, in-suite laundry, pool and hot tub, guaranteed underground parking, and walk to gondolas.",
+              "Freshly renovated 2.5-bedroom Tyndall Stone Lodge retreat overlooking Olympic Plaza. King bed in the master, bunk bed in bedroom 2, A/C, in-suite laundry, pool and hot tub, guaranteed underground parking, and walk to gondolas.",
             features: [
               "Olympic Plaza Views",
               "King Bed in the Master",

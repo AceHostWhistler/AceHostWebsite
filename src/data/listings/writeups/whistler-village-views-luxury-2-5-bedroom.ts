@@ -16,6 +16,7 @@ const tyndallStoneWriteup: ListingWriteupContent = {
     highlights: [
       "Olympic Plaza views",
       "King bed in the master",
+      "Bunk bed in bedroom 2",
       "Freshly renovated",
       "Shared pool and hot tub",
       "A/C",
@@ -28,7 +29,7 @@ const tyndallStoneWriteup: ListingWriteupContent = {
     title: "The Residence",
     imageSide: "right",
     image: {
-      photoIndex: 3,
+      photoIndex: 4,
       alt: "Tyndall Stone Lodge interior",
     },
     paragraphs: [
@@ -41,7 +42,7 @@ const tyndallStoneWriteup: ListingWriteupContent = {
     title: "Location & Village Access",
     imageSide: "left",
     image: {
-      photoIndex: 4,
+      photoIndex: 5,
       alt: "Tyndall Stone Lodge bedroom",
     },
     paragraphs: [
@@ -69,7 +70,7 @@ const tyndallStoneWriteup: ListingWriteupContent = {
           {
             name: "Bedroom 2",
             details:
-              "Two single beds, ideal for children, friends or individual sleepers.",
+              "Bunk bed with a double on the bottom and a twin on top, ideal for children, friends or individual sleepers.",
           },
           {
             name: "Additional sleeping area",
