@@ -345,6 +345,7 @@ export const listingAmenities: Record<string, string[]> = {
     "Sonos throughout the home",
     "Air conditioning",
     "King suite with ensuite",
+    "55-inch smart TV in the master",
   ],
   "wedge-mountain-lodge-spa": [
     "Full-service spa & wellness",

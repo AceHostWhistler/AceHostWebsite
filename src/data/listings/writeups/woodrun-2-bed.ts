@@ -22,6 +22,7 @@ const woodrun2BedWriteup: ListingWriteupContent = {
       "Sonos throughout the home",
       "Air conditioning",
       "King suite with ensuite",
+      "55-inch smart TV in the master",
     ],
   },
   residence: {
@@ -64,9 +65,9 @@ const woodrun2BedWriteup: ListingWriteupContent = {
         hideLabel: true,
         bedrooms: [
           {
-            name: "Primary Bedroom",
+            name: "Primary Master Bedroom",
             details:
-              "One King bed, private ensuite bathroom and blackout curtains. Sleeps two guests.",
+              "One King bed, private ensuite bathroom and blackout curtains. 55-inch smart TV located in the master bedroom. Sleeps two guests.",
           },
           {
             name: "Bedroom 2",
