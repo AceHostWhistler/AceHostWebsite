@@ -720,7 +720,7 @@ export default function BlogPost() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
-                    src="/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Blueberry 306 bedroom snow.jpg"
+                    src="/photos/properties/Luxury 6-Bedroom | Whistler Village | Blueberry/Master bedroom Blueberry 306 new art 1.jpg"
                     alt="Luxury 6-bedroom primary suite"
                     fill
                     className="object-cover"
