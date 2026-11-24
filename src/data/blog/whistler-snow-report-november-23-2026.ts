@@ -71,17 +71,17 @@ export const SNOW_ROWS = [
 export const FORECAST_ROWS = [
   {
     period: "Tuesday, November 24",
-    snow: "15-20 cm",
+    snow: "15–20 cm",
     freezingLevel: "1,700 m",
   },
   {
     period: "Wednesday, November 25",
-    snow: "15-25 cm",
+    snow: "15–25 cm",
     freezingLevel: "1,900 m",
   },
   {
     period: "Thursday, November 26",
-    snow: "20-35 cm",
+    snow: "20–35 cm",
     freezingLevel: "1,900 m",
   },
 ] as const;

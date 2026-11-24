@@ -403,7 +403,7 @@ export default function WhistlerSnowReportNovember23Content() {
         <p>
           Our{" "}
           <Link href={SOURCE_LINKS.winterOutlook}>
-            Whistler winter 2026/2027 outlook
+            Whistler winter 2026–2027 outlook
           </Link>{" "}
           explores the wider seasonal picture. This November update adds the
           latest resort report and the new polar vortex development.

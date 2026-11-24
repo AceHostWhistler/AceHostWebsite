@@ -43,7 +43,8 @@ export const allArticles: Article[] = [
     ],
   },
   {
-    title: "Whistler Snow Report 2026–2027 | November 23 Update",
+    title:
+      "How Is the Snow in Whistler Right Now? Winter 2026–2027 Snow Report",
     socialTitle: "Whistler Snow Report 2026–2027 | November 23 Update",
     socialDescription:
       "Whistler's November 23 snow report, alpine forecast, rare polar vortex news and El Niño outlook. Explore ski-in, ski-out and Village stays with AceHost.",
