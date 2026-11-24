@@ -12,6 +12,8 @@ export type SocialSharePayload = {
   socialTitle?: string;
   /** Overrides og:description and twitter:description when set. */
   socialDescription?: string;
+  /** Overrides og:image:alt and twitter:image:alt when set. */
+  imageAlt?: string;
 };
 
 export const ACEHOST_LOGO_IMAGE = "/og-logo.png";

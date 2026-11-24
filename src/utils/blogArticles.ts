@@ -18,6 +18,7 @@ export interface Article {
   keywords?: string[];
   citations?: string[];
   about?: string[];
+  imageAlt?: string;
 }
 
 // All blog articles data with proper image paths
@@ -39,6 +40,47 @@ export const allArticles: Article[] = [
       "Whistler Village condo",
       "Upper Village Blackcomb condo",
       "AceHost Whistler rentals",
+    ],
+  },
+  {
+    title: "Whistler Snow Report 2026–2027 | November 23 Update",
+    socialTitle: "Whistler Snow Report 2026–2027 | November 23 Update",
+    socialDescription:
+      "Whistler's November 23 snow report, alpine forecast, rare polar vortex news and El Niño outlook. Explore ski-in, ski-out and Village stays with AceHost.",
+    excerpt:
+      "Blackcomb is open and more alpine snow is forecast. Our November 23 update explores the rare polar vortex development, El Niño and Whistler's elevation advantage.",
+    category: "Whistler Snow/Weather Report",
+    description:
+      "Whistler's November 23 snow report, alpine forecast, rare polar vortex news and El Niño outlook. Explore ski-in, ski-out and Village stays with AceHost.",
+    readTime: "12 min read",
+    link: "/post/whistler-snow-report-november-23-2026",
+    coverImage:
+      "/photos/post/whistler-snow-report-november-23-2026/whistler-snow-report-2026-2027-og.jpg",
+    publishedAt: "2026-11-23T17:50:00-07:00",
+    modifiedAt: "2026-11-23T17:50:00-07:00",
+    headline:
+      "How Is the Snow in Whistler Right Now? Winter 2026–2027 Snow Report",
+    imageAlt:
+      "AI-generated winter illustration inspired by Whistler's snowy alpine.",
+    citations: [
+      "https://www.whistlerblackcomb.com/the-mountain/mountain-conditions/snow-and-weather-report",
+      "https://news.vailresorts.com/WhistlerBlackcomb-Opening-2026",
+      "https://www.whistlerblackcomb.com/explore-the-resort/about-the-resort/hours-of-operation.aspx",
+      "https://www.whistler.com/weather/",
+      "https://www.weather.gov/media/arx/winter/Winter%20Outlook%202026-27%20-%20November%2019,%202026.pdf",
+      "https://prod-01-asg-www-climate.woc.noaa.gov/news-features/blogs/enso/el-ni%C3%B1o-and-stratospheric-polar-vortex",
+      "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_disc_nov2026/ensodisc.pdf",
+      "https://climatedata.ca/news/what-the-developing-exceptional-el-nino-means-for-canada-in-2026-27/",
+      "https://www.whistlerblackcomb.com/the-mountain/mountain-conditions/mountain-cams.aspx",
+      "https://www.whistler.com/weather/history/",
+      "https://wmo.int/sites/default/files/2023-06/WMO_ENSO_Feb16_Eng.pdf",
+      "https://www.whistlerblackcomb.com/the-mountain/about-the-mountain/mountain-info.aspx",
+      "https://published.aer.com/aoblog/aoblog.html",
+    ],
+    about: [
+      "Whistler snow report November 23 2026",
+      "Whistler 2026-2027 ski season",
+      "Whistler El Niño outlook",
     ],
   },
   {
@@ -516,6 +558,9 @@ export const SNOW_FORECAST_ARTICLE_PATH =
   "/post/whistler-weather-forecast-2026-2027-winter";
 
 export const DATED_SNOW_REPORT_ARTICLE_PATH =
+  "/post/whistler-snow-report-november-23-2026";
+
+const OCTOBER_SNOW_REPORT_ARTICLE_PATH =
   "/post/whistler-snow-report-october-28-2026";
 
 /** Blog posts shown in sitewide Resources navigation, excluding seasonal forecast pages. */
@@ -524,7 +569,8 @@ export function getPrimaryNavBlogArticles(count = 4): Article[] {
     .filter(
       (article) =>
         article.link !== SNOW_FORECAST_ARTICLE_PATH &&
-        article.link !== DATED_SNOW_REPORT_ARTICLE_PATH
+        article.link !== DATED_SNOW_REPORT_ARTICLE_PATH &&
+        article.link !== OCTOBER_SNOW_REPORT_ARTICLE_PATH
     )
     .slice(0, count);
 }

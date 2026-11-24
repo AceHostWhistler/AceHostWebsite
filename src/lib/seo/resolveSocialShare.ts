@@ -217,6 +217,7 @@ export function resolveSocialShare(
         socialTitle: article.socialTitle,
         socialDescription: article.socialDescription,
         image: shareCover(article.coverImage),
+        imageAlt: article.imageAlt,
         type: "article",
         publishedAt: article.publishedAt,
         modifiedAt: article.modifiedAt ?? article.publishedAt,

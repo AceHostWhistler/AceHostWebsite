@@ -126,7 +126,11 @@ function App({ Component, pageProps }: AppProps) {
           property="og:image:secure_url"
           content={shareImageUrl}
         />
-        <meta key="og:image:alt" property="og:image:alt" content={ogTitle} />
+        <meta
+          key="og:image:alt"
+          property="og:image:alt"
+          content={socialShare.imageAlt ?? ogTitle}
+        />
         <meta
           key="og:image:type"
           property="og:image:type"
@@ -179,7 +183,7 @@ function App({ Component, pageProps }: AppProps) {
         <meta
           key="twitter:image:alt"
           name="twitter:image:alt"
-          content={ogTitle}
+          content={socialShare.imageAlt ?? ogTitle}
         />
         {blogStructuredData && (
           <script

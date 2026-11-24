@@ -315,10 +315,12 @@ export function buildArticleSchema({
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
+    "@id": url,
     headline: headline ?? title,
     description,
     url,
     mainEntityOfPage: url,
+    inLanguage: "en-CA",
     image: absoluteImage,
     author: {
       "@type": "Organization",
