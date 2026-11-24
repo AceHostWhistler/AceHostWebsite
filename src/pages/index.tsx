@@ -207,8 +207,10 @@ const Home = () => {
   // Update filtering logic to match properties page
   const filteredListings = allListings.filter((listing) => {
     if (activeFilter === "all") return true;
-    if (activeFilter === "pets") return listing.isPetFriendly === true;
-    if (activeFilter === "skiinout") return listing.isSkiInSkiOut === true;
+    if (activeFilter === "pets")
+      return listing.isPetFriendly === true && !isWorldwideListing(listing);
+    if (activeFilter === "skiinout")
+      return listing.isSkiInSkiOut === true && !isWorldwideListing(listing);
     if (activeFilter === "homes")
       return !isWorldwideListing(listing) && getPropertyType(listing) === "home";
     if (activeFilter === "townhomes")

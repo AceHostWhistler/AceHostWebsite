@@ -100,7 +100,6 @@ export const HOME_IDS = new Set([
   "squamish-retreat",
   "hood-river-luxury-home",
   "bedora-place",
-  "cotswolds-uk-soho-farm-house",
   "mykonos-crystal-villa",
   "villa-oineas-greece-mykonos",
   "helios-estate-mykonos",
@@ -1595,8 +1594,6 @@ export const propertyCategories: PropertyCategory[] = [
           },
 
           BEDORA_PLACE,
-
-          COTSWOLDS_UK,
 
           {
             id: "vancouver-house-corner",

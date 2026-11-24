@@ -96,9 +96,9 @@ export default function Properties() {
           const propertyType = getPropertyType(property);
           const quickCategoryMatch =
             activeCategory === "pets"
-              ? property.isPetFriendly
+              ? property.isPetFriendly && !isWorldwideProperty
               : activeCategory === "skiinout"
-              ? property.isSkiInSkiOut
+              ? property.isSkiInSkiOut && !isWorldwideProperty
               : true;
           const typeMatch =
             activeCategory === "townhomes"
