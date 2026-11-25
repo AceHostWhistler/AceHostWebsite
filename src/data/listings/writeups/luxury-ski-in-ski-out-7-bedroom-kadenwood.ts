@@ -69,12 +69,12 @@ const mountaintopWriteup: ListingWriteupContent = {
           {
             name: "Bedroom 1, Primary Suite",
             details:
-              "King bed, private ensuite bathroom with a bathtub, separate shower and double vanity.",
+              "King bed, private ensuite bathroom with a bathtub, separate shower and double vanity. Gorgeous extra-large walk-in closet.",
           },
           {
             name: "Bedroom 2",
             details:
-              "Queen bed with a dresser. This bedroom uses the detached full bathroom on the main level, which includes a shower and single vanity. Please note that this room does not have a closet. Upgraded to a King bed soon. King bed arrives November 25th. Photos to follow.",
+              "King bed with a dresser. This bedroom uses the detached full bathroom on the main level, which includes a shower and single vanity.",
           },
           {
             name: "Bedroom 3",
@@ -95,7 +95,7 @@ const mountaintopWriteup: ListingWriteupContent = {
           {
             name: "Bedroom 5",
             details:
-              "Queen bed with access to the connected shared bathroom arrangement serving Bedrooms 5 and 6. The bathroom includes a shower and double vanity. Upgraded to a King bed soon. King bed arrives November 25th. Photos to follow.",
+              "King bed with access to the connected shared bathroom arrangement serving Bedrooms 5 and 6. The bathroom includes a shower and double vanity.",
           },
           {
             name: "Bedroom 6, Bunk Room",

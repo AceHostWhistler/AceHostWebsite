@@ -47,9 +47,9 @@ const falconBlueberryDriveWriteup: ListingWriteupContent = {
       alt: "Falcon on Blueberry Hill",
     },
     paragraphs: [
-      "Falcon is located in Blueberry Hill, one of Whistler's most established and peaceful residential neighbourhoods. Its elevated setting offers beautiful mountain views and a relaxed atmosphere, making it a lovely base for families and groups.",
-      "The Valley Trail and Whistler Golf Course are approximately a one-minute walk from the home. Follow the scenic trail into Whistler Village to explore its restaurants, cafes, shops and apres-ski spots, or enjoy a leisurely walk close to home.",
-      "With the Village approximately a 25-minute walk or a 3 to 4 minute drive away, it's easy to head out for skiing, dinner or shopping before returning to your own spacious chalet, private hot tub and outdoor sauna.",
+      "Falcon is located in peaceful Blueberry Hill, just outside Whistler Village with quick access to both the Village and the mountains. The Valley Trail and Whistler Golf Course are approximately a one-minute walk from the home, and the scenic trail into Whistler Village takes about 25 minutes. For quicker access, the Village and gondolas are approximately a 3 to 4 minute drive away, and the Route 6 public bus stops just steps from the property.",
+      "Its elevated setting offers beautiful mountain views and a relaxed atmosphere, making it a lovely base for families and groups.",
+      "With the Village close by on foot, by car or by bus, it's easy to head out for skiing, dinner or shopping before returning to your own spacious chalet, private hot tub and outdoor sauna.",
       "Getting around: Falcon offers several convenient ways to explore Whistler. Walking: Whistler Village is approximately a 25-minute walk along the scenic Valley Trail, which you can access about one minute from the home. Driving: the Village and gondolas are approximately a 3 to 4 minute drive away. The private driveway accommodates approximately four to five vehicles. Public transport: the Route 6 Blueberry/Tapley's bus stops just steps from the property and provides service into Whistler Village. Taxis: taxis are a great option for getting to the slopes or heading out for dinner. Ask us for our VIP taxi code for priority pickups from the home. Uber is also available in Whistler.",
       "Whether your group prefers walking, driving or taking the bus, you have convenient options for reaching the slopes and enjoying evenings in the Village.",
     ],
@@ -65,7 +65,7 @@ const falconBlueberryDriveWriteup: ListingWriteupContent = {
           {
             name: "Master Bedroom 1",
             details:
-              "The spacious master bedroom has a gorgeous King bed and is located on the top floor, with an ensuite large bath and shower, walk-in wardrobe, and private deck with beautiful mountain views. Brand new smart TV now available in the master bedroom.",
+              "The spacious master bedroom has a gorgeous King bed and is located on the top floor, with an ensuite bathroom that has a large bath and separate shower, walk-in wardrobe, and private deck with beautiful mountain views. Brand new smart TV now available in the master bedroom.",
           },
           {
             name: "Bedroom 2",
@@ -118,7 +118,7 @@ const falconBlueberryDriveWriteup: ListingWriteupContent = {
           {
             name: "Upper ensuite",
             details:
-              "Master Bedroom 1 has a private ensuite with a large bath and shower.",
+              "Master Bedroom 1 has a private ensuite with a large bath and separate shower.",
           },
           {
             name: "Upper shared bath",
