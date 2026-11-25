@@ -11,12 +11,13 @@ import {
 const slopesideVillaWriteup: ListingWriteupContent = {
   intro: {
     paragraphs: [
-      "Welcome to Slope Side Chalet in Kadenwood, a true Whistler luxury log chalet with exceptional ski-in/ski-out access directly beside the patio and ski room. Inside, soaring timber ceilings, warm wood finishes, heated stone floors, a grand fireplace and expansive windows create the classic alpine atmosphere. After a day on the mountain, unwind in the private outdoor hot tub, steam shower or home gym.",
+      "Welcome to Slope Side Chalet in Kadenwood, a true Whistler luxury log chalet with exceptional ski-in/ski-out access directly beside the patio and ski room. Inside, soaring timber ceilings, warm wood finishes, heated stone floors, a grand fireplace and expansive windows create the classic alpine atmosphere. After a day on the mountain, unwind in the private outdoor hot tub, steam shower or home gym, with everything designed for an effortless and memorable Whistler stay with family and friends.",
     ],
     highlights: [
       "Ski trail beside patio",
       "7 bedrooms, 12 beds",
       "Outdoor hot tub",
+      "Central air conditioning",
       "Home gym and steam shower",
       "Heated stone floors",
       "Media room and Sonos",
@@ -32,7 +33,7 @@ const slopesideVillaWriteup: ListingWriteupContent = {
     },
     paragraphs: [
       "Boasting 7 bedrooms, 12 beds, and 7.5 bathrooms, this property offers an ideal accommodation option for groups and families seeking comfort and space. Indulge and relax in the large steam shower or soak in the outdoor hot tub, with direct views overlooking the scenic valley and lake. If you still have energy after skiing, keep up with your fitness routine in the home gym equipped with yoga mats, weights, and cardio machines.",
-      "This home is the perfect mountain retreat, tucked away high on the mountainside in the exclusive and private Kadenwood neighbourhood, providing access to the private Kadenwood gondola.",
+      "This home is the perfect mountain retreat. The property is tucked away high up on the mountainside in the exclusive and private Kadenwood neighbourhood, providing access to the private Kadenwood gondola.",
       "The property features easy ski-in ski-out access, a hot tub, a home gym, a media room, a steam shower, built-in Sonos across the main living areas, and private access to the Kadenwood gondola. The living room has a very large HD screen TV (not shown in all photos), with access to Netflix, Amazon Prime, and a TSN subscription for live sports.",
     ],
   },
@@ -44,7 +45,7 @@ const slopesideVillaWriteup: ListingWriteupContent = {
       alt: "Slope Side Chalet in Kadenwood",
     },
     paragraphs: [
-      "Slope Side is exceptionally well positioned within Kadenwood, with the ski trail running directly beside the home for convenient access to and from Whistler Mountain. The private Kadenwood Gondola connects the neighbourhood with Creekside Village in approximately five minutes. Guests can enjoy the quiet and privacy of a mountainside chalet while keeping the lifts, restaurants, cafes and groceries of Creekside within easy reach.",
+      "Slope Side is exceptionally well positioned within Kadenwood, with the ski trail running directly beside the home for convenient access to and from Whistler Mountain. The private Kadenwood Gondola also connects the neighbourhood with Creekside Village in approximately five minutes. Guests can enjoy the quiet and privacy of a mountainside chalet while keeping the lifts, restaurants, cafes and groceries of Creekside within easy reach.",
       ...KADENWOOD_LOCATION_PARAGRAPHS,
       "Located in the exclusive Kadenwood neighbourhood, high on the south side of Whistler Mountain. A five-minute gondola ride, five-minute drive, or quick ski ride down brings you to amenities in Creekside Village, including access to Whistler Mountain via the Creekside Gondola.",
     ],
@@ -127,7 +128,7 @@ const slopesideVillaWriteup: ListingWriteupContent = {
       ACEHOST_SKI_PASS_NOTE,
       ACEHOST_REACH_OUT_NOTE,
       "Pets allowed with approval. Assistance animals are always allowed. No pets unless requested and approved.",
-      "Air conditioning is not included at this property.",
+      "The home has central air conditioning, including a split-type ductless system.",
       "Outdoor amenities include private hot tub, ski-in/ski-out access, mountain views, and private deck or patio. Interior highlights include heated stone floors, large steam shower, fully equipped gym, indoor fireplace, large HD TV, and media room with built-in Sonos. Essentials include WiFi, washer and dryer, fully equipped kitchen, dining table, outdoor dining area, dedicated ski room, heating, and private Kadenwood gondola access.",
     ],
     registration: [

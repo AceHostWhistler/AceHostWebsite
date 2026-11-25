@@ -71,11 +71,11 @@ const listing: ListingData = {
   "/photos/properties/Slopeside Kadenwood/e42c1f81-64f3-4c05-b942-8b6320947b73.avif"
 ],
   seo: {
-    title: "Slope Side Chalet | Ski-In/Out | Hot Tub - AceHost",
+    title: "Slope Side Chalet | Ski-In/Out | Hot Tub | Views - AceHost",
     description: "Welcome to Slope Side Chalet in Kadenwood, a true Whistler luxury log chalet with exceptional ski-in/ski-out access directly beside the patio and ski room. Inside, soaring timber ceilings, warm wood finishes, heated stone floors, a grand fireplace and expansive windows create the classic alpine atmosphere. After a day on the mountain, unwind in the private outdoor hot tub, steam shower or home gym, with everything designed for an effortless and memorable Whistler stay with family and friends.",
   },
   header:   {
-      "title": "Slope Side Chalet | Ski-In/Out | Hot Tub",
+      "title": "Slope Side Chalet | Ski-In/Out | Hot Tub | Views",
       "guests": 16,
       "bedrooms": 7,
       "bathrooms": 7.5,
@@ -85,7 +85,7 @@ const listing: ListingData = {
       "holidayPrice": "$10,000+ Nightly | Christmas & NY",
       "airbnbLink": "https://www.airbnb.ca/rooms/826226399590812184?guests=1&adults=1&s=67&unique_share_id=aab7fbd3-669a-461d-b913-c15cf257b4c0"
   },
-  galleryTitle: "Slope Side Chalet | Ski-In/Out | Hot Tub",
+  galleryTitle: "Slope Side Chalet | Ski-In/Out | Hot Tub | Views",
   photoAltPrefix: "Slope Side Chalet",
 };
 

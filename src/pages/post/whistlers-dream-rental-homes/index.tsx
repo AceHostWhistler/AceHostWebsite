@@ -76,7 +76,7 @@ export default function BlogPost() {
 
               {/* Property 1 */}
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
-                1) Slope Side Chalet | Ski-In/Out | Hot Tub
+                1) Slope Side Chalet | Ski-In/Out | Hot Tub | Views
               </h2>
 
               <div className="bg-gray-50 p-5 rounded-lg mb-6">

@@ -546,7 +546,7 @@ export const propertyCategories: PropertyCategory[] = [
 
           {
             id: "slopeside-villa",
-            name: "Slope Side Chalet | Ski-In/Out | Hot Tub",
+            name: "Slope Side Chalet | Ski-In/Out | Hot Tub | Views",
             images: [
               "/photos/properties/Slopeside Kadenwood/01-2945 Slope Side 01.jpg",
               "/photos/properties/Slopeside Kadenwood/03-2945 Kadenwood Dr 03.jpg",
@@ -558,11 +558,12 @@ export const propertyCategories: PropertyCategory[] = [
             bathrooms: 7.5,
             location: "Kadenwood, Whistler",
             description:
-              "A 7-bedroom Kadenwood log chalet with direct ski-in/ski-out access beside the patio and ski room, plus a hot tub, steam shower, gym, and private gondola access.",
+              "Welcome to Slope Side Chalet in Kadenwood, a true Whistler luxury log chalet with exceptional ski-in/ski-out access directly beside the patio and ski room. Inside, soaring timber ceilings, warm wood finishes, heated stone floors, a grand fireplace and expansive windows create the classic alpine atmosphere. After a day on the mountain, unwind in the private outdoor hot tub, steam shower or home gym, with everything designed for an effortless and memorable Whistler stay with family and friends.",
             features: [
               "Ski-in/Ski-out Access",
               "Private Hot Tub",
               "Private Kadenwood Gondola",
+              "Central Air Conditioning",
               "Home Gym",
               "Steam Shower",
               "Sonos Sound System",

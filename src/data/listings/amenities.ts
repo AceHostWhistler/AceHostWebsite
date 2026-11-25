@@ -257,6 +257,7 @@ export const listingAmenities: Record<string, string[]> = {
     "Ski-in / ski-out from ski room",
     "Private Kadenwood gondola",
     "Hot tub & steam shower",
+    "Central air conditioning",
     "Home gym & media room",
     "Sonos sound system",
     "Heated stone floors",

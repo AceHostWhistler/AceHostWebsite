@@ -432,7 +432,7 @@ const LuxuryChristmasRentals = () => {
               </div>
 
               <div className="bg-gray-50 p-6 rounded-lg mb-14">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">5) Slope Side Chalet | Ski-In/Out | Hot Tub</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">5) Slope Side Chalet | Ski-In/Out | Hot Tub | Views</h2>
 
                 <div className="flex flex-col md:flex-row gap-4 mb-6">
                   <div className="flex-1 bg-white p-4 rounded-lg shadow-sm">
