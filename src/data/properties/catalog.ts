@@ -366,6 +366,7 @@ export const propertyCategories: PropertyCategory[] = [
               "Housekeeping Every Other Day",
               "Sonos Sound System",
               "Gourmet Kitchen",
+              "Dining Table Seats 14",
               "Ski-In/Ski-Out Access",
               "Mountain Views",
             ],

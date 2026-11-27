@@ -52,6 +52,7 @@ export const listingAmenities: Record<string, string[]> = {
     "Sauna, steam shower & fitness gym",
     "Private Kadenwood gondola",
     "Gourmet chef's kitchen",
+    "Dining table seats 14",
     "Sonos sound throughout",
   ],
   "cozy-lakefront-whistler-condo-mountain-view": [

@@ -8,6 +8,7 @@ const chaletLaForjaWriteup: ListingWriteupContent = {
     ],
     highlights: [
       "10,000+ sq. ft.",
+      "Dining table seats 14",
       "True ski-in / ski-out",
       "Heated outdoor pool",
       "Private hot tub",
@@ -25,6 +26,7 @@ const chaletLaForjaWriteup: ListingWriteupContent = {
     },
     paragraphs: [
       "Chalet La Forja delivers the scale and service of a private alpine resort, exclusively for your group. More than 10,000 sq. ft. of living space provides room to gather, entertain and retreat in privacy. The home features nine bedrooms, generous living areas, a gourmet chef's kitchen with butler's pantry, two private offices, Sonos audio throughout and exceptional indoor-outdoor entertaining spaces.",
+      "Dining table for 14: the main dining table comfortably seats 14, with 5 chairs along each side and 2 at each end. With 4 additional stools at the bar, up to 18 guests can dine together. The current seating arrangement isn't shown in the photos, but fits comfortably.",
       "Outside, a private heated swimming pool and hot tub create one of Kadenwood's most impressive apres-ski settings. Inside, guests can enjoy a private gym, sauna, multiple lounge spaces and extensive amenities throughout the residence. True ski-in/ski-out access connects the home to Whistler Mountain, while Kadenwood's private gondola provides convenient access to Creekside.",
       "Ranked among Top 10 Vacation Rentals in 2023 in all of Canada.",
     ],
