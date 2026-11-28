@@ -35,7 +35,7 @@ const luxury6BedroomBlueberryWriteup: ListingWriteupContent = {
       "Step into a bright and inviting alpine-inspired retreat where every detail has been curated for relaxation and style. The open-concept living room features a cozy fireplace, plush seating, and large windows framing lush forest views. The fully equipped kitchen is ideal for group dining, complete with a brand-new fridge, oven, and BBQ, plus all the cookware you need for family meals or apres-ski dinners.",
       "Across multiple levels, the home offers ample space for gathering and privacy, making it ideal for multi-family getaways or larger groups wanting a true Whistler experience.",
       "This fully renovated luxury condo includes high-end Puffy mattresses throughout, ski and bike storage so you do not need to bring gear inside the unit, a forest-view balcony for morning coffee or evening wine, high-speed Wi-Fi and Smart TVs, Level 2 J1772 EV charging free of charge, and a fully functional brand new washer and dryer in the unit for private guest use. Pack and play is included and always at the condo. Please bring your own sheets.",
-      "Newly renovated bathrooms: bathroom renovation completed November 22, 2026, with gorgeous new RH vanities and glass instead of curtains. Photo updates to follow shortly after. Each of the 3 full bathrooms includes both a shower and a bathtub, providing convenience and comfort for large groups.",
+      "Newly renovated bathrooms: bathroom renovation completed November 22, 2026, with gorgeous new RH vanities and glass instead of curtains. Each of the 3 full bathrooms includes both a shower and a bathtub, providing convenience and comfort for large groups.",
       "Yes, there is air conditioning for the summer months, available May 1 through November 1. AC units in the living room, bedroom 3 and bedroom 5 cool the entire house comfortably for hot summer days.",
     ],
   },
@@ -96,7 +96,7 @@ const luxury6BedroomBlueberryWriteup: ListingWriteupContent = {
       },
     ],
     footnote:
-      "Newly renovated bathrooms: bathroom renovation completed November 22, 2026. Gorgeous new RH vanities and glass instead of curtains. Photo updates to follow shortly after. Each of the 3 full bathrooms includes both a shower and a bathtub.",
+      "Newly renovated bathrooms: bathroom renovation completed November 22, 2026. Gorgeous new RH vanities and glass instead of curtains. Each of the 3 full bathrooms includes both a shower and a bathtub.",
   },
   stay: acehostStay({ included: [...ACEHOST_INCLUDED_SKI] }),
   other: {
@@ -108,7 +108,7 @@ const luxury6BedroomBlueberryWriteup: ListingWriteupContent = {
     notes: [
       ACEHOST_VIP_CONCIERGE_NOTE,
       ACEHOST_SKI_PASS_NOTE,
-      "Newly renovated bathrooms: bathroom renovation completed November 22, 2026. Gorgeous new RH vanities and glass instead of curtains. Photo updates to follow shortly after.",
+      "Newly renovated bathrooms: bathroom renovation completed November 22, 2026. Gorgeous new RH vanities and glass instead of curtains.",
       "Air conditioning is available May 1 through November 1.",
       ACEHOST_REACH_OUT_NOTE,
     ],
